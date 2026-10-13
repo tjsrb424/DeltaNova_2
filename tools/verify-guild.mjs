@@ -6,6 +6,7 @@ import { randomUUID } from "node:crypto";
 import { createServer } from "vite";
 import { startGuildServer } from "../server/main.ts";
 import { GUILD_ROLES, PILOTS } from "../src/guild/content.ts";
+import { ROSTER } from "../src/game/content.ts";
 
 const dir = await mkdtemp(join(tmpdir(), "delta-nova-guild-"));
 let api, vite;
@@ -82,8 +83,39 @@ try {
   assert.deepEqual(duplicate.state, lastResult.state);
   const observed = await request("/api/guild");
   assert.deepEqual(observed.state, state);
+  async function soloCommand(action) {
+    const result = await request(
+      "/api/guild/commands",
+      {
+        commandId: randomUUID(),
+        expectedRevision: state.revision,
+        operationId: state.operation.id,
+        action,
+      },
+      sessions[0].token,
+    );
+    state = result.state;
+  }
+  await soloCommand({ type: "next-operation" });
+  await soloCommand({
+    type: "repair-fleet",
+    fleetIds: ROSTER.map((r) => r.id),
+  });
+  for (const role of GUILD_ROLES) {
+    await soloCommand({ type: "claim", role: role.id });
+    await soloCommand({
+      type: "contribute",
+      role: role.id,
+      fleetIds: role.recommended,
+    });
+    assert.equal(state.operation.slots[role.id].completed, true);
+    await soloCommand({ type: "repair-fleet", fleetIds: role.recommended });
+  }
+  assert.equal(state.operation.phase, "complete");
+  assert.deepEqual(state.operation.awards, [{ pilotId: "nova", amount: 20 }]);
+  assert.equal(state.pilots[0].merit, 90);
   console.log(
-    "Guild HTTP/proxy smoke PASS: four independent sessions, four roles, combined support, shared completion, 30 merit each, duplicate receipt unchanged.",
+    "Guild/base HTTP/proxy smoke PASS: four-player completion, combined support, duplicate receipt unchanged; one pilot then completes all four roles with supplies and repairs, earns 60 merit and one shared award.",
   );
 } finally {
   if (vite) await vite.close();

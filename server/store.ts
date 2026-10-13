@@ -7,6 +7,7 @@ import {
   validateGuildState,
 } from "../src/guild/validation.ts";
 import { GuildError } from "../src/guild/types.ts";
+import { upgradeGuildState } from "../src/guild/migration.ts";
 import type {
   GuildCommand,
   GuildReply,
@@ -27,7 +28,8 @@ function canonical(value: unknown): string {
 }
 export class GuildStore {
   private db: DatabaseSync;
-  constructor(path: string) {
+  constructor(path: string, options: { now?: number } = {}) {
+    const now = options.now ?? Date.now();
     if (path !== ":memory:") mkdirSync(dirname(path), { recursive: true });
     this.db = new DatabaseSync(path);
     try {
@@ -46,7 +48,37 @@ export class GuildStore {
             throw Error("Missing shared state with existing receipts");
           this.db
             .prepare("INSERT INTO world(id,snapshot) VALUES(1,?)")
-            .run(JSON.stringify(initialGuildState()));
+            .run(JSON.stringify(initialGuildState(now)));
+        }
+        const raw = JSON.parse(
+          String(
+            this.db.prepare("SELECT snapshot FROM world WHERE id=1").get()!
+              .snapshot,
+          ),
+        );
+        if (raw.schemaVersion === 1) {
+          const migrated = upgradeGuildState(raw, now);
+          this.db
+            .prepare("UPDATE world SET snapshot=? WHERE id=1")
+            .run(JSON.stringify(migrated));
+          for (const row of this.db
+            .prepare("SELECT pilot_id,command_id,response FROM receipts")
+            .all()) {
+            const reply = JSON.parse(String(row.response));
+            if (
+              reply.receipt?.pilotId !== row.pilot_id ||
+              reply.receipt?.commandId !== row.command_id ||
+              reply.receipt?.revision !== reply.state?.revision ||
+              typeof reply.duplicate !== "boolean"
+            )
+              throw Error("Invalid legacy receipt");
+            reply.state = upgradeGuildState(reply.state, now);
+            this.db
+              .prepare(
+                "UPDATE receipts SET response=? WHERE pilot_id=? AND command_id=?",
+              )
+              .run(JSON.stringify(reply), row.pilot_id, row.command_id);
+          }
         }
         this.snapshot();
         this.db.exec("COMMIT");
