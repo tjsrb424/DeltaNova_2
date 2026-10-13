@@ -77,6 +77,8 @@ npm run simulate
 
 - [장기 게임 방향](docs/design/DELTA_NOVA_VISION.md)
 - [제국 운영과 게임 화면 방향 v0.2](docs/design/DELTA_NOVA_EMPIRE_DIRECTION_V0.2.md)
+- [다중 행성과 식민지 방향](docs/design/DELTA_NOVA_COLONIES_V0.1.md)
+- [시안 9.5 이상 평가와 개선 기록](docs/art/EMPIRE_COLONY_UI_REVIEW.md)
 - [현재 구현 설계](docs/superpowers/specs/2026-10-13-delta-nova-command-center-design.md)
 - [구현 계획](docs/superpowers/plans/2026-10-13-command-center.md)
 - [구현 검증과 남은 작업](docs/validation/IMPLEMENTATION_REPORT.md)
@@ -91,6 +93,6 @@ npm run simulate
 
 ## 다음 개발 순서
 
-1. 제국 기지: 생산·건설·연구·조선·방어 비용과 실제 보유 재고를 연결하고 기지 화면을 재설계한다.
+1. 제국 기지: 행성별 생산·건설·조선·방어·보유 재고와 공통 연구를 연결하고 행성 전환을 포함한 기지 화면을 재설계한다.
 2. 첫 성계 순환: 거리·속도·연료·정찰·공격·기지 방어·귀환을 한 성계의 NPC 거점에 연결한다. 현재 실행되는 기능은 아니다.
-3. 확장과 협동: 식민지·거점 특화·수송·정보 공유·증원·협공과 실제 계정/PvP로 확장한다. 게임 화면과 반응은 첫 순환부터 함께 개선한다.
+3. 확장과 협동: 첫 식민지 개척·행성 간 수송을 연결하고 거점 특화·정보 공유·증원·협공과 실제 계정/PvP로 확장한다. 게임 화면과 반응은 첫 순환부터 함께 개선한다.
