@@ -87,7 +87,7 @@ export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
             개발 참가자
             <select
               aria-label="개발 참가자"
-              value={pilotId}
+              value={network.pendingPilotId || pilotId}
               disabled={busy || network.pending}
               onChange={(e) => setPilotId(e.target.value)}
             >
@@ -100,8 +100,8 @@ export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
           </label>
           <button
             className="secondary-button"
-            disabled={busy || network.pending}
-            onClick={() => network.connect(pilotId)}
+            disabled={busy || (network.pending && session !== null)}
+            onClick={() => network.connect(network.pendingPilotId || pilotId)}
           >
             참가자로 연결
           </button>
@@ -120,7 +120,7 @@ export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
           {network.pending && (
             <button
               className="secondary-button"
-              disabled={busy}
+              disabled={busy || !session}
               onClick={network.retry}
             >
               같은 명령 재전송

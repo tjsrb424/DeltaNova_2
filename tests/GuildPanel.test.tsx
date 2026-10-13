@@ -17,6 +17,7 @@ beforeEach(() => sessionStorage.clear());
 afterEach(() => {
   cleanup();
   vi.useRealTimers();
+  vi.restoreAllMocks();
 });
 const click = (name: string) =>
   fireEvent.click(screen.getByRole("button", { name }));
@@ -50,6 +51,104 @@ async function connected(api: GuildApi) {
   await screen.findByText("노바 · 연결됨");
 }
 describe("shared guild screen", () => {
+  it("accepts slow reads that take longer than the polling interval", async () => {
+    vi.useFakeTimers();
+    const h = service();
+    const read = h.api.read;
+    h.api.read = () =>
+      new Promise((resolve) =>
+        setTimeout(async () => resolve(await read()), 4000),
+      );
+    render(<GuildPanel api={h.api} />);
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(10000);
+    });
+    expect(screen.getByTestId("guild-revision").textContent).toBe("REV 0");
+  });
+  it("preserves an ambiguous command through a restarted session and checks its receipt", async () => {
+    const h = service(),
+      real = h.api.command;
+    let original: GuildCommand | undefined,
+      receipt: Awaited<ReturnType<GuildApi["command"]>> | undefined,
+      attempts = 0,
+      connections = 0;
+    h.api.connect = async (pilotId) => ({
+      pilotId,
+      token: `token-${++connections}`,
+    });
+    h.api.command = async (s, c) => {
+      attempts++;
+      if (attempts === 1) {
+        original = structuredClone(c);
+        receipt = await real(s, c);
+        throw Error("committed response lost");
+      }
+      expect(c).toEqual(original);
+      if (s.token === "token-1")
+        throw new GuildApiError(401, "SESSION_EXPIRED", "다시 연결하세요.");
+      return { ...receipt!, duplicate: true };
+    };
+    await connected(h.api);
+    click("정찰대 예약");
+    await screen.findByRole("button", { name: "같은 명령 재전송" });
+    click("같은 명령 재전송");
+    await waitFor(() => expect(screen.queryByText("노바 · 연결됨")).toBeNull());
+    expect(
+      (screen.getByLabelText("개발 참가자") as HTMLSelectElement).disabled,
+    ).toBe(true);
+    click("참가자로 연결");
+    await screen.findByText("노바 · 연결됨");
+    click("같은 명령 재전송");
+    await screen.findByText(
+      "이전에 처리한 동일 명령을 확인했습니다. 보상은 중복 지급되지 않습니다.",
+    );
+    expect(attempts).toBe(3);
+    expect(h.state().revision).toBe(1);
+  });
+  it.each([false, true])(
+    "restores the exact pending command after leaving the panel (storage denied: %s)",
+    async (denied) => {
+      if (denied) {
+        vi.spyOn(Storage.prototype, "getItem").mockImplementation(() => {
+          throw Error("denied");
+        });
+        vi.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+          throw Error("denied");
+        });
+        vi.spyOn(Storage.prototype, "removeItem").mockImplementation(() => {
+          throw Error("denied");
+        });
+      }
+      const h = service(),
+        real = h.api.command;
+      let original: GuildCommand | undefined;
+      h.api.command = async (s, c) => {
+        if (!original) {
+          original = structuredClone(c);
+          throw Error("lost");
+        }
+        expect(c).toEqual(original);
+        return real(s, c);
+      };
+      await connected(h.api);
+      click("정찰대 예약");
+      await screen.findByRole("button", { name: "같은 명령 재전송" });
+      cleanup();
+      // A fresh API identity bypasses the module cache and exercises tab storage recovery.
+      render(<GuildPanel api={denied ? h.api : { ...h.api }} />);
+      await screen.findByRole("button", { name: "같은 명령 재전송" });
+      expect(
+        (
+          screen.getByRole("button", {
+            name: "참가자로 연결",
+          }) as HTMLButtonElement
+        ).disabled,
+      ).toBe(true);
+      click("같은 명령 재전송");
+      await screen.findByText("내 예약");
+      expect(h.state().revision).toBe(1);
+    },
+  );
   it("connects, reserves, performs a role and displays earned contribution", async () => {
     const h = service();
     await connected(h.api);

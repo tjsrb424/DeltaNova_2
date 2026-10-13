@@ -8,9 +8,15 @@ import type {
   GuildSnapshot,
 } from "./types.ts";
 import { PILOTS } from "./content.ts";
+import { parseGuildCommand } from "./validation.ts";
 const READ_ERROR =
   "공동 작전 서버에 연결하지 못했습니다. 마지막 확인 상태를 유지합니다. 서버 연결을 확인하고 다시 시도하세요.";
 const SESSION_KEY = "delta-nova.guild-dev-session.v1";
+const PENDING_KEY = "delta-nova.guild-pending.v1";
+const RETRY_MESSAGE =
+  "명령의 처리 여부를 확인하지 못했습니다. 같은 명령 재전송으로 결과를 확인하세요.";
+const SESSION_MESSAGE =
+  "세션이 만료되었습니다. 같은 참가자로 다시 연결한 뒤 같은 명령을 재전송하세요.";
 function loadSession(): GuildSession | null {
   try {
     const s = JSON.parse(sessionStorage.getItem(SESSION_KEY) || "null");
@@ -31,21 +37,82 @@ function remember(session: GuildSession | null) {
     /* A denied sessionStorage does not block in-memory identity. */
   }
 }
-type Pending = { session: GuildSession; command: GuildCommand };
+type Pending = {
+  session: GuildSession;
+  command: GuildCommand;
+  needsSession?: boolean;
+};
+// Keep unresolved commands beyond a panel's lifetime, even when storage is denied.
+const pendingMemory = new WeakMap<GuildApi, Pending | null>();
+function loadPending(api: GuildApi): Pending | null {
+  if (pendingMemory.has(api)) return pendingMemory.get(api)!;
+  try {
+    const value = JSON.parse(sessionStorage.getItem(PENDING_KEY) || "null");
+    if (
+      value?.version !== 1 ||
+      !PILOTS.some((p) => p.id === value.item?.session?.pilotId) ||
+      typeof value.item.session.token !== "string" ||
+      typeof value.item.needsSession !== "boolean"
+    )
+      return null;
+    return {
+      session: value.item.session,
+      command: parseGuildCommand(value.item.command),
+      needsSession: value.item.needsSession,
+    };
+  } catch {
+    return null;
+  }
+}
+function rememberPending(api: GuildApi, item: Pending | null) {
+  pendingMemory.set(api, item);
+  try {
+    if (item)
+      sessionStorage.setItem(
+        PENDING_KEY,
+        JSON.stringify({
+          version: 1,
+          item: { ...item, needsSession: Boolean(item.needsSession) },
+        }),
+      );
+    else sessionStorage.removeItem(PENDING_KEY);
+  } catch {
+    /* The module cache preserves menu navigation when storage is denied. */
+  }
+}
 export function useGuildOperation(api: GuildApi) {
+  const [initialPending] = useState(() => loadPending(api));
   const [data, setData] = useState<GuildSnapshot | null>(null),
     dataRef = useRef<GuildSnapshot | null>(null);
-  const [session, setSession] = useState<GuildSession | null>(loadSession);
+  const [session, setSession] = useState<GuildSession | null>(() =>
+    initialPending
+      ? initialPending.needsSession
+        ? null
+        : initialPending.session
+      : loadSession(),
+  );
   const [busy, setBusy] = useState(false),
     processing = useRef(false);
   const [online, setOnline] = useState(false),
-    [error, setError] = useState(""),
+    [error, setError] = useState(
+      initialPending
+        ? initialPending.needsSession
+          ? SESSION_MESSAGE
+          : RETRY_MESSAGE
+        : "",
+    ),
     [notice, setNotice] = useState("");
-  const [pending, setPending] = useState<Pending | null>(null),
-    pendingRef = useRef<Pending | null>(null);
+  const [pending, setPending] = useState<Pending | null>(initialPending),
+    pendingRef = useRef<Pending | null>(initialPending);
   const generation = useRef(0),
     mounted = useRef(false),
     readSequence = useRef(0);
+  const activeRead = useRef<{ epoch: number; sequence: number } | null>(null);
+  function updatePending(item: Pending | null) {
+    pendingRef.current = item;
+    rememberPending(api, item);
+    setPending(item);
+  }
   function accept(value: GuildSnapshot) {
     const current = dataRef.current;
     if (
@@ -59,8 +126,10 @@ export function useGuildOperation(api: GuildApi) {
     }
   }
   async function refresh(signal?: AbortSignal) {
+    if (activeRead.current?.epoch === generation.current) return;
     const epoch = generation.current,
       sequence = ++readSequence.current;
+    activeRead.current = { epoch, sequence };
     try {
       const value = await api.read(signal);
       if (
@@ -82,6 +151,8 @@ export function useGuildOperation(api: GuildApi) {
         return;
       setOnline(false);
       setError((current) => current || READ_ERROR);
+    } finally {
+      if (activeRead.current?.sequence === sequence) activeRead.current = null;
     }
   }
   useEffect(() => {
@@ -97,20 +168,28 @@ export function useGuildOperation(api: GuildApi) {
     };
   }, [api]);
   async function connect(pilotId: string) {
-    if (processing.current || pendingRef.current) return;
+    const unresolved = pendingRef.current;
+    if (
+      processing.current ||
+      (unresolved &&
+        (!unresolved.needsSession || pilotId !== unresolved.session.pilotId))
+    )
+      return;
     generation.current++;
     const epoch = generation.current;
     processing.current = true;
     setBusy(true);
     setError("");
     setNotice("");
-    pendingRef.current = null;
-    setPending(null);
     try {
       const next = await api.connect(pilotId);
       if (!mounted.current || epoch !== generation.current) return;
       setSession(next);
       remember(next);
+      if (unresolved) {
+        updatePending({ ...unresolved, session: next, needsSession: false });
+        setError(RETRY_MESSAGE);
+      }
       void refresh();
     } catch {
       if (mounted.current && epoch === generation.current)
@@ -123,21 +202,19 @@ export function useGuildOperation(api: GuildApi) {
     }
   }
   async function execute(item: Pending) {
-    if (processing.current) return;
+    if (processing.current || item.needsSession) return;
     processing.current = true;
     setBusy(true);
     setError("");
     setNotice("");
     const epoch = generation.current;
-    pendingRef.current = item;
-    setPending(item);
+    updatePending(item);
     try {
       const reply = await api.command(item.session, item.command);
       if (!mounted.current || epoch !== generation.current) return;
       accept(reply);
       setOnline(true);
-      pendingRef.current = null;
-      setPending(null);
+      updatePending(null);
       setNotice(
         reply.duplicate
           ? "이전에 처리한 동일 명령을 확인했습니다. 보상은 중복 지급되지 않습니다."
@@ -146,18 +223,17 @@ export function useGuildOperation(api: GuildApi) {
     } catch (e) {
       if (!mounted.current || epoch !== generation.current) return;
       if (e instanceof GuildApiError && e.status >= 400 && e.status < 500) {
-        pendingRef.current = null;
-        setPending(null);
-        setError(e.message);
         if (e.status === 401) {
+          updatePending({ ...item, needsSession: true });
           setSession(null);
           remember(null);
+          setError(SESSION_MESSAGE);
+        } else {
+          updatePending(null);
+          setError(e.message);
+          if (e.status === 409) void refresh();
         }
-        if (e.status === 409) void refresh();
-      } else
-        setError(
-          "명령의 처리 여부를 확인하지 못했습니다. 같은 명령 재전송으로 결과를 확인하세요.",
-        );
+      } else setError(RETRY_MESSAGE);
     } finally {
       if (mounted.current && epoch === generation.current) {
         processing.current = false;
@@ -195,6 +271,7 @@ export function useGuildOperation(api: GuildApi) {
     error,
     notice,
     pending: pending !== null,
+    pendingPilotId: pending?.session.pilotId,
     refresh: () => void refresh(),
     connect: (pilotId: string) => void connect(pilotId),
     send,
