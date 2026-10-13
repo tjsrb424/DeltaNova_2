@@ -57,6 +57,7 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
   const canFlank = support === "recon" || selected.includes("scout-01");
   const mission = MISSIONS.find((m) => m.id === missionId)!;
   const errors = validateFleet(selected, support, approach);
+  const serverView = view === "career" || view === "guild";
 
   useEffect(() => {
     if (!canFlank && approach === "flank") setApproach("direct");
@@ -181,10 +182,12 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
             <span className="local-indicator">
               <i /> 로컬 작전실
             </span>
-            <span className="data-count">
-              ◇ <strong>{game.profile.research}</strong>
-              <small>연구 데이터</small>
-            </span>
+            {!serverView && (
+              <span className="data-count">
+                ◇ <strong>{game.profile.research}</strong>
+                <small>연구 데이터</small>
+              </span>
+            )}
           </div>
         </header>
         <main id="main" tabIndex={-1}>
@@ -197,13 +200,15 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
                   : NAV.find((n) => n.id === view)!.name}
               </h1>
             </div>
-            <div className="base-status">
-              <span>기지 모듈</span>
-              <strong>
-                {MODULES.find((m) => m.id === game.profile.active)?.name ||
-                  "기본 구성"}
-              </strong>
-            </div>
+            {!serverView && (
+              <div className="base-status">
+                <span>기지 모듈</span>
+                <strong>
+                  {MODULES.find((m) => m.id === game.profile.active)?.name ||
+                    "기본 구성"}
+                </strong>
+              </div>
+            )}
           </div>
           {(invalid || conflict || warning) && (
             <div className="storage-notice" role="alert">

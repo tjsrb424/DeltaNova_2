@@ -4,6 +4,8 @@ export interface BaseState {
   resources: { alloy: number; supply: number };
   facilities: Record<FacilityId, number>;
   lastProducedAt: number;
+  /** Resource-millisecond remainder; negative values exclude time before a rate change or while full. */
+  productionCarry: { alloy: number; supply: number };
   wear: Record<string, number>;
   career: GameState;
 }

@@ -36,6 +36,32 @@ const run = (s: GuildState, action: GuildAction, actor = "nova", now = 1000) =>
     now,
   );
 describe("base economy and independent progress", () => {
+  it("preserves old-rate fractions across a near-boundary upgrade", () => {
+    const up = applyBaseAction(
+      initialBase(0),
+      { type: "upgrade-facility", facility: "forge" },
+      59999,
+    );
+    const minute = projectBase(up, 60000);
+    expect(minute.resources.alloy).toBe(86);
+    expect(projectBase(minute, 120000).resources.alloy).toBe(98);
+  });
+  it("does not revive partial production discarded by a full warehouse or offline cap", () => {
+    const full = initialBase(0);
+    full.resources.alloy = 300;
+    const up = applyBaseAction(
+      full,
+      { type: "upgrade-facility", facility: "forge" },
+      59999,
+    );
+    expect(projectBase(up, 60000).resources.alloy).toBe(260);
+    const offline = applyBaseAction(
+      initialBase(0),
+      { type: "upgrade-facility", facility: "forge" },
+      9 * 3600000 + 59999,
+    );
+    expect(projectBase(offline, 9 * 3600000 + 60000).resources.alloy).toBe(260);
+  });
   it("accrues complete minutes, preserves fractions and ignores a backward clock", () => {
     const b = initialBase(1000);
     expect(projectBase(b, 60999).resources).toEqual({ alloy: 120, supply: 80 });
@@ -230,5 +256,8 @@ describe("base economy and independent progress", () => {
     const badWear = structuredClone(s);
     delete badWear.pilots[0].base.wear["scout-01"];
     expect(() => validateGuildState(badWear)).toThrow();
+    const badCarry = structuredClone(s);
+    badCarry.pilots[0].base.productionCarry.alloy = -400000;
+    expect(() => validateGuildState(badCarry)).toThrow();
   });
 });

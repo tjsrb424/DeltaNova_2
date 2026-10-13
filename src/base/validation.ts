@@ -2,7 +2,7 @@ import { ROSTER, SHIPS, MODULES, MISSIONS, SUPPORTS } from "../game/content.ts";
 import { decodeSave } from "../storage/save.ts";
 import { GuildError } from "../guild/types.ts";
 import type { BaseState, BaseAction } from "./types.ts";
-import { capacities } from "./rules.ts";
+import { capacities, productionRates } from "./rules.ts";
 const check = (condition: unknown) => {
   if (!condition)
     throw new GuildError(
@@ -65,7 +65,14 @@ export function parseBaseAction(value: unknown): BaseAction {
 }
 export function validateBase(value: unknown): BaseState {
   const b = object(value);
-  exact(b, ["resources", "facilities", "lastProducedAt", "wear", "career"]);
+  exact(b, [
+    "resources",
+    "facilities",
+    "lastProducedAt",
+    "productionCarry",
+    "wear",
+    "career",
+  ]);
   const f = object(b.facilities);
   exact(f, ["forge", "reactor"]);
   for (const v of Object.values(f)) {
@@ -78,6 +85,18 @@ export function validateBase(value: unknown): BaseState {
   int(resource.alloy, caps.alloy);
   int(resource.supply, caps.supply);
   int(b.lastProducedAt);
+  const carry = object(b.productionCarry);
+  exact(carry, ["alloy", "supply"]);
+  const rates = productionRates({ facilities: f } as unknown as BaseState);
+  for (const resource of ["alloy", "supply"] as const) {
+    const v = carry[resource];
+    check(
+      typeof v === "number" &&
+        Number.isSafeInteger(v) &&
+        v >= -rates[resource] * 59999 &&
+        v < 60000,
+    );
+  }
   const wear = object(b.wear);
   exact(
     wear,

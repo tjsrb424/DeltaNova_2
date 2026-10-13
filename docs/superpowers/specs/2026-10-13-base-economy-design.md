@@ -11,7 +11,7 @@
 - 참가자마다 합금 120, 보급품 80, 시설 forge/reactor 각 레벨1, 정상 함선9척, 기존 `initialState()` 개인 작전 기록으로 시작한다.
 - 합금 제조라인은 분당 6×레벨, 보급 합성소는 분당 4×레벨을 생산한다. 완전한 1분 단위, 미만 시간은 보존, 접속 공백 생산은 최대8시간이다. 저장 상한은 합금 300+100×(forge−1), 보급150+50×(reactor−1).
 - 생산은 서버 시각으로 계산한다. 화면은 예상 보유량을 보여주고 `생산 수령` 또는 다른 유효 명령에서 기록한다. GET은 저장과 revision을 변경하지 않는다. 가득 찼을 때 흘린 생산을 나중에 소급 적재하지 않는다. 역행 시각은 생산하지 않는다.
-- 시설은 최대3레벨. 현재 레벨×합금40/보급10을 소모하고 해당 생산률과 저장 상한을 높인다. 업그레이드 전까지의 생산은 이전 레벨로 계산한다.
+- 시설은 최대3레벨. 현재 레벨×합금40/보급10을 소모하고 해당 생산률과 저장 상한을 높인다. 업그레이드 전까지의 생산은 이전 레벨로 계산한다. 분 경계 전 증설은 이전 생산률의 미완성 시간을 보존하며, 가득 찬 동안 버린 미완성 생산은 비용 지출 뒤 되살리지 않는다.
 - 개인 연구 모듈은 기존 연구 데이터20에 합금40을 더해 해금하고 하나를 활성화한다. 활성 모듈은 개인·공동 출격 모두 적용한다. 모듈 변경은 개인 작전 보고서를 마무리한 뒤 가능하다.
 
 ## 출격과 귀환
@@ -25,7 +25,7 @@
 
 ## 저장과 인터페이스
 
-공유 상태 schemaVersion2/rulesVersion base-operations-v2로 변경하고 각 GuildPilot에 BaseState를 추가한다. BaseState는 resources, facilities, lastProducedAt, wear, career(GameState v1)를 갖는다. 모든 숫자와 함선 키·개인 작전 기록을 검사한다. 클라이언트는 자원·생산 시각·승패를 전송할 수 없다.
+공유 상태 schemaVersion2/rulesVersion base-operations-v2로 변경하고 각 GuildPilot에 BaseState를 추가한다. BaseState는 resources, facilities, lastProducedAt, productionCarry, wear, career(GameState v1)를 갖는다. productionCarry는 자원×밀리초의 정수 나머지로 생산률 변경과 저장 초과 시간을 보정한다. 모든 숫자와 함선 키·개인 작전 기록을 검사한다. 클라이언트는 자원·생산 시각·승패를 전송할 수 없다.
 
 공동 명령에 collect-production, upgrade-facility(facility), repair-fleet(fleetIds), career-action(action:GameAction)을 추가한다. 기존 commandId/revision/operationId와 영수증 트랜잭션을 그대로 사용한다. 같은 명령의 비용·보상은 한 번만 적용한다.
 

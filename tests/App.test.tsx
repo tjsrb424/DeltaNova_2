@@ -29,6 +29,14 @@ function completedSave() {
   return encodeSave(reduceGame(started, { type: "return" }));
 }
 describe("command center", () => {
+  it("does not present practice research or module balances as the server participant state", async () => {
+    const { container } = render(<App storage={memory()} />);
+    expect(container.querySelector(".data-count")).not.toBeNull();
+    click("기지 운영");
+    await screen.findByRole("alert");
+    expect(container.querySelector(".topbar .data-count")).toBeNull();
+    expect(container.querySelector(".page-heading .base-status")).toBeNull();
+  });
   it("preserves newer storage written between load and the first effect", () => {
     const external = completedSave();
     const storage = {

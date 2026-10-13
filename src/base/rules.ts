@@ -12,6 +12,7 @@ export function initialBase(now = 0): BaseState {
     resources: { alloy: 120, supply: 80 },
     facilities: { forge: 1, reactor: 1 },
     lastProducedAt: now,
+    productionCarry: { alloy: 0, supply: 0 },
     wear: Object.fromEntries(ROSTER.map((r) => [r.id, 0])),
     career: initialState(),
   };
@@ -29,20 +30,28 @@ export function productionRates(base: BaseState) {
   };
 }
 export function projectBase(base: BaseState, now: number): BaseState {
+  if (now < base.lastProducedAt) return structuredClone(base);
   const next = structuredClone(base),
     elapsed = Math.max(0, Math.floor((now - base.lastProducedAt) / 60000)),
     minutes = Math.min(480, elapsed),
     rates = productionRates(base),
     cap = capacities(base);
-  next.resources.alloy = Math.min(
-    cap.alloy,
-    base.resources.alloy + minutes * rates.alloy,
-  );
-  next.resources.supply = Math.min(
-    cap.supply,
-    base.resources.supply + minutes * rates.supply,
-  );
   next.lastProducedAt = base.lastProducedAt + elapsed * 60000;
+  for (const resource of ["alloy", "supply"] as const) {
+    if (elapsed > 0) {
+      const numerator =
+        base.productionCarry[resource] + minutes * 60000 * rates[resource];
+      next.resources[resource] = Math.min(
+        cap[resource],
+        base.resources[resource] + Math.floor(numerator / 60000),
+      );
+      next.productionCarry[resource] = numerator % 60000;
+    }
+    // Overflow, including an unfinished minute, cannot become banked production after spending.
+    if (next.resources[resource] === cap[resource])
+      next.productionCarry[resource] =
+        -(now - next.lastProducedAt) * rates[resource];
+  }
   return next;
 }
 export function sortieCost(ids: string[], support: Support = "none"): number {
@@ -94,8 +103,13 @@ export function applyBaseAction(
   if (action.type === "upgrade-facility") {
     const level = base.facilities[action.facility];
     if (level >= 3) fail("FACILITY_MAX", "현재 시설은 최대 레벨입니다.");
+    const oldRates = productionRates(base);
     spend(base, 40 * level, 10 * level);
     base.facilities[action.facility]++;
+    const newRates = productionRates(base),
+      fraction = Math.max(0, now - base.lastProducedAt);
+    for (const resource of ["alloy", "supply"] as const)
+      base.productionCarry[resource] += (oldRates[resource] - newRates[resource]) * fraction;
     return base;
   }
   if (action.type === "repair-fleet") {

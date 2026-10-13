@@ -1,6 +1,6 @@
 # Base Economy Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** 서버 기지 생산·정비·개인 연구 작전과 단독 공동 작전을 연결한다.
 **Architecture:** 순수 BaseState 규칙, 공유 v2 상태/원자적 이전, 재사용 네트워크 훅 기반 기지 화면. 브라우저 연습 저장은 유지한다.
@@ -26,27 +26,27 @@
 ## Task 1: Base rules and shared v2 domain
 
 **Files:** src/base/types.ts, rules.ts, validation.ts; src/guild/types.ts, rules.ts, validation.ts; tests/base.test.ts; tests/guild.test.ts.
-**Interfaces:** BaseState(resources:{alloy,supply},facilities:{forge,reactor},lastProducedAt,wear:Record<string,number>,career:GameState); BaseAction collect-production/upgrade-facility/repair-fleet/career-action; initialBase(now=0), projectBase(base,now):BaseState, sortieCost(ids,support='none'):number, repairCost(base,ids):number, assertDeparture(base,ids):void, recordReturn(base,fleet):void, applyBaseAction(base,action,now):BaseState. GuildState v2 contains pilot.base, applyGuildCommand accrues actor and handles BaseAction. validateGuildState(value) v2, validateLegacyGuildState(value) v1 for Task2.
-- [ ] Write `tests/base.test.ts`: minute fractions/caps/backward time, upgrade old-rate/no overflow bank, insufficient resources immutable, launch debit and checkpoint lock, return credits once/wear/repair, module alloy+research/no guild prerequisite, sequential four-role merit60/one award, multi-actor preservation. Run `npm test -- tests/base.test.ts`; Expected missing module/API failure.
-- [ ] Implement stated pure interfaces and exact values, use existing reduceGame/resolveBattle; v2 validation validates BaseState and decodeSave career. Completed owners may repeat across roles; awards must equal unique completed owners.
-- [ ] Run `npm test -- tests/base.test.ts tests/guild.test.ts`; Expected pass. Commit intended paths.
+**Interfaces:** BaseState(resources:{alloy,supply},facilities:{forge,reactor},lastProducedAt,productionCarry:{alloy,supply},wear:Record<string,number>,career:GameState); BaseAction collect-production/upgrade-facility/repair-fleet/career-action; initialBase(now=0), projectBase(base,now):BaseState, sortieCost(ids,support='none'):number, repairCost(base,ids):number, assertDeparture(base,ids):void, recordReturn(base,fleet):void, applyBaseAction(base,action,now):BaseState. GuildState v2 contains pilot.base, applyGuildCommand accrues actor and handles BaseAction. validateGuildState(value) v2, validateLegacyGuildState(value) v1 for Task2.
+- [x] Write `tests/base.test.ts`: minute fractions/caps/backward time, upgrade old-rate/no overflow bank, insufficient resources immutable, launch debit and checkpoint lock, return credits once/wear/repair, module alloy+research/no guild prerequisite, sequential four-role merit60/one award, multi-actor preservation. Run `npm test -- tests/base.test.ts`; Expected missing module/API failure.
+- [x] Implement stated pure interfaces and exact values, use existing reduceGame/resolveBattle; v2 validation validates BaseState and decodeSave career. Completed owners may repeat across roles; awards must equal unique completed owners.
+- [x] Run `npm test -- tests/base.test.ts tests/guild.test.ts`; Expected pass. Commit intended paths.
 
 ## Task 2: Atomic migration and persistent career API
 
 **Files:** src/guild/migration.ts; server/store.ts; tests/base-server.test.ts; tools/verify-guild.mjs.
 **Interfaces:** upgradeGuildState(value,now):GuildState validates v1 before seeding BaseState. GuildStore constructor accepts optional {now?:number}, creates v2 and migrates v1 world + every v1 receipt response inside BEGIN IMMEDIATE; execute contract unchanged.
-- [ ] Write real SQLite/HTTP tests: valid v1 claim/receipt preserved and seeded once; migration receipt trigger failure rollback; corrupt legacy receipt rollback; solo launch/return/repair/module persisted across restart; replay original launch/return IDs changes neither supply nor credits/wear. Run `npm test -- tests/base-server.test.ts`; Expected missing migration/v2 support failure.
-- [ ] Implement migration and server adapter, no new endpoint/auth model. Extend HTTP proxy smoke with same-pilot sequential roles and repair after each role; assert merit60 and one success award.
-- [ ] Run `npm test -- tests/base-server.test.ts tests/guild-server.test.ts`, `npm run verify:guild`; Expected pass. Commit.
+- [x] Write real SQLite/HTTP tests: valid v1 claim/receipt preserved and seeded once; migration receipt trigger failure rollback; corrupt legacy receipt rollback; solo launch/return/repair/module persisted across restart; replay original launch/return IDs changes neither supply nor credits/wear. Run `npm test -- tests/base-server.test.ts`; Expected missing migration/v2 support failure.
+- [x] Implement migration and server adapter, no new endpoint/auth model. Extend HTTP proxy smoke with same-pilot sequential roles and repair after each role; assert merit60 and one success award.
+- [x] Run `npm test -- tests/base-server.test.ts tests/guild-server.test.ts`, `npm run verify:guild`; Expected pass. Commit.
 
 ## Task 3: Base operations UI
 
 **Files:** src/components/BaseOperationsPanel.tsx, ParticipantLink.tsx; src/base/base.css; src/components/GuildPanel.tsx, FleetPanel.tsx; src/App.tsx; tests/BaseOperationsPanel.test.tsx; README/docs/validation/BASE_ECONOMY_REPORT.md and vision.
 **Interfaces:** BaseOperationsPanel({api?:GuildApi}) uses shared useGuildOperation and BaseState; ParticipantLink({network:ReturnType<typeof useGuildOperation>}) owns connection/errors/retry controls; FleetPanel optional recommended:string[] defaults STARTER_FLEET. GuildPanel uses active reservations only and exposes base resource/repair navigation link. App adds 기지 운영 menu with server career distinct from 편성 연습.
-- [ ] Write DOM tests for production/upgrade, personal sortie→return→repair→module, same-pilot recon→jam availability, insufficient resources and reconnect/menu pending preservation. Run `npm test -- tests/BaseOperationsPanel.test.tsx`; Expected missing component failure.
-- [ ] Implement responsive/reduced-motion base panels, cost preview, maintenance diagnostics and personal operation report using existing components. UI never grants currencies or submits HP/time. Extract shared identity/retry controls.
-- [ ] Run `npm test`, `npm run build`, `npm run verify:build`, `npm run verify:guild`; Expected pass; document counts/limitations and commit.
-- [ ] Fresh independent whole-branch review; reproduce Important/Critical as failing regressions, one fix pass/full checks/commit.
+- [x] Write DOM tests for production/upgrade, personal sortie→return→repair→module, same-pilot recon→jam availability, insufficient resources and reconnect/menu pending preservation. Run `npm test -- tests/BaseOperationsPanel.test.tsx`; Expected missing component failure.
+- [x] Implement responsive/reduced-motion base panels, cost preview, maintenance diagnostics and personal operation report using existing components. UI never grants currencies or submits HP/time. Extract shared identity/retry controls.
+- [x] Run `npm test`, `npm run build`, `npm run verify:build`, `npm run verify:guild`; Expected pass; document counts/limitations and commit.
+- [x] Fresh independent whole-branch review; reproduce Important/Critical as failing regressions, one fix pass/full checks/commit.
 
 ## Self-review
 
