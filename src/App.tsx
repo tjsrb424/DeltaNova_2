@@ -10,6 +10,7 @@ import MissionPanel from "./components/MissionPanel.tsx";
 import SupportPanel from "./components/SupportPanel.tsx";
 import BasePanel from "./components/BasePanel.tsx";
 import OperationPanel from "./components/OperationPanel.tsx";
+import GuildPanel from "./components/GuildPanel.tsx";
 
 function browserStorage(): StoragePort {
   try {
@@ -30,6 +31,7 @@ const NAV = [
   { id: "operations", icon: "⌖", name: "작전 지도" },
   { id: "fleet", icon: "◇", name: "함대 편성" },
   { id: "base", icon: "⬡", name: "기지 연구" },
+  { id: "guild", icon: "◎", name: "공동 작전" },
 ] as const;
 type View = (typeof NAV)[number]["id"];
 export default function App({ storage: injected }: { storage?: StoragePort }) {
@@ -272,6 +274,8 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
               locked={locked}
               onBase={goBase}
             />
+          ) : view === "guild" ? (
+            <GuildPanel />
           ) : view === "base" ? (
             <>
               <Hero compact />
@@ -381,7 +385,7 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
             <span>
               DELTA NOVA <b> / </b> FIRST CONTACT
             </span>
-            <span>편성 실험 · 실제 온라인 길드와 PvP는 개발 예정</span>
+            <span>개인·공동 작전 · 공개 서비스와 PvP는 개발 예정</span>
           </footer>
         </main>
       </div>
