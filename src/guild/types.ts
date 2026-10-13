@@ -39,7 +39,8 @@ export interface GuildState {
   };
 }
 export type GuildAction =
-  | { type: "claim" | "release"; role: GuildRole }
+  | { type: "claim"; role: GuildRole }
+  | { type: "release"; role: GuildRole }
   | { type: "contribute"; role: GuildRole; fleetIds: string[] }
   | { type: "next-operation" };
 export interface GuildCommand {
