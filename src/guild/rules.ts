@@ -3,6 +3,15 @@ import { createFleet, validateFleet } from "../game/fleet.ts";
 import { resolveBattle } from "../game/combat.ts";
 import { GUILD_ROLES, LEASE_MS, PILOTS, ROLE_IDS } from "./content.ts";
 import { GuildError } from "./types.ts";
+import {
+  initialBase,
+  projectBase,
+  applyBaseAction,
+  assertDeparture,
+  sortieCost,
+  recordReturn,
+  capacities,
+} from "../base/rules.ts";
 import type {
   GuildCommand,
   GuildReport,
@@ -29,12 +38,17 @@ function operation(id: number): GuildState["operation"] {
     awards: [],
   };
 }
-export function initialGuildState(): GuildState {
+export function initialGuildState(now = 0): GuildState {
   return {
-    schemaVersion: 1,
-    rulesVersion: "guild-v1",
+    schemaVersion: 2,
+    rulesVersion: "base-operations-v2",
     revision: 0,
-    pilots: PILOTS.map((p) => ({ ...p, merit: 0, successfulOperations: 0 })),
+    pilots: PILOTS.map((p) => ({
+      ...p,
+      merit: 0,
+      successfulOperations: 0,
+      base: initialBase(now),
+    })),
     operation: operation(1),
   };
 }
@@ -55,7 +69,10 @@ function perform(
     supply: "salvage",
     breach: null,
   }[role];
-  let fleet = createFleet(fleetIds, "none");
+  let fleet = createFleet(
+    fleetIds,
+    state.pilots.find((p) => p.id === actor)!.base.career.profile.active,
+  );
   if (specialist && !fleet.some((u) => u.shipId === specialist))
     fail(
       400,
@@ -173,7 +190,16 @@ export function applyGuildCommand(
     );
   const action = command.action,
     state = structuredClone(previous);
-  if (action.type === "next-operation") {
+  const actor = state.pilots.find((p) => p.id === actorId)!;
+  actor.base = projectBase(actor.base, now);
+  if (
+    action.type === "collect-production" ||
+    action.type === "upgrade-facility" ||
+    action.type === "repair-fleet" ||
+    action.type === "career-action"
+  ) {
+    actor.base = applyBaseAction(actor.base, action, now);
+  } else if (action.type === "next-operation") {
     if (state.operation.phase !== "complete")
       fail(409, "OPERATION_ACTIVE", "현재 공동 작전을 먼저 완료하세요.");
     state.operation = operation(state.operation.id + 1);
@@ -190,11 +216,16 @@ export function applyGuildCommand(
           return (
             r !== action.role &&
             s.ownerId === actorId &&
-            (s.completed || s.leaseUntil > now)
+            !s.completed &&
+            s.leaseUntil > now
           );
         })
       )
-        fail(409, "ROLE_LIMIT", "한 작전에서는 한 역할만 맡을 수 있습니다.");
+        fail(
+          409,
+          "ROLE_LIMIT",
+          "진행 중인 역할을 완료하거나 해제한 뒤 다음 역할을 맡으세요.",
+        );
       Object.assign(slot, emptySlot(), {
         ownerId: actorId,
         leaseUntil: now + LEASE_MS,
@@ -212,12 +243,26 @@ export function applyGuildCommand(
             "LEASE_EXPIRED",
             "예약이 만료되었습니다. 역할을 다시 예약하세요.",
           );
+        assertDeparture(actor.base, action.fleetIds);
+        const cost = sortieCost(action.fleetIds);
+        if (actor.base.resources.supply < cost)
+          fail(
+            400,
+            "SUPPLY_SHORT",
+            "보급품이 부족합니다. 기지 운영에서 생산을 수령하세요.",
+          );
         const report = perform(state, actorId, action.role, action.fleetIds);
+        actor.base.resources.supply -= cost;
+        recordReturn(actor.base, report.fleet);
         slot.attempts++;
         slot.report = report;
         slot.completed = report.success;
         if (report.success) {
-          state.pilots.find((p) => p.id === actorId)!.merit += 10;
+          actor.merit += 10;
+          actor.base.resources.alloy = Math.min(
+            capacities(actor.base).alloy,
+            actor.base.resources.alloy + 10,
+          );
           slot.leaseUntil = 0;
         } else if (action.role === "breach") {
           slot.ownerId = null;
@@ -225,9 +270,11 @@ export function applyGuildCommand(
         } else slot.leaseUntil = now + LEASE_MS;
         if (action.role === "breach" && report.success) {
           state.operation.phase = "complete";
+          const rewarded = new Set<string>();
           for (const r of ROLE_IDS) {
             const ready = state.operation.slots[r];
-            if (ready.completed) {
+            if (ready.completed && !rewarded.has(ready.ownerId!)) {
+              rewarded.add(ready.ownerId!);
               const pilot = state.pilots.find((p) => p.id === ready.ownerId)!;
               pilot.merit += 20;
               pilot.successfulOperations++;

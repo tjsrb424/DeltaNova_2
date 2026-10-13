@@ -1,4 +1,5 @@
 import type { BattleResult, CombatUnit } from "../game/types.ts";
+import type { BaseState, BaseAction } from "../base/types.ts";
 export type GuildRole = "recon" | "jam" | "supply" | "breach";
 export type PrepRole = Exclude<GuildRole, "breach">;
 export interface GuildPilot {
@@ -6,6 +7,7 @@ export interface GuildPilot {
   name: string;
   merit: number;
   successfulOperations: number;
+  base: BaseState;
 }
 export interface GuildReport {
   pilotId: string;
@@ -27,8 +29,8 @@ export interface GuildSlot {
   report: GuildReport | null;
 }
 export interface GuildState {
-  schemaVersion: 1;
-  rulesVersion: "guild-v1";
+  schemaVersion: 2;
+  rulesVersion: "base-operations-v2";
   revision: number;
   pilots: GuildPilot[];
   operation: {
@@ -42,7 +44,16 @@ export type GuildAction =
   | { type: "claim"; role: GuildRole }
   | { type: "release"; role: GuildRole }
   | { type: "contribute"; role: GuildRole; fleetIds: string[] }
-  | { type: "next-operation" };
+  | { type: "next-operation" }
+  | BaseAction;
+export type LegacyGuildState = Omit<
+  GuildState,
+  "schemaVersion" | "rulesVersion" | "pilots"
+> & {
+  schemaVersion: 1;
+  rulesVersion: "guild-v1";
+  pilots: Omit<GuildPilot, "base">[];
+};
 export interface GuildCommand {
   commandId: string;
   expectedRevision: number;

@@ -1,6 +1,7 @@
 import { PILOTS, ROLE_IDS } from "./content.ts";
 import { GuildError } from "./types.ts";
-import type { GuildCommand, GuildState } from "./types.ts";
+import type { GuildCommand, GuildState, LegacyGuildState } from "./types.ts";
+import { parseBaseAction, validateBase } from "../base/validation.ts";
 import { ROSTER } from "../game/content.ts";
 const check = (condition: unknown) => {
   if (!condition)
@@ -38,7 +39,16 @@ export function parseGuildCommand(value: unknown): GuildCommand {
   int(c.operationId);
   check(Number(c.operationId) > 0);
   const a = obj(c.action);
-  if (a.type === "next-operation") keys(a, ["type"]);
+  if (
+    [
+      "collect-production",
+      "upgrade-facility",
+      "repair-fleet",
+      "career-action",
+    ].includes(a.type as string)
+  )
+    parseBaseAction(a);
+  else if (a.type === "next-operation") keys(a, ["type"]);
   else {
     check(["claim", "release", "contribute"].includes(a.type as string));
     role(a.role);
@@ -157,9 +167,16 @@ function report(value: unknown) {
     }
   }
 }
-export function validateGuildState(value: unknown): GuildState {
+function validateState(
+  value: unknown,
+  legacy: boolean,
+): GuildState | LegacyGuildState {
   const s = obj(value);
-  check(s.schemaVersion === 1 && s.rulesVersion === "guild-v1");
+  check(
+    legacy
+      ? s.schemaVersion === 1 && s.rulesVersion === "guild-v1"
+      : s.schemaVersion === 2 && s.rulesVersion === "base-operations-v2",
+  );
   int(s.revision);
   check(Array.isArray(s.pilots) && s.pilots.length === 4);
   const p = s.pilots as unknown[];
@@ -170,6 +187,7 @@ export function validateGuildState(value: unknown): GuildState {
     check(u.name === PILOTS.find((p) => p.id === u.id)!.name);
     int(u.merit);
     int(u.successfulOperations);
+    if (!legacy) validateBase(u.base);
   }
   const op = obj(s.operation);
   int(op.id);
@@ -199,13 +217,13 @@ export function validateGuildState(value: unknown): GuildState {
       completed.push(slot.ownerId as string);
     }
   }
-  check(new Set(completed).size === completed.length);
+  if (legacy) check(new Set(completed).size === completed.length);
   check((op.phase === "complete") === obj(slots.breach).completed);
   check(Array.isArray(op.awards) && op.awards.length <= 4);
   const awards = op.awards as unknown[];
   check(new Set(awards.map((a) => obj(a).pilotId)).size === awards.length);
   if (op.phase === "preparing") check(awards.length === 0);
-  else check(awards.length === completed.length);
+  else check(awards.length === new Set(completed).size);
   for (const award of awards) {
     const a = obj(award);
     check(completed.includes(a.pilotId as string));
@@ -213,3 +231,7 @@ export function validateGuildState(value: unknown): GuildState {
   }
   return structuredClone(s) as unknown as GuildState;
 }
+export const validateGuildState = (value: unknown): GuildState =>
+  validateState(value, false) as GuildState;
+export const validateLegacyGuildState = (value: unknown): LegacyGuildState =>
+  validateState(value, true) as LegacyGuildState;
