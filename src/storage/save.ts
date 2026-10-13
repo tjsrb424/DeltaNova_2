@@ -8,9 +8,17 @@ export interface StoragePort {
   setItem(key: string, value: string): void;
 }
 export type LoadResult =
-  | { status: "fresh" | "loaded"; state: GameState }
-  | { status: "invalid" | "unavailable"; state: GameState; reason: string };
-export type SaveResult = { ok: true } | { ok: false; reason: string };
+  | { status: "fresh" | "loaded"; state: GameState; snapshot: string | null }
+  | { status: "invalid"; state: GameState; reason: string; snapshot: string }
+  | {
+      status: "unavailable";
+      state: GameState;
+      reason: string;
+      snapshot: undefined;
+    };
+export type SaveResult =
+  | { ok: true; snapshot: string }
+  | { ok: false; reason: string; conflict?: boolean };
 const invalid = () => {
   throw new Error("저장 형식 또는 작전 기록을 확인할 수 없습니다.");
 };
@@ -150,24 +158,45 @@ export function loadGame(storage: StoragePort): LoadResult {
     return {
       status: "unavailable",
       state: initialState(),
+      snapshot: undefined,
       reason: "브라우저 저장소에 접근할 수 없습니다. 현재 창에서만 진행됩니다.",
     };
   }
-  if (raw === null) return { status: "fresh", state: initialState() };
+  if (raw === null)
+    return { status: "fresh", state: initialState(), snapshot: null };
   try {
-    return { status: "loaded", state: decodeSave(raw) };
+    return { status: "loaded", state: decodeSave(raw), snapshot: raw };
   } catch {
     return {
       status: "invalid",
       state: initialState(),
+      snapshot: raw,
       reason: "저장 기록을 읽을 수 없습니다. 기존 기록은 보존되어 있습니다.",
     };
   }
 }
-export function saveGame(storage: StoragePort, state: GameState): SaveResult {
+export function saveGame(
+  storage: StoragePort,
+  state: GameState,
+  expectedSnapshot?: string | null,
+): SaveResult {
   try {
-    storage.setItem(SAVE_KEY, encodeSave(state));
-    return { ok: true };
+    const snapshot = encodeSave(state);
+    // Check at the write boundary, after serialization. A prior UI event check
+    // cannot detect an external write between the action and its React effect.
+    if (
+      expectedSnapshot !== undefined &&
+      storage.getItem(SAVE_KEY) !== expectedSnapshot
+    )
+      return {
+        ok: false,
+        conflict: true,
+        reason:
+          "다른 창의 저장 변경을 감지했습니다. 현재 진행을 보존하고 조작을 잠급니다.",
+      };
+    if (snapshot !== expectedSnapshot) storage.setItem(SAVE_KEY, snapshot);
+    // Keep our actual write as the revision; never adopt a later external read.
+    return { ok: true, snapshot };
   } catch {
     return {
       ok: false,

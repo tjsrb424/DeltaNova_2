@@ -2,7 +2,8 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import App from "../src/App.tsx";
-import { decodeSave, SAVE_KEY } from "../src/storage/save.ts";
+import { decodeSave, encodeSave, SAVE_KEY } from "../src/storage/save.ts";
+import { initialState, reduceGame } from "../src/game/state.ts";
 afterEach(cleanup);
 function memory(raw: string | null = null) {
   return {
@@ -17,7 +18,118 @@ function memory(raw: string | null = null) {
 }
 const click = (name: string | RegExp) =>
   fireEvent.click(screen.getByRole("button", { name }));
+function completedSave() {
+  const started = reduceGame(initialState(), {
+    type: "launch",
+    missionId: "salvage",
+    fleetIds: ["striker-01", "striker-02", "guardian-01", "salvage-01"],
+    support: "jam",
+    approach: "direct",
+  });
+  return encodeSave(reduceGame(started, { type: "return" }));
+}
 describe("command center", () => {
+  it("preserves newer storage written between load and the first effect", () => {
+    const external = completedSave();
+    const storage = {
+      raw: encodeSave(initialState()),
+      first: true,
+      getItem() {
+        const value = this.raw;
+        if (this.first) {
+          this.first = false;
+          this.raw = external;
+        }
+        return value;
+      },
+      setItem(_key: string, value: string) {
+        this.raw = value;
+      },
+    };
+    render(<App storage={storage} />);
+    expect(storage.raw).toBe(external);
+    expect(screen.getByRole("alert").textContent).toContain("다른 창");
+  });
+  it("preserves both states when storage changes between action and persistence", () => {
+    const external = completedSave();
+    const storage = {
+      ...memory(),
+      race: false,
+      getItem() {
+        const value = this.raw;
+        if (this.race) {
+          this.race = false;
+          this.raw = external;
+        }
+        return value;
+      },
+    };
+    render(<App storage={storage} />);
+    click("추천 편성 적용");
+    click("교란 지원");
+    storage.race = true;
+    click("작전 출격");
+    expect(storage.raw).toBe(external);
+    expect(
+      screen.getByRole("heading", { name: "다음 명령을 기다립니다" }),
+    ).toBeTruthy();
+    expect(screen.getByRole("alert").textContent).toContain("다른 창");
+  });
+  it.each(["read-denied", "all-denied", "malformed"])(
+    "retains current gameplay on failed reload: %s",
+    (mode) => {
+      const original = completedSave();
+      const storage = {
+        ...memory(original),
+        fail: false,
+        getItem() {
+          if (this.fail && mode !== "malformed") throw Error("denied");
+          return this.raw;
+        },
+        setItem(_key: string, value: string) {
+          if (this.fail && mode === "all-denied") throw Error("denied");
+          this.raw = value;
+        },
+      };
+      render(<App storage={storage} />);
+      storage.fail = true;
+      if (mode === "malformed") storage.raw = "corrupt external data";
+      const before = storage.raw;
+      fireEvent(window, new StorageEvent("storage", { key: SAVE_KEY }));
+      click("최신 기록 불러오기");
+      expect(screen.getByRole("heading", { name: "작전 보고서" })).toBeTruthy();
+      expect(storage.raw).toBe(before);
+      expect(screen.getByRole("alert").textContent).toContain("불러오기 실패");
+      expect(
+        (
+          screen.getByRole("button", {
+            name: "편성으로 돌아가기",
+          }) as HTMLButtonElement
+        ).disabled,
+      ).toBe(true);
+    },
+  );
+  it("does not blindly save after an unread initial snapshot becomes available", () => {
+    const external = completedSave();
+    const storage = {
+      ...memory(external),
+      denied: true,
+      getItem() {
+        if (this.denied) throw Error("denied");
+        return this.raw;
+      },
+    };
+    render(<App storage={storage} />);
+    storage.denied = false;
+    click("추천 편성 적용");
+    click("교란 지원");
+    click("작전 출격");
+    expect(storage.raw).toBe(external);
+    expect(
+      screen.getByRole("heading", { name: "다음 명령을 기다립니다" }),
+    ).toBeTruthy();
+    expect(screen.getByRole("alert")).toBeTruthy();
+  });
   it("locks navigation while resolving an operation and allows base access after settlement", () => {
     render(<App storage={memory()} />);
     click("추천 편성 적용");

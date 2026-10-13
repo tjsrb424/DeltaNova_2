@@ -41,13 +41,14 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
   const [warning, setWarning] = useState(
     "reason" in loaded ? loaded.reason : "",
   );
+  const [reloadFailure, setReloadFailure] = useState("");
   const [view, setView] = useState<View>("command");
   const [missionId, setMissionId] = useState(MISSIONS[0].id);
   const [selected, setSelected] = useState<string[]>([]);
   const [support, setSupport] = useState<Support>("none");
   const [approach, setApproach] = useState<Approach>("direct");
   const writeAllowed = useRef(loaded.status !== "invalid");
-  const lastSaved = useRef<string | null | undefined>(undefined);
+  const lastSaved = useRef<string | null | undefined>(loaded.snapshot);
   const locked = invalid || conflict;
   const canFlank = support === "recon" || selected.includes("scout-01");
   const mission = MISSIONS.find((m) => m.id === missionId)!;
@@ -58,14 +59,20 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
   }, [canFlank, approach]);
   useEffect(() => {
     if (!writeAllowed.current || invalid || conflict) return;
-    const result = saveGame(storage, game);
+    if (lastSaved.current === undefined) {
+      setWarning(
+        "기존 저장 기록을 확인하지 못해 저장하지 않습니다. 현재 창에서만 진행됩니다. 기록을 다시 불러오면 이 창의 미저장 진행은 대체됩니다.",
+      );
+      return;
+    }
+    const result = saveGame(storage, game, lastSaved.current);
     if (result.ok) {
-      try {
-        lastSaved.current = storage.getItem(SAVE_KEY);
-      } catch {
-        lastSaved.current = undefined;
-      }
+      lastSaved.current = result.snapshot;
       setWarning("");
+    } else if (result.conflict) {
+      writeAllowed.current = false;
+      setConflict(true);
+      setWarning(result.reason);
     } else setWarning(result.reason);
   }, [storage, game, invalid, conflict]);
   useEffect(() => {
@@ -96,17 +103,30 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
   }
   function reload() {
     const result = loadGame(storage);
+    if (result.status === "invalid" || result.status === "unavailable") {
+      writeAllowed.current = false;
+      setConflict(true);
+      setInvalid(result.status === "invalid");
+      if (result.status === "invalid") lastSaved.current = result.snapshot;
+      setReloadFailure(
+        `불러오기 실패 · ${result.reason} 현재 진행은 그대로 보존했습니다.`,
+      );
+      return;
+    }
+    lastSaved.current = result.snapshot;
     setGame(result.state);
-    setInvalid(result.status === "invalid");
+    setInvalid(false);
     setConflict(false);
-    writeAllowed.current = result.status !== "invalid";
-    setWarning("reason" in result ? result.reason : "");
+    writeAllowed.current = true;
+    setWarning("");
+    setReloadFailure("");
   }
   function newPractice() {
     writeAllowed.current = true;
     setInvalid(false);
     setConflict(false);
     setWarning("");
+    setReloadFailure("");
     setGame(initialState());
   }
   function goBase() {
@@ -196,11 +216,28 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
                     ? "현재 작전은 그대로 보관하고 조작을 잠갔습니다. 최신 기록을 불러오면 이 창의 미저장 진행은 대체됩니다."
                     : warning}
                 </p>
+                {reloadFailure && <p>{reloadFailure}</p>}
               </div>
               {conflict ? (
-                <button className="secondary-button" onClick={reload}>
-                  최신 기록 불러오기
-                </button>
+                <div>
+                  <button className="secondary-button" onClick={reload}>
+                    최신 기록 불러오기
+                  </button>
+                  {invalid && (
+                    <>
+                      <p className="footnote">
+                        새 연습을 시작하면 현재 진행과 읽을 수 없는 외부 기록을
+                        대체합니다.
+                      </p>
+                      <button
+                        className="secondary-button"
+                        onClick={newPractice}
+                      >
+                        새 연습 시작
+                      </button>
+                    </>
+                  )}
+                </div>
               ) : invalid ? (
                 <div>
                   <p className="footnote">
@@ -210,6 +247,10 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
                     새 연습 시작
                   </button>
                 </div>
+              ) : lastSaved.current === undefined ? (
+                <button className="secondary-button" onClick={reload}>
+                  저장 기록 다시 확인
+                </button>
               ) : null}
             </div>
           )}

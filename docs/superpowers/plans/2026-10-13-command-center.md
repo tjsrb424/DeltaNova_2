@@ -1,6 +1,6 @@
 # Delta Nova Command Center Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** 편성, 지원, 접근 경로, 교전, 귀환과 기지 모듈을 실제 조작할 수 있는 로컬 작전실을 만든다.
 
@@ -44,14 +44,14 @@
 
 **Files:** Create package.json, package-lock.json, tsconfig.json, vite.config.ts, index.html, .gitignore, src/game/types.ts, content.ts, fleet.ts, combat.ts, state.ts; tests/game.test.ts; tools/simulate.ts.
 
-**Interfaces:** Produces the shared types, content and pure functions above. BattleResult includes fleet/enemies, outcome (victory/repelled/destroyed), rounds, cargoLost and structured events. Operation holds missionId, support, approach, module, phase (briefing/checkpoint/result), fleet, battle histories, earned/unloaded/lost cargo and final settlement. GameAction covers launch, advance, return, dismiss, unlock-module, activate-module, clear-message.
+**Interfaces:** Produces the shared types, content and pure functions above. BattleResult includes fleet/enemies, outcome (victory/repelled/destroyed), rounds, cargoLost and structured events. Operation holds missionId, support, approach, module, phase (checkpoint/result), fleet, battle histories, earned/unloaded/lost cargo and final settlement. GameAction covers launch, advance, return, dismiss, unlock-module, activate-module, clear-message.
 
-- [ ] Write failing real-behavior tests: overcapacity/duplicates/unknown IDs refused; unsupported flank refused; simultaneous destruction; first-round-only jam; armor bypass; guardian conservation; carrier hit; victory-only repairs; cargo loss; highest-record delta rewards and repeated return; failed mission can relaunch.
-- [ ] Run `npm test -- tests/game.test.ts`; expect missing behavior failure.
-- [ ] Implement content, fleet validation, combat and reducer. Keep stable IDs and snapshot settings. Launch resolves the first battle synchronously, advance resolves optional battle, return settles once. Events contain source/target IDs, type, amount and text; UI derives its explanations from these events.
-- [ ] Run `npm test -- tests/game.test.ts`; expect all tests pass.
-- [ ] Implement enumeration of all legal fleets/support/approach combinations and CSV/Markdown summary through `npm run simulate`. Record actual output in docs/validation; this validates balance hypotheses, not human fun.
-- [ ] Commit only Task 1 paths and record command results.
+- [x] Write failing real-behavior tests: overcapacity/duplicates/unknown IDs refused; unsupported flank refused; simultaneous destruction; first-round-only jam; armor bypass; guardian conservation; carrier hit; victory-only repairs; cargo loss; highest-record delta rewards and repeated return; failed mission can relaunch.
+- [x] Run `npm test -- tests/game.test.ts`; expect missing behavior failure.
+- [x] Implement content, fleet validation, combat and reducer. Keep stable IDs and snapshot settings. Launch resolves the first battle synchronously, advance resolves optional battle, return settles once. Events contain source/target IDs, type, amount and text; UI derives its explanations from these events.
+- [x] Run `npm test -- tests/game.test.ts`; expect all tests pass.
+- [x] Implement enumeration of all legal fleets/support/approach combinations and CSV/Markdown summary through `npm run simulate`. Record actual output in docs/validation; this validates balance hypotheses, not human fun.
+- [x] Commit only Task 1 paths and record command results.
 
 ## Task 2: Reliable local progress
 
@@ -59,10 +59,10 @@
 
 **Interfaces:** Consumes GameState. Save schema version is 1, rules version command-center-v1. LoadResult status is fresh/loaded/invalid/unavailable; SaveResult reports success or reason. StoragePort has getItem/setItem only.
 
-- [ ] Write failing tests for full valid roundtrip, bad JSON, unknown version, malformed nested fleet, negative/NaN values, unsupported IDs, quota failure and preservation of invalid raw storage.
-- [ ] Run `npm test -- tests/storage.test.ts`; expect missing module/behavior failure.
-- [ ] Implement recursive runtime validation and non-destructive recovery. Use one namespaced snapshot key, `delta-nova.command-center.v1`. Do not silently reset unknown data. Inject StoragePort so quota denial is tested without a browser.
-- [ ] Run full `npm test`; expect all tests pass. Commit Task 2 paths.
+- [x] Write failing tests for full valid roundtrip, bad JSON, unknown version, malformed nested fleet, negative/NaN values, unsupported IDs, quota failure and preservation of invalid raw storage.
+- [x] Run `npm test -- tests/storage.test.ts`; expect missing module/behavior failure.
+- [x] Implement recursive runtime validation and non-destructive recovery. Use one namespaced snapshot key, `delta-nova.command-center.v1`. Do not silently reset unknown data. Inject StoragePort so quota denial is tested without a browser.
+- [x] Run full `npm test`; expect all tests pass. Commit Task 2 paths.
 
 ## Task 3: Playable command center and visual feedback
 
@@ -70,12 +70,12 @@
 
 **Interfaces:** Consumes content, reducer and storage APIs. DOM buttons dispatch GameAction; local selection state covers mission/fleet/support/approach. State phase controls locking. CSS motion is decorative and reduced-motion safe.
 
-- [ ] Write failing tests using real UI: empty fleet cannot launch, selecting ships updates capacity, selecting recon unlocks flank and deselection invalidates/reset it, launch shows battle/report, returning updates persistent progress once, completed result can dismiss/retry, invalid save requires explicit fresh start, storage failure warns, external storage event locks editing.
-- [ ] Run `npm test -- tests/App.test.tsx`; expect missing UI failure.
-- [ ] Implement four working navigation destinations (command/operations/fleet/base) as local sections. Use an original station hero, restrained telemetry, role glyphs, six selection slots, accessible buttons, support cards, route choice, battle event explanation and result settlement. Label support as local simulation.
-- [ ] Apply tactile hover/press/focus feedback, selection fill transitions, launch state, damage and result entry; respect prefers-reduced-motion and small viewports.
-- [ ] Run `npm test`, `npm run build`, `npm run simulate`; expect passing tests, successful TypeScript/Vite build and a real balance report. Record unperformed rendered/human QA separately.
-- [ ] Commit intended files. Fresh whole-branch review focuses on the five Review Focus items and gameplay state boundaries; fix meaningful findings with failing regression tests before reporting.
+- [x] Write failing tests using real UI: empty fleet cannot launch, selecting ships updates capacity, selecting recon unlocks flank and deselection invalidates/reset it, launch shows battle/report, returning updates persistent progress once, completed result can dismiss/retry, invalid save requires explicit fresh start, storage failure warns, external storage event locks editing.
+- [x] Run `npm test -- tests/App.test.tsx`; expect missing UI failure.
+- [x] Implement four working navigation destinations (command/operations/fleet/base) as local sections. Use an original station hero, restrained telemetry, role glyphs, six selection slots, accessible buttons, support cards, route choice, battle event explanation and result settlement. Label support as local simulation.
+- [x] Apply tactile hover/press/focus feedback, selection fill transitions, launch state, damage and result entry; respect prefers-reduced-motion and small viewports.
+- [x] Run `npm test`, `npm run build`, `npm run simulate`; expect passing tests, successful TypeScript/Vite build and a real balance report. Record unperformed rendered/human QA separately.
+- [x] Commit intended files. Fresh whole-branch review focuses on the five Review Focus items and gameplay state boundaries; fix meaningful findings with failing regression tests before reporting.
 
 ## Plan self-review
 
