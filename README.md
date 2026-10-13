@@ -79,6 +79,7 @@ npm run simulate
 - [제국 운영과 게임 화면 방향 v0.2](docs/design/DELTA_NOVA_EMPIRE_DIRECTION_V0.2.md)
 - [다중 행성과 식민지 방향](docs/design/DELTA_NOVA_COLONIES_V0.1.md)
 - [시안 9.5 이상 평가와 개선 기록](docs/art/EMPIRE_COLONY_UI_REVIEW.md)
+- [행성 대시보드 v0.5 — 평상시·공격 접근 시안과 평가](docs/art/PLANET_DASHBOARD_UI_V0.5_REVIEW.md)
 - [현재 구현 설계](docs/superpowers/specs/2026-10-13-delta-nova-command-center-design.md)
 - [구현 계획](docs/superpowers/plans/2026-10-13-command-center.md)
 - [구현 검증과 남은 작업](docs/validation/IMPLEMENTATION_REPORT.md)
