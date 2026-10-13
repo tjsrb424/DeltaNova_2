@@ -7,12 +7,20 @@ import { useGuildOperation } from "../guild/useGuildOperation.ts";
 import { validateFleet } from "../game/fleet.ts";
 import FleetPanel from "./FleetPanel.tsx";
 import ShipGlyph from "./ShipGlyph.tsx";
+import ParticipantLink from "./ParticipantLink.tsx";
+import { projectBase, sortieCost } from "../base/rules.ts";
+import "../base/base.css";
 import "../guild/guild.css";
-export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
+export default function GuildPanel({
+  api = guildApi,
+  onBase,
+}: {
+  api?: GuildApi;
+  onBase?: () => void;
+}) {
   const network = useGuildOperation(api),
-    { data, session, busy, online, error, notice } = network;
-  const [pilotId, setPilotId] = useState(session?.pilotId || "nova"),
-    [role, setRole] = useState<GuildRole>("recon"),
+    { data, session, busy, online } = network;
+  const [role, setRole] = useState<GuildRole>("recon"),
     [fleet, setFleet] = useState<string[]>([]);
   const world = data?.state,
     op = world?.operation,
@@ -32,11 +40,21 @@ export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
       ? ROLE_IDS.find((r) => {
           const s = world.operation.slots[r];
           return (
-            s.ownerId === session.pilotId && (s.completed || s.leaseUntil > now)
+            s.ownerId === session.pilotId && !s.completed && s.leaseUntil > now
           );
         })
       : undefined;
   const fleetErrors = validateFleet(fleet, "none", "direct");
+  const pilot = world?.pilots.find((p) => p.id === session?.pilotId),
+    base = pilot && projectBase(pilot.base, now);
+  if (base && fleet.some((id) => base.wear[id] > 0))
+    fleetErrors.push(
+      "정비가 필요합니다. 기지 운영에서 정비하거나 다른 함선을 편성하세요.",
+    );
+  if (base?.career.operation?.phase === "checkpoint")
+    fleetErrors.push("개인 작전 함대가 출격 중입니다. 먼저 귀환하세요.");
+  if (base && base.resources.supply < sortieCost(fleet))
+    fleetErrors.push("보급품이 부족합니다. 기지 운영에서 생산을 수령하세요.");
   const report = slot?.report;
   return (
     <div className="guild-screen reveal">
@@ -70,69 +88,7 @@ export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
           <b data-testid="guild-revision">REV {world?.revision ?? "—"}</b>
         </div>
       </section>
-      <section className="panel guild-connection">
-        <div>
-          <span className="eyebrow">PARTICIPANT LINK</span>
-          <h3>
-            {session
-              ? `${PILOTS.find((p) => p.id === session.pilotId)?.name} · 연결됨`
-              : "공동 작전 참가자 연결"}
-          </h3>
-          <p className="footnote">
-            로컬 서버 공유 모드 · 개발 참가자 선택은 실제 계정 인증이 아닙니다.
-          </p>
-        </div>
-        <div className="pilot-controls">
-          <label>
-            개발 참가자
-            <select
-              aria-label="개발 참가자"
-              value={network.pendingPilotId || pilotId}
-              disabled={busy || network.pending}
-              onChange={(e) => setPilotId(e.target.value)}
-            >
-              {PILOTS.map((p) => (
-                <option key={p.id} value={p.id}>
-                  {p.name}
-                </option>
-              ))}
-            </select>
-          </label>
-          <button
-            className="secondary-button"
-            disabled={busy || (network.pending && session !== null)}
-            onClick={() => network.connect(network.pendingPilotId || pilotId)}
-          >
-            참가자로 연결
-          </button>
-          <button
-            className="text-button"
-            onClick={network.refresh}
-            disabled={busy}
-          >
-            상태 새로고침
-          </button>
-        </div>
-      </section>
-      {error && (
-        <div className="storage-notice" role="alert">
-          <p>{error}</p>
-          {network.pending && (
-            <button
-              className="secondary-button"
-              disabled={busy || !session}
-              onClick={network.retry}
-            >
-              같은 명령 재전송
-            </button>
-          )}
-        </div>
-      )}
-      {notice && (
-        <p className="guild-notice" role="status">
-          {notice}
-        </p>
-      )}
+      <ParticipantLink network={network} />
       {!world && (
         <section className="panel">
           <p className="muted">
@@ -143,6 +99,25 @@ export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
       )}
       {world && op && (
         <>
+          <section className="guild-base-status">
+            <div>
+              <p>
+                혼자서는 역할을 순서대로 수행하고, 여러 명은 역할을 나눠
+                진행합니다.
+              </p>
+              {base && (
+                <p>
+                  기지 보급품 {base.resources.supply} · 출격 비용{" "}
+                  {sortieCost(fleet)} · 합금 {base.resources.alloy}
+                </p>
+              )}
+            </div>
+            {onBase && (
+              <button className="secondary-button" onClick={onBase}>
+                기지 운영·정비로 이동
+              </button>
+            )}
+          </section>
           <div className="guild-roles">
             {GUILD_ROLES.map((r, i) => {
               const s = op.slots[r.id],
@@ -278,6 +253,7 @@ export default function GuildPanel({ api = guildApi }: { api?: GuildApi }) {
                   <FleetPanel
                     selected={fleet}
                     onChange={setFleet}
+                    recommended={definition.recommended}
                     locked={locked}
                   />
                   <div className="guild-sortie-bar">

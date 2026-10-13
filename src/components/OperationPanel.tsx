@@ -7,11 +7,13 @@ export default function OperationPanel({
   onAction,
   locked,
   onBase,
+  maintenance = false,
 }: {
   operation: Operation;
   onAction: (a: GameAction) => void;
   locked: boolean;
   onBase: () => void;
+  maintenance?: boolean;
 }) {
   const mission = MISSIONS.find((m) => m.id === op.missionId)!,
     cargo = op.fleet.reduce((s, u) => s + u.cargo, 0),
@@ -205,8 +207,9 @@ export default function OperationPanel({
               </div>
             </dl>
             <p className="footnote">
-              보유 함선과 기지는 보존됩니다. 편성을 바꿔 즉시 다시 출격할 수
-              있습니다.
+              {maintenance
+                ? "귀환한 함선의 피해는 정비 목록에 기록됩니다. 정비하거나 다른 정상 함선으로 다음 출격을 준비하세요."
+                : "보유 함선과 기지는 보존됩니다. 편성을 바꿔 즉시 다시 출격할 수 있습니다."}
             </p>
             <button
               className="primary-button"

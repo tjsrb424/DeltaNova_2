@@ -1,0 +1,322 @@
+.base-screen {
+  display: grid;
+  gap: 20px;
+}
+.base-hero {
+  position: relative;
+  min-height: 250px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #101922;
+}
+.base-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+.base-hero > div {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #0a141df2 0%,
+    #0a141d96 45%,
+    #0a141d1a 80%
+  );
+}
+.base-hero > article {
+  position: relative;
+  padding: 32px;
+}
+.base-hero h2 {
+  font-size: 32px;
+  margin: 12px 0;
+}
+.base-hero p {
+  font-size: 13px;
+  color: #bccdd0;
+  margin-bottom: 20px;
+}
+.base-resource-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 28px;
+  border: 1px solid #36524c;
+  background: linear-gradient(90deg, #1b302f, #111e27);
+}
+.base-resource-strip > div {
+  display: grid;
+  gap: 8px;
+}
+.base-resource-strip span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.base-resource-strip strong {
+  font-size: 32px;
+  color: var(--mint);
+  font-weight: 300;
+}
+.base-resource-strip small {
+  font-size: 14px;
+  color: #7e9c98;
+  margin-left: 9px;
+}
+.base-resource-strip p {
+  font-size: 11px;
+  color: #a9b9b7;
+}
+.base-production-note {
+  margin-top: -12px;
+}
+.base-investments {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.facility-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 10px 0 20px;
+  gap: 10px;
+}
+.facility-heading b {
+  font-size: 22px;
+  color: var(--copper);
+  font-weight: 300;
+  white-space: nowrap;
+}
+.facility-heading small {
+  font-size: 12px;
+  color: var(--dim);
+  margin-left: 5px;
+}
+.facility-assembly {
+  display: flex;
+  gap: 8px;
+  height: 90px;
+  align-items: end;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #36524c;
+  padding: 0 12px;
+}
+.facility-assembly i {
+  position: relative;
+  flex: 1;
+  height: 64px;
+  border: 1px dashed #30424a;
+  background: #0a141d;
+  transform: skewY(-5deg);
+}
+.facility-assembly i:nth-child(2) {
+  height: 76px;
+}
+.facility-assembly i.built {
+  border: 1px solid #769e9a;
+  background: linear-gradient(90deg, #2d4a4c, #173139);
+  box-shadow: inset -5px 0 #071319;
+}
+.facility-assembly.reactor i {
+  border-radius: 30px 30px 0 0;
+}
+.facility-assembly.reactor i.built {
+  background: linear-gradient(90deg, #3e3732, #5f5140);
+  border-color: #aa8b6b;
+}
+.facility-assembly span {
+  position: absolute;
+  bottom: 9px;
+  left: 10px;
+  font-style: normal;
+  color: #689d95;
+  font-size: 10px;
+}
+.facility-rate {
+  display: block;
+  margin-top: 14px;
+  font-size: 16px;
+  color: var(--mint);
+}
+.facility-panel > button {
+  margin-top: 18px;
+  width: 100%;
+}
+.base-research-panel > h3 {
+  margin-top: 10px;
+}
+.base-research-panel > article {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.base-research-panel > article > div {
+  display: grid;
+  gap: 8px;
+  font-size: 13px;
+}
+.base-research-panel small {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 22px;
+}
+.maintenance-grid > article {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #0c151d;
+  border: 1px solid var(--border);
+}
+.maintenance-grid > article.needs-repair {
+  border-color: #655044;
+}
+.maintenance-grid > article > div {
+  display: grid;
+  gap: 5px;
+  font-size: 11px;
+  flex: 1;
+}
+.maintenance-grid small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.maintenance-grid .needs-repair small {
+  color: var(--copper);
+}
+.maintenance-grid button {
+  padding: 4px;
+  white-space: nowrap;
+  font-size: 10px;
+}
+.maintenance-grid svg {
+  flex-shrink: 0;
+  max-width: 42px;
+}
+.base-sortie-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 20px;
+  align-items: start;
+}
+.base-sortie-layout > div {
+  display: grid;
+  gap: 20px;
+}
+.base-sortie-layout > aside {
+  position: sticky;
+  top: 20px;
+}
+.base-sortie-layout h2 {
+  margin: 12px 0;
+}
+.base-sortie-layout .primary-button {
+  width: 100%;
+  margin-top: 18px;
+}
+.base-sortie-cost {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-block: 1px solid var(--border);
+  font-size: 12px;
+}
+.base-sortie-cost strong {
+  color: var(--mint);
+  font-size: 30px;
+  font-weight: 300;
+}
+.base-settlement-note {
+  padding: 14px 20px;
+  border-left: 2px solid var(--copper);
+  background: #342a2245;
+  font-size: 12px;
+  color: #dfc3ac;
+}
+.guild-base-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 22px;
+  border: 1px solid var(--border);
+  background: #15232b;
+}
+.guild-base-status p {
+  font-size: 12px;
+}
+@media (max-width: 1200px) {
+  .base-investments {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .base-research-panel {
+    grid-column: 1/-1;
+  }
+  .maintenance-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 900px) {
+  .base-sortie-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .base-sortie-layout > aside {
+    position: static;
+  }
+  .base-resource-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .base-resource-strip > button {
+    grid-column: 1/-1;
+  }
+  .guild-base-status {
+    align-items: start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .base-hero > article {
+    padding: 24px;
+  }
+  .base-hero h2 {
+    font-size: 26px;
+  }
+  .base-resource-strip {
+    gap: 10px;
+    padding: 20px 16px;
+  }
+  .base-resource-strip strong {
+    font-size: 24px;
+  }
+  .base-resource-strip small {
+    display: block;
+    margin: 5px 0 0;
+    font-size: 12px;
+  }
+  .base-resource-strip p {
+    font-size: 10px;
+  }
+  .base-investments,
+  .maintenance-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .maintenance-panel > .section-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

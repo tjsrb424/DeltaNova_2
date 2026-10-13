@@ -11,6 +11,7 @@ import SupportPanel from "./components/SupportPanel.tsx";
 import BasePanel from "./components/BasePanel.tsx";
 import OperationPanel from "./components/OperationPanel.tsx";
 import GuildPanel from "./components/GuildPanel.tsx";
+import BaseOperationsPanel from "./components/BaseOperationsPanel.tsx";
 
 function browserStorage(): StoragePort {
   try {
@@ -32,6 +33,7 @@ const NAV = [
   { id: "fleet", icon: "◇", name: "함대 편성" },
   { id: "base", icon: "⬡", name: "기지 연구" },
   { id: "guild", icon: "◎", name: "공동 작전" },
+  { id: "career", icon: "▤", name: "기지 운영" },
 ] as const;
 type View = (typeof NAV)[number]["id"];
 export default function App({ storage: injected }: { storage?: StoragePort }) {
@@ -274,8 +276,10 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
               locked={locked}
               onBase={goBase}
             />
+          ) : view === "career" ? (
+            <BaseOperationsPanel />
           ) : view === "guild" ? (
-            <GuildPanel />
+            <GuildPanel onBase={() => setView("career")} />
           ) : view === "base" ? (
             <>
               <Hero compact />
@@ -289,6 +293,21 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
             <div className="command-layout">
               <div className="main-column">
                 {view === "command" && <Hero />}
+                {view === "command" && (
+                  <section className="panel guild-base-status">
+                    <p>
+                      기지 운영에서 생산·정비·연구와 저장되는 개인 작전을
+                      진행하세요. 이 지휘실은 비용 없이 편성을 시험하는 연습
+                      공간입니다.
+                    </p>
+                    <button
+                      className="secondary-button"
+                      onClick={() => setView("career")}
+                    >
+                      기지 운영 시작
+                    </button>
+                  </section>
+                )}
                 {view !== "fleet" && (
                   <MissionPanel
                     selected={missionId}

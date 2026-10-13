@@ -12,10 +12,12 @@ export default function FleetPanel({
   selected,
   onChange,
   locked,
+  recommended = STARTER_FLEET,
 }: {
   selected: string[];
   onChange: (ids: string[]) => void;
   locked: boolean;
+  recommended?: string[];
 }) {
   const command = selected.reduce(
     (sum, id) =>
@@ -34,7 +36,7 @@ export default function FleetPanel({
         <button
           className="text-button"
           disabled={locked}
-          onClick={() => onChange(STARTER_FLEET)}
+          onClick={() => onChange(recommended)}
         >
           추천 편성 적용 <span aria-hidden="true">↗</span>
         </button>
