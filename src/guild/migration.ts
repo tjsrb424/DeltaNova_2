@@ -1,4 +1,4 @@
-import { validateGuildState, validateLegacyGuildState } from "./validation.ts";
+import { validateGuildState, validateLegacyGuildState } from "./legacy-validation.ts";
 import { initialBase } from "../base/rules.ts";
 import type { GuildState } from "./types.ts";
 export function upgradeGuildState(value: unknown, now: number): GuildState {

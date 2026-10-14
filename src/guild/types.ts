@@ -1,4 +1,4 @@
-import type { BattleResult, CombatUnit } from "../game/types.ts";
+import type { BattleResult, CombatUnit, FleetContext, ModuleId } from "../game/types.ts";
 import type { BaseState, BaseAction } from "../base/types.ts";
 export type GuildRole = "recon" | "jam" | "supply" | "breach";
 export type PrepRole = Exclude<GuildRole, "breach">;
@@ -8,6 +8,7 @@ export interface GuildPilot {
   merit: number;
   successfulOperations: number;
   base: BaseState;
+  fleetContext?: FleetContext;
 }
 export interface GuildReport {
   pilotId: string;
@@ -20,6 +21,8 @@ export interface GuildReport {
   personalMerit: number;
   supplyHealed: number;
   summary: string;
+  module?: ModuleId;
+  fleetContext?: FleetContext;
 }
 export interface GuildSlot {
   ownerId: string | null;
@@ -43,7 +46,7 @@ export interface GuildState {
 export type GuildAction =
   | { type: "claim"; role: GuildRole }
   | { type: "release"; role: GuildRole }
-  | { type: "contribute"; role: GuildRole; fleetIds: string[] }
+  | { type: "contribute"; role: GuildRole; fleetIds: string[]; planetId?: string }
   | { type: "next-operation" }
   | BaseAction;
 export type LegacyGuildState = Omit<

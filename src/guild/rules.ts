@@ -1,4 +1,4 @@
-import { MISSIONS } from "../game/content.ts";
+import { MISSIONS, ROSTER, SHIPS } from "../game/content.ts";
 import { createFleet, validateFleet } from "../game/fleet.ts";
 import { resolveBattle } from "../game/combat.ts";
 import { GUILD_ROLES, LEASE_MS, PILOTS, ROLE_IDS } from "./content.ts";
@@ -61,7 +61,8 @@ function perform(
   role: GuildRole,
   fleetIds: string[],
 ): GuildReport {
-  const errors = validateFleet(fleetIds, "none", "direct");
+  const pilot = state.pilots.find(p=>p.id===actor)!;
+  const errors = validateFleet(fleetIds, "none", "direct", pilot.fleetContext);
   if (errors.length) fail(400, "FLEET_INVALID", errors[0]);
   const specialist = {
     recon: "scout",
@@ -72,6 +73,7 @@ function perform(
   let fleet = createFleet(
     fleetIds,
     state.pilots.find((p) => p.id === actor)!.base.career.profile.active,
+    pilot.fleetContext,
   );
   if (specialist && !fleet.some((u) => u.shipId === specialist))
     fail(
@@ -152,6 +154,8 @@ function perform(
     success = remaining === 0;
   }
   return {
+    module: pilot.base.career.profile.active,
+    fleetContext: {roster: fleetIds.map(id=>(pilot.fleetContext?.roster||ROSTER).find(r=>r.id===id)!)},
     pilotId: actor,
     role,
     success,
@@ -244,7 +248,7 @@ export function applyGuildCommand(
             "예약이 만료되었습니다. 역할을 다시 예약하세요.",
           );
         assertDeparture(actor.base, action.fleetIds);
-        const cost = sortieCost(action.fleetIds);
+        const cost = sortieCost(action.fleetIds, "none", actor.fleetContext);
         if (actor.base.resources.supply < cost)
           fail(
             400,
@@ -287,4 +291,14 @@ export function applyGuildCommand(
   }
   state.revision++;
   return state;
+}
+export function replayGuildReport(report: GuildReport): GuildReport {
+  const s=initialGuildState(),p=s.pilots.find(p=>p.id===report.pilotId)!;
+  p.fleetContext=report.fleetContext||{roster:report.fleet.map(u=>({id:u.id,shipId:u.shipId}))};
+  p.base.career.profile.active=report.module||(report.fleet.some(u=>u.maxHp===SHIPS.find(d=>d.id===u.shipId)!.hp+10)?"bulkhead":report.fleet.some(u=>u.cargoCapacity===SHIPS.find(d=>d.id===u.shipId)!.cargo+1)?"cargo":"none");
+  for(const [role,owner] of Object.entries(report.effects)) { s.operation.slots[role as PrepRole].completed=true; s.operation.slots[role as PrepRole].ownerId=owner; }
+  const result=perform(s,report.pilotId,report.role,report.fleetContext?.roster.map(u=>u.id)||report.fleet.map(u=>u.id));
+  if(report.module===undefined) delete result.module;
+  if(report.fleetContext===undefined) delete result.fleetContext;
+  return result;
 }

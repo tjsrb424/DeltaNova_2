@@ -2,7 +2,9 @@ import { PILOTS, ROLE_IDS } from "./content.ts";
 import { GuildError } from "./types.ts";
 import type { GuildCommand, GuildState, LegacyGuildState } from "./types.ts";
 import { parseBaseAction, validateBase } from "../base/validation.ts";
-import { ROSTER } from "../game/content.ts";
+import { ROSTER, SHIPS, MODULES } from "../game/content.ts";
+import type { FleetContext } from "../game/types.ts";
+import { replayGuildReport } from "./rules.ts";
 const check = (condition: unknown) => {
   if (!condition)
     throw new GuildError(
@@ -47,14 +49,14 @@ export function parseGuildCommand(value: unknown): GuildCommand {
       "career-action",
     ].includes(a.type as string)
   )
-    parseBaseAction(a);
+    parseBaseAction(a,true);
   else if (a.type === "next-operation") keys(a, ["type"]);
   else {
     check(["claim", "release", "contribute"].includes(a.type as string));
     role(a.role);
     keys(
       a,
-      a.type === "contribute" ? ["type", "role", "fleetIds"] : ["type", "role"],
+      a.type === "contribute" ? (a.planetId===undefined?["type", "role", "fleetIds"]:["type", "role", "fleetIds","planetId"]) : ["type", "role"],
     );
     if (a.type === "contribute") {
       check(
@@ -64,20 +66,21 @@ export function parseGuildCommand(value: unknown): GuildCommand {
       );
       check(
         (a.fleetIds as unknown[]).every((id) =>
-          ROSTER.some((r) => r.id === id),
+          typeof id==="string"&&/^[\w:-]{1,160}$/.test(id),
         ),
       );
       check(
         new Set(a.fleetIds as unknown[]).size ===
           (a.fleetIds as unknown[]).length,
       );
+      if(a.planetId!==undefined) check(typeof a.planetId==="string"&&/^[\w:-]{1,160}$/.test(a.planetId));
     }
   }
   return structuredClone(c) as unknown as GuildCommand;
 }
 function unit(value: unknown) {
   const u = obj(value);
-  text(u.id, 80);
+  text(u.id, 160);
   text(u.shipId, 40);
   text(u.name, 80);
   check(
@@ -162,10 +165,21 @@ function report(value: unknown) {
           "cargo",
         ].includes(e.type as string),
       );
-      if (e.actor !== undefined) text(e.actor, 80);
-      if (e.target !== undefined) text(e.target, 80);
+      if (e.actor !== undefined) text(e.actor, 160);
+      if (e.target !== undefined) text(e.target, 160);
     }
   }
+  if(r.fleetContext!==undefined) validateContext(r.fleetContext);
+  if(r.module!==undefined) check(r.module==="none"||MODULES.some(m=>m.id===r.module));
+  const normalize=(v:unknown):unknown=>Array.isArray(v)?v.map(normalize):v&&typeof v==="object"?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>[k,normalize(v)])):v;
+  check(JSON.stringify(normalize(r))===JSON.stringify(normalize(replayGuildReport(r as unknown as import("./types.ts").GuildReport))));
+}
+function validateContext(value: unknown): FleetContext {
+  const c=obj(value); keys(c,["roster"]); check(Array.isArray(c.roster)&&c.roster.length>0&&c.roster.length<=10000);
+  const roster=c.roster as unknown[];
+  check(new Set(roster.map(r=>obj(r).id)).size===roster.length);
+  for(const raw of roster) {const r=obj(raw); keys(r,["id","shipId"]);check(typeof r.id==="string"&&/^[\w:-]{1,160}$/.test(r.id)&&SHIPS.some(s=>s.id===r.shipId));}
+  return structuredClone(c) as unknown as FleetContext;
 }
 function validateState(
   value: unknown,
@@ -187,7 +201,7 @@ function validateState(
     check(u.name === PILOTS.find((p) => p.id === u.id)!.name);
     int(u.merit);
     int(u.successfulOperations);
-    if (!legacy) validateBase(u.base);
+    if (!legacy) validateBase(u.base,u.fleetContext===undefined?undefined:validateContext(u.fleetContext));
   }
   const op = obj(s.operation);
   int(op.id);

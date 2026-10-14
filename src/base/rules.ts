@@ -1,7 +1,7 @@
 import { ROSTER, SHIPS } from "../game/content.ts";
 import { initialState, reduceGame } from "../game/state.ts";
 import { validateFleet } from "../game/fleet.ts";
-import type { CombatUnit, Support } from "../game/types.ts";
+import type { CombatUnit, Support, FleetContext } from "../game/types.ts";
 import { GuildError } from "../guild/types.ts";
 import type { BaseState, BaseAction } from "./types.ts";
 const fail = (code: string, message: string): never => {
@@ -54,10 +54,10 @@ export function projectBase(base: BaseState, now: number): BaseState {
   }
   return next;
 }
-export function sortieCost(ids: string[], support: Support = "none"): number {
+export function sortieCost(ids: string[], support: Support = "none", context?: FleetContext): number {
   return ids.reduce(
     (n, id) => {
-      const r = ROSTER.find((r) => r.id === id);
+      const r = (context?.roster || ROSTER).find((r) => r.id === id);
       if (!r) fail("FLEET_INVALID", "알 수 없는 함선입니다.");
       return n + SHIPS.find((s) => s.id === r!.shipId)!.command;
     },
