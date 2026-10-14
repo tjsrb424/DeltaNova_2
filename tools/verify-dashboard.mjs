@@ -37,7 +37,7 @@ async function until(expression) {
   throw Error("Dashboard wait timed out: " + expression);
 }
 async function click(label) {
-  const expression = "(() => { const button = [...document.querySelectorAll('button')].find(b => b.textContent.trim() === " + JSON.stringify(label) + "); if (!button) throw Error('Missing button'); button.scrollIntoView({block:'nearest',inline:'nearest'});const r=button.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}; })()";
+  const expression = "(() => { const label=" + JSON.stringify(label) + "; const button = [...document.querySelectorAll('button')].find(b => b.getAttribute('aria-label')===label || b.textContent.trim().replace(/[↗↙→]$/,'').trim()===label); if (!button) throw Error('Missing button: '+label); button.scrollIntoView({block:'nearest',inline:'nearest'});const r=button.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}; })()";
   const point=await evaluate(expression);
   await call('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...point});
   await call('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...point});
@@ -194,11 +194,97 @@ async function visualAudit() {
   assert.ok(!repairNeeded||repairExecuted,'Returned ships require repair but the repair action was unavailable');
   await click('대시보드');await click('동맹');await until("!!document.querySelector('.guild-screen')");
   await capture('audit-guild-desktop');await viewport(390,844);await capture('audit-guild-mobile');
-  await pointerClick('.nav-items button[aria-label="행성"]');await until("!!document.querySelector('.overview-board')");
+  await pointerClick('.planet-nav button[aria-label="대시보드"]');await until("!!document.querySelector('.overview-board')");
   await viewport(1672,941);await click('편성 연습');await until("!!document.querySelector('.app-shell')");
   await capture('audit-practice-desktop');await viewport(390,844);await capture('audit-practice-mobile');
-  await pointerClick('.nav-items button[aria-label="행성"]');await until("!!document.querySelector('.overview-board')");await viewport(1672,941);
+  await pointerClick('.planet-nav button[aria-label="대시보드"]');await until("!!document.querySelector('.overview-board')");await viewport(1672,941);
   await writeFile(join(output,'journey.json'),JSON.stringify({headless:true,personalSortie:true,return:true,researchReportLink:true,repairNeeded,repairExecuted,guildAndPracticeNavigation:true},null,2)+'\n');
+}
+async function unifiedAudit() {
+  const screens=[];
+  const beforePractice=structuredClone(store.empireSnapshot('nova',now).state);
+  async function record(name) {
+    const value=await evaluate(`(() => {const main=document.querySelector('.operations-main'),panel=document.querySelector('.guild-role,.mission-panel,.operation-layout .panel,.research-panel');return {width:innerWidth,height:innerHeight,documentWidth:document.documentElement.scrollWidth,mainWidth:main?.clientWidth,scrollWidth:main?.scrollWidth,active:document.querySelector('.planet-nav button[aria-current="page"]')?.getAttribute('aria-label'),panelBackground:panel?getComputedStyle(panel).backgroundColor:null,nav:[...document.querySelectorAll('.planet-nav button')].map(b=>b.getAttribute('aria-label'))};})()`);
+    await capture(name);screens.push({name,...value});
+    assert.ok(value.documentWidth<=value.width,name+' document overflow: '+JSON.stringify(value));
+    assert.ok(value.scrollWidth<=value.mainWidth+1,name+' content overflow: '+JSON.stringify(value));
+    assert.deepEqual(value.nav,['대시보드','건설','함대','연구','개인 작전','동맹','보고서','편성 연습']);
+    if(name.startsWith('practice-briefing-')) {
+      const launch=await evaluate("(() => {const e=document.querySelector('[aria-label=\"작전 출격\"]'),r=e.getBoundingClientRect(),pane=document.querySelector('.operations-main').getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {visible:r.top>=pane.top&&r.bottom<=pane.bottom,hit:!!hit&&e.contains(hit)};})()");
+      assert.ok(launch.visible&&launch.hit,'Practice briefing shortcut leaves launch out of reach: '+JSON.stringify(launch));
+    }
+  }
+  for(const [width,height] of [[1672,941],[1100,650],[900,650],[390,844],[390,650]]) {
+    await viewport(width,height);await click('동맹');await until("!!document.querySelector('.guild-role')");
+    await record('alliance-overview-'+width+'x'+height);
+    const activeRect=await evaluate("(() => {const r=document.querySelector('.planet-nav button[aria-current=\"page\"]').getBoundingClientRect();return {left:r.left,right:r.right};})()");
+    assert.ok(activeRect.left>=0&&activeRect.right<=width,'Active alliance category is outside the navigation viewport');
+    await pointerClick('.role-title-button[aria-label="전자전대 보기"]');
+    assert.ok(await evaluate("document.activeElement===document.querySelector('.guild-assignment')"));
+    await record('alliance-role-'+width+'x'+height);
+    await click('대시보드');await until("!!document.querySelector('.overview-board')");
+    await click('편성 연습');await until("!!document.querySelector('.briefing-panel')");
+    await record('practice-overview-'+width+'x'+height);
+    await click('함대 편성');await record('practice-fleet-'+width+'x'+height);
+    await click('추천 편성 적용');await click('지원·출격 상세');
+    assert.ok(await evaluate("document.activeElement===document.querySelector('.briefing-panel')"));
+    await record('practice-briefing-'+width+'x'+height);
+    await pointerClick('[aria-label="정찰 지원"]');await pointerClick('[aria-label="우회 항로"]');
+    assert.ok(await evaluate("document.querySelector('[aria-label=\"우회 항로\"]').getAttribute('aria-pressed')==='true'"));
+    await pointerClick('[aria-label="직행 항로"]');await pointerClick('[aria-label="교란 지원"]');
+    await pointerClick('[aria-label="작전 출격"]');
+    await until("!!document.querySelector('.decision-panel')");
+    assert.ok(await evaluate("document.querySelectorAll('.planet-nav button:disabled').length===8"),'Unsettled practice navigation unlocked');
+    await record('practice-battle-'+width+'x'+height);
+    await pointerClick('.decision-panel .primary-button');await until("!!document.querySelector('.result-details')");
+    await record('practice-report-'+width+'x'+height);
+    await click('기지 연구로 이동');await record('practice-modules-'+width+'x'+height);
+    await click('건설');await until("!!document.querySelector('.construction-page')");
+    assert.equal(await evaluate("document.querySelector('.planet-nav button[aria-current=\"page\"]').getAttribute('aria-label')"),'건설');
+    await click('대시보드');await until("!!document.querySelector('.overview-board')");
+  }
+  assert.deepEqual(store.empireSnapshot('nova',now).state,beforePractice,'Local practice changed real empire state');
+  await click('편성 연습');await until("!!document.querySelector('.briefing-panel')");
+  await click('추천 편성 적용');await pointerClick('[aria-label="작전 출격"]');await until("!!document.querySelector('.decision-panel')");
+  await call('Page.reload');await until("!!document.querySelector('.overview-board')");
+  await click('동맹');await until("!!document.querySelector('.guild-role')");
+  assert.ok(await evaluate("!document.querySelector('.operations-main .operation-layout')&&document.querySelectorAll('.planet-nav button:disabled').length===0"),'Saved local report replaced or locked the real alliance');
+  await record('alliance-with-saved-practice-390');
+  await click('편성 연습');await until("!!document.querySelector('.decision-panel')");
+  await pointerClick('.decision-panel .primary-button');await until("!!document.querySelector('.result-details')");
+  await record('practice-resumed-report-390');
+  await click('편성으로 돌아가기');await until("!!document.querySelector('.briefing-panel')");
+  await click('대시보드');await until("!!document.querySelector('.overview-board')");
+  const before=structuredClone(store.empireSnapshot('nova',now).state);
+  await viewport(1100,650);await click('동맹');await until("!!document.querySelector('.guild-role')");
+  await pointerClick('[aria-label="정찰대 예약"]');await until("!!document.querySelector('.guild-sortie-bar')");
+  await click('역할 추천 편성');await record('alliance-reserved-1100');
+  await pointerClick('.guild-sortie-bar .primary-button');await until("!!document.querySelector('.guild-report')");
+  assert.ok(await evaluate("document.activeElement===document.querySelector('.guild-report')"),'Contribution result did not receive focus');
+  assert.ok(store.snapshot(now).operation.slots.recon.completed,'Real guild contribution was not accepted');
+  await record('alliance-contribution-1100');
+  await viewport(390,650);await record('alliance-contribution-390');
+  const after=store.empireSnapshot('nova',now).state;
+  assert.ok(after.revision>before.revision,'Guild sortie did not update the connected empire');
+  for(const [role,name] of [['jam','전자전대'],['supply','보급대'],['breach','돌파대']]) {
+    const state=store.empireSnapshot('nova',now).state,planet=state.planets[0],damaged=planet.ships.filter(s=>s.wear>0&&s.status==='docked').map(s=>s.id);
+    if(damaged.length) store.executeEmpire('nova',{commandId:randomUUID(),expectedEmpireRevision:state.revision,action:{type:'repair-fleet',planetId:planet.id,fleetIds:damaged}},now);
+    await click('상태 새로고침');const revision=store.snapshot(now).revision;
+    await until("document.querySelector('[data-testid=\"guild-revision\"]').textContent==='REV "+revision+"'");
+    await pointerClick('[aria-label="'+name+' 예약"]');await until("!!document.querySelector('.guild-sortie-bar')");
+    await click('역할 추천 편성');await pointerClick('.guild-sortie-bar .primary-button');
+    await until("!!document.querySelector('.guild-report')");
+    assert.ok(store.snapshot(now).operation.slots[role].completed,'Role contribution failed: '+role);
+  }
+  assert.equal(store.snapshot(now).operation.phase,'complete');
+  await viewport(1100,650);await evaluate("document.querySelector('.guild-complete').scrollIntoView({block:'start'})");
+  await record('alliance-complete-1100');await viewport(390,650);await record('alliance-complete-390');
+  await pointerClick('.guild-complete .primary-button');await until("!document.querySelector('.guild-complete')");
+  assert.equal(store.snapshot(now).operation.phase,'preparing');
+  await evaluate("document.querySelector('.operations-main').scrollTop=0");await record('alliance-next-operation-390');
+  await click('대시보드');await until("!!document.querySelector('.overview-board')");await viewport(1672,941);
+  await writeFile(join(output,'unified-review.json'),JSON.stringify({headless:true,isolatedDatabase:true,screens,practiceJourneys:6,practicePreservesEmpire:true,savedPracticeIsolation:true,guildContribution:true,allFourRoles:true,nextOperation:true,runtimeErrors:errors},null,2)+'\n');
+  console.log('Unified operations audit: '+screens.length+' rendered states, 6 practice sorties and all four real guild contributions.');
 }
 try {
   await mkdir(output, { recursive: true });
@@ -241,6 +327,7 @@ try {
   await click("참가자로 연결");
   await until("!!document.querySelector('[aria-label=\"전체 현황\"]')");
   if(process.env.DELTA_NOVA_UIUX_AUDIT === '1') await visualAudit();
+  if(process.env.DELTA_NOVA_UNIFIED_AUDIT === '1') await unifiedAudit();
   await evaluate("(() => { const image = new Image(); image.src='/art/planet-facilities-v1.png'; return image.decode().then(() => true); })()");
   await viewport(1100, 650); await click("건설");
   await until("!!document.querySelector('.facility-catalog')");

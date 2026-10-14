@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import { GUILD_ROLES, PILOTS, ROLE_IDS } from "../guild/content.ts";
 import { guildApi } from "../guild/api.ts";
 import type { GuildApi } from "../guild/api.ts";
@@ -22,6 +22,8 @@ export default function GuildPanel({
     { data, session, busy, online } = network;
   const [role, setRole] = useState<GuildRole>("recon"),
     [fleet, setFleet] = useState<string[]>([]);
+  const assignmentRef=useRef<HTMLElement>(null),reportRef=useRef<HTMLElement>(null),[inspection,setInspection]=useState(0);
+  useLayoutEffect(()=>{if(inspection>0){assignmentRef.current?.scrollIntoView?.({block:"start",behavior:"instant"});assignmentRef.current?.focus({preventScroll:true});}},[inspection]);
   const world = data?.state,
     op = world?.operation,
     definition = GUILD_ROLES.find((r) => r.id === role)!;
@@ -58,6 +60,9 @@ export default function GuildPanel({
   if (base && base.resources.supply < sortieCost(localFleet,"none",context))
     fleetErrors.push("보급품이 부족합니다. 기지 운영에서 생산을 수령하세요.");
   const report = slot?.report;
+  const reportContext=`${op?.id}:${role}`,attempt=slot?.attempts||0;
+  const previousReport=useRef({context:reportContext,attempt,loaded:!!world});
+  useLayoutEffect(()=>{const previous=previousReport.current;previousReport.current={context:reportContext,attempt,loaded:!!world};if(previous.loaded&&previous.context===reportContext&&previous.attempt!==attempt&&report){reportRef.current?.scrollIntoView?.({block:"start",behavior:"instant"});reportRef.current?.focus({preventScroll:true});}},[reportContext,attempt,world,report]);
   return (
     <div className="guild-screen reveal">
       <section className="guild-banner">
@@ -71,9 +76,7 @@ export default function GuildPanel({
           <span className="eyebrow">NOVA ALLIANCE / SHARED OPERATION</span>
           <h2>도약문 재가동</h2>
           <p>
-            항로를 여는 한 척.
-            <br />
-            신호를 끊는 한 척. 함께 완성하는 작전.
+            정찰·교란·보급으로 돌파를 지원하세요.
           </p>
           <span className="chip">
             {op?.phase === "complete"
@@ -88,14 +91,15 @@ export default function GuildPanel({
           </strong>
           <span>완료된 역할</span>
           <b data-testid="guild-revision">REV {world?.revision ?? "—"}</b>
+          <button className="quiet-action" disabled={!world} onClick={()=>setInspection(value=>value+1)}>선택한 역할 상세</button>
         </div>
       </section>
-      <ParticipantLink network={network} />
+      <div className="alliance-connection"><ParticipantLink network={network} compact online={online} verifiedAt={data?.serverTime}/></div>
       {!world && (
         <section className="panel">
           <p className="muted">
-            공동 작전 기록을 불러오는 중입니다. 서버가 꺼져 있다면{" "}
-            <code>npm run dev</code>로 작전실을 시작하세요.
+            공동 작전 기록을 불러오는 중입니다. 연결 상태를 확인하거나
+            상태 새로고침으로 다시 시도하세요.
           </p>
         </section>
       )}
@@ -139,6 +143,7 @@ export default function GuildPanel({
                     onClick={() => {
                       setRole(r.id);
                       setFleet([]);
+                      setInspection(value=>value+1);
                     }}
                   >
                     <span className="role-number">0{i + 1}</span>
@@ -170,6 +175,7 @@ export default function GuildPanel({
                     onClick={() => {
                       setRole(r.id);
                       setFleet([]);
+                      setInspection(value=>value+1);
                       network.send({ type: "claim", role: r.id });
                     }}
                   >
@@ -185,7 +191,7 @@ export default function GuildPanel({
           </div>
           <div className="guild-workspace">
             <div>
-              <section className="panel guild-assignment">
+              <section className="panel guild-assignment" ref={assignmentRef} tabIndex={-1}>
                 <div className="section-heading">
                   <div>
                     <span className="eyebrow">
@@ -286,6 +292,7 @@ export default function GuildPanel({
                 <section
                   className="panel guild-report"
                   aria-label="공동 작전 결과"
+                  ref={reportRef} tabIndex={-1}
                 >
                   <span className="eyebrow">
                     CONTRIBUTION REPORT /{" "}

@@ -13,10 +13,10 @@ import PlanetOverview from "./PlanetOverview.tsx";
 import PlanetDetails from "./PlanetDetails.tsx";
 import type { DetailSection } from "./PlanetDetails.tsx";
 import { EmpireIcon } from "./EmpireUI.tsx";
+import OperationsNav from "./OperationsNav.tsx";
 import "../empire/dashboard.css";
 import "../empire/operations.css";
 type Section = "planet" | DetailSection;
-const menus: [Section, string, string][] = [["planet", "대시보드", "planet"], ["construction", "건설", "build"], ["fleet", "함대", "fleet"], ["research", "연구", "research"], ["career", "개인 작전", "fleet"]];
 const titles: Record<Section, string> = { planet: "행성 개발 현황", construction: "건설 상세", fleet: "함대 운영·건조", research: "연구·성장 상세", career: "개인 작전", reports: "기지 보고서" };
 export default function PlanetDashboard({ api = empireApi, onPractice, onGuild, initialSection = "planet" }: { api?: EmpireApi; onPractice?: () => void; onGuild?: () => void; initialSection?: Section }) {
   const network = useEmpire(api), [section, setSection] = useState<Section>(initialSection), [mode, setMode] = useState<ActionMode>("shipyard"), [target, setTarget] = useState(""), [selectedPlanet, setSelectedPlanet] = useState<string | null>(null), [tick, setTick] = useState(() => Date.now());
@@ -45,7 +45,7 @@ export default function PlanetDashboard({ api = empireApi, onPractice, onGuild, 
     if(window.scrollY>0) window.scrollTo({top:0,behavior:"instant"});
   }
   return <div className="empire-shell"><a href="#empire-main" className="skip-link">본문으로 이동</a>
-    <nav className="planet-nav" aria-label="제국 메뉴"><div className="empire-brand"><span aria-hidden="true">Δ</span><strong>DELTA<br/>NOVA</strong></div><div className="planet-navigation">{menus.map(([id, name, icon]) => <button key={id} aria-current={section === id ? "page" : undefined} className={section === id ? "active" : ""} onClick={() => navigate(id)}><EmpireIcon kind={icon}/>{name}</button>)}{onGuild && <button onClick={onGuild}><EmpireIcon kind="guild"/>동맹</button>}<button aria-current={section === "reports" ? "page" : undefined} className={section === "reports" ? "active" : ""} onClick={() => navigate("reports")}><EmpireIcon kind="reports"/>보고서</button></div><div className="planet-navigation nav-secondary">{onPractice && <button onClick={onPractice}><EmpireIcon kind="fleet"/>편성 연습</button>}<p>PLANET OPERATIONS</p></div></nav>
+    <OperationsNav active={section} guild={!!onGuild} practice={!!onPractice} onNavigate={next => { if(next === "guild") onGuild?.(); else if(next === "practice") onPractice?.(); else navigate(next); }}/>
     <div className="empire-workspace"><header className="empire-hud" aria-label="현지 자원"><div className="hud-context"><span className="planet-thumbnail"/><div>{planet ? <h1>{planet.name}</h1> : <strong>행성 관제</strong>}<span>{titles[section]}</span></div></div>
       {RESOURCE_IDS.map(key => <div className="hud-resource" key={key}><span className={"resource-crystal " + key} aria-hidden="true"/><div><span>{RESOURCE_NAMES[key]}</span><strong data-testid={"empire-" + key}>{planet ? planet.resources[key].toLocaleString("ko-KR") : "—"}<small> / {cap ? cap[key].toLocaleString("ko-KR") : "—"}</small></strong><em>{rates ? "+" + rates[key] + "/분" : "연결 후 확인"}</em></div></div>)}
       <div className="hud-power"><span aria-hidden="true">ϟ</span><div><span>전력</span><strong>{watts ? watts.demanded + " / " + watts.supplied : "—"}</strong><em>{watts ? "여유 " + (watts.supplied - watts.demanded) : "연결 후 확인"}</em></div></div><div className="hud-space"><EmpireIcon kind="build"/><div><span>시설 공간</span><strong>{space ? (space.used + space.reserved) + " / " + space.capacity : "—"}</strong></div></div>

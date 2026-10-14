@@ -48,9 +48,25 @@ async function connected(api: GuildApi) {
   render(<GuildPanel api={api} />);
   await screen.findByRole("heading", { name: "도약문 재가동" });
   click("참가자로 연결");
-  await screen.findByText("노바 · 연결됨");
+  await screen.findByRole("button", { name: "참가자 설정" });
+  click("참가자 설정");
 }
 describe("shared guild screen", () => {
+  it("opens the selected role briefing without leaving keyboard focus at the role overview", async () => {
+    const h = service();
+    await connected(h.api);
+    click("전자전대 보기");
+    const heading = screen.getByRole("heading", { name: "전자전대 임무" });
+    expect(document.activeElement).toBe(heading.closest(".guild-assignment"));
+  });
+  it("keeps an existing report from overriding the role briefing selected by the user", async () => {
+    const h=service();await connected(h.api);
+    click("전자전대 예약");await screen.findByRole("button",{name:"전자전대 수행"});
+    click("역할 추천 편성");click("전자전대 수행");
+    await screen.findByRole("region",{name:"공동 작전 결과"});
+    click("정찰대 보기");click("전자전대 보기");
+    expect(document.activeElement).toBe(screen.getByRole("heading",{name:"전자전대 임무"}).closest(".guild-assignment"));
+  });
   it("accepts slow reads that take longer than the polling interval", async () => {
     vi.useFakeTimers();
     const h = service();
@@ -137,6 +153,7 @@ describe("shared guild screen", () => {
       // A fresh API identity bypasses the module cache and exercises tab storage recovery.
       render(<GuildPanel api={denied ? h.api : { ...h.api }} />);
       await screen.findByRole("button", { name: "같은 명령 재전송" });
+      click("참가자 설정");
       expect(
         (
           screen.getByRole("button", {

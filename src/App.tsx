@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { MISSIONS, MODULES } from "./game/content.ts";
 import { initialState, reduceGame } from "./game/state.ts";
 import { validateFleet } from "./game/fleet.ts";
@@ -12,6 +12,9 @@ import BasePanel from "./components/BasePanel.tsx";
 import OperationPanel from "./components/OperationPanel.tsx";
 import GuildPanel from "./components/GuildPanel.tsx";
 import PlanetDashboard from "./components/PlanetDashboard.tsx";
+import OperationsNav from "./components/OperationsNav.tsx";
+import type { NavigationSection } from "./components/OperationsNav.tsx";
+import "./empire/unified-operations.css";
 
 function browserStorage(): StoragePort {
   try {
@@ -28,15 +31,13 @@ function browserStorage(): StoragePort {
   }
 }
 const NAV = [
-  { id: "planet", icon: "◉", name: "행성" },
   { id: "command", icon: "⌘", name: "지휘실" },
   { id: "operations", icon: "⌖", name: "작전 지도" },
   { id: "fleet", icon: "◇", name: "함대 편성" },
   { id: "base", icon: "⬡", name: "기지 연구" },
-  { id: "guild", icon: "◎", name: "공동 작전" },
-  { id: "career", icon: "▤", name: "기지 운영" },
 ] as const;
-type View = (typeof NAV)[number]["id"];
+type View = (typeof NAV)[number]["id"] | "planet" | "career" | "guild" | "planet-construction" | "planet-fleet" | "planet-research" | "planet-reports";
+const dashboardViews = { planet: "planet", career: "career", "planet-construction": "construction", "planet-fleet": "fleet", "planet-research": "research", "planet-reports": "reports" } as const;
 export default function App({ storage: injected }: { storage?: StoragePort }) {
   const [storage] = useState(() => injected || browserStorage());
   const [loaded] = useState(() => loadGame(storage));
@@ -59,6 +60,24 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
   const mission = MISSIONS.find((m) => m.id === missionId)!;
   const errors = validateFleet(selected, support, approach);
   const serverView = view === "career" || view === "guild";
+  const mainRef = useRef<HTMLElement>(null), briefingRef = useRef<HTMLElement>(null);
+  const operationKey = game.operation ? game.operation.id + ":" + game.operation.phase : "";
+  useLayoutEffect(() => {
+    const destination = view !== "guild" && game.operation?.phase === "result" ? mainRef.current?.querySelector<HTMLElement>(".decision-panel") : mainRef.current;
+    destination?.scrollIntoView?.({block:"start",behavior:"instant"});
+    destination?.focus({preventScroll:true});
+    if(mainRef.current && (view === "guild" || !game.operation)) mainRef.current.scrollTop = 0;
+  }, [view, operationKey, game.operation?.phase]);
+  function navigate(section: NavigationSection) {
+    const destination: Record<NavigationSection, View> = { planet:"planet", construction:"planet-construction", fleet:"planet-fleet", research:"planet-research", career:"career", guild:"guild", reports:"planet-reports", practice:"command" };
+    setView(destination[section]);
+  }
+  function showBriefing() {
+    briefingRef.current?.scrollIntoView?.({block:"start",behavior:"instant"});
+    const content=briefingRef.current?.querySelector<HTMLElement>(".briefing-content"),support=content?.querySelector<HTMLElement>(".support-list");
+    if(content&&support) content.scrollTop+=support.getBoundingClientRect().top-content.getBoundingClientRect().top;
+    briefingRef.current?.focus({preventScroll:true});
+  }
 
   useEffect(() => {
     if (!canFlank && approach === "flank") setApproach("direct");
@@ -139,51 +158,17 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
     act({ type: "dismiss" });
     setView("base");
   }
-  if(view==="planet"||view==="career") return <PlanetDashboard key={view} initialSection={view==="career"?"career":"planet"} onPractice={()=>setView("command")} onGuild={()=>setView("guild")}/>;
+  if(view in dashboardViews) return <PlanetDashboard key={view} initialSection={dashboardViews[view as keyof typeof dashboardViews]} onPractice={()=>setView("command")} onGuild={()=>setView("guild")}/>;
   return (
-    <div className="app-shell">
+    <div className={"app-shell empire-shell operations-shell " + (view === "guild" ? "alliance-shell" : "practice-shell")}>
       <a href="#main" className="skip-link">
         본문으로 이동
       </a>
-      <nav className="nav-rail" aria-label="지휘 메뉴">
-        <div className="brand-mark" aria-label="Delta Nova">
-          Δ<span>DN</span>
-        </div>
-        <div className="nav-items">
-          {NAV.map((n) => (
-            <button
-              key={n.id}
-              aria-label={n.name}
-              disabled={game.operation !== null}
-              title={
-                game.operation
-                  ? "작전 보고서를 마무리한 뒤 이동할 수 있습니다."
-                  : n.name
-              }
-              aria-current={view === n.id ? "page" : undefined}
-              className={view === n.id ? "active" : ""}
-              onClick={() => setView(n.id)}
-            >
-              <span aria-hidden="true">{n.icon}</span>
-              <small>{n.name}</small>
-            </button>
-          ))}
-        </div>
-        <div className="rail-footer">
-          <span>V.01</span>
-          <i />
-        </div>
-      </nav>
-      <div className="workspace">
-        <header className="topbar">
-          <div className="wordmark">
-            DELTA <b>NOVA</b>
-            <span>COMMAND CENTER</span>
-          </div>
-          <div className="topbar-stats">
-            <span className="local-indicator">
-              <i /> 로컬 작전실
-            </span>
+      <OperationsNav active={view === "guild" ? "guild" : "practice"} locked={view !== "guild" && game.operation !== null} onNavigate={navigate}/>
+      <div className="empire-workspace operations-workspace">
+        <header className="operations-header">
+          <div><span className="section-kicker">{view === "guild" ? "ALLIANCE OPERATIONS" : "FLEET SIMULATION"}</span><h1>{view === "guild" ? "동맹 · 공동 작전" : "편성 연습"}</h1><p>{view === "guild" ? "역할을 나눠 공동 목표를 완성하세요." : "기지 자원을 쓰지 않고 함대 조합과 작전 결과를 시험하세요."}</p></div>
+          <div className="operations-header-stats"><span className="mode-badge">{view === "guild" ? "서버 공동 작전" : "로컬 연습"}</span>
             {!serverView && (
               <span className="data-count">
                 ◇ <strong>{game.profile.research}</strong>
@@ -192,27 +177,9 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
             )}
           </div>
         </header>
-        <main id="main" tabIndex={-1}>
-          <div className="page-heading">
-            <div>
-              <span className="eyebrow">NOVA INITIATIVE / COMMANDER</span>
-              <h1>
-                {game.operation
-                  ? "작전 관제"
-                  : NAV.find((n) => n.id === view)!.name}
-              </h1>
-            </div>
-            {!serverView && (
-              <div className="base-status">
-                <span>기지 모듈</span>
-                <strong>
-                  {MODULES.find((m) => m.id === game.profile.active)?.name ||
-                    "기본 구성"}
-                </strong>
-              </div>
-            )}
-          </div>
-          {(invalid || conflict || warning) && (
+        <main id="main" className="operations-main" ref={mainRef} tabIndex={-1}>
+          {view !== "guild" && <div className="practice-toolbar"><nav aria-label="연습 화면">{NAV.map(n => <button key={n.id} aria-pressed={view === n.id} disabled={game.operation !== null} onClick={() => setView(n.id)}>{n.name}</button>)}</nav>{!game.operation && view !== "base" && <button className="quiet-action" onClick={showBriefing}>지원·출격 상세</button>}<span className="practice-module">연습 모듈 · {MODULES.find(m => m.id === game.profile.active)?.name || "기본 구성"}</span></div>}
+          {view !== "guild" && (invalid || conflict || warning) && (
             <div className="storage-notice" role="alert">
               <div>
                 <strong>
@@ -265,7 +232,7 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
               ) : null}
             </div>
           )}
-          {game.message && (
+          {view !== "guild" && game.message && (
             <div className="game-notice" role="status">
               {game.message}
               <button
@@ -276,7 +243,7 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
               </button>
             </div>
           )}
-          {game.operation ? (
+          {view !== "guild" && game.operation ? (
             <OperationPanel
               operation={game.operation}
               onAction={act}
@@ -287,7 +254,6 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
             <GuildPanel onBase={() => setView("career")} />
           ) : view === "base" ? (
             <>
-              <Hero compact />
               <BasePanel
                 profile={game.profile}
                 onAction={act}
@@ -297,13 +263,10 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
           ) : (
             <div className="command-layout">
               <div className="main-column">
-                {view === "command" && <Hero />}
                 {view === "command" && (
-                  <section className="panel guild-base-status">
+                  <section className="practice-context">
                     <p>
-                      기지 운영에서 생산·정비·연구와 저장되는 개인 작전을
-                      진행하세요. 이 지휘실은 비용 없이 편성을 시험하는 연습
-                      공간입니다.
+                      실제 함대의 출격과 정비는 개인 작전에서 진행합니다.
                     </p>
                     <button
                       className="secondary-button"
@@ -327,7 +290,8 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
                 />
               </div>
               <aside className="right-column">
-                <section className="panel briefing-panel">
+                <section className="panel briefing-panel" ref={briefingRef} tabIndex={-1}>
+                  <div className="briefing-content">
                   <div className="briefing-top">
                     <span className="eyebrow">MISSION BRIEFING</span>
                     <span className="signal-bars" aria-hidden="true">
@@ -361,13 +325,14 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
                     canFlank={canFlank}
                     locked={locked}
                   />
-                  <div className="launch-box">
+                  </div><div className="launch-box">
                     <div>
                       <span className="eyebrow">DEPARTURE STATUS</span>
                       <span className={errors.length ? "muted" : "success"}>
                         {errors.length ? "편성 대기" : "출격 준비 완료"}
                       </span>
                     </div>
+                    <p className="launch-objective">{mission.title}</p>
                     <p>
                       {errors[0] ||
                         `${selected.length}척 · ${approach === "direct" ? "직행" : "우회"} · ${mission.maxRounds}라운드 내 목표 확보`}
@@ -414,34 +379,5 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
         </main>
       </div>
     </div>
-  );
-}
-function Hero({ compact = false }: { compact?: boolean }) {
-  return (
-    <section
-      className={`hero ${compact ? "compact" : ""}`}
-      aria-label="델타 노바 궤도 기지"
-    >
-      <img
-        src="/art/orbital-base-v1.png"
-        alt="흰 세라믹 장갑과 구리색 구조물을 갖춘 델타 노바 궤도 기지"
-      />
-      <div className="hero-shade" />
-      <div className="hero-copy">
-        <span className="eyebrow">YOUR NEXT FRONTIER</span>
-        <h2>더 멀리 갈 준비.</h2>
-        <p>
-          당신의 함대. 서로 다른 역할.
-          <br />
-          하나의 작전.
-        </p>
-        <span className="hero-location">
-          <i /> NOVA STATION / LOW ORBIT
-        </span>
-      </div>
-      <span className="hero-corner" aria-hidden="true">
-        01 / ORIGINAL CONCEPT
-      </span>
-    </section>
   );
 }

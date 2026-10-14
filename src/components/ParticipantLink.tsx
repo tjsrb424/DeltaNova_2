@@ -26,7 +26,7 @@ export default function ParticipantLink({
           <span className="eyebrow">PARTICIPANT LINK</span>
           <h3>
             {session
-              ? `${PILOTS.find((p) => p.id === session.pilotId)?.name} · 연결됨`
+              ? `${PILOTS.find((p) => p.id === session.pilotId)?.name} · ${compact ? "참가자 설정" : "연결됨"}`
               : "기지·공동 작전 참가자 연결"}
           </h3>
           <p className="footnote">

@@ -1,0 +1,973 @@
+{
+  "headless": true,
+  "isolatedDatabase": true,
+  "screens": [
+    {
+      "name": "alliance-overview-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-role-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-overview-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-fleet-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-briefing-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-battle-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-report-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-modules-1672x941",
+      "width": 1672,
+      "height": 941,
+      "documentWidth": 1672,
+      "mainWidth": 1489,
+      "scrollWidth": 1489,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-overview-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-role-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-overview-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-fleet-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-briefing-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-battle-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-report-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-modules-1100x650",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-overview-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-role-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-overview-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-fleet-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-briefing-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-battle-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-report-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-modules-900x650",
+      "width": 900,
+      "height": 650,
+      "documentWidth": 900,
+      "mainWidth": 753,
+      "scrollWidth": 753,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-overview-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-role-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-overview-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-fleet-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-briefing-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-battle-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-report-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-modules-390x844",
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-overview-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-role-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-overview-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-fleet-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-briefing-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-battle-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-report-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-modules-390x650",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": null,
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-with-saved-practice-390",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "practice-resumed-report-390",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "편성 연습",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-reserved-1100",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-contribution-1100",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-contribution-390",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(234, 243, 238)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-complete-1100",
+      "width": 1100,
+      "height": 650,
+      "documentWidth": 1100,
+      "mainWidth": 953,
+      "scrollWidth": 953,
+      "active": "동맹",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-complete-390",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    },
+    {
+      "name": "alliance-next-operation-390",
+      "width": 390,
+      "height": 650,
+      "documentWidth": 390,
+      "mainWidth": 355,
+      "scrollWidth": 355,
+      "active": "동맹",
+      "panelBackground": "rgb(255, 254, 250)",
+      "nav": [
+        "대시보드",
+        "건설",
+        "함대",
+        "연구",
+        "개인 작전",
+        "동맹",
+        "보고서",
+        "편성 연습"
+      ]
+    }
+  ],
+  "practiceJourneys": 6,
+  "practicePreservesEmpire": true,
+  "savedPracticeIsolation": true,
+  "guildContribution": true,
+  "allFourRoles": true,
+  "nextOperation": true,
+  "runtimeErrors": []
+}

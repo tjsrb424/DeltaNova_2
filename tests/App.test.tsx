@@ -31,14 +31,41 @@ function completedSave() {
   return encodeSave(reduceGame(started, { type: "return" }));
 }
 describe("command center", () => {
+  it("opens the real alliance screen when an unfinished local practice report is saved", () => {
+    render(<App storage={memory(completedSave())}/>);
+    click("동맹");
+    expect(screen.getByRole("heading",{name:"도약문 재가동"})).toBeTruthy();
+    expect(screen.queryByRole("heading",{name:"작전 보고서"})).toBeNull();
+    expect((screen.getByRole("button",{name:"대시보드"}) as HTMLButtonElement).disabled).toBe(false);
+    click("편성 연습");
+    expect(screen.getByRole("heading",{name:"작전 보고서"})).toBeTruthy();
+  });
+  it("keeps the dashboard categories available from practice and opens the chosen category", () => {
+    renderPractice(<App storage={memory()} />);
+    click("건설");
+    expect(screen.getByRole("button", { name: "건설" }).getAttribute("aria-current")).toBe("page");
+    expect(screen.queryByRole("button", { name: "작전 출격" })).toBeNull();
+  });
+  it("brings support and launch controls into keyboard reach from the practice header", () => {
+    renderPractice(<App storage={memory()} />);
+    click("지원·출격 상세");
+    expect(document.activeElement?.classList.contains("briefing-panel")).toBe(true);
+    expect(screen.getByRole("button", { name: "작전 출격" })).toBeTruthy();
+  });
+  it("only offers the support shortcut on a practice screen containing support controls", () => {
+    renderPractice(<App storage={memory()}/>);
+    click("기지 연구");expect(screen.queryByRole("button",{name:"지원·출격 상세"})).toBeNull();
+    click("지휘실");click("지원·출격 상세");
+    expect(document.activeElement?.classList.contains("briefing-panel")).toBe(true);
+  });
   it("does not present practice research or module balances as the server participant state", async () => {
     const { container } = renderPractice(<App storage={memory()} />);
     expect(container.querySelector(".data-count")).not.toBeNull();
-    click("기지 운영");
+    click("개인 작전");
     click("참가자로 연결");
     await screen.findByRole("alert");
-    expect(container.querySelector(".topbar .data-count")).toBeNull();
-    expect(container.querySelector(".page-heading .base-status")).toBeNull();
+    expect(container.querySelector(".data-count")).toBeNull();
+    expect(container.querySelector(".practice-module")).toBeNull();
   });
   it("preserves newer storage written between load and the first effect", () => {
     const external = completedSave();
