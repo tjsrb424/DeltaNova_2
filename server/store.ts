@@ -31,6 +31,7 @@ function canonical(value: unknown): string {
     );
   return JSON.stringify(value);
 }
+function stored<T>(read:()=>T):T {try{return read();}catch(cause){throw new Error("Stored game data cannot be validated",{cause});}}
 export class GuildStore {
   private db: DatabaseSync;
   constructor(path: string, options: { now?: number } = {}) {
@@ -102,7 +103,7 @@ export class GuildStore {
   worldSnapshot(): WorldState {
     const row = this.db.prepare("SELECT snapshot FROM world WHERE id=1").get();
     if (!row) throw new Error("Missing shared state");
-    return validateWorld(JSON.parse(String(row.snapshot)));
+    return stored(()=>validateWorld(JSON.parse(String(row.snapshot))));
   }
   execute(pilotId: string, input: GuildCommand, now: number): GuildReply {
     const command = parseGuildCommand(input),
@@ -121,8 +122,12 @@ export class GuildStore {
             "COMMAND_REUSED",
             "같은 명령 ID에 다른 내용을 사용할 수 없습니다.",
           );
-        const result = JSON.parse(String(previous.response)) as GuildReply;
-        validateGuildState(result.state);
+        const result = stored(()=>{
+          const r=JSON.parse(String(previous.response)) as GuildReply;
+          validateGuildState(r.state);
+          if(r.receipt?.pilotId!==pilotId||r.receipt?.commandId!==command.commandId||r.receipt?.revision!==r.state.revision||typeof r.duplicate!=="boolean") throw Error("Invalid shared receipt");
+          return r;
+        });
         this.db.exec("COMMIT");
         return { ...result, duplicate: true };
       }
@@ -164,9 +169,12 @@ export class GuildStore {
       const previous=this.db.prepare("SELECT request,response FROM empire_receipts WHERE pilot_id=? AND command_id=?").get(pilotId,command.commandId);
       if(previous) {
         if(previous.request!==fingerprint) throw new GuildError(409,"COMMAND_REUSED","같은 명령 ID에 다른 내용을 사용할 수 없습니다.");
-        const result=JSON.parse(String(previous.response)) as EmpireReply;
-        validateEmpire(result.state);
-        if(result.receipt?.pilotId!==pilotId||result.receipt?.commandId!==command.commandId||result.receipt?.revision!==result.state.revision||typeof result.duplicate!=="boolean"||!Number.isSafeInteger(result.serverTime)) throw Error("Invalid empire receipt");
+        const result=stored(()=>{
+          const r=JSON.parse(String(previous.response)) as EmpireReply;
+          validateEmpire(r.state);
+          if(r.receipt?.pilotId!==pilotId||r.receipt?.commandId!==command.commandId||r.receipt?.revision!==r.state.revision||typeof r.duplicate!=="boolean"||!Number.isSafeInteger(r.serverTime)||r.serverTime<0) throw Error("Invalid empire receipt");
+          return r;
+        });
         this.db.exec("COMMIT");return {...result,duplicate:true};
       }
       const world=applyPersonalCommand(this.worldSnapshot(),pilotId,command,now);

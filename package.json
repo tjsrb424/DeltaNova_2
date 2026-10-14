@@ -11,7 +11,8 @@
     "test": "vitest run",
     "simulate": "node --experimental-strip-types tools/simulate.ts",
     "verify:build": "node tools/verify-build.mjs",
-    "verify:guild": "node --experimental-strip-types tools/verify-guild.mjs"
+    "verify:guild": "node --experimental-strip-types tools/verify-guild.mjs",
+    "verify:empire": "node --experimental-strip-types tools/verify-empire.mjs"
   },
   "dependencies": {
     "react": "19.3.0",

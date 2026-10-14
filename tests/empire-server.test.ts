@@ -24,6 +24,19 @@ it("rolls back world spending when writing the personal receipt fails",()=>{
   finally {store.close();rmSync(dir,{recursive:true,force:true});}
 });
 function ready(store:GuildStore) {expect(typeof store.executeEmpire).toBe("function");expect(typeof store.empireSnapshot).toBe("function");}
+it("keeps an uncertain command unresolved when its stored receipt cannot be validated",async()=>{
+  const dir=mkdtempSync(join(tmpdir(),"nova-empire-bad-receipt-")),path=join(dir,"world.sqlite"),store=new GuildStore(path,{now:0});
+  store.executeEmpire("nova",command(),0);
+  const db=new DatabaseSync(path),receipt=JSON.parse(String(db.prepare("SELECT response FROM empire_receipts").get()!.response));
+  receipt.state.planets[0].resources.alloy=-1;db.prepare("UPDATE empire_receipts SET response=?").run(JSON.stringify(receipt));db.close();
+  const server=createGuildServer(store,{clock:()=>0});await new Promise<void>(r=>server.listen(0,"127.0.0.1",r));
+  const url="http://127.0.0.1:"+(server.address() as {port:number}).port;
+  try {
+    const session=await(await fetch(url+"/api/dev/session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({pilotId:"nova"})})).json();
+    const response=await fetch(url+"/api/empire/commands",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+session.token},body:JSON.stringify(command())});
+    expect(response.status).toBe(503);expect(store.worldSnapshot().pilots[0].empire.planets[0].resources.alloy).toBe(80);
+  } finally {await new Promise<void>(r=>server.close(()=>r()));store.close();rmSync(dir,{recursive:true,force:true});}
+});
 it("persists canonical v3 assets, replays receipts and retains completed construction after restart",()=>{
   const dir=mkdtempSync(join(tmpdir(),"nova-empire-")),path=join(dir,"world.sqlite");let store=new GuildStore(path,{now:0});
   try {
