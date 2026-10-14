@@ -19,7 +19,7 @@ try {
     assert.equal(asset.status, 200);
     assert.ok((await asset.text()).length > 100);
   }
-  for(const artPath of ["/art/orbital-base-v1.png","/art/planet-dashboard-scene-v1.png"]) {
+  for(const artPath of ["/art/orbital-base-v1.png","/art/planet-dashboard-scene-v1.png","/art/planet-facilities-v1.png"]) {
   const art = await fetch(base + artPath);
   assert.equal(art.status, 200);
   assert.match(art.headers.get("content-type"), /image\/png/);
@@ -27,7 +27,7 @@ try {
   assert.deepEqual([...bytes.slice(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
   }
   console.log(
-    "Built HTML, JavaScript, CSS, orbital art and planet dashboard scene served successfully over loopback HTTP. No browser or renderer opened.",
+    "Built HTML, JavaScript, CSS, orbital art, planet scene and facility atlas served successfully over loopback HTTP. No browser or renderer opened.",
   );
 } finally {
   await new Promise((resolve, reject) =>

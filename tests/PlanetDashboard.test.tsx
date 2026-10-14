@@ -19,7 +19,7 @@ function service(two=false) {
   return {api,commands,time:(at:number)=>now=at,state:()=>state,reads:()=>reads};
 }
 const click=(name:string|RegExp)=>fireEvent.click(screen.getByRole("button",{name}));
-async function connected(api:EmpireApi) {const view=render(<PlanetDashboard api={api}/>);click("참가자로 연결");await screen.findByRole("heading",{name:"노바 프라임"});return view;}
+async function connected(api:EmpireApi) {const view=render(<PlanetDashboard api={api}/>);click("참가자로 연결");await screen.findByRole("heading",{name:"노바 프라임"});click("함대");return view;}
 it("starts a polite completion region without announcing historical jobs",async()=>{
   const h=service();h.state().events.push({id:"old-job",at:0,planetId:"nova-prime",kind:"completed",title:"합금 광산 Lv.2 완료"});
   await connected(h.api);const notice=screen.getByRole("status",{name:"작업 완료 알림"});
@@ -63,7 +63,7 @@ it("clears the previous participant announcement and baselines the next particip
   await connected(h.api);click("케스트럴 건조");await screen.findByRole("progressbar",{name:/케스트럴/});h.time(40000);click("상태 새로고침");
   await waitFor(()=>expect(screen.getByRole("status",{name:"작업 완료 알림"}).textContent).toContain("함선 건조"));
   fireEvent.change(screen.getByRole("combobox",{name:"개발 참가자"}),{target:{value:PILOTS[1].id}});click("참가자로 연결");
-  await screen.findByText("다른 참가자 과거 연구 완료");expect(screen.getByRole("status",{name:"작업 완료 알림"}).textContent).toBe("");
+  click("보고서");await screen.findByText("다른 참가자 과거 연구 완료");expect(screen.getByRole("status",{name:"작업 완료 알림"}).textContent).toBe("");
 });
 it("starts the application at the planet dashboard and keeps a real practice entry",()=>{
   render(<App storage={{getItem:()=>null,setItem:()=>{}}}/>);
@@ -78,8 +78,8 @@ it("shows actual local assets, one owned planet and no invented hostile fleets",
   expect(screen.getByLabelText("행성 운영").textContent).toContain("보유 9척");
   expect(screen.queryByText("적 함대 접근")).toBeNull();
 });
-it("connects station selection to real facility and shipyard actions",async()=>{
-  const h=service();await connected(h.api);click("생산 시설");
+it("connects construction navigation to real facility actions",async()=>{
+  const h=service();await connected(h.api);click("건설");
   expect(screen.getByRole("heading",{name:/합금 광산/})).toBeTruthy();
   click("합금 광산 증설");await waitFor(()=>expect(h.commands).toHaveLength(1));
   expect(h.commands[0].action).toEqual({type:"upgrade-facility",planetId:"nova-prime",facility:"alloyMine"});

@@ -1,7 +1,7 @@
 # Delta Nova 개발 대시보드 v0.7 — 레퍼런스 및 생성 기록
 
 - 작성일: 2026-10-14
-- 상태: **디자인 비교용 초안 / 사용자 선택 대기 / 실제 UI 미반영**
+- 상태: **A 메인 + B 성장 상세 사용자 승인 / 실제 UI 구현 / 원본 레퍼런스 보존**
 - 브랜치: `codex/planet-overview-navigation`
 - 기준 코드: `main 6eade0f3222529bd3ad2deea9da6417db8c5da32`
 - 기존 v0.6 이미지와 문서는 보존한다.
@@ -168,3 +168,50 @@ Place percentages beside bars and make bar fills match these percentages.
 
 Preserve right material table exactly: total upgrade+research+one-carrier construction required440/260/90, current184/96/68, shortage256/164/22. Preserve power36/60, space8/30, fleet10 /available8 /repair2, repaircostalloy2. Ensure selected carrier title says '아크 캐리어 추가 건조' and its prerequisite chips '조선소 Lv.3', '산업 기술 Lv.2'. There is no automated queue, execution-plan button, population, globalgrowthscore, or history graph. Remove decorative motivational slogans at sidebar bottom; small 'PLANET OPERATIONS' is sufficient. Keep this as one full-screen polished high-quality UI screenshot with readable Korean.
 ```
+
+## 사용자 선택과 실제 구현
+
+- 2026-10-14 사용자 선택: **“A 운영보드 메인 + B 성장 상세 (추천)”**.
+- 이 선택으로 실제 UI 개편이 승인됐다. 위의 초안 이미지는 비교 기록으로 보존한다.
+- 메인: A 방향의 밝은 운영보드. 행성 이미지는 작은 식별 요소로 사용한다.
+- 상세: 건설·함대·연구·개인 작전·보고서의 본문 전체가 전환된다. 동맹은 기존 공동 작전 화면으로 연결된다.
+- 발전지도: 연구 화면에서 펼쳐 보이며 건설·함대 화면에서도 열어볼 수 있다.
+- 비용: 진행 중인 작업의 지불 금액을 제외하고 필요한 발전소·연구소·조선소 증설, 추가 연구 및 다음 함선 1척을 합산한다. 전력 부족과 목표 경로의 공간 부족도 표시한다.
+- 실제 자원·시설 명칭은 기존 콘텐츠 정의를 유지했다.
+- 함선 도형은 기존 `ShipGlyph` 시스템을 유지하고, 시설 그림은 아래의 투명 자산을 새로 생성했다.
+
+### 시설 자산
+
+- 런타임 파일: `public/art/planet-facilities-v1.png`.
+- 네이티브 원본: `C:\Users\delic\.codex\generated_images\01a137ec-ccfd-77f0-b32f-1937420224ed\exec-8f4fd768-8f95-43df-ad45-d677c08a2998.png`.
+- 모드: 네이티브 `image_gen.imagegen`, `transparent_background: true`.
+- 참조: A 운영보드 네이티브 원본 `C:\Users\delic\.codex\generated_images\01a137ec-ccfd-77f0-b32f-1937420224ed\exec-de0152e0-60ae-49a7-adba-bbfcef9094e6.png`.
+- 마지막 대화 이미지 포함: 사용하지 않음.
+- 크기: 1536 × 1024, 3열 × 2행.
+- 순서: 합금 광산 / 결정 채굴소 / 연료 합성소 / 발전소 / 궤도 조선소 / 연구소.
+- SHA-256: `cc1dc6e43568380b6ff0c2e4b2d07d84ac5ee0b7b756fb040792e8adbebf3e9d`.
+- PNG 알파 채널 검사: alpha minimum 0, 완전 투명 픽셀 961632 / 1572864. 네 모서리 알파 0 / 0 / 1 / 0.
+- CSS가 각 셀을 별도 시설 그림으로 표시한다. 원본을 잘라 덮어쓰거나 생성한 전체 UI 그림을 배경으로 쓰지 않는다.
+
+```text
+Use case: game-asset. Create a TEXT-FREE production sprite atlas of SIX miniature sci-fi colony facilities in the exact sophisticated isometric facility style of the attached DELTA NOVA dashboard reference. Output a transparent PNG, wide 3:2 canvas, arranged in a precise THREE-COLUMN TWO-ROW equal-cell grid. Each of the six equal rectangular cells contains exactly one distinct facility, centered in its own cell with generous transparent margin. No grid lines, background, letters, numbers, UI panels, scenery, separate icons, or additional objects. Never overlap cell boundaries. All six share the same 3/4 isometric camera, scale, light from upper left, detailed graphite/silver metal bodies, subtle warm copper parts and small restrained cyan operational lights. Clean readable silhouettes, premium strategy-game rendering, convincing grounded construction with a subtle small contact shadow on the transparent canvas.
+
+Cell ordering is mandatory:
+TOP LEFT: alloy mine, angular graphite drill/excavation rig with a compact pile of metallic ore on a small industrial base.
+TOP MIDDLE: crystal extraction facility, cyan crystalline mineral cluster and graphite collector machinery on a small industrial base.
+TOP RIGHT: fuel synthesis facility, several tall warm copper cylindrical processing columns with pipes on a compact graphite industrial base.
+BOTTOM LEFT: power plant, a distinctive compact silver/graphite turbine power station with an upright glowing cyan reactor core; visually different from the mine and fuel columns.
+BOTTOM MIDDLE: orbital shipyard, a compact angular graphite docking platform with gantry arms and a small docked silver spaceship, distinct ship-construction silhouette.
+BOTTOM RIGHT: research laboratory, a sophisticated silver blue glass scientific dome with compact side modules and a small antenna, distinct from all other facilities.
+
+Compose the illustrations as six coherent reusable assets for a light ceramic operations board AND a dark blueprint development view. Keep facilities within the middle 70% of their respective cells to prevent CSS tile clipping. Transparent surroundings all the way to the edges. Nothing from the reference's text, cards or backdrop should appear.
+```
+
+### 검수 방법
+
+`npm run verify:dashboard`는 새 임시 DB와 무작위 loopback 포트에서 실제 API·웹 UI를 시작하고 Chromium을 **헤드리스 모드**로 실행한다. 사용 중인 브라우저 프로필이나 저장 데이터에 접근하지 않으며 GUI 창을 만들지 않는다. PC·태블릿·모바일의 가로 넘침, 모든 현황/상세 전환, 런타임 예외, 시설 PNG 디코딩을 확인하고 캡처와 checks.json을 남긴다.
+
+- 기본 결과 위치: `docs/qa/2026-10-14-dashboard/`.
+- Chrome/Edge가 기본 위치에 없다면 `DELTA_NOVA_BROWSER`에 실행 파일 경로를 지정한다.
+- 출력 위치 변경: `DELTA_NOVA_QA_OUTPUT`.
+- 실제 사용자 검수는 개발 서버에서 참가자로 연결한 뒤 대시보드 → 건설 → 함대 → 연구 → 개인 작전 → 보고서 → 대시보드 순서로 확인한다.

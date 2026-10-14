@@ -1,0 +1,52 @@
+{
+  "headless": true,
+  "isolatedDatabase": true,
+  "checks": [
+    {
+      "name": "overview-desktop",
+      "width": 1672,
+      "documentWidth": 1657,
+      "mainWidth": 1453,
+      "overviewWidth": 1453,
+      "reportsColumn": "auto"
+    },
+    {
+      "name": "overview-tablet",
+      "width": 900,
+      "documentWidth": 885,
+      "mainWidth": 717,
+      "overviewWidth": 717,
+      "reportsColumn": "auto"
+    },
+    {
+      "name": "overview-mobile",
+      "width": 390,
+      "documentWidth": 375,
+      "mainWidth": 351,
+      "overviewWidth": 351,
+      "reportsColumn": "auto"
+    },
+    {
+      "name": "growth-desktop",
+      "width": 1672,
+      "documentWidth": 1657,
+      "mainWidth": 1453,
+      "reportsColumn": null
+    },
+    {
+      "name": "growth-mobile",
+      "width": 390,
+      "documentWidth": 375,
+      "mainWidth": 351,
+      "reportsColumn": null
+    },
+    {
+      "name": "construction-desktop",
+      "width": 1672,
+      "documentWidth": 1657,
+      "mainWidth": 1453,
+      "reportsColumn": null
+    }
+  ],
+  "runtimeErrors": []
+}

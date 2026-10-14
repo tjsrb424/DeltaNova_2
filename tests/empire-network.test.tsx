@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { it, expect, beforeEach, afterEach, vi } from "vitest";
-import { renderHook, render, screen, act, waitFor, cleanup } from "@testing-library/react";
+import { renderHook, render, screen, act, waitFor, cleanup, fireEvent } from "@testing-library/react";
 import PlanetDashboard from "../src/components/PlanetDashboard.tsx";
 import GuildPanel from "../src/components/GuildPanel.tsx";
 import { useEmpire } from "../src/empire/useEmpire.ts";
@@ -40,6 +40,7 @@ it.each(["empire","guild"] as const)("disables target-screen commands and names 
     const origin=renderHook(()=>useGuildOperation(api));act(()=>origin.result.current.connect("nova"));await waitFor(()=>expect(origin.result.current.session).toBeTruthy());
     act(()=>origin.result.current.send({type:"claim",role:"recon"}));await waitFor(()=>expect(origin.result.current.pending).toBe(true));origin.unmount();
     render(<PlanetDashboard api={h.api}/>);await screen.findByRole("heading",{name:"노바 프라임"});
+    fireEvent.click(screen.getByRole("button",{name:"함대"}));
     expect((screen.getByRole("button",{name:"케스트럴 건조"}) as HTMLButtonElement).disabled).toBe(true);
     expect(await screen.findByText(/공동 작전 화면에 미확정 명령/)).toBeTruthy();
     const recovery=renderHook(()=>useGuildOperation(api));act(()=>recovery.result.current.retry());await waitFor(()=>expect(recovery.result.current.pending).toBe(false));
