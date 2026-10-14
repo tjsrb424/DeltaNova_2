@@ -44,7 +44,8 @@ export default function GuildPanel({
           );
         })
       : undefined;
-  const fleetErrors = validateFleet(fleet, "none", "direct");
+  const context=world?.pilots.find(p=>p.id===session?.pilotId)?.fleetContext;
+  const fleetErrors = validateFleet(fleet, "none", "direct",context);
   const pilot = world?.pilots.find((p) => p.id === session?.pilotId),
     base = pilot && projectBase(pilot.base, now);
   if (base && fleet.some((id) => base.wear[id] > 0))
@@ -53,7 +54,8 @@ export default function GuildPanel({
     );
   if (base?.career.operation?.phase === "checkpoint")
     fleetErrors.push("개인 작전 함대가 출격 중입니다. 먼저 귀환하세요.");
-  if (base && base.resources.supply < sortieCost(fleet))
+  const localFleet=fleet.filter(id=>!context||context.roster.some(r=>r.id===id));
+  if (base && base.resources.supply < sortieCost(localFleet,"none",context))
     fleetErrors.push("보급품이 부족합니다. 기지 운영에서 생산을 수령하세요.");
   const report = slot?.report;
   return (
@@ -107,8 +109,8 @@ export default function GuildPanel({
               </p>
               {base && (
                 <p>
-                  기지 보급품 {base.resources.supply} · 출격 비용{" "}
-                  {sortieCost(fleet)} · 합금 {base.resources.alloy}
+                  현지 연료 {base.resources.supply} · 출격 비용{" "}
+                  {sortieCost(localFleet,"none",context)} · 합금 {base.resources.alloy}
                 </p>
               )}
             </div>
@@ -255,6 +257,8 @@ export default function GuildPanel({
                     onChange={setFleet}
                     recommended={definition.recommended}
                     locked={locked}
+                    roster={context?.roster}
+                    unavailable={base?Object.fromEntries(Object.entries(base.wear).filter(([,wear])=>wear>0).map(([id])=>[id,"정비 필요"])):undefined}
                   />
                   <div className="guild-sortie-bar">
                     <p>

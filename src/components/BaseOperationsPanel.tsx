@@ -60,12 +60,13 @@ export default function BaseOperationsPanel({
   const cap = base && capacities(base),
     rates = base && productionRates(base),
     deployed = base?.career.operation?.phase === "checkpoint";
+  const roster=pilot?.fleetContext?.roster||ROSTER;
   const damaged = base
-      ? ROSTER.filter((r) => base.wear[r.id] > 0).map((r) => r.id)
+      ? roster.filter((r) => base.wear[r.id] > 0).map((r) => r.id)
       : [],
     repair = base ? repairCost(base, damaged) : 0,
-    cost = sortieCost(fleet, support);
-  const errors = validateFleet(fleet, support, approach);
+    cost = sortieCost(fleet.filter(id=>roster.some(r=>r.id===id)), support,pilot?.fleetContext);
+  const errors = validateFleet(fleet, support, approach,pilot?.fleetContext);
   if (base && fleet.some((id) => base.wear[id] > 0))
     errors.push(
       "선택한 함선에 정비가 필요합니다. 정비하거나 정상 함선을 선택하세요.",
@@ -274,7 +275,7 @@ export default function BaseOperationsPanel({
                 : "무력화된 함선도 복구할 수 있습니다."}
             </p>
             <div className="maintenance-grid">
-              {ROSTER.map((r) => {
+              {roster.map((r) => {
                 const ship = SHIPS.find((s) => s.id === r.shipId)!,
                   wear = base.wear[r.id],
                   inFlight =
@@ -342,6 +343,7 @@ export default function BaseOperationsPanel({
                   selected={fleet}
                   onChange={setFleet}
                   locked={locked}
+                  roster={roster}
                 />
               </div>
               <aside className="panel">

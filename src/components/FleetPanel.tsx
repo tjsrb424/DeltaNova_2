@@ -9,20 +9,25 @@ export const STARTER_FLEET = [
   "scout-01",
 ];
 export default function FleetPanel({
-  selected,
+  selected: selection,
   onChange,
   locked,
   recommended = STARTER_FLEET,
+  roster = ROSTER,
+  unavailable,
 }: {
   selected: string[];
   onChange: (ids: string[]) => void;
   locked: boolean;
   recommended?: string[];
+  roster?: readonly {id:string;shipId:string}[];
+  unavailable?: Readonly<Record<string,string>>;
 }) {
+  const selected=selection.filter(id=>roster.some(r=>r.id===id));
   const command = selected.reduce(
     (sum, id) =>
       sum +
-      SHIPS.find((s) => s.id === ROSTER.find((r) => r.id === id)?.shipId)!
+      SHIPS.find((s) => s.id === roster.find((r) => r.id === id)?.shipId)!
         .command,
     0,
   );
@@ -36,7 +41,7 @@ export default function FleetPanel({
         <button
           className="text-button"
           disabled={locked}
-          onClick={() => onChange(recommended)}
+          onClick={() => onChange(recommended.filter(id=>roster.some(r=>r.id===id)&&!unavailable?.[id]))}
         >
           추천 편성 적용 <span aria-hidden="true">↗</span>
         </button>
@@ -59,8 +64,8 @@ export default function FleetPanel({
       </div>
       <div className="fleet-slots" aria-label="편성 슬롯">
         {Array.from({ length: 6 }, (_, i) => {
-          const roster = ROSTER.find((r) => r.id === selected[i]),
-            ship = SHIPS.find((s) => s.id === roster?.shipId);
+          const entry = roster.find((r) => r.id === selected[i]),
+            ship = SHIPS.find((s) => s.id === entry?.shipId);
           return (
             <div key={i} className={ship ? "occupied" : ""}>
               {ship ? (
@@ -79,18 +84,19 @@ export default function FleetPanel({
         })}
       </div>
       <div className="ship-catalog">
-        {ROSTER.map((r) => {
+        {roster.map((r,index) => {
           const ship = SHIPS.find((s) => s.id === r.shipId)!,
             chosen = selected.includes(r.id);
           const full =
             !chosen && (selected.length >= 6 || command + ship.command > 12);
+          const ordinal=String(roster.slice(0,index+1).filter(s=>s.shipId===r.shipId).length).padStart(2,"0");
           return (
             <button
               key={r.id}
               className={`ship-card ${chosen ? "selected" : ""}`}
-              aria-label={`${ship.name} ${r.id.split("-")[1]} 편성`}
+              aria-label={`${ship.name} ${ordinal} 편성`}
               aria-pressed={chosen}
-              disabled={locked || full}
+              disabled={locked || full || !!unavailable?.[r.id]}
               onClick={() =>
                 onChange(
                   chosen
@@ -108,11 +114,12 @@ export default function FleetPanel({
               <ShipGlyph role={ship.role} color={ship.color} />
               <div className="ship-name">
                 <strong>
-                  {ship.name} <small>{r.id.split("-")[1]}</small>
+                  {ship.name} <small>{ordinal}</small>
                 </strong>
                 <span>지휘 {ship.command}</span>
               </div>
               <p>{ship.description}</p>
+              {unavailable?.[r.id]&&<p className="capacity-hint">{unavailable[r.id]}</p>}
               <div className="ship-stats">
                 <span>
                   HP <b>{ship.hp}</b>

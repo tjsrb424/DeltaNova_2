@@ -7,7 +7,12 @@ import type { EmpireApi } from "../src/empire/api.ts";
 import type { EmpireCommand, EmpireReply, EmpireSnapshot } from "../src/empire/types.ts";
 import { initialEmpire, applyEmpireAction, projectEmpire } from "../src/empire/rules.ts";
 import { GuildApiError } from "../src/guild/api.ts";
-beforeEach(()=>sessionStorage.clear()); afterEach(()=>{cleanup();vi.restoreAllMocks();});
+import type { GuildApi } from "../src/guild/api.ts";
+import { useGuildOperation } from "../src/guild/useGuildOperation.ts";
+import { initialGuildState } from "../src/guild/rules.ts";
+import { PILOTS } from "../src/guild/content.ts";
+import { setParticipantPending } from "../src/guild/participant-lock.ts";
+beforeEach(()=>{sessionStorage.clear();setParticipantPending("guild",null);setParticipantPending("empire",null);}); afterEach(()=>{cleanup();vi.restoreAllMocks();});
 const build={type:"build-ships",planetId:"nova-prime",shipId:"striker",quantity:1} as const;
 function service() {
   let state=initialEmpire("nova",0),now=0;const commands:EmpireCommand[]=[],connections:string[]=[];
@@ -73,4 +78,19 @@ it("keeps the last confirmed state after a read failure and blocks new spending"
   h.api.read=async()=>{throw Error("offline");};act(()=>result.current.refresh());
   await waitFor(()=>expect(result.current.online).toBe(false));expect(result.current.data?.state.planets[0].resources.alloy).toBe(120);
   act(()=>result.current.send(build));expect(h.commands).toHaveLength(0);expect(result.current.error).toContain("마지막");
+});
+it("blocks switching the participant in the guild screen while a planet command is unresolved",async()=>{
+  const h=service();h.api.command=async()=>{throw Error("lost");};
+  const empire=renderHook(()=>useEmpire(h.api));await connect(empire.result);
+  act(()=>empire.result.current.send(build));await waitFor(()=>expect(empire.result.current.pending).toBe(true));empire.unmount();
+  const connections:string[]=[],api:GuildApi={read:async()=>({state:initialGuildState(),serverTime:0}),connect:async pilotId=>{connections.push(pilotId);return {pilotId,token:"test"};},command:async()=>{throw Error("unused");}};
+  const guild=renderHook(()=>useGuildOperation(api));act(()=>guild.result.current.connect(PILOTS[1].id));
+  await act(async()=>{});expect(connections).toHaveLength(0);
+});
+it("blocks switching the participant in the planet screen while a guild command is unresolved",async()=>{
+  const api:GuildApi={read:async()=>({state:initialGuildState(),serverTime:0}),connect:async pilotId=>({pilotId,token:"test"}),command:async()=>{throw Error("lost");}};
+  const guild=renderHook(()=>useGuildOperation(api));act(()=>guild.result.current.connect("nova"));await waitFor(()=>expect(guild.result.current.session?.pilotId).toBe("nova"));
+  act(()=>guild.result.current.send({type:"claim",role:"recon"}));await waitFor(()=>expect(guild.result.current.pending).toBe(true));guild.unmount();
+  const h=service(),empire=renderHook(()=>useEmpire(h.api));act(()=>empire.result.current.connect(PILOTS[1].id));
+  await act(async()=>{});expect(h.connections).toHaveLength(0);
 });

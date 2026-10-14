@@ -5,6 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { GuildApiError } from "../guild/api.ts";
 import { PILOTS } from "../guild/content.ts";
 import { parseEmpireCommand } from "./validation.ts";
+import { pendingParticipant, setParticipantPending } from "../guild/participant-lock.ts";
 const SESSION_KEY="delta-nova.guild-dev-session.v1",PENDING_KEY="delta-nova.empire-pending.v1";
 const READ_ERROR="행성 서버에 연결하지 못했습니다. 마지막 확인 상태를 유지합니다.";
 const RETRY_MESSAGE="명령 처리 여부를 확인하지 못했습니다. 같은 명령 재전송으로 결과를 확인하세요.";
@@ -23,13 +24,14 @@ function loadPending(api:EmpireApi):Pending|null {
   } catch{return null;}
 }
 export function useEmpire(api:EmpireApi) {
-  const [pending,setPending]=useState(()=>loadPending(api)),pendingRef=useRef(pending);
+  const [pending,setPending]=useState(()=>{const p=loadPending(api);setParticipantPending("empire",p?.session.pilotId||null);return p;}),pendingRef=useRef(pending);
   const [session,setSession]=useState<EmpireSession|null>(()=>pending?(pending.needsSession?null:pending.session):loadSession()),sessionRef=useRef(session);
   const [data,setData]=useState<EmpireSnapshot|null>(null),dataRef=useRef<EmpireSnapshot|null>(null);
   const [busy,setBusy]=useState(false),[online,setOnline]=useState(false),[notice,setNotice]=useState("");
   const [error,setError]=useState(pending?(pending.needsSession?SESSION_MESSAGE:RETRY_MESSAGE):"");
   const mounted=useRef(false),processing=useRef(false),generation=useRef(0),readSequence=useRef(0),activeRead=useRef<{epoch:number;sequence:number}|null>(null);
   function updatePending(item:Pending|null) {
+    setParticipantPending("empire",item?.session.pilotId||null);
     pendingRef.current=item;pendingMemory.set(api,item);setPending(item);
     try {if(item) sessionStorage.setItem(PENDING_KEY,JSON.stringify({version:1,item}));else sessionStorage.removeItem(PENDING_KEY);} catch{/* navigation is preserved by the module cache */}
   }
@@ -57,6 +59,7 @@ export function useEmpire(api:EmpireApi) {
   },[api]);
   async function connect(pilotId:string) {
     const unresolved=pendingRef.current;
+    const other=pendingParticipant("empire");if(other&&other!==pilotId&&!unresolved?.needsSession) return;
     if(processing.current||(unresolved&&(!unresolved.needsSession||pilotId!==unresolved.session.pilotId))) return;
     const priorActor=sessionRef.current?.pilotId||unresolved?.session.pilotId;
     const epoch=++generation.current;processing.current=true;setBusy(true);setError("");setNotice("");

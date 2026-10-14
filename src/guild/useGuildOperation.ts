@@ -9,6 +9,7 @@ import type {
 } from "./types.ts";
 import { PILOTS } from "./content.ts";
 import { parseGuildCommand } from "./validation.ts";
+import { pendingParticipant, setParticipantPending } from "./participant-lock.ts";
 const READ_ERROR =
   "공동 작전 서버에 연결하지 못했습니다. 마지막 확인 상태를 유지합니다. 서버 연결을 확인하고 다시 시도하세요.";
 const SESSION_KEY = "delta-nova.guild-dev-session.v1";
@@ -65,6 +66,7 @@ function loadPending(api: GuildApi): Pending | null {
   }
 }
 function rememberPending(api: GuildApi, item: Pending | null) {
+  setParticipantPending("guild",item?.session.pilotId||null);
   pendingMemory.set(api, item);
   try {
     if (item)
@@ -81,7 +83,7 @@ function rememberPending(api: GuildApi, item: Pending | null) {
   }
 }
 export function useGuildOperation(api: GuildApi) {
-  const [initialPending] = useState(() => loadPending(api));
+  const [initialPending] = useState(() => {const p=loadPending(api);setParticipantPending("guild",p?.session.pilotId||null);return p;});
   const [data, setData] = useState<GuildSnapshot | null>(null),
     dataRef = useRef<GuildSnapshot | null>(null);
   const [session, setSession] = useState<GuildSession | null>(() =>
@@ -169,6 +171,7 @@ export function useGuildOperation(api: GuildApi) {
   }, [api]);
   async function connect(pilotId: string) {
     const unresolved = pendingRef.current;
+    const other=pendingParticipant("guild");if(other&&other!==pilotId&&!unresolved?.needsSession) return;
     if (
       processing.current ||
       (unresolved &&

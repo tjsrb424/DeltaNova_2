@@ -11,7 +11,7 @@ import SupportPanel from "./components/SupportPanel.tsx";
 import BasePanel from "./components/BasePanel.tsx";
 import OperationPanel from "./components/OperationPanel.tsx";
 import GuildPanel from "./components/GuildPanel.tsx";
-import BaseOperationsPanel from "./components/BaseOperationsPanel.tsx";
+import PlanetDashboard from "./components/PlanetDashboard.tsx";
 
 function browserStorage(): StoragePort {
   try {
@@ -28,6 +28,7 @@ function browserStorage(): StoragePort {
   }
 }
 const NAV = [
+  { id: "planet", icon: "◉", name: "행성" },
   { id: "command", icon: "⌘", name: "지휘실" },
   { id: "operations", icon: "⌖", name: "작전 지도" },
   { id: "fleet", icon: "◇", name: "함대 편성" },
@@ -46,7 +47,7 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
     "reason" in loaded ? loaded.reason : "",
   );
   const [reloadFailure, setReloadFailure] = useState("");
-  const [view, setView] = useState<View>("command");
+  const [view, setView] = useState<View>("planet");
   const [missionId, setMissionId] = useState(MISSIONS[0].id);
   const [selected, setSelected] = useState<string[]>([]);
   const [support, setSupport] = useState<Support>("none");
@@ -138,6 +139,7 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
     act({ type: "dismiss" });
     setView("base");
   }
+  if(view==="planet"||view==="career") return <PlanetDashboard key={view} initialSection={view==="career"?"career":"planet"} onPractice={()=>setView("command")} onGuild={()=>setView("guild")}/>;
   return (
     <div className="app-shell">
       <a href="#main" className="skip-link">
@@ -281,8 +283,6 @@ export default function App({ storage: injected }: { storage?: StoragePort }) {
               locked={locked}
               onBase={goBase}
             />
-          ) : view === "career" ? (
-            <BaseOperationsPanel />
           ) : view === "guild" ? (
             <GuildPanel onBase={() => setView("career")} />
           ) : view === "base" ? (

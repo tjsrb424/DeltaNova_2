@@ -2,6 +2,7 @@ import { useState } from "react";
 import { PILOTS } from "../guild/content.ts";
 import type { useGuildOperation } from "../guild/useGuildOperation.ts";
 import "../guild/guild.css";
+import { pendingParticipant } from "../guild/participant-lock.ts";
 export default function ParticipantLink({
   network,
 }: {
@@ -9,6 +10,7 @@ export default function ParticipantLink({
 }) {
   const { session, busy, error, notice } = network;
   const [pilotId, setPilotId] = useState(session?.pilotId || "nova");
+  const pinned=network.pendingPilotId||pendingParticipant();
   return (
     <>
       <section className="panel guild-connection">
@@ -28,8 +30,8 @@ export default function ParticipantLink({
             개발 참가자
             <select
               aria-label="개발 참가자"
-              value={network.pendingPilotId || pilotId}
-              disabled={busy || network.pending}
+              value={pinned || pilotId}
+              disabled={busy || !!pinned}
               onChange={(e) => setPilotId(e.target.value)}
             >
               {PILOTS.map((p) => (
@@ -42,7 +44,7 @@ export default function ParticipantLink({
           <button
             className="secondary-button"
             disabled={busy || (network.pending && session !== null)}
-            onClick={() => network.connect(network.pendingPilotId || pilotId)}
+              onClick={() => network.connect(pinned || pilotId)}
           >
             참가자로 연결
           </button>

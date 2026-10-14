@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
+import type { ReactElement } from "react";
 import App from "../src/App.tsx";
 import { decodeSave, encodeSave, SAVE_KEY } from "../src/storage/save.ts";
 import { initialState, reduceGame } from "../src/game/state.ts";
@@ -18,6 +19,7 @@ function memory(raw: string | null = null) {
 }
 const click = (name: string | RegExp) =>
   fireEvent.click(screen.getByRole("button", { name }));
+function renderPractice(ui: ReactElement) { const result=render(ui); click("편성 연습"); return result; }
 function completedSave() {
   const started = reduceGame(initialState(), {
     type: "launch",
@@ -30,9 +32,10 @@ function completedSave() {
 }
 describe("command center", () => {
   it("does not present practice research or module balances as the server participant state", async () => {
-    const { container } = render(<App storage={memory()} />);
+    const { container } = renderPractice(<App storage={memory()} />);
     expect(container.querySelector(".data-count")).not.toBeNull();
     click("기지 운영");
+    click("참가자로 연결");
     await screen.findByRole("alert");
     expect(container.querySelector(".topbar .data-count")).toBeNull();
     expect(container.querySelector(".page-heading .base-status")).toBeNull();
@@ -54,7 +57,7 @@ describe("command center", () => {
         this.raw = value;
       },
     };
-    render(<App storage={storage} />);
+    renderPractice(<App storage={storage} />);
     expect(storage.raw).toBe(external);
     expect(screen.getByRole("alert").textContent).toContain("다른 창");
   });
@@ -72,7 +75,7 @@ describe("command center", () => {
         return value;
       },
     };
-    render(<App storage={storage} />);
+    renderPractice(<App storage={storage} />);
     click("추천 편성 적용");
     click("교란 지원");
     storage.race = true;
@@ -99,7 +102,7 @@ describe("command center", () => {
           this.raw = value;
         },
       };
-      render(<App storage={storage} />);
+      renderPractice(<App storage={storage} />);
       storage.fail = true;
       if (mode === "malformed") storage.raw = "corrupt external data";
       const before = storage.raw;
@@ -127,7 +130,7 @@ describe("command center", () => {
         return this.raw;
       },
     };
-    render(<App storage={storage} />);
+    renderPractice(<App storage={storage} />);
     storage.denied = false;
     click("추천 편성 적용");
     click("교란 지원");
@@ -139,7 +142,7 @@ describe("command center", () => {
     expect(screen.getByRole("alert")).toBeTruthy();
   });
   it("locks navigation while resolving an operation and allows base access after settlement", () => {
-    render(<App storage={memory()} />);
+    renderPractice(<App storage={memory()} />);
     click("추천 편성 적용");
     click("교란 지원");
     click("작전 출격");
@@ -158,7 +161,7 @@ describe("command center", () => {
     ).toBe(false);
   });
   it("requires a fleet and updates command usage from selected ships", () => {
-    render(<App storage={memory()} />);
+    renderPractice(<App storage={memory()} />);
     expect(
       (screen.getByRole("button", { name: "작전 출격" }) as HTMLButtonElement)
         .disabled,
@@ -169,7 +172,7 @@ describe("command center", () => {
     expect(screen.getByTestId("command-usage").textContent).toContain("0 / 12");
   });
   it("resets an unsupported flank when recon is deselected", () => {
-    render(<App storage={memory()} />);
+    renderPractice(<App storage={memory()} />);
     click("케스트럴 01 편성");
     click("정찰 지원");
     click("우회 항로");
@@ -187,7 +190,7 @@ describe("command center", () => {
   });
   it("plays, settles once, persists and permits retry", () => {
     const storage = memory();
-    render(<App storage={storage} />);
+    renderPractice(<App storage={storage} />);
     click("추천 편성 적용");
     click("교란 지원");
     click("작전 출격");
@@ -205,14 +208,14 @@ describe("command center", () => {
   });
   it("preserves invalid storage until an explicit new practice", () => {
     const storage = memory("broken");
-    render(<App storage={storage} />);
+    renderPractice(<App storage={storage} />);
     expect(storage.raw).toBe("broken");
     expect(screen.getByRole("alert").textContent).toContain("기존 기록");
     click("새 연습 시작");
     expect(decodeSave(storage.raw!).profile.totalSorties).toBe(0);
   });
   it("warns when persistence fails without disabling memory play", () => {
-    render(
+    renderPractice(
       <App
         storage={{
           getItem: () => null,
@@ -232,7 +235,7 @@ describe("command center", () => {
     ).toBe(false);
   });
   it("locks commands on external storage changes and explicitly reloads", () => {
-    render(<App storage={memory()} />);
+    renderPractice(<App storage={memory()} />);
     click("추천 편성 적용");
     fireEvent(
       window,
