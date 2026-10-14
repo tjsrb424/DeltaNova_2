@@ -10,7 +10,7 @@
 
 **Spec:** [2026-10-14-planet-base-dashboard-design.md](../specs/2026-10-14-planet-base-dashboard-design.md)
 
-**Status:** 사용자 승인으로 Native 구현·전체 헤드리스 검증·독립 코드 리뷰와 중요한 문제 두 가지 수정 완료. 완료 이벤트의 접근성 알림은 경미한 후속 보완이다. main 병합/push는 아직 실행하지 않았다.
+**Status:** 사용자 승인으로 Native 구현·전체 헤드리스 검증·독립 코드 리뷰와 중요한 문제 두 가지 수정 완료. 사용자가 main 로컬 병합을 선택해 통합했고 main에서도 156개 테스트·빌드·API 검증이 통과했다. 완료 이벤트의 접근성 알림은 경미한 후속 보완이다. 원격 push는 실행하지 않았다.
 
 ## Global Constraints
 
