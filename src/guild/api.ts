@@ -24,7 +24,7 @@ export interface GuildApi {
     signal?: AbortSignal,
   ): Promise<GuildReply & { serverTime: number }>;
 }
-async function request(
+export async function request(
   path: string,
   body?: unknown,
   token?: string,
@@ -38,13 +38,10 @@ async function request(
   try {
     const response = await fetch(path, {
       method: body === undefined ? "GET" : "POST",
-      headers:
-        body === undefined
-          ? {}
-          : {
-              "Content-Type": "application/json",
-              ...(token ? { Authorization: `Bearer ${token}` } : {}),
-            },
+      headers: {
+        ...(body===undefined?{}:{"Content-Type":"application/json"}),
+        ...(token?{Authorization:`Bearer ${token}`}:{}),
+      },
       body: body === undefined ? undefined : JSON.stringify(body),
       signal: controller.signal,
       cache: "no-store",

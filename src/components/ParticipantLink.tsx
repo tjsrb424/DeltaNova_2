@@ -5,7 +5,7 @@ import "../guild/guild.css";
 export default function ParticipantLink({
   network,
 }: {
-  network: ReturnType<typeof useGuildOperation>;
+  network: Pick<ReturnType<typeof useGuildOperation>,"session"|"busy"|"error"|"notice"|"pending"|"pendingPilotId"|"connect"|"refresh"|"retry">;
 }) {
   const { session, busy, error, notice } = network;
   const [pilotId, setPilotId] = useState(session?.pilotId || "nova");
