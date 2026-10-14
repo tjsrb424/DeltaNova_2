@@ -68,7 +68,8 @@ export function createGuildServer(
       if (req.headers.origin && !allowedOrigins.includes(req.headers.origin))
         throw new GuildError(403, "ORIGIN_DENIED", "허용되지 않은 출처입니다.");
       if (req.method === "GET" && req.url === "/api/guild") {
-        send(res, 200, { state: store.snapshot(), serverTime: clock() });
+        const now=clock();
+        send(res, 200, { state: store.snapshot(now), serverTime: now });
         return;
       }
       if(req.method==="GET"&&req.url==="/api/empire") {send(res,200,store.empireSnapshot(requirePilot(req),clock()));return;}

@@ -2,15 +2,15 @@ import { useState } from "react";
 import { PILOTS } from "../guild/content.ts";
 import type { useGuildOperation } from "../guild/useGuildOperation.ts";
 import "../guild/guild.css";
-import { pendingParticipant } from "../guild/participant-lock.ts";
+import { usePendingParticipant } from "../guild/participant-lock.ts";
 export default function ParticipantLink({
   network,
 }: {
-  network: Pick<ReturnType<typeof useGuildOperation>,"session"|"busy"|"error"|"notice"|"pending"|"pendingPilotId"|"connect"|"refresh"|"retry">;
+  network: Pick<ReturnType<typeof useGuildOperation>,"session"|"busy"|"error"|"notice"|"pending"|"pendingPilotId"|"blockedByOtherCommand"|"otherPendingScreen"|"connect"|"refresh"|"retry">;
 }) {
   const { session, busy, error, notice } = network;
   const [pilotId, setPilotId] = useState(session?.pilotId || "nova");
-  const pinned=network.pendingPilotId||pendingParticipant();
+  const participant=usePendingParticipant(),pinned=network.pendingPilotId||participant;
   return (
     <>
       <section className="panel guild-connection">
@@ -76,6 +76,7 @@ export default function ParticipantLink({
           {notice}
         </p>
       )}
+      {network.blockedByOtherCommand&&<p className="storage-notice" role="status">{network.otherPendingScreen==="empire"?"행성·개인 작전":"공동 작전"} 화면에 미확정 명령이 있어 새 명령을 보낼 수 없습니다. 해당 화면에서 같은 명령을 재전송한 뒤 진행하세요.</p>}
     </>
   );
 }

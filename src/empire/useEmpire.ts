@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import { GuildApiError } from "../guild/api.ts";
 import { PILOTS } from "../guild/content.ts";
 import { parseEmpireCommand } from "./validation.ts";
-import { pendingParticipant, setParticipantPending } from "../guild/participant-lock.ts";
+import { pendingParticipant, setParticipantPending, usePendingParticipant } from "../guild/participant-lock.ts";
 const SESSION_KEY="delta-nova.guild-dev-session.v1",PENDING_KEY="delta-nova.empire-pending.v1";
 const READ_ERROR="행성 서버에 연결하지 못했습니다. 마지막 확인 상태를 유지합니다.";
 const RETRY_MESSAGE="명령 처리 여부를 확인하지 못했습니다. 같은 명령 재전송으로 결과를 확인하세요.";
@@ -24,6 +24,7 @@ function loadPending(api:EmpireApi):Pending|null {
   } catch{return null;}
 }
 export function useEmpire(api:EmpireApi) {
+  const blockedByOtherCommand=!!usePendingParticipant("empire");
   const [pending,setPending]=useState(()=>{const p=loadPending(api);setParticipantPending("empire",p?.session.pilotId||null);return p;}),pendingRef=useRef(pending);
   const [session,setSession]=useState<EmpireSession|null>(()=>pending?(pending.needsSession?null:pending.session):loadSession()),sessionRef=useRef(session);
   const [data,setData]=useState<EmpireSnapshot|null>(null),dataRef=useRef<EmpireSnapshot|null>(null);
@@ -93,9 +94,9 @@ export function useEmpire(api:EmpireApi) {
   }
   function send(action:EmpireAction) {
     const identity=sessionRef.current;
-    if(!identity||!dataRef.current||processing.current||pendingRef.current||!online) return;
+    if(!identity||!dataRef.current||processing.current||pendingRef.current||pendingParticipant("empire")||!online) return;
     void execute({session:identity,command:{commandId:crypto.randomUUID(),expectedEmpireRevision:dataRef.current.state.revision,action:structuredClone(action)},needsSession:false});
   }
-  return {data,session,busy,online,error,notice,pending:pending!==null,pendingPilotId:pending?.session.pilotId,
+  return {data,session,busy,online,error,notice,blockedByOtherCommand,otherPendingScreen:"guild" as const,pending:pending!==null,pendingPilotId:pending?.session.pilotId,
     connect:(id:string)=>void connect(id),refresh:()=>void refresh(undefined,true),send,retry:()=>{if(pendingRef.current) void execute(pendingRef.current);}};
 }

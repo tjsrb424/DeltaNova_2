@@ -18,7 +18,7 @@ export default function PlanetDashboard({api=empireApi,onPractice,onGuild,initia
   const network=useEmpire(api),[section,setSection]=useState<Section>(initialSection),[mode,setMode]=useState<ActionMode>("shipyard"),[selectedPlanet,setSelectedPlanet]=useState<string|null>(null),[tick,setTick]=useState(()=>Date.now());
   useEffect(()=>{const timer=setInterval(()=>setTick(Date.now()),1000);return ()=>clearInterval(timer);},[]);
   const receivedAt=useMemo(()=>Date.now(),[network.data]);
-  const state=network.data?.state,planet=state?.planets.find(p=>p.id===(selectedPlanet||state.homePlanetId))||state?.planets[0],locked=network.busy||network.pending||!network.online;
+  const state=network.data?.state,planet=state?.planets.find(p=>p.id===(selectedPlanet||state.homePlanetId))||state?.planets[0],locked=network.busy||network.pending||network.blockedByOtherCommand||!network.online;
   const cap=planet?capacities(planet):null,rates=planet&&state?productionRates(planet,state.technologies):null,watts=planet?power(planet):null;
   const now=network.data?network.data.serverTime+(network.online?Math.max(0,tick-receivedAt):0):0;
   function navigate(next:Section) {setSection(next);if(next==="construction") setMode("construction");if(next==="research") setMode("research");}

@@ -34,7 +34,7 @@ export default function GuildPanel({
       (slot?.leaseUntil || 0) > now &&
       op?.phase === "preparing",
   );
-  const locked = busy || network.pending || !session || !online;
+  const locked = busy || network.pending || network.blockedByOtherCommand || !session || !online;
   const ownRole =
     world && session
       ? ROLE_IDS.find((r) => {

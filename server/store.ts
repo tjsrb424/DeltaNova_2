@@ -97,8 +97,8 @@ export class GuildStore {
       throw error;
     }
   }
-  snapshot(): GuildState {
-    return guildView(this.worldSnapshot());
+  snapshot(now?: number): GuildState {
+    return guildView(this.worldSnapshot(),undefined,undefined,now);
   }
   worldSnapshot(): WorldState {
     const row = this.db.prepare("SELECT snapshot FROM world WHERE id=1").get();
@@ -134,7 +134,7 @@ export class GuildStore {
       const state = applyWorldGuildCommand(this.worldSnapshot(), pilotId, command, now);
       validateWorld(state);
       const result: GuildReply = {
-        state: guildView(state),
+        state: guildView(state,undefined,undefined,now),
         receipt: {
           commandId: command.commandId,
           pilotId,

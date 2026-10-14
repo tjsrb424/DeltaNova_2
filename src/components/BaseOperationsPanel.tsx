@@ -56,7 +56,7 @@ export default function BaseOperationsPanel({
   }, [canFlank, approach]);
   const pilot = data?.state.pilots.find((p) => p.id === session?.pilotId),
     base = pilot && projectBase(pilot.base, data!.serverTime),
-    locked = busy || network.pending || !session || !online;
+    locked = busy || network.pending || network.blockedByOtherCommand || !session || !online;
   const cap = base && capacities(base),
     rates = base && productionRates(base),
     deployed = base?.career.operation?.phase === "checkpoint";

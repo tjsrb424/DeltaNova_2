@@ -24,6 +24,26 @@ it("rolls back world spending when writing the personal receipt fails",()=>{
   finally {store.close();rmSync(dir,{recursive:true,force:true});}
 });
 function ready(store:GuildStore) {expect(typeof store.executeEmpire).toBe("function");expect(typeof store.empireSnapshot).toBe("function");}
+it("exposes completed ships directly to shared selection without mutating on a read",async()=>{
+  const store=new GuildStore(":memory:",{now:0});let now=0;
+  const server=createGuildServer(store,{clock:()=>now});await new Promise<void>(r=>server.listen(0,"127.0.0.1",r));
+  const url="http://127.0.0.1:"+(server.address() as {port:number}).port;
+  try {
+    const session=await(await fetch(url+"/api/dev/session",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({pilotId:"nova"})})).json();
+    const headers={"Content-Type":"application/json",Authorization:"Bearer "+session.token};
+    expect((await fetch(url+"/api/empire/commands",{method:"POST",headers,body:JSON.stringify(command())})).status).toBe(200);
+    const before=store.worldSnapshot();now=40000;
+    const live=await(await fetch(url+"/api/guild")).json();
+    expect(live.state.pilots[0].fleetContext.roster).toHaveLength(10);
+    expect(store.worldSnapshot()).toEqual(before);
+    const claim=await(await fetch(url+"/api/guild/commands",{method:"POST",headers,body:JSON.stringify({commandId:"shared-claim",expectedRevision:live.state.revision,operationId:live.state.operation.id,action:{type:"claim",role:"recon"}})})).json();
+    const built=claim.state.pilots[0].fleetContext.roster.find((sh:{id:string})=>sh.id.includes("build-1-ship-0"));
+    expect(built).toBeTruthy();
+    const contribution=await fetch(url+"/api/guild/commands",{method:"POST",headers,body:JSON.stringify({commandId:"shared-contribution",expectedRevision:claim.state.revision,operationId:claim.state.operation.id,action:{type:"contribute",role:"recon",fleetIds:[built.id,"scout-01","guardian-01","salvage-01"]}})});
+    expect(contribution.status).toBe(200);
+    expect((await contribution.json()).state.operation.slots.recon.report.fleet.some((sh:{id:string})=>sh.id===built.id)).toBe(true);
+  } finally {await new Promise<void>(r=>server.close(()=>r()));store.close();}
+});
 it("keeps an uncertain command unresolved when its stored receipt cannot be validated",async()=>{
   const dir=mkdtempSync(join(tmpdir(),"nova-empire-bad-receipt-")),path=join(dir,"world.sqlite"),store=new GuildStore(path,{now:0});
   store.executeEmpire("nova",command(),0);

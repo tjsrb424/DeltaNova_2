@@ -5,9 +5,10 @@ import { applyGuildCommand } from "../guild/rules.ts";
 import { legacyBaseView, applyLegacyBaseAction } from "./legacy-base.ts";
 import { projectEmpire, ownedPlanet, empireFail } from "./rules.ts";
 import { GuildError } from "../guild/types.ts";
-export function guildView(world: WorldState, actorId?: string, planetId?: string): GuildState {
+export function guildView(world: WorldState, actorId?: string, planetId?: string, now?: number): GuildState {
+  const pilots=world.pilots.map(p=>now===undefined?p:{...p,empire:projectEmpire(p.empire,now)});
   return {schemaVersion:2,rulesVersion:"base-operations-v2",revision:world.revision,operation:structuredClone(world.operation),
-    pilots:world.pilots.map(p=>({id:p.id,name:p.name,merit:p.merit,successfulOperations:p.successfulOperations,
+    pilots:pilots.map(p=>({id:p.id,name:p.name,merit:p.merit,successfulOperations:p.successfulOperations,
       base:legacyBaseView(p.empire,p.id===actorId&&planetId?planetId:p.empire.homePlanetId),
       fleetContext:{roster:p.empire.planets.flatMap(p=>p.ships.map(sh=>({id:sh.id,shipId:sh.shipId})))}}))};
 }

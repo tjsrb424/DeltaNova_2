@@ -10,7 +10,7 @@
 
 **Spec:** [2026-10-14-planet-base-dashboard-design.md](../specs/2026-10-14-planet-base-dashboard-design.md)
 
-**Status:** 사용자 승인으로 Native 구현·전체 헤드리스 검증 완료. 최종 전체 리뷰 진행 중.
+**Status:** 사용자 승인으로 Native 구현·전체 헤드리스 검증·독립 코드 리뷰와 중요한 문제 두 가지 수정 완료. 완료 이벤트의 접근성 알림은 경미한 후속 보완이다. main 병합/push는 아직 실행하지 않았다.
 
 ## Global Constraints
 
@@ -213,7 +213,7 @@
 - [x] Step 2: 도구를 실행해 빠진 통합 경로를 확인하고 Task 1..6의 결함만 원인별회귀테스트와 함께 수정한다. `verify:build`가 새 장면 자산도 HTTP로 제공되는지 검사하도록 한다.
 - [x] Step 3: `npm test`, `npm run build`, `npm run verify:build`, `npm run verify:guild`, `npm run verify:empire`, `npm run simulate`를 실행한다. Expected: 각 exit0, 테스트 실패0, 브라우저/GUI창 없음. 로그에 수/결과/제한을 기록하고 불변 코드의 검증을 이유 없이 반복하지 않는다.
 - [x] Step 4: README에 현재 실행 흐름, 실제 초기값, 비용/대기/취소, 버전이전, 조선재고, UI상태와 남은 성계/식민지 범위를 갱신한다. PLANET_BASE_REPORT에는 신선한 검증 결과와 실제렌더/재미검증미완료를 구별한다. 구현되지 않은 공격접근/수송을 완료로 보고하지 않는다.
-- [ ] Step 5: `git diff --check`와 요구사항별완료표를 검토한다. Native 실행 시 전체 변경을 독립 리뷰하고 Critical/Important는 수정/검증한다. 지정 경로만 `test: verify planet growth and dashboard integration`로 커밋한다. 공유 브랜치 push/merge는 별도 승인 없이 실행하지 않는다.
+- [x] Step 5: `git diff --check`와 요구사항별완료표를 검토한다. Native 실행 시 전체 변경을 독립 리뷰하고 Critical/Important는 수정/검증한다. 지정 경로만 `test: verify planet growth and dashboard integration`로 커밋한다. 공유 브랜치 push/merge는 별도 승인 없이 실행하지 않는다.
 
 ## Self-Review and Execution Handoff
 

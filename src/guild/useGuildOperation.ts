@@ -9,7 +9,7 @@ import type {
 } from "./types.ts";
 import { PILOTS } from "./content.ts";
 import { parseGuildCommand } from "./validation.ts";
-import { pendingParticipant, setParticipantPending } from "./participant-lock.ts";
+import { pendingParticipant, setParticipantPending, usePendingParticipant } from "./participant-lock.ts";
 const READ_ERROR =
   "공동 작전 서버에 연결하지 못했습니다. 마지막 확인 상태를 유지합니다. 서버 연결을 확인하고 다시 시도하세요.";
 const SESSION_KEY = "delta-nova.guild-dev-session.v1";
@@ -83,6 +83,7 @@ function rememberPending(api: GuildApi, item: Pending | null) {
   }
 }
 export function useGuildOperation(api: GuildApi) {
+  const blockedByOtherCommand=!!usePendingParticipant("guild");
   const [initialPending] = useState(() => {const p=loadPending(api);setParticipantPending("guild",p?.session.pilotId||null);return p;});
   const [data, setData] = useState<GuildSnapshot | null>(null),
     dataRef = useRef<GuildSnapshot | null>(null);
@@ -127,8 +128,8 @@ export function useGuildOperation(api: GuildApi) {
       setData(value);
     }
   }
-  async function refresh(signal?: AbortSignal) {
-    if (activeRead.current?.epoch === generation.current) return;
+  async function refresh(signal?: AbortSignal,force=false) {
+    if (!force&&activeRead.current?.epoch === generation.current) return;
     const epoch = generation.current,
       sequence = ++readSequence.current;
     activeRead.current = { epoch, sequence };
@@ -215,7 +216,7 @@ export function useGuildOperation(api: GuildApi) {
     try {
       const reply = await api.command(item.session, item.command);
       if (!mounted.current || epoch !== generation.current) return;
-      accept(reply);
+      if(!reply.duplicate) accept(reply);
       setOnline(true);
       updatePending(null);
       setNotice(
@@ -223,6 +224,7 @@ export function useGuildOperation(api: GuildApi) {
           ? "이전에 처리한 동일 명령을 확인했습니다. 보상은 중복 지급되지 않습니다."
           : "공동 작전 기록에 반영했습니다.",
       );
+      if(reply.duplicate) void refresh(undefined,true);
     } catch (e) {
       if (!mounted.current || epoch !== generation.current) return;
       if (e instanceof GuildApiError && e.status >= 400 && e.status < 500) {
@@ -250,6 +252,7 @@ export function useGuildOperation(api: GuildApi) {
       !dataRef.current ||
       processing.current ||
       pendingRef.current ||
+      pendingParticipant("guild") ||
       !online
     )
       return;
@@ -273,6 +276,8 @@ export function useGuildOperation(api: GuildApi) {
     online,
     error,
     notice,
+    blockedByOtherCommand,
+    otherPendingScreen:"empire" as "empire"|"guild",
     pending: pending !== null,
     pendingPilotId: pending?.session.pilotId,
     refresh: () => void refresh(),
