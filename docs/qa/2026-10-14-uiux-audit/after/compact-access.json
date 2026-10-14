@@ -1,0 +1,434 @@
+[
+  {
+    "width": 390,
+    "height": 650,
+    "settings": false,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-390x650-settings-false-queue-false",
+      "label": "케스트럴 건조",
+      "x": 23,
+      "y": 597.34375,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 390,
+    "height": 650,
+    "settings": true,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-390x650-settings-true-queue-false",
+      "label": "케스트럴 건조",
+      "x": 23,
+      "y": 597.140625,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 390,
+    "height": 650,
+    "settings": false,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-390x650-settings-false-queue-true",
+      "label": "케스트럴 건조",
+      "x": 23,
+      "y": 597.34375,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 390,
+    "height": 650,
+    "settings": true,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-390x650-settings-true-queue-true",
+      "label": "케스트럴 건조",
+      "x": 23,
+      "y": 597.140625,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 600,
+    "settings": false,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x600-settings-false-queue-false",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 545,
+      "width": 286,
+      "height": 45,
+      "viewport": 600,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 600,
+    "settings": true,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x600-settings-true-queue-false",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 544.734375,
+      "width": 286,
+      "height": 45,
+      "viewport": 600,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 600,
+    "settings": false,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x600-settings-false-queue-true",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 544.9375,
+      "width": 286,
+      "height": 45,
+      "viewport": 600,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 600,
+    "settings": true,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x600-settings-true-queue-true",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 544.734375,
+      "width": 286,
+      "height": 45,
+      "viewport": 600,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 900,
+    "height": 760,
+    "settings": false,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-900x760-settings-false-queue-false",
+      "label": "케스트럴 건조",
+      "x": 135,
+      "y": 704.09375,
+      "width": 717,
+      "height": 45,
+      "viewport": 760,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 900,
+    "height": 760,
+    "settings": true,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-900x760-settings-true-queue-false",
+      "label": "케스트럴 건조",
+      "x": 135,
+      "y": 704.84375,
+      "width": 717,
+      "height": 45,
+      "viewport": 760,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 900,
+    "height": 760,
+    "settings": false,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-900x760-settings-false-queue-true",
+      "label": "케스트럴 건조",
+      "x": 135,
+      "y": 704.84375,
+      "width": 717,
+      "height": 45,
+      "viewport": 760,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 900,
+    "height": 760,
+    "settings": true,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-900x760-settings-true-queue-true",
+      "label": "케스트럴 건조",
+      "x": 135,
+      "y": 704.890625,
+      "width": 717,
+      "height": 45,
+      "viewport": 760,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 650,
+    "settings": false,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x650-settings-false-queue-false",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 595,
+      "width": 286,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 650,
+    "settings": true,
+    "queue": false,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x650-settings-true-queue-false",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 595,
+      "width": 286,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 650,
+    "settings": false,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x650-settings-false-queue-true",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 594.9375,
+      "width": 286,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  },
+  {
+    "width": 1100,
+    "height": 650,
+    "settings": true,
+    "queue": true,
+    "controls": [
+      {
+        "label": "건조 함선",
+        "readable": true
+      },
+      {
+        "label": "건조 수량",
+        "readable": true
+      }
+    ],
+    "action": {
+      "name": "audit-compact-fleet-1100x650-settings-true-queue-true",
+      "label": "케스트럴 건조",
+      "x": 766,
+      "y": 594.734375,
+      "width": 286,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  }
+]

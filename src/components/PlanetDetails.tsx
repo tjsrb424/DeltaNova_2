@@ -1,4 +1,5 @@
 import type { EmpireAction, EmpireState, PlanetState } from "../empire/types.ts";
+import { useCallback, useLayoutEffect, useRef } from "react";
 import { FACILITY_IDS, FACILITY_NAMES, TECHNOLOGY_IDS, TECHNOLOGY_NAMES } from "../empire/content.ts";
 import PlanetActionPanel from "./PlanetActionPanel.tsx";
 import type { ActionMode } from "./PlanetActionPanel.tsx";
@@ -8,10 +9,28 @@ import FacilityArt from "./FacilityArt.tsx";
 import { EmpireIcon } from "./EmpireUI.tsx";
 import { capacities, power, productionRates } from "../empire/economy.ts";
 export type DetailSection = "fleet" | "construction" | "research" | "career" | "reports";
-type Props = { section: DetailSection; state: EmpireState; planet: PlanetState; mode: ActionMode; target: string; now: number; locked: boolean; send: (a: EmpireAction) => void; onAction: (mode: ActionMode, target?: string) => void; onTargetChange: (target: string) => void; onCareer: () => void };
-export default function PlanetDetails({ section, state, planet, mode, target, now, locked, send, onAction, onTargetChange, onCareer }: Props) {
+type Props = { section: DetailSection; state: EmpireState; planet: PlanetState; mode: ActionMode; target: string; inspectionRequest?: number; now: number; locked: boolean; send: (a: EmpireAction) => void; onAction: (mode: ActionMode, target?: string) => void; onTargetChange: (target: string) => void; onCareer: () => void };
+export default function PlanetDetails({ section, state, planet, mode, target, inspectionRequest = 0, now, locked, send, onAction, onTargetChange, onCareer }: Props) {
+  const inspector = useRef<HTMLDivElement>(null);
+  const previousRequest = useRef(0);
+  const previousContext = useRef<string | null>(null), context = section + ":" + planet.id;
+  const showInspector = useCallback(() => {
+    inspector.current?.scrollIntoView?.({ block: "start", behavior: "instant" });
+    inspector.current?.focus({ preventScroll: true });
+  }, []);
+  useLayoutEffect(() => {
+    const changed = previousContext.current !== context;
+    const requested = inspectionRequest > 0 && previousRequest.current !== inspectionRequest;
+    previousContext.current = context;
+    previousRequest.current = inspectionRequest;
+    if ((changed && target) || requested) showInspector();
+  }, [context, target, inspectionRequest, showInspector]);
+  function inspect(next: ActionMode, selection?: string) {
+    onAction(next, selection);
+  }
   const panel = <PlanetActionPanel key={planet.id + ":" + mode} state={state} planet={planet} mode={mode} target={target} onTargetChange={onTargetChange} locked={locked} send={send}/>;
-  const atlas = <DevelopmentMap state={state} planet={planet} now={now} onInspect={onAction}/>;
+  const actionInspector = <div className="action-inspector" ref={inspector} tabIndex={-1}>{panel}</div>;
+  const atlas = <DevelopmentMap state={state} planet={planet} now={now} onInspect={inspect}/>;
   if (section === "construction") {
     const rates = productionRates(planet, state.technologies), cap = capacities(planet), watts = power(planet);
     return <section className="detail-page construction-page">
@@ -23,8 +42,8 @@ export default function PlanetDetails({ section, state, planet, mode, target, no
       })}</div></div>{panel}</div>
     </section>;
   }
-  if (section === "fleet") return <section className="detail-page"><div className="detail-title"><h2>함대 운영·건조</h2><button className="quiet-action" onClick={onCareer}>개인 작전 편성 →</button></div><div className="detail-columns"><EmpireFleetPanel state={state} planet={planet} locked={locked} send={send}/>{panel}</div><details className="growth-disclosure"><summary>발전지도 · 추가 함선 건조 요건</summary>{atlas}</details></section>;
-  if (section === "research") return <section className="detail-page">{atlas}<div className="detail-columns research-controls"><div className="technology-catalog">{TECHNOLOGY_IDS.map(id => <button key={id} aria-pressed={(target || "industry") === id} className={(target || "industry") === id ? "selected" : ""} onClick={() => onAction("research", id)}><EmpireIcon kind="research"/><span>{TECHNOLOGY_NAMES[id]}<strong>Lv.{state.technologies[id]}</strong><small>{state.researchJob?.target === id ? "연구 중" : "공통 기술 · 모든 행성 적용"}</small></span></button>)}</div>{panel}</div></section>;
-  if (section === "career") return <div className="career-detail"><EmpireCareerPanel key={planet.id} state={state} planet={planet} locked={locked} send={send}/></div>;
+  if (section === "fleet") return <section className="detail-page"><div className="detail-title"><h2>함대 운영·건조</h2><div className="mode-tabs"><button onClick={showInspector}>함선 건조 상세</button><button onClick={onCareer}>개인 작전 편성 →</button></div></div><div className="detail-columns"><EmpireFleetPanel state={state} planet={planet} locked={locked} send={send}/>{actionInspector}</div><details className="growth-disclosure"><summary>발전지도 · 추가 함선 건조 요건</summary>{atlas}</details></section>;
+  if (section === "research") return <section className="detail-page"><div className="detail-title"><h2>연구·성장 상세</h2><div className="mode-tabs"><button onClick={showInspector}>기술 연구 상세</button></div></div>{atlas}<div className="detail-columns research-controls"><div className="technology-catalog">{TECHNOLOGY_IDS.map(id => <button key={id} aria-pressed={(target || "industry") === id} className={(target || "industry") === id ? "selected" : ""} onClick={() => inspect("research", id)}><EmpireIcon kind="research"/><span>{TECHNOLOGY_NAMES[id]}<strong>Lv.{state.technologies[id]}</strong><small>{state.researchJob?.target === id ? "연구 중" : "공통 기술 · 모든 행성 적용"}</small></span></button>)}</div>{actionInspector}</div></section>;
+  if (section === "career") return <div className="career-detail"><EmpireCareerPanel key={planet.id} state={state} planet={planet} locked={locked} send={send} onResearch={() => onAction("research")}/></div>;
   return <section className="empire-card empire-report-list"><div className="empire-heading"><h2>기지 보고서</h2><EmpireIcon kind="reports"/></div>{state.events.length === 0 ? <p className="empty-jobs">아직 완료한 작업이 없습니다.</p> : state.events.slice().reverse().map(event => <p key={event.id}><strong>{event.title}</strong><span>{state.planets.find(p => p.id === event.planetId)?.name} · {new Date(event.at).toLocaleTimeString("ko-KR", { timeZone: "Asia/Seoul" })}</span></p>)}</section>;
 }

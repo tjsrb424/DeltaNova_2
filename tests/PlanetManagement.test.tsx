@@ -108,3 +108,62 @@ it("opens another planet's job with that planet's facilities and cost source", a
   expect(screen.getByRole("region", { name: "선택한 개발" }).textContent).toContain("현지 투자: 세레스");
   expect((screen.getByRole("combobox", { name: "시설 선택" }) as HTMLSelectElement).value).toBe("laboratory");
 });
+
+it("opens the chosen research inspector from the overview instead of leaving focus at the growth map", async () => {
+  const state = initialEmpire("nova", 0);
+  const api: EmpireApi = { connect: async pilotId => ({ pilotId, token: "test" }), read: async () => ({ state, serverTime: 0 }), command: async () => { throw Error("unused"); } };
+  render(<PlanetDashboard api={api}/>);
+  fireEvent.click(screen.getByRole("button", { name: "참가자로 연결" }));
+  await screen.findByRole("heading", { name: "노바 프라임" });
+  fireEvent.click(screen.getByRole("button", { name: "연구 상세" }));
+  const selected = screen.getByRole("combobox", { name: "연구 기술" }) as HTMLSelectElement;
+  expect(selected.value).toBe("industry");
+  expect(document.activeElement).toBe(selected.closest(".action-inspector"));
+});
+
+it("opens the current research job from the queue without stealing focus on later dropdown edits", async () => {
+  const initial = initialEmpire("nova", 0);
+  const state = applyEmpireAction(initial, { type: "start-research", planetId: initial.homePlanetId, technology: "industry" }, 0, "research-job");
+  const api: EmpireApi = { connect: async pilotId => ({ pilotId, token: "test" }), read: async () => ({ state, serverTime: 0 }), command: async () => { throw Error("unused"); } };
+  render(<PlanetDashboard api={api}/>);
+  fireEvent.click(screen.getByRole("button", { name: "참가자로 연결" }));
+  await screen.findByRole("heading", { name: "노바 프라임" });
+  fireEvent.click(screen.getByRole("button", { name: "연구" }));
+  fireEvent.click(screen.getByRole("button", { name: "산업 기술 Lv.1 상세" }));
+  const selected = screen.getByRole("combobox", { name: "연구 기술" }) as HTMLSelectElement;
+  expect(selected.value).toBe("industry");
+  expect(document.activeElement).toBe(selected.closest(".action-inspector"));
+  selected.focus();
+  fireEvent.change(selected, { target: { value: "intelligence" } });
+  expect(selected.value).toBe("intelligence");
+  expect(document.activeElement).toBe(selected);
+  fireEvent.click(screen.getByRole("button", { name: "산업 기술 Lv.1 상세" }));
+  expect(document.activeElement).toBe(selected.closest(".action-inspector"));
+});
+
+it("focuses the new sortie result and follows the report's research action", async () => {
+  let state = initialEmpire("nova", 0);
+  const api: EmpireApi = {
+    connect: async pilotId => ({ pilotId, token: "test" }),
+    read: async () => ({ state, serverTime: 0 }),
+    command: async (session, command) => {
+      state = applyEmpireAction(state, command.action, 0, command.commandId);
+      return { state: structuredClone(state), serverTime: 0, receipt: { pilotId: session.pilotId, commandId: command.commandId, revision: state.revision }, duplicate: false };
+    },
+  };
+  render(<PlanetDashboard api={api}/>);
+  fireEvent.click(screen.getByRole("button", { name: "참가자로 연결" }));
+  await screen.findByRole("heading", { name: "노바 프라임" });
+  fireEvent.click(screen.getByRole("button", { name: "개인 작전" }));
+  fireEvent.click(screen.getByRole("button", { name: "추천 편성 적용" }));
+  fireEvent.click(screen.getByRole("button", { name: "개인 작전 출격" }));
+  const returnButton = await screen.findByRole("button", { name: /^화물 \d+개로 귀환/ });
+  expect(document.activeElement?.className).toBe("empire-career-results");
+  fireEvent.click(returnButton);
+  await screen.findByRole("heading", { name: "작전 보고서" });
+  expect(document.activeElement?.classList.contains("decision-panel")).toBe(true);
+  fireEvent.click(screen.getByRole("button", { name: "기지 연구로 이동" }));
+  await waitFor(() => expect(state.career.operation).toBeNull());
+  expect(screen.getByRole("button", { name: "연구" }).getAttribute("aria-current")).toBe("page");
+  expect(screen.getByRole("combobox", { name: "연구 기술" })).toBeTruthy();
+});

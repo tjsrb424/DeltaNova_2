@@ -37,8 +37,10 @@ async function until(expression) {
   throw Error("Dashboard wait timed out: " + expression);
 }
 async function click(label) {
-  const expression = "(() => { const button = [...document.querySelectorAll('button')].find(b => b.textContent.trim() === " + JSON.stringify(label) + "); if (!button) throw Error('Missing button'); button.click(); return true; })()";
-  await evaluate(expression);
+  const expression = "(() => { const button = [...document.querySelectorAll('button')].find(b => b.textContent.trim() === " + JSON.stringify(label) + "); if (!button) throw Error('Missing button'); button.scrollIntoView({block:'nearest',inline:'nearest'});const r=button.getBoundingClientRect();return {x:r.x+r.width/2,y:r.y+r.height/2}; })()";
+  const point=await evaluate(expression);
+  await call('Input.dispatchMouseEvent',{type:'mousePressed',button:'left',clickCount:1,...point});
+  await call('Input.dispatchMouseEvent',{type:'mouseReleased',button:'left',clickCount:1,...point});
 }
 async function viewport(width, height) {
   await call("Emulation.setDeviceMetricsOverride", { width, height, deviceScaleFactor: 1, mobile: false });
@@ -46,6 +48,7 @@ async function viewport(width, height) {
 }
 async function capture(name) {
   await evaluate("document.fonts.ready.then(() => true)");
+  await evaluate("Promise.all(document.getAnimations().filter(a=>a.playState==='running'&&a.effect?.getTiming().iterations!==Infinity).map(a=>a.finished.catch(()=>{}))).then(()=>true)");
   const r = await call("Page.captureScreenshot", { format: "png", captureBeyondViewport: false });
   await writeFile(join(output, name + ".png"), Buffer.from(r.data, "base64"));
 }
@@ -83,6 +86,119 @@ async function effectAccess(name) {
     assert.ok(value.readable,name+" hidden effect: "+JSON.stringify(value));checks.push(value);
   }
   return {name,rows:checks};
+}
+async function auditPage(name) {
+  const value=await evaluate(`(() => {
+    const pane=document.querySelector('.management-content'),heading=pane.querySelector('h2'),button=pane.querySelector('.empire-action .empire-primary');
+    const bounds=pane.getBoundingClientRect(),h=heading?.getBoundingClientRect(),b=button?.getBoundingClientRect();
+    const hud=[...document.querySelectorAll('.hud-resource,.hud-power,.hud-space')].map(cell=>{
+      const r=cell.getBoundingClientRect(),text=cell.querySelector('strong').getBoundingClientRect();
+      return {name:cell.textContent.trim(),fits:text.right<=r.right+1,textRight:text.right,cellRight:r.right};
+    });
+    const glyph=document.querySelector('.inventory-ship .ship-glyph'),shipText=glyph?.nextElementSibling;
+    const actionHeading=document.querySelector('.empire-action h2')?.getBoundingClientRect();
+    const controls=[...document.querySelectorAll('.action-inspector select,.action-inspector input')].map(e=>{const r=e.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {label:e.getAttribute('aria-label'),readable:!!hit&&e.contains(hit)};});
+    return {scroll:pane.scrollTop,heading:heading?.textContent,headingVisible:!!h&&h.top>=bounds.top-1&&h.bottom<=bounds.bottom,
+      button:button?.textContent.trim(),actionVisible:!b||(b.top>=bounds.top&&b.bottom<=bounds.bottom),actionHeadingVisible:!actionHeading||(actionHeading.top>=bounds.top&&actionHeading.bottom<=bounds.bottom),
+      shipGap:glyph&&shipText?shipText.getBoundingClientRect().left-glyph.getBoundingClientRect().right:null,controls,hud};
+  })()`);
+  await capture(name);return {name,...value};
+}
+async function visualAudit() {
+  const checks=[];
+  for(const [width,height] of [[1672,941],[1100,650],[900,650],[390,844]]) {
+    await viewport(width,height);
+    for(const label of ['대시보드','건설','함대','연구','개인 작전','보고서']) {
+      await click(label);await pause(100);
+      checks.push(await auditPage('audit-'+label+'-'+width));
+      if(label==='함대'||label==='연구') {
+        await click(label==='함대'?'함선 건조 상세':'기술 연구 상세');await pause(100);
+        checks.push(await auditPage('audit-action-'+label+'-'+width));
+        await call('Input.dispatchKeyEvent',{type:'keyDown',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});
+        await call('Input.dispatchKeyEvent',{type:'keyUp',key:'Tab',code:'Tab',windowsVirtualKeyCode:9});
+        assert.ok(await evaluate("document.querySelector('.action-inspector').contains(document.activeElement)"),'Shortcut keyboard focus escaped the selected action');
+      }
+      await evaluate("document.querySelector('.management-content').scrollTop=10000");
+    }
+    await click('대시보드');await pause(100);
+    checks.push(await auditPage('audit-return-'+width));
+    await click('연구 상세');await pause(100);
+    checks.push(await auditPage('audit-action-overview-research-'+width));
+    await click('연구');await pause(100);
+    await pointerClick('.technology-branch button:last-child');await pause(100);
+    checks.push(await auditPage('audit-action-map-research-'+width));
+    await click('연구');await pause(100);
+    await pointerClick('.growth-goal .empire-secondary');await pause(100);
+    assert.equal(await evaluate("document.querySelector('[aria-label=\"건조 함선\"]').value"),'carrier');
+    checks.push(await auditPage('audit-action-map-carrier-'+width));
+    await click('연구');await pause(100);
+    if(await evaluate("document.querySelector('.queue-toggle').getAttribute('aria-expanded')==='false'")) await click('대기열 펼치기');
+    await pointerClick('.job-inspect[aria-label="정보 기술 Lv.1 상세"]');await pause(100);
+    assert.equal(await evaluate("document.querySelector('[aria-label=\"연구 기술\"]').value"),'intelligence');
+    assert.ok(await evaluate("document.activeElement===document.querySelector('.action-inspector')"),'Queue inspection did not focus the current research detail');
+    checks.push(await auditPage('audit-action-queue-research-'+width));
+  }
+  await writeFile(join(output,'visual-audit.json'),JSON.stringify(checks,null,2)+'\n');
+  console.log('Visual audit measurements: '+JSON.stringify(checks.map(c=>({name:c.name,scroll:c.scroll,headingVisible:c.headingVisible,actionVisible:c.actionVisible,hudFits:c.hud.every(h=>h.fits)}))));
+  if(process.env.DELTA_NOVA_UIUX_ASSERT === '1') {
+    assert.ok(checks.every(c=>c.hud.every(h=>h.fits)),'HUD values escape their assigned columns');
+    assert.ok(checks.filter(c=>c.name.includes('audit-action-')).every(c=>c.actionVisible&&c.actionHeadingVisible),'Action shortcut hides its context or commit button');
+    assert.ok(checks.filter(c=>c.name.includes('audit-action-')).every(c=>c.controls.every(e=>e.readable)),'Commit footer covers the selected action controls');
+    assert.ok(checks.filter(c=>c.shipGap!==null).every(c=>c.shipGap<=24),'Fleet glyphs and labels are too far apart');
+  }
+  const compact=[];
+  for(const [width,height] of [[390,650],[1100,600],[900,760],[1100,650]]) {
+    await viewport(width,height);
+    for(const [settings,queue] of [[false,false],[true,false],[false,true],[true,true]]) {
+      await click('함대');
+      if(await evaluate("!document.querySelector('.guild-connection').hidden")!==settings) await click('참가자 설정');
+      if(await evaluate("document.querySelector('.queue-toggle').getAttribute('aria-expanded')==='true'")!==queue) await click(queue?'대기열 펼치기':'대기열 접기');
+      await click('함선 건조 상세');
+      const controls=[];
+      for(const label of ['건조 함선','건조 수량']) {
+        const control=await evaluate(`(() => {const e=document.querySelector('[aria-label="${label}"]');e.scrollIntoView({block:'center'});const r=e.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return {label:'${label}',readable:!!hit&&e.contains(hit)};})()`);
+        assert.ok(control.readable,'Compact form obstructed: '+JSON.stringify({width,height,settings,queue,control}));controls.push(control);
+      }
+      const name='audit-compact-fleet-'+width+'x'+height+'-settings-'+settings+'-queue-'+queue;
+      await evaluate("document.querySelector('.empire-action .empire-primary').scrollIntoView({block:'nearest'})");
+      compact.push({width,height,settings,queue,controls,action:await actionAccess(name)});
+    }
+  }
+  await writeFile(join(output,'compact-access.json'),JSON.stringify(compact,null,2)+'\n');
+  if(await evaluate("!document.querySelector('.guild-connection').hidden")) await click('참가자 설정');
+  await viewport(1672,941);await click('대시보드');
+  await click('개인 작전');await click('추천 편성 적용');
+  assert.ok(await evaluate("document.querySelectorAll('.career-fleet-picker input:checked').length>0"),'Recommended fleet is empty');
+  await pointerClick('.empire-career .empire-primary');
+  await until("!!document.querySelector('.empire-career-results .decision-panel')");
+  assert.ok(await evaluate("document.activeElement===document.querySelector('.empire-career-results')"),'New battle did not receive focus');
+  assert.ok(await evaluate("document.querySelector('.battle-panel h2').getBoundingClientRect().top>=document.querySelector('.management-content').getBoundingClientRect().top"),'New battle title stayed above the scrolled viewport');
+  await capture('audit-career-battle');
+  const operation=store.empireSnapshot('nova',now).state.career.operation;
+  assert.ok(operation,'Personal sortie did not reach the real server');
+  if(operation.phase==='checkpoint') {await pointerClick('.decision-panel .primary-button');await until("!!document.querySelector('.result-details')");assert.ok(await evaluate("document.activeElement===document.querySelector('.decision-panel')"),'Return did not focus the new report');}
+  await capture('audit-career-return');
+  await click('기지 연구로 이동');await until("!!document.querySelector('[aria-label=\"연구 기술\"]')");
+  assert.equal(await evaluate("document.querySelector('.planet-navigation button[aria-current=\"page\"]').textContent.trim()"),'연구');
+  await click('개인 작전');await until("!!document.querySelector('.empire-career')");
+  assert.equal(store.empireSnapshot('nova',now).state.career.operation,null);
+  await click('함대');
+  const repairNeeded=store.empireSnapshot('nova',now).state.planets[0].ships.some(s=>s.wear>0);
+  let repairExecuted=false;
+  if(await evaluate("!document.querySelector('.empire-fleet .empire-primary').disabled")) {
+    await pointerClick('.empire-fleet .empire-primary');
+    await until("document.querySelector('.empire-fleet .empire-primary').disabled");
+    assert.ok(store.empireSnapshot('nova',now).state.planets[0].ships.every(s=>s.wear===0),'Repair did not restore returned ships');
+    repairExecuted=true;
+  }
+  assert.ok(!repairNeeded||repairExecuted,'Returned ships require repair but the repair action was unavailable');
+  await click('대시보드');await click('동맹');await until("!!document.querySelector('.guild-screen')");
+  await capture('audit-guild-desktop');await viewport(390,844);await capture('audit-guild-mobile');
+  await pointerClick('.nav-items button[aria-label="행성"]');await until("!!document.querySelector('.overview-board')");
+  await viewport(1672,941);await click('편성 연습');await until("!!document.querySelector('.app-shell')");
+  await capture('audit-practice-desktop');await viewport(390,844);await capture('audit-practice-mobile');
+  await pointerClick('.nav-items button[aria-label="행성"]');await until("!!document.querySelector('.overview-board')");await viewport(1672,941);
+  await writeFile(join(output,'journey.json'),JSON.stringify({headless:true,personalSortie:true,return:true,researchReportLink:true,repairNeeded,repairExecuted,guildAndPracticeNavigation:true},null,2)+'\n');
 }
 try {
   await mkdir(output, { recursive: true });
@@ -124,6 +240,7 @@ try {
   await until("!!document.querySelector('.guild-connection')");
   await click("참가자로 연결");
   await until("!!document.querySelector('[aria-label=\"전체 현황\"]')");
+  if(process.env.DELTA_NOVA_UIUX_AUDIT === '1') await visualAudit();
   await evaluate("(() => { const image = new Image(); image.src='/art/planet-facilities-v1.png'; return image.decode().then(() => true); })()");
   await viewport(1100, 650); await click("건설");
   await until("!!document.querySelector('.facility-catalog')");
@@ -199,5 +316,5 @@ try {
   if (store) store.close();
   const target = resolve(temporary), root = resolve(tmpdir()) + sep;
   if (!target.startsWith(root) || !target.slice(root.length).startsWith("delta-nova-dashboard-")) throw Error("Unsafe temporary directory");
-  await rm(target, { recursive: true, force: true, maxRetries: 3, retryDelay: 100 });
+  await rm(target, { recursive: true, force: true, maxRetries: 20, retryDelay: 150 });
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 import type { EmpireState, PlanetState, EmpireAction } from "../empire/types.ts";
 import type { Support, Approach } from "../game/types.ts";
 import { SHIPS, MISSIONS, SUPPORTS, MODULES } from "../game/content.ts";
@@ -16,14 +16,24 @@ export default function EmpireFleetPanel({planet:p,locked,send}:Props) {
     <button className="empire-primary" disabled={locked||!damaged.length||p.resources.alloy<cost} onClick={()=>send({type:"repair-fleet",planetId:p.id,fleetIds:damaged.map(sh=>sh.id)})}>손상 함선 일괄 정비</button><p className="action-footnote">정비 비용 합금 {cost} · 출격 중인 함선 제외</p>
   </section>;
 }
-export function EmpireCareerPanel({state,planet:p,locked,send}:Props) {
+export function EmpireCareerPanel({state,planet:p,locked,send,onResearch}:Props & {onResearch:()=>void}) {
   const [selected,setSelected]=useState<string[]>([]),[missionId,setMissionId]=useState(MISSIONS[0].id),[support,setSupport]=useState<Support>("none"),[approach,setApproach]=useState<Approach>("direct");
+  const panel=useRef<HTMLElement>(null),operationKey=state.career.operation?state.career.operation.id+":"+state.career.operation.phase:"";
+  const previousOperation=useRef(operationKey);
+  useLayoutEffect(()=>{
+    const changed=previousOperation.current!==operationKey;
+    previousOperation.current=operationKey;
+    if(!changed) return;
+    const destination=state.career.operation?.phase==="result"?panel.current?.querySelector<HTMLElement>(".decision-panel"):panel.current;
+    destination?.scrollIntoView?.({block:"start",behavior:"instant"});
+    destination?.focus({preventScroll:true});
+  },[operationKey,state.career.operation?.phase]);
   const available=p.ships.filter(sh=>sh.status==="docked"&&sh.wear===0),chosen=selected.filter(id=>available.some(sh=>sh.id===id)),context=fleetContext(p);
   const errors=validateFleet(chosen,support,approach,context),fuel=chosen.reduce((n,id)=>n+SHIPS.find(def=>def.id===p.ships.find(sh=>sh.id===id)!.shipId)!.command,support==="none"?0:2);
   const dispatch=(action:import("../game/types.ts").GameAction)=>send({type:"career-action",planetId:p.id,action});
-  if(state.career.operation) return <section className="empire-career-results"><OperationPanel operation={state.career.operation} locked={locked} onAction={dispatch} onBase={()=>dispatch({type:"dismiss"})} maintenance/></section>;
+  if(state.career.operation) return <section className="empire-career-results" ref={panel} tabIndex={-1}><OperationPanel operation={state.career.operation} locked={locked} onAction={dispatch} onBase={()=>{dispatch({type:"dismiss"});onResearch();}} maintenance/></section>;
   function recommend() {let budget=12;const preferred=["striker","striker","guardian","salvage"],ids:string[]=[];for(const type of preferred){const sh=available.find(sh=>sh.shipId===type&&!ids.includes(sh.id));if(sh){const cost=SHIPS.find(d=>d.id===type)!.command;if(cost<=budget){ids.push(sh.id);budget-=cost;}}}setSelected(ids);}
-  return <section className="empire-card empire-career"><div className="empire-heading"><h2>개인 작전</h2><EmpireIcon kind="fleet"/></div><p className="action-source">출발지 {p.name} · 비용과 정비를 같은 기지에 반영</p>
+  return <section className="empire-card empire-career" ref={panel} tabIndex={-1}><div className="empire-heading"><h2>개인 작전</h2><EmpireIcon kind="fleet"/></div><p className="action-source">출발지 {p.name} · 비용과 정비를 같은 기지에 반영</p>
     <label className="empire-field">작전 목표<select aria-label="작전 목표" value={missionId} onChange={e=>setMissionId(e.target.value)}>{MISSIONS.map(m=><option key={m.id} value={m.id}>{m.title}</option>)}</select></label>
     <section aria-label="개인 작전 편성" className="career-fleet-picker"><button className="quiet-action" disabled={locked} onClick={recommend}>추천 편성 적용</button>{p.ships.map((sh,i)=><label key={sh.id}><input type="checkbox" aria-label={shipLabel(p,i)+" 편성"} checked={chosen.includes(sh.id)} disabled={locked||sh.status!=="docked"||sh.wear>0} onChange={()=>setSelected(chosen.includes(sh.id)?chosen.filter(id=>id!==sh.id):[...chosen,sh.id])}/><span>{shipLabel(p,i)}</span><small>{sh.status==="deployed"?"출격":sh.wear?"정비":"가용"}</small></label>)}</section>
     <label className="empire-field">지원 종류<select aria-label="지원 종류" value={support} onChange={e=>setSupport(e.target.value as Support)}>{SUPPORTS.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}</select></label>

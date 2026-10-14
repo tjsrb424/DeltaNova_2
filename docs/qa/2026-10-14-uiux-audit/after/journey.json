@@ -1,0 +1,9 @@
+{
+  "headless": true,
+  "personalSortie": true,
+  "return": true,
+  "researchReportLink": true,
+  "repairNeeded": true,
+  "repairExecuted": true,
+  "guildAndPracticeNavigation": true
+}

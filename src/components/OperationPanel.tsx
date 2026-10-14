@@ -120,7 +120,7 @@ export default function OperationPanel({
           ))}
         </div>
       </section>
-      <aside className="panel decision-panel">
+      <aside className="panel decision-panel" tabIndex={-1}>
         {op.phase === "checkpoint" ? (
           <>
             <span className="eyebrow">DECISION POINT</span>

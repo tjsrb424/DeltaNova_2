@@ -38,8 +38,8 @@ export default function PlanetActionPanel({state,planet:p,mode,locked,send,targe
     {mode==="shipyard"?<>
       <div className="empire-ship-preview"><ShipGlyph role={ship.role} color="#e7e5db"/><div><strong>{ship.name}</strong><span>기본 선체 HP {ship.hp} · 화물 {ship.cargo}</span></div></div>
       <label className="empire-field">건조 함선<select aria-label="건조 함선" value={shipId} onChange={e=>selectTarget(e.target.value)}>{SHIPS.map(s=><option value={s.id} key={s.id}>{s.name}</option>)}</select></label>
-      <p className="action-description">{ship.description}</p>
       <div className="quantity-control"><span>건조 수량</span><button aria-label="건조 수량 줄이기" disabled={quantity<=1} onClick={()=>setQuantity(Math.max(1,quantity-1))}>−</button><input aria-label="건조 수량" type="number" min={1} max={20} step={1} value={quantity} onChange={e=>setQuantity(Number(e.target.value))}/><button aria-label="건조 수량 늘리기" disabled={quantity>=20} onClick={()=>setQuantity(Math.min(20,quantity+1))}>+</button></div>
+      <p className="action-description">{ship.description}</p>
       <p className="build-requirement">조선소 {def.shipyard}{def.technology?" · "+TECHNOLOGY_NAMES[def.technology]+" "+(def.level||1):""}</p>
     </>:mode==="construction"?<>
       <div className="growth-preview"><FacilityArt facility={facility}/><strong>Lv.{p.facilities[facility]} → Lv.{Math.min(5,p.facilities[facility]+1)}</strong></div><FacilityEffects state={state} planet={p} facility={facility}/>

@@ -1,0 +1,1106 @@
+[
+  {
+    "name": "audit-대시보드-1672",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 622.734375,
+        "cellRight": 831.421875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 939.015625,
+        "cellRight": 1147.703125
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 1255.296875,
+        "cellRight": 1464
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1563.484375,
+        "cellRight": 1562
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 1649.21875,
+        "cellRight": 1654
+      }
+    ]
+  },
+  {
+    "name": "audit-건설-1672",
+    "scroll": 0,
+    "heading": "건설 상세",
+    "headingVisible": true,
+    "button": "합금 광산 증설",
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 622.734375,
+        "cellRight": 831.421875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 939.015625,
+        "cellRight": 1147.703125
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 1255.296875,
+        "cellRight": 1464
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1563.484375,
+        "cellRight": 1562
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 1649.21875,
+        "cellRight": 1654
+      }
+    ]
+  },
+  {
+    "name": "audit-함대-1672",
+    "scroll": 0,
+    "heading": "함대 운영·건조",
+    "headingVisible": true,
+    "button": "케스트럴 건조",
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 622.734375,
+        "cellRight": 831.421875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 939.015625,
+        "cellRight": 1147.703125
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 1255.296875,
+        "cellRight": 1464
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1563.484375,
+        "cellRight": 1562
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 1649.21875,
+        "cellRight": 1654
+      }
+    ]
+  },
+  {
+    "name": "audit-연구-1672",
+    "scroll": 0,
+    "heading": "다음 함선 건조까지의 성장 조건",
+    "headingVisible": true,
+    "button": "산업 기술 연구",
+    "actionVisible": false,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 622.734375,
+        "cellRight": 831.421875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 939.015625,
+        "cellRight": 1147.703125
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 1255.296875,
+        "cellRight": 1464
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1563.484375,
+        "cellRight": 1562
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 1649.21875,
+        "cellRight": 1654
+      }
+    ]
+  },
+  {
+    "name": "audit-개인 작전-1672",
+    "scroll": 0,
+    "heading": "개인 작전",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 622.734375,
+        "cellRight": 831.421875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 939.015625,
+        "cellRight": 1147.703125
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 1255.296875,
+        "cellRight": 1464
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1563.484375,
+        "cellRight": 1562
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 1649.21875,
+        "cellRight": 1654
+      }
+    ]
+  },
+  {
+    "name": "audit-보고서-1672",
+    "scroll": 0,
+    "heading": "기지 보고서",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 622.734375,
+        "cellRight": 831.421875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 939.015625,
+        "cellRight": 1147.703125
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 1255.296875,
+        "cellRight": 1464
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1563.484375,
+        "cellRight": 1562
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 1649.21875,
+        "cellRight": 1654
+      }
+    ]
+  },
+  {
+    "name": "audit-return-1672",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 622.734375,
+        "cellRight": 831.421875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 939.015625,
+        "cellRight": 1147.703125
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 1255.296875,
+        "cellRight": 1464
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1563.484375,
+        "cellRight": 1562
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 1649.21875,
+        "cellRight": 1654
+      }
+    ]
+  },
+  {
+    "name": "audit-대시보드-1100",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 409.09375,
+        "cellRight": 517
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 612.59375,
+        "cellRight": 720.5
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 816.09375,
+        "cellRight": 924
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1019.484375,
+        "cellRight": 1008
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": false,
+        "textRight": 1091.21875,
+        "cellRight": 1086
+      }
+    ]
+  },
+  {
+    "name": "audit-건설-1100",
+    "scroll": 0,
+    "heading": "건설 상세",
+    "headingVisible": true,
+    "button": "합금 광산 증설",
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 409.09375,
+        "cellRight": 517
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 612.59375,
+        "cellRight": 720.5
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 816.09375,
+        "cellRight": 924
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1019.484375,
+        "cellRight": 1008
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": false,
+        "textRight": 1091.21875,
+        "cellRight": 1086
+      }
+    ]
+  },
+  {
+    "name": "audit-함대-1100",
+    "scroll": 0,
+    "heading": "함대 운영·건조",
+    "headingVisible": true,
+    "button": "케스트럴 건조",
+    "actionVisible": false,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 409.09375,
+        "cellRight": 517
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 612.59375,
+        "cellRight": 720.5
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 816.09375,
+        "cellRight": 924
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1019.484375,
+        "cellRight": 1008
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": false,
+        "textRight": 1091.21875,
+        "cellRight": 1086
+      }
+    ]
+  },
+  {
+    "name": "audit-연구-1100",
+    "scroll": 0,
+    "heading": "다음 함선 건조까지의 성장 조건",
+    "headingVisible": true,
+    "button": "산업 기술 연구",
+    "actionVisible": false,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 409.09375,
+        "cellRight": 517
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 612.59375,
+        "cellRight": 720.5
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 816.09375,
+        "cellRight": 924
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1019.484375,
+        "cellRight": 1008
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": false,
+        "textRight": 1091.21875,
+        "cellRight": 1086
+      }
+    ]
+  },
+  {
+    "name": "audit-개인 작전-1100",
+    "scroll": 0,
+    "heading": "개인 작전",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 409.09375,
+        "cellRight": 517
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 612.59375,
+        "cellRight": 720.5
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 816.09375,
+        "cellRight": 924
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1019.484375,
+        "cellRight": 1008
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": false,
+        "textRight": 1091.21875,
+        "cellRight": 1086
+      }
+    ]
+  },
+  {
+    "name": "audit-보고서-1100",
+    "scroll": 0,
+    "heading": "기지 보고서",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 409.09375,
+        "cellRight": 517
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 612.59375,
+        "cellRight": 720.5
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 816.09375,
+        "cellRight": 924
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1019.484375,
+        "cellRight": 1008
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": false,
+        "textRight": 1091.21875,
+        "cellRight": 1086
+      }
+    ]
+  },
+  {
+    "name": "audit-return-1100",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 409.09375,
+        "cellRight": 517
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 612.59375,
+        "cellRight": 720.5
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 816.09375,
+        "cellRight": 924
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 1019.484375,
+        "cellRight": 1008
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": false,
+        "textRight": 1091.21875,
+        "cellRight": 1086
+      }
+    ]
+  },
+  {
+    "name": "audit-대시보드-900",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 361.375,
+        "cellRight": 428.5
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 520.625,
+        "cellRight": 587.75
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 679.875,
+        "cellRight": 747
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 835.578125,
+        "cellRight": 818
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 878.21875,
+        "cellRight": 886
+      }
+    ]
+  },
+  {
+    "name": "audit-건설-900",
+    "scroll": 0,
+    "heading": "건설 상세",
+    "headingVisible": true,
+    "button": "합금 광산 증설",
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 361.375,
+        "cellRight": 428.5
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 520.625,
+        "cellRight": 587.75
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 679.875,
+        "cellRight": 747
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 835.578125,
+        "cellRight": 818
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 878.21875,
+        "cellRight": 886
+      }
+    ]
+  },
+  {
+    "name": "audit-함대-900",
+    "scroll": 0,
+    "heading": "함대 운영·건조",
+    "headingVisible": true,
+    "button": "케스트럴 건조",
+    "actionVisible": false,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 361.375,
+        "cellRight": 428.5
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 520.625,
+        "cellRight": 587.75
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 679.875,
+        "cellRight": 747
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 835.578125,
+        "cellRight": 818
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 878.21875,
+        "cellRight": 886
+      }
+    ]
+  },
+  {
+    "name": "audit-연구-900",
+    "scroll": 0,
+    "heading": "다음 함선 건조까지의 성장 조건",
+    "headingVisible": true,
+    "button": "산업 기술 연구",
+    "actionVisible": false,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 361.375,
+        "cellRight": 428.5
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 520.625,
+        "cellRight": 587.75
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 679.875,
+        "cellRight": 747
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 835.578125,
+        "cellRight": 818
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 878.21875,
+        "cellRight": 886
+      }
+    ]
+  },
+  {
+    "name": "audit-개인 작전-900",
+    "scroll": 0,
+    "heading": "개인 작전",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 361.375,
+        "cellRight": 428.5
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 520.625,
+        "cellRight": 587.75
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 679.875,
+        "cellRight": 747
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 835.578125,
+        "cellRight": 818
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 878.21875,
+        "cellRight": 886
+      }
+    ]
+  },
+  {
+    "name": "audit-보고서-900",
+    "scroll": 0,
+    "heading": "기지 보고서",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 361.375,
+        "cellRight": 428.5
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 520.625,
+        "cellRight": 587.75
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 679.875,
+        "cellRight": 747
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 835.578125,
+        "cellRight": 818
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 878.21875,
+        "cellRight": 886
+      }
+    ]
+  },
+  {
+    "name": "audit-return-900",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 361.375,
+        "cellRight": 428.5
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 520.625,
+        "cellRight": 587.75
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 679.875,
+        "cellRight": 747
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": false,
+        "textRight": 835.578125,
+        "cellRight": 818
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 878.21875,
+        "cellRight": 886
+      }
+    ]
+  },
+  {
+    "name": "audit-대시보드-390",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 61.875,
+        "cellRight": 79.1875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 137.0625,
+        "cellRight": 154.390625
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 212.265625,
+        "cellRight": 229.59375
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": true,
+        "textRight": 284.046875,
+        "cellRight": 304.796875
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 354.3125,
+        "cellRight": 379.984375
+      }
+    ]
+  },
+  {
+    "name": "audit-건설-390",
+    "scroll": 0,
+    "heading": "건설 상세",
+    "headingVisible": true,
+    "button": "합금 광산 증설",
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 61.875,
+        "cellRight": 79.1875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 137.0625,
+        "cellRight": 154.390625
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 212.265625,
+        "cellRight": 229.59375
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": true,
+        "textRight": 284.046875,
+        "cellRight": 304.796875
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 354.3125,
+        "cellRight": 379.984375
+      }
+    ]
+  },
+  {
+    "name": "audit-함대-390",
+    "scroll": 0,
+    "heading": "함대 운영·건조",
+    "headingVisible": true,
+    "button": "케스트럴 건조",
+    "actionVisible": false,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 61.875,
+        "cellRight": 79.1875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 137.0625,
+        "cellRight": 154.390625
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 212.265625,
+        "cellRight": 229.59375
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": true,
+        "textRight": 284.046875,
+        "cellRight": 304.796875
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 354.3125,
+        "cellRight": 379.984375
+      }
+    ]
+  },
+  {
+    "name": "audit-연구-390",
+    "scroll": 0,
+    "heading": "다음 함선 건조까지의 성장 조건",
+    "headingVisible": true,
+    "button": "산업 기술 연구",
+    "actionVisible": false,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 61.875,
+        "cellRight": 79.1875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 137.0625,
+        "cellRight": 154.390625
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 212.265625,
+        "cellRight": 229.59375
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": true,
+        "textRight": 284.046875,
+        "cellRight": 304.796875
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 354.3125,
+        "cellRight": 379.984375
+      }
+    ]
+  },
+  {
+    "name": "audit-개인 작전-390",
+    "scroll": 0,
+    "heading": "개인 작전",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 61.875,
+        "cellRight": 79.1875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 137.0625,
+        "cellRight": 154.390625
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 212.265625,
+        "cellRight": 229.59375
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": true,
+        "textRight": 284.046875,
+        "cellRight": 304.796875
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 354.3125,
+        "cellRight": 379.984375
+      }
+    ]
+  },
+  {
+    "name": "audit-보고서-390",
+    "scroll": 0,
+    "heading": "기지 보고서",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 61.875,
+        "cellRight": 79.1875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 137.0625,
+        "cellRight": 154.390625
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 212.265625,
+        "cellRight": 229.59375
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": true,
+        "textRight": 284.046875,
+        "cellRight": 304.796875
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 354.3125,
+        "cellRight": 379.984375
+      }
+    ]
+  },
+  {
+    "name": "audit-return-390",
+    "scroll": 0,
+    "heading": "행성 개발 현황",
+    "headingVisible": true,
+    "actionVisible": true,
+    "hud": [
+      {
+        "name": "합금280 / 400+13/분",
+        "fits": true,
+        "textRight": 61.875,
+        "cellRight": 79.1875
+      },
+      {
+        "name": "결정140 / 200+5/분",
+        "fits": true,
+        "textRight": 137.0625,
+        "cellRight": 154.390625
+      },
+      {
+        "name": "연료120 / 150+5/분",
+        "fits": true,
+        "textRight": 212.265625,
+        "cellRight": 229.59375
+      },
+      {
+        "name": "ϟ전력36 / 60여유 24",
+        "fits": true,
+        "textRight": 284.046875,
+        "cellRight": 304.796875
+      },
+      {
+        "name": "시설 공간8 / 30",
+        "fits": true,
+        "textRight": 354.3125,
+        "cellRight": 379.984375
+      }
+    ]
+  }
+]
