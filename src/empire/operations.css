@@ -1,4 +1,4 @@
-/* Approved operations board: ceramic workspace, graphite navigation, cyan actions. */
+/* Ceramic operations board. Planet-management flow follows the approved Stellaris reference. */
 .empire-shell{--teal:#087d85;--ink:#17272e;--panel:#fffefa;--border:#d9dcd6;--quiet:#647179;color-scheme:light;background:#f2f1ec;color:#1b2932;grid-template-columns:156px minmax(0,1fr)}
 .empire-shell button:focus-visible,.empire-shell input:focus-visible,.empire-shell select:focus-visible,.empire-shell summary:focus-visible{outline:3px solid #087d85;outline-offset:3px}
 .empire-shell button:hover:not(:disabled){background:#e4efec;border-color:#709795}
@@ -142,3 +142,120 @@
 @media(max-width:1350px){.empire-shell{grid-template-columns:136px minmax(0,1fr)}.empire-shell .empire-workspace{padding:14px 16px}.empire-shell .empire-hud{gap:12px;grid-template-columns:minmax(160px,1.2fr) repeat(3,minmax(108px,1fr)) 88px 85px}.empire-shell .hud-resource{gap:7px}.empire-shell .hud-context strong{font-size:17px}.empire-shell .hud-resource strong{font-size:17px}.overview-columns,.detail-columns{grid-template-columns:minmax(0,1fr) 320px}.facility-summary-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.facility-summary-grid button:nth-child(3){border:0}.facility-catalog{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-layout{grid-template-columns:minmax(0,1fr) 260px}.atlas-map{padding:15px;gap:18px 24px}.atlas-branch:after{width:24px;right:-24px}.growth-node .facility-art{width:56px;height:56px}.growth-node strong{font-size:14px}}
 @media(max-width:1050px){.empire-shell .empire-hud{grid-template-columns:repeat(3,minmax(0,1fr))}.empire-shell .hud-context{grid-column:1/-1}.overview-columns,.detail-columns{grid-template-columns:minmax(0,1fr)}.outcome-card{grid-template-columns:1fr;padding:14px;gap:5px}.outcome-art{display:none}.outcome-value{font-size:23px}.atlas-layout{grid-template-columns:minmax(0,1fr)}.atlas-inspector{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}.atlas-inspector h3{grid-column:1/-1}.atlas-inspector ol{grid-row:span 3}.atlas-inspector>p{margin-top:0!important}.facility-catalog{grid-template-columns:repeat(3,minmax(0,1fr))}.empire-shell .growth-node strong{font-size:17px}}
 @media(max-width:660px){.empire-shell{grid-template-columns:minmax(0,1fr)}.empire-shell .planet-nav{position:static;height:auto;min-height:0;padding:12px;display:block}.empire-shell .empire-brand{flex-direction:row;align-items:center;padding:0;margin:0 0 12px;gap:12px}.empire-shell .empire-brand strong{font-size:13px;letter-spacing:2px}.empire-shell .empire-brand br{display:none}.empire-shell .empire-brand>span{order:0;font-size:26px}.empire-shell .planet-navigation button{min-height:38px;font-size:12px;padding:8px;gap:6px}.empire-shell .nav-secondary{padding-top:5px}.empire-shell .empire-workspace{padding:12px}.empire-shell .empire-hud{gap:14px 9px}.empire-shell .hud-resource strong,.empire-shell .hud-power strong,.hud-space strong{font-size:15px}.empire-shell .hud-resource strong small{font-size:11px}.empire-shell .hud-resource .resource-crystal{width:18px;height:22px}.empire-shell .hud-power>span{font-size:30px}.empire-shell .hud-space{gap:6px}.empire-shell .guild-connection{padding:6px 0}.page-heading h1{font-size:24px}.overview-planet-picker{max-width:48%}.page-readiness{font-size:10px;gap:10px 13px}.overview-section-heading{display:block}.overview-section-heading h2{font-size:20px}.overview-section-heading>span{display:block;margin-top:5px}.outcome-grid{grid-template-columns:1fr}.outcome-card{grid-template-columns:60px 1fr;min-height:0;padding:15px}.outcome-art{display:flex}.outcome-value{font-size:23px}.empire-shell .empire-card{padding:16px}.power-margin{flex-wrap:wrap;gap:10px}.power-margin small{margin-left:0}.facility-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.facility-summary-grid button{border:0}.facility-summary-grid .facility-art{width:53px;height:53px}.facility-catalog{grid-template-columns:repeat(2,minmax(0,1fr))}.facility-catalog .facility-art{width:105px;height:105px}.technology-catalog{grid-template-columns:1fr}.atlas-heading{display:grid;gap:14px}.atlas-heading h2{font-size:18px}.atlas-heading select{width:100%}.development-atlas{padding:16px}.atlas-map{grid-template-columns:1fr;padding:13px}.technology-branch,.shipyard-branch{grid-column:1;grid-row:auto}.growth-goal{grid-column:1;grid-row:auto}.atlas-branch:after{display:none}.atlas-inspector{display:block}.atlas-inspector>p{margin-top:12px!important}.atlas-legend{grid-column:1}.growth-goal .ship-glyph{height:95px;margin:0}.connect-landing{padding:25px!important;min-height:360px}.connect-landing h1{font-size:27px}}
+
+/* Keep navigation/resources in place; each category scrolls within its own workspace. */
+.empire-shell{height:100dvh;min-height:0;overflow:hidden;grid-template-columns:132px minmax(0,1fr)}
+.empire-shell [hidden]{display:none!important}
+.empire-shell .planet-nav{position:static;height:100%;min-height:0;padding:18px 8px 12px;overflow-y:auto}
+.empire-shell .empire-brand{flex-direction:row;align-items:center;gap:8px;padding:0 8px;margin-bottom:22px}
+.empire-shell .empire-brand>span{order:0;font-size:34px}.empire-shell .empire-brand strong{font-size:13px;letter-spacing:2px}
+.empire-shell .planet-navigation{gap:4px}.empire-shell .planet-navigation button{min-height:44px;font-size:13px;padding:10px;gap:9px}
+.empire-shell .nav-secondary{padding-top:20px}
+.empire-shell .empire-workspace{display:flex;flex-direction:column;height:100%;min-height:0;padding:12px 18px;max-width:none}
+.empire-shell .empire-hud{flex-shrink:0;grid-template-columns:minmax(160px,1.2fr) repeat(3,minmax(108px,1fr)) 86px 80px;gap:12px;min-height:66px;padding:0 0 10px}
+.empire-shell .hud-context{grid-column:auto;padding:0;gap:10px}.empire-shell .hud-context h1{font-size:20px}.empire-shell .hud-context>div{gap:3px}
+.empire-shell .hud-context .planet-thumbnail{width:36px;height:36px}.empire-shell .hud-resource,.empire-shell .hud-power,.empire-shell .hud-space{gap:7px}
+.empire-shell .hud-resource strong,.empire-shell .hud-power strong,.empire-shell .hud-space strong{font-size:17px}
+.empire-shell .hud-resource strong small{font-size:12px}.empire-shell .hud-resource em,.empire-shell .hud-power em{font-size:11px}
+.empire-shell .hud-space strong,.empire-shell .hud-space>div>span{white-space:nowrap}.empire-shell .hud-space .empire-icon{width:16px}
+.empire-shell .empire-connection{flex-shrink:0;margin:0}
+.connection-toolbar{display:flex;align-items:center;gap:14px;min-height:38px;border-bottom:1px solid var(--border);font-size:11px}
+.connection-state{display:flex;align-items:center;gap:6px;color:#207766;white-space:nowrap}.connection-state i{width:6px;height:6px;background:currentColor;border-radius:50%}
+.connection-state.attention{color:#a95425}.connection-toolbar .connection-freshness{margin-left:auto;font-size:10px;padding:0}
+.empire-shell .connection-toolbar .text-button{min-height:36px;padding:7px 2px;font-size:11px}
+.empire-shell .empire-connection .guild-notice:not(:empty){padding:5px 8px;margin:0;font-size:11px}
+.empire-shell .guild-connection{flex-wrap:wrap}.empire-shell .guild-connection .pilot-controls{flex-wrap:wrap}
+.empire-shell .empire-main{display:flex;flex-direction:column;flex:1;min-height:0;gap:0;align-items:stretch}
+.page-readiness{flex-shrink:0;margin:0 0 12px;padding:7px 0;gap:8px 16px;border-top:0;font-size:11px}
+.overview-planet-picker button{min-height:34px;padding:4px 7px}.overview-planet-picker .planet-thumbnail{width:22px;height:22px}
+.management-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:16px;min-height:0;flex:1;width:100%}
+.management-layout.without-queue{grid-template-columns:minmax(0,1fr)}
+.management-content{min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 5px 2px 0;scrollbar-gutter:stable;container-type:size;container-name:planet-workspace}
+.work-queue{min-width:0;min-height:0;overflow:auto;scrollbar-gutter:stable}
+.empire-shell .empire-jobs{margin:0;padding:15px}.empire-shell .empire-jobs .empire-heading{margin-bottom:10px}
+.empire-jobs .empire-heading h2{font-size:16px}.empire-jobs h2 small{font-size:11px;font-weight:400;color:var(--quiet);margin-left:5px}
+.empire-shell .queue-toggle{font-size:11px;min-height:34px;white-space:nowrap}
+.queue-scope{display:flex;justify-content:space-between;gap:8px;align-items:center;font-size:10px;color:var(--quiet);margin-bottom:8px}
+.queue-scope .quiet-action{min-height:32px;white-space:nowrap}
+.empire-shell .empire-job{grid-template-columns:20px minmax(0,1fr) 58px;gap:8px;padding:13px 0}
+.empire-shell .job-progress{grid-column:2;grid-row:2}.empire-shell .empire-job time{grid-column:3;grid-row:1;font-size:11px}
+.empire-shell .empire-job>.quiet-action{grid-column:3;grid-row:2;min-height:32px;text-align:right}
+.job-description{min-width:0}.empire-shell .job-inspect{font-size:12px;font-weight:600;text-align:left;border:0;padding:4px 0;color:#286b71;line-height:1.6;min-height:32px}
+.empire-shell .job-refund{grid-column:1/-1}.empire-shell .job-refund .empire-secondary{min-height:44px}
+.section-kicker{font-size:9px;letter-spacing:1.4px;color:#718582;margin-bottom:4px!important}
+.construction-page{height:100%;min-height:0;display:flex;flex-direction:column}
+.detail-title{flex-shrink:0;margin-bottom:12px;gap:10px}.detail-title h2{font-size:21px}
+.mode-tabs button{min-height:38px;padding:7px 12px;font-size:12px}
+.construction-columns{grid-template-columns:minmax(230px,.85fr) minmax(300px,1.15fr);flex:1;min-height:0;gap:14px;align-items:stretch}
+.construction-library{display:flex;flex-direction:column;min-height:0;min-width:0;background:var(--panel);border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.catalog-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--border);font-size:12px;font-weight:600;flex-shrink:0}
+.catalog-heading small{font-size:10px;font-weight:400;color:var(--quiet)}
+.facility-catalog{display:flex;flex-direction:column;gap:0;overflow-y:auto;min-height:0;padding:4px}
+.facility-catalog button{display:flex;justify-items:normal;align-items:center;text-align:left;gap:10px;padding:9px 10px;border:1px solid transparent;border-radius:4px;min-height:76px;flex-shrink:0}
+.facility-catalog .facility-art{width:54px;height:54px}.facility-catalog span:not(.facility-art){font-size:13px;line-height:1.5;min-width:0}
+.facility-catalog strong{display:inline;font-size:12px;font-weight:500;margin:0 0 0 7px;color:#718385}
+.facility-catalog small{font-size:10px;margin-top:4px}.facility-catalog .catalog-arrow{margin-left:auto;color:#688884;font-size:22px!important}
+.facility-catalog .selected{box-shadow:inset 3px 0 #178389;background:#eaf3ee}
+.empire-shell .empire-action{display:flex;flex-direction:column;min-height:0;min-width:0;padding:16px;animation:none}
+.empire-shell .empire-action .empire-heading{flex-shrink:0;margin-bottom:10px}.empire-shell .empire-action h2{font-size:18px}
+.construction-columns .empire-action{height:100%;overflow:hidden}
+.detail-columns>.empire-action{grid-column:auto;grid-row:auto}
+.action-body{min-height:0;overflow:auto;scrollbar-gutter:stable}.construction-columns .action-body{flex:1}
+.empire-shell .action-source{margin:0 0 10px!important;font-size:11px}.empire-shell .empire-field{margin-bottom:10px;gap:5px}
+.empire-shell .empire-field select{min-height:38px;padding:8px}
+.empire-shell .growth-preview{min-height:64px;gap:16px;margin:8px 0 12px}.growth-preview .facility-art{width:70px;height:70px}.empire-shell .growth-preview strong{font-size:20px}
+.facility-effects caption{text-align:left;font-size:12px;font-weight:600;padding:0 0 8px;color:#276b6c}
+.empire-shell .facility-effects th,.empire-shell .facility-effects td{padding:9px 5px;font-size:12px}.empire-shell .facility-effects th{font-weight:400;color:#657777}
+.empire-shell .facility-effects td{text-align:right;font-weight:600;color:#234448}.facility-effects p{font-size:10px;line-height:1.7;color:#71817d;margin:8px 0!important}
+.action-commit{flex-shrink:0;border-top:1px solid var(--border);padding-top:10px;margin-top:8px;background:var(--panel)}
+.action-pricing{display:grid;grid-template-columns:minmax(0,1fr) 94px;align-items:center;gap:12px;margin-bottom:10px}
+.empire-shell .action-pricing .empire-cost{border:0;padding:0}.empire-shell .action-pricing .empire-cost>div{gap:6px}.empire-shell .action-pricing .empire-cost strong{font-size:16px}
+.empire-shell .action-pricing .action-time{display:grid;grid-template-columns:18px 1fr;gap:3px 6px;padding:0;font-size:10px;border-left:1px solid var(--border);padding-left:12px}
+.action-pricing .action-time .empire-icon{grid-row:span 2;width:16px}.action-pricing .action-time strong{font-size:12px;margin-left:0}
+.empire-shell .action-commit .action-footnote{margin-top:6px!important;font-size:10px;line-height:1.5}.empire-shell .action-commit .action-reason{font-size:11px;margin-bottom:8px!important}
+.empire-shell .action-commit .empire-primary{min-height:44px;padding:10px 12px;font-size:14px}
+.overview-columns{grid-template-columns:minmax(0,1fr) 300px}.outcome-card{min-height:140px;padding:14px;grid-template-columns:54px minmax(0,1fr)}
+.outcome-value{font-size:22px}.outcome-card.idle .outcome-value{font-size:17px}.overview-board{gap:14px}.overview-section-heading h2{font-size:20px}
+.empire-shell .operations-ledger th,.empire-shell .operations-ledger td{padding:13px 8px;font-size:12px}.operations-ledger tbody td:nth-child(2){font-size:15px}
+@media(max-width:1490px){.overview-columns{grid-template-columns:minmax(0,1fr)}.next-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.next-actions>.empire-heading{grid-column:1/-1;margin-bottom:0}.next-actions article{flex-wrap:wrap;padding:12px 0;gap:8px}.next-actions article>div{flex-basis:calc(100% - 46px)}.next-actions article>button{margin-left:42px}.outcome-art{display:none}.outcome-card{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:1199px){
+  .empire-shell{grid-template-columns:104px minmax(0,1fr)}.empire-shell .empire-workspace{padding:10px 14px}.empire-shell .empire-brand{padding:0 3px;gap:5px}.empire-shell .empire-brand strong{font-size:10px;letter-spacing:1px}.empire-shell .empire-brand>span{font-size:26px}.empire-shell .planet-navigation button{gap:7px;padding:9px 7px;font-size:12px}.empire-shell .planet-navigation .empire-icon{width:19px}
+  .empire-shell .empire-hud{grid-template-columns:minmax(140px,1fr) repeat(3,minmax(0,1fr)) 76px 70px;gap:8px}.empire-shell .hud-resource .resource-crystal{width:18px;height:22px}
+  .management-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);gap:10px}.management-layout.without-queue{grid-template-rows:minmax(0,1fr)}
+  .work-queue{grid-row:1}.management-content{grid-row:2;padding-right:2px}.without-queue .management-content{grid-row:1}
+  .empire-shell .empire-jobs{padding:4px 12px}.empire-shell .empire-jobs .empire-heading{margin:0}.empire-shell .queue-body{max-height:150px;overflow:auto}.queue-scope{margin:0}.empire-shell .empire-job{padding:8px 0}
+  .overview-columns{grid-template-columns:minmax(0,1fr) 300px}.next-actions{display:block}.next-actions article{flex-wrap:nowrap}.next-actions article>button{margin-left:0}
+}
+@media(max-width:900px){.empire-shell .empire-hud{grid-template-columns:minmax(120px,1fr) repeat(3,minmax(0,1fr)) 63px 60px}.empire-shell .hud-context .planet-thumbnail{display:none}.empire-shell .hud-context h1{font-size:17px}.empire-shell .hud-resource strong,.empire-shell .hud-power strong,.empire-shell .hud-space strong{font-size:15px}.empire-shell .hud-space .empire-icon{display:none}.overview-columns{grid-template-columns:minmax(0,1fr)}.next-actions{display:grid;grid-template-columns:1fr}.construction-columns{grid-template-columns:minmax(190px,.8fr) minmax(280px,1.2fr)}.facility-catalog .facility-art{width:42px;height:42px}.facility-catalog button{gap:7px;padding:8px 6px}.catalog-heading small{display:none}.mode-tabs button{padding:7px 9px}}
+@media(max-width:720px){
+  .empire-shell{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}.empire-shell .planet-nav{height:auto;display:flex;flex-direction:row;padding:6px;gap:6px;overflow:hidden;border-bottom:1px solid #344349}.empire-shell .empire-brand{display:none}.empire-shell .planet-navigation{display:flex;min-width:0;overflow-x:auto;gap:3px}.empire-shell .planet-navigation button{flex-shrink:0;min-width:max-content;min-height:42px;padding:9px}.empire-shell .nav-secondary{padding:0;margin:0;flex-shrink:0;max-width:88px}.empire-shell .nav-secondary p{display:none}
+  .empire-shell .empire-workspace{padding:8px 10px}.empire-shell .empire-hud{grid-template-columns:repeat(5,minmax(0,1fr));min-height:0;gap:8px 6px;padding:0 0 8px}.empire-shell .hud-context{grid-column:1/-1}.empire-shell .hud-context>div{display:flex;align-items:baseline;gap:10px}.empire-shell .hud-context h1{font-size:18px}.empire-shell .hud-context .planet-thumbnail{display:block;width:25px;height:25px}
+  .empire-shell .hud-resource .resource-crystal,.empire-shell .hud-power>span{display:none}.empire-shell .hud-resource,.empire-shell .hud-power,.empire-shell .hud-space{gap:0}.empire-shell .hud-resource>div>span,.empire-shell .hud-power>div>span,.empire-shell .hud-space>div>span{font-size:10px}.empire-shell .hud-resource strong,.empire-shell .hud-power strong,.empire-shell .hud-space strong{font-size:14px}.empire-shell .hud-resource strong small{font-size:10px}.empire-shell .hud-resource em,.empire-shell .hud-power em{font-size:10px}
+  .connection-toolbar{gap:10px;min-height:34px;font-size:10px}.connection-toolbar .connection-freshness{display:none}.connection-toolbar .connection-state{margin-right:auto}.empire-shell .connection-toolbar .text-button{min-height:34px;font-size:10px}
+  .page-readiness{gap:6px 10px;margin-bottom:8px;font-size:10px}.page-readiness>span:nth-child(2),.page-readiness>span:nth-child(5),.page-readiness>span:nth-child(6){display:none}.page-readiness .operation-status{font-size:10px}.overview-planet-picker{max-width:45%}.overview-planet-picker button{min-height:32px;font-size:10px}.overview-planet-picker small{display:none}.overview-planet-picker .planet-thumbnail{width:18px;height:18px}
+  .management-layout{gap:8px}.empire-shell .empire-jobs{padding:2px 10px}.empire-jobs .empire-heading h2{font-size:13px}.empire-shell .queue-toggle{min-height:32px}
+  .detail-title{margin-bottom:8px;align-items:center}.detail-title h2{font-size:17px}.section-kicker{display:none}.mode-tabs{gap:4px}.mode-tabs button{font-size:11px;padding:7px;min-height:36px}
+  .construction-columns{grid-template-columns:minmax(0,1fr);grid-template-rows:84px minmax(0,1fr);gap:8px}.catalog-heading{display:none}.construction-library{border:0;background:transparent}.facility-catalog{flex-direction:row;overflow-x:auto;overflow-y:hidden;padding:3px 2px;gap:6px}.facility-catalog button{width:174px;min-height:68px;padding:7px;background:var(--panel);border-color:var(--border)}.facility-catalog .catalog-arrow{display:none}.facility-catalog .facility-art{width:44px;height:44px}.facility-catalog span:not(.facility-art){font-size:12px}.facility-catalog strong{display:block;font-size:11px;margin:2px 0}.facility-catalog small{font-size:10px;margin-top:0}
+  .empire-shell .empire-action{padding:12px}.empire-shell .empire-action h2{font-size:16px}.empire-shell .empire-action .empire-heading{margin-bottom:6px}.action-commit{padding-top:8px;margin-top:6px}.action-pricing{gap:8px;margin-bottom:8px;grid-template-columns:minmax(0,1fr) 88px}.empire-shell .action-pricing .empire-cost>div{gap:4px}.empire-shell .action-pricing .resource-crystal{width:14px;height:18px}.empire-shell .action-pricing .empire-cost strong{font-size:14px}.empire-shell .action-commit .action-footnote{font-size:9px}
+  .outcome-grid{grid-template-columns:minmax(0,1fr)}.outcome-card{min-height:0;grid-template-columns:44px minmax(0,1fr);padding:12px}.outcome-art{display:flex}.outcome-value{font-size:22px}.outcome-card footer{padding-top:6px}.overview-columns{grid-template-columns:minmax(0,1fr)}.next-actions{display:block}.empire-shell .empire-card:not(.empire-action):not(.empire-jobs){padding:14px}
+}
+.empire-shell .planet-navigation button{white-space:nowrap}.empire-shell .action-body:focus-visible{outline:2px solid #087d85;outline-offset:-2px}
+@media(max-width:720px){.empire-shell .planet-navigation{scrollbar-width:none}}
+@media(max-height:750px){.construction-columns .growth-preview,.construction-columns .action-source{display:none}.empire-shell .facility-effects th,.empire-shell .facility-effects td{padding:7px 5px}}
+@media(max-width:720px) and (max-height:750px){.construction-columns{grid-template-rows:54px minmax(0,1fr)}.facility-catalog{scrollbar-width:none}.facility-catalog button{min-height:46px;height:46px}.facility-catalog .facility-art{width:32px;height:32px}.facility-catalog small{display:none}.facility-catalog strong{display:inline;margin-left:4px}}
+@media(max-height:750px){
+  .construction-page{height:auto;min-height:100%}.construction-columns{flex:none;align-items:start}
+  .construction-library{max-height:calc(100dvh - 280px)}.construction-columns .empire-action{height:auto;overflow:visible}
+  .construction-columns .action-body{flex:none;overflow:visible}.construction-columns .action-commit{position:sticky;bottom:0;z-index:1;box-shadow:0 -8px 12px #fffefa}
+}
+@media(max-width:1199px){
+  .empire-shell:has(.queue-expanded) .construction-page,.empire-shell:has(.guild-connection:not([hidden])) .construction-page{height:auto;min-height:100%}
+  .empire-shell:has(.queue-expanded) .construction-columns,.empire-shell:has(.guild-connection:not([hidden])) .construction-columns{flex:none;align-items:start}
+  .empire-shell:has(.queue-expanded) .construction-columns .empire-action,.empire-shell:has(.guild-connection:not([hidden])) .construction-columns .empire-action{height:auto;overflow:visible}
+  .empire-shell:has(.queue-expanded) .construction-columns .action-body,.empire-shell:has(.guild-connection:not([hidden])) .construction-columns .action-body{flex:none;overflow:visible}
+  .empire-shell:has(.queue-expanded) .construction-columns .action-commit,.empire-shell:has(.guild-connection:not([hidden])) .construction-columns .action-commit{position:sticky;bottom:0;z-index:1;box-shadow:0 -8px 12px #fffefa}
+}
+/* Expanded utilities can leave less room than the commit footer itself. Never cover the effects. */
+@container planet-workspace (height < 260px){.construction-columns .action-commit{position:static!important;box-shadow:none!important}}
+@media(max-height:540px){.empire-shell{height:auto;min-height:100dvh;overflow:visible}.empire-shell .empire-workspace{height:auto}.management-content,.work-queue{overflow:visible}.management-content{container-type:normal}.construction-page{height:auto}.construction-columns .empire-action{height:auto}.construction-library{max-height:420px}.action-body{overflow:visible}.empire-shell .action-commit{position:sticky;bottom:0;z-index:1;box-shadow:0 -8px 12px #fffefa}.management-layout{display:grid;flex:none}.work-queue .queue-body{max-height:180px;overflow:auto}}
+@media(max-height:540px) and (min-width:721px){.empire-shell .planet-nav{height:100dvh;position:sticky;top:0}}

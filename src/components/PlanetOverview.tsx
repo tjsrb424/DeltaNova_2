@@ -10,18 +10,18 @@ type Props = { state: EmpireState; planet: PlanetState; now: number; locked: boo
 export default function PlanetOverview({ state, planet: p, now, locked, send, onAction, onReports }: Props) {
   const current = productionRates(p, state.technologies), cap = capacities(p), watts = power(p), future = developmentPreview(state, p), fleet = fleetReadiness(p), space = facilitySpace(p);
   const lanes: { name: string; job: TimedJob | null; mode: ActionMode; caption: string }[] = [
-    { name: "시설 개발", job: p.constructionJob, mode: "construction", caption: "생산·전력·개발 기반을 확장하세요." },
-    { name: "함선 건조", job: p.shipJob, mode: "shipyard", caption: "현지 함대를 추가로 건조하세요." },
-    { name: "공통 연구", job: state.researchJob, mode: "research", caption: "모든 행성에 적용되는 기술입니다." },
+    { name: "시설 개발", job: p.constructionJob, mode: "construction", caption: `시설 ${FACILITY_IDS.filter(id => p.facilities[id] > 0).length}종 운영 · 공간 ${space.used}/${space.capacity}` },
+    { name: "함선 건조", job: p.shipJob, mode: "shipyard", caption: `출격 가능 ${fleet.ready}척 · 수리 필요 ${fleet.damaged.length}척` },
+    { name: "공통 연구", job: state.researchJob, mode: "research", caption: `산업 기술 Lv.${state.technologies.industry} · 현지 연구소 Lv.${p.facilities.laboratory}` },
   ];
   const labCost = facilityQuote("laboratory", p.facilities.laboratory).cost, labTarget = p.facilities.laboratory + 1;
   return <section className="overview-board" aria-label="전체 현황">
-    <section aria-label="개발 완료 효과"><div className="overview-section-heading"><h2>진행 중인 개발이 바꾸는 것</h2><span>현재 투자와 완료 효과</span></div>
+    <section aria-label="개발 완료 효과"><div className="overview-section-heading"><h2>행성 개발 현황</h2><span>현재 기반 · 진행 중인 투자 · 완료 후 변화</span></div>
       <div className="outcome-grid">{lanes.map(lane => {
         const effect = lane.job ? completionEffect(state, p, lane.job) : null;
         return <article className={"outcome-card " + (lane.job ? "working" : "idle")} key={lane.name}>
           <div className="outcome-art">{lane.job?.kind === "facility" ? <FacilityArt facility={lane.job.target as FacilityId}/> : lane.mode === "shipyard" ? <ShipGlyph role="striker" color="#286675"/> : <EmpireIcon kind={lane.mode === "research" ? "research" : "build"}/>}</div>
-          <div><span className="outcome-label">{effect?.title || lane.name + " 대기"}</span><strong className="outcome-value">{effect?.value || "다음 개발을 선택하세요"}</strong><p>{effect?.detail || lane.caption}</p></div>
+          <div><span className="outcome-label">{effect?.title || lane.name + " 대기"}</span><strong className="outcome-value">{effect?.value || lane.caption}</strong><p>{effect?.detail || "다음 개발을 선택해 효과와 조건을 확인하세요."}</p></div>
           <footer>{lane.job ? <><span className="working-dot"/><span>{now >= lane.job.completesAt ? "완료 확인 중" : duration(lane.job.completesAt - now) + " 남음"}</span>{lane.job.kind === "research" && <small>{state.planets.find(planet => planet.id === lane.job!.planetId)?.name}에서 연구</small>}</> : <button className="quiet-action" onClick={() => onAction(lane.mode)}>상세 보기 →</button>}</footer>
         </article>;
       })}</div>

@@ -62,7 +62,7 @@ it("clears the previous participant announcement and baselines the next particip
   h.api.read=(session,signal)=>session.pilotId==="nova"?read(session,signal):Promise.resolve({state:projectEmpire(other,40000),serverTime:40000});
   await connected(h.api);click("케스트럴 건조");await screen.findByRole("progressbar",{name:/케스트럴/});h.time(40000);click("상태 새로고침");
   await waitFor(()=>expect(screen.getByRole("status",{name:"작업 완료 알림"}).textContent).toContain("함선 건조"));
-  fireEvent.change(screen.getByRole("combobox",{name:"개발 참가자"}),{target:{value:PILOTS[1].id}});click("참가자로 연결");
+  click("참가자 설정");fireEvent.change(screen.getByRole("combobox",{name:"개발 참가자"}),{target:{value:PILOTS[1].id}});click("참가자로 연결");
   click("보고서");await screen.findByText("다른 참가자 과거 연구 완료");expect(screen.getByRole("status",{name:"작업 완료 알림"}).textContent).toBe("");
 });
 it("starts the application at the planet dashboard and keeps a real practice entry",()=>{

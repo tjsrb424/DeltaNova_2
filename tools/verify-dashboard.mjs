@@ -13,7 +13,7 @@ let executable;
 for (const candidate of candidates) { try { await access(candidate); executable = candidate; break; } catch {} }
 if (!executable) throw Error("A local Chromium browser is required. Set DELTA_NOVA_BROWSER to its executable; only headless mode is used.");
 const temporary = await mkdtemp(join(tmpdir(), "delta-nova-dashboard-"));
-const output = resolve(process.env.DELTA_NOVA_QA_OUTPUT || "docs/qa/2026-10-14-dashboard");
+const output = resolve(process.env.DELTA_NOVA_QA_OUTPUT || "docs/qa/2026-10-14-planet-management");
 let store, server, vite, browser, socket, now = 0;
 const pending = new Map(), errors = [], origins = [];
 let nextId = 0, sessionId;
@@ -58,6 +58,32 @@ async function layout(name) {
   assert.ok(value.documentWidth <= value.width, name + " horizontal overflow: " + JSON.stringify(value));
   return { name, ...value };
 }
+async function actionAccess(name) {
+  const value = await evaluate(`(() => {
+    const button = document.querySelector('.empire-action .empire-primary'), rect = button.getBoundingClientRect();
+    const hit = document.elementFromPoint(rect.x + rect.width / 2, rect.y + rect.height / 2);
+    return {label:button.textContent.trim(), x:rect.x, y:rect.y, width:rect.width, height:rect.height, viewport:innerHeight,
+      visible:rect.top >= 0 && rect.bottom <= innerHeight, unobstructed:!!hit && button.contains(hit)};
+  })()`);
+  await capture(name);
+  assert.ok(value.visible && value.unobstructed && value.height >= 44, name + " action inaccessible: " + JSON.stringify(value));
+  return { name, ...value };
+}
+async function pointerClick(selector) {
+  const point = await evaluate(`(() => {const e=document.querySelector(${JSON.stringify(selector)});if(!e) throw Error('Missing click target');e.scrollIntoView({block:'nearest',inline:'nearest'});const r=e.getBoundingClientRect();const hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);if(!hit||!e.contains(hit)) throw Error('Click target is obstructed: '+${JSON.stringify(selector)});return {x:r.x+r.width/2,y:r.y+r.height/2};})()`);
+  await call("Input.dispatchMouseEvent", {type:"mousePressed",button:"left",clickCount:1,...point});
+  await call("Input.dispatchMouseEvent", {type:"mouseReleased",button:"left",clickCount:1,...point});
+}
+async function effectAccess(name) {
+  const rows=await evaluate("document.querySelectorAll('[aria-label=\"증설 완료 효과\"] tbody tr').length");
+  const checks=[];
+  for(let index=0;index<rows;index++) {
+    const value=await evaluate(`(() => {const row=document.querySelectorAll('[aria-label="증설 완료 효과"] tbody tr')[${index}];row.scrollIntoView({block:'start'});const r=row.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2),pane=document.querySelector('.management-content'),footer=document.querySelector('.action-commit');return {text:row.textContent,readable:!!hit&&row.contains(hit),hit:hit?.className,rowTop:r.top,paneHeight:pane.getBoundingClientRect().height,container:getComputedStyle(pane).containerType,footer:getComputedStyle(footer).position};})()`);
+    if(!value.readable) await capture(name+"-hidden-effect");
+    assert.ok(value.readable,name+" hidden effect: "+JSON.stringify(value));checks.push(value);
+  }
+  return {name,rows:checks};
+}
 try {
   await mkdir(output, { recursive: true });
   store = new GuildStore(join(temporary, "world.sqlite"), { now });
@@ -99,6 +125,38 @@ try {
   await click("참가자로 연결");
   await until("!!document.querySelector('[aria-label=\"전체 현황\"]')");
   await evaluate("(() => { const image = new Image(); image.src='/art/planet-facilities-v1.png'; return image.decode().then(() => true); })()");
+  await viewport(1100, 650); await click("건설");
+  await until("!!document.querySelector('.facility-catalog')");
+  const accessChecks = [await actionAccess("construction-compact")];
+  const effectChecks=[await effectAccess("construction-compact")];
+  for (const [width,height] of [[1280,720],[900,650],[720,650],[720,550],[390,844],[390,650]]) {
+    await viewport(width,height);
+    await pointerClick('.facility-catalog button:last-child');
+    await until("document.querySelector('.empire-action h2').textContent.includes('연구소')");
+    if(height < 600) await evaluate("document.querySelector('.empire-action .empire-primary').scrollIntoView({block:'nearest'})");
+    accessChecks.push(await actionAccess("construction-" + width + "x" + height));
+  }
+  for (const [width,height] of [[1100,650],[390,650]]) {
+    await viewport(width,height);
+    await click("대기열 펼치기");
+    await evaluate("document.querySelector('.empire-action .empire-primary').scrollIntoView({block:'nearest'})");
+    accessChecks.push(await actionAccess("construction-queue-" + width));
+    await click("참가자 설정");
+    effectChecks.push(await effectAccess("construction-settings-and-queue-"+width));
+    await evaluate("document.querySelector('.empire-action .empire-primary').scrollIntoView({block:'nearest'})");
+    accessChecks.push(await actionAccess("construction-settings-and-queue-" + width));
+    await click("대기열 접기");
+    await evaluate("document.querySelector('.empire-action .empire-primary').scrollIntoView({block:'nearest'})");
+    accessChecks.push(await actionAccess("construction-settings-" + width));
+    await click("참가자 설정");
+  }
+  for (const width of [720,390]) {
+    await viewport(width,540);
+    assert.ok(await evaluate("document.querySelector('.planet-nav').getBoundingClientRect().height < 100"), "Short mobile navigation occupies the viewport");
+    await evaluate("document.querySelector('.empire-action .empire-primary').scrollIntoView({block:'nearest'})");
+    accessChecks.push(await actionAccess("construction-short-" + width));
+  }
+  await click("대시보드"); await viewport(1672, 941);
   const checks = [await layout("overview-desktop")]; await capture("overview-desktop");
   await viewport(900, 900); checks.push(await layout("overview-tablet")); await capture("overview-tablet");
   await viewport(390, 844); checks.push(await layout("overview-mobile")); await capture("overview-mobile");
@@ -109,13 +167,30 @@ try {
   await viewport(1672, 941); await click("건설");
   await until("!!document.querySelector('.facility-catalog')");
   checks.push(await layout("construction-desktop")); await capture("construction-desktop");
+  await pointerClick('.empire-job button[aria-label="연료 합성소 Lv.2 취소"]');
+  await pointerClick('.job-refund .empire-secondary');
+  await until("!document.querySelector('[role=\"progressbar\"][aria-label=\"연료 합성소 Lv.2\"]')");
+  await viewport(390,650); await pointerClick('.facility-catalog button:nth-child(2)');
+  await until("document.querySelector('.empire-action h2').textContent.includes('결정 채굴소')");
+  accessChecks.push(await actionAccess("construction-ready-mobile"));
+  const beforeBuild = structuredClone(store.empireSnapshot("nova",now).state.planets[0].resources);
+  await pointerClick('.empire-action .empire-primary');
+  await until("document.querySelector('.empire-jobs h2').textContent.includes('3건')");
+  const built = store.empireSnapshot("nova",now).state.planets[0];
+  assert.equal(built.constructionJob?.target,"crystalMine");
+  assert.deepEqual(built.resources,{alloy:beforeBuild.alloy-40,crystal:beforeBuild.crystal-10,fuel:beforeBuild.fuel-10});
+  assert.equal(await evaluate("document.querySelector('.empire-action select').value"),"crystalMine");
+  await click("대기열 펼치기");
+  await pointerClick('.job-inspect[aria-label="결정 채굴소 Lv.2 상세"]');
+  await until("document.querySelector('.queue-toggle').getAttribute('aria-expanded') === 'false'");
+  await viewport(1672,941);
   await click("함대"); await until("!!document.querySelector('.empire-fleet')");
   await click("개인 작전"); await until("!!document.querySelector('.empire-career')");
   await click("보고서"); await until("!!document.querySelector('.empire-report-list')");
   await click("대시보드"); await until("!!document.querySelector('[aria-label=\"전체 현황\"]')");
   assert.equal(errors.length, 0, errors.join("\n"));
-  await writeFile(join(output, "checks.json"), JSON.stringify({ headless: true, isolatedDatabase: true, checks, runtimeErrors: errors }, null, 2) + "\n");
-  console.log("Dashboard headless HTTP/UI/layout PASS: desktop1672, tablet900, mobile390, all category transitions, real isolated API and PNG atlas decode. Captures: " + output);
+  await writeFile(join(output, "checks.json"), JSON.stringify({ headless: true, isolatedDatabase: true, checks, actionAccess:accessChecks, effectAccess:effectChecks, realBuild:{facility:built.constructionJob.target,before:beforeBuild,after:built.resources}, runtimeErrors: errors }, null, 2) + "\n");
+  console.log("Dashboard headless PASS: " + accessChecks.length + " action access checks, effect-row hit tests, real pointer build/cancel and resource deductions, all category transitions, isolated API, atlas decode. Captures: " + output);
 } finally {
   if (socket?.readyState === WebSocket.OPEN) { try { await call("Browser.close", {}, null); } catch {} socket.close(); }
   if (browser && browser.exitCode === null) { await Promise.race([new Promise(resolve => browser.once("exit", resolve)), pause(3000)]); if (browser.exitCode === null) browser.kill(); }

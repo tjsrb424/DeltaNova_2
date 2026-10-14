@@ -5,15 +5,23 @@ import "../guild/guild.css";
 import { usePendingParticipant } from "../guild/participant-lock.ts";
 export default function ParticipantLink({
   network,
+  compact = false,
+  online = true,
+  verifiedAt,
 }: {
   network: Pick<ReturnType<typeof useGuildOperation>,"session"|"busy"|"error"|"notice"|"pending"|"pendingPilotId"|"blockedByOtherCommand"|"otherPendingScreen"|"connect"|"refresh"|"retry">;
+  compact?: boolean;
+  online?: boolean;
+  verifiedAt?: number;
 }) {
   const { session, busy, error, notice } = network;
   const [pilotId, setPilotId] = useState(session?.pilotId || "nova");
+  const [settings, setSettings] = useState(false);
   const participant=usePendingParticipant(),pinned=network.pendingPilotId||participant;
   return (
     <>
-      <section className="panel guild-connection">
+      {compact && session && <div className="connection-toolbar"><span className={"connection-state " + (online ? "" : "attention")}><i aria-hidden="true"/>{PILOTS.find(p => p.id === session.pilotId)?.name} · {online ? "연결됨" : "연결 확인 필요"}</span>{verifiedAt !== undefined && <span className="connection-freshness" title={"마지막 서버 확인 " + new Date(verifiedAt).toLocaleTimeString("ko-KR", { timeZone: "Asia/Seoul" })}>서버 확인 {new Date(verifiedAt).toLocaleTimeString("ko-KR", { timeZone: "Asia/Seoul" })}</span>}<button className="text-button" aria-expanded={settings} onClick={() => setSettings(!settings)}>참가자 설정</button><button className="text-button" disabled={busy} onClick={network.refresh}>상태 새로고침</button></div>}
+      <section className="panel guild-connection" hidden={compact && !!session && !settings}>
         <div>
           <span className="eyebrow">PARTICIPANT LINK</span>
           <h3>
@@ -48,13 +56,13 @@ export default function ParticipantLink({
           >
             참가자로 연결
           </button>
-          <button
+          {(!compact || !session) && <button
             className="text-button"
             disabled={busy}
             onClick={network.refresh}
           >
             상태 새로고침
-          </button>
+          </button>}
         </div>
       </section>
       {error && (

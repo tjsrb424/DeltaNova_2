@@ -6,16 +6,23 @@ import EmpireFleetPanel, { EmpireCareerPanel } from "./EmpireFleetPanel.tsx";
 import DevelopmentMap from "./DevelopmentMap.tsx";
 import FacilityArt from "./FacilityArt.tsx";
 import { EmpireIcon } from "./EmpireUI.tsx";
+import { capacities, power, productionRates } from "../empire/economy.ts";
 export type DetailSection = "fleet" | "construction" | "research" | "career" | "reports";
 type Props = { section: DetailSection; state: EmpireState; planet: PlanetState; mode: ActionMode; target: string; now: number; locked: boolean; send: (a: EmpireAction) => void; onAction: (mode: ActionMode, target?: string) => void; onTargetChange: (target: string) => void; onCareer: () => void };
 export default function PlanetDetails({ section, state, planet, mode, target, now, locked, send, onAction, onTargetChange, onCareer }: Props) {
   const panel = <PlanetActionPanel key={planet.id + ":" + mode} state={state} planet={planet} mode={mode} target={target} onTargetChange={onTargetChange} locked={locked} send={send}/>;
   const atlas = <DevelopmentMap state={state} planet={planet} now={now} onInspect={onAction}/>;
-  if (section === "construction") return <section className="detail-page">
-    <div className="detail-title"><h2>건설 상세</h2><div className="mode-tabs"><button aria-pressed={mode !== "defense"} onClick={() => onAction("construction")}>시설 증설</button><button aria-pressed={mode === "defense"} onClick={() => onAction("defense")}>방어망</button></div></div>
-    <div className="detail-columns"><div className="facility-catalog">{FACILITY_IDS.map(id => <button key={id} aria-pressed={(target || "alloyMine") === id && mode !== "defense"} className={(target || "alloyMine") === id && mode !== "defense" ? "selected" : ""} onClick={() => onAction("construction", id)}><FacilityArt facility={id}/><span>{FACILITY_NAMES[id]}<strong>Lv.{planet.facilities[id]}{planet.constructionJob?.target === id && " → " + planet.constructionJob.level}</strong><small>{planet.constructionJob?.target === id ? "건설 중" : planet.facilities[id] >= 5 ? "최대 수준" : "다음 수준 검토 →"}</small></span></button>)}</div>{panel}</div>
-    <details className="growth-disclosure"><summary>발전지도 · 다음 함선 건조의 시설·연구 조건</summary>{atlas}</details>
-  </section>;
+  if (section === "construction") {
+    const rates = productionRates(planet, state.technologies), cap = capacities(planet), watts = power(planet);
+    return <section className="detail-page construction-page">
+      <div className="detail-title"><div><p className="section-kicker">PLANET DEVELOPMENT</p><h2>건설 상세</h2></div><div className="mode-tabs"><button aria-pressed={mode !== "defense"} onClick={() => onAction("construction")}>시설 증설</button><button aria-pressed={mode === "defense"} onClick={() => onAction("defense")}>방어망</button><button onClick={() => onAction("research")}>발전지도 →</button></div></div>
+      <div className="detail-columns construction-columns"><div className="construction-library"><div className="catalog-heading"><span>행성 시설</span><small>시설을 선택해 증설 효과 확인</small></div><div className="facility-catalog" aria-label="시설 목록">{FACILITY_IDS.map(id => {
+        const resource = id === "alloyMine" ? "alloy" : id === "crystalMine" ? "crystal" : id === "fuelRefinery" ? "fuel" : null;
+        const caption = resource ? `+${rates[resource]}/분 · 저장 ${cap[resource]}` : id === "powerPlant" ? `공급 ${watts.supplied} · 여유 ${watts.supplied - watts.demanded}` : id === "laboratory" ? "공통 연구의 시설 요건" : "함선 건조의 시설 요건";
+        return <button key={id} aria-pressed={(target || "alloyMine") === id && mode !== "defense"} className={(target || "alloyMine") === id && mode !== "defense" ? "selected" : ""} onClick={() => onAction("construction", id)}><FacilityArt facility={id}/><span>{FACILITY_NAMES[id]}<strong>Lv.{planet.facilities[id]}{planet.constructionJob?.target === id && " → " + planet.constructionJob.level}</strong><small>{planet.constructionJob?.target === id ? "건설 중" : planet.facilities[id] >= 5 ? "최대 수준" : caption}</small></span><span className="catalog-arrow" aria-hidden="true">›</span></button>;
+      })}</div></div>{panel}</div>
+    </section>;
+  }
   if (section === "fleet") return <section className="detail-page"><div className="detail-title"><h2>함대 운영·건조</h2><button className="quiet-action" onClick={onCareer}>개인 작전 편성 →</button></div><div className="detail-columns"><EmpireFleetPanel state={state} planet={planet} locked={locked} send={send}/>{panel}</div><details className="growth-disclosure"><summary>발전지도 · 추가 함선 건조 요건</summary>{atlas}</details></section>;
   if (section === "research") return <section className="detail-page">{atlas}<div className="detail-columns research-controls"><div className="technology-catalog">{TECHNOLOGY_IDS.map(id => <button key={id} aria-pressed={(target || "industry") === id} className={(target || "industry") === id ? "selected" : ""} onClick={() => onAction("research", id)}><EmpireIcon kind="research"/><span>{TECHNOLOGY_NAMES[id]}<strong>Lv.{state.technologies[id]}</strong><small>{state.researchJob?.target === id ? "연구 중" : "공통 기술 · 모든 행성 적용"}</small></span></button>)}</div>{panel}</div></section>;
   if (section === "career") return <div className="career-detail"><EmpireCareerPanel key={planet.id} state={state} planet={planet} locked={locked} send={send}/></div>;
