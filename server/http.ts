@@ -4,6 +4,7 @@ import { randomUUID } from "node:crypto";
 import { PILOTS } from "../src/guild/content.ts";
 import { parseGuildCommand } from "../src/guild/validation.ts";
 import { GuildError } from "../src/guild/types.ts";
+import { parseEmpireCommand } from "../src/empire/validation.ts";
 import type { GuildStore } from "./store.ts";
 const BODY_LIMIT = 16 * 1024;
 async function readBody(req: IncomingMessage): Promise<unknown> {
@@ -41,6 +42,11 @@ export function createGuildServer(
   ];
   const clock = options.clock || Date.now;
   const sessions = new Map<string, { pilotId: string; expires: number }>();
+  function requirePilot(req: IncomingMessage) {
+    const token=req.headers.authorization?.match(/^Bearer ([\w-]+)$/)?.[1],session=token?sessions.get(token):undefined;
+    if(!session||session.expires<=clock()) throw new GuildError(401,"SESSION_EXPIRED","개발 참가자로 다시 연결하세요.");
+    return session.pilotId;
+  }
   const send = (res: ServerResponse, status: number, body: unknown) => {
     res.writeHead(status, {
       "Content-Type": "application/json; charset=utf-8",
@@ -65,9 +71,11 @@ export function createGuildServer(
         send(res, 200, { state: store.snapshot(), serverTime: clock() });
         return;
       }
+      if(req.method==="GET"&&req.url==="/api/empire") {send(res,200,store.empireSnapshot(requirePilot(req),clock()));return;}
       if (req.method !== "POST")
         throw new GuildError(404, "NOT_FOUND", "요청한 경로가 없습니다.");
       const body = await readBody(req);
+      if(req.url==="/api/empire/commands") {send(res,200,store.executeEmpire(requirePilot(req),parseEmpireCommand(body),clock()));return;}
       if (req.url === "/api/dev/session") {
         if (
           !body ||
