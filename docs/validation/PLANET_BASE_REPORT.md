@@ -70,6 +70,8 @@
 
 [실제 플레이 검수 순서](DASHBOARD_PLAYTEST_V0.1.md)에 실행 방법과 조선→개인/공동 출격→귀환/정비→증설/연구, 키보드·좁은 화면·완료 음성·저장 복구·재미 확인 항목을 정리했다. 실제 화면과 보조기기 음성은 아직 직접 검수하지 않았다.
 
+후속 변경도 기존에 승인한 로컬 통합 흐름에 따라 main `88d3be4`→`9cafbe3`으로 fast-forward 반영했다. main에서 다시 17개 파일/162개 테스트, 빌드, `verify:build`·`verify:guild`·`verify:empire`를 통과해 사용자가 직접 테스트·검수를 시작할 준비를 마쳤다. 실제 사용자 DB로 개발 서버를 실행하거나 브라우저/창을 자동으로 열지 않았다. 검증기록8개를 `.superpowers/archives/dashboard-completion-qa-9cafbe3/`에 파일별 SHA256 일치로 보존했고 관리 작업공간의 복구 가능한 아카이브를 요청했다. main 검증 로그는 `.superpowers/integration/2026-10-14-dashboard-completion-qa/`에 남겼다.
+
 ## 아트와 남은 검증
 
 내장 image_gen으로 만든 [행성 환경 레이어](../art/PLANET_DASHBOARD_RUNTIME_V0.1.md)는1672×941이다. 원본v0.5와 생성 원본을 보존하고 UI의 글자·입력·마커·수치를 코드로 분리했다. 실제 화면 렌더, 모바일 가독성, 터치·포커스 시인성, 모션 체감과 플레이 재미는 아직 검증하지 않았다. 원본 시안의9.55점은 런타임 점수가 아니다.
