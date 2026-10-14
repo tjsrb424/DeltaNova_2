@@ -70,7 +70,7 @@ npm run verify:empire
 npm run simulate
 ```
 
-현재156개 테스트와 빌드·두 HTTP/proxy 순환·정적 자산 제공·기존7,350개 전투 조건 열거가 통과했다. 독립 코드 리뷰의 중요한 문제 두 가지를 회귀 테스트로 재현하고 수정했다. 모든 검증은 임시 DB와 헤드리스로 수행하며 브라우저/렌더러를 열지 않는다. 실제 화면·모바일·터치·모션·재미 검증과 시간 작업 완료의 접근성 알림은 후속 보완이다. 자세한 증거는 [행성 기지 검증 보고서](docs/validation/PLANET_BASE_REPORT.md)를 따른다.
+현재162개 테스트와 빌드·두 HTTP/proxy 순환·정적 자산 제공 검증이 통과했다. 기존7,350개 전투 조건 열거도 유지한다. 독립 코드 리뷰의 중요한 문제 두 가지를 회귀 테스트로 재현하고 수정했다. 시간 작업 완료는 행성명을 포함한 polite live 알림으로 안내한다. 같은 완료는 반복 조회/메뉴 이동 때 다시 알리지 않으며 처음 연결한 과거 기록은 읽지 않는다. 모든 자동 검증은 임시 DB와 헤드리스로 수행하며 브라우저/렌더러를 열지 않는다. 실제 화면·좁은 화면·터치·스크린리더 음성·모션·재미는 사용자가 직접 검수할 단계다. [실제 플레이 검수 순서](docs/validation/DASHBOARD_PLAYTEST_V0.1.md), [행성 기지 검증 보고서](docs/validation/PLANET_BASE_REPORT.md)를 따른다.
 
 ## 문서
 
@@ -79,6 +79,7 @@ npm run simulate
 - [식민지 방향](docs/design/DELTA_NOVA_COLONIES_V0.1.md)
 - [행성 기지 상세 설계](docs/superpowers/specs/2026-10-14-planet-base-dashboard-design.md)
 - [행성 기지 구현계획](docs/superpowers/plans/2026-10-14-planet-base-dashboard.md)
+- [실제 플레이 검수 순서](docs/validation/DASHBOARD_PLAYTEST_V0.1.md)
 - [v0.5 평상시/접근 시안](docs/art/PLANET_DASHBOARD_UI_V0.5_REVIEW.md)
 - [런타임 행성 장면과 생성 프롬프트](docs/art/PLANET_DASHBOARD_RUNTIME_V0.1.md)
 - [기존 기지 검증](docs/validation/BASE_ECONOMY_REPORT.md)
