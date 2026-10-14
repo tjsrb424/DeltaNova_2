@@ -1,0 +1,5172 @@
+{
+  "version": "season-content-draft-2",
+  "referenceVisits": 2,
+  "plans": [
+    {
+      "profile": "industry",
+      "commands": [
+        {
+          "at": 0,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 2,
+          "cost": [
+            3792,
+            1264,
+            0
+          ]
+        },
+        {
+          "at": 0,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 2,
+          "cost": [
+            1860,
+            1240,
+            310
+          ]
+        },
+        {
+          "at": 0,
+          "kind": "research",
+          "id": "automation",
+          "level": 1,
+          "cost": [
+            900,
+            700,
+            200
+          ]
+        },
+        {
+          "at": 12,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 2,
+          "cost": [
+            2528,
+            2212,
+            0
+          ]
+        },
+        {
+          "at": 24,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 2,
+          "cost": [
+            2212,
+            1580,
+            948
+          ]
+        },
+        {
+          "at": 24,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 2,
+          "cost": [
+            2560,
+            960,
+            0
+          ]
+        },
+        {
+          "at": 36,
+          "kind": "research",
+          "id": "automation",
+          "level": 2,
+          "cost": [
+            1620,
+            1260,
+            360
+          ]
+        },
+        {
+          "at": 36,
+          "kind": "research",
+          "id": "construction",
+          "level": 1,
+          "cost": [
+            1200,
+            800,
+            200
+          ]
+        },
+        {
+          "at": 48,
+          "kind": "research",
+          "id": "construction",
+          "level": 2,
+          "cost": [
+            2160,
+            1440,
+            360
+          ]
+        },
+        {
+          "at": 48,
+          "kind": "research",
+          "id": "storage",
+          "level": 1,
+          "cost": [
+            800,
+            600,
+            200
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "storage",
+          "level": 2,
+          "cost": [
+            1440,
+            1080,
+            360
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 1,
+          "cost": [
+            1000,
+            900,
+            200
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 2,
+          "cost": [
+            1800,
+            1620,
+            360
+          ]
+        },
+        {
+          "at": 72,
+          "kind": "research",
+          "id": "sensors",
+          "level": 1,
+          "cost": [
+            800,
+            1400,
+            200
+          ]
+        },
+        {
+          "at": 84,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 3,
+          "cost": [
+            5992,
+            1998,
+            0
+          ]
+        },
+        {
+          "at": 96,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 3,
+          "cost": [
+            2884,
+            1923,
+            481
+          ]
+        },
+        {
+          "at": 96,
+          "kind": "research",
+          "id": "sensors",
+          "level": 2,
+          "cost": [
+            1440,
+            2520,
+            360
+          ]
+        },
+        {
+          "at": 108,
+          "kind": "research",
+          "id": "chemical_drive",
+          "level": 1,
+          "cost": [
+            800,
+            500,
+            500
+          ]
+        },
+        {
+          "at": 108,
+          "kind": "research",
+          "id": "navigation",
+          "level": 1,
+          "cost": [
+            1000,
+            1000,
+            300
+          ]
+        },
+        {
+          "at": 120,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 3,
+          "cost": [
+            3995,
+            3495,
+            0
+          ]
+        },
+        {
+          "at": 132,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 3,
+          "cost": [
+            3495,
+            2497,
+            1498
+          ]
+        },
+        {
+          "at": 144,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 2,
+          "cost": [
+            2970,
+            3960,
+            660
+          ]
+        },
+        {
+          "at": 156,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 2,
+          "cost": [
+            4290,
+            2640,
+            660
+          ]
+        },
+        {
+          "at": 156,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 4,
+          "cost": [
+            9467,
+            3156,
+            0
+          ]
+        },
+        {
+          "at": 168,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 4,
+          "cost": [
+            4469,
+            2980,
+            745
+          ]
+        },
+        {
+          "at": 180,
+          "kind": "research",
+          "id": "astrography",
+          "level": 1,
+          "cost": [
+            1800,
+            2400,
+            600
+          ]
+        },
+        {
+          "at": 192,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 3,
+          "cost": [
+            4901,
+            6534,
+            1089
+          ]
+        },
+        {
+          "at": 204,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 3,
+          "cost": [
+            7079,
+            4356,
+            1089
+          ]
+        },
+        {
+          "at": 216,
+          "kind": "research",
+          "id": "astrography",
+          "level": 2,
+          "cost": [
+            3240,
+            4320,
+            1080
+          ]
+        },
+        {
+          "at": 228,
+          "kind": "research",
+          "id": "navigation",
+          "level": 2,
+          "cost": [
+            1800,
+            1800,
+            540
+          ]
+        },
+        {
+          "at": 240,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 4,
+          "cost": [
+            6311,
+            5523,
+            0
+          ]
+        },
+        {
+          "at": 252,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 4,
+          "cost": [
+            5523,
+            3945,
+            2367
+          ]
+        },
+        {
+          "at": 252,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 3,
+          "cost": [
+            4097,
+            1537,
+            0
+          ]
+        },
+        {
+          "at": 264,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 5,
+          "cost": [
+            14957,
+            4986,
+            0
+          ]
+        },
+        {
+          "at": 276,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 5,
+          "cost": [
+            9972,
+            8725,
+            0
+          ]
+        },
+        {
+          "at": 288,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 5,
+          "cost": [
+            8725,
+            6233,
+            3740
+          ]
+        },
+        {
+          "at": 300,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 6,
+          "cost": [
+            23632,
+            7878,
+            0
+          ]
+        },
+        {
+          "at": 312,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 5,
+          "cost": [
+            6927,
+            4618,
+            1155
+          ]
+        },
+        {
+          "at": 312,
+          "kind": "research",
+          "id": "colony_management",
+          "level": 1,
+          "cost": [
+            4000,
+            3000,
+            2000
+          ]
+        },
+        {
+          "at": 312,
+          "kind": "research",
+          "id": "automation",
+          "level": 3,
+          "cost": [
+            2916,
+            2268,
+            648
+          ]
+        },
+        {
+          "at": 324,
+          "kind": "research",
+          "id": "automation",
+          "level": 4,
+          "cost": [
+            5249,
+            4083,
+            1167
+          ]
+        },
+        {
+          "at": 324,
+          "kind": "research",
+          "id": "refining",
+          "level": 1,
+          "cost": [
+            1200,
+            1800,
+            400
+          ]
+        },
+        {
+          "at": 324,
+          "kind": "research",
+          "id": "refining",
+          "level": 2,
+          "cost": [
+            2160,
+            3240,
+            720
+          ]
+        },
+        {
+          "at": 336,
+          "kind": "research",
+          "id": "refining",
+          "level": 3,
+          "cost": [
+            3889,
+            5832,
+            1296
+          ]
+        },
+        {
+          "at": 336,
+          "kind": "research",
+          "id": "construction",
+          "level": 3,
+          "cost": [
+            3889,
+            2592,
+            648
+          ]
+        },
+        {
+          "at": 348,
+          "kind": "research",
+          "id": "construction",
+          "level": 4,
+          "cost": [
+            6999,
+            4666,
+            1167
+          ]
+        },
+        {
+          "at": 348,
+          "kind": "research",
+          "id": "storage",
+          "level": 3,
+          "cost": [
+            2592,
+            1945,
+            648
+          ]
+        },
+        {
+          "at": 348,
+          "kind": "research",
+          "id": "storage",
+          "level": 4,
+          "cost": [
+            4666,
+            3500,
+            1167
+          ]
+        },
+        {
+          "at": 360,
+          "kind": "research",
+          "id": "colony_management",
+          "level": 2,
+          "cost": [
+            7200,
+            5400,
+            3600
+          ]
+        },
+        {
+          "at": 372,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 4,
+          "cost": [
+            8086,
+            10782,
+            1797
+          ]
+        },
+        {
+          "at": 384,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 4,
+          "cost": [
+            11680,
+            7188,
+            1797
+          ]
+        },
+        {
+          "at": 396,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 6,
+          "cost": [
+            15755,
+            13786,
+            0
+          ]
+        },
+        {
+          "at": 408,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 6,
+          "cost": [
+            13786,
+            9847,
+            5908
+          ]
+        },
+        {
+          "at": 420,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 7,
+          "cost": [
+            37339,
+            12447,
+            0
+          ]
+        },
+        {
+          "at": 432,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 6,
+          "cost": [
+            10736,
+            7158,
+            1790
+          ]
+        },
+        {
+          "at": 432,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 4,
+          "cost": [
+            6554,
+            2458,
+            0
+          ]
+        },
+        {
+          "at": 444,
+          "kind": "research",
+          "id": "automation",
+          "level": 5,
+          "cost": [
+            9448,
+            7349,
+            2100
+          ]
+        },
+        {
+          "at": 456,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 7,
+          "cost": [
+            24893,
+            21781,
+            0
+          ]
+        },
+        {
+          "at": 468,
+          "kind": "research",
+          "id": "automation",
+          "level": 6,
+          "cost": [
+            17007,
+            13227,
+            3780
+          ]
+        },
+        {
+          "at": 480,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 7,
+          "cost": [
+            21781,
+            15558,
+            9335
+          ]
+        },
+        {
+          "at": 480,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 3,
+          "cost": [
+            3240,
+            2916,
+            648
+          ]
+        },
+        {
+          "at": 492,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 4,
+          "cost": [
+            5833,
+            5249,
+            1167
+          ]
+        },
+        {
+          "at": 492,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 5,
+          "cost": [
+            10498,
+            9448,
+            2100
+          ]
+        },
+        {
+          "at": 504,
+          "kind": "research",
+          "id": "refining",
+          "level": 4,
+          "cost": [
+            6999,
+            10498,
+            2333
+          ]
+        },
+        {
+          "at": 516,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 8,
+          "cost": [
+            58995,
+            19665,
+            0
+          ]
+        },
+        {
+          "at": 528,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 7,
+          "cost": [
+            16641,
+            11094,
+            2774
+          ]
+        },
+        {
+          "at": 540,
+          "kind": "research",
+          "id": "refining",
+          "level": 5,
+          "cost": [
+            12598,
+            18896,
+            4200
+          ]
+        },
+        {
+          "at": 552,
+          "kind": "research",
+          "id": "automation",
+          "level": 7,
+          "cost": [
+            30612,
+            23809,
+            6803
+          ]
+        },
+        {
+          "at": 576,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 8,
+          "cost": [
+            39330,
+            34414,
+            0
+          ]
+        },
+        {
+          "at": 600,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 9,
+          "cost": [
+            93212,
+            31071,
+            0
+          ]
+        },
+        {
+          "at": 612,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 8,
+          "cost": [
+            25794,
+            17196,
+            4299
+          ]
+        },
+        {
+          "at": 624,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 8,
+          "cost": [
+            34414,
+            24582,
+            14749
+          ]
+        },
+        {
+          "at": 648,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 9,
+          "cost": [
+            62141,
+            54374,
+            0
+          ]
+        },
+        {
+          "at": 672,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 5,
+          "cost": [
+            13342,
+            17789,
+            2965
+          ]
+        },
+        {
+          "at": 672,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 5,
+          "cost": [
+            19272,
+            11860,
+            2965
+          ]
+        },
+        {
+          "at": 684,
+          "kind": "research",
+          "id": "automation",
+          "level": 8,
+          "cost": [
+            55100,
+            42856,
+            12245
+          ]
+        },
+        {
+          "at": 732,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 10,
+          "cost": [
+            147274,
+            49092,
+            0
+          ]
+        },
+        {
+          "at": 744,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 9,
+          "cost": [
+            39980,
+            26653,
+            6664
+          ]
+        },
+        {
+          "at": 744,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 5,
+          "cost": [
+            10486,
+            3933,
+            0
+          ]
+        },
+        {
+          "at": 768,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 9,
+          "cost": [
+            54374,
+            38838,
+            23303
+          ]
+        },
+        {
+          "at": 792,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 10,
+          "cost": [
+            98183,
+            85910,
+            0
+          ]
+        },
+        {
+          "at": 864,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 11,
+          "cost": [
+            232693,
+            77565,
+            0
+          ]
+        },
+        {
+          "at": 888,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 10,
+          "cost": [
+            85910,
+            61365,
+            36819
+          ]
+        },
+        {
+          "at": 972,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 12,
+          "cost": [
+            367654,
+            122552,
+            0
+          ]
+        },
+        {
+          "at": 984,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 10,
+          "cost": [
+            61968,
+            41312,
+            10328
+          ]
+        },
+        {
+          "at": 1020,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 11,
+          "cost": [
+            155129,
+            135738,
+            0
+          ]
+        },
+        {
+          "at": 1020,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 6,
+          "cost": [
+            16778,
+            6292,
+            0
+          ]
+        },
+        {
+          "at": 1044,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 11,
+          "cost": [
+            135738,
+            96956,
+            58174
+          ]
+        },
+        {
+          "at": 1164,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 13,
+          "cost": [
+            580894,
+            193632,
+            0
+          ]
+        },
+        {
+          "at": 1176,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 11,
+          "cost": [
+            96051,
+            64034,
+            16009
+          ]
+        },
+        {
+          "at": 1224,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 12,
+          "cost": [
+            245103,
+            214465,
+            0
+          ]
+        },
+        {
+          "at": 1260,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 12,
+          "cost": [
+            214465,
+            153190,
+            91914
+          ]
+        },
+        {
+          "at": 1344,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 6,
+          "cost": [
+            22014,
+            29352,
+            4892
+          ]
+        },
+        {
+          "at": 1344,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 7,
+          "cost": [
+            36323,
+            48431,
+            8072
+          ]
+        },
+        {
+          "at": 1344,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 6,
+          "cost": [
+            31798,
+            19568,
+            4892
+          ]
+        },
+        {
+          "at": 1356,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 7,
+          "cost": [
+            52466,
+            32287,
+            8072
+          ]
+        },
+        {
+          "at": 1440,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 14,
+          "cost": [
+            917812,
+            305938,
+            0
+          ]
+        },
+        {
+          "at": 1464,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 12,
+          "cost": [
+            148878,
+            99252,
+            24813
+          ]
+        },
+        {
+          "at": 1524,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 13,
+          "cost": [
+            387263,
+            338855,
+            0
+          ]
+        },
+        {
+          "at": 1524,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 7,
+          "cost": [
+            26844,
+            10067,
+            0
+          ]
+        },
+        {
+          "at": 1572,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 13,
+          "cost": [
+            338855,
+            242039,
+            145224
+          ]
+        },
+        {
+          "at": 1680,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 8,
+          "cost": [
+            59933,
+            79910,
+            13319
+          ]
+        },
+        {
+          "at": 1680,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 8,
+          "cost": [
+            86569,
+            53274,
+            13319
+          ]
+        },
+        {
+          "at": 1788,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 15,
+          "cost": [
+            1450142,
+            483381,
+            0
+          ]
+        },
+        {
+          "at": 1872,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 14,
+          "cost": [
+            611875,
+            535390,
+            0
+          ]
+        },
+        {
+          "at": 1944,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 14,
+          "cost": [
+            535390,
+            382422,
+            229453
+          ]
+        }
+      ],
+      "reference": {
+        "produced": 17205446,
+        "levels": {
+          "alloy_mine": 15,
+          "crystal_mine": 14,
+          "fuel_refinery": 14,
+          "power_plant": 7,
+          "warehouse": 12,
+          "shipyard": 8,
+          "laboratory": 8
+        },
+        "research": {
+          "automation": 8,
+          "construction": 4,
+          "storage": 4,
+          "power_efficiency": 5,
+          "sensors": 2,
+          "chemical_drive": 1,
+          "navigation": 2,
+          "astrography": 2,
+          "colony_management": 2,
+          "refining": 5
+        },
+        "fleetValue": 0
+      }
+    },
+    {
+      "profile": "military",
+      "commands": [
+        {
+          "at": 0,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 2,
+          "cost": [
+            3792,
+            1264,
+            0
+          ]
+        },
+        {
+          "at": 0,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 2,
+          "cost": [
+            1860,
+            1240,
+            310
+          ]
+        },
+        {
+          "at": 0,
+          "kind": "research",
+          "id": "kinetic",
+          "level": 1,
+          "cost": [
+            1200,
+            600,
+            200
+          ]
+        },
+        {
+          "at": 12,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 2,
+          "cost": [
+            2528,
+            2212,
+            0
+          ]
+        },
+        {
+          "at": 24,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 2,
+          "cost": [
+            2212,
+            1580,
+            948
+          ]
+        },
+        {
+          "at": 24,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 2,
+          "cost": [
+            2560,
+            960,
+            0
+          ]
+        },
+        {
+          "at": 36,
+          "kind": "research",
+          "id": "kinetic",
+          "level": 2,
+          "cost": [
+            2160,
+            1080,
+            360
+          ]
+        },
+        {
+          "at": 48,
+          "kind": "research",
+          "id": "armor",
+          "level": 1,
+          "cost": [
+            1400,
+            800,
+            200
+          ]
+        },
+        {
+          "at": 48,
+          "kind": "research",
+          "id": "armor",
+          "level": 2,
+          "cost": [
+            2520,
+            1440,
+            360
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "chemical_drive",
+          "level": 1,
+          "cost": [
+            800,
+            500,
+            500
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "chemical_drive",
+          "level": 2,
+          "cost": [
+            1440,
+            900,
+            900
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "navigation",
+          "level": 1,
+          "cost": [
+            1000,
+            1000,
+            300
+          ]
+        },
+        {
+          "at": 72,
+          "kind": "research",
+          "id": "fleet_command",
+          "level": 1,
+          "cost": [
+            1400,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 84,
+          "kind": "research",
+          "id": "fleet_command",
+          "level": 2,
+          "cost": [
+            2520,
+            1800,
+            720
+          ]
+        },
+        {
+          "at": 84,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 1,
+          "cost": [
+            1000,
+            900,
+            200
+          ]
+        },
+        {
+          "at": 96,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 2,
+          "cost": [
+            1800,
+            1620,
+            360
+          ]
+        },
+        {
+          "at": 96,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 108,
+          "kind": "research",
+          "id": "kinetic",
+          "level": 3,
+          "cost": [
+            3889,
+            1945,
+            648
+          ]
+        },
+        {
+          "at": 120,
+          "kind": "research",
+          "id": "sensors",
+          "level": 1,
+          "cost": [
+            800,
+            1400,
+            200
+          ]
+        },
+        {
+          "at": 120,
+          "kind": "research",
+          "id": "sensors",
+          "level": 2,
+          "cost": [
+            1440,
+            2520,
+            360
+          ]
+        },
+        {
+          "at": 132,
+          "kind": "research",
+          "id": "armor",
+          "level": 3,
+          "cost": [
+            4536,
+            2592,
+            648
+          ]
+        },
+        {
+          "at": 156,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 3,
+          "cost": [
+            5992,
+            1998,
+            0
+          ]
+        },
+        {
+          "at": 168,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 3,
+          "cost": [
+            2884,
+            1923,
+            481
+          ]
+        },
+        {
+          "at": 180,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 3,
+          "cost": [
+            3995,
+            3495,
+            0
+          ]
+        },
+        {
+          "at": 180,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 3,
+          "cost": [
+            3495,
+            2497,
+            1498
+          ]
+        },
+        {
+          "at": 192,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 2,
+          "cost": [
+            2970,
+            3960,
+            660
+          ]
+        },
+        {
+          "at": 204,
+          "kind": "research",
+          "id": "tracking",
+          "level": 1,
+          "cost": [
+            1400,
+            2200,
+            400
+          ]
+        },
+        {
+          "at": 204,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 216,
+          "kind": "research",
+          "id": "tracking",
+          "level": 2,
+          "cost": [
+            2520,
+            3960,
+            720
+          ]
+        },
+        {
+          "at": 216,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 228,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 240,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 3,
+          "cost": [
+            4901,
+            6534,
+            1089
+          ]
+        },
+        {
+          "at": 252,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 2,
+          "cost": [
+            4290,
+            2640,
+            660
+          ]
+        },
+        {
+          "at": 252,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 264,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 3,
+          "cost": [
+            7079,
+            4356,
+            1089
+          ]
+        },
+        {
+          "at": 276,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 4,
+          "cost": [
+            9467,
+            3156,
+            0
+          ]
+        },
+        {
+          "at": 276,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 288,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 4,
+          "cost": [
+            4469,
+            2980,
+            745
+          ]
+        },
+        {
+          "at": 288,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 300,
+          "kind": "research",
+          "id": "shield",
+          "level": 1,
+          "cost": [
+            2000,
+            2400,
+            600
+          ]
+        },
+        {
+          "at": 300,
+          "kind": "research",
+          "id": "missile",
+          "level": 1,
+          "cost": [
+            2000,
+            1200,
+            1000
+          ]
+        },
+        {
+          "at": 312,
+          "kind": "research",
+          "id": "missile",
+          "level": 2,
+          "cost": [
+            3600,
+            2160,
+            1800
+          ]
+        },
+        {
+          "at": 312,
+          "kind": "research",
+          "id": "ion_drive",
+          "level": 1,
+          "cost": [
+            1800,
+            2000,
+            1200
+          ]
+        },
+        {
+          "at": 324,
+          "kind": "research",
+          "id": "ion_drive",
+          "level": 2,
+          "cost": [
+            3240,
+            3600,
+            2160
+          ]
+        },
+        {
+          "at": 336,
+          "kind": "research",
+          "id": "siege_protocol",
+          "level": 1,
+          "cost": [
+            3000,
+            1600,
+            1000
+          ]
+        },
+        {
+          "at": 336,
+          "kind": "research",
+          "id": "beam",
+          "level": 1,
+          "cost": [
+            1800,
+            2400,
+            400
+          ]
+        },
+        {
+          "at": 348,
+          "kind": "research",
+          "id": "beam",
+          "level": 2,
+          "cost": [
+            3240,
+            4320,
+            720
+          ]
+        },
+        {
+          "at": 360,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 372,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 4,
+          "cost": [
+            6311,
+            5523,
+            0
+          ]
+        },
+        {
+          "at": 372,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 384,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 4,
+          "cost": [
+            5523,
+            3945,
+            2367
+          ]
+        },
+        {
+          "at": 384,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 3,
+          "cost": [
+            4097,
+            1537,
+            0
+          ]
+        },
+        {
+          "at": 396,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 408,
+          "kind": "research",
+          "id": "beam",
+          "level": 3,
+          "cost": [
+            5832,
+            7777,
+            1296
+          ]
+        },
+        {
+          "at": 408,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 420,
+          "kind": "research",
+          "id": "coordination",
+          "level": 1,
+          "cost": [
+            2200,
+            2600,
+            800
+          ]
+        },
+        {
+          "at": 420,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 432,
+          "kind": "research",
+          "id": "coordination",
+          "level": 2,
+          "cost": [
+            3960,
+            4680,
+            1440
+          ]
+        },
+        {
+          "at": 432,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 444,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 456,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 4,
+          "cost": [
+            8086,
+            10782,
+            1797
+          ]
+        },
+        {
+          "at": 456,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 468,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 480,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 4,
+          "cost": [
+            11680,
+            7188,
+            1797
+          ]
+        },
+        {
+          "at": 480,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 492,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 5,
+          "cost": [
+            14957,
+            4986,
+            0
+          ]
+        },
+        {
+          "at": 492,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 504,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 516,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 5,
+          "cost": [
+            9972,
+            8725,
+            0
+          ]
+        },
+        {
+          "at": 516,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 528,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 5,
+          "cost": [
+            8725,
+            6233,
+            3740
+          ]
+        },
+        {
+          "at": 528,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 540,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 552,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 6,
+          "cost": [
+            23632,
+            7878,
+            0
+          ]
+        },
+        {
+          "at": 552,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 564,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 5,
+          "cost": [
+            6927,
+            4618,
+            1155
+          ]
+        },
+        {
+          "at": 564,
+          "kind": "research",
+          "id": "coordination",
+          "level": 3,
+          "cost": [
+            7129,
+            8424,
+            2592
+          ]
+        },
+        {
+          "at": 576,
+          "kind": "research",
+          "id": "espionage",
+          "level": 1,
+          "cost": [
+            1200,
+            2200,
+            400
+          ]
+        },
+        {
+          "at": 576,
+          "kind": "research",
+          "id": "espionage",
+          "level": 2,
+          "cost": [
+            2160,
+            3960,
+            720
+          ]
+        },
+        {
+          "at": 576,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 588,
+          "kind": "research",
+          "id": "electronic_warfare",
+          "level": 1,
+          "cost": [
+            2400,
+            3600,
+            800
+          ]
+        },
+        {
+          "at": 588,
+          "kind": "research",
+          "id": "missile",
+          "level": 3,
+          "cost": [
+            6480,
+            3889,
+            3240
+          ]
+        },
+        {
+          "at": 588,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 600,
+          "kind": "research",
+          "id": "missile",
+          "level": 4,
+          "cost": [
+            11665,
+            6999,
+            5833
+          ]
+        },
+        {
+          "at": 600,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 612,
+          "kind": "research",
+          "id": "armor",
+          "level": 4,
+          "cost": [
+            8165,
+            4666,
+            1167
+          ]
+        },
+        {
+          "at": 612,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 624,
+          "kind": "research",
+          "id": "ion_drive",
+          "level": 3,
+          "cost": [
+            5832,
+            6480,
+            3889
+          ]
+        },
+        {
+          "at": 624,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 636,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 3,
+          "cost": [
+            3240,
+            2916,
+            648
+          ]
+        },
+        {
+          "at": 636,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 4,
+          "cost": [
+            5833,
+            5249,
+            1167
+          ]
+        },
+        {
+          "at": 648,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 660,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 6,
+          "cost": [
+            15755,
+            13786,
+            0
+          ]
+        },
+        {
+          "at": 672,
+          "kind": "ship",
+          "id": "striker",
+          "count": 3,
+          "cost": [
+            5400,
+            3000,
+            1200
+          ]
+        },
+        {
+          "at": 684,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 5,
+          "cost": [
+            13342,
+            17789,
+            2965
+          ]
+        },
+        {
+          "at": 696,
+          "kind": "research",
+          "id": "carrier_ops",
+          "level": 1,
+          "cost": [
+            5000,
+            6000,
+            1800
+          ]
+        },
+        {
+          "at": 696,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 708,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 5,
+          "cost": [
+            19272,
+            11860,
+            2965
+          ]
+        },
+        {
+          "at": 708,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 720,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 6,
+          "cost": [
+            13786,
+            9847,
+            5908
+          ]
+        },
+        {
+          "at": 732,
+          "kind": "research",
+          "id": "fusion_drive",
+          "level": 1,
+          "cost": [
+            6000,
+            7000,
+            5000
+          ]
+        },
+        {
+          "at": 732,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 744,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 756,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 7,
+          "cost": [
+            37339,
+            12447,
+            0
+          ]
+        },
+        {
+          "at": 756,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 6,
+          "cost": [
+            10736,
+            7158,
+            1790
+          ]
+        },
+        {
+          "at": 768,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 4,
+          "cost": [
+            6554,
+            2458,
+            0
+          ]
+        },
+        {
+          "at": 768,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 780,
+          "kind": "research",
+          "id": "beam",
+          "level": 4,
+          "cost": [
+            10498,
+            13997,
+            2333
+          ]
+        },
+        {
+          "at": 780,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 792,
+          "kind": "ship",
+          "id": "striker",
+          "count": 3,
+          "cost": [
+            5400,
+            3000,
+            1200
+          ]
+        },
+        {
+          "at": 804,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 816,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 7,
+          "cost": [
+            24893,
+            21781,
+            0
+          ]
+        },
+        {
+          "at": 816,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 828,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 840,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 7,
+          "cost": [
+            21781,
+            15558,
+            9335
+          ]
+        },
+        {
+          "at": 840,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 852,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 864,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 8,
+          "cost": [
+            58995,
+            19665,
+            0
+          ]
+        },
+        {
+          "at": 864,
+          "kind": "ship",
+          "id": "striker",
+          "count": 1,
+          "cost": [
+            1800,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 876,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 7,
+          "cost": [
+            16641,
+            11094,
+            2774
+          ]
+        },
+        {
+          "at": 876,
+          "kind": "ship",
+          "id": "striker",
+          "count": 2,
+          "cost": [
+            3600,
+            2000,
+            800
+          ]
+        },
+        {
+          "at": 888,
+          "kind": "ship",
+          "id": "striker",
+          "count": 3,
+          "cost": [
+            5400,
+            3000,
+            1200
+          ]
+        },
+        {
+          "at": 900,
+          "kind": "research",
+          "id": "beam",
+          "level": 5,
+          "cost": [
+            18896,
+            25195,
+            4200
+          ]
+        },
+        {
+          "at": 900,
+          "kind": "research",
+          "id": "shield",
+          "level": 2,
+          "cost": [
+            3600,
+            4320,
+            1080
+          ]
+        },
+        {
+          "at": 900,
+          "kind": "ship",
+          "id": "striker",
+          "count": 3,
+          "cost": [
+            5400,
+            3000,
+            1200
+          ]
+        },
+        {
+          "at": 912,
+          "kind": "research",
+          "id": "shield",
+          "level": 3,
+          "cost": [
+            6480,
+            7777,
+            1945
+          ]
+        },
+        {
+          "at": 912,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 924,
+          "kind": "research",
+          "id": "shield",
+          "level": 4,
+          "cost": [
+            11665,
+            13997,
+            3500
+          ]
+        },
+        {
+          "at": 924,
+          "kind": "ship",
+          "id": "striker",
+          "count": 3,
+          "cost": [
+            5400,
+            3000,
+            1200
+          ]
+        },
+        {
+          "at": 936,
+          "kind": "research",
+          "id": "fusion_drive",
+          "level": 2,
+          "cost": [
+            10800,
+            12600,
+            9000
+          ]
+        },
+        {
+          "at": 948,
+          "kind": "research",
+          "id": "siege_protocol",
+          "level": 2,
+          "cost": [
+            5400,
+            2880,
+            1800
+          ]
+        },
+        {
+          "at": 948,
+          "kind": "research",
+          "id": "siege_protocol",
+          "level": 3,
+          "cost": [
+            9720,
+            5184,
+            3240
+          ]
+        },
+        {
+          "at": 948,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 960,
+          "kind": "research",
+          "id": "siege_protocol",
+          "level": 4,
+          "cost": [
+            17497,
+            9332,
+            5833
+          ]
+        },
+        {
+          "at": 960,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 972,
+          "kind": "research",
+          "id": "siege_protocol",
+          "level": 5,
+          "cost": [
+            31493,
+            16797,
+            10498
+          ]
+        },
+        {
+          "at": 984,
+          "kind": "research",
+          "id": "carrier_ops",
+          "level": 2,
+          "cost": [
+            9000,
+            10800,
+            3240
+          ]
+        },
+        {
+          "at": 984,
+          "kind": "ship",
+          "id": "striker",
+          "count": 3,
+          "cost": [
+            5400,
+            3000,
+            1200
+          ]
+        },
+        {
+          "at": 996,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1008,
+          "kind": "research",
+          "id": "carrier_ops",
+          "level": 3,
+          "cost": [
+            16201,
+            19440,
+            5832
+          ]
+        },
+        {
+          "at": 1008,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1020,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1032,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1044,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 8,
+          "cost": [
+            39330,
+            34414,
+            0
+          ]
+        },
+        {
+          "at": 1056,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1068,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 8,
+          "cost": [
+            34414,
+            24582,
+            14749
+          ]
+        },
+        {
+          "at": 1068,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1080,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1092,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 9,
+          "cost": [
+            93212,
+            31071,
+            0
+          ]
+        },
+        {
+          "at": 1104,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 8,
+          "cost": [
+            25794,
+            17196,
+            4299
+          ]
+        },
+        {
+          "at": 1116,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1128,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1140,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1152,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 9,
+          "cost": [
+            62141,
+            54374,
+            0
+          ]
+        },
+        {
+          "at": 1152,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1164,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 5,
+          "cost": [
+            10486,
+            3933,
+            0
+          ]
+        },
+        {
+          "at": 1164,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1176,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1188,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 9,
+          "cost": [
+            54374,
+            38838,
+            23303
+          ]
+        },
+        {
+          "at": 1188,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1200,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1212,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1224,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1236,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1248,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1260,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 10,
+          "cost": [
+            147274,
+            49092,
+            0
+          ]
+        },
+        {
+          "at": 1260,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1272,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1284,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 9,
+          "cost": [
+            39980,
+            26653,
+            6664
+          ]
+        },
+        {
+          "at": 1284,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1296,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1308,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1320,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1332,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 10,
+          "cost": [
+            98183,
+            85910,
+            0
+          ]
+        },
+        {
+          "at": 1332,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 2,
+          "cost": [
+            12400,
+            6400,
+            4200
+          ]
+        },
+        {
+          "at": 1344,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 6,
+          "cost": [
+            22014,
+            29352,
+            4892
+          ]
+        },
+        {
+          "at": 1344,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1356,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1368,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 7,
+          "cost": [
+            36323,
+            48431,
+            8072
+          ]
+        },
+        {
+          "at": 1368,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1380,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 6,
+          "cost": [
+            31798,
+            19568,
+            4892
+          ]
+        },
+        {
+          "at": 1380,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1392,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1404,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 7,
+          "cost": [
+            52466,
+            32287,
+            8072
+          ]
+        },
+        {
+          "at": 1404,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1416,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1428,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1440,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 10,
+          "cost": [
+            85910,
+            61365,
+            36819
+          ]
+        },
+        {
+          "at": 1440,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1452,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1464,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1476,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1488,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1500,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1512,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1524,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1536,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1548,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 11,
+          "cost": [
+            232693,
+            77565,
+            0
+          ]
+        },
+        {
+          "at": 1548,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1560,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1572,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 10,
+          "cost": [
+            61968,
+            41312,
+            10328
+          ]
+        },
+        {
+          "at": 1572,
+          "kind": "ship",
+          "id": "destroyer",
+          "count": 1,
+          "cost": [
+            6200,
+            3200,
+            2100
+          ]
+        },
+        {
+          "at": 1584,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1596,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1608,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1620,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1632,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1644,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1656,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 2,
+          "cost": [
+            18000,
+            13000,
+            5000
+          ]
+        },
+        {
+          "at": 1668,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1680,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 8,
+          "cost": [
+            59933,
+            79910,
+            13319
+          ]
+        },
+        {
+          "at": 1680,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 6,
+          "cost": [
+            16778,
+            6292,
+            0
+          ]
+        },
+        {
+          "at": 1680,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 8,
+          "cost": [
+            86569,
+            53274,
+            13319
+          ]
+        },
+        {
+          "at": 1680,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1692,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1704,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1716,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1728,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1740,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1752,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1764,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1776,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 12,
+          "cost": [
+            367654,
+            122552,
+            0
+          ]
+        },
+        {
+          "at": 1776,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1788,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1800,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1812,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 11,
+          "cost": [
+            96051,
+            64034,
+            16009
+          ]
+        },
+        {
+          "at": 1812,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1824,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1836,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1848,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1860,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 11,
+          "cost": [
+            155129,
+            135738,
+            0
+          ]
+        },
+        {
+          "at": 1860,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1872,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1884,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1896,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 11,
+          "cost": [
+            135738,
+            96956,
+            58174
+          ]
+        },
+        {
+          "at": 1896,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1908,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1920,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1932,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 2,
+          "cost": [
+            18000,
+            13000,
+            5000
+          ]
+        },
+        {
+          "at": 1944,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1956,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1968,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1980,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        },
+        {
+          "at": 1992,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 2,
+          "cost": [
+            18000,
+            13000,
+            5000
+          ]
+        },
+        {
+          "at": 2004,
+          "kind": "ship",
+          "id": "cruiser",
+          "count": 1,
+          "cost": [
+            9000,
+            6500,
+            2500
+          ]
+        }
+      ],
+      "reference": {
+        "produced": 8010160,
+        "levels": {
+          "alloy_mine": 12,
+          "crystal_mine": 11,
+          "fuel_refinery": 11,
+          "power_plant": 6,
+          "warehouse": 11,
+          "shipyard": 8,
+          "laboratory": 8
+        },
+        "research": {
+          "kinetic": 3,
+          "armor": 4,
+          "chemical_drive": 2,
+          "navigation": 1,
+          "fleet_command": 2,
+          "power_efficiency": 4,
+          "sensors": 2,
+          "tracking": 2,
+          "shield": 4,
+          "missile": 4,
+          "ion_drive": 3,
+          "siege_protocol": 5,
+          "beam": 5,
+          "coordination": 3,
+          "espionage": 2,
+          "electronic_warfare": 1,
+          "carrier_ops": 3,
+          "fusion_drive": 2
+        },
+        "fleetValue": 1706100
+      }
+    },
+    {
+      "profile": "science",
+      "commands": [
+        {
+          "at": 0,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 2,
+          "cost": [
+            3792,
+            1264,
+            0
+          ]
+        },
+        {
+          "at": 0,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 2,
+          "cost": [
+            1860,
+            1240,
+            310
+          ]
+        },
+        {
+          "at": 0,
+          "kind": "research",
+          "id": "automation",
+          "level": 1,
+          "cost": [
+            900,
+            700,
+            200
+          ]
+        },
+        {
+          "at": 12,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 2,
+          "cost": [
+            2528,
+            2212,
+            0
+          ]
+        },
+        {
+          "at": 24,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 2,
+          "cost": [
+            2212,
+            1580,
+            948
+          ]
+        },
+        {
+          "at": 24,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 2,
+          "cost": [
+            2560,
+            960,
+            0
+          ]
+        },
+        {
+          "at": 36,
+          "kind": "research",
+          "id": "automation",
+          "level": 2,
+          "cost": [
+            1620,
+            1260,
+            360
+          ]
+        },
+        {
+          "at": 36,
+          "kind": "research",
+          "id": "construction",
+          "level": 1,
+          "cost": [
+            1200,
+            800,
+            200
+          ]
+        },
+        {
+          "at": 48,
+          "kind": "research",
+          "id": "construction",
+          "level": 2,
+          "cost": [
+            2160,
+            1440,
+            360
+          ]
+        },
+        {
+          "at": 48,
+          "kind": "research",
+          "id": "sensors",
+          "level": 1,
+          "cost": [
+            800,
+            1400,
+            200
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "sensors",
+          "level": 2,
+          "cost": [
+            1440,
+            2520,
+            360
+          ]
+        },
+        {
+          "at": 60,
+          "kind": "research",
+          "id": "chemical_drive",
+          "level": 1,
+          "cost": [
+            800,
+            500,
+            500
+          ]
+        },
+        {
+          "at": 72,
+          "kind": "research",
+          "id": "navigation",
+          "level": 1,
+          "cost": [
+            1000,
+            1000,
+            300
+          ]
+        },
+        {
+          "at": 84,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 3,
+          "cost": [
+            5992,
+            1998,
+            0
+          ]
+        },
+        {
+          "at": 84,
+          "kind": "research",
+          "id": "navigation",
+          "level": 2,
+          "cost": [
+            1800,
+            1800,
+            540
+          ]
+        },
+        {
+          "at": 96,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 3,
+          "cost": [
+            2884,
+            1923,
+            481
+          ]
+        },
+        {
+          "at": 96,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 1,
+          "cost": [
+            1000,
+            900,
+            200
+          ]
+        },
+        {
+          "at": 108,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 2,
+          "cost": [
+            1800,
+            1620,
+            360
+          ]
+        },
+        {
+          "at": 108,
+          "kind": "research",
+          "id": "chemical_drive",
+          "level": 2,
+          "cost": [
+            1440,
+            900,
+            900
+          ]
+        },
+        {
+          "at": 132,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 3,
+          "cost": [
+            3995,
+            3495,
+            0
+          ]
+        },
+        {
+          "at": 144,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 3,
+          "cost": [
+            3495,
+            2497,
+            1498
+          ]
+        },
+        {
+          "at": 144,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 3,
+          "cost": [
+            3240,
+            2916,
+            648
+          ]
+        },
+        {
+          "at": 156,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 2,
+          "cost": [
+            2970,
+            3960,
+            660
+          ]
+        },
+        {
+          "at": 168,
+          "kind": "research",
+          "id": "espionage",
+          "level": 1,
+          "cost": [
+            1200,
+            2200,
+            400
+          ]
+        },
+        {
+          "at": 180,
+          "kind": "research",
+          "id": "espionage",
+          "level": 2,
+          "cost": [
+            2160,
+            3960,
+            720
+          ]
+        },
+        {
+          "at": 192,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 3,
+          "cost": [
+            4901,
+            6534,
+            1089
+          ]
+        },
+        {
+          "at": 204,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 2,
+          "cost": [
+            4290,
+            2640,
+            660
+          ]
+        },
+        {
+          "at": 216,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 3,
+          "cost": [
+            7079,
+            4356,
+            1089
+          ]
+        },
+        {
+          "at": 228,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 4,
+          "cost": [
+            6311,
+            5523,
+            0
+          ]
+        },
+        {
+          "at": 240,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 4,
+          "cost": [
+            9467,
+            3156,
+            0
+          ]
+        },
+        {
+          "at": 252,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 4,
+          "cost": [
+            4469,
+            2980,
+            745
+          ]
+        },
+        {
+          "at": 252,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 4,
+          "cost": [
+            5523,
+            3945,
+            2367
+          ]
+        },
+        {
+          "at": 252,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 3,
+          "cost": [
+            4097,
+            1537,
+            0
+          ]
+        },
+        {
+          "at": 276,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 5,
+          "cost": [
+            9972,
+            8725,
+            0
+          ]
+        },
+        {
+          "at": 288,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 5,
+          "cost": [
+            14957,
+            4986,
+            0
+          ]
+        },
+        {
+          "at": 300,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 5,
+          "cost": [
+            6927,
+            4618,
+            1155
+          ]
+        },
+        {
+          "at": 300,
+          "kind": "research",
+          "id": "espionage",
+          "level": 3,
+          "cost": [
+            3889,
+            7129,
+            1296
+          ]
+        },
+        {
+          "at": 312,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 5,
+          "cost": [
+            8725,
+            6233,
+            3740
+          ]
+        },
+        {
+          "at": 312,
+          "kind": "research",
+          "id": "astrography",
+          "level": 1,
+          "cost": [
+            1800,
+            2400,
+            600
+          ]
+        },
+        {
+          "at": 324,
+          "kind": "research",
+          "id": "astrography",
+          "level": 2,
+          "cost": [
+            3240,
+            4320,
+            1080
+          ]
+        },
+        {
+          "at": 324,
+          "kind": "research",
+          "id": "colony_management",
+          "level": 1,
+          "cost": [
+            4000,
+            3000,
+            2000
+          ]
+        },
+        {
+          "at": 324,
+          "kind": "research",
+          "id": "shield",
+          "level": 1,
+          "cost": [
+            2000,
+            2400,
+            600
+          ]
+        },
+        {
+          "at": 336,
+          "kind": "research",
+          "id": "shield",
+          "level": 2,
+          "cost": [
+            3600,
+            4320,
+            1080
+          ]
+        },
+        {
+          "at": 348,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 4,
+          "cost": [
+            8086,
+            10782,
+            1797
+          ]
+        },
+        {
+          "at": 360,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 4,
+          "cost": [
+            11680,
+            7188,
+            1797
+          ]
+        },
+        {
+          "at": 372,
+          "kind": "research",
+          "id": "shield",
+          "level": 3,
+          "cost": [
+            6480,
+            7777,
+            1945
+          ]
+        },
+        {
+          "at": 372,
+          "kind": "research",
+          "id": "ion_drive",
+          "level": 1,
+          "cost": [
+            1800,
+            2000,
+            1200
+          ]
+        },
+        {
+          "at": 384,
+          "kind": "research",
+          "id": "ion_drive",
+          "level": 2,
+          "cost": [
+            3240,
+            3600,
+            2160
+          ]
+        },
+        {
+          "at": 384,
+          "kind": "research",
+          "id": "ion_drive",
+          "level": 3,
+          "cost": [
+            5832,
+            6480,
+            3889
+          ]
+        },
+        {
+          "at": 396,
+          "kind": "research",
+          "id": "power_efficiency",
+          "level": 4,
+          "cost": [
+            5833,
+            5249,
+            1167
+          ]
+        },
+        {
+          "at": 396,
+          "kind": "research",
+          "id": "fleet_command",
+          "level": 1,
+          "cost": [
+            1400,
+            1000,
+            400
+          ]
+        },
+        {
+          "at": 396,
+          "kind": "research",
+          "id": "fleet_command",
+          "level": 2,
+          "cost": [
+            2520,
+            1800,
+            720
+          ]
+        },
+        {
+          "at": 408,
+          "kind": "research",
+          "id": "coordination",
+          "level": 1,
+          "cost": [
+            2200,
+            2600,
+            800
+          ]
+        },
+        {
+          "at": 408,
+          "kind": "research",
+          "id": "coordination",
+          "level": 2,
+          "cost": [
+            3960,
+            4680,
+            1440
+          ]
+        },
+        {
+          "at": 420,
+          "kind": "research",
+          "id": "coordination",
+          "level": 3,
+          "cost": [
+            7129,
+            8424,
+            2592
+          ]
+        },
+        {
+          "at": 420,
+          "kind": "research",
+          "id": "beam",
+          "level": 1,
+          "cost": [
+            1800,
+            2400,
+            400
+          ]
+        },
+        {
+          "at": 432,
+          "kind": "research",
+          "id": "electronic_warfare",
+          "level": 1,
+          "cost": [
+            2400,
+            3600,
+            800
+          ]
+        },
+        {
+          "at": 444,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 6,
+          "cost": [
+            15755,
+            13786,
+            0
+          ]
+        },
+        {
+          "at": 456,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 6,
+          "cost": [
+            23632,
+            7878,
+            0
+          ]
+        },
+        {
+          "at": 468,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 6,
+          "cost": [
+            13786,
+            9847,
+            5908
+          ]
+        },
+        {
+          "at": 480,
+          "kind": "research",
+          "id": "electronic_warfare",
+          "level": 2,
+          "cost": [
+            4320,
+            6480,
+            1440
+          ]
+        },
+        {
+          "at": 480,
+          "kind": "research",
+          "id": "construction",
+          "level": 3,
+          "cost": [
+            3889,
+            2592,
+            648
+          ]
+        },
+        {
+          "at": 504,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 7,
+          "cost": [
+            24893,
+            21781,
+            0
+          ]
+        },
+        {
+          "at": 516,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 7,
+          "cost": [
+            37339,
+            12447,
+            0
+          ]
+        },
+        {
+          "at": 528,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 6,
+          "cost": [
+            10736,
+            7158,
+            1790
+          ]
+        },
+        {
+          "at": 528,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 4,
+          "cost": [
+            6554,
+            2458,
+            0
+          ]
+        },
+        {
+          "at": 540,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 7,
+          "cost": [
+            21781,
+            15558,
+            9335
+          ]
+        },
+        {
+          "at": 564,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 8,
+          "cost": [
+            39330,
+            34414,
+            0
+          ]
+        },
+        {
+          "at": 612,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 8,
+          "cost": [
+            58995,
+            19665,
+            0
+          ]
+        },
+        {
+          "at": 612,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 7,
+          "cost": [
+            16641,
+            11094,
+            2774
+          ]
+        },
+        {
+          "at": 636,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 8,
+          "cost": [
+            34414,
+            24582,
+            14749
+          ]
+        },
+        {
+          "at": 672,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 5,
+          "cost": [
+            13342,
+            17789,
+            2965
+          ]
+        },
+        {
+          "at": 672,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 5,
+          "cost": [
+            19272,
+            11860,
+            2965
+          ]
+        },
+        {
+          "at": 684,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 9,
+          "cost": [
+            62141,
+            54374,
+            0
+          ]
+        },
+        {
+          "at": 684,
+          "kind": "research",
+          "id": "fusion_drive",
+          "level": 1,
+          "cost": [
+            6000,
+            7000,
+            5000
+          ]
+        },
+        {
+          "at": 696,
+          "kind": "research",
+          "id": "fusion_drive",
+          "level": 2,
+          "cost": [
+            10800,
+            12600,
+            9000
+          ]
+        },
+        {
+          "at": 696,
+          "kind": "research",
+          "id": "carrier_ops",
+          "level": 1,
+          "cost": [
+            5000,
+            6000,
+            1800
+          ]
+        },
+        {
+          "at": 696,
+          "kind": "research",
+          "id": "carrier_ops",
+          "level": 2,
+          "cost": [
+            9000,
+            10800,
+            3240
+          ]
+        },
+        {
+          "at": 708,
+          "kind": "research",
+          "id": "carrier_ops",
+          "level": 3,
+          "cost": [
+            16201,
+            19440,
+            5832
+          ]
+        },
+        {
+          "at": 720,
+          "kind": "research",
+          "id": "terraforming",
+          "level": 1,
+          "cost": [
+            10000,
+            12000,
+            4000
+          ]
+        },
+        {
+          "at": 756,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 9,
+          "cost": [
+            93212,
+            31071,
+            0
+          ]
+        },
+        {
+          "at": 768,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 8,
+          "cost": [
+            25794,
+            17196,
+            4299
+          ]
+        },
+        {
+          "at": 780,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 5,
+          "cost": [
+            10486,
+            3933,
+            0
+          ]
+        },
+        {
+          "at": 804,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 9,
+          "cost": [
+            54374,
+            38838,
+            23303
+          ]
+        },
+        {
+          "at": 840,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 10,
+          "cost": [
+            98183,
+            85910,
+            0
+          ]
+        },
+        {
+          "at": 900,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 10,
+          "cost": [
+            147274,
+            49092,
+            0
+          ]
+        },
+        {
+          "at": 912,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 9,
+          "cost": [
+            39980,
+            26653,
+            6664
+          ]
+        },
+        {
+          "at": 948,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 10,
+          "cost": [
+            85910,
+            61365,
+            36819
+          ]
+        },
+        {
+          "at": 996,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 11,
+          "cost": [
+            155129,
+            135738,
+            0
+          ]
+        },
+        {
+          "at": 1068,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 11,
+          "cost": [
+            232693,
+            77565,
+            0
+          ]
+        },
+        {
+          "at": 1092,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 10,
+          "cost": [
+            61968,
+            41312,
+            10328
+          ]
+        },
+        {
+          "at": 1164,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 12,
+          "cost": [
+            245103,
+            214465,
+            0
+          ]
+        },
+        {
+          "at": 1164,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 6,
+          "cost": [
+            16778,
+            6292,
+            0
+          ]
+        },
+        {
+          "at": 1200,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 11,
+          "cost": [
+            135738,
+            96956,
+            58174
+          ]
+        },
+        {
+          "at": 1308,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 13,
+          "cost": [
+            387263,
+            338855,
+            0
+          ]
+        },
+        {
+          "at": 1332,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 11,
+          "cost": [
+            96051,
+            64034,
+            16009
+          ]
+        },
+        {
+          "at": 1344,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 6,
+          "cost": [
+            22014,
+            29352,
+            4892
+          ]
+        },
+        {
+          "at": 1356,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 7,
+          "cost": [
+            36323,
+            48431,
+            8072
+          ]
+        },
+        {
+          "at": 1368,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 6,
+          "cost": [
+            31798,
+            19568,
+            4892
+          ]
+        },
+        {
+          "at": 1380,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 7,
+          "cost": [
+            52466,
+            32287,
+            8072
+          ]
+        },
+        {
+          "at": 1476,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 12,
+          "cost": [
+            367654,
+            122552,
+            0
+          ]
+        },
+        {
+          "at": 1536,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 12,
+          "cost": [
+            214465,
+            153190,
+            91914
+          ]
+        },
+        {
+          "at": 1668,
+          "kind": "facility",
+          "id": "crystal_mine",
+          "level": 14,
+          "cost": [
+            611875,
+            535390,
+            0
+          ]
+        },
+        {
+          "at": 1704,
+          "kind": "facility",
+          "id": "warehouse",
+          "level": 12,
+          "cost": [
+            148878,
+            99252,
+            24813
+          ]
+        },
+        {
+          "at": 1716,
+          "kind": "facility",
+          "id": "power_plant",
+          "level": 7,
+          "cost": [
+            26844,
+            10067,
+            0
+          ]
+        },
+        {
+          "at": 1728,
+          "kind": "facility",
+          "id": "laboratory",
+          "level": 8,
+          "cost": [
+            59933,
+            79910,
+            13319
+          ]
+        },
+        {
+          "at": 1752,
+          "kind": "facility",
+          "id": "shipyard",
+          "level": 8,
+          "cost": [
+            86569,
+            53274,
+            13319
+          ]
+        },
+        {
+          "at": 1884,
+          "kind": "facility",
+          "id": "alloy_mine",
+          "level": 13,
+          "cost": [
+            580894,
+            193632,
+            0
+          ]
+        },
+        {
+          "at": 1956,
+          "kind": "facility",
+          "id": "fuel_refinery",
+          "level": 13,
+          "cost": [
+            338855,
+            242039,
+            145224
+          ]
+        }
+      ],
+      "reference": {
+        "produced": 12172997,
+        "levels": {
+          "alloy_mine": 13,
+          "crystal_mine": 14,
+          "fuel_refinery": 13,
+          "power_plant": 7,
+          "warehouse": 12,
+          "shipyard": 8,
+          "laboratory": 8
+        },
+        "research": {
+          "automation": 2,
+          "construction": 3,
+          "sensors": 2,
+          "chemical_drive": 2,
+          "navigation": 2,
+          "power_efficiency": 4,
+          "espionage": 3,
+          "astrography": 2,
+          "colony_management": 1,
+          "shield": 3,
+          "ion_drive": 3,
+          "fleet_command": 2,
+          "coordination": 3,
+          "beam": 1,
+          "electronic_warfare": 2,
+          "fusion_drive": 2,
+          "carrier_ops": 3,
+          "terraforming": 1
+        },
+        "fleetValue": 0
+      }
+    }
+  ]
+}

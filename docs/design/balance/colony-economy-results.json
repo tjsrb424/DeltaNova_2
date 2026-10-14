@@ -1,0 +1,7908 @@
+{
+  "version": "season-content-draft-2",
+  "fixture": {
+    "tech": {
+      "automation": 2,
+      "refining": 1,
+      "power_efficiency": 2,
+      "storage": 2,
+      "construction": 2,
+      "shipbuilding": 2,
+      "kinetic": 1,
+      "chemical_drive": 2,
+      "ion_drive": 1,
+      "navigation": 2,
+      "fuel_efficiency": 2,
+      "cargo_compression": 2,
+      "colony_management": 1,
+      "sensors": 2,
+      "astrography": 2,
+      "supply_network": 1
+    },
+    "opening": {
+      "alloy_mine": 4,
+      "crystal_mine": 4,
+      "fuel_refinery": 4,
+      "power_plant": 3,
+      "warehouse": 6,
+      "shipyard": 3,
+      "laboratory": 3,
+      "spaceport": 2
+    },
+    "initial": [
+      50000,
+      35000,
+      18000
+    ],
+    "pack": [
+      4000,
+      2500,
+      1000
+    ],
+    "working": [
+      3000,
+      1500,
+      1000
+    ],
+    "foundingFleet": {
+      "colony": 1,
+      "courier": 5
+    },
+    "colonySite": [
+      1.15,
+      1,
+      0.9
+    ]
+  },
+  "baseline": [
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": true,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": null,
+      "investment": 0,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 0,
+      "fuelExpense": 0,
+      "realized": 0,
+      "projectNet": 0,
+      "paybackDay": null,
+      "colonyLevels": {
+        "alloy_mine": 1,
+        "crystal_mine": 1,
+        "fuel_refinery": 1,
+        "power_plant": 1,
+        "warehouse": 1
+      },
+      "colonyProduced": 0,
+      "colonyWastePercent": 0,
+      "colonyStock": [
+        0,
+        0,
+        0
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        24917.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2067200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2276666.88,
+      "fields": 5
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": true,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": null,
+      "investment": 0,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 0,
+      "fuelExpense": 0,
+      "realized": 0,
+      "projectNet": 0,
+      "paybackDay": null,
+      "colonyLevels": {
+        "alloy_mine": 1,
+        "crystal_mine": 1,
+        "fuel_refinery": 1,
+        "power_plant": 1,
+        "warehouse": 1
+      },
+      "colonyProduced": 0,
+      "colonyWastePercent": 0,
+      "colonyStock": [
+        0,
+        0,
+        0
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        17717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2080000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2282266.88,
+      "fields": 5
+    }
+  ],
+  "cases": [
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 67,
+      "fuelExpense": 232,
+      "realized": 280187,
+      "projectNet": 243255,
+      "paybackDay": 28.0833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 708176.04,
+      "colonyWastePercent": 84.753,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 701,
+      "fuelExpense": 2134,
+      "realized": 3031112,
+      "projectNet": 2992278,
+      "paybackDay": 25.2604,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3439241.5529,
+      "colonyWastePercent": 25.9533,
+      "colonyStock": [
+        37812.1929,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 304,
+      "homeCash": [
+        59935.504,
+        92225.696,
+        40867.8928
+      ],
+      "homeFactoryValue": 5545600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5738629.0928,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 126,
+      "fuelExpense": 409,
+      "realized": 542869,
+      "projectNet": 505760,
+      "paybackDay": 26.0833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 970858.04,
+      "colonyWastePercent": 79.1891,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 41,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 728,
+      "fuelExpense": 2215,
+      "realized": 3102853,
+      "projectNet": 3063938,
+      "paybackDay": 24.5938,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3510982.5604,
+      "colonyWastePercent": 24.7399,
+      "colonyStock": [
+        37812.2004,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 48,
+      "homeCash": [
+        34616.504,
+        91225.8164,
+        90372.7584
+      ],
+      "homeFactoryValue": 5612800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5829015.0788,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 361,
+      "realized": 280096,
+      "projectNet": 243035,
+      "paybackDay": 28.0625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 708085.04,
+      "colonyWastePercent": 84.755,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 926,
+      "fuelExpense": 4661,
+      "realized": 3508683,
+      "projectNet": 3467322,
+      "paybackDay": 24.9792,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3915398.5529,
+      "colonyWastePercent": 15.7017,
+      "colonyStock": [
+        36398.1929,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        59549.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5548800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5792898.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 127,
+      "fuelExpense": 666,
+      "realized": 547443,
+      "projectNet": 510077,
+      "paybackDay": 25.5625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 975432.04,
+      "colonyWastePercent": 79.091,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 931,
+      "fuelExpense": 4686,
+      "realized": 3520803,
+      "projectNet": 3479417,
+      "paybackDay": 24.5417,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3927321.1165,
+      "colonyWastePercent": 15.8154,
+      "colonyStock": [
+        36752.2004,
+        57120.2361,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        32076.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5619200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5835825.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 559,
+      "realized": 280096,
+      "projectNet": 242837,
+      "paybackDay": 28.0625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 708085.04,
+      "colonyWastePercent": 84.755,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 926,
+      "fuelExpense": 7439,
+      "realized": 3510066,
+      "projectNet": 3465927,
+      "paybackDay": 24.9792,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3916781.5529,
+      "colonyWastePercent": 15.6719,
+      "colonyStock": [
+        36398.1929,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        59549.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5548800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5792898.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 127,
+      "fuelExpense": 1047,
+      "realized": 547467,
+      "projectNet": 509720,
+      "paybackDay": 25.5625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 975456.04,
+      "colonyWastePercent": 79.0905,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 931,
+      "fuelExpense": 7479,
+      "realized": 3522243,
+      "projectNet": 3478064,
+      "paybackDay": 24.5417,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3928761.1165,
+      "colonyWastePercent": 15.7846,
+      "colonyStock": [
+        36752.2004,
+        57120.2361,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        32076.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5619200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5835825.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 617,
+      "realized": 277647,
+      "projectNet": 240330,
+      "paybackDay": 29.2292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 705636.04,
+      "colonyWastePercent": 84.7842,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 232,
+      "fuelExpense": 1945,
+      "realized": 980761.1264,
+      "projectNet": 942116.1264,
+      "paybackDay": 25.5833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1408798.04,
+      "colonyWastePercent": 69.6217,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        47.8736,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 908,
+      "homeCash": [
+        92274.688,
+        20026.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3094400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3298976.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 126,
+      "fuelExpense": 1097,
+      "realized": 541544,
+      "projectNet": 503747,
+      "paybackDay": 26.7292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 969533.04,
+      "colonyWastePercent": 79.1768,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 27,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 257,
+      "fuelExpense": 2145,
+      "realized": 1093969.3112,
+      "projectNet": 1055124.3112,
+      "paybackDay": 25.0521,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1522006.04,
+      "colonyWastePercent": 67.311,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        47.6888,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 399,
+      "homeCash": [
+        92274.688,
+        14800.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3376000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3575350.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 1013,
+      "realized": 277273,
+      "projectNet": 239560,
+      "paybackDay": 29.1667,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 705262.04,
+      "colonyWastePercent": 84.7923,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 367,
+      "fuelExpense": 5227,
+      "realized": 1578612,
+      "projectNet": 1536685,
+      "paybackDay": 25.3333,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 2006601.04,
+      "colonyWastePercent": 56.7312,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 17,
+      "homeCash": [
+        92274.688,
+        27997.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3868800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4081347.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 126,
+      "fuelExpense": 1853,
+      "realized": 542253,
+      "projectNet": 503700,
+      "paybackDay": 26.6667,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 970242.04,
+      "colonyWastePercent": 79.1616,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 33,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 327,
+      "fuelExpense": 4667,
+      "realized": 1397053.9944,
+      "projectNet": 1355686.9944,
+      "paybackDay": 24.8646,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1825188.04,
+      "colonyWastePercent": 60.7994,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        145.0056,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 751,
+      "homeCash": [
+        92274.688,
+        20733.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3616000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3821283.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 67,
+      "fuelExpense": 1630,
+      "realized": 278670,
+      "projectNet": 240340,
+      "paybackDay": 29.125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 706659.04,
+      "colonyWastePercent": 84.7621,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 345,
+      "fuelExpense": 8024,
+      "realized": 1476368.876,
+      "projectNet": 1431644.876,
+      "paybackDay": 25.1667,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1904466.04,
+      "colonyWastePercent": 58.9335,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        108.124,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1725,
+      "homeCash": [
+        92274.688,
+        19887.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3516800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3721237.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 126,
+      "fuelExpense": 2987,
+      "realized": 542706,
+      "projectNet": 503019,
+      "paybackDay": 26.625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 970695.04,
+      "colonyWastePercent": 79.1518,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 37,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 392,
+      "fuelExpense": 9105,
+      "realized": 1674182,
+      "projectNet": 1628377,
+      "paybackDay": 24.7396,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 2101762.8501,
+      "colonyWastePercent": 54.8592,
+      "colonyStock": [
+        57671.68,
+        57263.4901,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1214,
+      "homeCash": [
+        92274.688,
+        17262.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3836800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4038612.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 63,
+      "fuelExpense": 1496,
+      "realized": 274118,
+      "projectNet": 235922,
+      "paybackDay": 30.6042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 702107.04,
+      "colonyWastePercent": 84.8557,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 39,
+      "homeCash": [
+        29717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2476800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2691066.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 106,
+      "fuelExpense": 2356,
+      "realized": 450000,
+      "projectNet": 410944,
+      "paybackDay": 27.7083,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 877989.04,
+      "colonyWastePercent": 81.0619,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        34717.504,
+        24587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2780800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2932380.096,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 65,
+      "fuelExpense": 1536,
+      "realized": 278783,
+      "projectNet": 240547,
+      "paybackDay": 29.6042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 706772.04,
+      "colonyWastePercent": 84.7979,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        21517.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2499200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2705266.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 106,
+      "fuelExpense": 2356,
+      "realized": 453095,
+      "projectNet": 414039,
+      "paybackDay": 26.9688,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 881084.04,
+      "colonyWastePercent": 81.0485,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        22117.504,
+        17587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2803200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2935180.096,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 65,
+      "fuelExpense": 2706,
+      "realized": 278478,
+      "projectNet": 239072,
+      "paybackDay": 29.4167,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 706467.04,
+      "colonyWastePercent": 84.7616,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 151,
+      "fuelExpense": 5974,
+      "realized": 640650,
+      "projectNet": 597976,
+      "paybackDay": 26.3542,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1068639.04,
+      "colonyWastePercent": 76.9497,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 23,
+      "homeCash": [
+        92274.688,
+        18777.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2921600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3124927.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 124,
+      "fuelExpense": 4948,
+      "realized": 537114.872,
+      "projectNet": 495466.872,
+      "paybackDay": 26.9167,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 965265.04,
+      "colonyWastePercent": 79.2379,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        161.128,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 18,
+      "homeCash": [
+        92274.688,
+        12936.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016686.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 153,
+      "fuelExpense": 6050,
+      "realized": 648929,
+      "projectNet": 606179,
+      "paybackDay": 26.2188,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1076918.04,
+      "colonyWastePercent": 76.8363,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 7,
+      "homeCash": [
+        92201.2416,
+        12334.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2934400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3131210.8336,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 65,
+      "fuelExpense": 4071,
+      "realized": 277856,
+      "projectNet": 237085,
+      "paybackDay": 29.3125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 705845.04,
+      "colonyWastePercent": 84.7751,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 196,
+      "fuelExpense": 11800,
+      "realized": 835825,
+      "projectNet": 787325,
+      "paybackDay": 25.9375,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1263814.04,
+      "colonyWastePercent": 72.7398,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 139,
+      "homeCash": [
+        92274.688,
+        19213.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3104000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3307763.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 126,
+      "fuelExpense": 7670,
+      "realized": 541337,
+      "projectNet": 496967,
+      "paybackDay": 26.8125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 969326.04,
+      "colonyWastePercent": 79.1505,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 19,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 201,
+      "fuelExpense": 12095,
+      "realized": 856800,
+      "projectNet": 808005,
+      "paybackDay": 25.4792,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1284789.04,
+      "colonyWastePercent": 72.3651,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 42,
+      "homeCash": [
+        91127.7952,
+        12940.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3158400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3354743.3872,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 60,
+      "fuelExpense": 571,
+      "realized": 1544047,
+      "projectNet": 1493976,
+      "paybackDay": 27.1458,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1972036.04,
+      "colonyWastePercent": 57.5422,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 83,
+      "homeCash": [
+        92274.688,
+        21344.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3270400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3476294.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 179,
+      "fuelExpense": 1642,
+      "realized": 3694580.3876,
+      "projectNet": 3643438.3876,
+      "paybackDay": 26.1563,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 4102305.1712,
+      "colonyWastePercent": 11.6776,
+      "colonyStock": [
+        55127.9532,
+        39918.538,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        32.6124
+      ],
+      "overflowQuarterHours": 3214,
+      "homeCash": [
+        59024.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5456000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5699573.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 120,
+      "fuelExpense": 1111,
+      "realized": 3122249,
+      "projectNet": 3071638,
+      "paybackDay": 25.6458,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3540979.8265,
+      "colonyWastePercent": 24.0969,
+      "colonyStock": [
+        48413.4665,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 35,
+      "homeCash": [
+        60237.504,
+        92274.688,
+        9102.8928
+      ],
+      "homeFactoryValue": 5516800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5678415.0848,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 188,
+      "fuelExpense": 1723,
+      "realized": 3689747.8968,
+      "projectNet": 3638524.8968,
+      "paybackDay": 25.0313,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 4081918.498,
+      "colonyWastePercent": 12.5015,
+      "colonyStock": [
+        43112.2004,
+        36338.6176,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        42.0188,
+        32.0844
+      ],
+      "overflowQuarterHours": 2946,
+      "homeCash": [
+        39716.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5580800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5805065.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 60,
+      "fuelExpense": 1051,
+      "realized": 1543055,
+      "projectNet": 1492504,
+      "paybackDay": 27.1042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1971044.04,
+      "colonyWastePercent": 57.5635,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 87,
+      "homeCash": [
+        92274.688,
+        21874.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3267200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3473624.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 179,
+      "fuelExpense": 3074,
+      "realized": 3580177.3512,
+      "projectNet": 3527603.3512,
+      "paybackDay": 26.1146,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3991876.898,
+      "colonyWastePercent": 14.0551,
+      "colonyStock": [
+        57671.68,
+        41327.538,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        54.6488
+      ],
+      "overflowQuarterHours": 3865,
+      "homeCash": [
+        55746.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5200000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5440295.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 120,
+      "fuelExpense": 2071,
+      "realized": 3121727,
+      "projectNet": 3070156,
+      "paybackDay": 25.6042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3541164.5827,
+      "colonyWastePercent": 24.0929,
+      "colonyStock": [
+        49120.2227,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 39,
+      "homeCash": [
+        63131.504,
+        92274.688,
+        8974.8928
+      ],
+      "homeFactoryValue": 5510400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5674781.0848,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 201,
+      "fuelExpense": 3448,
+      "realized": 3747560.1152,
+      "projectNet": 3694612.1152,
+      "paybackDay": 25.1042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 4141975.498,
+      "colonyWastePercent": 11.2142,
+      "colonyStock": [
+        48766.2004,
+        32932.6176,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        70.8848,
+        0
+      ],
+      "overflowQuarterHours": 3216,
+      "homeCash": [
+        30462.504,
+        92274.688,
+        91936.812
+      ],
+      "homeFactoryValue": 5587200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5801874.004,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 60,
+      "fuelExpense": 1591,
+      "realized": 1542562,
+      "projectNet": 1491471,
+      "paybackDay": 27.0833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1970551.04,
+      "colonyWastePercent": 57.5741,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 89,
+      "homeCash": [
+        92274.688,
+        21639.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3267200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3473389.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 179,
+      "fuelExpense": 4685,
+      "realized": 3567524.7176,
+      "projectNet": 3513339.7176,
+      "paybackDay": 26.0938,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3978786.898,
+      "colonyWastePercent": 14.3369,
+      "colonyStock": [
+        57671.68,
+        40792.538,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        85.4828,
+        66.7996
+      ],
+      "overflowQuarterHours": 4062,
+      "homeCash": [
+        54495.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5152000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5391044.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 120,
+      "fuelExpense": 3151,
+      "realized": 3121469,
+      "projectNet": 3068818,
+      "paybackDay": 25.5833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3541259.9608,
+      "colonyWastePercent": 24.0909,
+      "colonyStock": [
+        49473.6008,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 41,
+      "homeCash": [
+        69977.504,
+        92274.688,
+        9130.8928
+      ],
+      "homeFactoryValue": 5497600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5668983.0848,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 206,
+      "fuelExpense": 5387,
+      "realized": 3805828.8552,
+      "projectNet": 3750941.8552,
+      "paybackDay": 25.0938,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 4196728.498,
+      "colonyWastePercent": 10.0405,
+      "colonyStock": [
+        45939.2004,
+        32162.6176,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        85.7176,
+        66.4272
+      ],
+      "overflowQuarterHours": 3487,
+      "homeCash": [
+        31489.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5590400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5806438.88,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 45,
+      "fuelExpense": 1259,
+      "realized": 1148652,
+      "projectNet": 1097893,
+      "paybackDay": 26.4375,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1576641.04,
+      "colonyWastePercent": 66.0025,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 880,
+      "homeCash": [
+        92274.688,
+        21432.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3318400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3524382.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 120,
+      "fuelExpense": 3209,
+      "realized": 3107753.7564,
+      "projectNet": 3055044.7564,
+      "paybackDay": 26.4479,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3527485.9877,
+      "colonyWastePercent": 23.9359,
+      "colonyStock": [
+        49473.6459,
+        57486.6618,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        126.2436,
+        0
+      ],
+      "overflowQuarterHours": 726,
+      "homeCash": [
+        55192.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 5488000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5727741.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 107,
+      "fuelExpense": 2871,
+      "realized": 2776140,
+      "projectNet": 2723769,
+      "paybackDay": 25.4375,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3186825.7785,
+      "colonyWastePercent": 31.5547,
+      "colonyStock": [
+        43466.4848,
+        54573.6137,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 98,
+      "homeCash": [
+        33586.504,
+        92065.8024,
+        38384.96
+      ],
+      "homeFactoryValue": 5331200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5495237.2664,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 123,
+      "fuelExpense": 3287,
+      "realized": 3170758,
+      "projectNet": 3117971,
+      "paybackDay": 25.4063,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3584188.4495,
+      "colonyWastePercent": 23.0203,
+      "colonyStock": [
+        43113.0895,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 673,
+      "homeCash": [
+        39619.504,
+        88688.9316,
+        60344.028
+      ],
+      "homeFactoryValue": 5574400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5763052.4636,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 46,
+      "fuelExpense": 2343,
+      "realized": 1172209,
+      "projectNet": 1120366,
+      "paybackDay": 27.2917,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1600198.04,
+      "colonyWastePercent": 65.4945,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1035,
+      "homeCash": [
+        79838.2848,
+        18977.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3225600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3416690.8768,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 142,
+      "fuelExpense": 7047,
+      "realized": 3358585.7276,
+      "projectNet": 3302038.7276,
+      "paybackDay": 25.6875,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3773412.0058,
+      "colonyWastePercent": 18.633,
+      "colonyStock": [
+        52653.6044,
+        49442.7213,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        84.2724,
+        0
+      ],
+      "overflowQuarterHours": 1758,
+      "homeCash": [
+        48507.504,
+        92274.688,
+        90361.5596
+      ],
+      "homeFactoryValue": 5491200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5722343.7516,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 115,
+      "fuelExpense": 5724,
+      "realized": 2986572,
+      "projectNet": 2931348,
+      "paybackDay": 25.7917,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3401374.6647,
+      "colonyWastePercent": 26.9467,
+      "colonyStock": [
+        45939.6845,
+        56217.3002,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 126,
+      "homeCash": [
+        33329.504,
+        86055.8784,
+        9907.8928
+      ],
+      "homeFactoryValue": 5472000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5601293.2752,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 154,
+      "fuelExpense": 7635,
+      "realized": 3345197.6224,
+      "projectNet": 3288062.6224,
+      "paybackDay": 25.1667,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3756570.1269,
+      "colonyWastePercent": 19.318,
+      "colonyStock": [
+        45586.0895,
+        53056.3574,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        84.3776,
+        0
+      ],
+      "overflowQuarterHours": 1420,
+      "homeCash": [
+        29946.504,
+        92274.688,
+        91443.874
+      ],
+      "homeFactoryValue": 5587200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5800865.066,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 45,
+      "fuelExpense": 3599,
+      "realized": 1144770,
+      "projectNet": 1091671,
+      "paybackDay": 27.2292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1572759.04,
+      "colonyWastePercent": 66.0862,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1200,
+      "homeCash": [
+        81695.4656,
+        18902.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3168000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3360873.0576,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 123,
+      "fuelExpense": 9683,
+      "realized": 3125171.6432,
+      "projectNet": 3065988.6432,
+      "paybackDay": 26.2396,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3548484.1669,
+      "colonyWastePercent": 23.4832,
+      "colonyStock": [
+        55834.4408,
+        54705.0462,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        127.3568,
+        0
+      ],
+      "overflowQuarterHours": 3064,
+      "homeCash": [
+        57021.504,
+        92274.688,
+        61531.296
+      ],
+      "homeFactoryValue": 5248000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5458827.488,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 117,
+      "fuelExpense": 9215,
+      "realized": 3039037,
+      "projectNet": 2980322,
+      "paybackDay": 25.7292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3455604.2361,
+      "colonyWastePercent": 25.782,
+      "colonyStock": [
+        46999.8189,
+        56921.7372,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 108,
+      "homeCash": [
+        61622.504,
+        87123.6392,
+        9000.8928
+      ],
+      "homeFactoryValue": 5456000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5613747.036,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 166,
+      "fuelExpense": 13037,
+      "realized": 3498314.4164,
+      "projectNet": 3435777.4164,
+      "paybackDay": 25.2813,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3907706.6944,
+      "colonyWastePercent": 16.0719,
+      "colonyStock": [
+        46646.0895,
+        49972.9249,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        127.5836,
+        0
+      ],
+      "overflowQuarterHours": 2024,
+      "homeCash": [
+        25286.504,
+        92274.688,
+        91292.8576
+      ],
+      "homeFactoryValue": 5593600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5802454.0496,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 31,
+      "fuelExpense": 2344,
+      "realized": 784312,
+      "projectNet": 732468,
+      "paybackDay": 28.125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1212301.04,
+      "colonyWastePercent": 73.8509,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        67507.504,
+        18597.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3120000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3298380.096,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 54,
+      "fuelExpense": 3908,
+      "realized": 1390578,
+      "projectNet": 1337170,
+      "paybackDay": 27.1042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1818567.04,
+      "colonyWastePercent": 60.7738,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 15,
+      "homeCash": [
+        49399.9608,
+        21146.904,
+        91118.2848
+      ],
+      "homeFactoryValue": 3827200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3988865.1496,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 41,
+      "fuelExpense": 3024,
+      "realized": 1046408,
+      "projectNet": 993884,
+      "paybackDay": 27.625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1474397.04,
+      "colonyWastePercent": 68.2868,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        74200.504,
+        12704.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3420800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3599980.096,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 55,
+      "fuelExpense": 3976,
+      "realized": 1393261,
+      "projectNet": 1339785,
+      "paybackDay": 26.9583,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1821250.04,
+      "colonyWastePercent": 60.8263,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        62046.504,
+        12458.904,
+        89904.6208
+      ],
+      "homeFactoryValue": 3827200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3991610.0288,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 42,
+      "fuelExpense": 5738,
+      "realized": 1072401.1872,
+      "projectNet": 1017163.1872,
+      "paybackDay": 26.75,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1499705.7263,
+      "colonyWastePercent": 67.6516,
+      "colonyStock": [
+        56917.3663,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        69.8128,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 500,
+      "homeCash": [
+        92274.688,
+        23280.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3315200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3523030.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 69,
+      "fuelExpense": 9275,
+      "realized": 1785276.0096,
+      "projectNet": 1726501.0096,
+      "paybackDay": 26.3542,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 2210543.3481,
+      "colonyWastePercent": 52.319,
+      "colonyStock": [
+        54879.9881,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        69.9904,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 855,
+      "homeCash": [
+        92274.688,
+        21772.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4070400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4276722.28,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 61,
+      "fuelExpense": 8227,
+      "realized": 1579231,
+      "projectNet": 1521504,
+      "paybackDay": 26.75,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 2007220.04,
+      "colonyWastePercent": 56.8262,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        85607.504,
+        19697.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4003200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4200780.096,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 80,
+      "fuelExpense": 10716,
+      "realized": 2075083,
+      "projectNet": 2014867,
+      "paybackDay": 26.2083,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 2503072.04,
+      "colonyWastePercent": 46.1608,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 5,
+      "homeCash": [
+        50365.2912,
+        12635.904,
+        88704.6208
+      ],
+      "homeFactoryValue": 4620800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4772505.816,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 45,
+      "fuelExpense": 9551,
+      "realized": 1150550,
+      "projectNet": 1091499,
+      "paybackDay": 26.5625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 1578539.04,
+      "colonyWastePercent": 65.9512,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 688,
+      "homeCash": [
+        92274.688,
+        21816.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3340800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3547166.28,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 107,
+      "fuelExpense": 22385,
+      "realized": 2781895,
+      "projectNet": 2710010,
+      "paybackDay": 25.9792,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3197444.9746,
+      "colonyWastePercent": 31.0317,
+      "colonyStock": [
+        45232.6146,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 3,
+      "homeCash": [
+        71543.8976,
+        69207.904,
+        13784.14
+      ],
+      "homeFactoryValue": 5334400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5488935.9416,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 62,
+      "fuelExpense": 13070,
+      "realized": 1580660,
+      "projectNet": 1518090,
+      "paybackDay": 26.5625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 2008649.04,
+      "colonyWastePercent": 56.7955,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        76437.504,
+        14867.904,
+        90127.5536
+      ],
+      "homeFactoryValue": 4019200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4200632.9616,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "balanced",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 108,
+      "fuelExpense": 22592,
+      "realized": 2786236,
+      "projectNet": 2714144,
+      "paybackDay": 25.8333,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 3208000.4475,
+      "colonyWastePercent": 30.9983,
+      "colonyStock": [
+        57671.68,
+        51447.0875,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        74451.504,
+        49933.904,
+        8855.8256
+      ],
+      "homeFactoryValue": 5360000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 5493241.2336,
+      "fields": 26
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 229,
+      "realized": 278218,
+      "projectNet": 241289,
+      "paybackDay": 29.0833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 580427.04,
+      "colonyWastePercent": 81.4928,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 528,
+      "fuelExpense": 1615,
+      "realized": 2225985.5672,
+      "projectNet": 2187670.5672,
+      "paybackDay": 23.8333,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2513793.5,
+      "colonyWastePercent": 19.8466,
+      "colonyStock": [
+        57671.68,
+        43198.14,
+        57671.68
+      ],
+      "inFlightCargo": [
+        72.4328,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1653,
+      "homeCash": [
+        92274.688,
+        23137.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4294400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4502087.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 130,
+      "fuelExpense": 421,
+      "realized": 555049,
+      "projectNet": 517928,
+      "paybackDay": 25.0833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 857258.04,
+      "colonyWastePercent": 72.8229,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8928571428571428,
+        "fuel": 3,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 554,
+      "fuelExpense": 1693,
+      "realized": 2284257.3656,
+      "projectNet": 2245864.3656,
+      "paybackDay": 22.8646,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2551113.172,
+      "colonyWastePercent": 19.1237,
+      "colonyStock": [
+        57671.68,
+        22246.812,
+        57671.68
+      ],
+      "inFlightCargo": [
+        71.6344,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1489,
+      "homeCash": [
+        92274.688,
+        13766.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4396800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4595116.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 67,
+      "fuelExpense": 366,
+      "realized": 279018,
+      "projectNet": 241952,
+      "paybackDay": 28.0625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 581227.04,
+      "colonyWastePercent": 81.4673,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 724,
+      "fuelExpense": 3651,
+      "realized": 2583798,
+      "projectNet": 2543447,
+      "paybackDay": 23.8542,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2837718.0835,
+      "colonyWastePercent": 9.5181,
+      "colonyStock": [
+        57671.68,
+        9615.14,
+        57439.2635
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        27720.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4387200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4599470.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 130,
+      "fuelExpense": 681,
+      "realized": 554817,
+      "projectNet": 517436,
+      "paybackDay": 25.0625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 857026.04,
+      "colonyWastePercent": 72.8303,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 5,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 727,
+      "fuelExpense": 3666,
+      "realized": 2540103,
+      "projectNet": 2499737,
+      "paybackDay": 22.875,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2793440.8443,
+      "colonyWastePercent": 11.4414,
+      "colonyStock": [
+        57671.68,
+        8909.812,
+        57562.3523
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        17103.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4428800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4630453.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 67,
+      "fuelExpense": 567,
+      "realized": 279018,
+      "projectNet": 241751,
+      "paybackDay": 28.0625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 581227.04,
+      "colonyWastePercent": 81.4673,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 724,
+      "fuelExpense": 5823,
+      "realized": 2585160,
+      "projectNet": 2542637,
+      "paybackDay": 23.8542,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2839053.0835,
+      "colonyWastePercent": 9.4756,
+      "colonyStock": [
+        57671.68,
+        9615.14,
+        57412.2635
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        27720.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4387200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4599470.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 130,
+      "fuelExpense": 1071,
+      "realized": 554817,
+      "projectNet": 517046,
+      "paybackDay": 25.0625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 857026.04,
+      "colonyWastePercent": 72.8303,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 36731,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.75,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 727,
+      "fuelExpense": 5847,
+      "realized": 2540850,
+      "projectNet": 2498303,
+      "paybackDay": 22.875,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2794172.8443,
+      "colonyWastePercent": 11.4182,
+      "colonyStock": [
+        57671.68,
+        8909.812,
+        57547.3523
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        17103.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4428800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4630453.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 617,
+      "realized": 279488,
+      "projectNet": 242171,
+      "paybackDay": 28.2292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 581697.04,
+      "colonyWastePercent": 81.4496,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        29657.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2700606.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 237,
+      "fuelExpense": 1985,
+      "realized": 1010547,
+      "projectNet": 971862,
+      "paybackDay": 24.2708,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1309943.802,
+      "colonyWastePercent": 58.2256,
+      "colonyStock": [
+        57671.68,
+        54859.442,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 865,
+      "homeCash": [
+        92274.688,
+        22833.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3136000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3343383.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 130,
+      "fuelExpense": 1129,
+      "realized": 558316,
+      "projectNet": 520487,
+      "paybackDay": 24.7292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 860525.04,
+      "colonyWastePercent": 72.6936,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.6785714285714284,
+        "fuel": 8,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 263,
+      "fuelExpense": 2193,
+      "realized": 1123298,
+      "projectNet": 1084405,
+      "paybackDay": 23.3646,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1422341.966,
+      "colonyWastePercent": 54.8658,
+      "colonyStock": [
+        57671.68,
+        54506.606,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 406,
+      "homeCash": [
+        92274.688,
+        17221.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3411200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3612971.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 1013,
+      "realized": 278500,
+      "projectNet": 240787,
+      "paybackDay": 29.1667,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 580709.04,
+      "colonyWastePercent": 81.4811,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28854.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699803.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 375,
+      "fuelExpense": 5339,
+      "realized": 1612962,
+      "projectNet": 1570923,
+      "paybackDay": 24,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1915171.04,
+      "colonyWastePercent": 38.9248,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 12,
+      "homeCash": [
+        90927.7952,
+        22857.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3920000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4126060.3872,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 130,
+      "fuelExpense": 1909,
+      "realized": 556817,
+      "projectNet": 518208,
+      "paybackDay": 24.6667,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 859026.04,
+      "colonyWastePercent": 72.7411,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.7857142857142856,
+        "fuel": 14,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 332,
+      "fuelExpense": 4737,
+      "realized": 1428286,
+      "projectNet": 1386849,
+      "paybackDay": 22.9792,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1730495.04,
+      "colonyWastePercent": 45.0874,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 781,
+      "homeCash": [
+        84146.2472,
+        13045.904,
+        91476.6208
+      ],
+      "homeFactoryValue": 3667200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3855868.772,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 66,
+      "fuelExpense": 1607,
+      "realized": 278240,
+      "projectNet": 239933,
+      "paybackDay": 29.125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 580449.04,
+      "colonyWastePercent": 81.4894,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        28717.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2486400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2699666.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 353,
+      "fuelExpense": 8208,
+      "realized": 1503817.5824,
+      "projectNet": 1458909.5824,
+      "paybackDay": 23.875,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1806135.04,
+      "colonyWastePercent": 42.402,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        108.4176,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1753,
+      "homeCash": [
+        92274.688,
+        21087.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3532800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3738437.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 130,
+      "fuelExpense": 3079,
+      "realized": 555818,
+      "projectNet": 516039,
+      "paybackDay": 25.125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 858027.04,
+      "colonyWastePercent": 72.7728,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 404,
+      "fuelExpense": 9381,
+      "realized": 1734531,
+      "projectNet": 1688450,
+      "paybackDay": 22.8854,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2036740.04,
+      "colonyWastePercent": 35.3696,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1200,
+      "homeCash": [
+        92274.688,
+        12218.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3910400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4107168.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 64,
+      "fuelExpense": 1516,
+      "realized": 275924,
+      "projectNet": 237708,
+      "paybackDay": 29.6042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 578133.04,
+      "colonyWastePercent": 81.5236,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        29834.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2492800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2707183.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 107,
+      "fuelExpense": 2376,
+      "realized": 453614,
+      "projectNet": 414538,
+      "paybackDay": 26.75,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 755823.04,
+      "colonyWastePercent": 75.8449,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        30434.504,
+        19587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2796800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2939097.096,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 65,
+      "fuelExpense": 1536,
+      "realized": 280170,
+      "projectNet": 241934,
+      "paybackDay": 28.6042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 582379.04,
+      "colonyWastePercent": 81.4996,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        21317.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2515200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2721066.88,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 7.142857142857142,
+        "fuel": 20,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 108,
+      "fuelExpense": 2396,
+      "realized": 460477,
+      "projectNet": 421381,
+      "paybackDay": 25.6667,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 762686.04,
+      "colonyWastePercent": 75.7719,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        24313.504,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2948376.096,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 65,
+      "fuelExpense": 2706,
+      "realized": 279987,
+      "projectNet": 240581,
+      "paybackDay": 28.4167,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 582196.04,
+      "colonyWastePercent": 81.3938,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        29584.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2499200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2713333.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 153,
+      "fuelExpense": 6050,
+      "realized": 648634,
+      "projectNet": 605884,
+      "paybackDay": 25.6771,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 950843.04,
+      "colonyWastePercent": 69.6123,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 48,
+      "homeCash": [
+        86572.0096,
+        18651.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2928000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3125498.6016,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 123,
+      "fuelExpense": 4910,
+      "realized": 535033,
+      "projectNet": 493423,
+      "paybackDay": 25.4167,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 837242.04,
+      "colonyWastePercent": 73.4034,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 36,
+      "homeCash": [
+        92274.688,
+        12431.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2822400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3019381.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 4.761904761904762,
+        "fuel": 38,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 155,
+      "fuelExpense": 6126,
+      "realized": 658412,
+      "projectNet": 615586,
+      "paybackDay": 24.8438,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 960621.04,
+      "colonyWastePercent": 69.4841,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        81037.7952,
+        14144.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2972800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3160257.3872,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 65,
+      "fuelExpense": 4071,
+      "realized": 278522,
+      "projectNet": 237751,
+      "paybackDay": 29.3125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 580731.04,
+      "colonyWastePercent": 81.4406,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        29716.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2496000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2710265.88,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 200,
+      "fuelExpense": 12036,
+      "realized": 849533,
+      "projectNet": 800797,
+      "paybackDay": 25.0938,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1151742.04,
+      "colonyWastePercent": 63.1918,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 118,
+      "homeCash": [
+        91127.7952,
+        18947.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3129600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3331950.3872,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 128,
+      "fuelExpense": 7788,
+      "realized": 552239,
+      "projectNet": 507751,
+      "paybackDay": 25.8125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 854448.04,
+      "colonyWastePercent": 72.8569,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        12587.904,
+        92274.688
+      ],
+      "homeFactoryValue": 2819200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3016337.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 36936,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 3.571428571428571,
+        "fuel": 59,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 205,
+      "fuelExpense": 12331,
+      "realized": 874715,
+      "projectNet": 825684,
+      "paybackDay": 24.3333,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1176924.04,
+      "colonyWastePercent": 62.6128,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 17,
+      "homeCash": [
+        92274.688,
+        13174.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3187200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3384924.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 61,
+      "fuelExpense": 580,
+      "realized": 1572004,
+      "projectNet": 1521924,
+      "paybackDay": 26.1458,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1874213.04,
+      "colonyWastePercent": 40.2399,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        21914.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3280000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3486464.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 143,
+      "fuelExpense": 1318,
+      "realized": 2607561.5776,
+      "projectNet": 2556743.5776,
+      "paybackDay": 24.4688,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2847102.6436,
+      "colonyWastePercent": 9.2189,
+      "colonyStock": [
+        57671.68,
+        14996.14,
+        37646.8236
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        32.4224
+      ],
+      "overflowQuarterHours": 3537,
+      "homeCash": [
+        92274.688,
+        27139.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4361600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4573289.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 87,
+      "fuelExpense": 814,
+      "realized": 2218287,
+      "projectNet": 2167973,
+      "paybackDay": 24.1458,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2479143.172,
+      "colonyWastePercent": 21.4054,
+      "colonyStock": [
+        57671.68,
+        16318.812,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1260,
+      "homeCash": [
+        71655.8384,
+        12494.904,
+        90704.6208
+      ],
+      "homeFactoryValue": 4409600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4584455.3632,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.6680567139282734,
+        "fuel": 9,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 136,
+      "fuelExpense": 1255,
+      "realized": 2835085.4896,
+      "projectNet": 2784330.4896,
+      "paybackDay": 23.5625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 3073680.2422,
+      "colonyWastePercent": 2.5571,
+      "colonyStock": [
+        54546.8042,
+        11996.812,
+        42769.626
+      ],
+      "inFlightCargo": [
+        54.896,
+        0,
+        32.6144
+      ],
+      "overflowQuarterHours": 3843,
+      "homeCash": [
+        92274.688,
+        16816.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4409600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4610966.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 61,
+      "fuelExpense": 1068,
+      "realized": 1571880,
+      "projectNet": 1521312,
+      "paybackDay": 26.1042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1874089.04,
+      "colonyWastePercent": 40.2439,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        21914.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3280000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3486464.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 166,
+      "fuelExpense": 2853,
+      "realized": 2612378.5688,
+      "projectNet": 2560025.5688,
+      "paybackDay": 24.5833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2823018.673,
+      "colonyWastePercent": 9.9868,
+      "colonyStock": [
+        56724.7094,
+        13761.14,
+        10867.8236
+      ],
+      "inFlightCargo": [
+        92.4312,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 2757,
+      "homeCash": [
+        92274.688,
+        28374.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4361600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4574524.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 89,
+      "fuelExpense": 1544,
+      "realized": 2253766,
+      "projectNet": 2202722,
+      "paybackDay": 24.1042,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2514799.172,
+      "colonyWastePercent": 20.275,
+      "colonyStock": [
+        57671.68,
+        16495.812,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1326,
+      "homeCash": [
+        69894.2736,
+        12317.904,
+        90304.6208
+      ],
+      "homeFactoryValue": 4409600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4582116.7984,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 1.1120378092855157,
+        "fuel": 17,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 139,
+      "fuelExpense": 2394,
+      "realized": 2935728.8096,
+      "projectNet": 2883834.8096,
+      "paybackDay": 23.9167,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 3139281.8394,
+      "colonyWastePercent": 0.4774,
+      "colonyStock": [
+        53570.4014,
+        12173.812,
+        8521.626
+      ],
+      "inFlightCargo": [
+        93.1904,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 4270,
+      "homeCash": [
+        92274.688,
+        16639.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4409600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4610789.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 61,
+      "fuelExpense": 1617,
+      "realized": 1571818,
+      "projectNet": 1520701,
+      "paybackDay": 26.0833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1874027.04,
+      "colonyWastePercent": 40.2458,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        92274.688,
+        21914.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3280000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3486464.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 186,
+      "fuelExpense": 4867,
+      "realized": 2706806.4728,
+      "projectNet": 2652439.4728,
+      "paybackDay": 24.5208,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2918950.6436,
+      "colonyWastePercent": 6.928,
+      "colonyStock": [
+        57671.68,
+        14114.14,
+        11052.8236
+      ],
+      "inFlightCargo": [
+        111.5272,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 2768,
+      "homeCash": [
+        92274.688,
+        27021.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4364800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4576371.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 90,
+      "fuelExpense": 2371,
+      "realized": 2277266.5088,
+      "projectNet": 2225395.5088,
+      "paybackDay": 24.0833,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2526783.9576,
+      "colonyWastePercent": 19.895,
+      "colonyStock": [
+        50190.4656,
+        12349.812,
+        57671.68
+      ],
+      "inFlightCargo": [
+        111.4912,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1394,
+      "homeCash": [
+        92274.688,
+        22463.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4390400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4597413.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 1,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.1458,
+      "investment": 49531,
+      "foundingFuel": 31,
+      "route": {
+        "hours": 0.8340283569641367,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 145,
+      "fuelExpense": 3801,
+      "realized": 2939620,
+      "projectNet": 2886319,
+      "paybackDay": 23.8542,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 3139281.8394,
+      "colonyWastePercent": 0.4774,
+      "colonyStock": [
+        49473.4014,
+        12349.812,
+        8644.626
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1712,
+      "homeCash": [
+        92274.688,
+        16463.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4409600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4610613.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 45,
+      "fuelExpense": 1259,
+      "realized": 1153983,
+      "projectNet": 1103224,
+      "paybackDay": 26.4375,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1456192.04,
+      "colonyWastePercent": 53.5618,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 880,
+      "homeCash": [
+        92274.688,
+        21576.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3315200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3521326.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 121,
+      "fuelExpense": 3235,
+      "realized": 2071621,
+      "projectNet": 2018886,
+      "paybackDay": 24.8021,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2327449.7,
+      "colonyWastePercent": 25.7772,
+      "colonyStock": [
+        57671.68,
+        11291.34,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 524,
+      "homeCash": [
+        92274.688,
+        27698.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4371200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4583448.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 85,
+      "fuelExpense": 2299,
+      "realized": 1979582,
+      "projectNet": 1927783,
+      "paybackDay": 24.4375,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2239203.372,
+      "colonyWastePercent": 28.9449,
+      "colonyStock": [
+        57671.68,
+        15084.012,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 266,
+      "homeCash": [
+        71766.8176,
+        12583.904,
+        90704.6208
+      ],
+      "homeFactoryValue": 4412800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4587855.3424,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 5.004170141784821,
+        "fuel": 26,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 126,
+      "fuelExpense": 3365,
+      "realized": 2052209.1512,
+      "projectNet": 1999344.1512,
+      "paybackDay": 24.3438,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2306142.2027,
+      "colonyWastePercent": 26.8208,
+      "colonyStock": [
+        56139.5107,
+        10762.012,
+        57671.68
+      ],
+      "inFlightCargo": [
+        165.8488,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 683,
+      "homeCash": [
+        92274.688,
+        16905.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4412800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4614255.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 47,
+      "fuelExpense": 2392,
+      "realized": 1204477,
+      "projectNet": 1152585,
+      "paybackDay": 26.2917,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1506686.04,
+      "colonyWastePercent": 51.9515,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 966,
+      "homeCash": [
+        92274.688,
+        22050.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3222400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3429000.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 125,
+      "fuelExpense": 6214,
+      "realized": 2419232.5652,
+      "projectNet": 2363518.5652,
+      "paybackDay": 24.5729,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2677089.7,
+      "colonyWastePercent": 14.6271,
+      "colonyStock": [
+        57671.68,
+        13143.34,
+        57671.68
+      ],
+      "inFlightCargo": [
+        110.7512,
+        0,
+        65.6836
+      ],
+      "overflowQuarterHours": 2372,
+      "homeCash": [
+        92274.688,
+        27846.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4364800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4577196.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 85,
+      "fuelExpense": 4254,
+      "realized": 2104498.4528,
+      "projectNet": 2050744.4528,
+      "paybackDay": 24.2917,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2354850.3765,
+      "colonyWastePercent": 25.2752,
+      "colonyStock": [
+        51842.6845,
+        11468.012,
+        57671.68
+      ],
+      "inFlightCargo": [
+        110.0864,
+        0,
+        65.4608
+      ],
+      "overflowQuarterHours": 819,
+      "homeCash": [
+        92274.688,
+        23199.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4390400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4598149.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 3.336113427856547,
+        "fuel": 49,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 128,
+      "fuelExpense": 6361,
+      "realized": 2436954.5824,
+      "projectNet": 2381093.5824,
+      "paybackDay": 24.0938,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2691618.8494,
+      "colonyWastePercent": 14.5888,
+      "colonyStock": [
+        56243.1574,
+        11379.012,
+        57671.68
+      ],
+      "inFlightCargo": [
+        110.6584,
+        0,
+        65.7592
+      ],
+      "overflowQuarterHours": 2335,
+      "homeCash": [
+        92274.688,
+        17288.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4409600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4611438.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 46,
+      "fuelExpense": 3677,
+      "realized": 1176920.3296,
+      "projectNet": 1123743.3296,
+      "paybackDay": 26.2292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1479297.04,
+      "colonyWastePercent": 52.8249,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        167.6704,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 1200,
+      "homeCash": [
+        92274.688,
+        21983.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3168000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3374533.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 131,
+      "fuelExpense": 10307,
+      "realized": 2587809.39,
+      "projectNet": 2528002.39,
+      "paybackDay": 24.6979,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2845853.7314,
+      "colonyWastePercent": 9.2452,
+      "colonyStock": [
+        57174.4408,
+        13937.34,
+        57471.9506
+      ],
+      "inFlightCargo": [
+        167.2,
+        0,
+        99.41
+      ],
+      "overflowQuarterHours": 2930,
+      "homeCash": [
+        92274.688,
+        27052.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4364800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4576402.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 87,
+      "fuelExpense": 6875,
+      "realized": 2173954.6104,
+      "projectNet": 2117579.6104,
+      "paybackDay": 24.2292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2424138.5109,
+      "colonyWastePercent": 23.0765,
+      "colonyStock": [
+        51318.8189,
+        11732.012,
+        57671.68
+      ],
+      "inFlightCargo": [
+        167.6704,
+        0,
+        99.7192
+      ],
+      "overflowQuarterHours": 999,
+      "homeCash": [
+        92274.688,
+        22935.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4390400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4597885.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 132,
+      "fuelExpense": 10385,
+      "realized": 2616398.64,
+      "projectNet": 2556513.64,
+      "paybackDay": 23.9792,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2871461.9838,
+      "colonyWastePercent": 8.8819,
+      "colonyStock": [
+        56287.2918,
+        11644.012,
+        57671.68
+      ],
+      "inFlightCargo": [
+        167.2808,
+        0,
+        99.0792
+      ],
+      "overflowQuarterHours": 2985,
+      "homeCash": [
+        92274.688,
+        17023.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4409600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4611173.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 31,
+      "fuelExpense": 2344,
+      "realized": 798112,
+      "projectNet": 746268,
+      "paybackDay": 27.125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1100321.04,
+      "colonyWastePercent": 64.8352,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        80054.504,
+        21419.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3123200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3316949.096,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 55,
+      "fuelExpense": 3976,
+      "realized": 1414814,
+      "projectNet": 1361338,
+      "paybackDay": 26.2292,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1717023.04,
+      "colonyWastePercent": 45.1262,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 3,
+      "homeCash": [
+        58799.8976,
+        21568.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3849600,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4022243.4896,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 41,
+      "fuelExpense": 3024,
+      "realized": 1047743,
+      "projectNet": 995219,
+      "paybackDay": 27.125,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1349952.04,
+      "colonyWastePercent": 57.1162,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        71054.504,
+        13050.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3424000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3600380.096,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.5,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 13.344453711426187,
+        "fuel": 68,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 55,
+      "fuelExpense": 3976,
+      "realized": 1422595,
+      "projectNet": 1369119,
+      "paybackDay": 25.875,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1724804.04,
+      "colonyWastePercent": 45.2084,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        64969.504,
+        13186.904,
+        90704.6208
+      ],
+      "homeFactoryValue": 3859200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4028061.0288,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 42,
+      "fuelExpense": 5738,
+      "realized": 1085808.1872,
+      "projectNet": 1030570.1872,
+      "paybackDay": 26.75,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1387332.7263,
+      "colonyWastePercent": 55.6627,
+      "colonyStock": [
+        56917.3663,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        69.8128,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 500,
+      "homeCash": [
+        92274.688,
+        23351.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3331200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3539101.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 81,
+      "fuelExpense": 10847,
+      "realized": 1865123,
+      "projectNet": 1804776,
+      "paybackDay": 25.8958,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2127567.688,
+      "colonyWastePercent": 32.0057,
+      "colonyStock": [
+        57671.68,
+        17907.328,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 35,
+      "homeCash": [
+        77364.4984,
+        32611.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4323200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4525451.0904,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 62,
+      "fuelExpense": 8358,
+      "realized": 1609371,
+      "projectNet": 1551513,
+      "paybackDay": 24.75,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1906219.58,
+      "colonyWastePercent": 39.4454,
+      "colonyStock": [
+        57671.68,
+        52311.22,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        85607.504,
+        23370.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4038400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4239653.096,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 0.75,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 8.896302474284125,
+        "fuel": 131,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 82,
+      "fuelExpense": 10978,
+      "realized": 1893468,
+      "projectNet": 1832990,
+      "paybackDay": 24.7083,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2155912.272,
+      "colonyWastePercent": 31.5134,
+      "colonyStock": [
+        57671.68,
+        17906.912,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 5,
+      "homeCash": [
+        59365.2912,
+        12347.904,
+        90304.6208
+      ],
+      "homeFactoryValue": 4403200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4565217.816,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 45,
+      "fuelExpense": 9551,
+      "realized": 1162955.04,
+      "projectNet": 1103904.04,
+      "paybackDay": 25.5625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1465216.04,
+      "colonyWastePercent": 53.1736,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        51.96,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 731,
+      "homeCash": [
+        92274.688,
+        22143.904,
+        92274.688
+      ],
+      "homeFactoryValue": 3347200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 3553893.28,
+      "fields": 19
+    },
+    {
+      "visits": 1,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 95,
+      "fuelExpense": 19901,
+      "realized": 2052929.044,
+      "projectNet": 1983528.044,
+      "paybackDay": 25.0729,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2310957.688,
+      "colonyWastePercent": 26.1448,
+      "colonyStock": [
+        57671.68,
+        13408.328,
+        57671.68
+      ],
+      "inFlightCargo": [
+        52.4328,
+        0,
+        30.5232
+      ],
+      "overflowQuarterHours": 793,
+      "homeCash": [
+        92274.688,
+        33110.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4336000,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4553660.28,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "manual",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 62,
+      "fuelExpense": 13070,
+      "realized": 1608815,
+      "projectNet": 1546245,
+      "paybackDay": 24.5625,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 1902857.461,
+      "colonyWastePercent": 39.5522,
+      "colonyStock": [
+        57671.68,
+        49505.101,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 0,
+      "homeCash": [
+        88637.504,
+        27175.904,
+        92274.688
+      ],
+      "homeFactoryValue": 4028800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4236888.096,
+      "fields": 19
+    },
+    {
+      "visits": 2,
+      "distance": 8,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "demand",
+      "targetProfile": "alloy",
+      "establishedDay": 14.3854,
+      "investment": 49736,
+      "foundingFuel": 236,
+      "route": {
+        "hours": 6.6722268557130935,
+        "fuel": 207,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 105,
+      "fuelExpense": 21971,
+      "realized": 1953933,
+      "projectNet": 1882462,
+      "paybackDay": 24.8646,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 3,
+        "fuel_refinery": 3,
+        "power_plant": 2,
+        "warehouse": 5
+      },
+      "colonyProduced": 2214525.272,
+      "colonyWastePercent": 29.6515,
+      "colonyStock": [
+        57671.68,
+        16054.912,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        0
+      ],
+      "overflowQuarterHours": 179,
+      "homeCash": [
+        77053.572,
+        13199.904,
+        91904.6208
+      ],
+      "homeFactoryValue": 4406400,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 4588558.0968,
+      "fields": 19
+    }
+  ],
+  "diagnostics": [
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "courier",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "proportional",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 36789,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 1.3392857142857142,
+        "fuel": 23,
+        "cargo": 4400,
+        "command": 2
+      },
+      "departures": 137,
+      "fuelExpense": 3240,
+      "realized": 548812,
+      "projectNet": 508872,
+      "paybackDay": 25.6354,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 978630.04,
+      "colonyWastePercent": 78.9814,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        1829
+      ],
+      "overflowQuarterHours": 4344,
+      "homeCash": [
+        18928.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2268800,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2472277.88,
+      "fields": 26
+    },
+    {
+      "visits": 2,
+      "distance": 3,
+      "speed": 1,
+      "type": "heavy_cargo",
+      "mode": "planned",
+      "baseline": false,
+      "payloadPolicy": "proportional",
+      "targetProfile": "balanced",
+      "establishedDay": 14.2083,
+      "investment": 49589,
+      "foundingFuel": 89,
+      "route": {
+        "hours": 2.5020850708924103,
+        "fuel": 78,
+        "cargo": 26400,
+        "command": 6
+      },
+      "departures": 24,
+      "fuelExpense": 1961,
+      "realized": 554217.3764,
+      "projectNet": 502756.3764,
+      "paybackDay": 26.7396,
+      "colonyLevels": {
+        "alloy_mine": 6,
+        "crystal_mine": 6,
+        "fuel_refinery": 6,
+        "power_plant": 3,
+        "warehouse": 5
+      },
+      "colonyProduced": 990082.04,
+      "colonyWastePercent": 78.7354,
+      "colonyStock": [
+        57671.68,
+        57671.68,
+        57671.68
+      ],
+      "inFlightCargo": [
+        0,
+        0,
+        7875.6236
+      ],
+      "overflowQuarterHours": 5271,
+      "homeCash": [
+        16807.504,
+        92274.688,
+        92274.688
+      ],
+      "homeFactoryValue": 2259200,
+      "pendingFactoryValue": 0,
+      "homeRealizedWealth": 2460556.88,
+      "fields": 26
+    }
+  ],
+  "assertions": 1186
+}

@@ -1,0 +1,116 @@
+{
+  "version": "season-content-draft-2",
+  "daily": [
+    {
+      "profile": "industry",
+      "calendar": true,
+      "visits": 1,
+      "productionPercent": 94.2659,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "military",
+      "calendar": true,
+      "visits": 1,
+      "productionPercent": 96.565,
+      "submittedPercent": 99.5918
+    },
+    {
+      "profile": "science",
+      "calendar": true,
+      "visits": 1,
+      "productionPercent": 96.4229,
+      "submittedPercent": 100
+    }
+  ],
+  "frequentMax": 101.0074,
+  "striker": {
+    "before": {
+      "id": "striker",
+      "name": "케스트럴",
+      "legal": 53,
+      "wins": 48,
+      "losses": 1,
+      "held": 4,
+      "winPercent": 90.56603773584905
+    },
+    "after": {
+      "id": "striker",
+      "name": "케스트럴",
+      "legal": 53,
+      "wins": 42,
+      "losses": 2,
+      "held": 9,
+      "winPercent": 79.24528301886792
+    }
+  },
+  "transport": {
+    "before": 502756.3764,
+    "after": 3435777.4164,
+    "wasteBefore": 78.7354,
+    "wasteAfter": 16.0719
+  },
+  "counts": {
+    "attendance": 18,
+    "colony": 148,
+    "battles": 3008,
+    "economics": 8064,
+    "ratios": 1728,
+    "asymmetric": 120,
+    "support": 16
+  },
+  "checks": {
+    "catalog": 6491,
+    "battle": 12024,
+    "colony": 1186,
+    "independent": 18
+  },
+  "example": {
+    "budget": 150000,
+    "ratio": 2,
+    "attacker": "siege-mixed",
+    "defender": "siege-garrison",
+    "seed": 0,
+    "stockId": "high",
+    "spentA": 296000,
+    "spentB": 145000,
+    "actualRatio": 2.0413793103448277,
+    "profit": 20272.5062,
+    "loot": 89437.5,
+    "recovered": 0,
+    "fuel": 1752,
+    "repair": 1412.9938,
+    "permanentLoss": 66000,
+    "defenderPermanentLoss": 96600,
+    "defenderRepair": 14070,
+    "defenderDisabled": 7,
+    "cargo": 97800,
+    "tripHours": 6.6667,
+    "profitPerTravelHour": 3040.8759,
+    "outcome": "attacker"
+  },
+  "poor": {
+    "budget": 150000,
+    "ratio": 2,
+    "attacker": "siege-mixed",
+    "defender": "siege-garrison",
+    "seed": 0,
+    "stockId": "medium",
+    "spentA": 296000,
+    "spentB": 145000,
+    "actualRatio": 2.0413793103448277,
+    "profit": -51727.4938,
+    "loot": 17437.5,
+    "recovered": 0,
+    "fuel": 1752,
+    "repair": 1412.9938,
+    "permanentLoss": 66000,
+    "defenderPermanentLoss": 96600,
+    "defenderRepair": 14070,
+    "defenderDisabled": 7,
+    "cargo": 97800,
+    "tripHours": 6.6667,
+    "profitPerTravelHour": -7759.1241,
+    "outcome": "attacker"
+  }
+}

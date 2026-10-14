@@ -101,7 +101,7 @@ function nextResearch(id,target,state,shadow,stack=new Set()) {
 function simulate(profile,visits,shock=false) {
   const allocation=profile==='industry'?[0.75,0.20,0.05]:profile==='military'?[0.55,0.20,0.25]:[0.55,0.40,0.05];
   const state={levels:{...c.initialLevels},research:{},resources:[...c.initialResources],produced:[0,0,0],wasted:[0,0,0],spent:[0,0,0],
-    construction:[],study:[],ships:[],fleetValue:0,fleetSpent:0,
+    construction:[],study:[],ships:[],fleetValue:0,fleetSpent:0,commandPlan:[],
     constructionBudget:c.initialResources.map(v=>v*allocation[0]),studyBudget:c.initialResources.map(v=>v*allocation[1]),fleetBudget:c.initialResources.map(v=>v*allocation[2]),minPower:1,minCoverage:Infinity};
   const hours=c.seasonDays*24, step=0.25, snapshots=[], unlocks={}, shockEvents=[];
   let firstColonyTech=null;
@@ -142,7 +142,7 @@ function simulate(profile,visits,shock=false) {
           const f=fs.get(id),level=shadow[id]+1;if(level>f.maxLevel)continue;
           const cost=resourceCost(f,level);
           if(!canPay(state,cost,'constructionBudget')) break;
-          pay(state,cost,'constructionBudget');state.construction.push({id,level,finish:state.construction.length?Infinity:t+duration(f,level,state)});shadow[id]=level;added=true;break;
+          pay(state,cost,'constructionBudget');state.commandPlan.push({at:t,kind:'facility',id,level,cost});state.construction.push({id,level,finish:state.construction.length?Infinity:t+duration(f,level,state)});shadow[id]=level;added=true;break;
         }
         if(!added)break;
       }
@@ -156,7 +156,7 @@ function simulate(profile,visits,shock=false) {
           break;
         }
         if(!selected)break;
-        pay(state,selected.cost,'studyBudget');state.study.push({...selected,finish:state.study.length?Infinity:t+duration(rs.get(selected.id),selected.level,state,true)});shadowResearch[selected.id]=selected.level;
+        pay(state,selected.cost,'studyBudget');state.commandPlan.push({at:t,kind:'research',id:selected.id,level:selected.level,cost:selected.cost});state.study.push({...selected,finish:state.study.length?Infinity:t+duration(rs.get(selected.id),selected.level,state,true)});shadowResearch[selected.id]=selected.level;
       }
       if(!state.ships.length) {
         const options=['battlecruiser','cruiser','destroyer','striker'].map(id=>ss.get(id)).filter(s=>unlocks[s.id]);
@@ -164,6 +164,7 @@ function simulate(profile,visits,shock=false) {
           const n=Math.min(10,...ship.cost.map((value,i)=>value===0?Infinity:Math.floor(Math.min(state.resources[i],state.fleetBudget[i])/value)));
           if(n<1)continue;
           const cost=ship.cost.map(v=>v*n);pay(state,cost,'fleetBudget');const value=total(cost);state.fleetSpent+=value;
+          state.commandPlan.push({at:t,kind:'ship',id:ship.id,count:n,cost});
           state.ships.push({value,finish:t+ship.buildHours*n/(1+0.12*(state.levels.shipyard-1)+bonus(state.research,'shipbuilding'))});break;
         }
       }
@@ -184,7 +185,7 @@ function simulate(profile,visits,shock=false) {
   check(fields<=c.economy.planetFields,'Core planet field capacity');
   const technologyCost=Object.entries(state.research).reduce((sum,[id,l])=>sum+Array.from({length:l},(_,i)=>total(resourceCost(rs.get(id),i+1))).reduce((a,b)=>a+b,0),0);
   return {profile,visits,shock,firstColonyTech,levels:state.levels,research:state.research,unlocks,produced:Math.round(produced),wastePercent:100*wasted/(produced+wasted),fleetValue:Math.round(state.fleetValue),technologyCost,
-    minPower:state.minPower,minCoverage:state.minCoverage,fields,snapshots,shockEvents};
+    minPower:state.minPower,minCoverage:state.minCoverage,fields,snapshots,shockEvents,commandPlan:state.commandPlan};
 }
 const runs=[];
 for(const profile of ['industry','military','science'])for(const visits of c.sensitivityVisitsPerDay)runs.push(simulate(profile,visits));
@@ -208,11 +209,12 @@ for(const profile of ['industry','military','science']) {
   const ratio=daily.produced/reference.produced,extra=four.produced/reference.produced;
   if(ratio<0.8)findings.push(`${profile}: 하루 1회 생산은 2회의 ${(ratio*100).toFixed(1)}%로 목표 80%에 미달. 계획 큐와 저장 정책 재조정 필요.`);
   if(extra>1.15)findings.push(`${profile}: 하루 4회 생산은 2회의 ${(extra*100).toFixed(1)}%로 목표 115%를 초과. 접속 빈도 이점 재검증 필요.`);
-  if(ratio>1.2)findings.push(`${profile}: 하루 1회 생산이 2회의 ${(ratio*100).toFixed(1)}%. 정책의 재배정·투자 시점에 따른 순서 역전이며 1회 접속 자체의 우월성 근거로 사용할 수 없음. 동일 명령 계획을 고정한 추가 비교 필요.`);
+  if(ratio>1.2)findings.push(`${profile}: 하루 1회 생산이 2회의 ${(ratio*100).toFixed(1)}%. 정책의 재배정·투자 시점에 따른 순서 역전이며 1회 접속 자체의 우월성 근거로 사용할 수 없음. 빈도만 분리한 결과는 CONTROLLED_ECONOMY_V0.2.md를 따른다.`);
 }
 if(!runs.some(r=>r.visits<=2&&r.unlocks.battlecruiser))findings.push('하루 1~2회 기본 모델에서 T4 전투순양함이 84일 내 해금되지 않음. 해금 경로·연구 투자 정책 검토 필요.');
 for(const result of matchups)if(result.wins/(fighters.length-1)>0.85)findings.push(`${result.name}: 단순 상성 지표에서 비교 상대 85% 이상에 우세. 비용·병기·기동의 추가 조정 필요.`);
 const report=['# 시즌 콘텐츠 수치 검증 v0.1','',`규칙 ${c.version}. ${checks}개 구조·수치 조건 확인. 아래 결과는 추천 모델의 결정적 계산이며 런타임 테스트나 실제 PvP 승률이 아니다.`, '',
+ '2026-10-14 후속 검증: [동일 명령 계획](CONTROLLED_ECONOMY_V0.2.md), [식민지 수송](COLONY_ECONOMY_V0.2.md), [혼합 전투·약탈](COMBAT_AND_RAID_V0.2.md)을 추가했다. 아래 정책 비교와 연속 수량 지표의 한계는 유지하며 통제 실험의 결론과 혼동하지 않는다.','',
  '## 범위와 재현','', '`node docs/design/balance/audit.mjs`로 재현한다. 외부 의존성·GUI·서버·실제 DB를 사용하지 않는다. 같은 입력은 같은 결과와 카탈로그를 생성한다.', '',
  '모델은 본성 1개, 84일, 15분 간격, 무약탈·무수송·무식민지 생산이다. 최초 명령은 시작 시점에 입력하고, 각 정기 접속에서 유료 계획을 건설/연구 각 최대 3개까지 예약한다. 계획 자원은 예약 때 묶는다. 접속 사이에는 생산과 예약 작업이 진행되고 완료 처리는 다음 15분 경계에서 이루어져 최대 15분의 보수적 지연이 있다. 건설 속도·전력 효율·저장·조선/연구 속도와 기술 해금을 반영한다. 확률·인간의 최적 투자·실제 전투·신규 보호·여러 행성 운영은 모델링하지 않는다.', '',
  '산업·군사·연구 정책은 각각 생산 수입을 건설/연구/함대로 75/20/5%, 55/20/25%, 55/40/5% 배정해 목표 예산을 누적한다. 접속 때마다 잔고 비율을 다시 소비하지 않는다. 건설·연구의 우선 목표를 현재 자원으로 감당할 수 있으면 다른 목표의 미사용 예산을 재배정할 수 있고, 함대는 남은 함대 예산 한도 내에서 건조한다. 재배정은 실제 자원을 늘리지 않는다. 연구는 고정 목표와 선행 순서를 따른다. 건설은 저장·전력 다음으로 기본 광산 성장(처음 레벨3, 14일마다 목표 +1, 최고 목표9)을 우선하고 시기별 연구소/조선소와 추가 생산을 연결한다. 이 목표는 모델의 선택 정책이며 게임의 주차별 해금 조건이 아니다. 저장 상한이 다음 비용을 담을 수 있는지도 검사한다. 자동 최적화와 플레이어의 실제 선택을 재현하지 않으며 예산 구분은 새로운 게임 화폐가 아니다.', '',
@@ -225,7 +227,7 @@ for(const result of matchups)report.push(`| ${result.name} | ${result.wins} | ${
 report.push('','## 손실 복구와 남은 문제','');
 for(const event of runs.find(r=>r.shock).shockEvents)report.push(`- ${event.day}일에 당시 유료 함대 가치 20%(${fmt(event.lost)}자원)를 제거했다. 함대 가치가 손실 전 값으로 돌아온 시점: ${event.recoveredDay===null?'84일 내 미복구':`${fmt(event.recoveredDay)}일, 복구 ${fmt(event.recoveredDay-event.day)}일`}. 기존 건조 큐는 유지한다. 실제 전투·조선 해금·수리·약탈·방어 손실의 검증이 아니다.`);
 report.push(...(findings.length?findings.map(value=>`- ${value}`):['- 정의한 생산 빈도·해금·과도한 상성 우위 점검에서 경고 없음. 이 결과만으로 전체 밸런스 완료를 주장하지 않는다.']));
-report.push('- 식민지 실제 성장과 수송, 자원별 수요 병목, 혼합 편대·시설 공성, 공격 순수익, 정찰 탐지, 자동 복구와 길드 집중 전력은 후속 검증 대상이다.','');
+report.push('- 이 도구 밖의 식민지 수송·수요 병목·혼합 편대·시설 공성·약탈은 위 v0.2 계산에서 검증했다. 실제 서버 사건 연결, 정찰 탐지, 자동 철수·복구와 길드 집중 전력은 후속 검증 대상이다.','');
 for(const [name,lines] of tables)writeFileSync(output(name),lines.join('\n')+'\n');
 const levelCurves=[...c.facilities,...c.researches].map(definition=>{
   const cumulative=[0,0,0];
@@ -238,6 +240,7 @@ const levelCurves=[...c.facilities,...c.researches].map(definition=>{
 });
 writeFileSync(output('catalog.json'),JSON.stringify(c,null,2)+'\n');
 writeFileSync(output('level-curves.json'),JSON.stringify({version:c.version,resources:c.resources,curves:levelCurves},null,2)+'\n');
-writeFileSync(output('audit-results.json'),JSON.stringify({version:c.version,checks,runs,roi,matchups,findings},null,2)+'\n');
+writeFileSync(output('audit-results.json'),JSON.stringify({version:c.version,checks,runs:runs.map(({commandPlan,...result})=>result),roi,matchups,findings},null,2)+'\n');
+writeFileSync(output('command-plans.json'),JSON.stringify({version:c.version,referenceVisits:2,plans:runs.filter(r=>r.visits===2&&!r.shock).map(r=>({profile:r.profile,commands:r.commandPlan,reference:{produced:r.produced,levels:r.levels,research:r.research,fleetValue:r.fleetValue}}))},null,2)+'\n');
 writeFileSync(output('BALANCE_AUDIT_V0.1.md'),report.join('\n'));
 console.log(JSON.stringify({checks,facilities:c.facilities.length,defenses:c.defenses.length,ships:c.ships.length,researches:c.researches.length,runs:runs.length,findings}));

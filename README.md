@@ -6,7 +6,7 @@
 
 기획 추천 기본안은 **12주 고정 시즌 + 1주 휴식**이다. 자원은 누적 실제 생산량, 성장·함대·방어·연구는 보유 자산의 표준 비용, 전쟁·지원·영향권은 유효 누적 성과로 각각 순위를 정한다. 기간·점수 계수는 후속 플레이·경제 검증에서 조정할 수 있는 설계값이다.
 
-[건설·함대·연구 통합 기획](docs/design/DELTA_NOVA_CONTENT_BALANCE_V0.1.md)에 하루1~2회·회당5~10분 관리를 기준으로 시설24종·방어8종·함선24종·연구36종의 비용·해금·성장 곡선과 재현 가능한 수치 모델을 정리했다. 해당 시즌 수치는 현재 런타임 가격·규칙과 구분하며 혼합 전투·복수 행성·접속 민감도는 후속 검증 대상이다.
+[건설·함대·연구 통합 기획 v0.2](docs/design/DELTA_NOVA_CONTENT_BALANCE_V0.1.md)에 하루1~2회·5~10분 관리와 시설24·방어8·함선24·연구36의 후보를 정리했다. [경제/전투 조정](docs/design/balance/BALANCE_REVIEW_V0.2.md)은 동일 투자18·식민지 수송148·전투3,008·약탈8,064·투자 배율1,728표본을 계산해 초기 저장8,000·케스트럴 공격54·지원 투자 비중·수요 확인 수송을 반영했다. 이는 기획/계산 범위이며 실제 서버의 개척·PvP·이동 구현과 구분한다.
 
 ## 현재 플레이
 
@@ -83,6 +83,8 @@ npm run simulate
 - [장기 방향](docs/design/DELTA_NOVA_VISION.md)
 - [시즌·은하 경쟁·분야별 랭킹 방향](docs/design/DELTA_NOVA_SEASONS_AND_RANKINGS_V0.1.md)
 - [건설·함대·연구 통합 기획과 밸런스](docs/design/DELTA_NOVA_CONTENT_BALANCE_V0.1.md)
+- [경제/전투 검증과 밸런스 조정](docs/design/balance/BALANCE_REVIEW_V0.2.md)
+- [오게임 콘텐츠 검토와 델타 노바 보완](docs/design/OGAME_REVIEW_AND_DELTA_NOVA_RESPONSES_V0.1.md)
 - [제국 운영 방향](docs/design/DELTA_NOVA_EMPIRE_DIRECTION_V0.2.md)
 - [식민지 방향](docs/design/DELTA_NOVA_COLONIES_V0.1.md)
 - [행성 기지 상세 설계](docs/superpowers/specs/2026-10-14-planet-base-dashboard-design.md)

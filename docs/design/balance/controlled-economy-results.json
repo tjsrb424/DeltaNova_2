@@ -1,0 +1,3593 @@
+{
+  "version": "season-content-draft-2",
+  "cases": [
+    {
+      "profile": "industry",
+      "visits": 1,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 16218868.5,
+      "potential": 18102405.4916,
+      "wastePercent": 10.4049,
+      "levels": {
+        "alloy_mine": 15,
+        "crystal_mine": 14,
+        "fuel_refinery": 13,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 8,
+        "construction": 4,
+        "storage": 4,
+        "power_efficiency": 5,
+        "sensors": 2,
+        "chemical_drive": 1,
+        "navigation": 2,
+        "astrography": 2,
+        "colony_management": 2,
+        "refining": 5
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 70,
+        "research": 35,
+        "ship": 0
+      },
+      "planCommands": 106,
+      "submittedCommands": 106,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 1
+          },
+          "produced": 120018.626,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2
+          },
+          "produced": 322985.552,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 7,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 7,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 1450301.4897,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 12,
+            "fuel_refinery": 12,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 7119059.8531,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 15,
+            "crystal_mine": 14,
+            "fuel_refinery": 13,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 16218868.5,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "industry",
+      "visits": 2,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 17205445.6897,
+      "potential": 19090017.0416,
+      "wastePercent": 9.872,
+      "levels": {
+        "alloy_mine": 15,
+        "crystal_mine": 14,
+        "fuel_refinery": 14,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 8,
+        "construction": 4,
+        "storage": 4,
+        "power_efficiency": 5,
+        "sensors": 2,
+        "chemical_drive": 1,
+        "navigation": 2,
+        "astrography": 2,
+        "colony_management": 2,
+        "refining": 5
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "planCommands": 106,
+      "submittedCommands": 106,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 2,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 1
+          },
+          "produced": 130849.7732,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 4,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 1,
+            "refining": 2
+          },
+          "produced": 394997.7914,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 9,
+            "crystal_mine": 9,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 8,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 7,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 1757831.192,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 12,
+            "fuel_refinery": 12,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 7916979.5489,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 15,
+            "crystal_mine": 14,
+            "fuel_refinery": 14,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 17205445.6897,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "industry",
+      "visits": 4,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 17205445.6897,
+      "potential": 19090017.0416,
+      "wastePercent": 9.872,
+      "levels": {
+        "alloy_mine": 15,
+        "crystal_mine": 14,
+        "fuel_refinery": 14,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 8,
+        "construction": 4,
+        "storage": 4,
+        "power_efficiency": 5,
+        "sensors": 2,
+        "chemical_drive": 1,
+        "navigation": 2,
+        "astrography": 2,
+        "colony_management": 2,
+        "refining": 5
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "planCommands": 106,
+      "submittedCommands": 106,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 2,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 1
+          },
+          "produced": 130849.7732,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 4,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 1,
+            "refining": 2
+          },
+          "produced": 394997.7914,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 9,
+            "crystal_mine": 9,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 8,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 7,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 1757831.192,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 12,
+            "fuel_refinery": 12,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 7916979.5489,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 15,
+            "crystal_mine": 14,
+            "fuel_refinery": 14,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 17205445.6897,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "industry",
+      "visits": 1,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 16218868.5,
+      "potential": 18102405.4916,
+      "wastePercent": 10.4049,
+      "levels": {
+        "alloy_mine": 15,
+        "crystal_mine": 14,
+        "fuel_refinery": 13,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 8,
+        "construction": 4,
+        "storage": 4,
+        "power_efficiency": 5,
+        "sensors": 2,
+        "chemical_drive": 1,
+        "navigation": 2,
+        "astrography": 2,
+        "colony_management": 2,
+        "refining": 5
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 70,
+        "research": 35,
+        "ship": 0
+      },
+      "planCommands": 106,
+      "submittedCommands": 106,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 1
+          },
+          "produced": 120018.626,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2
+          },
+          "produced": 322985.552,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 7,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 7,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 1450301.4897,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 12,
+            "fuel_refinery": 12,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 7119059.8531,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 15,
+            "crystal_mine": 14,
+            "fuel_refinery": 13,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 16218868.5,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "industry",
+      "visits": 2,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 17205445.6897,
+      "potential": 19090017.0416,
+      "wastePercent": 9.872,
+      "levels": {
+        "alloy_mine": 15,
+        "crystal_mine": 14,
+        "fuel_refinery": 14,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 8,
+        "construction": 4,
+        "storage": 4,
+        "power_efficiency": 5,
+        "sensors": 2,
+        "chemical_drive": 1,
+        "navigation": 2,
+        "astrography": 2,
+        "colony_management": 2,
+        "refining": 5
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "planCommands": 106,
+      "submittedCommands": 106,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 2,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 1
+          },
+          "produced": 130849.7732,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 4,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 1,
+            "refining": 2
+          },
+          "produced": 394997.7914,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 9,
+            "crystal_mine": 9,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 8,
+            "shipyard": 4,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 7,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 1757831.192,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 12,
+            "fuel_refinery": 12,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 7,
+            "laboratory": 7
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 7916979.5489,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 15,
+            "crystal_mine": 14,
+            "fuel_refinery": 14,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 17205445.6897,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "industry",
+      "visits": 4,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 17271408.9296,
+      "potential": 19167497.055,
+      "wastePercent": 9.8922,
+      "levels": {
+        "alloy_mine": 15,
+        "crystal_mine": 14,
+        "fuel_refinery": 14,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 8,
+        "construction": 4,
+        "storage": 4,
+        "power_efficiency": 5,
+        "sensors": 2,
+        "chemical_drive": 1,
+        "navigation": 2,
+        "astrography": 2,
+        "colony_management": 2,
+        "refining": 5
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 71,
+        "research": 35,
+        "ship": 0
+      },
+      "planCommands": 106,
+      "submittedCommands": 106,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 2,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 1
+          },
+          "produced": 131923.5884,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 4,
+            "construction": 2,
+            "storage": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 1,
+            "refining": 2
+          },
+          "produced": 401653.3865,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 9,
+            "crystal_mine": 9,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 8,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 7,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 1759614.594,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 12,
+            "fuel_refinery": 12,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 7,
+            "laboratory": 7
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 7973814.9608,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 15,
+            "crystal_mine": 14,
+            "fuel_refinery": 14,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 8,
+            "construction": 4,
+            "storage": 4,
+            "power_efficiency": 5,
+            "sensors": 2,
+            "chemical_drive": 1,
+            "navigation": 2,
+            "astrography": 2,
+            "colony_management": 2,
+            "refining": 5
+          },
+          "produced": 17271408.9296,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "military",
+      "visits": 1,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 7735009.7008,
+      "potential": 8357399.9091,
+      "wastePercent": 7.4472,
+      "levels": {
+        "alloy_mine": 12,
+        "crystal_mine": 11,
+        "fuel_refinery": 11,
+        "power_plant": 6,
+        "warehouse": 11,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "kinetic": 3,
+        "armor": 4,
+        "chemical_drive": 2,
+        "navigation": 1,
+        "fleet_command": 2,
+        "power_efficiency": 4,
+        "sensors": 2,
+        "tracking": 2,
+        "shield": 4,
+        "missile": 4,
+        "ion_drive": 3,
+        "siege_protocol": 5,
+        "beam": 5,
+        "coordination": 3,
+        "espionage": 2,
+        "electronic_warfare": 1,
+        "carrier_ops": 3,
+        "fusion_drive": 2
+      },
+      "fleetValue": 1688100,
+      "submitted": {
+        "facility": 60,
+        "research": 52,
+        "ship": 132
+      },
+      "completed": {
+        "facility": 60,
+        "research": 52,
+        "ship": 132
+      },
+      "planCommands": 245,
+      "submittedCommands": 244,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 2,
+            "crystal_mine": 2,
+            "fuel_refinery": 2,
+            "power_plant": 2,
+            "warehouse": 2,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2
+          },
+          "produced": 92149,
+          "paidShips": 3200
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 1
+          },
+          "produced": 246016.845,
+          "paidShips": 22400
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 3,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 1,
+            "beam": 3,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1
+          },
+          "produced": 758577.3071,
+          "paidShips": 118400
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 10,
+            "crystal_mine": 9,
+            "fuel_refinery": 9,
+            "power_plant": 5,
+            "warehouse": 9,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 3225017.8168,
+          "paidShips": 635600
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 12,
+            "crystal_mine": 11,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 7735009.7008,
+          "paidShips": 1688100
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "military",
+      "visits": 2,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 8010159.5764,
+      "potential": 8595396.0614,
+      "wastePercent": 6.8087,
+      "levels": {
+        "alloy_mine": 12,
+        "crystal_mine": 11,
+        "fuel_refinery": 11,
+        "power_plant": 6,
+        "warehouse": 11,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "kinetic": 3,
+        "armor": 4,
+        "chemical_drive": 2,
+        "navigation": 1,
+        "fleet_command": 2,
+        "power_efficiency": 4,
+        "sensors": 2,
+        "tracking": 2,
+        "shield": 4,
+        "missile": 4,
+        "ion_drive": 3,
+        "siege_protocol": 5,
+        "beam": 5,
+        "coordination": 3,
+        "espionage": 2,
+        "electronic_warfare": 1,
+        "carrier_ops": 3,
+        "fusion_drive": 2
+      },
+      "fleetValue": 1706100,
+      "submitted": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "completed": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "planCommands": 245,
+      "submittedCommands": 245,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 2,
+            "fuel_refinery": 2,
+            "power_plant": 2,
+            "warehouse": 2,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2
+          },
+          "produced": 95289.7,
+          "paidShips": 3200
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 2,
+            "ion_drive": 2
+          },
+          "produced": 261965.685,
+          "paidShips": 22400
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 6,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 1,
+            "beam": 3,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1
+          },
+          "produced": 801039.4253,
+          "paidShips": 124800
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 10,
+            "crystal_mine": 9,
+            "fuel_refinery": 9,
+            "power_plant": 5,
+            "warehouse": 9,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 3379289.1987,
+          "paidShips": 676600
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 12,
+            "crystal_mine": 11,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 8010159.5764,
+          "paidShips": 1706100
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "military",
+      "visits": 4,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 8010159.5764,
+      "potential": 8595396.0614,
+      "wastePercent": 6.8087,
+      "levels": {
+        "alloy_mine": 12,
+        "crystal_mine": 11,
+        "fuel_refinery": 11,
+        "power_plant": 6,
+        "warehouse": 11,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "kinetic": 3,
+        "armor": 4,
+        "chemical_drive": 2,
+        "navigation": 1,
+        "fleet_command": 2,
+        "power_efficiency": 4,
+        "sensors": 2,
+        "tracking": 2,
+        "shield": 4,
+        "missile": 4,
+        "ion_drive": 3,
+        "siege_protocol": 5,
+        "beam": 5,
+        "coordination": 3,
+        "espionage": 2,
+        "electronic_warfare": 1,
+        "carrier_ops": 3,
+        "fusion_drive": 2
+      },
+      "fleetValue": 1706100,
+      "submitted": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "completed": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "planCommands": 245,
+      "submittedCommands": 245,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 2,
+            "fuel_refinery": 2,
+            "power_plant": 2,
+            "warehouse": 2,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2
+          },
+          "produced": 95289.7,
+          "paidShips": 3200
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 2,
+            "ion_drive": 2
+          },
+          "produced": 261965.685,
+          "paidShips": 22400
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 6,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 1,
+            "beam": 3,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1
+          },
+          "produced": 801039.4253,
+          "paidShips": 124800
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 10,
+            "crystal_mine": 9,
+            "fuel_refinery": 9,
+            "power_plant": 5,
+            "warehouse": 9,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 3379289.1987,
+          "paidShips": 676600
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 12,
+            "crystal_mine": 11,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 8010159.5764,
+          "paidShips": 1706100
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "military",
+      "visits": 1,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 7735009.7008,
+      "potential": 8357399.9091,
+      "wastePercent": 7.4472,
+      "levels": {
+        "alloy_mine": 12,
+        "crystal_mine": 11,
+        "fuel_refinery": 11,
+        "power_plant": 6,
+        "warehouse": 11,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "kinetic": 3,
+        "armor": 4,
+        "chemical_drive": 2,
+        "navigation": 1,
+        "fleet_command": 2,
+        "power_efficiency": 4,
+        "sensors": 2,
+        "tracking": 2,
+        "shield": 4,
+        "missile": 4,
+        "ion_drive": 3,
+        "siege_protocol": 5,
+        "beam": 5,
+        "coordination": 3,
+        "espionage": 2,
+        "electronic_warfare": 1,
+        "carrier_ops": 3,
+        "fusion_drive": 2
+      },
+      "fleetValue": 1688100,
+      "submitted": {
+        "facility": 60,
+        "research": 52,
+        "ship": 132
+      },
+      "completed": {
+        "facility": 60,
+        "research": 52,
+        "ship": 132
+      },
+      "planCommands": 245,
+      "submittedCommands": 244,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 2,
+            "crystal_mine": 2,
+            "fuel_refinery": 2,
+            "power_plant": 2,
+            "warehouse": 2,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2
+          },
+          "produced": 92149,
+          "paidShips": 3200
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 1
+          },
+          "produced": 246016.845,
+          "paidShips": 22400
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 3,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 1,
+            "beam": 3,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1
+          },
+          "produced": 758577.3071,
+          "paidShips": 118400
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 10,
+            "crystal_mine": 9,
+            "fuel_refinery": 9,
+            "power_plant": 5,
+            "warehouse": 9,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 3225017.8168,
+          "paidShips": 635600
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 12,
+            "crystal_mine": 11,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 7735009.7008,
+          "paidShips": 1688100
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "military",
+      "visits": 2,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 8015159.5764,
+      "potential": 8595396.0614,
+      "wastePercent": 6.7505,
+      "levels": {
+        "alloy_mine": 12,
+        "crystal_mine": 11,
+        "fuel_refinery": 11,
+        "power_plant": 6,
+        "warehouse": 11,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "kinetic": 3,
+        "armor": 4,
+        "chemical_drive": 2,
+        "navigation": 1,
+        "fleet_command": 2,
+        "power_efficiency": 4,
+        "sensors": 2,
+        "tracking": 2,
+        "shield": 4,
+        "missile": 4,
+        "ion_drive": 3,
+        "siege_protocol": 5,
+        "beam": 5,
+        "coordination": 3,
+        "espionage": 2,
+        "electronic_warfare": 1,
+        "carrier_ops": 3,
+        "fusion_drive": 2
+      },
+      "fleetValue": 1706100,
+      "submitted": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "completed": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "planCommands": 245,
+      "submittedCommands": 245,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 2,
+            "fuel_refinery": 2,
+            "power_plant": 2,
+            "warehouse": 2,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2
+          },
+          "produced": 95289.7,
+          "paidShips": 3200
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 2,
+            "ion_drive": 2
+          },
+          "produced": 261965.685,
+          "paidShips": 22400
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 6,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 1,
+            "beam": 3,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1
+          },
+          "produced": 801039.4253,
+          "paidShips": 124800
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 10,
+            "crystal_mine": 9,
+            "fuel_refinery": 9,
+            "power_plant": 5,
+            "warehouse": 9,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 3379289.1987,
+          "paidShips": 676600
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 12,
+            "crystal_mine": 11,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 8015159.5764,
+          "paidShips": 1706100
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "military",
+      "visits": 4,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 8095907.8739,
+      "potential": 8662217.9504,
+      "wastePercent": 6.5377,
+      "levels": {
+        "alloy_mine": 12,
+        "crystal_mine": 11,
+        "fuel_refinery": 11,
+        "power_plant": 6,
+        "warehouse": 11,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "kinetic": 3,
+        "armor": 4,
+        "chemical_drive": 2,
+        "navigation": 1,
+        "fleet_command": 2,
+        "power_efficiency": 4,
+        "sensors": 2,
+        "tracking": 2,
+        "shield": 4,
+        "missile": 4,
+        "ion_drive": 3,
+        "siege_protocol": 5,
+        "beam": 5,
+        "coordination": 3,
+        "espionage": 2,
+        "electronic_warfare": 1,
+        "carrier_ops": 3,
+        "fusion_drive": 2
+      },
+      "fleetValue": 1706100,
+      "submitted": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "completed": {
+        "facility": 60,
+        "research": 52,
+        "ship": 133
+      },
+      "planCommands": 245,
+      "submittedCommands": 245,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 2,
+            "fuel_refinery": 2,
+            "power_plant": 2,
+            "warehouse": 2,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2
+          },
+          "produced": 95937.7,
+          "paidShips": 3200
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 4,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 3,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 2,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 2,
+            "ion_drive": 2,
+            "siege_protocol": 1,
+            "beam": 1
+          },
+          "produced": 263385.885,
+          "paidShips": 22400
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 6,
+            "crystal_mine": 6,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 1,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 1,
+            "beam": 3,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1
+          },
+          "produced": 815377.9167,
+          "paidShips": 134400
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 10,
+            "crystal_mine": 10,
+            "fuel_refinery": 9,
+            "power_plant": 5,
+            "warehouse": 9,
+            "shipyard": 5,
+            "laboratory": 6
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 3433213.4585,
+          "paidShips": 706100
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 12,
+            "crystal_mine": 11,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 11,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "kinetic": 3,
+            "armor": 4,
+            "chemical_drive": 2,
+            "navigation": 1,
+            "fleet_command": 2,
+            "power_efficiency": 4,
+            "sensors": 2,
+            "tracking": 2,
+            "shield": 4,
+            "missile": 4,
+            "ion_drive": 3,
+            "siege_protocol": 5,
+            "beam": 5,
+            "coordination": 3,
+            "espionage": 2,
+            "electronic_warfare": 1,
+            "carrier_ops": 3,
+            "fusion_drive": 2
+          },
+          "produced": 8095907.8739,
+          "paidShips": 1706100
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "science",
+      "visits": 1,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 11737552.5972,
+      "potential": 13153976.2207,
+      "wastePercent": 10.768,
+      "levels": {
+        "alloy_mine": 13,
+        "crystal_mine": 14,
+        "fuel_refinery": 12,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 2,
+        "construction": 3,
+        "sensors": 2,
+        "chemical_drive": 2,
+        "navigation": 2,
+        "power_efficiency": 4,
+        "espionage": 3,
+        "astrography": 2,
+        "colony_management": 1,
+        "shield": 3,
+        "ion_drive": 3,
+        "fleet_command": 2,
+        "coordination": 3,
+        "beam": 1,
+        "electronic_warfare": 2,
+        "fusion_drive": 2,
+        "carrier_ops": 3,
+        "terraforming": 1
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 67,
+        "research": 41,
+        "ship": 0
+      },
+      "planCommands": 109,
+      "submittedCommands": 109,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 2
+          },
+          "produced": 116722.806,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 4,
+            "power_plant": 3,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3,
+            "espionage": 2
+          },
+          "produced": 303747.1163,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 7,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2
+          },
+          "produced": 1152168.6746,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 11,
+            "crystal_mine": 12,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 10,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 5263047.5292,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 14,
+            "fuel_refinery": 12,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 11737552.5972,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "science",
+      "visits": 2,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 12172997.2482,
+      "potential": 13560591.7948,
+      "wastePercent": 10.2326,
+      "levels": {
+        "alloy_mine": 13,
+        "crystal_mine": 14,
+        "fuel_refinery": 13,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 2,
+        "construction": 3,
+        "sensors": 2,
+        "chemical_drive": 2,
+        "navigation": 2,
+        "power_efficiency": 4,
+        "espionage": 3,
+        "astrography": 2,
+        "colony_management": 1,
+        "shield": 3,
+        "ion_drive": 3,
+        "fleet_command": 2,
+        "coordination": 3,
+        "beam": 1,
+        "electronic_warfare": 2,
+        "fusion_drive": 2,
+        "carrier_ops": 3,
+        "terraforming": 1
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "planCommands": 109,
+      "submittedCommands": 109,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3
+          },
+          "produced": 126093.418,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 1
+          },
+          "produced": 351643.183,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2
+          },
+          "produced": 1299836.6533,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 11,
+            "crystal_mine": 13,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 10,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 5520144.4732,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 14,
+            "fuel_refinery": 13,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 12172997.2482,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "science",
+      "visits": 4,
+      "calendar": true,
+      "queueSize": 3,
+      "produced": 12172997.2482,
+      "potential": 13560591.7948,
+      "wastePercent": 10.2326,
+      "levels": {
+        "alloy_mine": 13,
+        "crystal_mine": 14,
+        "fuel_refinery": 13,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 2,
+        "construction": 3,
+        "sensors": 2,
+        "chemical_drive": 2,
+        "navigation": 2,
+        "power_efficiency": 4,
+        "espionage": 3,
+        "astrography": 2,
+        "colony_management": 1,
+        "shield": 3,
+        "ion_drive": 3,
+        "fleet_command": 2,
+        "coordination": 3,
+        "beam": 1,
+        "electronic_warfare": 2,
+        "fusion_drive": 2,
+        "carrier_ops": 3,
+        "terraforming": 1
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "planCommands": 109,
+      "submittedCommands": 109,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3
+          },
+          "produced": 126093.418,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 1
+          },
+          "produced": 351643.183,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2
+          },
+          "produced": 1299836.6533,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 11,
+            "crystal_mine": 13,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 10,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 5520144.4732,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 14,
+            "fuel_refinery": 13,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 12172997.2482,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "science",
+      "visits": 1,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 11737552.5972,
+      "potential": 13153976.2207,
+      "wastePercent": 10.768,
+      "levels": {
+        "alloy_mine": 13,
+        "crystal_mine": 14,
+        "fuel_refinery": 12,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 2,
+        "construction": 3,
+        "sensors": 2,
+        "chemical_drive": 2,
+        "navigation": 2,
+        "power_efficiency": 4,
+        "espionage": 3,
+        "astrography": 2,
+        "colony_management": 1,
+        "shield": 3,
+        "ion_drive": 3,
+        "fleet_command": 2,
+        "coordination": 3,
+        "beam": 1,
+        "electronic_warfare": 2,
+        "fusion_drive": 2,
+        "carrier_ops": 3,
+        "terraforming": 1
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 67,
+        "research": 41,
+        "ship": 0
+      },
+      "planCommands": 109,
+      "submittedCommands": 109,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 1
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 2
+          },
+          "produced": 116722.806,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 4,
+            "power_plant": 3,
+            "warehouse": 4,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3,
+            "espionage": 2
+          },
+          "produced": 303747.1163,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 7,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 4,
+            "laboratory": 4
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2
+          },
+          "produced": 1152168.6746,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 11,
+            "crystal_mine": 12,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 10,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 5263047.5292,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 14,
+            "fuel_refinery": 12,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 11737552.5972,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "science",
+      "visits": 2,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 12172997.2482,
+      "potential": 13560591.7948,
+      "wastePercent": 10.2326,
+      "levels": {
+        "alloy_mine": 13,
+        "crystal_mine": 14,
+        "fuel_refinery": 13,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 2,
+        "construction": 3,
+        "sensors": 2,
+        "chemical_drive": 2,
+        "navigation": 2,
+        "power_efficiency": 4,
+        "espionage": 3,
+        "astrography": 2,
+        "colony_management": 1,
+        "shield": 3,
+        "ion_drive": 3,
+        "fleet_command": 2,
+        "coordination": 3,
+        "beam": 1,
+        "electronic_warfare": 2,
+        "fusion_drive": 2,
+        "carrier_ops": 3,
+        "terraforming": 1
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "planCommands": 109,
+      "submittedCommands": 109,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3
+          },
+          "produced": 126093.418,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 1
+          },
+          "produced": 351643.183,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2
+          },
+          "produced": 1299836.6533,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 11,
+            "crystal_mine": 13,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 10,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 5520144.4732,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 14,
+            "fuel_refinery": 13,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 12172997.2482,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    },
+    {
+      "profile": "science",
+      "visits": 4,
+      "calendar": false,
+      "queueSize": 3,
+      "produced": 12251877.7646,
+      "potential": 13679965.5476,
+      "wastePercent": 10.4393,
+      "levels": {
+        "alloy_mine": 13,
+        "crystal_mine": 14,
+        "fuel_refinery": 13,
+        "power_plant": 7,
+        "warehouse": 12,
+        "shipyard": 8,
+        "laboratory": 8
+      },
+      "research": {
+        "automation": 2,
+        "construction": 3,
+        "sensors": 2,
+        "chemical_drive": 2,
+        "navigation": 2,
+        "power_efficiency": 4,
+        "espionage": 3,
+        "astrography": 2,
+        "colony_management": 1,
+        "shield": 3,
+        "ion_drive": 3,
+        "fleet_command": 2,
+        "coordination": 3,
+        "beam": 1,
+        "electronic_warfare": 2,
+        "fusion_drive": 2,
+        "carrier_ops": 3,
+        "terraforming": 1
+      },
+      "fleetValue": 0,
+      "submitted": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "completed": {
+        "facility": 68,
+        "research": 41,
+        "ship": 0
+      },
+      "planCommands": 109,
+      "submittedCommands": 109,
+      "snapshots": [
+        {
+          "day": 7,
+          "levels": {
+            "alloy_mine": 3,
+            "crystal_mine": 3,
+            "fuel_refinery": 3,
+            "power_plant": 2,
+            "warehouse": 3,
+            "shipyard": 1,
+            "laboratory": 2
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3,
+            "espionage": 1
+          },
+          "produced": 129153.926,
+          "paidShips": 0
+        },
+        {
+          "day": 14,
+          "levels": {
+            "alloy_mine": 5,
+            "crystal_mine": 5,
+            "fuel_refinery": 5,
+            "power_plant": 3,
+            "warehouse": 5,
+            "shipyard": 3,
+            "laboratory": 3
+          },
+          "research": {
+            "automation": 2,
+            "construction": 2,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 3,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 2
+          },
+          "produced": 361921.4358,
+          "paidShips": 0
+        },
+        {
+          "day": 28,
+          "levels": {
+            "alloy_mine": 8,
+            "crystal_mine": 8,
+            "fuel_refinery": 8,
+            "power_plant": 4,
+            "warehouse": 7,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2
+          },
+          "produced": 1333876.3429,
+          "paidShips": 0
+        },
+        {
+          "day": 56,
+          "levels": {
+            "alloy_mine": 11,
+            "crystal_mine": 13,
+            "fuel_refinery": 11,
+            "power_plant": 6,
+            "warehouse": 10,
+            "shipyard": 5,
+            "laboratory": 5
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 5575870.8067,
+          "paidShips": 0
+        },
+        {
+          "day": 84,
+          "levels": {
+            "alloy_mine": 13,
+            "crystal_mine": 14,
+            "fuel_refinery": 13,
+            "power_plant": 7,
+            "warehouse": 12,
+            "shipyard": 8,
+            "laboratory": 8
+          },
+          "research": {
+            "automation": 2,
+            "construction": 3,
+            "sensors": 2,
+            "chemical_drive": 2,
+            "navigation": 2,
+            "power_efficiency": 4,
+            "espionage": 3,
+            "astrography": 2,
+            "colony_management": 1,
+            "shield": 3,
+            "ion_drive": 3,
+            "fleet_command": 2,
+            "coordination": 3,
+            "beam": 1,
+            "electronic_warfare": 2,
+            "fusion_drive": 2,
+            "carrier_ops": 3,
+            "terraforming": 1
+          },
+          "produced": 12251877.7646,
+          "paidShips": 0
+        }
+      ],
+      "maxQueue": 3
+    }
+  ],
+  "comparison": [
+    {
+      "profile": "industry",
+      "calendar": true,
+      "visits": 1,
+      "productionPercent": 94.2659,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "industry",
+      "calendar": true,
+      "visits": 2,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "industry",
+      "calendar": true,
+      "visits": 4,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "industry",
+      "calendar": false,
+      "visits": 1,
+      "productionPercent": 94.2659,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "industry",
+      "calendar": false,
+      "visits": 2,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "industry",
+      "calendar": false,
+      "visits": 4,
+      "productionPercent": 100.3834,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "military",
+      "calendar": true,
+      "visits": 1,
+      "productionPercent": 96.565,
+      "submittedPercent": 99.5918
+    },
+    {
+      "profile": "military",
+      "calendar": true,
+      "visits": 2,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "military",
+      "calendar": true,
+      "visits": 4,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "military",
+      "calendar": false,
+      "visits": 1,
+      "productionPercent": 96.5047,
+      "submittedPercent": 99.5918
+    },
+    {
+      "profile": "military",
+      "calendar": false,
+      "visits": 2,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "military",
+      "calendar": false,
+      "visits": 4,
+      "productionPercent": 101.0074,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "science",
+      "calendar": true,
+      "visits": 1,
+      "productionPercent": 96.4229,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "science",
+      "calendar": true,
+      "visits": 2,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "science",
+      "calendar": true,
+      "visits": 4,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "science",
+      "calendar": false,
+      "visits": 1,
+      "productionPercent": 96.4229,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "science",
+      "calendar": false,
+      "visits": 2,
+      "productionPercent": 100,
+      "submittedPercent": 100
+    },
+    {
+      "profile": "science",
+      "calendar": false,
+      "visits": 4,
+      "productionPercent": 100.648,
+      "submittedPercent": 100
+    }
+  ],
+  "findings": []
+}

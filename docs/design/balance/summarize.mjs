@@ -1,0 +1,48 @@
+import assert from 'node:assert/strict';
+import {readFileSync,writeFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {catalog as c} from './catalog.mjs';
+const out=name=>fileURLToPath(new URL(name,import.meta.url)),read=name=>JSON.parse(readFileSync(out(name),'utf8'));
+const attendance=read('controlled-economy-results.json'),colony=read('colony-economy-results.json'),combat=read('combat-benchmark-results.json'),control=read('combat-attack-control.json'),audit=read('audit-results.json'),checks=read('model-check-results.json');
+for(const d of [attendance,colony,combat,control,audit,checks])assert.equal(d.version,c.version,'All outputs use final catalog');
+assert.equal(combat.strikerAttack,54);assert.equal(control.strikerAttack,65);
+const fixed=attendance.comparison.filter(r=>r.calendar),daily=fixed.filter(r=>r.visits===1),frequent=attendance.comparison.filter(r=>r.visits===4),before=control.summary.find(r=>r.id==='striker'),after=combat.summary.find(r=>r.id==='striker');
+const demand=colony.cases.find(r=>r.targetProfile==='balanced'&&r.type==='heavy_cargo'&&r.distance===3&&r.speed===1&&r.visits===2&&r.mode==='planned'),naive=colony.diagnostics.find(r=>r.type==='heavy_cargo');
+const example=combat.investmentRatios.find(r=>r.budget===150000&&r.ratio===2&&r.attacker==='siege-mixed'&&r.defender==='siege-garrison'&&r.seed===0&&r.stockId==='high'),poor=combat.investmentRatios.find(r=>r.budget===example.budget&&r.ratio===example.ratio&&r.attacker===example.attacker&&r.defender===example.defender&&r.seed===0&&r.stockId==='medium');
+const fmt=v=>Math.round(v).toLocaleString('en-US');
+const md=['# 델타 노바 경제와 전투 밸런스 조정 v0.2','',`2026-10-14. 규칙은 ${c.version}이다. [통합 기획](../DELTA_NOVA_CONTENT_BALANCE_V0.1.md)과 [오게임 비교와 보완](../OGAME_REVIEW_AND_DELTA_NOVA_RESPONSES_V0.1.md)의 재현 가능한 수치 근거다. 작업은 기획/계산 범위이며 현재 게임 가격이나 저장 DB를 변경하지 않았다.`,'',
+'## 동일 투자와 접속 빈도','',
+`3개 투자 경로×2개 통제 방식×하루1/2/4회의18개 비교다. 건설·연구·함종·수량과 큐 간 전체 명령 순서를 고정했다. 명령 예정 시각도 유지한 통제에서 하루1회의 실제 누적 생산은2회의${Math.min(...daily.map(r=>r.productionPercent)).toFixed(2)}~${Math.max(...daily.map(r=>r.productionPercent)).toFixed(2)}%, 예정 시각을 제거한 순서 통제까지 포함한 하루4회의 최대치는${Math.max(...frequent.map(r=>r.productionPercent)).toFixed(2)}%다. 달력 고정2회는 원 정책의 생산·시설·연구·완료 함대 가치와 모두 일치했다.`,'',
+'목표인1회≥80%,4회≤115%를 세 경로에서 만족했다. 이 명령 목록과 무전투84일 조건의 결과다. 이전의 매 접속 재배정 정책은 선택 시점이 달라 빈도 통제의 근거로 쓰지 않는다. [상세 비교와 중간 시점](CONTROLLED_ECONOMY_V0.2.md)','',
+'## 식민지 수송과 자원 수요','',
+`본성+합금 특화 식민지, 초기14일 기지에서84일까지의148개 시나리오를 계산했다. 정착꾸러미7,500+현지 운영비5,500을 실제 화물로 보내며 개척선1+캐러밴5와 전용 수송함2척을 실제로 구매했다. 함대의 조선소 작업 시간을 중복하지 않는다. 세계 자원·현지 공간·지휘와 이동 중 화물을${colony.assertions}개 조건으로 확인했다.`,'',
+`같은 균형 성장·거리3·헤비 캐러밴2·하루2회·100%운항에서 비율 채우기 수송의 본성 순회수${fmt(naive.projectNet)}가 목적지 수요 확인 후${fmt(demand.projectNet)}로 바뀌었다. 현지 포화 손실은${naive.colonyWastePercent.toFixed(2)}%→${demand.colonyWastePercent.toFixed(2)}%다. 목적지 결정/연료 적체가 합금 항로까지 막던 원인을 수정한 결과이며 자원을 무료로 생성한 효과가 아니다.`,'',
+'순회수는 본성에 실제 도착한 화물에서 개척·꾸러미·운영비·선박과 비행 연료를 뺀 값이다. 현지 재투자는 이미 수송 잉여에서 빠지므로 이중 비용 처리하지 않는다. 초기14일 기지·보유 기술은 공통 fixture이며 조기 연구·신규 위치·피격·교역의 최적화 결과는 아니다. [거리·수송함·접속·예약 비교](COLONY_ECONOMY_V0.2.md)','',
+'## 확정한 후보 변경','',
+'| 항목 | 이전 후보 | v0.2 후보 | 이유 |','|---|---|---|---|',
+'| 기본 저장 | 자원별6,000 | 자원별8,000 | 시작 합금8,000이 저장에 들어가지 않는 불일치 제거. 기본 생산66.7/88.9/114.3시간 |',
+'| 케스트럴 공격 | 65 | 54 | 같은 비용의 대함 과도한 우세 축소. 가격·선체·기동·적재 유지 |',
+'| 방호 편대 | 지원 효과에 레벨별 독립 가산 | `min(0.15,0.5×지원 투자 비중×(1+0.10×연구L))` | 연구가 값싼 지원선 한 척의 영향 범위를 무상 확대하지 않음 |',
+'| 전자전 | 레벨별2%p 추가라는 모호한 기술 설명 | `max(0,min(0.20,0.5×교란선 투자 비중×(1+0.10×연구L))-0.02×상대 방첩L)` | 지원 투자의 비용과 연구 강화, 공유 상한을 하나의 식으로 연결 |',
+'| 반복 수송 | 현지 잉여를 비율대로 채움 | 목적지 자원별 여유-알려진 귀환까지 생산, 선택한 수요 우선순위 | 창고 적체와 긴 공백 때 유실 감소 |',
+'| 넘치는 도착 화물 | 반송 방향만 정의 | 사전 수요 검사, 노출된 선박 대기 또는 유료 반송을 명령에서 선택 | 화물 삭제·복제·무적 저장을 방지 |',
+'| 큰 함선 사격 | 연속 수량 지표 또는 한 표적 과잉 사격 | 총 화력 보존의 L1/M2/H4/F2 분할, 드론×2분할 | 동시 사격과 정수 표적에서 가격·크기 상성을 비교 |',
+'| 용량을 넘는 혼합 구성 | 항목 순서대로 지휘/공간 소진 | 전체 역할 비중을 함께 축소, 실제 지출 별도 기록 | 첫 저가 항목만 남는 편성 생성 오류 제거 |','',
+`공격65 대조군과54 후보를 같은 수정된 전투 모델에서 비교했다. 케스트럴의 대함 공격 우세는${before.wins}/${before.legal}(${before.winPercent.toFixed(2)}%)→${after.wins}/${after.legal}(${after.winPercent.toFixed(2)}%)다. 초기 모델의88.7%와 이 통제의90.6%는 모델/편성 방식이 다르므로 직접 변화량으로 비교하지 않는다. [통제 결과](combat-attack-control.json)·[초기 진단 스냅샷](combat-baseline-v0.1.json)·[변경 전 카탈로그](catalog-before-v0.2.json)`,'',
+'## 방어 돌파와 약탈 순수익','',
+`14개 전투 함종·6개 혼합 편대·5개 방어·3개 시설+주둔 구성을 사용해 전투${combat.cases.length}개, 거리/비축/복구 반올림별 경제${combat.economics.length}개, 혼합 공격 투자비율${combat.investmentRatios.length}개, 비대칭 연구${combat.asymmetric.length}개, 지원 비중${combat.supportSensitivity.length}개를 계산했다. 예산은30,000/150,000/500,000이며 실제 정수 수량·지휘500·방어80공간·전력을 적용한다.`,'',
+'거리3·비축360,000·사격순서0에서 각 배율144구성의 결과는 아래와 같다. 배율은 상한 예산이고 실제 지출 비율을 함께 보존한다. 방어80공간으로500,000예산의 경포대가120,000까지만 사용한 경우를 동일 실제 투자라고 부르지 않는다.','',
+'| 공격/방어 상한 예산 | 돌파 | 순수익 양수 |','|---|---:|---:|'];
+for(const r of combat.ratioSummary)md.push(`| ${r.ratio}배 | ${r.wins}/144 | ${r.profitable}/144 |`);
+md.push('',`구체 예시: 혼합 공성의 실제 투자${fmt(example.spentA)} 대 대함 시설+공성 주둔${fmt(example.spentB)}, 거리3·비축360,000에서 화물${fmt(example.loot)}-왕복 연료${fmt(example.fuel)}-수리${fmt(example.repair)}-공격 영구 손실${fmt(example.permanentLoss)} = 순수익+${fmt(example.profit)}다. 같은 교전의 비축72,000에서는${fmt(poor.profit)}다. 승리만 보고 출격하면 안 되는 이유다.`,'',
+'방어는 같은 비용의 공격에 억제 효과를 갖고, 공성은 적 비축·주둔·투입 비중에 따라 선택한다. 회수선 없는 편대는 잔해를 회수하지 못한다. 살아 있는 적재·보호 비축·노출25%·실제 파괴 재료와 수리비를 계산해 공짜 잔해와 적재 중복을 제거했다. 방어60% 복구의 정수 floor/ceil 차이는 민감도로 보존하며 실제 반복 전투에서는 잔여 누적 처리 규칙을 추가해야 한다. [전투 상세](COMBAT_AND_RAID_V0.2.md)','',
+'## 재현과 검증','',
+'```powershell','node docs/design/balance/audit.mjs','node docs/design/balance/controlled-economy.mjs','node docs/design/balance/colony-economy.mjs','node docs/design/balance/combat-benchmark.mjs --attack-control','node docs/design/balance/combat-benchmark.mjs','node docs/design/balance/model-checks.mjs','node docs/design/balance/summarize.mjs','node docs/design/balance/verify-planning.mjs','```','',
+`정적 카탈로그/경제 검사${audit.checks}개, 전투 표본 검사${combat.checks}개, 식민지 검사${colony.assertions}개, 독립 손계산/경계 검증${checks.passed}개를 실행했다. 원 정책과 고정 계획의 재현3경로를 추가 확인했다. 같은 입력의 반복 결과도 비교한다. 모든 도구는 docs 안의 후보 모델만 읽으며 서버·사용자 DB·화면을 실행하지 않는다.`,'',
+'## 다음에 남긴 확인 범위','',
+'1. 실제 사건 모델에서 개척/수송의 재시작·동시 소유권·초과 화물 반송, 연구/건설 병행과 시즌 마감 처리를 연결한다.',
+'2. 실제 함종50% 손실·방어 무력화·반복 약탈·사전 철수·수송 피격·정비/예인·두 거점 위협을 연결해 복구2~7일과 하루1/2회 대응을 확인한다.',
+'3. 5거점의5~10분 관리와 무작위 시작·늦은 참가자·길드 집중·정찰/랭킹 정보 누출을 확인한다. 이 단계를 끝내기 전 경쟁 밸런스 전체 완료로 보고하지 않는다.','');
+writeFileSync(out('BALANCE_REVIEW_V0.2.md'),md.join('\n'));
+writeFileSync(out('review-results.json'),JSON.stringify({version:c.version,daily,frequentMax:Math.max(...frequent.map(r=>r.productionPercent)),striker:{before,after},transport:{before:naive.projectNet,after:demand.projectNet,wasteBefore:naive.colonyWastePercent,wasteAfter:demand.colonyWastePercent},counts:{attendance:attendance.cases.length,colony:148,battles:combat.cases.length,economics:combat.economics.length,ratios:combat.investmentRatios.length,asymmetric:combat.asymmetric.length,support:combat.supportSensitivity.length},checks:{catalog:audit.checks,battle:combat.checks,colony:colony.assertions,independent:checks.passed},example,poor},null,2)+'\n');
+console.log(JSON.stringify({version:c.version,summary:'BALANCE_REVIEW_V0.2.md'}));

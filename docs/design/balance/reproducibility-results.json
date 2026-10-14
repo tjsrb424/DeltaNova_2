@@ -1,0 +1,36 @@
+{
+  "version": "season-content-draft-2",
+  "passed": true,
+  "commands": [
+    "audit.mjs",
+    "controlled-economy.mjs",
+    "colony-economy.mjs",
+    "combat-benchmark.mjs --attack-control",
+    "combat-benchmark.mjs",
+    "model-checks.mjs",
+    "summarize.mjs",
+    "verify-planning.mjs"
+  ],
+  "identicalArtifacts": 19,
+  "sha256": {
+    "catalog.json": "bcbd91480fbfe336d15a16b47f1e27ac0b482bd5b41922bd1c63f9bd9b374955",
+    "level-curves.json": "4005e06a046ff060c845c018d980e2c7ee4a146835e42bea64ee1ad4dab59aad",
+    "CONSTRUCTION_CATALOG.md": "1439cfb55f993bd3a3c07cdee6b58e6cb37fb17558d5525d4a749ba87a757f1e",
+    "FLEET_CATALOG.md": "df312acbe404c5b257a6b00b59776f79a859d33bc5c235329ef69284b7fa41d0",
+    "RESEARCH_CATALOG.md": "64ad107008886ca98ebaa7233e5926a1fc69fee9f275eb0c461422ff6cba0f5d",
+    "audit-results.json": "7f6aaaaf05442fbe805fada97405bae81bc9390b56fe0a01b6bc75cccfafde7e",
+    "BALANCE_AUDIT_V0.1.md": "c888a5eca6f88bb8e5cf173e062b61e06e8858e07666f8e5462b17f511a694c8",
+    "command-plans.json": "d4a59bc97f4ac89fa921ca662b1c823a3f6ed79c3a88c03b88a3bf4506d64a9c",
+    "controlled-economy-results.json": "029db06fe597be35a97a4713bd06ce7053cf1545797373627c7d66c69063d5b9",
+    "CONTROLLED_ECONOMY_V0.2.md": "d31c1cccb7cf7b2c88bc69afe26c0611a085f945059aa196a95cd684551d4867",
+    "colony-economy-results.json": "59acd3325d1c1c20bfc02349bd5df17c3da26107a5a1fbfeaeb7e1dd6b7aee9e",
+    "COLONY_ECONOMY_V0.2.md": "4c5bdbcec197787ab4934f203a6e791315018923ee91cbbd1d1e637de2ba53cb",
+    "combat-attack-control.json": "ec7a73fe03e7b9a34238899bfd7db812be57f244dd5690d14490ff266db526c3",
+    "combat-benchmark-results.json": "0e4d3eedb0a52126d8edb207b9baf20bf109b0b54d53eb187fe20870777412e0",
+    "COMBAT_AND_RAID_V0.2.md": "6a49350979458ee502bf6cc79110c5d65dd459b8c4e5a120c03ec111eaeca1b0",
+    "model-check-results.json": "ab3dad4e72a19147dd27a50f4f14bcb859403115c2b7c40b1809d5f9dc9b67d9",
+    "review-results.json": "fa8366af2348b8cd50da6b3f62e54148514400be4dab55854a2d614a54cddcf1",
+    "BALANCE_REVIEW_V0.2.md": "5e3ecf71783a452ea02cdff384fb4fea4e63b5798155157134c13bba20c71d68",
+    "planning-verification.json": "53edc4fc806c18f217f3092596907146d249b163eaa01c2aae198d4bc61ea28f"
+  }
+}

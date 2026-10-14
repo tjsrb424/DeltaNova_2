@@ -1,0 +1,234 @@
+{
+  "version": "season-content-draft-2",
+  "strikerAttack": 65,
+  "rules": {
+    "maxRounds": 12,
+    "guardCap": 0.15,
+    "ewCap": 0.2,
+    "repairRate": 0.2,
+    "defenseRecovery": 0.6,
+    "salvageRate": 0.3,
+    "bursts": {
+      "L": 1,
+      "M": 2,
+      "H": 4,
+      "F": 2
+    },
+    "weaponBursts": {
+      "kinetic": 1,
+      "beam": 1,
+      "missile": 1,
+      "siege": 1,
+      "drone": 2
+    }
+  },
+  "summary": [
+    {
+      "id": "interceptor",
+      "name": "스위프트",
+      "legal": 53,
+      "wins": 32,
+      "losses": 10,
+      "held": 11,
+      "winPercent": 60.37735849056604
+    },
+    {
+      "id": "striker",
+      "name": "케스트럴",
+      "legal": 53,
+      "wins": 48,
+      "losses": 1,
+      "held": 4,
+      "winPercent": 90.56603773584905
+    },
+    {
+      "id": "raider",
+      "name": "레이븐",
+      "legal": 53,
+      "wins": 10,
+      "losses": 30,
+      "held": 13,
+      "winPercent": 18.867924528301888
+    },
+    {
+      "id": "guardian",
+      "name": "바스티온",
+      "legal": 53,
+      "wins": 12,
+      "losses": 12,
+      "held": 29,
+      "winPercent": 22.641509433962263
+    },
+    {
+      "id": "destroyer",
+      "name": "하머",
+      "legal": 53,
+      "wins": 26,
+      "losses": 22,
+      "held": 5,
+      "winPercent": 49.056603773584904
+    },
+    {
+      "id": "siege",
+      "name": "랜서",
+      "legal": 53,
+      "wins": 4,
+      "losses": 41,
+      "held": 8,
+      "winPercent": 7.547169811320755
+    },
+    {
+      "id": "carrier",
+      "name": "아크",
+      "legal": 53,
+      "wins": 17,
+      "losses": 26,
+      "held": 10,
+      "winPercent": 32.075471698113205
+    },
+    {
+      "id": "cruiser",
+      "name": "센티널",
+      "legal": 53,
+      "wins": 35,
+      "losses": 15,
+      "held": 3,
+      "winPercent": 66.0377358490566
+    },
+    {
+      "id": "shield_ship",
+      "name": "에이지스",
+      "legal": 53,
+      "wins": 0,
+      "losses": 21,
+      "held": 32,
+      "winPercent": 0
+    },
+    {
+      "id": "bomber",
+      "name": "시어",
+      "legal": 53,
+      "wins": 2,
+      "losses": 46,
+      "held": 5,
+      "winPercent": 3.7735849056603774
+    },
+    {
+      "id": "battlecruiser",
+      "name": "템페스트",
+      "legal": 38,
+      "wins": 21,
+      "losses": 11,
+      "held": 6,
+      "winPercent": 55.26315789473684
+    },
+    {
+      "id": "dreadnought",
+      "name": "모노리스",
+      "legal": 38,
+      "wins": 28,
+      "losses": 2,
+      "held": 8,
+      "winPercent": 73.6842105263158
+    },
+    {
+      "id": "heavy_carrier",
+      "name": "헤일로",
+      "legal": 38,
+      "wins": 18,
+      "losses": 17,
+      "held": 3,
+      "winPercent": 47.36842105263158
+    },
+    {
+      "id": "siege_platform",
+      "name": "오벨리스크",
+      "legal": 38,
+      "wins": 15,
+      "losses": 10,
+      "held": 13,
+      "winPercent": 39.473684210526315
+    },
+    {
+      "id": "early-mixed",
+      "name": "초기 혼합",
+      "legal": 53,
+      "wins": 34,
+      "losses": 4,
+      "held": 15,
+      "winPercent": 64.15094339622641
+    },
+    {
+      "id": "mobile-mixed",
+      "name": "중형 전선",
+      "legal": 53,
+      "wins": 25,
+      "losses": 17,
+      "held": 11,
+      "winPercent": 47.16981132075472
+    },
+    {
+      "id": "siege-mixed",
+      "name": "혼합 공성",
+      "legal": 53,
+      "wins": 3,
+      "losses": 39,
+      "held": 11,
+      "winPercent": 5.660377358490566
+    },
+    {
+      "id": "heavy-mixed",
+      "name": "대형 혼합",
+      "legal": 53,
+      "wins": 13,
+      "losses": 24,
+      "held": 16,
+      "winPercent": 24.528301886792452
+    },
+    {
+      "id": "carrier-mixed",
+      "name": "함재 혼합",
+      "legal": 53,
+      "wins": 15,
+      "losses": 26,
+      "held": 12,
+      "winPercent": 28.30188679245283
+    },
+    {
+      "id": "recovery-mixed",
+      "name": "전투·회수",
+      "legal": 53,
+      "wins": 26,
+      "losses": 10,
+      "held": 17,
+      "winPercent": 49.056603773584904
+    }
+  ],
+  "findings": [
+    "케스트럴: 고정 표본의 공격 승리 90.6%. 기동·연료·약탈·예산별 상성까지 함께 재검토."
+  ],
+  "ratioSummary": [
+    {
+      "ratio": 1,
+      "cases": 144,
+      "wins": 6,
+      "profitable": 1,
+      "best": 10077.0355
+    },
+    {
+      "ratio": 1.5,
+      "cases": 144,
+      "wins": 30,
+      "profitable": 3,
+      "best": 10193.355
+    },
+    {
+      "ratio": 2,
+      "cases": 144,
+      "wins": 60,
+      "profitable": 13,
+      "best": 34236.4838
+    }
+  ],
+  "checks": 12024
+}

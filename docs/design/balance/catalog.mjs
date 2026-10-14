@@ -14,14 +14,14 @@ const defense = (id, name, weapon, cost, hp, shield, armor, attack, power, found
   ({ id, name, weapon, cost, hp, shield, armor, attack, power, foundryLevel: foundry, prerequisites: req(need), role });
 
 export const catalog = {
-  version: 'season-content-draft-1', status: 'planning-proposal', date: '2026-10-14',
+  version: 'season-content-draft-2', status: 'planning-proposal', date: '2026-10-14',
   resources: ['alloy', 'crystal', 'fuel'], resourceNames: ['합금', '결정', '연료'],
   seasonDays: 84, recommendedVisitsPerDay: [1,2], sensitivityVisitsPerDay: [1,2,4],
   initialResources: [8000,5000,3500], initialLevels: {
     alloy_mine:1, crystal_mine:1, fuel_refinery:1, power_plant:1, warehouse:1, shipyard:1, laboratory:1
   },
   initialShips: { scout:1, courier:1, striker:1 },
-  economy: { baseHourly: [120,90,70], productionGrowth:1.1, warehouseBase:6000, warehouseGrowth:1.6,
+  economy: { baseHourly: [120,90,70], productionGrowth:1.1, warehouseBase:8000, warehouseGrowth:1.6,
     energyBase:[8,9,10], powerBase:100, powerGrowth:1.15, offlineHoursCap:null,
     constructionQueue:3, researchQueue:3, productionReserveHours:36, planetFields:120,
     buildSpeedPerYardLevel:0.12, researchSpeedPerLabLevel:0.10 },
@@ -36,7 +36,7 @@ export const catalog = {
     facility('fuel_refinery','연료 합성소','생산',15,[1400,1000,600],1.58,0.5,1,'','연료 시간당 70 × L × 1.10^(L-1)'),
     facility('power_plant','발전소','전력',12,[1600,600,0],1.6,0.5,1,'','전력 100 × L × 1.15^(L-1)'),
     facility('fusion_plant','융합 발전소','전력',8,[8000,6000,3000],1.7,3,2,'fusion_drive:1,power_efficiency:3','전력 250 × L; 시간당 연료 12 × L 소비. 기본 발전 대체가 아닌 고밀도 선택'),
-    facility('warehouse','통합 저장고','저장',12,[1200,800,200],1.55,0.5,1,'','자원별 6,000 × 1.60^(L-1); 저장 연구 보너스 별도'),
+    facility('warehouse','통합 저장고','저장',12,[1200,800,200],1.55,0.5,1,'','자원별 8,000 × 1.60^(L-1); 저장 연구 보너스 별도'),
     facility('protected_vault','보호 창고','저장',8,[2000,1200,300],1.6,1,1,'encryption:1','자원별 500 × 1.5^(L-1) 보호, 각 저장 상한의 최대 30%'),
     facility('shipyard','궤도 조선소','산업',10,[2600,1600,400],1.65,1,2,'','함종 단계 해금; 건조 속도 +12% × (L-1)'),
     facility('laboratory','연구소','산업',10,[1800,2400,400],1.65,1,2,'','연구 해금; 연구 속도 +10% × (L-1), 연구 큐는 제국 공통 1개'),
@@ -78,7 +78,7 @@ export const catalog = {
     research('sensors','센서 해상도','정보',10,[800,1400,200],1,'','정찰 정보 지수 +5/레벨; 센서 시설은 접근 탐지 담당'),
     research('espionage','침투 정보학','정보',8,[1200,2200,400],2,'sensors:2','정찰 정보 지수 +5/레벨; 보고서 단계와 방첩으로 판정'),
     research('encryption','신호 암호화','정보',8,[1200,1600,400],1,'sensors:1','방첩 지수 +5/레벨; 침입 탐지 확률과 분리'),
-    research('electronic_warfare','전자전','정보',6,[2400,3600,800],4,'espionage:2,beam:1','교란 효과 +2%p/레벨, 편대 전체 효과 상한 20%'),
+    research('electronic_warfare','전자전','정보',6,[2400,3600,800],4,'espionage:2,beam:1','실제 교란선 투자 비중 ×0.5의 효율 +10%/레벨, 편대 전체 방어막 약화 상한 20%'),
     research('counter_ew','주파수 복원','정보',6,[2400,3200,800],3,'encryption:2,power_efficiency:2','피해 교란 효과 -2%p/레벨, 최대 12%p'),
     research('astrography','성계 지도학','정보',6,[1800,2400,600],2,'sensors:2,navigation:1','탐색 거리·식민지 후보 해상도 해금, 자산 자동 공개 없음'),
     research('cargo_compression','화물 압축','병참',10,[1000,800,200],1,'storage:1','함선 적재량 +5%/레벨, 최대 50%'),
@@ -92,13 +92,13 @@ export const catalog = {
     research('siege_protocol','공성 교리','지휘',8,[3000,1600,1000],3,'kinetic:3,tracking:2','공성 공격 +3%/레벨, 최대 24%; 이동 함대 약점 유지'),
     research('carrier_ops','함재 편대 운용','지휘',6,[5000,6000,1800],5,'coordination:3,electronic_warfare:1','함재 드론 공격 +4%/레벨, 최대 24%; 탄도 병기와 중복 가산 없음'),
     research('retreat','철수 절차','지휘',6,[2200,1600,800],2,'fleet_command:1,navigation:2','사전 철수 정책 임계값 해금; 도착 전 순간 귀환 없음'),
-    research('formation','방호 편대','지휘',6,[2600,1800,800],3,'coordination:2,armor:2','엄호 효율 +1%p/레벨, 편대 피해 경감 합계 최대 15%')
+    research('formation','방호 편대','지휘',6,[2600,1800,800],3,'coordination:2,armor:2','실제 호위·방어막 지원 투자 비중 ×0.5의 효율 +10%/레벨, 편대 피해 경감 합계 최대 15%')
   ],
   ships: [
     ship('scout','위스프',1,'정찰','L','kinetic',[500,400,200],65,15,0,8,180,1,100,1,1,'sensors:1','탐사·정찰 정보 지수 +5/척, 실제 정찰 조건 적용','전투 효율 낮음·방첩에 노출'),
     ship('courier','캐러밴',1,'수송','L','kinetic',[1000,400,200],130,20,3,10,100,2,2000,1,1,'','초기 행성 수송과 작전 보급','저화력·호위 필요'),
     ship('interceptor','스위프트',1,'요격','L','kinetic',[1400,600,200],120,20,5,38,150,2,100,1,1,'kinetic:1','경량 정찰·함재 편대 대응','장갑 함대·시설에 약함'),
-    ship('striker','케스트럴',1,'타격','L','kinetic',[1800,1000,400],220,40,12,65,110,3,150,2,1,'kinetic:1','일반 국지전의 초기 주력','중장갑·강한 시설 방어에 약함'),
+    ship('striker','케스트럴',1,'타격','L','kinetic',[1800,1000,400],220,40,12,54,110,3,150,2,1,'kinetic:1','일반 국지전의 초기 주력','중장갑·강한 시설 방어에 약함'),
     ship('salvage','아틀라스',1,'회수','L','kinetic',[1200,500,300],150,20,5,12,75,2,1600,1,1,'salvage_processing:1','합금·결정 잔해 회수','느림·전투를 대신하지 못함'),
     ship('raider','레이븐',2,'급습','L','kinetic',[2300,1300,600],160,30,6,55,160,6,900,2,2,'chemical_drive:2,tracking:1','빠른 목표 접근·소량 고가 화물 회수','연료 비효율·지속 교전 약함'),
     ship('guardian','바스티온',2,'호위','M','beam',[5000,2800,1200],720,240,35,75,75,7,180,3,3,'armor:2,shield:1','호위 기여에 비례한 편대 경감, 총 15% 상한','순수 화력 효율 낮음'),

@@ -1,5 +1,5 @@
 {
-  "version": "season-content-draft-1",
+  "version": "season-content-draft-2",
   "status": "planning-proposal",
   "date": "2026-10-14",
   "resources": [
@@ -48,7 +48,7 @@
       70
     ],
     "productionGrowth": 1.1,
-    "warehouseBase": 6000,
+    "warehouseBase": 8000,
     "warehouseGrowth": 1.6,
     "energyBase": [
       8,
@@ -206,7 +206,7 @@
       "timeGrowth": 1.45,
       "space": 1,
       "prerequisites": {},
-      "effect": "자원별 6,000 × 1.60^(L-1); 저장 연구 보너스 별도",
+      "effect": "자원별 8,000 × 1.60^(L-1); 저장 연구 보너스 별도",
       "idlePowerPerLevel": 0
     },
     {
@@ -1021,7 +1021,7 @@
         "espionage": 2,
         "beam": 1
       },
-      "effect": "교란 효과 +2%p/레벨, 편대 전체 효과 상한 20%",
+      "effect": "실제 교란선 투자 비중 ×0.5의 효율 +10%/레벨, 편대 전체 방어막 약화 상한 20%",
       "bonus": null
     },
     {
@@ -1312,7 +1312,7 @@
         "coordination": 2,
         "armor": 2
       },
-      "effect": "엄호 효율 +1%p/레벨, 편대 피해 경감 합계 최대 15%",
+      "effect": "실제 호위·방어막 지원 투자 비중 ×0.5의 효율 +10%/레벨, 편대 피해 경감 합계 최대 15%",
       "bonus": null
     }
   ],
@@ -1414,7 +1414,7 @@
       "hp": 220,
       "shield": 40,
       "armor": 12,
-      "attack": 65,
+      "attack": 54,
       "speed": 110,
       "fuel": 3,
       "cargo": 150,
