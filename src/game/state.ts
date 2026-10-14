@@ -1,7 +1,7 @@
 import { MISSIONS, MODULES } from "./content.ts";
 import { createFleet, validateFleet } from "./fleet.ts";
 import { resolveBattle } from "./combat.ts";
-import type { GameAction, GameState, Operation } from "./types.ts";
+import type { GameAction, GameState, Operation, FleetContext } from "./types.ts";
 export function initialState(): GameState {
   return {
     schemaVersion: 1,
@@ -74,7 +74,7 @@ function encounter(state: GameState, bonus: boolean): GameState {
       : "교전 기한 초과 · 긴급 귀환",
   );
 }
-export function reduceGame(previous: GameState, action: GameAction): GameState {
+export function reduceGame(previous: GameState, action: GameAction, context?: FleetContext): GameState {
   if (action.type === "clear-message") return { ...previous, message: null };
   const error = (message: string) => ({ ...previous, message });
   if (action.type === "launch") {
@@ -85,6 +85,7 @@ export function reduceGame(previous: GameState, action: GameAction): GameState {
       action.fleetIds,
       action.support,
       action.approach,
+      context,
     );
     if (errors.length) return error(errors[0]);
     if (
@@ -101,7 +102,7 @@ export function reduceGame(previous: GameState, action: GameAction): GameState {
       approach: action.approach,
       module: state.profile.active,
       phase: "checkpoint",
-      fleet: createFleet(action.fleetIds, state.profile.active),
+      fleet: createFleet(action.fleetIds, state.profile.active, context),
       battles: [],
       cargoOffered: 0,
       cargoUnloaded: 0,

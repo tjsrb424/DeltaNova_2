@@ -1,6 +1,6 @@
 import { MISSIONS, MODULES, ROSTER, SUPPORTS } from "../game/content.ts";
 import { initialState, reduceGame } from "../game/state.ts";
-import type { GameState, ModuleId } from "../game/types.ts";
+import type { GameState, ModuleId, FleetContext } from "../game/types.ts";
 
 export const SAVE_KEY = "delta-nova.command-center.v1";
 export interface StoragePort {
@@ -56,7 +56,7 @@ function canonical(value: unknown, depth = 0): string {
   return JSON.stringify(value);
 }
 
-export function decodeSave(raw: string): GameState {
+export function decodeSave(raw: string, context?: FleetContext): GameState {
   requireThat(raw.length <= 512_000);
   const root = object(JSON.parse(raw));
   requireThat(
@@ -108,7 +108,7 @@ export function decodeSave(raw: string): GameState {
       Array.isArray(op.fleet) && op.fleet.length >= 1 && op.fleet.length <= 6,
     );
     const fleetIds = op.fleet.map((u) => object(u).id);
-    requireThat(fleetIds.every((id) => ROSTER.some((r) => r.id === id)));
+    requireThat(fleetIds.every((id) => (context?.roster || ROSTER).some((r) => r.id === id)));
     requireThat(
       Array.isArray(op.battles) &&
         op.battles.length >= 1 &&
@@ -132,12 +132,12 @@ export function decodeSave(raw: string): GameState {
       fleetIds: fleetIds as string[],
       support: op.support as never,
       approach: op.approach,
-    });
+    }, context);
     requireThat(replay.operation !== null);
     if (op.battles.length === 2)
-      replay = reduceGame(replay, { type: "advance" });
+      replay = reduceGame(replay, { type: "advance" }, context);
     else if (op.phase === "result")
-      replay = reduceGame(replay, { type: "return" });
+      replay = reduceGame(replay, { type: "return" }, context);
     requireThat(canonical(replay.operation) === canonical(op));
     requireThat(canonical(replay.profile) === canonical(state.profile));
     state.operation = replay.operation;

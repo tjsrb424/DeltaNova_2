@@ -5,6 +5,7 @@ import type { PlanetState, Resources, TimedJob } from "./types.ts";
 import { GuildError } from "../guild/types.ts";
 import { RESOURCE_IDS, RESOURCE_NAMES, FACILITY_NAMES, TECHNOLOGY_NAMES, SHIP_BUILD, facilityQuote, researchQuote, DEFENSE_QUOTE, scaledCost } from "./content.ts";
 import { capacities, productionRates, power, facilitySpace } from "./economy.ts";
+import { applyEmpireCareer } from "./career.ts";
 export function empireFail(code: string, message: string): never { throw new GuildError(400,code,message); }
 export function ownedPlanet(state: EmpireState, id: string): PlanetState {
   const p=state.planets.find(p=>p.id===id);
@@ -82,6 +83,7 @@ export function projectEmpire(previous: EmpireState, now: number): EmpireState {
   accrue(now); s.settledAt=now; return s;
 }
 export function applyEmpireAction(previous: EmpireState, action: EmpireAction, now: number, jobId: string): EmpireState {
+  if(action.type==="repair-fleet"||action.type==="career-action") return applyEmpireCareer(previous,action,now);
   const s=projectEmpire(previous,now),at=Math.max(now,s.settledAt),p=ownedPlanet(s,action.planetId);
   s.revision++;
   if(action.type==="collect-production") return s;
@@ -100,7 +102,6 @@ export function applyEmpireAction(previous: EmpireState, action: EmpireAction, n
     s.events.push({id:j!.id,at,planetId:p.id,kind:"cancelled",title:title(j!)+" 취소 · 80% 반환"}); s.events=s.events.slice(-50);
     return s;
   }
-  if(action.type==="repair-fleet"||action.type==="career-action") empireFail("CAREER_UNAVAILABLE","개인 작전 연결을 확인하세요.");
   if(power(p).demanded>power(p).supplied&&!(action.type==="upgrade-facility"&&action.facility==="powerPlant")) empireFail("POWER_SHORT","전력이 부족합니다. 발전소를 증설하세요.");
   if(jobs(s).some(j=>j.id===jobId)||s.events.some(e=>e.id===jobId)) empireFail("JOB_REUSED","작업 ID를 다시 사용할 수 없습니다.");
   const make=(kind:TimedJob["kind"],target:string,quantity:number,level:number,quote:{cost:Resources;seconds:number}):TimedJob=>{

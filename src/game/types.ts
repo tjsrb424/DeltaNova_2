@@ -9,6 +9,7 @@ export type Role =
   | "carrier"
   | "enemy";
 export type Support = "none" | "recon" | "jam" | "supply";
+export interface FleetContext { roster: readonly { id: string; shipId: string }[] }
 export type Approach = "direct" | "flank";
 export type ModuleId = "none" | "bulkhead" | "cargo";
 export interface ShipDefinition {

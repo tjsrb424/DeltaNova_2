@@ -87,12 +87,14 @@ export function validateEmpire(value: unknown): EmpireState {
   }
   check(planetIds.has(state.homePlanetId)&&state.planets.filter(p=>p.kind==="home").length===1&&state.planets.find(p=>p.id===state.homePlanetId)?.kind==="home");
   if(state.researchJob!==null) { check(planetIds.has(state.researchJob.planetId)); job(state.researchJob,state.researchJob.planetId,"research"); }
-  const career=decodeSave(JSON.stringify(state.career)); check(career.message===null);
+  const career=decodeSave(JSON.stringify(state.career),state.careerFleetContext||undefined); check(career.message===null);
   if(career.operation===null) check(state.careerOriginPlanetId===null&&state.careerFleetContext===null);
   else {
     check(typeof state.careerOriginPlanetId==="string"&&planetIds.has(state.careerOriginPlanetId)&&state.careerFleetContext!==null);
     const context=object(state.careerFleetContext); exact(context,["roster"]); check(Array.isArray(context.roster)&&context.roster.length===career.operation.fleet.length);
     const p=state.planets.find(p=>p.id===state.careerOriginPlanetId)!;
+    check(new Set(context.roster.map(r=>object(r).id)).size===context.roster.length);
+    for(const raw of context.roster) { const r=object(raw); exact(r,["id","shipId"]); check(p.ships.some(sh=>sh.id===r.id&&sh.shipId===r.shipId)); }
     for(const unit of career.operation.fleet) check(p.ships.some(sh=>sh.id===unit.id&&sh.shipId===unit.shipId&&sh.status===(career.operation!.phase==="checkpoint"?"deployed":"docked")));
   }
   check(Array.isArray(state.events)&&state.events.length<=50);
