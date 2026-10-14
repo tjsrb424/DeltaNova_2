@@ -1,0 +1,2171 @@
+{
+  "version": "season-content-draft-1",
+  "status": "planning-proposal",
+  "date": "2026-10-14",
+  "resources": [
+    "alloy",
+    "crystal",
+    "fuel"
+  ],
+  "resourceNames": [
+    "합금",
+    "결정",
+    "연료"
+  ],
+  "seasonDays": 84,
+  "recommendedVisitsPerDay": [
+    1,
+    2
+  ],
+  "sensitivityVisitsPerDay": [
+    1,
+    2,
+    4
+  ],
+  "initialResources": [
+    8000,
+    5000,
+    3500
+  ],
+  "initialLevels": {
+    "alloy_mine": 1,
+    "crystal_mine": 1,
+    "fuel_refinery": 1,
+    "power_plant": 1,
+    "warehouse": 1,
+    "shipyard": 1,
+    "laboratory": 1
+  },
+  "initialShips": {
+    "scout": 1,
+    "courier": 1,
+    "striker": 1
+  },
+  "economy": {
+    "baseHourly": [
+      120,
+      90,
+      70
+    ],
+    "productionGrowth": 1.1,
+    "warehouseBase": 6000,
+    "warehouseGrowth": 1.6,
+    "energyBase": [
+      8,
+      9,
+      10
+    ],
+    "powerBase": 100,
+    "powerGrowth": 1.15,
+    "offlineHoursCap": null,
+    "constructionQueue": 3,
+    "researchQueue": 3,
+    "productionReserveHours": 36,
+    "planetFields": 120,
+    "buildSpeedPerYardLevel": 0.12,
+    "researchSpeedPerLabLevel": 0.1
+  },
+  "targeting": {
+    "kinetic": {
+      "L": 1.25,
+      "M": 1,
+      "H": 0.65,
+      "F": 0.35
+    },
+    "beam": {
+      "L": 0.75,
+      "M": 1.15,
+      "H": 1,
+      "F": 0.7
+    },
+    "missile": {
+      "L": 0.35,
+      "M": 0.9,
+      "H": 1.35,
+      "F": 1.1
+    },
+    "siege": {
+      "L": 0.15,
+      "M": 0.35,
+      "H": 0.7,
+      "F": 1.6
+    },
+    "drone": {
+      "L": 0.8,
+      "M": 1.05,
+      "H": 0.65,
+      "F": 0.45
+    }
+  },
+  "facilities": [
+    {
+      "id": "alloy_mine",
+      "name": "합금 광산",
+      "group": "생산",
+      "maxLevel": 15,
+      "baseCost": [
+        2400,
+        800,
+        0
+      ],
+      "costGrowth": 1.58,
+      "baseHours": 0.5,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {},
+      "effect": "합금 시간당 120 × L × 1.10^(L-1)",
+      "idlePowerPerLevel": 0
+    },
+    {
+      "id": "crystal_mine",
+      "name": "결정 채굴소",
+      "group": "생산",
+      "maxLevel": 15,
+      "baseCost": [
+        1600,
+        1400,
+        0
+      ],
+      "costGrowth": 1.58,
+      "baseHours": 0.5,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {},
+      "effect": "결정 시간당 90 × L × 1.10^(L-1)",
+      "idlePowerPerLevel": 0
+    },
+    {
+      "id": "fuel_refinery",
+      "name": "연료 합성소",
+      "group": "생산",
+      "maxLevel": 15,
+      "baseCost": [
+        1400,
+        1000,
+        600
+      ],
+      "costGrowth": 1.58,
+      "baseHours": 0.5,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {},
+      "effect": "연료 시간당 70 × L × 1.10^(L-1)",
+      "idlePowerPerLevel": 0
+    },
+    {
+      "id": "power_plant",
+      "name": "발전소",
+      "group": "전력",
+      "maxLevel": 12,
+      "baseCost": [
+        1600,
+        600,
+        0
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 0.5,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {},
+      "effect": "전력 100 × L × 1.15^(L-1)",
+      "idlePowerPerLevel": 0
+    },
+    {
+      "id": "fusion_plant",
+      "name": "융합 발전소",
+      "group": "전력",
+      "maxLevel": 8,
+      "baseCost": [
+        8000,
+        6000,
+        3000
+      ],
+      "costGrowth": 1.7,
+      "baseHours": 3,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "fusion_drive": 1,
+        "power_efficiency": 3
+      },
+      "effect": "전력 250 × L; 시간당 연료 12 × L 소비. 기본 발전 대체가 아닌 고밀도 선택",
+      "idlePowerPerLevel": 0
+    },
+    {
+      "id": "warehouse",
+      "name": "통합 저장고",
+      "group": "저장",
+      "maxLevel": 12,
+      "baseCost": [
+        1200,
+        800,
+        200
+      ],
+      "costGrowth": 1.55,
+      "baseHours": 0.5,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {},
+      "effect": "자원별 6,000 × 1.60^(L-1); 저장 연구 보너스 별도",
+      "idlePowerPerLevel": 0
+    },
+    {
+      "id": "protected_vault",
+      "name": "보호 창고",
+      "group": "저장",
+      "maxLevel": 8,
+      "baseCost": [
+        2000,
+        1200,
+        300
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 1,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {
+        "encryption": 1
+      },
+      "effect": "자원별 500 × 1.5^(L-1) 보호, 각 저장 상한의 최대 30%",
+      "idlePowerPerLevel": 1
+    },
+    {
+      "id": "shipyard",
+      "name": "궤도 조선소",
+      "group": "산업",
+      "maxLevel": 10,
+      "baseCost": [
+        2600,
+        1600,
+        400
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 1,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {},
+      "effect": "함종 단계 해금; 건조 속도 +12% × (L-1)",
+      "idlePowerPerLevel": 10
+    },
+    {
+      "id": "laboratory",
+      "name": "연구소",
+      "group": "산업",
+      "maxLevel": 10,
+      "baseCost": [
+        1800,
+        2400,
+        400
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 1,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {},
+      "effect": "연구 해금; 연구 속도 +10% × (L-1), 연구 큐는 제국 공통 1개",
+      "idlePowerPerLevel": 12
+    },
+    {
+      "id": "assembly_plant",
+      "name": "자동 조립 시설",
+      "group": "산업",
+      "maxLevel": 8,
+      "baseCost": [
+        6000,
+        3000,
+        1000
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 2,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "automation": 3,
+        "shipbuilding": 2
+      },
+      "effect": "현지 건조 속도 +5%/레벨, 비용 할인 없음",
+      "idlePowerPerLevel": 6
+    },
+    {
+      "id": "repair_dock",
+      "name": "정비 도크",
+      "group": "산업",
+      "maxLevel": 8,
+      "baseCost": [
+        4000,
+        2200,
+        800
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 1.5,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "field_repair": 1
+      },
+      "effect": "선체 수리 속도 +10%/레벨; 영구 파괴 함선은 복구하지 않음",
+      "idlePowerPerLevel": 4
+    },
+    {
+      "id": "orbital_dock",
+      "name": "궤도 집결항",
+      "group": "산업",
+      "maxLevel": 6,
+      "baseCost": [
+        10000,
+        6000,
+        2400
+      ],
+      "costGrowth": 1.7,
+      "baseHours": 3,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "coordination": 2
+      },
+      "effect": "동맹 증원 편대 대기 용량 +100 지휘/레벨; 함선 복제 없음",
+      "idlePowerPerLevel": 5
+    },
+    {
+      "id": "sensor_array",
+      "name": "행성 센서 배열",
+      "group": "정보",
+      "maxLevel": 10,
+      "baseCost": [
+        1400,
+        2200,
+        400
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 1,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {
+        "sensors": 1
+      },
+      "effect": "접근 탐지 지수 +10/레벨; 정확한 상대 재고 노출과 별개",
+      "idlePowerPerLevel": 3
+    },
+    {
+      "id": "observatory",
+      "name": "성계 관측소",
+      "group": "정보",
+      "maxLevel": 8,
+      "baseCost": [
+        3000,
+        4000,
+        1000
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 2,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "astrography": 1
+      },
+      "effect": "탐사 후보 범위 +1 항로 단위/레벨, 탐사 임무 필요",
+      "idlePowerPerLevel": 4
+    },
+    {
+      "id": "signal_center",
+      "name": "통신 분석실",
+      "group": "정보",
+      "maxLevel": 8,
+      "baseCost": [
+        3600,
+        5400,
+        1000
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 2,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {
+        "espionage": 2
+      },
+      "effect": "정찰 보고 보존·공유, 분석 지수 +5/레벨",
+      "idlePowerPerLevel": 4
+    },
+    {
+      "id": "jump_beacon",
+      "name": "항로 유도 비콘",
+      "group": "정보",
+      "maxLevel": 6,
+      "baseCost": [
+        12000,
+        10000,
+        4000
+      ],
+      "costGrowth": 1.7,
+      "baseHours": 4,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "long_range": 2
+      },
+      "effect": "공개한 아군 항로의 항행 보정 최대 15%; 순간 이동 없음",
+      "idlePowerPerLevel": 8
+    },
+    {
+      "id": "spaceport",
+      "name": "우주항",
+      "group": "물류",
+      "maxLevel": 10,
+      "baseCost": [
+        2200,
+        1200,
+        400
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 1,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {
+        "navigation": 1
+      },
+      "effect": "동시 비행 슬롯 기본 3 + 레벨; 조선 큐와 별개",
+      "idlePowerPerLevel": 2
+    },
+    {
+      "id": "fuel_depot",
+      "name": "연료 보급소",
+      "group": "물류",
+      "maxLevel": 8,
+      "baseCost": [
+        2000,
+        1000,
+        1000
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 1,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {
+        "fuel_efficiency": 1
+      },
+      "effect": "현지 작전 예비 연료 저장 +2,000/레벨, 기본 저장고와 중복 자산 없음",
+      "idlePowerPerLevel": 1
+    },
+    {
+      "id": "salvage_yard",
+      "name": "잔해 처리장",
+      "group": "물류",
+      "maxLevel": 8,
+      "baseCost": [
+        3000,
+        1800,
+        500
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 1.5,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {
+        "salvage_processing": 1
+      },
+      "effect": "잔해 정제 속도 +10%/레벨; 회수율 상한은 별도 45%",
+      "idlePowerPerLevel": 3
+    },
+    {
+      "id": "freight_hub",
+      "name": "화물 분배 허브",
+      "group": "물류",
+      "maxLevel": 8,
+      "baseCost": [
+        5000,
+        3000,
+        1000
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 2,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "cargo_compression": 2,
+        "supply_network": 1
+      },
+      "effect": "정해진 수송 계획 최대 1 + 레벨; 부족·위험 시 중단",
+      "idlePowerPerLevel": 3
+    },
+    {
+      "id": "colony_admin",
+      "name": "식민지 행정소",
+      "group": "개척",
+      "maxLevel": 8,
+      "baseCost": [
+        4000,
+        2200,
+        800
+      ],
+      "costGrowth": 1.6,
+      "baseHours": 2,
+      "timeGrowth": 1.45,
+      "space": 1,
+      "prerequisites": {
+        "navigation": 2
+      },
+      "effect": "현지 작업 계획 수 3 + floor(L/2); 무제한 행성 보너스 없음",
+      "idlePowerPerLevel": 2
+    },
+    {
+      "id": "terraformer",
+      "name": "환경 조정소",
+      "group": "개척",
+      "maxLevel": 4,
+      "baseCost": [
+        15000,
+        12000,
+        5000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 6,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "terraforming": 1
+      },
+      "effect": "현지 시설 공간 +15/레벨; 기본 공간을 소급 복제하지 않음",
+      "idlePowerPerLevel": 6
+    },
+    {
+      "id": "command_hub",
+      "name": "함대 지휘본부",
+      "group": "지휘",
+      "maxLevel": 8,
+      "baseCost": [
+        4000,
+        2600,
+        800
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 2,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "fleet_command": 1
+      },
+      "effect": "현지 출격 지휘 용량 +50/레벨",
+      "idlePowerPerLevel": 3
+    },
+    {
+      "id": "defense_foundry",
+      "name": "방어 설비 제작소",
+      "group": "방어",
+      "maxLevel": 8,
+      "baseCost": [
+        3000,
+        1600,
+        400
+      ],
+      "costGrowth": 1.65,
+      "baseHours": 1.5,
+      "timeGrowth": 1.45,
+      "space": 2,
+      "prerequisites": {
+        "armor": 1
+      },
+      "effect": "현지 방어 설비 해금·제작; 별도 방어 건조 라인 1개",
+      "idlePowerPerLevel": 4
+    }
+  ],
+  "researches": [
+    {
+      "id": "automation",
+      "name": "산업 자동화",
+      "branch": "산업",
+      "maxLevel": 8,
+      "baseCost": [
+        900,
+        700,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {},
+      "effect": "모든 자원 생산 +3%/레벨, 최대 24%",
+      "bonus": {
+        "group": "production",
+        "perLevel": 0.03,
+        "cap": 0.24
+      }
+    },
+    {
+      "id": "refining",
+      "name": "정밀 정제",
+      "branch": "산업",
+      "maxLevel": 6,
+      "baseCost": [
+        1200,
+        1800,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "automation": 2
+      },
+      "effect": "결정·연료 생산 +2%/레벨, 자동화와 가산; 추가 최대 12%",
+      "bonus": {
+        "group": "refining",
+        "perLevel": 0.02,
+        "cap": 0.12
+      }
+    },
+    {
+      "id": "power_efficiency",
+      "name": "전력 효율",
+      "branch": "산업",
+      "maxLevel": 8,
+      "baseCost": [
+        1000,
+        900,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {},
+      "effect": "생산시설 전력 수요 -3%/레벨, 최대 24%",
+      "bonus": {
+        "group": "power",
+        "perLevel": 0.03,
+        "cap": 0.24
+      }
+    },
+    {
+      "id": "storage",
+      "name": "압축 저장",
+      "branch": "산업",
+      "maxLevel": 10,
+      "baseCost": [
+        800,
+        600,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {},
+      "effect": "기본 저장 상한 +5%/레벨, 최대 50%",
+      "bonus": {
+        "group": "storage",
+        "perLevel": 0.05,
+        "cap": 0.5
+      }
+    },
+    {
+      "id": "construction",
+      "name": "건설 공학",
+      "branch": "산업",
+      "maxLevel": 8,
+      "baseCost": [
+        1200,
+        800,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {
+        "automation": 1
+      },
+      "effect": "현지 시설 건설 속도 +7%/레벨, 최대 56%",
+      "bonus": {
+        "group": "construction",
+        "perLevel": 0.07,
+        "cap": 0.56
+      }
+    },
+    {
+      "id": "shipbuilding",
+      "name": "선체 조립 공학",
+      "branch": "산업",
+      "maxLevel": 8,
+      "baseCost": [
+        2000,
+        1600,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "construction": 2
+      },
+      "effect": "함선·방어 건조 속도 +7%/레벨, 최대 56%",
+      "bonus": {
+        "group": "shipbuilding",
+        "perLevel": 0.07,
+        "cap": 0.56
+      }
+    },
+    {
+      "id": "chemical_drive",
+      "name": "화학 추진",
+      "branch": "추진",
+      "maxLevel": 10,
+      "baseCost": [
+        800,
+        500,
+        500
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {},
+      "effect": "경량·초기 물류 함선 속도 +4%/레벨, 최대 40%",
+      "bonus": null
+    },
+    {
+      "id": "ion_drive",
+      "name": "이온 추진",
+      "branch": "추진",
+      "maxLevel": 8,
+      "baseCost": [
+        1800,
+        2000,
+        1200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "chemical_drive": 2,
+        "power_efficiency": 2
+      },
+      "effect": "중형 함선 속도 +5%/레벨, 최대 40%",
+      "bonus": null
+    },
+    {
+      "id": "fusion_drive",
+      "name": "융합 추진",
+      "branch": "추진",
+      "maxLevel": 6,
+      "baseCost": [
+        6000,
+        7000,
+        5000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 8,
+      "timeGrowth": 1.5,
+      "labLevel": 5,
+      "prerequisites": {
+        "ion_drive": 3,
+        "power_efficiency": 4
+      },
+      "effect": "대형 함선 속도 +6%/레벨, 최대 36%",
+      "bonus": null
+    },
+    {
+      "id": "navigation",
+      "name": "항행 계산",
+      "branch": "추진",
+      "maxLevel": 8,
+      "baseCost": [
+        1000,
+        1000,
+        300
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {
+        "chemical_drive": 1
+      },
+      "effect": "항행 속도 +2%/레벨; 엔진·비콘 포함 총 속도 보너스 최대 50%",
+      "bonus": null
+    },
+    {
+      "id": "fuel_efficiency",
+      "name": "연료 분사 제어",
+      "branch": "추진",
+      "maxLevel": 8,
+      "baseCost": [
+        1400,
+        1000,
+        1000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "chemical_drive": 2
+      },
+      "effect": "비행 연료 -4%/레벨, 최대 32%",
+      "bonus": null
+    },
+    {
+      "id": "long_range",
+      "name": "장거리 항행",
+      "branch": "추진",
+      "maxLevel": 6,
+      "baseCost": [
+        4000,
+        5000,
+        3000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 4,
+      "prerequisites": {
+        "navigation": 3,
+        "fuel_efficiency": 2
+      },
+      "effect": "장거리 출격·항로 비콘 해금; 원거리 비행 비용은 유지",
+      "bonus": null
+    },
+    {
+      "id": "kinetic",
+      "name": "운동탄 병기",
+      "branch": "전투",
+      "maxLevel": 10,
+      "baseCost": [
+        1200,
+        600,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {},
+      "effect": "운동탄 공격 +3%/레벨, 최대 30%",
+      "bonus": null
+    },
+    {
+      "id": "beam",
+      "name": "집속 에너지",
+      "branch": "전투",
+      "maxLevel": 10,
+      "baseCost": [
+        1800,
+        2400,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "power_efficiency": 2
+      },
+      "effect": "빔 공격 +3%/레벨, 최대 30%",
+      "bonus": null
+    },
+    {
+      "id": "missile",
+      "name": "유도탄 체계",
+      "branch": "전투",
+      "maxLevel": 10,
+      "baseCost": [
+        2000,
+        1200,
+        1000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "kinetic": 2
+      },
+      "effect": "미사일 공격 +3%/레벨, 최대 30%",
+      "bonus": null
+    },
+    {
+      "id": "armor",
+      "name": "복합 장갑",
+      "branch": "전투",
+      "maxLevel": 10,
+      "baseCost": [
+        1400,
+        800,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {},
+      "effect": "기본 선체 HP +3%/레벨, 최대 30%; 장갑 공식 별도",
+      "bonus": null
+    },
+    {
+      "id": "shield",
+      "name": "방어막 이론",
+      "branch": "전투",
+      "maxLevel": 8,
+      "baseCost": [
+        2000,
+        2400,
+        600
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "power_efficiency": 2
+      },
+      "effect": "기본 방어막 +4%/레벨, 최대 32%",
+      "bonus": null
+    },
+    {
+      "id": "tracking",
+      "name": "다중 표적 추적",
+      "branch": "전투",
+      "maxLevel": 8,
+      "baseCost": [
+        1400,
+        2200,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "sensors": 2,
+        "kinetic": 2
+      },
+      "effect": "경량 표적 피해 계수 +0.025/레벨, 최대 +0.20; 원래 약점은 유지",
+      "bonus": null
+    },
+    {
+      "id": "sensors",
+      "name": "센서 해상도",
+      "branch": "정보",
+      "maxLevel": 10,
+      "baseCost": [
+        800,
+        1400,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {},
+      "effect": "정찰 정보 지수 +5/레벨; 센서 시설은 접근 탐지 담당",
+      "bonus": null
+    },
+    {
+      "id": "espionage",
+      "name": "침투 정보학",
+      "branch": "정보",
+      "maxLevel": 8,
+      "baseCost": [
+        1200,
+        2200,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "sensors": 2
+      },
+      "effect": "정찰 정보 지수 +5/레벨; 보고서 단계와 방첩으로 판정",
+      "bonus": null
+    },
+    {
+      "id": "encryption",
+      "name": "신호 암호화",
+      "branch": "정보",
+      "maxLevel": 8,
+      "baseCost": [
+        1200,
+        1600,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {
+        "sensors": 1
+      },
+      "effect": "방첩 지수 +5/레벨; 침입 탐지 확률과 분리",
+      "bonus": null
+    },
+    {
+      "id": "electronic_warfare",
+      "name": "전자전",
+      "branch": "정보",
+      "maxLevel": 6,
+      "baseCost": [
+        2400,
+        3600,
+        800
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 4,
+      "prerequisites": {
+        "espionage": 2,
+        "beam": 1
+      },
+      "effect": "교란 효과 +2%p/레벨, 편대 전체 효과 상한 20%",
+      "bonus": null
+    },
+    {
+      "id": "counter_ew",
+      "name": "주파수 복원",
+      "branch": "정보",
+      "maxLevel": 6,
+      "baseCost": [
+        2400,
+        3200,
+        800
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "encryption": 2,
+        "power_efficiency": 2
+      },
+      "effect": "피해 교란 효과 -2%p/레벨, 최대 12%p",
+      "bonus": null
+    },
+    {
+      "id": "astrography",
+      "name": "성계 지도학",
+      "branch": "정보",
+      "maxLevel": 6,
+      "baseCost": [
+        1800,
+        2400,
+        600
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "sensors": 2,
+        "navigation": 1
+      },
+      "effect": "탐색 거리·식민지 후보 해상도 해금, 자산 자동 공개 없음",
+      "bonus": null
+    },
+    {
+      "id": "cargo_compression",
+      "name": "화물 압축",
+      "branch": "병참",
+      "maxLevel": 10,
+      "baseCost": [
+        1000,
+        800,
+        200
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {
+        "storage": 1
+      },
+      "effect": "함선 적재량 +5%/레벨, 최대 50%",
+      "bonus": null
+    },
+    {
+      "id": "salvage_processing",
+      "name": "잔해 분리",
+      "branch": "병참",
+      "maxLevel": 6,
+      "baseCost": [
+        1200,
+        1000,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {
+        "cargo_compression": 1
+      },
+      "effect": "영구 파괴 합금·결정 회수율 30% +2.5%p/레벨, 최대 45%",
+      "bonus": null
+    },
+    {
+      "id": "field_repair",
+      "name": "현장 정비",
+      "branch": "병참",
+      "maxLevel": 8,
+      "baseCost": [
+        1800,
+        1400,
+        600
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "armor": 2,
+        "automation": 1
+      },
+      "effect": "수리 자원 계수 기본 20%를 레벨당 0.5%p 낮춤, 최저 16%",
+      "bonus": null
+    },
+    {
+      "id": "supply_network",
+      "name": "보급망",
+      "branch": "병참",
+      "maxLevel": 8,
+      "baseCost": [
+        2200,
+        1600,
+        1000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "cargo_compression": 2,
+        "navigation": 2
+      },
+      "effect": "보급·계획 수송 해금; 생산 자원 복제나 무상 이동 없음",
+      "bonus": null
+    },
+    {
+      "id": "colony_management",
+      "name": "식민지 운영",
+      "branch": "병참",
+      "maxLevel": 4,
+      "baseCost": [
+        4000,
+        3000,
+        2000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "astrography": 2,
+        "navigation": 2
+      },
+      "effect": "추가 식민지 +1/레벨; 본성 포함 최대 5개",
+      "bonus": null
+    },
+    {
+      "id": "terraforming",
+      "name": "환경 개조",
+      "branch": "병참",
+      "maxLevel": 4,
+      "baseCost": [
+        10000,
+        12000,
+        4000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 8,
+      "timeGrowth": 1.5,
+      "labLevel": 5,
+      "prerequisites": {
+        "colony_management": 1,
+        "construction": 3
+      },
+      "effect": "환경 조정소 해금; 행성 자원·입지 특성은 바꾸지 않음",
+      "bonus": null
+    },
+    {
+      "id": "fleet_command",
+      "name": "함대 지휘",
+      "branch": "지휘",
+      "maxLevel": 10,
+      "baseCost": [
+        1400,
+        1000,
+        400
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 1,
+      "prerequisites": {
+        "navigation": 1
+      },
+      "effect": "출격 지휘 용량 기본 100 +50/레벨, 제국 재고 상한 아님",
+      "bonus": null
+    },
+    {
+      "id": "coordination",
+      "name": "협공 조율",
+      "branch": "지휘",
+      "maxLevel": 8,
+      "baseCost": [
+        2200,
+        2600,
+        800
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "fleet_command": 2,
+        "sensors": 2
+      },
+      "effect": "예약 협공 도착 허용 창 기본 90초 +30초/레벨, 최대 330초",
+      "bonus": null
+    },
+    {
+      "id": "siege_protocol",
+      "name": "공성 교리",
+      "branch": "지휘",
+      "maxLevel": 8,
+      "baseCost": [
+        3000,
+        1600,
+        1000
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "kinetic": 3,
+        "tracking": 2
+      },
+      "effect": "공성 공격 +3%/레벨, 최대 24%; 이동 함대 약점 유지",
+      "bonus": null
+    },
+    {
+      "id": "carrier_ops",
+      "name": "함재 편대 운용",
+      "branch": "지휘",
+      "maxLevel": 6,
+      "baseCost": [
+        5000,
+        6000,
+        1800
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 8,
+      "timeGrowth": 1.5,
+      "labLevel": 5,
+      "prerequisites": {
+        "coordination": 3,
+        "electronic_warfare": 1
+      },
+      "effect": "함재 드론 공격 +4%/레벨, 최대 24%; 탄도 병기와 중복 가산 없음",
+      "bonus": null
+    },
+    {
+      "id": "retreat",
+      "name": "철수 절차",
+      "branch": "지휘",
+      "maxLevel": 6,
+      "baseCost": [
+        2200,
+        1600,
+        800
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 1,
+      "timeGrowth": 1.5,
+      "labLevel": 2,
+      "prerequisites": {
+        "fleet_command": 1,
+        "navigation": 2
+      },
+      "effect": "사전 철수 정책 임계값 해금; 도착 전 순간 귀환 없음",
+      "bonus": null
+    },
+    {
+      "id": "formation",
+      "name": "방호 편대",
+      "branch": "지휘",
+      "maxLevel": 6,
+      "baseCost": [
+        2600,
+        1800,
+        800
+      ],
+      "costGrowth": 1.8,
+      "baseHours": 3,
+      "timeGrowth": 1.5,
+      "labLevel": 3,
+      "prerequisites": {
+        "coordination": 2,
+        "armor": 2
+      },
+      "effect": "엄호 효율 +1%p/레벨, 편대 피해 경감 합계 최대 15%",
+      "bonus": null
+    }
+  ],
+  "ships": [
+    {
+      "id": "scout",
+      "name": "위스프",
+      "tier": 1,
+      "role": "정찰",
+      "size": "L",
+      "weapon": "kinetic",
+      "cost": [
+        500,
+        400,
+        200
+      ],
+      "hp": 65,
+      "shield": 15,
+      "armor": 0,
+      "attack": 8,
+      "speed": 180,
+      "fuel": 1,
+      "cargo": 100,
+      "command": 1,
+      "yardLevel": 1,
+      "prerequisites": {
+        "sensors": 1
+      },
+      "trait": "탐사·정찰 정보 지수 +5/척, 실제 정찰 조건 적용",
+      "weakness": "전투 효율 낮음·방첩에 노출",
+      "buildHours": 0.25
+    },
+    {
+      "id": "courier",
+      "name": "캐러밴",
+      "tier": 1,
+      "role": "수송",
+      "size": "L",
+      "weapon": "kinetic",
+      "cost": [
+        1000,
+        400,
+        200
+      ],
+      "hp": 130,
+      "shield": 20,
+      "armor": 3,
+      "attack": 10,
+      "speed": 100,
+      "fuel": 2,
+      "cargo": 2000,
+      "command": 1,
+      "yardLevel": 1,
+      "prerequisites": {},
+      "trait": "초기 행성 수송과 작전 보급",
+      "weakness": "저화력·호위 필요",
+      "buildHours": 0.26666666666666666
+    },
+    {
+      "id": "interceptor",
+      "name": "스위프트",
+      "tier": 1,
+      "role": "요격",
+      "size": "L",
+      "weapon": "kinetic",
+      "cost": [
+        1400,
+        600,
+        200
+      ],
+      "hp": 120,
+      "shield": 20,
+      "armor": 5,
+      "attack": 38,
+      "speed": 150,
+      "fuel": 2,
+      "cargo": 100,
+      "command": 1,
+      "yardLevel": 1,
+      "prerequisites": {
+        "kinetic": 1
+      },
+      "trait": "경량 정찰·함재 편대 대응",
+      "weakness": "장갑 함대·시설에 약함",
+      "buildHours": 0.36666666666666664
+    },
+    {
+      "id": "striker",
+      "name": "케스트럴",
+      "tier": 1,
+      "role": "타격",
+      "size": "L",
+      "weapon": "kinetic",
+      "cost": [
+        1800,
+        1000,
+        400
+      ],
+      "hp": 220,
+      "shield": 40,
+      "armor": 12,
+      "attack": 65,
+      "speed": 110,
+      "fuel": 3,
+      "cargo": 150,
+      "command": 2,
+      "yardLevel": 1,
+      "prerequisites": {
+        "kinetic": 1
+      },
+      "trait": "일반 국지전의 초기 주력",
+      "weakness": "중장갑·강한 시설 방어에 약함",
+      "buildHours": 0.5333333333333333
+    },
+    {
+      "id": "salvage",
+      "name": "아틀라스",
+      "tier": 1,
+      "role": "회수",
+      "size": "L",
+      "weapon": "kinetic",
+      "cost": [
+        1200,
+        500,
+        300
+      ],
+      "hp": 150,
+      "shield": 20,
+      "armor": 5,
+      "attack": 12,
+      "speed": 75,
+      "fuel": 2,
+      "cargo": 1600,
+      "command": 1,
+      "yardLevel": 1,
+      "prerequisites": {
+        "salvage_processing": 1
+      },
+      "trait": "합금·결정 잔해 회수",
+      "weakness": "느림·전투를 대신하지 못함",
+      "buildHours": 0.3333333333333333
+    },
+    {
+      "id": "raider",
+      "name": "레이븐",
+      "tier": 2,
+      "role": "급습",
+      "size": "L",
+      "weapon": "kinetic",
+      "cost": [
+        2300,
+        1300,
+        600
+      ],
+      "hp": 160,
+      "shield": 30,
+      "armor": 6,
+      "attack": 55,
+      "speed": 160,
+      "fuel": 6,
+      "cargo": 900,
+      "command": 2,
+      "yardLevel": 2,
+      "prerequisites": {
+        "chemical_drive": 2,
+        "tracking": 1
+      },
+      "trait": "빠른 목표 접근·소량 고가 화물 회수",
+      "weakness": "연료 비효율·지속 교전 약함",
+      "buildHours": 0.7
+    },
+    {
+      "id": "guardian",
+      "name": "바스티온",
+      "tier": 2,
+      "role": "호위",
+      "size": "M",
+      "weapon": "beam",
+      "cost": [
+        5000,
+        2800,
+        1200
+      ],
+      "hp": 720,
+      "shield": 240,
+      "armor": 35,
+      "attack": 75,
+      "speed": 75,
+      "fuel": 7,
+      "cargo": 180,
+      "command": 3,
+      "yardLevel": 3,
+      "prerequisites": {
+        "armor": 2,
+        "shield": 1
+      },
+      "trait": "호위 기여에 비례한 편대 경감, 총 15% 상한",
+      "weakness": "순수 화력 효율 낮음",
+      "buildHours": 1.5
+    },
+    {
+      "id": "support",
+      "name": "멘더",
+      "tier": 2,
+      "role": "정비",
+      "size": "M",
+      "weapon": "kinetic",
+      "cost": [
+        3000,
+        2500,
+        1000
+      ],
+      "hp": 480,
+      "shield": 140,
+      "armor": 18,
+      "attack": 30,
+      "speed": 80,
+      "fuel": 5,
+      "cargo": 700,
+      "command": 2,
+      "yardLevel": 2,
+      "prerequisites": {
+        "field_repair": 1
+      },
+      "trait": "승리 후 생존 선체 수리, 소모 부품 필요; 작전당 최대 2회",
+      "weakness": "파괴 함선 부활 불가·전투 약함",
+      "buildHours": 1.0833333333333333
+    },
+    {
+      "id": "jammer",
+      "name": "베일",
+      "tier": 2,
+      "role": "전자전",
+      "size": "L",
+      "weapon": "beam",
+      "cost": [
+        2600,
+        3600,
+        800
+      ],
+      "hp": 260,
+      "shield": 160,
+      "armor": 8,
+      "attack": 35,
+      "speed": 100,
+      "fuel": 5,
+      "cargo": 120,
+      "command": 2,
+      "yardLevel": 3,
+      "prerequisites": {
+        "electronic_warfare": 1
+      },
+      "trait": "투자 비중에 비례한 적 방어막 약화, 전체 20% 상한",
+      "weakness": "무방어막 상대·주파수 복원에 약함",
+      "buildHours": 1.1666666666666667
+    },
+    {
+      "id": "colony",
+      "name": "파이오니어",
+      "tier": 2,
+      "role": "개척",
+      "size": "M",
+      "weapon": "kinetic",
+      "cost": [
+        6000,
+        4000,
+        2500
+      ],
+      "hp": 420,
+      "shield": 80,
+      "armor": 10,
+      "attack": 10,
+      "speed": 55,
+      "fuel": 12,
+      "cargo": 3000,
+      "command": 3,
+      "yardLevel": 3,
+      "prerequisites": {
+        "colony_management": 1
+      },
+      "trait": "성공 개척 시 소비; 실제 초기 화물 필요",
+      "weakness": "전투 취약·긴 이동·한 번 사용",
+      "buildHours": 2.0833333333333335
+    },
+    {
+      "id": "destroyer",
+      "name": "하머",
+      "tier": 2,
+      "role": "대함",
+      "size": "M",
+      "weapon": "missile",
+      "cost": [
+        6200,
+        3200,
+        2100
+      ],
+      "hp": 620,
+      "shield": 180,
+      "armor": 25,
+      "attack": 240,
+      "speed": 80,
+      "fuel": 10,
+      "cargo": 200,
+      "command": 3,
+      "yardLevel": 3,
+      "prerequisites": {
+        "missile": 2,
+        "ion_drive": 1
+      },
+      "trait": "대형 함선 대응 미사일 플랫폼",
+      "weakness": "경량 요격 편대에 약함",
+      "buildHours": 1.9166666666666667
+    },
+    {
+      "id": "siege",
+      "name": "랜서",
+      "tier": 2,
+      "role": "공성",
+      "size": "M",
+      "weapon": "siege",
+      "cost": [
+        5200,
+        3000,
+        1800
+      ],
+      "hp": 440,
+      "shield": 120,
+      "armor": 18,
+      "attack": 200,
+      "speed": 60,
+      "fuel": 11,
+      "cargo": 80,
+      "command": 3,
+      "yardLevel": 3,
+      "prerequisites": {
+        "siege_protocol": 1
+      },
+      "trait": "고정 시설 파괴",
+      "weakness": "이동 함대·요격에 약함",
+      "buildHours": 1.6666666666666667
+    },
+    {
+      "id": "heavy_cargo",
+      "name": "헤비 캐러밴",
+      "tier": 2,
+      "role": "대형 수송",
+      "size": "M",
+      "weapon": "kinetic",
+      "cost": [
+        4800,
+        2000,
+        1200
+      ],
+      "hp": 700,
+      "shield": 180,
+      "armor": 18,
+      "attack": 20,
+      "speed": 55,
+      "fuel": 7,
+      "cargo": 12000,
+      "command": 3,
+      "yardLevel": 3,
+      "prerequisites": {
+        "cargo_compression": 2,
+        "ion_drive": 1
+      },
+      "trait": "화물/비용 효율 우수",
+      "weakness": "느린 귀환·전투 효율 낮음",
+      "buildHours": 1.3333333333333333
+    },
+    {
+      "id": "carrier",
+      "name": "아크",
+      "tier": 3,
+      "role": "함재 운용",
+      "size": "M",
+      "weapon": "drone",
+      "cost": [
+        11000,
+        7500,
+        3500
+      ],
+      "hp": 1100,
+      "shield": 360,
+      "armor": 25,
+      "attack": 420,
+      "speed": 55,
+      "fuel": 20,
+      "cargo": 500,
+      "command": 5,
+      "yardLevel": 5,
+      "prerequisites": {
+        "carrier_ops": 1,
+        "ion_drive": 2
+      },
+      "trait": "경량·중형 상대 함재 편대",
+      "weakness": "방공·중장갑 표적에 약함",
+      "buildHours": 3.6666666666666665
+    },
+    {
+      "id": "cruiser",
+      "name": "센티널",
+      "tier": 3,
+      "role": "전선 타격",
+      "size": "M",
+      "weapon": "beam",
+      "cost": [
+        9000,
+        6500,
+        2500
+      ],
+      "hp": 1000,
+      "shield": 420,
+      "armor": 35,
+      "attack": 350,
+      "speed": 70,
+      "fuel": 16,
+      "cargo": 300,
+      "command": 4,
+      "yardLevel": 4,
+      "prerequisites": {
+        "beam": 3,
+        "ion_drive": 2
+      },
+      "trait": "중형 편대 상대 균형 화력",
+      "weakness": "경량 운동탄 군집·고비용",
+      "buildHours": 3
+    },
+    {
+      "id": "shield_ship",
+      "name": "에이지스",
+      "tier": 3,
+      "role": "방어막 지원",
+      "size": "H",
+      "weapon": "beam",
+      "cost": [
+        11000,
+        9500,
+        2500
+      ],
+      "hp": 1500,
+      "shield": 900,
+      "armor": 30,
+      "attack": 80,
+      "speed": 55,
+      "fuel": 22,
+      "cargo": 400,
+      "command": 5,
+      "yardLevel": 5,
+      "prerequisites": {
+        "shield": 3,
+        "formation": 2
+      },
+      "trait": "편대 방어 지원; 호위와 합쳐 경감 15% 상한",
+      "weakness": "순수 화력 낮음·교란 취약",
+      "buildHours": 3.8333333333333335
+    },
+    {
+      "id": "bomber",
+      "name": "시어",
+      "tier": 3,
+      "role": "시설 타격",
+      "size": "H",
+      "weapon": "siege",
+      "cost": [
+        14000,
+        6000,
+        4000
+      ],
+      "hp": 980,
+      "shield": 250,
+      "armor": 28,
+      "attack": 500,
+      "speed": 45,
+      "fuel": 28,
+      "cargo": 100,
+      "command": 5,
+      "yardLevel": 5,
+      "prerequisites": {
+        "siege_protocol": 3,
+        "missile": 2
+      },
+      "trait": "강한 방어시설 공격",
+      "weakness": "느림·이동 함대에 약함",
+      "buildHours": 4
+    },
+    {
+      "id": "supply_ship",
+      "name": "릴레이",
+      "tier": 3,
+      "role": "보급",
+      "size": "M",
+      "weapon": "kinetic",
+      "cost": [
+        5000,
+        3500,
+        3500
+      ],
+      "hp": 800,
+      "shield": 240,
+      "armor": 20,
+      "attack": 35,
+      "speed": 70,
+      "fuel": 10,
+      "cargo": 8000,
+      "command": 3,
+      "yardLevel": 4,
+      "prerequisites": {
+        "supply_network": 2
+      },
+      "trait": "증원 작전의 실제 연료·부품 수송",
+      "weakness": "혼자 싸우기 어려움",
+      "buildHours": 2
+    },
+    {
+      "id": "tug",
+      "name": "앵커",
+      "tier": 3,
+      "role": "구조·예인",
+      "size": "M",
+      "weapon": "kinetic",
+      "cost": [
+        5000,
+        4000,
+        1500
+      ],
+      "hp": 900,
+      "shield": 180,
+      "armor": 35,
+      "attack": 40,
+      "speed": 50,
+      "fuel": 9,
+      "cargo": 1200,
+      "command": 3,
+      "yardLevel": 4,
+      "prerequisites": {
+        "field_repair": 3,
+        "retreat": 2
+      },
+      "trait": "파괴되지 않은 작전 불능 선체의 귀환 지원",
+      "weakness": "느림·영구 파괴 복구 불가",
+      "buildHours": 1.75
+    },
+    {
+      "id": "stealth_scout",
+      "name": "쉐이드",
+      "tier": 3,
+      "role": "침투 정찰",
+      "size": "L",
+      "weapon": "beam",
+      "cost": [
+        2500,
+        6000,
+        1500
+      ],
+      "hp": 140,
+      "shield": 120,
+      "armor": 2,
+      "attack": 18,
+      "speed": 170,
+      "fuel": 4,
+      "cargo": 80,
+      "command": 2,
+      "yardLevel": 4,
+      "prerequisites": {
+        "espionage": 3,
+        "encryption": 2
+      },
+      "trait": "높은 정보 지수·저탐지 접근",
+      "weakness": "전투 약함·고급 센서에 대응됨",
+      "buildHours": 1.6666666666666667
+    },
+    {
+      "id": "battlecruiser",
+      "name": "템페스트",
+      "tier": 4,
+      "role": "중장갑 타격",
+      "size": "H",
+      "weapon": "missile",
+      "cost": [
+        34000,
+        18000,
+        12000
+      ],
+      "hp": 3000,
+      "shield": 1500,
+      "armor": 55,
+      "attack": 1400,
+      "speed": 50,
+      "fuel": 50,
+      "cargo": 700,
+      "command": 8,
+      "yardLevel": 7,
+      "prerequisites": {
+        "fusion_drive": 1,
+        "missile": 4,
+        "armor": 4
+      },
+      "trait": "대형 적 전력 제압",
+      "weakness": "연료·경량 편대·증원 거리",
+      "buildHours": 10.666666666666666
+    },
+    {
+      "id": "dreadnought",
+      "name": "모노리스",
+      "tier": 4,
+      "role": "전선 유지",
+      "size": "H",
+      "weapon": "beam",
+      "cost": [
+        65000,
+        35000,
+        20000
+      ],
+      "hp": 6600,
+      "shield": 3300,
+      "armor": 80,
+      "attack": 2100,
+      "speed": 30,
+      "fuel": 110,
+      "cargo": 1000,
+      "command": 12,
+      "yardLevel": 8,
+      "prerequisites": {
+        "fusion_drive": 2,
+        "beam": 5,
+        "shield": 4
+      },
+      "trait": "고내구 중형·대형 교전",
+      "weakness": "느림·유도탄 집중·높은 복구 비용",
+      "buildHours": 20
+    },
+    {
+      "id": "heavy_carrier",
+      "name": "헤일로",
+      "tier": 4,
+      "role": "대규모 함재",
+      "size": "H",
+      "weapon": "drone",
+      "cost": [
+        42000,
+        33000,
+        15000
+      ],
+      "hp": 4400,
+      "shield": 1600,
+      "armor": 40,
+      "attack": 2000,
+      "speed": 40,
+      "fuel": 75,
+      "cargo": 1000,
+      "command": 10,
+      "yardLevel": 7,
+      "prerequisites": {
+        "carrier_ops": 3,
+        "fusion_drive": 1
+      },
+      "trait": "넓은 함재 전력 투사",
+      "weakness": "방공 편대·중장갑·고비용",
+      "buildHours": 15
+    },
+    {
+      "id": "siege_platform",
+      "name": "오벨리스크",
+      "tier": 4,
+      "role": "장기 공성",
+      "size": "H",
+      "weapon": "siege",
+      "cost": [
+        90000,
+        35000,
+        25000
+      ],
+      "hp": 7500,
+      "shield": 2000,
+      "armor": 70,
+      "attack": 5200,
+      "speed": 20,
+      "fuel": 150,
+      "cargo": 200,
+      "command": 12,
+      "yardLevel": 8,
+      "prerequisites": {
+        "siege_protocol": 5,
+        "fusion_drive": 2
+      },
+      "trait": "거점 공성의 대형 포격 플랫폼",
+      "weakness": "기동전·경량 요격·장거리 연료",
+      "buildHours": 25
+    }
+  ],
+  "defenses": [
+    {
+      "id": "light_battery",
+      "name": "요격 포대",
+      "weapon": "kinetic",
+      "cost": [
+        1000,
+        400,
+        100
+      ],
+      "hp": 210,
+      "shield": 20,
+      "armor": 12,
+      "attack": 50,
+      "power": 2,
+      "foundryLevel": 1,
+      "prerequisites": {
+        "kinetic": 1
+      },
+      "role": "경량 함대 접근 방어"
+    },
+    {
+      "id": "laser_array",
+      "name": "레이저 포대",
+      "weapon": "beam",
+      "cost": [
+        1800,
+        1700,
+        300
+      ],
+      "hp": 390,
+      "shield": 150,
+      "armor": 20,
+      "attack": 95,
+      "power": 4,
+      "foundryLevel": 2,
+      "prerequisites": {
+        "beam": 1
+      },
+      "role": "중형 함대 대응"
+    },
+    {
+      "id": "missile_silo",
+      "name": "유도탄 진지",
+      "weapon": "missile",
+      "cost": [
+        3000,
+        1500,
+        900
+      ],
+      "hp": 480,
+      "shield": 90,
+      "armor": 25,
+      "attack": 180,
+      "power": 4,
+      "foundryLevel": 3,
+      "prerequisites": {
+        "missile": 2
+      },
+      "role": "대형 함대 대응; 정비·재무장 비용 포함"
+    },
+    {
+      "id": "plasma_turret",
+      "name": "플라스마 포대",
+      "weapon": "beam",
+      "cost": [
+        8000,
+        6500,
+        1500
+      ],
+      "hp": 1500,
+      "shield": 500,
+      "armor": 45,
+      "attack": 430,
+      "power": 9,
+      "foundryLevel": 5,
+      "prerequisites": {
+        "beam": 4,
+        "shield": 2
+      },
+      "role": "고투자 전선 방어"
+    },
+    {
+      "id": "siege_cannon",
+      "name": "궤도 방공포",
+      "weapon": "missile",
+      "cost": [
+        9000,
+        4200,
+        2800
+      ],
+      "hp": 1400,
+      "shield": 220,
+      "armor": 55,
+      "attack": 520,
+      "power": 8,
+      "foundryLevel": 5,
+      "prerequisites": {
+        "missile": 4,
+        "tracking": 3
+      },
+      "role": "대형 공성 전력 대응"
+    },
+    {
+      "id": "shield_dome",
+      "name": "행성 방어막",
+      "weapon": "beam",
+      "cost": [
+        6000,
+        7000,
+        1000
+      ],
+      "hp": 2000,
+      "shield": 3000,
+      "armor": 20,
+      "attack": 0,
+      "power": 12,
+      "foundryLevel": 4,
+      "prerequisites": {
+        "shield": 3
+      },
+      "role": "피해 경감 지원; 편대·시설 합계 15% 상한"
+    },
+    {
+      "id": "sensor_net",
+      "name": "방어 센서망",
+      "weapon": "kinetic",
+      "cost": [
+        1600,
+        2600,
+        300
+      ],
+      "hp": 260,
+      "shield": 100,
+      "armor": 10,
+      "attack": 5,
+      "power": 3,
+      "foundryLevel": 2,
+      "prerequisites": {
+        "sensors": 2
+      },
+      "role": "접근·침입 탐지 지수, 전투 주력 아님"
+    },
+    {
+      "id": "decoy_array",
+      "name": "기만 신호기",
+      "weapon": "beam",
+      "cost": [
+        2200,
+        4000,
+        800
+      ],
+      "hp": 400,
+      "shield": 240,
+      "armor": 12,
+      "attack": 8,
+      "power": 5,
+      "foundryLevel": 3,
+      "prerequisites": {
+        "counter_ew": 1
+      },
+      "role": "적 교란 완화; 중복 효과 상한 유지"
+    }
+  ]
+}

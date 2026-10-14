@@ -1,0 +1,8354 @@
+{
+  "version": "season-content-draft-1",
+  "resources": [
+    "alloy",
+    "crystal",
+    "fuel"
+  ],
+  "curves": [
+    {
+      "id": "alloy_mine",
+      "name": "합금 광산",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2400,
+            800,
+            0
+          ],
+          "baseHours": 0.5,
+          "initialFree": true,
+          "cumulativeStandardCost": [
+            0,
+            0,
+            0
+          ],
+          "growthScore": 0
+        },
+        {
+          "level": 2,
+          "cost": [
+            3792,
+            1264,
+            0
+          ],
+          "baseHours": 0.725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3792,
+            1264,
+            0
+          ],
+          "growthScore": 505.6
+        },
+        {
+          "level": 3,
+          "cost": [
+            5992,
+            1998,
+            0
+          ],
+          "baseHours": 1.05125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            9784,
+            3262,
+            0
+          ],
+          "growthScore": 1304.6
+        },
+        {
+          "level": 4,
+          "cost": [
+            9467,
+            3156,
+            0
+          ],
+          "baseHours": 1.5243125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            19251,
+            6418,
+            0
+          ],
+          "growthScore": 2566.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            14957,
+            4986,
+            0
+          ],
+          "baseHours": 2.210253125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            34208,
+            11404,
+            0
+          ],
+          "growthScore": 4561.2
+        },
+        {
+          "level": 6,
+          "cost": [
+            23632,
+            7878,
+            0
+          ],
+          "baseHours": 3.2048670312499996,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            57840,
+            19282,
+            0
+          ],
+          "growthScore": 7712.2
+        },
+        {
+          "level": 7,
+          "cost": [
+            37339,
+            12447,
+            0
+          ],
+          "baseHours": 4.647057195312499,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            95179,
+            31729,
+            0
+          ],
+          "growthScore": 12690.8
+        },
+        {
+          "level": 8,
+          "cost": [
+            58995,
+            19665,
+            0
+          ],
+          "baseHours": 6.738232933203124,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            154174,
+            51394,
+            0
+          ],
+          "growthScore": 20556.8
+        },
+        {
+          "level": 9,
+          "cost": [
+            93212,
+            31071,
+            0
+          ],
+          "baseHours": 9.77043775314453,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            247386,
+            82465,
+            0
+          ],
+          "growthScore": 32985.1
+        },
+        {
+          "level": 10,
+          "cost": [
+            147274,
+            49092,
+            0
+          ],
+          "baseHours": 14.167134742059567,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            394660,
+            131557,
+            0
+          ],
+          "growthScore": 52621.7
+        },
+        {
+          "level": 11,
+          "cost": [
+            232693,
+            77565,
+            0
+          ],
+          "baseHours": 20.542345375986372,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            627353,
+            209122,
+            0
+          ],
+          "growthScore": 83647.5
+        },
+        {
+          "level": 12,
+          "cost": [
+            367654,
+            122552,
+            0
+          ],
+          "baseHours": 29.786400795180235,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            995007,
+            331674,
+            0
+          ],
+          "growthScore": 132668.1
+        },
+        {
+          "level": 13,
+          "cost": [
+            580894,
+            193632,
+            0
+          ],
+          "baseHours": 43.19028115301134,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1575901,
+            525306,
+            0
+          ],
+          "growthScore": 210120.7
+        },
+        {
+          "level": 14,
+          "cost": [
+            917812,
+            305938,
+            0
+          ],
+          "baseHours": 62.62590767186644,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2493713,
+            831244,
+            0
+          ],
+          "growthScore": 332495.7
+        },
+        {
+          "level": 15,
+          "cost": [
+            1450142,
+            483381,
+            0
+          ],
+          "baseHours": 90.80756612420635,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3943855,
+            1314625,
+            0
+          ],
+          "growthScore": 525848
+        }
+      ]
+    },
+    {
+      "id": "crystal_mine",
+      "name": "결정 채굴소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1600,
+            1400,
+            0
+          ],
+          "baseHours": 0.5,
+          "initialFree": true,
+          "cumulativeStandardCost": [
+            0,
+            0,
+            0
+          ],
+          "growthScore": 0
+        },
+        {
+          "level": 2,
+          "cost": [
+            2528,
+            2212,
+            0
+          ],
+          "baseHours": 0.725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2528,
+            2212,
+            0
+          ],
+          "growthScore": 474
+        },
+        {
+          "level": 3,
+          "cost": [
+            3995,
+            3495,
+            0
+          ],
+          "baseHours": 1.05125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6523,
+            5707,
+            0
+          ],
+          "growthScore": 1223
+        },
+        {
+          "level": 4,
+          "cost": [
+            6311,
+            5523,
+            0
+          ],
+          "baseHours": 1.5243125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            12834,
+            11230,
+            0
+          ],
+          "growthScore": 2406.4
+        },
+        {
+          "level": 5,
+          "cost": [
+            9972,
+            8725,
+            0
+          ],
+          "baseHours": 2.210253125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            22806,
+            19955,
+            0
+          ],
+          "growthScore": 4276.1
+        },
+        {
+          "level": 6,
+          "cost": [
+            15755,
+            13786,
+            0
+          ],
+          "baseHours": 3.2048670312499996,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            38561,
+            33741,
+            0
+          ],
+          "growthScore": 7230.2
+        },
+        {
+          "level": 7,
+          "cost": [
+            24893,
+            21781,
+            0
+          ],
+          "baseHours": 4.647057195312499,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            63454,
+            55522,
+            0
+          ],
+          "growthScore": 11897.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            39330,
+            34414,
+            0
+          ],
+          "baseHours": 6.738232933203124,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            102784,
+            89936,
+            0
+          ],
+          "growthScore": 19272
+        },
+        {
+          "level": 9,
+          "cost": [
+            62141,
+            54374,
+            0
+          ],
+          "baseHours": 9.77043775314453,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            164925,
+            144310,
+            0
+          ],
+          "growthScore": 30923.5
+        },
+        {
+          "level": 10,
+          "cost": [
+            98183,
+            85910,
+            0
+          ],
+          "baseHours": 14.167134742059567,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            263108,
+            230220,
+            0
+          ],
+          "growthScore": 49332.8
+        },
+        {
+          "level": 11,
+          "cost": [
+            155129,
+            135738,
+            0
+          ],
+          "baseHours": 20.542345375986372,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            418237,
+            365958,
+            0
+          ],
+          "growthScore": 78419.5
+        },
+        {
+          "level": 12,
+          "cost": [
+            245103,
+            214465,
+            0
+          ],
+          "baseHours": 29.786400795180235,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            663340,
+            580423,
+            0
+          ],
+          "growthScore": 124376.3
+        },
+        {
+          "level": 13,
+          "cost": [
+            387263,
+            338855,
+            0
+          ],
+          "baseHours": 43.19028115301134,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1050603,
+            919278,
+            0
+          ],
+          "growthScore": 196988.1
+        },
+        {
+          "level": 14,
+          "cost": [
+            611875,
+            535390,
+            0
+          ],
+          "baseHours": 62.62590767186644,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1662478,
+            1454668,
+            0
+          ],
+          "growthScore": 311714.6
+        },
+        {
+          "level": 15,
+          "cost": [
+            966762,
+            845917,
+            0
+          ],
+          "baseHours": 90.80756612420635,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2629240,
+            2300585,
+            0
+          ],
+          "growthScore": 492982.5
+        }
+      ]
+    },
+    {
+      "id": "fuel_refinery",
+      "name": "연료 합성소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1400,
+            1000,
+            600
+          ],
+          "baseHours": 0.5,
+          "initialFree": true,
+          "cumulativeStandardCost": [
+            0,
+            0,
+            0
+          ],
+          "growthScore": 0
+        },
+        {
+          "level": 2,
+          "cost": [
+            2212,
+            1580,
+            948
+          ],
+          "baseHours": 0.725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2212,
+            1580,
+            948
+          ],
+          "growthScore": 474
+        },
+        {
+          "level": 3,
+          "cost": [
+            3495,
+            2497,
+            1498
+          ],
+          "baseHours": 1.05125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5707,
+            4077,
+            2446
+          ],
+          "growthScore": 1223
+        },
+        {
+          "level": 4,
+          "cost": [
+            5523,
+            3945,
+            2367
+          ],
+          "baseHours": 1.5243125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11230,
+            8022,
+            4813
+          ],
+          "growthScore": 2406.5
+        },
+        {
+          "level": 5,
+          "cost": [
+            8725,
+            6233,
+            3740
+          ],
+          "baseHours": 2.210253125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            19955,
+            14255,
+            8553
+          ],
+          "growthScore": 4276.3
+        },
+        {
+          "level": 6,
+          "cost": [
+            13786,
+            9847,
+            5908
+          ],
+          "baseHours": 3.2048670312499996,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            33741,
+            24102,
+            14461
+          ],
+          "growthScore": 7230.4
+        },
+        {
+          "level": 7,
+          "cost": [
+            21781,
+            15558,
+            9335
+          ],
+          "baseHours": 4.647057195312499,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            55522,
+            39660,
+            23796
+          ],
+          "growthScore": 11897.8
+        },
+        {
+          "level": 8,
+          "cost": [
+            34414,
+            24582,
+            14749
+          ],
+          "baseHours": 6.738232933203124,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            89936,
+            64242,
+            38545
+          ],
+          "growthScore": 19272.3
+        },
+        {
+          "level": 9,
+          "cost": [
+            54374,
+            38838,
+            23303
+          ],
+          "baseHours": 9.77043775314453,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            144310,
+            103080,
+            61848
+          ],
+          "growthScore": 30923.8
+        },
+        {
+          "level": 10,
+          "cost": [
+            85910,
+            61365,
+            36819
+          ],
+          "baseHours": 14.167134742059567,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            230220,
+            164445,
+            98667
+          ],
+          "growthScore": 49333.2
+        },
+        {
+          "level": 11,
+          "cost": [
+            135738,
+            96956,
+            58174
+          ],
+          "baseHours": 20.542345375986372,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            365958,
+            261401,
+            156841
+          ],
+          "growthScore": 78420
+        },
+        {
+          "level": 12,
+          "cost": [
+            214465,
+            153190,
+            91914
+          ],
+          "baseHours": 29.786400795180235,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            580423,
+            414591,
+            248755
+          ],
+          "growthScore": 124376.9
+        },
+        {
+          "level": 13,
+          "cost": [
+            338855,
+            242039,
+            145224
+          ],
+          "baseHours": 43.19028115301134,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            919278,
+            656630,
+            393979
+          ],
+          "growthScore": 196988.7
+        },
+        {
+          "level": 14,
+          "cost": [
+            535390,
+            382422,
+            229453
+          ],
+          "baseHours": 62.62590767186644,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1454668,
+            1039052,
+            623432
+          ],
+          "growthScore": 311715.2
+        },
+        {
+          "level": 15,
+          "cost": [
+            845917,
+            604226,
+            362536
+          ],
+          "baseHours": 90.80756612420635,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2300585,
+            1643278,
+            985968
+          ],
+          "growthScore": 492983.1
+        }
+      ]
+    },
+    {
+      "id": "power_plant",
+      "name": "발전소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1600,
+            600,
+            0
+          ],
+          "baseHours": 0.5,
+          "initialFree": true,
+          "cumulativeStandardCost": [
+            0,
+            0,
+            0
+          ],
+          "growthScore": 0
+        },
+        {
+          "level": 2,
+          "cost": [
+            2560,
+            960,
+            0
+          ],
+          "baseHours": 0.725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2560,
+            960,
+            0
+          ],
+          "growthScore": 352
+        },
+        {
+          "level": 3,
+          "cost": [
+            4097,
+            1537,
+            0
+          ],
+          "baseHours": 1.05125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6657,
+            2497,
+            0
+          ],
+          "growthScore": 915.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            6554,
+            2458,
+            0
+          ],
+          "baseHours": 1.5243125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            13211,
+            4955,
+            0
+          ],
+          "growthScore": 1816.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            10486,
+            3933,
+            0
+          ],
+          "baseHours": 2.210253125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            23697,
+            8888,
+            0
+          ],
+          "growthScore": 3258.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            16778,
+            6292,
+            0
+          ],
+          "baseHours": 3.2048670312499996,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            40475,
+            15180,
+            0
+          ],
+          "growthScore": 5565.5
+        },
+        {
+          "level": 7,
+          "cost": [
+            26844,
+            10067,
+            0
+          ],
+          "baseHours": 4.647057195312499,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            67319,
+            25247,
+            0
+          ],
+          "growthScore": 9256.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            42950,
+            16107,
+            0
+          ],
+          "baseHours": 6.738232933203124,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            110269,
+            41354,
+            0
+          ],
+          "growthScore": 15162.3
+        },
+        {
+          "level": 9,
+          "cost": [
+            68720,
+            25770,
+            0
+          ],
+          "baseHours": 9.77043775314453,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            178989,
+            67124,
+            0
+          ],
+          "growthScore": 24611.3
+        },
+        {
+          "level": 10,
+          "cost": [
+            109952,
+            41232,
+            0
+          ],
+          "baseHours": 14.167134742059567,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            288941,
+            108356,
+            0
+          ],
+          "growthScore": 39729.7
+        },
+        {
+          "level": 11,
+          "cost": [
+            175922,
+            65971,
+            0
+          ],
+          "baseHours": 20.542345375986372,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            464863,
+            174327,
+            0
+          ],
+          "growthScore": 63919
+        },
+        {
+          "level": 12,
+          "cost": [
+            281475,
+            105554,
+            0
+          ],
+          "baseHours": 29.786400795180235,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            746338,
+            279881,
+            0
+          ],
+          "growthScore": 102621.9
+        }
+      ]
+    },
+    {
+      "id": "fusion_plant",
+      "name": "융합 발전소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            8000,
+            6000,
+            3000
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            8000,
+            6000,
+            3000
+          ],
+          "growthScore": 1700
+        },
+        {
+          "level": 2,
+          "cost": [
+            13600,
+            10200,
+            5100
+          ],
+          "baseHours": 4.35,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            21600,
+            16200,
+            8100
+          ],
+          "growthScore": 4590
+        },
+        {
+          "level": 3,
+          "cost": [
+            23120,
+            17340,
+            8670
+          ],
+          "baseHours": 6.3075,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            44720,
+            33540,
+            16770
+          ],
+          "growthScore": 9503
+        },
+        {
+          "level": 4,
+          "cost": [
+            39304,
+            29478,
+            14739
+          ],
+          "baseHours": 9.145875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            84024,
+            63018,
+            31509
+          ],
+          "growthScore": 17855.1
+        },
+        {
+          "level": 5,
+          "cost": [
+            66817,
+            50113,
+            25057
+          ],
+          "baseHours": 13.26151875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            150841,
+            113131,
+            56566
+          ],
+          "growthScore": 32053.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            113589,
+            85192,
+            42596
+          ],
+          "baseHours": 19.229202187499997,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            264430,
+            198323,
+            99162
+          ],
+          "growthScore": 56191.5
+        },
+        {
+          "level": 7,
+          "cost": [
+            193101,
+            144826,
+            72413
+          ],
+          "baseHours": 27.882343171874993,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            457531,
+            343149,
+            171575
+          ],
+          "growthScore": 97225.5
+        },
+        {
+          "level": 8,
+          "cost": [
+            328271,
+            246204,
+            123102
+          ],
+          "baseHours": 40.429397599218746,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            785802,
+            589353,
+            294677
+          ],
+          "growthScore": 166983.2
+        }
+      ]
+    },
+    {
+      "id": "warehouse",
+      "name": "통합 저장고",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1200,
+            800,
+            200
+          ],
+          "baseHours": 0.5,
+          "initialFree": true,
+          "cumulativeStandardCost": [
+            0,
+            0,
+            0
+          ],
+          "growthScore": 0
+        },
+        {
+          "level": 2,
+          "cost": [
+            1860,
+            1240,
+            310
+          ],
+          "baseHours": 0.725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1860,
+            1240,
+            310
+          ],
+          "growthScore": 341
+        },
+        {
+          "level": 3,
+          "cost": [
+            2884,
+            1923,
+            481
+          ],
+          "baseHours": 1.05125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4744,
+            3163,
+            791
+          ],
+          "growthScore": 869.8
+        },
+        {
+          "level": 4,
+          "cost": [
+            4469,
+            2980,
+            745
+          ],
+          "baseHours": 1.5243125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            9213,
+            6143,
+            1536
+          ],
+          "growthScore": 1689.2
+        },
+        {
+          "level": 5,
+          "cost": [
+            6927,
+            4618,
+            1155
+          ],
+          "baseHours": 2.210253125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16140,
+            10761,
+            2691
+          ],
+          "growthScore": 2959.2
+        },
+        {
+          "level": 6,
+          "cost": [
+            10736,
+            7158,
+            1790
+          ],
+          "baseHours": 3.2048670312499996,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26876,
+            17919,
+            4481
+          ],
+          "growthScore": 4927.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            16641,
+            11094,
+            2774
+          ],
+          "baseHours": 4.647057195312499,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            43517,
+            29013,
+            7255
+          ],
+          "growthScore": 7978.5
+        },
+        {
+          "level": 8,
+          "cost": [
+            25794,
+            17196,
+            4299
+          ],
+          "baseHours": 6.738232933203124,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            69311,
+            46209,
+            11554
+          ],
+          "growthScore": 12707.4
+        },
+        {
+          "level": 9,
+          "cost": [
+            39980,
+            26653,
+            6664
+          ],
+          "baseHours": 9.77043775314453,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            109291,
+            72862,
+            18218
+          ],
+          "growthScore": 20037.1
+        },
+        {
+          "level": 10,
+          "cost": [
+            61968,
+            41312,
+            10328
+          ],
+          "baseHours": 14.167134742059567,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            171259,
+            114174,
+            28546
+          ],
+          "growthScore": 31397.9
+        },
+        {
+          "level": 11,
+          "cost": [
+            96051,
+            64034,
+            16009
+          ],
+          "baseHours": 20.542345375986372,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            267310,
+            178208,
+            44555
+          ],
+          "growthScore": 49007.3
+        },
+        {
+          "level": 12,
+          "cost": [
+            148878,
+            99252,
+            24813
+          ],
+          "baseHours": 29.786400795180235,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            416188,
+            277460,
+            69368
+          ],
+          "growthScore": 76301.6
+        }
+      ]
+    },
+    {
+      "id": "protected_vault",
+      "name": "보호 창고",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2000,
+            1200,
+            300
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2000,
+            1200,
+            300
+          ],
+          "growthScore": 350
+        },
+        {
+          "level": 2,
+          "cost": [
+            3200,
+            1920,
+            480
+          ],
+          "baseHours": 1.45,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5200,
+            3120,
+            780
+          ],
+          "growthScore": 910
+        },
+        {
+          "level": 3,
+          "cost": [
+            5121,
+            3073,
+            769
+          ],
+          "baseHours": 2.1025,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10321,
+            6193,
+            1549
+          ],
+          "growthScore": 1806.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            8193,
+            4916,
+            1229
+          ],
+          "baseHours": 3.048625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            18514,
+            11109,
+            2778
+          ],
+          "growthScore": 3240.1
+        },
+        {
+          "level": 5,
+          "cost": [
+            13108,
+            7865,
+            1967
+          ],
+          "baseHours": 4.42050625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            31622,
+            18974,
+            4745
+          ],
+          "growthScore": 5534.1
+        },
+        {
+          "level": 6,
+          "cost": [
+            20972,
+            12583,
+            3146
+          ],
+          "baseHours": 6.409734062499999,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            52594,
+            31557,
+            7891
+          ],
+          "growthScore": 9204.2
+        },
+        {
+          "level": 7,
+          "cost": [
+            33555,
+            20133,
+            5034
+          ],
+          "baseHours": 9.294114390624998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            86149,
+            51690,
+            12925
+          ],
+          "growthScore": 15076.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            53688,
+            32213,
+            8054
+          ],
+          "baseHours": 13.476465866406247,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            139837,
+            83903,
+            20979
+          ],
+          "growthScore": 24471.9
+        }
+      ]
+    },
+    {
+      "id": "shipyard",
+      "name": "궤도 조선소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2600,
+            1600,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": true,
+          "cumulativeStandardCost": [
+            0,
+            0,
+            0
+          ],
+          "growthScore": 0
+        },
+        {
+          "level": 2,
+          "cost": [
+            4290,
+            2640,
+            660
+          ],
+          "baseHours": 1.45,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4290,
+            2640,
+            660
+          ],
+          "growthScore": 759
+        },
+        {
+          "level": 3,
+          "cost": [
+            7079,
+            4356,
+            1089
+          ],
+          "baseHours": 2.1025,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11369,
+            6996,
+            1749
+          ],
+          "growthScore": 2011.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            11680,
+            7188,
+            1797
+          ],
+          "baseHours": 3.048625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            23049,
+            14184,
+            3546
+          ],
+          "growthScore": 4077.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            19272,
+            11860,
+            2965
+          ],
+          "baseHours": 4.42050625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            42321,
+            26044,
+            6511
+          ],
+          "growthScore": 7487.6
+        },
+        {
+          "level": 6,
+          "cost": [
+            31798,
+            19568,
+            4892
+          ],
+          "baseHours": 6.409734062499999,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            74119,
+            45612,
+            11403
+          ],
+          "growthScore": 13113.4
+        },
+        {
+          "level": 7,
+          "cost": [
+            52466,
+            32287,
+            8072
+          ],
+          "baseHours": 9.294114390624998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            126585,
+            77899,
+            19475
+          ],
+          "growthScore": 22395.9
+        },
+        {
+          "level": 8,
+          "cost": [
+            86569,
+            53274,
+            13319
+          ],
+          "baseHours": 13.476465866406247,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            213154,
+            131173,
+            32794
+          ],
+          "growthScore": 37712.1
+        },
+        {
+          "level": 9,
+          "cost": [
+            142839,
+            87901,
+            21976
+          ],
+          "baseHours": 19.54087550628906,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            355993,
+            219074,
+            54770
+          ],
+          "growthScore": 62983.7
+        },
+        {
+          "level": 10,
+          "cost": [
+            235684,
+            145036,
+            36259
+          ],
+          "baseHours": 28.334269484119133,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            591677,
+            364110,
+            91029
+          ],
+          "growthScore": 104681.6
+        }
+      ]
+    },
+    {
+      "id": "laboratory",
+      "name": "연구소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1800,
+            2400,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": true,
+          "cumulativeStandardCost": [
+            0,
+            0,
+            0
+          ],
+          "growthScore": 0
+        },
+        {
+          "level": 2,
+          "cost": [
+            2970,
+            3960,
+            660
+          ],
+          "baseHours": 1.45,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2970,
+            3960,
+            660
+          ],
+          "growthScore": 759
+        },
+        {
+          "level": 3,
+          "cost": [
+            4901,
+            6534,
+            1089
+          ],
+          "baseHours": 2.1025,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7871,
+            10494,
+            1749
+          ],
+          "growthScore": 2011.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            8086,
+            10782,
+            1797
+          ],
+          "baseHours": 3.048625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            15957,
+            21276,
+            3546
+          ],
+          "growthScore": 4077.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            13342,
+            17789,
+            2965
+          ],
+          "baseHours": 4.42050625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            29299,
+            39065,
+            6511
+          ],
+          "growthScore": 7487.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            22014,
+            29352,
+            4892
+          ],
+          "baseHours": 6.409734062499999,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            51313,
+            68417,
+            11403
+          ],
+          "growthScore": 13113.3
+        },
+        {
+          "level": 7,
+          "cost": [
+            36323,
+            48431,
+            8072
+          ],
+          "baseHours": 9.294114390624998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            87636,
+            116848,
+            19475
+          ],
+          "growthScore": 22395.9
+        },
+        {
+          "level": 8,
+          "cost": [
+            59933,
+            79910,
+            13319
+          ],
+          "baseHours": 13.476465866406247,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            147569,
+            196758,
+            32794
+          ],
+          "growthScore": 37712.1
+        },
+        {
+          "level": 9,
+          "cost": [
+            98889,
+            131851,
+            21976
+          ],
+          "baseHours": 19.54087550628906,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            246458,
+            328609,
+            54770
+          ],
+          "growthScore": 62983.7
+        },
+        {
+          "level": 10,
+          "cost": [
+            163166,
+            217554,
+            36259
+          ],
+          "baseHours": 28.334269484119133,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            409624,
+            546163,
+            91029
+          ],
+          "growthScore": 104681.6
+        }
+      ]
+    },
+    {
+      "id": "assembly_plant",
+      "name": "자동 조립 시설",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            6000,
+            3000,
+            1000
+          ],
+          "baseHours": 2,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6000,
+            3000,
+            1000
+          ],
+          "growthScore": 1000
+        },
+        {
+          "level": 2,
+          "cost": [
+            9900,
+            4950,
+            1650
+          ],
+          "baseHours": 2.9,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            15900,
+            7950,
+            2650
+          ],
+          "growthScore": 2650
+        },
+        {
+          "level": 3,
+          "cost": [
+            16335,
+            8168,
+            2723
+          ],
+          "baseHours": 4.205,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            32235,
+            16118,
+            5373
+          ],
+          "growthScore": 5372.6
+        },
+        {
+          "level": 4,
+          "cost": [
+            26953,
+            13477,
+            4493
+          ],
+          "baseHours": 6.09725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            59188,
+            29595,
+            9866
+          ],
+          "growthScore": 9864.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            44473,
+            22237,
+            7413
+          ],
+          "baseHours": 8.8410125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            103661,
+            51832,
+            17279
+          ],
+          "growthScore": 17277.2
+        },
+        {
+          "level": 6,
+          "cost": [
+            73379,
+            36690,
+            12230
+          ],
+          "baseHours": 12.819468124999998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            177040,
+            88522,
+            29509
+          ],
+          "growthScore": 29507.1
+        },
+        {
+          "level": 7,
+          "cost": [
+            121076,
+            60538,
+            20180
+          ],
+          "baseHours": 18.588228781249995,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            298116,
+            149060,
+            49689
+          ],
+          "growthScore": 49686.5
+        },
+        {
+          "level": 8,
+          "cost": [
+            199774,
+            99887,
+            33296
+          ],
+          "baseHours": 26.952931732812495,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            497890,
+            248947,
+            82985
+          ],
+          "growthScore": 82982.2
+        }
+      ]
+    },
+    {
+      "id": "repair_dock",
+      "name": "정비 도크",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            4000,
+            2200,
+            800
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4000,
+            2200,
+            800
+          ],
+          "growthScore": 700
+        },
+        {
+          "level": 2,
+          "cost": [
+            6400,
+            3520,
+            1280
+          ],
+          "baseHours": 2.175,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10400,
+            5720,
+            2080
+          ],
+          "growthScore": 1820
+        },
+        {
+          "level": 3,
+          "cost": [
+            10241,
+            5633,
+            2049
+          ],
+          "baseHours": 3.15375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            20641,
+            11353,
+            4129
+          ],
+          "growthScore": 3612.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            16385,
+            9012,
+            3277
+          ],
+          "baseHours": 4.5729375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            37026,
+            20365,
+            7406
+          ],
+          "growthScore": 6479.7
+        },
+        {
+          "level": 5,
+          "cost": [
+            26215,
+            14418,
+            5243
+          ],
+          "baseHours": 6.630759375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            63241,
+            34783,
+            12649
+          ],
+          "growthScore": 11067.3
+        },
+        {
+          "level": 6,
+          "cost": [
+            41944,
+            23069,
+            8389
+          ],
+          "baseHours": 9.614601093749998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            105185,
+            57852,
+            21038
+          ],
+          "growthScore": 18407.5
+        },
+        {
+          "level": 7,
+          "cost": [
+            67109,
+            36910,
+            13422
+          ],
+          "baseHours": 13.941171585937497,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            172294,
+            94762,
+            34460
+          ],
+          "growthScore": 30151.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            107375,
+            59056,
+            21475
+          ],
+          "baseHours": 20.214698799609373,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            279669,
+            153818,
+            55935
+          ],
+          "growthScore": 48942.2
+        }
+      ]
+    },
+    {
+      "id": "orbital_dock",
+      "name": "궤도 집결항",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            10000,
+            6000,
+            2400
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10000,
+            6000,
+            2400
+          ],
+          "growthScore": 1840
+        },
+        {
+          "level": 2,
+          "cost": [
+            17000,
+            10200,
+            4080
+          ],
+          "baseHours": 4.35,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            27000,
+            16200,
+            6480
+          ],
+          "growthScore": 4968
+        },
+        {
+          "level": 3,
+          "cost": [
+            28900,
+            17340,
+            6936
+          ],
+          "baseHours": 6.3075,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            55900,
+            33540,
+            13416
+          ],
+          "growthScore": 10285.6
+        },
+        {
+          "level": 4,
+          "cost": [
+            49130,
+            29478,
+            11792
+          ],
+          "baseHours": 9.145875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            105030,
+            63018,
+            25208
+          ],
+          "growthScore": 19325.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            83521,
+            50113,
+            20046
+          ],
+          "baseHours": 13.26151875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            188551,
+            113131,
+            45254
+          ],
+          "growthScore": 34693.6
+        },
+        {
+          "level": 6,
+          "cost": [
+            141986,
+            85192,
+            34077
+          ],
+          "baseHours": 19.229202187499997,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            330537,
+            198323,
+            79331
+          ],
+          "growthScore": 60819.1
+        }
+      ]
+    },
+    {
+      "id": "sensor_array",
+      "name": "행성 센서 배열",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1400,
+            2200,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1400,
+            2200,
+            400
+          ],
+          "growthScore": 400
+        },
+        {
+          "level": 2,
+          "cost": [
+            2240,
+            3520,
+            640
+          ],
+          "baseHours": 1.45,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3640,
+            5720,
+            1040
+          ],
+          "growthScore": 1040
+        },
+        {
+          "level": 3,
+          "cost": [
+            3585,
+            5633,
+            1025
+          ],
+          "baseHours": 2.1025,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7225,
+            11353,
+            2065
+          ],
+          "growthScore": 2064.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            5735,
+            9012,
+            1639
+          ],
+          "baseHours": 3.048625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            12960,
+            20365,
+            3704
+          ],
+          "growthScore": 3702.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            9176,
+            14418,
+            2622
+          ],
+          "baseHours": 4.42050625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            22136,
+            34783,
+            6326
+          ],
+          "growthScore": 6324.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            14681,
+            23069,
+            4195
+          ],
+          "baseHours": 6.409734062499999,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            36817,
+            57852,
+            10521
+          ],
+          "growthScore": 10519
+        },
+        {
+          "level": 7,
+          "cost": [
+            23489,
+            36910,
+            6711
+          ],
+          "baseHours": 9.294114390624998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            60306,
+            94762,
+            17232
+          ],
+          "growthScore": 17230
+        },
+        {
+          "level": 8,
+          "cost": [
+            37581,
+            59056,
+            10738
+          ],
+          "baseHours": 13.476465866406247,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            97887,
+            153818,
+            27970
+          ],
+          "growthScore": 27967.5
+        },
+        {
+          "level": 9,
+          "cost": [
+            60130,
+            94490,
+            17180
+          ],
+          "baseHours": 19.54087550628906,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            158017,
+            248308,
+            45150
+          ],
+          "growthScore": 45147.5
+        },
+        {
+          "level": 10,
+          "cost": [
+            96208,
+            151183,
+            27488
+          ],
+          "baseHours": 28.334269484119133,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            254225,
+            399491,
+            72638
+          ],
+          "growthScore": 72635.4
+        }
+      ]
+    },
+    {
+      "id": "observatory",
+      "name": "성계 관측소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            3000,
+            4000,
+            1000
+          ],
+          "baseHours": 2,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3000,
+            4000,
+            1000
+          ],
+          "growthScore": 800
+        },
+        {
+          "level": 2,
+          "cost": [
+            4950,
+            6600,
+            1650
+          ],
+          "baseHours": 2.9,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7950,
+            10600,
+            2650
+          ],
+          "growthScore": 2120
+        },
+        {
+          "level": 3,
+          "cost": [
+            8168,
+            10890,
+            2723
+          ],
+          "baseHours": 4.205,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16118,
+            21490,
+            5373
+          ],
+          "growthScore": 4298.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            13477,
+            17969,
+            4493
+          ],
+          "baseHours": 6.09725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            29595,
+            39459,
+            9866
+          ],
+          "growthScore": 7892
+        },
+        {
+          "level": 5,
+          "cost": [
+            22237,
+            29649,
+            7413
+          ],
+          "baseHours": 8.8410125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            51832,
+            69108,
+            17279
+          ],
+          "growthScore": 13821.9
+        },
+        {
+          "level": 6,
+          "cost": [
+            36690,
+            48920,
+            12230
+          ],
+          "baseHours": 12.819468124999998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            88522,
+            118028,
+            29509
+          ],
+          "growthScore": 23605.9
+        },
+        {
+          "level": 7,
+          "cost": [
+            60538,
+            80717,
+            20180
+          ],
+          "baseHours": 18.588228781249995,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            149060,
+            198745,
+            49689
+          ],
+          "growthScore": 39749.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            99887,
+            133183,
+            33296
+          ],
+          "baseHours": 26.952931732812495,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            248947,
+            331928,
+            82985
+          ],
+          "growthScore": 66386
+        }
+      ]
+    },
+    {
+      "id": "signal_center",
+      "name": "통신 분석실",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            3600,
+            5400,
+            1000
+          ],
+          "baseHours": 2,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3600,
+            5400,
+            1000
+          ],
+          "growthScore": 1000
+        },
+        {
+          "level": 2,
+          "cost": [
+            5940,
+            8910,
+            1650
+          ],
+          "baseHours": 2.9,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            9540,
+            14310,
+            2650
+          ],
+          "growthScore": 2650
+        },
+        {
+          "level": 3,
+          "cost": [
+            9801,
+            14702,
+            2723
+          ],
+          "baseHours": 4.205,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            19341,
+            29012,
+            5373
+          ],
+          "growthScore": 5372.6
+        },
+        {
+          "level": 4,
+          "cost": [
+            16172,
+            24258,
+            4493
+          ],
+          "baseHours": 6.09725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            35513,
+            53270,
+            9866
+          ],
+          "growthScore": 9864.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            26684,
+            40025,
+            7413
+          ],
+          "baseHours": 8.8410125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            62197,
+            93295,
+            17279
+          ],
+          "growthScore": 17277.1
+        },
+        {
+          "level": 6,
+          "cost": [
+            44028,
+            66041,
+            12230
+          ],
+          "baseHours": 12.819468124999998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            106225,
+            159336,
+            29509
+          ],
+          "growthScore": 29507
+        },
+        {
+          "level": 7,
+          "cost": [
+            72646,
+            108968,
+            20180
+          ],
+          "baseHours": 18.588228781249995,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            178871,
+            268304,
+            49689
+          ],
+          "growthScore": 49686.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            119865,
+            179797,
+            33296
+          ],
+          "baseHours": 26.952931732812495,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            298736,
+            448101,
+            82985
+          ],
+          "growthScore": 82982.2
+        }
+      ]
+    },
+    {
+      "id": "jump_beacon",
+      "name": "항로 유도 비콘",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            12000,
+            10000,
+            4000
+          ],
+          "baseHours": 4,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            12000,
+            10000,
+            4000
+          ],
+          "growthScore": 2600
+        },
+        {
+          "level": 2,
+          "cost": [
+            20400,
+            17000,
+            6800
+          ],
+          "baseHours": 5.8,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            32400,
+            27000,
+            10800
+          ],
+          "growthScore": 7020
+        },
+        {
+          "level": 3,
+          "cost": [
+            34680,
+            28900,
+            11560
+          ],
+          "baseHours": 8.41,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            67080,
+            55900,
+            22360
+          ],
+          "growthScore": 14534
+        },
+        {
+          "level": 4,
+          "cost": [
+            58956,
+            49130,
+            19652
+          ],
+          "baseHours": 12.1945,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            126036,
+            105030,
+            42012
+          ],
+          "growthScore": 27307.8
+        },
+        {
+          "level": 5,
+          "cost": [
+            100226,
+            83521,
+            33409
+          ],
+          "baseHours": 17.682025,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            226262,
+            188551,
+            75421
+          ],
+          "growthScore": 49023.4
+        },
+        {
+          "level": 6,
+          "cost": [
+            170383,
+            141986,
+            56795
+          ],
+          "baseHours": 25.638936249999997,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            396645,
+            330537,
+            132216
+          ],
+          "growthScore": 85939.8
+        }
+      ]
+    },
+    {
+      "id": "spaceport",
+      "name": "우주항",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2200,
+            1200,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2200,
+            1200,
+            400
+          ],
+          "growthScore": 380
+        },
+        {
+          "level": 2,
+          "cost": [
+            3520,
+            1920,
+            640
+          ],
+          "baseHours": 1.45,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5720,
+            3120,
+            1040
+          ],
+          "growthScore": 988
+        },
+        {
+          "level": 3,
+          "cost": [
+            5633,
+            3073,
+            1025
+          ],
+          "baseHours": 2.1025,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11353,
+            6193,
+            2065
+          ],
+          "growthScore": 1961.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            9012,
+            4916,
+            1639
+          ],
+          "baseHours": 3.048625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            20365,
+            11109,
+            3704
+          ],
+          "growthScore": 3517.8
+        },
+        {
+          "level": 5,
+          "cost": [
+            14418,
+            7865,
+            2622
+          ],
+          "baseHours": 4.42050625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            34783,
+            18974,
+            6326
+          ],
+          "growthScore": 6008.3
+        },
+        {
+          "level": 6,
+          "cost": [
+            23069,
+            12583,
+            4195
+          ],
+          "baseHours": 6.409734062499999,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            57852,
+            31557,
+            10521
+          ],
+          "growthScore": 9993
+        },
+        {
+          "level": 7,
+          "cost": [
+            36910,
+            20133,
+            6711
+          ],
+          "baseHours": 9.294114390624998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            94762,
+            51690,
+            17232
+          ],
+          "growthScore": 16368.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            59056,
+            32213,
+            10738
+          ],
+          "baseHours": 13.476465866406247,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            153818,
+            83903,
+            27970
+          ],
+          "growthScore": 26569.1
+        },
+        {
+          "level": 9,
+          "cost": [
+            94490,
+            51540,
+            17180
+          ],
+          "baseHours": 19.54087550628906,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            248308,
+            135443,
+            45150
+          ],
+          "growthScore": 42890.1
+        },
+        {
+          "level": 10,
+          "cost": [
+            151183,
+            82464,
+            27488
+          ],
+          "baseHours": 28.334269484119133,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            399491,
+            217907,
+            72638
+          ],
+          "growthScore": 69003.6
+        }
+      ]
+    },
+    {
+      "id": "fuel_depot",
+      "name": "연료 보급소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2000,
+            1000,
+            1000
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2000,
+            1000,
+            1000
+          ],
+          "growthScore": 400
+        },
+        {
+          "level": 2,
+          "cost": [
+            3200,
+            1600,
+            1600
+          ],
+          "baseHours": 1.45,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5200,
+            2600,
+            2600
+          ],
+          "growthScore": 1040
+        },
+        {
+          "level": 3,
+          "cost": [
+            5121,
+            2561,
+            2561
+          ],
+          "baseHours": 2.1025,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10321,
+            5161,
+            5161
+          ],
+          "growthScore": 2064.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            8193,
+            4097,
+            4097
+          ],
+          "baseHours": 3.048625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            18514,
+            9258,
+            9258
+          ],
+          "growthScore": 3703
+        },
+        {
+          "level": 5,
+          "cost": [
+            13108,
+            6554,
+            6554
+          ],
+          "baseHours": 4.42050625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            31622,
+            15812,
+            15812
+          ],
+          "growthScore": 6324.6
+        },
+        {
+          "level": 6,
+          "cost": [
+            20972,
+            10486,
+            10486
+          ],
+          "baseHours": 6.409734062499999,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            52594,
+            26298,
+            26298
+          ],
+          "growthScore": 10519
+        },
+        {
+          "level": 7,
+          "cost": [
+            33555,
+            16778,
+            16778
+          ],
+          "baseHours": 9.294114390624998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            86149,
+            43076,
+            43076
+          ],
+          "growthScore": 17230.1
+        },
+        {
+          "level": 8,
+          "cost": [
+            53688,
+            26844,
+            26844
+          ],
+          "baseHours": 13.476465866406247,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            139837,
+            69920,
+            69920
+          ],
+          "growthScore": 27967.7
+        }
+      ]
+    },
+    {
+      "id": "salvage_yard",
+      "name": "잔해 처리장",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            3000,
+            1800,
+            500
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3000,
+            1800,
+            500
+          ],
+          "growthScore": 530
+        },
+        {
+          "level": 2,
+          "cost": [
+            4800,
+            2880,
+            800
+          ],
+          "baseHours": 2.175,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7800,
+            4680,
+            1300
+          ],
+          "growthScore": 1378
+        },
+        {
+          "level": 3,
+          "cost": [
+            7681,
+            4609,
+            1281
+          ],
+          "baseHours": 3.15375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            15481,
+            9289,
+            2581
+          ],
+          "growthScore": 2735.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            12289,
+            7373,
+            2049
+          ],
+          "baseHours": 4.5729375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            27770,
+            16662,
+            4630
+          ],
+          "growthScore": 4906.2
+        },
+        {
+          "level": 5,
+          "cost": [
+            19661,
+            11797,
+            3277
+          ],
+          "baseHours": 6.630759375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            47431,
+            28459,
+            7907
+          ],
+          "growthScore": 8379.7
+        },
+        {
+          "level": 6,
+          "cost": [
+            31458,
+            18875,
+            5243
+          ],
+          "baseHours": 9.614601093749998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            78889,
+            47334,
+            13150
+          ],
+          "growthScore": 13937.3
+        },
+        {
+          "level": 7,
+          "cost": [
+            50332,
+            30199,
+            8389
+          ],
+          "baseHours": 13.941171585937497,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            129221,
+            77533,
+            21539
+          ],
+          "growthScore": 22829.3
+        },
+        {
+          "level": 8,
+          "cost": [
+            80531,
+            48319,
+            13422
+          ],
+          "baseHours": 20.214698799609373,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            209752,
+            125852,
+            34961
+          ],
+          "growthScore": 37056.5
+        }
+      ]
+    },
+    {
+      "id": "freight_hub",
+      "name": "화물 분배 허브",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            5000,
+            3000,
+            1000
+          ],
+          "baseHours": 2,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5000,
+            3000,
+            1000
+          ],
+          "growthScore": 900
+        },
+        {
+          "level": 2,
+          "cost": [
+            8250,
+            4950,
+            1650
+          ],
+          "baseHours": 2.9,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            13250,
+            7950,
+            2650
+          ],
+          "growthScore": 2385
+        },
+        {
+          "level": 3,
+          "cost": [
+            13613,
+            8168,
+            2723
+          ],
+          "baseHours": 4.205,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26863,
+            16118,
+            5373
+          ],
+          "growthScore": 4835.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            22461,
+            13477,
+            4493
+          ],
+          "baseHours": 6.09725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49324,
+            29595,
+            9866
+          ],
+          "growthScore": 8878.5
+        },
+        {
+          "level": 5,
+          "cost": [
+            37061,
+            22237,
+            7413
+          ],
+          "baseHours": 8.8410125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            86385,
+            51832,
+            17279
+          ],
+          "growthScore": 15549.6
+        },
+        {
+          "level": 6,
+          "cost": [
+            61150,
+            36690,
+            12230
+          ],
+          "baseHours": 12.819468124999998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            147535,
+            88522,
+            29509
+          ],
+          "growthScore": 26556.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            100896,
+            60538,
+            20180
+          ],
+          "baseHours": 18.588228781249995,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            248431,
+            149060,
+            49689
+          ],
+          "growthScore": 44718
+        },
+        {
+          "level": 8,
+          "cost": [
+            166479,
+            99887,
+            33296
+          ],
+          "baseHours": 26.952931732812495,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            414910,
+            248947,
+            82985
+          ],
+          "growthScore": 74684.2
+        }
+      ]
+    },
+    {
+      "id": "colony_admin",
+      "name": "식민지 행정소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            4000,
+            2200,
+            800
+          ],
+          "baseHours": 2,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4000,
+            2200,
+            800
+          ],
+          "growthScore": 700
+        },
+        {
+          "level": 2,
+          "cost": [
+            6400,
+            3520,
+            1280
+          ],
+          "baseHours": 2.9,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10400,
+            5720,
+            2080
+          ],
+          "growthScore": 1820
+        },
+        {
+          "level": 3,
+          "cost": [
+            10241,
+            5633,
+            2049
+          ],
+          "baseHours": 4.205,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            20641,
+            11353,
+            4129
+          ],
+          "growthScore": 3612.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            16385,
+            9012,
+            3277
+          ],
+          "baseHours": 6.09725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            37026,
+            20365,
+            7406
+          ],
+          "growthScore": 6479.7
+        },
+        {
+          "level": 5,
+          "cost": [
+            26215,
+            14418,
+            5243
+          ],
+          "baseHours": 8.8410125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            63241,
+            34783,
+            12649
+          ],
+          "growthScore": 11067.3
+        },
+        {
+          "level": 6,
+          "cost": [
+            41944,
+            23069,
+            8389
+          ],
+          "baseHours": 12.819468124999998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            105185,
+            57852,
+            21038
+          ],
+          "growthScore": 18407.5
+        },
+        {
+          "level": 7,
+          "cost": [
+            67109,
+            36910,
+            13422
+          ],
+          "baseHours": 18.588228781249995,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            172294,
+            94762,
+            34460
+          ],
+          "growthScore": 30151.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            107375,
+            59056,
+            21475
+          ],
+          "baseHours": 26.952931732812495,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            279669,
+            153818,
+            55935
+          ],
+          "growthScore": 48942.2
+        }
+      ]
+    },
+    {
+      "id": "terraformer",
+      "name": "환경 조정소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            15000,
+            12000,
+            5000
+          ],
+          "baseHours": 6,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            15000,
+            12000,
+            5000
+          ],
+          "growthScore": 3200
+        },
+        {
+          "level": 2,
+          "cost": [
+            27000,
+            21600,
+            9000
+          ],
+          "baseHours": 8.7,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            42000,
+            33600,
+            14000
+          ],
+          "growthScore": 8960
+        },
+        {
+          "level": 3,
+          "cost": [
+            48600,
+            38880,
+            16201
+          ],
+          "baseHours": 12.615,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90600,
+            72480,
+            30201
+          ],
+          "growthScore": 19328.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            87481,
+            69985,
+            29161
+          ],
+          "baseHours": 18.29175,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            178081,
+            142465,
+            59362
+          ],
+          "growthScore": 37990.8
+        }
+      ]
+    },
+    {
+      "id": "command_hub",
+      "name": "함대 지휘본부",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            4000,
+            2600,
+            800
+          ],
+          "baseHours": 2,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4000,
+            2600,
+            800
+          ],
+          "growthScore": 740
+        },
+        {
+          "level": 2,
+          "cost": [
+            6600,
+            4290,
+            1320
+          ],
+          "baseHours": 2.9,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10600,
+            6890,
+            2120
+          ],
+          "growthScore": 1961
+        },
+        {
+          "level": 3,
+          "cost": [
+            10890,
+            7079,
+            2178
+          ],
+          "baseHours": 4.205,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            21490,
+            13969,
+            4298
+          ],
+          "growthScore": 3975.7
+        },
+        {
+          "level": 4,
+          "cost": [
+            17969,
+            11680,
+            3594
+          ],
+          "baseHours": 6.09725,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            39459,
+            25649,
+            7892
+          ],
+          "growthScore": 7300
+        },
+        {
+          "level": 5,
+          "cost": [
+            29649,
+            19272,
+            5930
+          ],
+          "baseHours": 8.8410125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            69108,
+            44921,
+            13822
+          ],
+          "growthScore": 12785.1
+        },
+        {
+          "level": 6,
+          "cost": [
+            48920,
+            31798,
+            9784
+          ],
+          "baseHours": 12.819468124999998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            118028,
+            76719,
+            23606
+          ],
+          "growthScore": 21835.3
+        },
+        {
+          "level": 7,
+          "cost": [
+            80717,
+            52466,
+            16144
+          ],
+          "baseHours": 18.588228781249995,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            198745,
+            129185,
+            39750
+          ],
+          "growthScore": 36768
+        },
+        {
+          "level": 8,
+          "cost": [
+            133183,
+            86569,
+            26637
+          ],
+          "baseHours": 26.952931732812495,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            331928,
+            215754,
+            66387
+          ],
+          "growthScore": 61406.9
+        }
+      ]
+    },
+    {
+      "id": "defense_foundry",
+      "name": "방어 설비 제작소",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            3000,
+            1600,
+            400
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3000,
+            1600,
+            400
+          ],
+          "growthScore": 500
+        },
+        {
+          "level": 2,
+          "cost": [
+            4950,
+            2640,
+            660
+          ],
+          "baseHours": 2.175,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7950,
+            4240,
+            1060
+          ],
+          "growthScore": 1325
+        },
+        {
+          "level": 3,
+          "cost": [
+            8168,
+            4356,
+            1089
+          ],
+          "baseHours": 3.15375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16118,
+            8596,
+            2149
+          ],
+          "growthScore": 2686.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            13477,
+            7188,
+            1797
+          ],
+          "baseHours": 4.5729375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            29595,
+            15784,
+            3946
+          ],
+          "growthScore": 4932.5
+        },
+        {
+          "level": 5,
+          "cost": [
+            22237,
+            11860,
+            2965
+          ],
+          "baseHours": 6.630759375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            51832,
+            27644,
+            6911
+          ],
+          "growthScore": 8638.7
+        },
+        {
+          "level": 6,
+          "cost": [
+            36690,
+            19568,
+            4892
+          ],
+          "baseHours": 9.614601093749998,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            88522,
+            47212,
+            11803
+          ],
+          "growthScore": 14753.7
+        },
+        {
+          "level": 7,
+          "cost": [
+            60538,
+            32287,
+            8072
+          ],
+          "baseHours": 13.941171585937497,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            149060,
+            79499,
+            19875
+          ],
+          "growthScore": 24843.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            99887,
+            53274,
+            13319
+          ],
+          "baseHours": 20.214698799609373,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            248947,
+            132773,
+            33194
+          ],
+          "growthScore": 41491.4
+        }
+      ]
+    },
+    {
+      "id": "automation",
+      "name": "산업 자동화",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            900,
+            700,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            900,
+            700,
+            200
+          ],
+          "growthScore": 180
+        },
+        {
+          "level": 2,
+          "cost": [
+            1620,
+            1260,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2520,
+            1960,
+            560
+          ],
+          "growthScore": 504
+        },
+        {
+          "level": 3,
+          "cost": [
+            2916,
+            2268,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5436,
+            4228,
+            1208
+          ],
+          "growthScore": 1087.2
+        },
+        {
+          "level": 4,
+          "cost": [
+            5249,
+            4083,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10685,
+            8311,
+            2375
+          ],
+          "growthScore": 2137.1
+        },
+        {
+          "level": 5,
+          "cost": [
+            9448,
+            7349,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            20133,
+            15660,
+            4475
+          ],
+          "growthScore": 4026.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            17007,
+            13227,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            37140,
+            28887,
+            8255
+          ],
+          "growthScore": 7428.2
+        },
+        {
+          "level": 7,
+          "cost": [
+            30612,
+            23809,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            67752,
+            52696,
+            15058
+          ],
+          "growthScore": 13550.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            55100,
+            42856,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            122852,
+            95552,
+            27303
+          ],
+          "growthScore": 24570.7
+        }
+      ]
+    },
+    {
+      "id": "refining",
+      "name": "정밀 정제",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1200,
+            1800,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1200,
+            1800,
+            400
+          ],
+          "growthScore": 340
+        },
+        {
+          "level": 2,
+          "cost": [
+            2160,
+            3240,
+            720
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3360,
+            5040,
+            1120
+          ],
+          "growthScore": 952
+        },
+        {
+          "level": 3,
+          "cost": [
+            3889,
+            5832,
+            1296
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7249,
+            10872,
+            2416
+          ],
+          "growthScore": 2053.7
+        },
+        {
+          "level": 4,
+          "cost": [
+            6999,
+            10498,
+            2333
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14248,
+            21370,
+            4749
+          ],
+          "growthScore": 4036.7
+        },
+        {
+          "level": 5,
+          "cost": [
+            12598,
+            18896,
+            4200
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26846,
+            40266,
+            8949
+          ],
+          "growthScore": 7606.1
+        },
+        {
+          "level": 6,
+          "cost": [
+            22675,
+            34013,
+            7559
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49521,
+            74279,
+            16508
+          ],
+          "growthScore": 14030.8
+        }
+      ]
+    },
+    {
+      "id": "power_efficiency",
+      "name": "전력 효율",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1000,
+            900,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1000,
+            900,
+            200
+          ],
+          "growthScore": 210
+        },
+        {
+          "level": 2,
+          "cost": [
+            1800,
+            1620,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2800,
+            2520,
+            560
+          ],
+          "growthScore": 588
+        },
+        {
+          "level": 3,
+          "cost": [
+            3240,
+            2916,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6040,
+            5436,
+            1208
+          ],
+          "growthScore": 1268.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            5833,
+            5249,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11873,
+            10685,
+            2375
+          ],
+          "growthScore": 2493.3
+        },
+        {
+          "level": 5,
+          "cost": [
+            10498,
+            9448,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            22371,
+            20133,
+            4475
+          ],
+          "growthScore": 4697.9
+        },
+        {
+          "level": 6,
+          "cost": [
+            18896,
+            17007,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            41267,
+            37140,
+            8255
+          ],
+          "growthScore": 8666.2
+        },
+        {
+          "level": 7,
+          "cost": [
+            34013,
+            30612,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            75280,
+            67752,
+            15058
+          ],
+          "growthScore": 15809
+        },
+        {
+          "level": 8,
+          "cost": [
+            61223,
+            55100,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            136503,
+            122852,
+            27303
+          ],
+          "growthScore": 28665.8
+        }
+      ]
+    },
+    {
+      "id": "storage",
+      "name": "압축 저장",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            800,
+            600,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            800,
+            600,
+            200
+          ],
+          "growthScore": 160
+        },
+        {
+          "level": 2,
+          "cost": [
+            1440,
+            1080,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2240,
+            1680,
+            560
+          ],
+          "growthScore": 448
+        },
+        {
+          "level": 3,
+          "cost": [
+            2592,
+            1945,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4832,
+            3625,
+            1208
+          ],
+          "growthScore": 966.5
+        },
+        {
+          "level": 4,
+          "cost": [
+            4666,
+            3500,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            9498,
+            7125,
+            2375
+          ],
+          "growthScore": 1899.8
+        },
+        {
+          "level": 5,
+          "cost": [
+            8399,
+            6299,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            17897,
+            13424,
+            4475
+          ],
+          "growthScore": 3579.6
+        },
+        {
+          "level": 6,
+          "cost": [
+            15117,
+            11338,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            33014,
+            24762,
+            8255
+          ],
+          "growthScore": 6603.1
+        },
+        {
+          "level": 7,
+          "cost": [
+            27210,
+            20408,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            60224,
+            45170,
+            15058
+          ],
+          "growthScore": 12045.2
+        },
+        {
+          "level": 8,
+          "cost": [
+            48978,
+            36734,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            109202,
+            81904,
+            27303
+          ],
+          "growthScore": 21840.9
+        },
+        {
+          "level": 9,
+          "cost": [
+            88160,
+            66120,
+            22040
+          ],
+          "baseHours": 25.62890625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            197362,
+            148024,
+            49343
+          ],
+          "growthScore": 39472.9
+        },
+        {
+          "level": 10,
+          "cost": [
+            158688,
+            119016,
+            39672
+          ],
+          "baseHours": 38.443359375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            356050,
+            267040,
+            89015
+          ],
+          "growthScore": 71210.5
+        }
+      ]
+    },
+    {
+      "id": "construction",
+      "name": "건설 공학",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1200,
+            800,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1200,
+            800,
+            200
+          ],
+          "growthScore": 220
+        },
+        {
+          "level": 2,
+          "cost": [
+            2160,
+            1440,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3360,
+            2240,
+            560
+          ],
+          "growthScore": 616
+        },
+        {
+          "level": 3,
+          "cost": [
+            3889,
+            2592,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7249,
+            4832,
+            1208
+          ],
+          "growthScore": 1328.9
+        },
+        {
+          "level": 4,
+          "cost": [
+            6999,
+            4666,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14248,
+            9498,
+            2375
+          ],
+          "growthScore": 2612.1
+        },
+        {
+          "level": 5,
+          "cost": [
+            12598,
+            8399,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26846,
+            17897,
+            4475
+          ],
+          "growthScore": 4921.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            22675,
+            15117,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49521,
+            33014,
+            8255
+          ],
+          "growthScore": 9079
+        },
+        {
+          "level": 7,
+          "cost": [
+            40815,
+            27210,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90336,
+            60224,
+            15058
+          ],
+          "growthScore": 16561.8
+        },
+        {
+          "level": 8,
+          "cost": [
+            73467,
+            48978,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            163803,
+            109202,
+            27303
+          ],
+          "growthScore": 30030.8
+        }
+      ]
+    },
+    {
+      "id": "shipbuilding",
+      "name": "선체 조립 공학",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2000,
+            1600,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2000,
+            1600,
+            400
+          ],
+          "growthScore": 400
+        },
+        {
+          "level": 2,
+          "cost": [
+            3600,
+            2880,
+            720
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5600,
+            4480,
+            1120
+          ],
+          "growthScore": 1120
+        },
+        {
+          "level": 3,
+          "cost": [
+            6480,
+            5184,
+            1296
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            12080,
+            9664,
+            2416
+          ],
+          "growthScore": 2416
+        },
+        {
+          "level": 4,
+          "cost": [
+            11665,
+            9332,
+            2333
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            23745,
+            18996,
+            4749
+          ],
+          "growthScore": 4749
+        },
+        {
+          "level": 5,
+          "cost": [
+            20996,
+            16797,
+            4200
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            44741,
+            35793,
+            8949
+          ],
+          "growthScore": 8948.3
+        },
+        {
+          "level": 6,
+          "cost": [
+            37792,
+            30234,
+            7559
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            82533,
+            66027,
+            16508
+          ],
+          "growthScore": 16506.8
+        },
+        {
+          "level": 7,
+          "cost": [
+            68025,
+            54420,
+            13605
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            150558,
+            120447,
+            30113
+          ],
+          "growthScore": 30111.8
+        },
+        {
+          "level": 8,
+          "cost": [
+            122445,
+            97956,
+            24489
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            273003,
+            218403,
+            54602
+          ],
+          "growthScore": 54600.8
+        }
+      ]
+    },
+    {
+      "id": "chemical_drive",
+      "name": "화학 추진",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            800,
+            500,
+            500
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            800,
+            500,
+            500
+          ],
+          "growthScore": 180
+        },
+        {
+          "level": 2,
+          "cost": [
+            1440,
+            900,
+            900
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2240,
+            1400,
+            1400
+          ],
+          "growthScore": 504
+        },
+        {
+          "level": 3,
+          "cost": [
+            2592,
+            1620,
+            1620
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4832,
+            3020,
+            3020
+          ],
+          "growthScore": 1087.2
+        },
+        {
+          "level": 4,
+          "cost": [
+            4666,
+            2917,
+            2917
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            9498,
+            5937,
+            5937
+          ],
+          "growthScore": 2137.2
+        },
+        {
+          "level": 5,
+          "cost": [
+            8399,
+            5249,
+            5249
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            17897,
+            11186,
+            11186
+          ],
+          "growthScore": 4026.9
+        },
+        {
+          "level": 6,
+          "cost": [
+            15117,
+            9448,
+            9448
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            33014,
+            20634,
+            20634
+          ],
+          "growthScore": 7428.2
+        },
+        {
+          "level": 7,
+          "cost": [
+            27210,
+            17007,
+            17007
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            60224,
+            37641,
+            37641
+          ],
+          "growthScore": 13550.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            48978,
+            30612,
+            30612
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            109202,
+            68253,
+            68253
+          ],
+          "growthScore": 24570.8
+        },
+        {
+          "level": 9,
+          "cost": [
+            88160,
+            55100,
+            55100
+          ],
+          "baseHours": 25.62890625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            197362,
+            123353,
+            123353
+          ],
+          "growthScore": 44406.8
+        },
+        {
+          "level": 10,
+          "cost": [
+            158688,
+            99180,
+            99180
+          ],
+          "baseHours": 38.443359375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            356050,
+            222533,
+            222533
+          ],
+          "growthScore": 80111.6
+        }
+      ]
+    },
+    {
+      "id": "ion_drive",
+      "name": "이온 추진",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1800,
+            2000,
+            1200
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1800,
+            2000,
+            1200
+          ],
+          "growthScore": 500
+        },
+        {
+          "level": 2,
+          "cost": [
+            3240,
+            3600,
+            2160
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5040,
+            5600,
+            3360
+          ],
+          "growthScore": 1400
+        },
+        {
+          "level": 3,
+          "cost": [
+            5832,
+            6480,
+            3889
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10872,
+            12080,
+            7249
+          ],
+          "growthScore": 3020.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            10498,
+            11665,
+            6999
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            21370,
+            23745,
+            14248
+          ],
+          "growthScore": 5936.3
+        },
+        {
+          "level": 5,
+          "cost": [
+            18896,
+            20996,
+            12598
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            40266,
+            44741,
+            26846
+          ],
+          "growthScore": 11185.3
+        },
+        {
+          "level": 6,
+          "cost": [
+            34013,
+            37792,
+            22675
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            74279,
+            82533,
+            49521
+          ],
+          "growthScore": 20633.3
+        },
+        {
+          "level": 7,
+          "cost": [
+            61223,
+            68025,
+            40815
+          ],
+          "baseHours": 34.171875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            135502,
+            150558,
+            90336
+          ],
+          "growthScore": 37639.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            110200,
+            122445,
+            73467
+          ],
+          "baseHours": 51.2578125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            245702,
+            273003,
+            163803
+          ],
+          "growthScore": 68250.8
+        }
+      ]
+    },
+    {
+      "id": "fusion_drive",
+      "name": "융합 추진",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            6000,
+            7000,
+            5000
+          ],
+          "baseHours": 8,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6000,
+            7000,
+            5000
+          ],
+          "growthScore": 1800
+        },
+        {
+          "level": 2,
+          "cost": [
+            10800,
+            12600,
+            9000
+          ],
+          "baseHours": 12,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16800,
+            19600,
+            14000
+          ],
+          "growthScore": 5040
+        },
+        {
+          "level": 3,
+          "cost": [
+            19440,
+            22680,
+            16201
+          ],
+          "baseHours": 18,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            36240,
+            42280,
+            30201
+          ],
+          "growthScore": 10872.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            34993,
+            40825,
+            29161
+          ],
+          "baseHours": 27,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            71233,
+            83105,
+            59362
+          ],
+          "growthScore": 21370
+        },
+        {
+          "level": 5,
+          "cost": [
+            62986,
+            73484,
+            52488
+          ],
+          "baseHours": 40.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            134219,
+            156589,
+            111850
+          ],
+          "growthScore": 40265.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            113375,
+            132270,
+            94479
+          ],
+          "baseHours": 60.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            247594,
+            288859,
+            206329
+          ],
+          "growthScore": 74278.2
+        }
+      ]
+    },
+    {
+      "id": "navigation",
+      "name": "항행 계산",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1000,
+            1000,
+            300
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1000,
+            1000,
+            300
+          ],
+          "growthScore": 230
+        },
+        {
+          "level": 2,
+          "cost": [
+            1800,
+            1800,
+            540
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2800,
+            2800,
+            840
+          ],
+          "growthScore": 644
+        },
+        {
+          "level": 3,
+          "cost": [
+            3240,
+            3240,
+            973
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6040,
+            6040,
+            1813
+          ],
+          "growthScore": 1389.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            5833,
+            5833,
+            1750
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11873,
+            11873,
+            3563
+          ],
+          "growthScore": 2730.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            10498,
+            10498,
+            3150
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            22371,
+            22371,
+            6713
+          ],
+          "growthScore": 5145.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            18896,
+            18896,
+            5669
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            41267,
+            41267,
+            12382
+          ],
+          "growthScore": 9491.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            34013,
+            34013,
+            10204
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            75280,
+            75280,
+            22586
+          ],
+          "growthScore": 17314.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            61223,
+            61223,
+            18367
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            136503,
+            136503,
+            40953
+          ],
+          "growthScore": 31395.9
+        }
+      ]
+    },
+    {
+      "id": "fuel_efficiency",
+      "name": "연료 분사 제어",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1400,
+            1000,
+            1000
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1400,
+            1000,
+            1000
+          ],
+          "growthScore": 340
+        },
+        {
+          "level": 2,
+          "cost": [
+            2520,
+            1800,
+            1800
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3920,
+            2800,
+            2800
+          ],
+          "growthScore": 952
+        },
+        {
+          "level": 3,
+          "cost": [
+            4536,
+            3240,
+            3240
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            8456,
+            6040,
+            6040
+          ],
+          "growthScore": 2053.6
+        },
+        {
+          "level": 4,
+          "cost": [
+            8165,
+            5833,
+            5833
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16621,
+            11873,
+            11873
+          ],
+          "growthScore": 4036.7
+        },
+        {
+          "level": 5,
+          "cost": [
+            14697,
+            10498,
+            10498
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            31318,
+            22371,
+            22371
+          ],
+          "growthScore": 7606
+        },
+        {
+          "level": 6,
+          "cost": [
+            26454,
+            18896,
+            18896
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            57772,
+            41267,
+            41267
+          ],
+          "growthScore": 14030.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            47618,
+            34013,
+            34013
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            105390,
+            75280,
+            75280
+          ],
+          "growthScore": 25595
+        },
+        {
+          "level": 8,
+          "cost": [
+            85711,
+            61223,
+            61223
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            191101,
+            136503,
+            136503
+          ],
+          "growthScore": 46410.7
+        }
+      ]
+    },
+    {
+      "id": "long_range",
+      "name": "장거리 항행",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            4000,
+            5000,
+            3000
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4000,
+            5000,
+            3000
+          ],
+          "growthScore": 1200
+        },
+        {
+          "level": 2,
+          "cost": [
+            7200,
+            9000,
+            5400
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11200,
+            14000,
+            8400
+          ],
+          "growthScore": 3360
+        },
+        {
+          "level": 3,
+          "cost": [
+            12960,
+            16201,
+            9720
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            24160,
+            30201,
+            18120
+          ],
+          "growthScore": 7248.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            23329,
+            29161,
+            17497
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            47489,
+            59362,
+            35617
+          ],
+          "growthScore": 14246.8
+        },
+        {
+          "level": 5,
+          "cost": [
+            41991,
+            52488,
+            31493
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            89480,
+            111850,
+            67110
+          ],
+          "growthScore": 26844
+        },
+        {
+          "level": 6,
+          "cost": [
+            75583,
+            94479,
+            56688
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            165063,
+            206329,
+            123798
+          ],
+          "growthScore": 49519
+        }
+      ]
+    },
+    {
+      "id": "kinetic",
+      "name": "운동탄 병기",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1200,
+            600,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1200,
+            600,
+            200
+          ],
+          "growthScore": 200
+        },
+        {
+          "level": 2,
+          "cost": [
+            2160,
+            1080,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3360,
+            1680,
+            560
+          ],
+          "growthScore": 560
+        },
+        {
+          "level": 3,
+          "cost": [
+            3889,
+            1945,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7249,
+            3625,
+            1208
+          ],
+          "growthScore": 1208.2
+        },
+        {
+          "level": 4,
+          "cost": [
+            6999,
+            3500,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14248,
+            7125,
+            2375
+          ],
+          "growthScore": 2374.8
+        },
+        {
+          "level": 5,
+          "cost": [
+            12598,
+            6299,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26846,
+            13424,
+            4475
+          ],
+          "growthScore": 4474.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            22675,
+            11338,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49521,
+            24762,
+            8255
+          ],
+          "growthScore": 8253.8
+        },
+        {
+          "level": 7,
+          "cost": [
+            40815,
+            20408,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90336,
+            45170,
+            15058
+          ],
+          "growthScore": 15056.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            73467,
+            36734,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            163803,
+            81904,
+            27303
+          ],
+          "growthScore": 27301
+        },
+        {
+          "level": 9,
+          "cost": [
+            132240,
+            66120,
+            22040
+          ],
+          "baseHours": 25.62890625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            296043,
+            148024,
+            49343
+          ],
+          "growthScore": 49341
+        },
+        {
+          "level": 10,
+          "cost": [
+            238032,
+            119016,
+            39672
+          ],
+          "baseHours": 38.443359375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            534075,
+            267040,
+            89015
+          ],
+          "growthScore": 89013
+        }
+      ]
+    },
+    {
+      "id": "beam",
+      "name": "집속 에너지",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1800,
+            2400,
+            400
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1800,
+            2400,
+            400
+          ],
+          "growthScore": 460
+        },
+        {
+          "level": 2,
+          "cost": [
+            3240,
+            4320,
+            720
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5040,
+            6720,
+            1120
+          ],
+          "growthScore": 1288
+        },
+        {
+          "level": 3,
+          "cost": [
+            5832,
+            7777,
+            1296
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10872,
+            14497,
+            2416
+          ],
+          "growthScore": 2778.5
+        },
+        {
+          "level": 4,
+          "cost": [
+            10498,
+            13997,
+            2333
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            21370,
+            28494,
+            4749
+          ],
+          "growthScore": 5461.3
+        },
+        {
+          "level": 5,
+          "cost": [
+            18896,
+            25195,
+            4200
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            40266,
+            53689,
+            8949
+          ],
+          "growthScore": 10290.4
+        },
+        {
+          "level": 6,
+          "cost": [
+            34013,
+            45350,
+            7559
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            74279,
+            99039,
+            16508
+          ],
+          "growthScore": 18982.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            61223,
+            81630,
+            13605
+          ],
+          "baseHours": 34.171875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            135502,
+            180669,
+            30113
+          ],
+          "growthScore": 34628.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            110200,
+            146933,
+            24489
+          ],
+          "baseHours": 51.2578125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            245702,
+            327602,
+            54602
+          ],
+          "growthScore": 62790.6
+        },
+        {
+          "level": 9,
+          "cost": [
+            198360,
+            264480,
+            44080
+          ],
+          "baseHours": 76.88671875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            444062,
+            592082,
+            98682
+          ],
+          "growthScore": 113482.6
+        },
+        {
+          "level": 10,
+          "cost": [
+            357047,
+            476063,
+            79344
+          ],
+          "baseHours": 115.330078125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            801109,
+            1068145,
+            178026
+          ],
+          "growthScore": 204728
+        }
+      ]
+    },
+    {
+      "id": "missile",
+      "name": "유도탄 체계",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2000,
+            1200,
+            1000
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2000,
+            1200,
+            1000
+          ],
+          "growthScore": 420
+        },
+        {
+          "level": 2,
+          "cost": [
+            3600,
+            2160,
+            1800
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5600,
+            3360,
+            2800
+          ],
+          "growthScore": 1176
+        },
+        {
+          "level": 3,
+          "cost": [
+            6480,
+            3889,
+            3240
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            12080,
+            7249,
+            6040
+          ],
+          "growthScore": 2536.9
+        },
+        {
+          "level": 4,
+          "cost": [
+            11665,
+            6999,
+            5833
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            23745,
+            14248,
+            11873
+          ],
+          "growthScore": 4986.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            20996,
+            12598,
+            10498
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            44741,
+            26846,
+            22371
+          ],
+          "growthScore": 9395.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            37792,
+            22675,
+            18896
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            82533,
+            49521,
+            41267
+          ],
+          "growthScore": 17332.1
+        },
+        {
+          "level": 7,
+          "cost": [
+            68025,
+            40815,
+            34013
+          ],
+          "baseHours": 34.171875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            150558,
+            90336,
+            75280
+          ],
+          "growthScore": 31617.4
+        },
+        {
+          "level": 8,
+          "cost": [
+            122445,
+            73467,
+            61223
+          ],
+          "baseHours": 51.2578125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            273003,
+            163803,
+            136503
+          ],
+          "growthScore": 57330.9
+        },
+        {
+          "level": 9,
+          "cost": [
+            220400,
+            132240,
+            110200
+          ],
+          "baseHours": 76.88671875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            493403,
+            296043,
+            246703
+          ],
+          "growthScore": 103614.9
+        },
+        {
+          "level": 10,
+          "cost": [
+            396719,
+            238032,
+            198360
+          ],
+          "baseHours": 115.330078125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            890122,
+            534075,
+            445063
+          ],
+          "growthScore": 186926
+        }
+      ]
+    },
+    {
+      "id": "armor",
+      "name": "복합 장갑",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1400,
+            800,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1400,
+            800,
+            200
+          ],
+          "growthScore": 240
+        },
+        {
+          "level": 2,
+          "cost": [
+            2520,
+            1440,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3920,
+            2240,
+            560
+          ],
+          "growthScore": 672
+        },
+        {
+          "level": 3,
+          "cost": [
+            4536,
+            2592,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            8456,
+            4832,
+            1208
+          ],
+          "growthScore": 1449.6
+        },
+        {
+          "level": 4,
+          "cost": [
+            8165,
+            4666,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16621,
+            9498,
+            2375
+          ],
+          "growthScore": 2849.4
+        },
+        {
+          "level": 5,
+          "cost": [
+            14697,
+            8399,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            31318,
+            17897,
+            4475
+          ],
+          "growthScore": 5369
+        },
+        {
+          "level": 6,
+          "cost": [
+            26454,
+            15117,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            57772,
+            33014,
+            8255
+          ],
+          "growthScore": 9904.1
+        },
+        {
+          "level": 7,
+          "cost": [
+            47618,
+            27210,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            105390,
+            60224,
+            15058
+          ],
+          "growthScore": 18067.2
+        },
+        {
+          "level": 8,
+          "cost": [
+            85711,
+            48978,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            191101,
+            109202,
+            27303
+          ],
+          "growthScore": 32760.6
+        },
+        {
+          "level": 9,
+          "cost": [
+            154280,
+            88160,
+            22040
+          ],
+          "baseHours": 25.62890625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            345381,
+            197362,
+            49343
+          ],
+          "growthScore": 59208.6
+        },
+        {
+          "level": 10,
+          "cost": [
+            277704,
+            158688,
+            39672
+          ],
+          "baseHours": 38.443359375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            623085,
+            356050,
+            89015
+          ],
+          "growthScore": 106815
+        }
+      ]
+    },
+    {
+      "id": "shield",
+      "name": "방어막 이론",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2000,
+            2400,
+            600
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2000,
+            2400,
+            600
+          ],
+          "growthScore": 500
+        },
+        {
+          "level": 2,
+          "cost": [
+            3600,
+            4320,
+            1080
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5600,
+            6720,
+            1680
+          ],
+          "growthScore": 1400
+        },
+        {
+          "level": 3,
+          "cost": [
+            6480,
+            7777,
+            1945
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            12080,
+            14497,
+            3625
+          ],
+          "growthScore": 3020.2
+        },
+        {
+          "level": 4,
+          "cost": [
+            11665,
+            13997,
+            3500
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            23745,
+            28494,
+            7125
+          ],
+          "growthScore": 5936.4
+        },
+        {
+          "level": 5,
+          "cost": [
+            20996,
+            25195,
+            6299
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            44741,
+            53689,
+            13424
+          ],
+          "growthScore": 11185.4
+        },
+        {
+          "level": 6,
+          "cost": [
+            37792,
+            45350,
+            11338
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            82533,
+            99039,
+            24762
+          ],
+          "growthScore": 20633.4
+        },
+        {
+          "level": 7,
+          "cost": [
+            68025,
+            81630,
+            20408
+          ],
+          "baseHours": 34.171875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            150558,
+            180669,
+            45170
+          ],
+          "growthScore": 37639.7
+        },
+        {
+          "level": 8,
+          "cost": [
+            122445,
+            146933,
+            36734
+          ],
+          "baseHours": 51.2578125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            273003,
+            327602,
+            81904
+          ],
+          "growthScore": 68250.9
+        }
+      ]
+    },
+    {
+      "id": "tracking",
+      "name": "다중 표적 추적",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1400,
+            2200,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1400,
+            2200,
+            400
+          ],
+          "growthScore": 400
+        },
+        {
+          "level": 2,
+          "cost": [
+            2520,
+            3960,
+            720
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3920,
+            6160,
+            1120
+          ],
+          "growthScore": 1120
+        },
+        {
+          "level": 3,
+          "cost": [
+            4536,
+            7129,
+            1296
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            8456,
+            13289,
+            2416
+          ],
+          "growthScore": 2416.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            8165,
+            12831,
+            2333
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16621,
+            26120,
+            4749
+          ],
+          "growthScore": 4749
+        },
+        {
+          "level": 5,
+          "cost": [
+            14697,
+            23095,
+            4200
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            31318,
+            49215,
+            8949
+          ],
+          "growthScore": 8948.2
+        },
+        {
+          "level": 6,
+          "cost": [
+            26454,
+            41571,
+            7559
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            57772,
+            90786,
+            16508
+          ],
+          "growthScore": 16506.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            47618,
+            74827,
+            13605
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            105390,
+            165613,
+            30113
+          ],
+          "growthScore": 30111.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            85711,
+            134689,
+            24489
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            191101,
+            300302,
+            54602
+          ],
+          "growthScore": 54600.5
+        }
+      ]
+    },
+    {
+      "id": "sensors",
+      "name": "센서 해상도",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            800,
+            1400,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            800,
+            1400,
+            200
+          ],
+          "growthScore": 240
+        },
+        {
+          "level": 2,
+          "cost": [
+            1440,
+            2520,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2240,
+            3920,
+            560
+          ],
+          "growthScore": 672
+        },
+        {
+          "level": 3,
+          "cost": [
+            2592,
+            4536,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4832,
+            8456,
+            1208
+          ],
+          "growthScore": 1449.6
+        },
+        {
+          "level": 4,
+          "cost": [
+            4666,
+            8165,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            9498,
+            16621,
+            2375
+          ],
+          "growthScore": 2849.4
+        },
+        {
+          "level": 5,
+          "cost": [
+            8399,
+            14697,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            17897,
+            31318,
+            4475
+          ],
+          "growthScore": 5369
+        },
+        {
+          "level": 6,
+          "cost": [
+            15117,
+            26454,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            33014,
+            57772,
+            8255
+          ],
+          "growthScore": 9904.1
+        },
+        {
+          "level": 7,
+          "cost": [
+            27210,
+            47618,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            60224,
+            105390,
+            15058
+          ],
+          "growthScore": 18067.2
+        },
+        {
+          "level": 8,
+          "cost": [
+            48978,
+            85711,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            109202,
+            191101,
+            27303
+          ],
+          "growthScore": 32760.6
+        },
+        {
+          "level": 9,
+          "cost": [
+            88160,
+            154280,
+            22040
+          ],
+          "baseHours": 25.62890625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            197362,
+            345381,
+            49343
+          ],
+          "growthScore": 59208.6
+        },
+        {
+          "level": 10,
+          "cost": [
+            158688,
+            277704,
+            39672
+          ],
+          "baseHours": 38.443359375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            356050,
+            623085,
+            89015
+          ],
+          "growthScore": 106815
+        }
+      ]
+    },
+    {
+      "id": "espionage",
+      "name": "침투 정보학",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1200,
+            2200,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1200,
+            2200,
+            400
+          ],
+          "growthScore": 380
+        },
+        {
+          "level": 2,
+          "cost": [
+            2160,
+            3960,
+            720
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3360,
+            6160,
+            1120
+          ],
+          "growthScore": 1064
+        },
+        {
+          "level": 3,
+          "cost": [
+            3889,
+            7129,
+            1296
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7249,
+            13289,
+            2416
+          ],
+          "growthScore": 2295.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            6999,
+            12831,
+            2333
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14248,
+            26120,
+            4749
+          ],
+          "growthScore": 4511.7
+        },
+        {
+          "level": 5,
+          "cost": [
+            12598,
+            23095,
+            4200
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26846,
+            49215,
+            8949
+          ],
+          "growthScore": 8501
+        },
+        {
+          "level": 6,
+          "cost": [
+            22675,
+            41571,
+            7559
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49521,
+            90786,
+            16508
+          ],
+          "growthScore": 15681.5
+        },
+        {
+          "level": 7,
+          "cost": [
+            40815,
+            74827,
+            13605
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90336,
+            165613,
+            30113
+          ],
+          "growthScore": 28606.2
+        },
+        {
+          "level": 8,
+          "cost": [
+            73467,
+            134689,
+            24489
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            163803,
+            300302,
+            54602
+          ],
+          "growthScore": 51870.7
+        }
+      ]
+    },
+    {
+      "id": "encryption",
+      "name": "신호 암호화",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1200,
+            1600,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1200,
+            1600,
+            400
+          ],
+          "growthScore": 320
+        },
+        {
+          "level": 2,
+          "cost": [
+            2160,
+            2880,
+            720
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3360,
+            4480,
+            1120
+          ],
+          "growthScore": 896
+        },
+        {
+          "level": 3,
+          "cost": [
+            3889,
+            5184,
+            1296
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7249,
+            9664,
+            2416
+          ],
+          "growthScore": 1932.9
+        },
+        {
+          "level": 4,
+          "cost": [
+            6999,
+            9332,
+            2333
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14248,
+            18996,
+            4749
+          ],
+          "growthScore": 3799.3
+        },
+        {
+          "level": 5,
+          "cost": [
+            12598,
+            16797,
+            4200
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26846,
+            35793,
+            8949
+          ],
+          "growthScore": 7158.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            22675,
+            30234,
+            7559
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49521,
+            66027,
+            16508
+          ],
+          "growthScore": 13205.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            40815,
+            54420,
+            13605
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90336,
+            120447,
+            30113
+          ],
+          "growthScore": 24089.6
+        },
+        {
+          "level": 8,
+          "cost": [
+            73467,
+            97956,
+            24489
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            163803,
+            218403,
+            54602
+          ],
+          "growthScore": 43680.8
+        }
+      ]
+    },
+    {
+      "id": "electronic_warfare",
+      "name": "전자전",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2400,
+            3600,
+            800
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2400,
+            3600,
+            800
+          ],
+          "growthScore": 680
+        },
+        {
+          "level": 2,
+          "cost": [
+            4320,
+            6480,
+            1440
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6720,
+            10080,
+            2240
+          ],
+          "growthScore": 1904
+        },
+        {
+          "level": 3,
+          "cost": [
+            7777,
+            11664,
+            2592
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14497,
+            21744,
+            4832
+          ],
+          "growthScore": 4107.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            13997,
+            20996,
+            4666
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            28494,
+            42740,
+            9498
+          ],
+          "growthScore": 8073.2
+        },
+        {
+          "level": 5,
+          "cost": [
+            25195,
+            37792,
+            8399
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            53689,
+            80532,
+            17897
+          ],
+          "growthScore": 15211.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            45350,
+            68025,
+            15117
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            99039,
+            148557,
+            33014
+          ],
+          "growthScore": 28061
+        }
+      ]
+    },
+    {
+      "id": "counter_ew",
+      "name": "주파수 복원",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2400,
+            3200,
+            800
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2400,
+            3200,
+            800
+          ],
+          "growthScore": 640
+        },
+        {
+          "level": 2,
+          "cost": [
+            4320,
+            5760,
+            1440
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6720,
+            8960,
+            2240
+          ],
+          "growthScore": 1792
+        },
+        {
+          "level": 3,
+          "cost": [
+            7777,
+            10368,
+            2592
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14497,
+            19328,
+            4832
+          ],
+          "growthScore": 3865.7
+        },
+        {
+          "level": 4,
+          "cost": [
+            13997,
+            18663,
+            4666
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            28494,
+            37991,
+            9498
+          ],
+          "growthScore": 7598.3
+        },
+        {
+          "level": 5,
+          "cost": [
+            25195,
+            33593,
+            8399
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            53689,
+            71584,
+            17897
+          ],
+          "growthScore": 14317
+        },
+        {
+          "level": 6,
+          "cost": [
+            45350,
+            60467,
+            15117
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            99039,
+            132051,
+            33014
+          ],
+          "growthScore": 26410.4
+        }
+      ]
+    },
+    {
+      "id": "astrography",
+      "name": "성계 지도학",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1800,
+            2400,
+            600
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1800,
+            2400,
+            600
+          ],
+          "growthScore": 480
+        },
+        {
+          "level": 2,
+          "cost": [
+            3240,
+            4320,
+            1080
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5040,
+            6720,
+            1680
+          ],
+          "growthScore": 1344
+        },
+        {
+          "level": 3,
+          "cost": [
+            5832,
+            7777,
+            1945
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10872,
+            14497,
+            3625
+          ],
+          "growthScore": 2899.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            10498,
+            13997,
+            3500
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            21370,
+            28494,
+            7125
+          ],
+          "growthScore": 5698.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            18896,
+            25195,
+            6299
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            40266,
+            53689,
+            13424
+          ],
+          "growthScore": 10737.9
+        },
+        {
+          "level": 6,
+          "cost": [
+            34013,
+            45350,
+            11338
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            74279,
+            99039,
+            24762
+          ],
+          "growthScore": 19808
+        }
+      ]
+    },
+    {
+      "id": "cargo_compression",
+      "name": "화물 압축",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1000,
+            800,
+            200
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1000,
+            800,
+            200
+          ],
+          "growthScore": 200
+        },
+        {
+          "level": 2,
+          "cost": [
+            1800,
+            1440,
+            360
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2800,
+            2240,
+            560
+          ],
+          "growthScore": 560
+        },
+        {
+          "level": 3,
+          "cost": [
+            3240,
+            2592,
+            648
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6040,
+            4832,
+            1208
+          ],
+          "growthScore": 1208
+        },
+        {
+          "level": 4,
+          "cost": [
+            5833,
+            4666,
+            1167
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11873,
+            9498,
+            2375
+          ],
+          "growthScore": 2374.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            10498,
+            8399,
+            2100
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            22371,
+            17897,
+            4475
+          ],
+          "growthScore": 4474.3
+        },
+        {
+          "level": 6,
+          "cost": [
+            18896,
+            15117,
+            3780
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            41267,
+            33014,
+            8255
+          ],
+          "growthScore": 8253.6
+        },
+        {
+          "level": 7,
+          "cost": [
+            34013,
+            27210,
+            6803
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            75280,
+            60224,
+            15058
+          ],
+          "growthScore": 15056.2
+        },
+        {
+          "level": 8,
+          "cost": [
+            61223,
+            48978,
+            12245
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            136503,
+            109202,
+            27303
+          ],
+          "growthScore": 27300.8
+        },
+        {
+          "level": 9,
+          "cost": [
+            110200,
+            88160,
+            22040
+          ],
+          "baseHours": 25.62890625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            246703,
+            197362,
+            49343
+          ],
+          "growthScore": 49340.8
+        },
+        {
+          "level": 10,
+          "cost": [
+            198360,
+            158688,
+            39672
+          ],
+          "baseHours": 38.443359375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            445063,
+            356050,
+            89015
+          ],
+          "growthScore": 89012.8
+        }
+      ]
+    },
+    {
+      "id": "salvage_processing",
+      "name": "잔해 분리",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1200,
+            1000,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1200,
+            1000,
+            400
+          ],
+          "growthScore": 260
+        },
+        {
+          "level": 2,
+          "cost": [
+            2160,
+            1800,
+            720
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3360,
+            2800,
+            1120
+          ],
+          "growthScore": 728
+        },
+        {
+          "level": 3,
+          "cost": [
+            3889,
+            3240,
+            1296
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7249,
+            6040,
+            2416
+          ],
+          "growthScore": 1570.5
+        },
+        {
+          "level": 4,
+          "cost": [
+            6999,
+            5833,
+            2333
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14248,
+            11873,
+            4749
+          ],
+          "growthScore": 3087
+        },
+        {
+          "level": 5,
+          "cost": [
+            12598,
+            10498,
+            4200
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26846,
+            22371,
+            8949
+          ],
+          "growthScore": 5816.6
+        },
+        {
+          "level": 6,
+          "cost": [
+            22675,
+            18896,
+            7559
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49521,
+            41267,
+            16508
+          ],
+          "growthScore": 10729.6
+        }
+      ]
+    },
+    {
+      "id": "field_repair",
+      "name": "현장 정비",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1800,
+            1400,
+            600
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1800,
+            1400,
+            600
+          ],
+          "growthScore": 380
+        },
+        {
+          "level": 2,
+          "cost": [
+            3240,
+            2520,
+            1080
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5040,
+            3920,
+            1680
+          ],
+          "growthScore": 1064
+        },
+        {
+          "level": 3,
+          "cost": [
+            5832,
+            4536,
+            1945
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10872,
+            8456,
+            3625
+          ],
+          "growthScore": 2295.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            10498,
+            8165,
+            3500
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            21370,
+            16621,
+            7125
+          ],
+          "growthScore": 4511.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            18896,
+            14697,
+            6299
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            40266,
+            31318,
+            13424
+          ],
+          "growthScore": 8500.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            34013,
+            26454,
+            11338
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            74279,
+            57772,
+            24762
+          ],
+          "growthScore": 15681.3
+        },
+        {
+          "level": 7,
+          "cost": [
+            61223,
+            47618,
+            20408
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            135502,
+            105390,
+            45170
+          ],
+          "growthScore": 28606.2
+        },
+        {
+          "level": 8,
+          "cost": [
+            110200,
+            85711,
+            36734
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            245702,
+            191101,
+            81904
+          ],
+          "growthScore": 51870.7
+        }
+      ]
+    },
+    {
+      "id": "supply_network",
+      "name": "보급망",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2200,
+            1600,
+            1000
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2200,
+            1600,
+            1000
+          ],
+          "growthScore": 480
+        },
+        {
+          "level": 2,
+          "cost": [
+            3960,
+            2880,
+            1800
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6160,
+            4480,
+            2800
+          ],
+          "growthScore": 1344
+        },
+        {
+          "level": 3,
+          "cost": [
+            7129,
+            5184,
+            3240
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            13289,
+            9664,
+            6040
+          ],
+          "growthScore": 2899.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            12831,
+            9332,
+            5833
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26120,
+            18996,
+            11873
+          ],
+          "growthScore": 5698.9
+        },
+        {
+          "level": 5,
+          "cost": [
+            23095,
+            16797,
+            10498
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49215,
+            35793,
+            22371
+          ],
+          "growthScore": 10737.9
+        },
+        {
+          "level": 6,
+          "cost": [
+            41571,
+            30234,
+            18896
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90786,
+            66027,
+            41267
+          ],
+          "growthScore": 19808
+        },
+        {
+          "level": 7,
+          "cost": [
+            74827,
+            54420,
+            34013
+          ],
+          "baseHours": 34.171875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            165613,
+            120447,
+            75280
+          ],
+          "growthScore": 36134
+        },
+        {
+          "level": 8,
+          "cost": [
+            134689,
+            97956,
+            61223
+          ],
+          "baseHours": 51.2578125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            300302,
+            218403,
+            136503
+          ],
+          "growthScore": 65520.8
+        }
+      ]
+    },
+    {
+      "id": "colony_management",
+      "name": "식민지 운영",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            4000,
+            3000,
+            2000
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            4000,
+            3000,
+            2000
+          ],
+          "growthScore": 900
+        },
+        {
+          "level": 2,
+          "cost": [
+            7200,
+            5400,
+            3600
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            11200,
+            8400,
+            5600
+          ],
+          "growthScore": 2520
+        },
+        {
+          "level": 3,
+          "cost": [
+            12960,
+            9720,
+            6480
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            24160,
+            18120,
+            12080
+          ],
+          "growthScore": 5436
+        },
+        {
+          "level": 4,
+          "cost": [
+            23329,
+            17497,
+            11665
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            47489,
+            35617,
+            23745
+          ],
+          "growthScore": 10685.1
+        }
+      ]
+    },
+    {
+      "id": "terraforming",
+      "name": "환경 개조",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            10000,
+            12000,
+            4000
+          ],
+          "baseHours": 8,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            10000,
+            12000,
+            4000
+          ],
+          "growthScore": 2600
+        },
+        {
+          "level": 2,
+          "cost": [
+            18000,
+            21600,
+            7200
+          ],
+          "baseHours": 12,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            28000,
+            33600,
+            11200
+          ],
+          "growthScore": 7280
+        },
+        {
+          "level": 3,
+          "cost": [
+            32401,
+            38880,
+            12960
+          ],
+          "baseHours": 18,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            60401,
+            72480,
+            24160
+          ],
+          "growthScore": 15704.1
+        },
+        {
+          "level": 4,
+          "cost": [
+            58321,
+            69985,
+            23329
+          ],
+          "baseHours": 27,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            118722,
+            142465,
+            47489
+          ],
+          "growthScore": 30867.6
+        }
+      ]
+    },
+    {
+      "id": "fleet_command",
+      "name": "함대 지휘",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            1400,
+            1000,
+            400
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            1400,
+            1000,
+            400
+          ],
+          "growthScore": 280
+        },
+        {
+          "level": 2,
+          "cost": [
+            2520,
+            1800,
+            720
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3920,
+            2800,
+            1120
+          ],
+          "growthScore": 784
+        },
+        {
+          "level": 3,
+          "cost": [
+            4536,
+            3240,
+            1296
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            8456,
+            6040,
+            2416
+          ],
+          "growthScore": 1691.2
+        },
+        {
+          "level": 4,
+          "cost": [
+            8165,
+            5833,
+            2333
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            16621,
+            11873,
+            4749
+          ],
+          "growthScore": 3324.3
+        },
+        {
+          "level": 5,
+          "cost": [
+            14697,
+            10498,
+            4200
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            31318,
+            22371,
+            8949
+          ],
+          "growthScore": 6263.8
+        },
+        {
+          "level": 6,
+          "cost": [
+            26454,
+            18896,
+            7559
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            57772,
+            41267,
+            16508
+          ],
+          "growthScore": 11554.7
+        },
+        {
+          "level": 7,
+          "cost": [
+            47618,
+            34013,
+            13605
+          ],
+          "baseHours": 11.390625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            105390,
+            75280,
+            30113
+          ],
+          "growthScore": 21078.3
+        },
+        {
+          "level": 8,
+          "cost": [
+            85711,
+            61223,
+            24489
+          ],
+          "baseHours": 17.0859375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            191101,
+            136503,
+            54602
+          ],
+          "growthScore": 38220.6
+        },
+        {
+          "level": 9,
+          "cost": [
+            154280,
+            110200,
+            44080
+          ],
+          "baseHours": 25.62890625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            345381,
+            246703,
+            98682
+          ],
+          "growthScore": 69076.6
+        },
+        {
+          "level": 10,
+          "cost": [
+            277704,
+            198360,
+            79344
+          ],
+          "baseHours": 38.443359375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            623085,
+            445063,
+            178026
+          ],
+          "growthScore": 124617.4
+        }
+      ]
+    },
+    {
+      "id": "coordination",
+      "name": "협공 조율",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2200,
+            2600,
+            800
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2200,
+            2600,
+            800
+          ],
+          "growthScore": 560
+        },
+        {
+          "level": 2,
+          "cost": [
+            3960,
+            4680,
+            1440
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6160,
+            7280,
+            2240
+          ],
+          "growthScore": 1568
+        },
+        {
+          "level": 3,
+          "cost": [
+            7129,
+            8424,
+            2592
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            13289,
+            15704,
+            4832
+          ],
+          "growthScore": 3382.5
+        },
+        {
+          "level": 4,
+          "cost": [
+            12831,
+            15164,
+            4666
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26120,
+            30868,
+            9498
+          ],
+          "growthScore": 6648.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            23095,
+            27294,
+            8399
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49215,
+            58162,
+            17897
+          ],
+          "growthScore": 12527.4
+        },
+        {
+          "level": 6,
+          "cost": [
+            41571,
+            49129,
+            15117
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90786,
+            107291,
+            33014
+          ],
+          "growthScore": 23109.1
+        },
+        {
+          "level": 7,
+          "cost": [
+            74827,
+            88432,
+            27210
+          ],
+          "baseHours": 34.171875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            165613,
+            195723,
+            60224
+          ],
+          "growthScore": 42156
+        },
+        {
+          "level": 8,
+          "cost": [
+            134689,
+            159178,
+            48978
+          ],
+          "baseHours": 51.2578125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            300302,
+            354901,
+            109202
+          ],
+          "growthScore": 76440.5
+        }
+      ]
+    },
+    {
+      "id": "siege_protocol",
+      "name": "공성 교리",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            3000,
+            1600,
+            1000
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            3000,
+            1600,
+            1000
+          ],
+          "growthScore": 560
+        },
+        {
+          "level": 2,
+          "cost": [
+            5400,
+            2880,
+            1800
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            8400,
+            4480,
+            2800
+          ],
+          "growthScore": 1568
+        },
+        {
+          "level": 3,
+          "cost": [
+            9720,
+            5184,
+            3240
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            18120,
+            9664,
+            6040
+          ],
+          "growthScore": 3382.4
+        },
+        {
+          "level": 4,
+          "cost": [
+            17497,
+            9332,
+            5833
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            35617,
+            18996,
+            11873
+          ],
+          "growthScore": 6648.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            31493,
+            16797,
+            10498
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            67110,
+            35793,
+            22371
+          ],
+          "growthScore": 12527.4
+        },
+        {
+          "level": 6,
+          "cost": [
+            56688,
+            30234,
+            18896
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            123798,
+            66027,
+            41267
+          ],
+          "growthScore": 23109.2
+        },
+        {
+          "level": 7,
+          "cost": [
+            102037,
+            54420,
+            34013
+          ],
+          "baseHours": 34.171875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            225835,
+            120447,
+            75280
+          ],
+          "growthScore": 42156.2
+        },
+        {
+          "level": 8,
+          "cost": [
+            183667,
+            97956,
+            61223
+          ],
+          "baseHours": 51.2578125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            409502,
+            218403,
+            136503
+          ],
+          "growthScore": 76440.8
+        }
+      ]
+    },
+    {
+      "id": "carrier_ops",
+      "name": "함재 편대 운용",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            5000,
+            6000,
+            1800
+          ],
+          "baseHours": 8,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            5000,
+            6000,
+            1800
+          ],
+          "growthScore": 1280
+        },
+        {
+          "level": 2,
+          "cost": [
+            9000,
+            10800,
+            3240
+          ],
+          "baseHours": 12,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            14000,
+            16800,
+            5040
+          ],
+          "growthScore": 3584
+        },
+        {
+          "level": 3,
+          "cost": [
+            16201,
+            19440,
+            5832
+          ],
+          "baseHours": 18,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            30201,
+            36240,
+            10872
+          ],
+          "growthScore": 7731.3
+        },
+        {
+          "level": 4,
+          "cost": [
+            29161,
+            34993,
+            10498
+          ],
+          "baseHours": 27,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            59362,
+            71233,
+            21370
+          ],
+          "growthScore": 15196.5
+        },
+        {
+          "level": 5,
+          "cost": [
+            52488,
+            62986,
+            18896
+          ],
+          "baseHours": 40.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            111850,
+            134219,
+            40266
+          ],
+          "growthScore": 28633.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            94479,
+            113375,
+            34013
+          ],
+          "baseHours": 60.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            206329,
+            247594,
+            74279
+          ],
+          "growthScore": 52820.2
+        }
+      ]
+    },
+    {
+      "id": "retreat",
+      "name": "철수 절차",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2200,
+            1600,
+            800
+          ],
+          "baseHours": 1,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2200,
+            1600,
+            800
+          ],
+          "growthScore": 460
+        },
+        {
+          "level": 2,
+          "cost": [
+            3960,
+            2880,
+            1440
+          ],
+          "baseHours": 1.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            6160,
+            4480,
+            2240
+          ],
+          "growthScore": 1288
+        },
+        {
+          "level": 3,
+          "cost": [
+            7129,
+            5184,
+            2592
+          ],
+          "baseHours": 2.25,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            13289,
+            9664,
+            4832
+          ],
+          "growthScore": 2778.5
+        },
+        {
+          "level": 4,
+          "cost": [
+            12831,
+            9332,
+            4666
+          ],
+          "baseHours": 3.375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            26120,
+            18996,
+            9498
+          ],
+          "growthScore": 5461.4
+        },
+        {
+          "level": 5,
+          "cost": [
+            23095,
+            16797,
+            8399
+          ],
+          "baseHours": 5.0625,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            49215,
+            35793,
+            17897
+          ],
+          "growthScore": 10290.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            41571,
+            30234,
+            15117
+          ],
+          "baseHours": 7.59375,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            90786,
+            66027,
+            33014
+          ],
+          "growthScore": 18982.7
+        }
+      ]
+    },
+    {
+      "id": "formation",
+      "name": "방호 편대",
+      "levels": [
+        {
+          "level": 1,
+          "cost": [
+            2600,
+            1800,
+            800
+          ],
+          "baseHours": 3,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            2600,
+            1800,
+            800
+          ],
+          "growthScore": 520
+        },
+        {
+          "level": 2,
+          "cost": [
+            4680,
+            3240,
+            1440
+          ],
+          "baseHours": 4.5,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            7280,
+            5040,
+            2240
+          ],
+          "growthScore": 1456
+        },
+        {
+          "level": 3,
+          "cost": [
+            8424,
+            5832,
+            2592
+          ],
+          "baseHours": 6.75,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            15704,
+            10872,
+            4832
+          ],
+          "growthScore": 3140.8
+        },
+        {
+          "level": 4,
+          "cost": [
+            15164,
+            10498,
+            4666
+          ],
+          "baseHours": 10.125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            30868,
+            21370,
+            9498
+          ],
+          "growthScore": 6173.6
+        },
+        {
+          "level": 5,
+          "cost": [
+            27294,
+            18896,
+            8399
+          ],
+          "baseHours": 15.1875,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            58162,
+            40266,
+            17897
+          ],
+          "growthScore": 11632.5
+        },
+        {
+          "level": 6,
+          "cost": [
+            49129,
+            34013,
+            15117
+          ],
+          "baseHours": 22.78125,
+          "initialFree": false,
+          "cumulativeStandardCost": [
+            107291,
+            74279,
+            33014
+          ],
+          "growthScore": 21458.4
+        }
+      ]
+    }
+  ]
+}
