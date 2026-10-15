@@ -1,0 +1,22 @@
+[
+  {
+    "name": "model",
+    "code": 0
+  },
+  {
+    "name": "tests",
+    "code": 0
+  },
+  {
+    "name": "build",
+    "code": 0
+  },
+  {
+    "name": "verify-build",
+    "code": 0
+  },
+  {
+    "name": "built-demo",
+    "code": 0
+  }
+]

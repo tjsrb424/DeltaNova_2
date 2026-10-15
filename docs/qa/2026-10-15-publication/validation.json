@@ -1,0 +1,50 @@
+{
+  "at": "2026-10-15T10:27:27.839Z",
+  "baseHead": "6724252b4b1796d051c108255c2b76334784630f",
+  "branch": "codex/uiux-refoundation",
+  "checks": [
+    {
+      "name": "build",
+      "exitCode": 0,
+      "log": "build.log"
+    },
+    {
+      "name": "tests",
+      "exitCode": 0,
+      "log": "tests.log"
+    },
+    {
+      "name": "model",
+      "exitCode": 0,
+      "log": "model.log"
+    },
+    {
+      "name": "verify-build",
+      "exitCode": 0,
+      "log": "verify-build.log"
+    },
+    {
+      "name": "quality",
+      "exitCode": 0,
+      "log": "quality.log"
+    },
+    {
+      "name": "demo",
+      "exitCode": 0,
+      "log": "demo.log"
+    }
+  ],
+  "status": "PASS",
+  "node": "24.13.0",
+  "npm": "11.6.2",
+  "headless": true,
+  "captureDirectory": ".delta-nova/uiux-publication-2026-10-15",
+  "stagedByteIdentity": {
+    "files": 39,
+    "status": "PASS"
+  },
+  "productionSourcesStaged": [],
+  "authoredWhitespace": "PASS; raw original kit Markdown and CLI logs excluded",
+  "documentationLinks": "PASS",
+  "credentialPatternHits": []
+}

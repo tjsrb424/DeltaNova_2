@@ -1,0 +1,57 @@
+{
+  "navigation": [
+    {
+      "loadMs": 48,
+      "domContentLoadedMs": 45,
+      "transferBytes": 8910
+    }
+  ],
+  "resources": [
+    {
+      "name": "tokens.css",
+      "bytes": 749
+    },
+    {
+      "name": "style.css",
+      "bytes": 26318
+    },
+    {
+      "name": "main.js",
+      "bytes": 22300
+    },
+    {
+      "name": "model.js",
+      "bytes": 2519
+    },
+    {
+      "name": "planet.js",
+      "bytes": 2993
+    }
+  ],
+  "planetRenderMs": [
+    808.3,
+    821.2,
+    0.9,
+    0.4,
+    3.2,
+    0.6,
+    0.6,
+    0.4,
+    0.4,
+    0.5,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.4,
+    0.5,
+    1.6,
+    0.5,
+    0.3,
+    0.6,
+    0.5,
+    0.5,
+    0.4
+  ],
+  "longTasksMs": []
+}

@@ -1,0 +1,350 @@
+{
+  "headless": true,
+  "isolatedDatabase": true,
+  "checks": [
+    {
+      "name": "overview-desktop",
+      "width": 1672,
+      "documentWidth": 1672,
+      "mainWidth": 1504,
+      "overviewWidth": 1208,
+      "reportsColumn": "auto"
+    },
+    {
+      "name": "overview-tablet",
+      "width": 900,
+      "documentWidth": 900,
+      "mainWidth": 768,
+      "overviewWidth": 751,
+      "reportsColumn": "auto"
+    },
+    {
+      "name": "overview-mobile",
+      "width": 390,
+      "documentWidth": 390,
+      "mainWidth": 370,
+      "overviewWidth": 353,
+      "reportsColumn": "auto"
+    },
+    {
+      "name": "growth-desktop",
+      "width": 1672,
+      "documentWidth": 1672,
+      "mainWidth": 1504,
+      "reportsColumn": null
+    },
+    {
+      "name": "growth-mobile",
+      "width": 390,
+      "documentWidth": 390,
+      "mainWidth": 370,
+      "reportsColumn": null
+    },
+    {
+      "name": "construction-desktop",
+      "width": 1672,
+      "documentWidth": 1672,
+      "mainWidth": 1504,
+      "reportsColumn": null
+    }
+  ],
+  "actionAccess": [
+    {
+      "name": "construction-compact",
+      "label": "합금 광산 증설",
+      "x": 547.21875,
+      "y": 572,
+      "width": 504.78125,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-1280x720",
+      "label": "연구소 증설",
+      "x": 521.84375,
+      "y": 622.75,
+      "width": 427.15625,
+      "height": 45,
+      "viewport": 720,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-900x650",
+      "label": "연구소 증설",
+      "x": 443.796875,
+      "y": 572,
+      "width": 408.203125,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-720x650",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 575.5,
+      "width": 657,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-720x550",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 496.5625,
+      "width": 657,
+      "height": 45,
+      "viewport": 550,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-390x844",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 756.5,
+      "width": 327,
+      "height": 45,
+      "viewport": 844,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-390x650",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 575.5,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-queue-1100",
+      "label": "연구소 증설",
+      "x": 547.21875,
+      "y": 594.75,
+      "width": 504.78125,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-settings-and-queue-1100",
+      "label": "연구소 증설",
+      "x": 547.21875,
+      "y": 594.546875,
+      "width": 504.78125,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-settings-1100",
+      "label": "연구소 증설",
+      "x": 547.21875,
+      "y": 554.546875,
+      "width": 504.78125,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-queue-390",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 596.5625,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-settings-and-queue-390",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 597.359375,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-settings-390",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 562.359375,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-short-720",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 494.5625,
+      "width": 657,
+      "height": 45,
+      "viewport": 540,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-short-390",
+      "label": "연구소 증설",
+      "x": 23,
+      "y": 494.5625,
+      "width": 327,
+      "height": 45,
+      "viewport": 540,
+      "visible": true,
+      "unobstructed": true
+    },
+    {
+      "name": "construction-ready-mobile",
+      "label": "결정 채굴소 증설",
+      "x": 23,
+      "y": 575.5,
+      "width": 327,
+      "height": 45,
+      "viewport": 650,
+      "visible": true,
+      "unobstructed": true
+    }
+  ],
+  "effectAccess": [
+    {
+      "name": "construction-compact",
+      "rows": [
+        {
+          "text": "합금 생산13 → 19/분",
+          "readable": true,
+          "hit": "",
+          "rowTop": 236.875,
+          "paneHeight": 403.0625,
+          "container": "size",
+          "footer": "sticky"
+        },
+        {
+          "text": "합금 저장400 → 500",
+          "readable": true,
+          "hit": "",
+          "rowTop": 261.375,
+          "paneHeight": 403.0625,
+          "container": "size",
+          "footer": "sticky"
+        },
+        {
+          "text": "여유 전력24 → 18",
+          "readable": true,
+          "hit": "",
+          "rowTop": 292.375,
+          "paneHeight": 403.0625,
+          "container": "size",
+          "footer": "sticky"
+        },
+        {
+          "text": "시설 공간7 → 8 / 30",
+          "readable": true,
+          "hit": "",
+          "rowTop": 323.375,
+          "paneHeight": 403.0625,
+          "container": "size",
+          "footer": "sticky"
+        }
+      ]
+    },
+    {
+      "name": "construction-settings-and-queue-1100",
+      "rows": [
+        {
+          "text": "연구소 요건Lv.1 → Lv.2",
+          "readable": true,
+          "hit": "",
+          "rowTop": 509.671875,
+          "paneHeight": 130.265625,
+          "container": "size",
+          "footer": "static"
+        },
+        {
+          "text": "여유 전력24 → 24",
+          "readable": true,
+          "hit": "",
+          "rowTop": 510.171875,
+          "paneHeight": 130.265625,
+          "container": "size",
+          "footer": "static"
+        },
+        {
+          "text": "시설 공간7 → 8 / 30",
+          "readable": true,
+          "hit": "",
+          "rowTop": 510.171875,
+          "paneHeight": 130.265625,
+          "container": "size",
+          "footer": "static"
+        }
+      ]
+    },
+    {
+      "name": "construction-settings-and-queue-390",
+      "rows": [
+        {
+          "text": "연구소 요건Lv.1 → Lv.2",
+          "readable": true,
+          "hit": "",
+          "rowTop": 560.6875,
+          "paneHeight": 81.3125,
+          "container": "size",
+          "footer": "static"
+        },
+        {
+          "text": "여유 전력24 → 24",
+          "readable": true,
+          "hit": "",
+          "rowTop": 560.1875,
+          "paneHeight": 81.3125,
+          "container": "size",
+          "footer": "static"
+        },
+        {
+          "text": "시설 공간7 → 8 / 30",
+          "readable": true,
+          "hit": "",
+          "rowTop": 560.1875,
+          "paneHeight": 81.3125,
+          "container": "size",
+          "footer": "static"
+        }
+      ]
+    }
+  ],
+  "realBuild": {
+    "facility": "crystalMine",
+    "before": {
+      "alloy": 312,
+      "crystal": 148,
+      "fuel": 128
+    },
+    "after": {
+      "alloy": 272,
+      "crystal": 138,
+      "fuel": 118
+    }
+  },
+  "runtimeErrors": []
+}

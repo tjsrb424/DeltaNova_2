@@ -1,0 +1,54 @@
+
+> delta-nova@0.1.0 test
+> vitest run --maxWorkers=2
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.4 [39m[90mD:/kim_dev/DeltaNova[39m
+
+ [32m✓[39m tests/App.test.tsx [2m([22m[2m18 tests[22m[2m)[22m[33m 2633[2mms[22m[39m
+ [32m✓[39m tests/PlanetDashboard.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 3228[2mms[22m[39m
+   [33m[2m✓[22m[39m groups newly completed jobs by their real source planets and ignores cancellation[33m 304[2mms[22m[39m
+   [33m[2m✓[22m[39m announces consecutive identical job titles separately and suppresses replay after remount[33m 421[2mms[22m[39m
+   [33m[2m✓[22m[39m clears the previous participant announcement and baselines the next participant history[33m 321[2mms[22m[39m
+ [32m✓[39m tests/GuildPanel.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 1915[2mms[22m[39m
+ [32m✓[39m tests/empire-network.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 2734[2mms[22m[39m
+   [33m[2m✓[22m[39m disables target-screen commands and names the unresolved empire screen after navigation[33m 329[2mms[22m[39m
+   [33m[2m✓[22m[39m disables target-screen commands and names the unresolved guild screen after navigation[33m 361[2mms[22m[39m
+ [32m✓[39m tests/BaseOperationsPanel.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 1939[2mms[22m[39m
+   [32m✓[39m server base operations [2m(6)[22m
+     [33m[2m✓[22m[39m shows production, collects it and upgrades a facility with server owned costs[33m 394[2mms[22m[39m
+     [33m[2m✓[22m[39m runs a solo sortie, returns cargo, repairs ships and researches a module[33m 690[2mms[22m[39m
+ [32m✓[39m tests/PlanetManagement.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 1560[2mms[22m[39m
+   [33m[2m✓[22m[39m keeps connection recovery available when participant settings are folded[33m 355[2mms[22m[39m
+(node:101740) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m tests/empire-server.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 583[2mms[22m[39m
+(node:84120) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m tests/base-server.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 412[2mms[22m[39m
+(node:110068) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m tests/guild-server.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 422[2mms[22m[39m
+ [32m✓[39m tests/PlanetOverview.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 1831[2mms[22m[39m
+   [33m[2m✓[22m[39m includes required power recovery in the carrier path and exposes the blocker[33m 303[2mms[22m[39m
+   [33m[2m✓[22m[39m replaces the overview with each category's full detail body and returns home[33m 347[2mms[22m[39m
+ [32m✓[39m tests/completion-notice.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 90[2mms[22m[39m
+ [32m✓[39m tests/empire-guild-ui.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 829[2mms[22m[39m
+   [33m[2m✓[22m[39m displays constructed inventory in the shared operation fleet selector[33m 828[2mms[22m[39m
+ [32m✓[39m tests/empire-migration.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 57[2mms[22m[39m
+ [32m✓[39m tests/guild.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m tests/base.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m tests/storage.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/empire-career.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/empire-guild.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32m✓[39m tests/game.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32m✓[39m tests/empire.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m20 passed[39m[22m[90m (20)[39m
+[2m      Tests [22m [1m[32m191 passed[39m[22m[90m (191)[39m
+[2m   Start at [22m 18:39:41
+[2m   Duration [22m 17.96s[2m (tests 59%, environment 29%, import 11%, transform 1%)[22m
+
+[2m    Isolate [22m [33m20 workers spawned[39m[2m · ~669ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~6.02s faster with [22m[33misolate: false[39m[2m — reuses workers across files instead of one per file[22m
+

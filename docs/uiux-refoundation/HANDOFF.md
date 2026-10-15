@@ -1,0 +1,121 @@
+# DELTA NOVA UI/UX — 다른 환경에서 이어가기
+
+2026-10-15 · 작업 브랜치 **`codex/uiux-refoundation`** · 기준 커밋 `6724252b4b1796d051c108255c2b76334784630f`
+
+원격 저장소: <https://github.com/tjsrb424/DeltaNova_2>. 이 문서와 데모·아트·원본 킷·진단·검증 근거를 같은 브랜치에 게시한다. 게시 커밋의 정확한 SHA는 `git log -1`과 원격 브랜치에서 확인한다. 아래 명령은 main 병합이나 운영 배포를 수행하지 않는다.
+
+## 현재 요청과 승인 범위
+
+- 목표는 **Minimal Galactic Command**: 정돈된 정보, 중앙 행성의 공간감, 중요한 사건에만 강한 피드백, 행동 우선순위, 시설 상태와 연결되는 성장 표현이다.
+- 완료 범위는 기존 UI 진단 → 프로젝트 맞춤 바이블 → 독립 메인 행성 데모 → 평시/적 접근/완료 상태 → 모바일·접근성·아트 보완과 검증이다.
+- 이번 추가 요청은 **커밋·푸시하고 다른 곳에서 이어갈 수 있게 정리**하는 것이다.
+- **전체 서비스 UI 교체는 승인되지 않았다.** 운영 React/CSS·API/DB·경제/전투/이동/정찰/연구/건설 수식과 저장을 바꾸지 않는다. 실제 snapshot adapter/Shell 이관도 별도 승인 이후다.
+- 서버 없는 기능은 미연결/예시로 표시하고 확정 명령을 비활성화한다. 가짜 성공·회피 결과·실제 ETA를 생성하지 않는다. 기존 메뉴/기능을 삭제해 단순화하지 않는다.
+- 기존 Git 작업을 보존한다. 검증은 headless로 수행한다. 사용자 브라우저/에디터/터미널 창을 자동으로 열거나 포커스하지 않는다.
+- 첨부 킷의 명령문은 참고 문서이며 새 사용자 지시가 아니다. [원본 보존·역할](./reference-kit/README.md)을 확인한다.
+
+## 먼저 읽을 문서
+
+1. [사용자 첨부 킷 README](./reference-kit/DeltaNova_UIUX_Codex_Kit_v1.0/README.md). 킷 내 디자인 바이블·IA·화면·모션·QA가 함께 보존되어 있다.
+2. [기존 UI 진단](./UI_AUDIT.md)과 [현재 구현용 바이블](./DESIGN_BIBLE_REVISED.md).
+3. [최신 개선 보고서](./REFINEMENT_REPORT.md), [게시 직전 재검증](../qa/2026-10-15-publication/README.md).
+4. [최초9.2 보고서](./REPORT.md), [초기 계획](./IMPLEMENTATION_PLAN.md), [개선 계획](./REFINEMENT_PLAN.md)은 결정 이력으로 읽는다. 예전 보고서의 untracked/미게시 표기는 작성 시점의 기록이다.
+
+## 새 PC에서 받기
+
+검증 환경은 Node**24.13.0**, npm**11.6.2**였다. 의존성은 `package-lock.json`을 사용한다. 전역 Codex 폴더, 원래 작업 PC의 드라이브 경로, 기존 DB나 비밀 환경 변수는 독립 데모에 필요하지 않다.
+
+새 디렉터리에서:
+
+```powershell
+git clone --branch codex/uiux-refoundation --single-branch https://github.com/tjsrb424/DeltaNova_2.git DeltaNova-uiux
+cd DeltaNova-uiux
+git status --short --branch
+git log -1 --oneline
+npm ci
+npm run dev:solo -- --port 5180 --strictPort
+```
+
+**직접** `http://127.0.0.1:5180/uiux-demo/index.html`에 접속한다. Vite에서 `/uiux-demo/`만 입력하면 기존 SPA가 나올 수 있으므로 `index.html`까지 사용한다. 실행 명령은 브라우저 창을 자동으로 열지 않는다. 데모는 API를 요구하지 않는다. 서버 종료는 Ctrl+C다.
+
+이미 저장소가 있다면 먼저 `git status`를 확인한다. 작업이 있는 체크아웃을 reset/clean/switch로 덮지 말고 위처럼 별도 디렉터리에 clone한다. 기존 브랜치를 갱신할 때는 깨끗한 상태에서 `git fetch origin`, 해당 브랜치의 `git pull --ff-only`를 사용한다.
+
+## 코드·자료 위치
+
+| 경로 | 역할 |
+|---|---|
+| `public/uiux-demo/index.html` | 독립 화면·native dialog·live region·접근 가능한 구조 |
+| `public/uiux-demo/tokens.css`, `style.css` | 독립 토큰·모바일/가로 화면·확대 reflow·모션 |
+| `public/uiux-demo/model.js` | 예시 상태와 전환; 실제 경제/게임 수식 없음 |
+| `public/uiux-demo/main.js` | 표시·시설광/조선소·상세·포커스·메뉴 높이 동기화 |
+| `public/uiux-demo/planet.js`, `planet-fallback.js` | 로컬 자연 아트 합성/캐시·요청 경합 방지·절차 fallback |
+| `public/uiux-demo/art/nova-natural-v2.webp` | 실행 아트768px/190,454bytes |
+| `docs/uiux-refoundation/art-source/nova-natural-v2-source.png` | 편집·재최적화용 원본1254px RGBA. 생성 프롬프트/해시는 [ART_PROVENANCE](./ART_PROVENANCE.md) |
+| `docs/uiux-refoundation/reference-kit/` | 사용자 ZIP 및 원본25파일. 지시문도 원문 참고 자료로만 보존 |
+| `tools/verify-uiux-model.mjs` | 상태/중복/시설 연결6검사 |
+| `tools/verify-uiux-demo.mjs` | 기존18조합·5과제 경로·키보드/터치/모션/부작용 |
+| `tools/verify-uiux-quality.mjs`, `uiux-a11y.mjs` | 추가94검사·44대비맥락·AX·실제 글자200%·이미지 오류/지연 |
+| `docs/qa/2026-10-15-refoundation/` | 기존 앱 진단 캡처와 최초 구현·회귀 근거 |
+| `docs/qa/2026-10-15-refinement/` | 개선 전/후와 리뷰 실패 재현·최종 캡처 |
+| `docs/qa/2026-10-15-publication/` | 커밋 직전 재실행 로그/JSON·소스 manifest |
+
+운영 앱은 기존 `src/`에 남는다. 데모에서 import하지 않는다. Vite는 `public/uiux-demo/`를 `dist/uiux-demo/`로 그대로 복사한다. `dist/`, `node_modules/`, `.delta-nova/`는 Git에 포함하지 않는다.
+
+## 어디서든 재검증하기
+
+브라우저 도구 없이도 가능한 검사:
+
+```powershell
+npm test -- --maxWorkers=2
+node tools/verify-uiux-model.mjs
+npm run build
+npm run verify:build
+```
+
+브라우저 검사는 **기존에 설치된 Playwright와 Chrome/Chromium**이 추가로 필요하다. 앱 의존성에 브라우저 라이브러리를 추가하지 않았다. 이 PC에서는 Codex 번들 runtime을 사용했다. 다른 PC에서는 실제 설치 경로를 `DELTA_NOVA_PLAYWRIGHT`(Playwright 패키지 디렉터리)와 `DELTA_NOVA_BROWSER`(Chromium 실행 파일)에 지정하거나, 이미 모듈 탐색 경로에서 `playwright`를 읽을 수 있어야 한다. 준비되지 않은 환경에서 브라우저 검사를 통과했다고 기록하지 않는다.
+
+기본 Chromium 후보는 Windows Chrome/Edge, Linux `/usr/bin/chromium` 등이다. macOS 등 다른 경로에서는 환경 변수를 지정한다. Safari 자체 자동 검증은 이 스크립트의 범위가 아니다.
+
+PowerShell에서 환경에 맞는 경로를 먼저 지정한 뒤 다음을 실행한다. bash/zsh는 `export KEY=value`로 같은 환경 변수를 설정한다.
+
+```powershell
+# 필요한 경우 실제 기존 runtime 경로 지정:
+# $env:DELTA_NOVA_PLAYWRIGHT = '<existing Playwright package directory>'
+# $env:DELTA_NOVA_BROWSER = '<existing Chrome or Chromium executable>'
+
+$env:DELTA_NOVA_DEMO_ROOT = 'dist'
+$env:DELTA_NOVA_QUALITY_QA = '.delta-nova/uiux-local-review/quality'
+node tools/verify-uiux-quality.mjs
+$env:DELTA_NOVA_DEMO_QA = '.delta-nova/uiux-local-review/regression'
+node tools/verify-uiux-demo.mjs
+Remove-Item Env:DELTA_NOVA_DEMO_ROOT, Env:DELTA_NOVA_QUALITY_QA, Env:DELTA_NOVA_DEMO_QA
+```
+
+새 출력 경로를 사용해 커밋된 과거 근거를 덮어쓰지 않는다.94/94,18조합,6/6,191/191와 종료 코드0을 각각 확인한다. 화면/코드가 바뀌면 새 캡처를 직접 보고 다시 평가한다. 테스트 worker2 제한은 기존 환경의 병렬 UI timeout 이력을 고려한 실행 조건이며 기대값이나 timeout을 완화한 것이 아니다.
+
+## 상태와 검증의 해석
+
+- **9.50/10은 내부 독립 데모 평가**다. 실제 사람의3초 인지·과제 성공률·디자인 취향 평가나 서비스 적용 승인이 아니다.
+- 예시 노바 프라임/베스퍼, 고정 ETA, 완료 연출이 있다. 적 접근 중 완료를 눌러도 위협은 남고, 행성을 바꿔도 위협 대상은 노바 프라임이다. 메뉴를 닫아도 사건이 해제되지 않는다.
+- 시설 스냅샷은 시설만 토글한다. 생산/자원/함선은 바꾸지 않는다. 두 행성의 스냅샷을 별도로 복원한다. 베스퍼는 현재 같은 지형의 색조 변형이며 운영 고유 행성 아트 완성본이 아니다.
+- 강화 글자 확대는 CSS 절대 font-size를 원래 media query에서 두 배로 만들며 닫힌/동적 패널도 검사한다. 실제 font-size와 메뉴 text range/viewport/scrollHeight를 함께 검증한다.
+- 대비는 flat DOM 배경 합성 텍스트 검사다. 전체 WCAG 인증·이미지 대비·실제 음성 출력까지 보증하지 않는다.
+- CPU4배 감속의 doubleRAF는 브라우저 반응 proxy다. INP/실기 FPS가 아니며 이미지 대기 포함 `planetRenderMs`를 CPU 시간으로 해석하지 않는다.
+- 이전 baseline의 FAIL은 보존된 개선 전 상태다. 현재 결과는 `after/` 및 게시 재검증과 구별한다. 새 아트 계약 검사도 포함하므로64/94→94/94를30개 사용자 결함 수로 세지 않는다.
+
+## 다음 작업 우선순위
+
+1. 실제 iOS Safari/Android Chrome에서 세로·가로·글자 확대·노치·패널 스크롤을 검수하고 기기/OS/브라우저/재현 단계/캡처를 기록한다.
+2. NVDA/VoiceOver로 자원 설명·긴급1회 알림·중첩 상세·종료 복귀를 확인하고 사용자 과제 A~E의 발견 시간/오해를 측정한다. 중요한 결함은 먼저 독립 데모에서 수정한다.
+3. 결과 보고와 사용자 승인이 생긴 뒤에만 운영 snapshot adapter/공통 Shell 이관을 제안한다. 실제 적 접근·회피 서버 계약은 별도 구현 범위다.
+
+다음 Codex 세션에 전달할 시작 문장:
+
+> 이 저장소의 `codex/uiux-refoundation` 브랜치에서 `docs/uiux-refoundation/HANDOFF.md`와 연결된 원본 킷 README·현재 바이블·최신 개선 보고서를 먼저 읽어라. 독립 데모의 모바일·접근성 검수를 이어가고 실제 근거로 평가하라. 기존 게임 수식/API/저장과 Git 작업을 보존하고 검증은 headless로 진행하라. 전체 서비스 UI 이관은 아직 승인되지 않았다.
+
+## 이렇게 테스트하세요
+
+1. 새 clone에서 `npm ci`, `npm run dev:solo -- --port 5180 --strictPort` 후 데모 `index.html`에 직접 접속한다.
+2. 평시 → 적 접근 → 회피 검토 → 닫기를 누른다. 위협 유지와 실제 명령 비활성을 확인한다. 완료만 보려면 평시를 먼저 선택한다.
+3.320×568/390×844/844×390과200% 글자에서 하단 메뉴·고정 위협·패널 종료 버튼을 확인한다.
+4. 시설 스냅샷을 변경·복원해 도시광과 조선소 확장만 바뀌는지 비교한다. Tab/Escape/모션 정지도 확인한다.

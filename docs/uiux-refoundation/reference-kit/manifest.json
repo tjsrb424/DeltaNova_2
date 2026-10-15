@@ -1,0 +1,131 @@
+{
+  "source": "User-attached DeltaNova_UIUX_Codex_Kit_v1.0.zip",
+  "zipSha256": "6d306405e86bdcd5d4791c1b01c48be5c185e8f02a379c10ea0d29cd49fe2497",
+  "files": [
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/00_START/DELIVERY_AND_GUARDRAILS.md",
+      "bytes": 4386,
+      "sha256": "874492a55172d52d7b3f47d9fe3019ec25b12d54a36e498b11afa016f80c3a26"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/01_STRATEGY/INFORMATION_ARCHITECTURE.md",
+      "bytes": 3927,
+      "sha256": "077305b3bcb773f2e8ce30b4479dc6f7aa9dcfe211acbe4504a0d88798063fbd"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/01_STRATEGY/PRODUCT_UX_STRATEGY.md",
+      "bytes": 4372,
+      "sha256": "87fb5aa02288997fb6dd7ff0ea78cfe8672e269bb280c2a662adc31f6024de84"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/02_DESIGN_SYSTEM/COMPONENT_CONTRACTS.md",
+      "bytes": 3480,
+      "sha256": "60449403e61a1c00a07c65dc032bd58a98d90850825ac8b2fa2e8467df8b7cac"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/02_DESIGN_SYSTEM/DELTA_NOVA_DESIGN_BIBLE.md",
+      "bytes": 7566,
+      "sha256": "e75610459543cbd3ea436c4396b514caca455605d22274a974795485562e67a6"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/02_DESIGN_SYSTEM/design-tokens.css",
+      "bytes": 1064,
+      "sha256": "f2e7f9f38c0c61c10ba83b70c8200a820dee771bd1a38b336a8537f3cd5ee7c8"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/02_DESIGN_SYSTEM/design-tokens.json",
+      "bytes": 1452,
+      "sha256": "96e391611ae30bef3274b2dbe23f2b36c6b44e18403f87ebd8be5e369016f748"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/03_SCREENS/FLEET_THREAT_EVASION_SPEC.md",
+      "bytes": 4780,
+      "sha256": "341dd5346a834223bbc412d4cb3be5489c575de5134c64f6498cf94ade214351"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/03_SCREENS/PLANET_HOME_SPEC.md",
+      "bytes": 6387,
+      "sha256": "72d15dd01144a1a7eefc57f1839947f916bb4dce58dfb00bf41441ae51cb4a12"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/03_SCREENS/RANKINGS_ROADMAP.md",
+      "bytes": 2631,
+      "sha256": "cd17792573ca99101d5bd931316799a147438f908ea5ccf18b350e73ebcadafb"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/04_MOTION/MOTION_SYSTEM.md",
+      "bytes": 3795,
+      "sha256": "20721607bc1ed6de57681052d36eb18c80cb3cad5e3b5e68a1b08f7bc7f22064"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/05_EXECUTION/CODEX_ROLLOUT.md",
+      "bytes": 4282,
+      "sha256": "416d662304f069df751797dcc29c48e8adfdc6643dd6324fd09280ad0156d051"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/05_EXECUTION/QA_SCORECARD.md",
+      "bytes": 3803,
+      "sha256": "2114d41eb846eb18fbf83449f33082403f587478b52e23628dc020fdf14cebe9"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/05_EXECUTION/REPORT_TEMPLATE.md",
+      "bytes": 1820,
+      "sha256": "4ae9226399ae18729b0179a6622b10f6d2c5e7f26b222bc1de052943e80f805b"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/06_REFERENCES/REFERENCE_LIBRARY.md",
+      "bytes": 2330,
+      "sha256": "0c29d230b6edf05edd7ff03f3cc947163499fe689974bd2211453353be0a214a"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/07_PROTOTYPE/README.md",
+      "bytes": 1733,
+      "sha256": "a1f18440de5ea2166e779fbe105c109d394725b8ec2de8075f220c19795b32b5"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/07_PROTOTYPE/index.html",
+      "bytes": 9103,
+      "sha256": "0ad96fd96407d19196e640b7dd876589a7a14582e262103ab6ddace231b9fe59"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/07_PROTOTYPE/main.js",
+      "bytes": 10969,
+      "sha256": "7e20e5df0bca0ee7f1914be231b862b73d2fe734a57e268153bb7d1bd0f1366d"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/07_PROTOTYPE/style.css",
+      "bytes": 22858,
+      "sha256": "88055c173b58a75b3f47f2f450f65ca55c77768cbde375b63215a777d497783c"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/08_VALIDATION/QA_STATUS.md",
+      "bytes": 1864,
+      "sha256": "e2aeccc58ff3fe28fa9ca5a649f9d7997bef052effd31a924f55a534d8231028"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/08_VALIDATION/validate_static.py",
+      "bytes": 3073,
+      "sha256": "2f62600d0b3bedae4bc93d2474e1b7851fdcbfb4f8a83529070b5e8c8a5dd135"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/AGENTS_SNIPPET.md",
+      "bytes": 1745,
+      "sha256": "341860023b51ef11fcbc08b211c31028ed00d6f9bde781d00488671c95072faf"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/CODEX_PROMPT.txt",
+      "bytes": 4450,
+      "sha256": "0d9d52d9ed281485c309d2caf27ec08f2aa848edf6e547368bcb3cafbadae3d6"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/CODEX_PROMPT_AFTER_APPROVAL.txt",
+      "bytes": 1930,
+      "sha256": "61ed7cba91d8f7077f29a5c66b2bdebda56b6b5bd1f86f8ce5e82d93261a3fac"
+    },
+    {
+      "path": "DeltaNova_UIUX_Codex_Kit_v1.0/README.md",
+      "bytes": 4682,
+      "sha256": "c6919bf291422694e2c4ba83de79f8c4e8048488f16f4751b8eaf5d8b99abee6"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+# DELTA NOVA Design Bible — 프로젝트 적용 후보 1.1
+
+**Minimal Galactic Command / Quiet by default, cinematic by consequence.**
+
+상태: 2026-10-15 독립 화면 구현 후보. 실제 서비스 기본 theme나 API 계약으로 확정되지 않았다. 권한 범위는 사용자 요청의 P0~P2다.
+
+## 화면과 정보 위계
+
+PC는 상단 자원·현재 행성 → 좌측 일관된 메뉴 → 중앙 행성과 시설 → 우측 주요 결정 한 개로 구성한다. 주요 결정 아래 함대·연구·보고서에 빠르게 진입한다. 평시는 현재 건설이 우선, 위협 발생 시 실제 위협 대상이 최우선이다. 연구소·비용·공간·전력·생산 상세는 한 번의 상세 열기로 접근한다.
+
+기존 대시보드/건설/함대/연구/개인 작전/동맹/보고서/편성 연습을 보존한다. 새 IA의 은하·외교·랭킹은 서버 계약이 없는 탐색 제안이며 미연결 표기한다. 메인 제거로 기능을 단순화하지 않는다.
+
+모바일은 행성 선택·세 자원·3상태 전환 → 현재 작업과 건설 CTA 또는 위협 대응 CTA → 행성 → 자산 요약·진행 → 상세 빠른 이동이다. 고정 하단에는 행성 관제/건설/연구/함대/더보기. 일반 작업과 위협 CTA는 상단에서 접근 가능하며 safe area를 하단 여백에 포함한다. 긴 내용은 세로 스크롤한다.
+
+## 토큰과 타이포
+
+| 의미 | 값 | 적용 |
+|---|---|---|
+| Canvas / Surface / Elevated | #080E18 / #111B2B / #18263A | 공간·결정 카드·drawer 계층 |
+| Primary / Secondary / Tertiary text | #E9F0FA / #A8B9D0 / #8D9FB8 | 핵심 수치·설명·보조; Tertiary는 원안보다 밝게 조정 |
+| Accent | #52C7DF | 기본 행동·선택·진행 |
+| Danger / Warning / Success | #F16B72 / #F2B85C / #74D4AE | 위험·주의·확정 피드백; 데모 완료에는 예시 표기 |
+| Divider / Control border / Focus | #29374C / #698099 / #9AE7F5 | 장식 구분선과 실제 컨트롤 식별을 분리 |
+| Radius | panel12 / button10 / compact8px | 중첩 카드 대신 리스트와 divider |
+| Spacing | 4/8/12/16/24/32px | 주요 데스크톱 패딩36px, 넓은 화면48px, 모바일16px |
+
+시스템 Segoe UI / Malgun Gothic / Apple SD Gothic Neo / sans-serif. 외부 폰트 다운로드 없음. 본문14px, 보조12px, 주요 설명14px, 수치18~27px, 행성 제목30~44px. 영어 보조 마크는10~12px이며 조작 판단이나 게임 정보를 맡기지 않는다. 숫자는 tabular-nums.
+
+일반 텍스트 AA4.5:1, 큰 텍스트3:1을 검사한다. 구체/조명은 아트 컬러이며 UI 시맨틱 컬러가 아니다. 캔버스 팔레트와 극소수 배경 보조색 외 UI는 `tokens.css`에 의존한다. 모든 카드에 그림자/글로우/blur를 쓰지 않는다.
+
+## 행성의 상태 연결
+
+렌더 레이어는 별 배경 / 자연 구체 / 표면 시설광 / 궤도 시설 / 경보 신호다. 2026-10-15 개선에서는 생성된 투명 WebP(768px,190,454bytes)를 512px Canvas에 합성하며, 행성별 최초 한 번만 색조를 조정해 최대2장 캐시한다. 자연 아트에는 시설을 포함하지 않고 시설 수준에 따른 도시광 cluster와 조선소 SVG를 별도로 표시한다. 베스퍼는 동일 지형의 색조 변형으로, 고유 지형 완성본은 아니다. [아트 출처·원문 프롬프트](./ART_PROVENANCE.md)를 보존한다.
+
+WebP 로딩 실패 시 기존 결정적 절차 텍스처를 fallback으로 사용한다. fallback은8행마다 이벤트 루프에 제어를 돌려주며, 비동기 요청 토큰으로 이전 행성이 현재 선택을 덮어쓰지 않게 한다. 구체 render loop 없음. 자연 아트 로딩 중에도 위협 입력을 막지 않는다. 실제 서비스 renderer 최종 아트 확정은 별도다.
+
+| 현재 모델 필드 | 데모 시각 연결 | 운영 이관 계약 |
+|---|---|---|
+| planet.id | 현재 행성·자연 구체 색조·독립 캐시 | 실제 선택 ID 유지; 운영 고유 지형 별도 검토 |
+| facilities.alloyMine/crystalMine/fuelRefinery | 각 수준에 대응하는 표면광 수 | 실제 snapshot의 시설 수준만 사용 |
+| facilities.powerPlant / laboratory | 전력·연구 시설광 | 연구 기술과 연구소 수준 혼동 금지 |
+| facilities.shipyard | 궤도 조선소의 표시/수준/크기 | 0이면 궤도 시설 없음 |
+| resources / rates / capacities | 상단 요약과 자원 상세 | 기존 economy helper 결과를 읽어 표시; 산식 복제 금지 |
+| TimedJob / EmpireEvent | 진행/완료 | 실제 서버 시각·완료 이벤트, 중복 억제 및 선택 유지 |
+
+`시설 스냅샷 변경`은 fixture의 시설만 토글한다. 새로운 전체 성장 등급·레벨 임계값·경제 공식을 만들지 않는다. 완료 예시 자체로 성장하거나 자원이 늘지 않는다. 운영 연동은 사용자 승인 후 기존 useEmpire view model을 읽는 adapter로 수행한다.
+
+## 상태·데이터 진실성
+
+- **Idle:** 주요 건설 예시 한 건, 연구 예시 요약. 모든 ETA는 고정 예시라고 명시한다.
+- **Threat:** 하나의 event ID, 대상 노바 프라임 고정. 다른 행성을 선택해도 글로벌 위협 대상 유지. detail 닫기는 위협 해제가 아니다.
+- **Complete:** 완료 피드백 시연 이벤트. 실제 완료/ACK/자산 변화가 아님을 카드·보고서·live region에서 명시. 위협이 있으면 최우선 결정은 계속 위협이다.
+- **Loading:** 요청 없이 로딩 표현을 시연. 자원 숫자 대신 대시, 성공 메시지 없음.
+- **Empty:** 진행 중 작업 없음. 가짜 카운트다운/진행률을 생성하지 않는다.
+- **Offline:** 마지막 **예시** 스냅샷 표시, 서버 미연결 설명. 다시 표시는 실제 재연결 성공을 뜻하지 않는다.
+- **Unavailable command:** native disabled 버튼과 이유. 목적지·이동 비용·실제 ETA·성공 확률 없음.
+
+실제 연동 시 서버 ACK 전 성공 금지, 미확정 명령은 기존 동일 commandId 확인 흐름을 유지한다. UI 테마가 네트워크/저장 계약을 재정의하지 않는다.
+
+## 공통 컴포넌트 계약
+
+| 단위 | 역할 | 상태/입력 |
+|---|---|---|
+| Shell / Planet selector | 현재 행성·전역 메뉴 | 선택 변경 시 상세/위협 대상 구분 |
+| Resource strip | 보유량 표시, 상세 진입 | 로딩 대시, 보유/생산/한도 단위 분리 |
+| Decision card | 한 가지 주요 판단 | idle / threat / illustrative completion / empty / offline |
+| Threat banner | 대상·유형·고정 예시 ETA·검토 | 중복 생성 금지, 자동 명령 금지 |
+| Queue / Event feed | 진행·결과 요약 | 예시/출처 표시, 완료와 진행 구별 |
+| Detail drawer | 한 가지 상세 맥락 | native dialog, 배경 inert, Tab trap, Escape, 호출 위치 복귀 |
+| Planet visual | 상태에 반응하는 공간 중심 | 시설광·궤도 수준은 fixture fields 직접 연결 |
+
+버튼은 default/hover/pressed/focus-visible, command는 disabled+reason. loading/error/success는 데이터 상태에 따라 별개 레이어다. 복잡한 form과 실제 pending/unknown command는 기존 앱에 남기고 이번 데모에서 재구현하지 않는다.
+
+## 모션
+
+micro150ms / drawer240ms / completion450ms / threat480ms. 패널과 이벤트는 opacity+transform. 행성 구체는 CPU 지속 회전 없이 정적, 궤도 시설만32초의 작은 상하 이동. 주요 수치의 반복 애니메이션·경보 점멸·shake 없음.
+
+`prefers-reduced-motion: reduce`에서는 모든 애니메이션과 transition 중지. 화면 설정의 추가 정지 지원. document.hidden이면 animation-play-state paused. 감소 모드에서도 위험 문구·상태·상세 경로는 유지된다.
+
+## 접근성·검증과 확장 게이트
+
+장식 SVG/Canvas는 aria-hidden, 주요 정보는 DOM 텍스트로 중복 제공한다. 자원 버튼은 보유·생산·한도의 accessible description, 행성 버튼은 개별 시설 수준 설명을 갖는다. 위협은 중복 없는 atomic alert(assertive), 일반 상태/완료는 polite live region으로 구분한다. native dialog로 포커스 격리/닫기/복귀를 처리하고, 패널 안에서 다른 상세로 이동하면 제목에 포커스를 둔다. 패널은 배경 스크롤을 잠그고 본문만 스크롤하며 종료 버튼을 고정한다.
+
+모바일 조작 대상44px 이상. 320×568/360×640/390×844와844×390 가로 화면을 검사한다. 위협 CTA는 스크롤 중에도 sticky로 유지한다. 가로 화면은 header를2행으로 압축한다. 하단 메뉴는 고정72px에서 늘어날 수 있으며 ResizeObserver로 실제 높이와 본문 하단 여백을 동기화한다. safe-area inset을 반영하되 실제 노치 기기 검수는 별도로 남긴다.
+
+텍스트200% 검사는 명시적 절대 font-size를 원래 media query 안에서 두 배로 재정의하여 닫힌/동적 패널에도 적용한다. 실제 계산된 글자 크기 배율, 메뉴 text range와 버튼/viewport 경계, 패널 내용·종료 버튼의 접근 가능성을 확인한다. OS 브라우저 zoom 조작이나 스크린리더 음성 검수를 대체하지 않는다. 대비 검사는3상태, 빈 상태/오류/로딩,17개 상세의 합성 배경을 대상으로 한다.
+
+P0 진단·P1 조정·P2 독립 데모 후, 내부 QA 점수와 남은 결함을 보고한다. **9.5는 사용자 검토/과제 인지/실기 성능까지 포함한 목표**다. 자동 동작 성공이나 자기 평가로 최종 승인을 대체하지 않는다. 승인 이후 Shell→자원/상태→현재 작업→실제 이벤트→화면별 이관 순으로 회귀 검증한다.

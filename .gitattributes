@@ -1,0 +1,6 @@
+# Keep the isolated demo and its verification hashes stable across operating systems.
+public/uiux-demo/*.html text eol=lf
+public/uiux-demo/*.js text eol=lf
+public/uiux-demo/*.css text eol=lf
+tools/verify-uiux-*.mjs text eol=lf
+tools/uiux-a11y.mjs text eol=lf

@@ -1,0 +1,72 @@
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.4 [39m[90mD:/kim_dev/DeltaNova[39m
+
+ [32m✓[39m tests/App.test.tsx [2m([22m[2m18 tests[22m[2m)[22m[33m 3731[2mms[22m[39m
+   [32m✓[39m command center [2m(18)[22m
+     [33m[2m✓[22m[39m opens the real alliance screen when an unfinished local practice report is saved[33m 407[2mms[22m[39m
+     [33m[2m✓[22m[39m locks navigation while resolving an operation and allows base access after settlement[33m 328[2mms[22m[39m
+     [33m[2m✓[22m[39m resets an unsupported flank when recon is deselected[33m 317[2mms[22m[39m
+     [33m[2m✓[22m[39m plays, settles once, persists and permits retry[33m 428[2mms[22m[39m
+ [32m✓[39m tests/PlanetDashboard.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 5887[2mms[22m[39m
+   [33m[2m✓[22m[39m starts a polite completion region without announcing historical jobs[33m 528[2mms[22m[39m
+   [33m[2m✓[22m[39m announces a newly completed ship once and preserves the active input[33m 585[2mms[22m[39m
+   [33m[2m✓[22m[39m groups newly completed jobs by their real source planets and ignores cancellation[33m 656[2mms[22m[39m
+   [33m[2m✓[22m[39m announces consecutive identical job titles separately and suppresses replay after remount[33m 637[2mms[22m[39m
+   [33m[2m✓[22m[39m announces a job completed while away when returning to the same dashboard[33m 449[2mms[22m[39m
+   [33m[2m✓[22m[39m clears the previous participant announcement and baselines the next participant history[33m 484[2mms[22m[39m
+   [33m[2m✓[22m[39m builds real ships, displays their work and refreshes completed inventory[33m 381[2mms[22m[39m
+   [33m[2m✓[22m[39m preserves a pending original planet when the display switches before retry[33m 629[2mms[22m[39m
+   [33m[2m✓[22m[39m starts common research with an explicit local cost and exposes personal fleet choices[33m 647[2mms[22m[39m
+ [32m✓[39m tests/BaseOperationsPanel.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 3264[2mms[22m[39m
+   [32m✓[39m server base operations [2m(6)[22m
+     [33m[2m✓[22m[39m shows production, collects it and upgrades a facility with server owned costs[33m 1070[2mms[22m[39m
+     [33m[2m✓[22m[39m runs a solo sortie, returns cargo, repairs ships and researches a module[33m 879[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps bases distinct when the participant changes[33m 556[2mms[22m[39m
+ [32m✓[39m tests/GuildPanel.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 2636[2mms[22m[39m
+   [32m✓[39m shared guild screen [2m(14)[22m
+     [33m[2m✓[22m[39m keeps an existing report from overriding the role briefing selected by the user[33m 322[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves an ambiguous command through a restarted session and checks its receipt[33m 361[2mms[22m[39m
+ [32m✓[39m tests/empire-network.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 3047[2mms[22m[39m
+   [33m[2m✓[22m[39m disables target-screen commands and names the unresolved empire screen after navigation[33m 436[2mms[22m[39m
+   [33m[2m✓[22m[39m disables target-screen commands and names the unresolved guild screen after navigation[33m 468[2mms[22m[39m
+ [32m✓[39m tests/PlanetOverview.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 2288[2mms[22m[39m
+   [33m[2m✓[22m[39m includes required power recovery in the carrier path and exposes the blocker[33m 406[2mms[22m[39m
+   [33m[2m✓[22m[39m keeps the selected facility card and action form synchronized[33m 341[2mms[22m[39m
+   [33m[2m✓[22m[39m replaces the overview with each category's full detail body and returns home[33m 508[2mms[22m[39m
+(node:108768) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m tests/empire-server.test.ts [2m([22m[2m9 tests[22m[2m)[22m[33m 1763[2mms[22m[39m
+   [33m[2m✓[22m[39m rolls back world spending when writing the personal receipt fails[33m 555[2mms[22m[39m
+   [33m[2m✓[22m[39m receipt failure rolls back every migrated row: corrupt[33m 324[2mms[22m[39m
+(node:109688) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m tests/base-server.test.ts [2m([22m[2m5 tests[22m[2m)[22m[33m 675[2mms[22m[39m
+ [32m✓[39m tests/PlanetManagement.test.tsx [2m([22m[2m10 tests[22m[2m)[22m[33m 3136[2mms[22m[39m
+   [33m[2m✓[22m[39m shows the selected upgrade's real production, storage, power and space before spending[33m 321[2mms[22m[39m
+   [33m[2m✓[22m[39m keeps connection recovery available when participant settings are folded[33m 561[2mms[22m[39m
+   [33m[2m✓[22m[39m keeps the facility selection after starting work and opens its details from the queue[33m 701[2mms[22m[39m
+   [33m[2m✓[22m[39m opens the current research job from the queue without stealing focus on later dropdown edits[33m 352[2mms[22m[39m
+   [33m[2m✓[22m[39m focuses the new sortie result and follows the report's research action[33m 488[2mms[22m[39m
+(node:41832) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ [32m✓[39m tests/completion-notice.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 97[2mms[22m[39m
+ [32m✓[39m tests/guild-server.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 461[2mms[22m[39m
+ [32m✓[39m tests/base.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [32m✓[39m tests/empire-career.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 90[2mms[22m[39m
+ [32m✓[39m tests/guild.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32m✓[39m tests/empire-migration.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32m✓[39m tests/storage.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 46[2mms[22m[39m
+ [32m✓[39m tests/empire-guild.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/empire-guild-ui.test.tsx [2m([22m[2m1 test[22m[2m)[22m[33m 489[2mms[22m[39m
+   [33m[2m✓[22m[39m displays constructed inventory in the shared operation fleet selector[33m 488[2mms[22m[39m
+ [32m✓[39m tests/empire.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32m✓[39m tests/game.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m20 passed[39m[22m[90m (20)[39m
+[2m      Tests [22m [1m[32m191 passed[39m[22m[90m (191)[39m
+[2m   Start at [22m 18:17:52
+[2m   Duration [22m 27.25s[2m (tests 57%, environment 23%, transform 11%, import 9%)[22m
+
+[2m    Isolate [22m [33m20 workers spawned[39m[2m · ~821ms startup each (spawn + environment, per file)[22m
+[2m            [22m [2mat least ~7.38s faster with [22m[33misolate: false[39m[2m — reuses workers across files instead of one per file[22m
+

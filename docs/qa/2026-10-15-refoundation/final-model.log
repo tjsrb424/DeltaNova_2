@@ -1,0 +1,14 @@
+✔ repeated threat delivery is idempotent; closing details cannot dismiss the event (1.4904ms)
+✔ completion is an explicitly illustrative event and does not resolve a threat or upgrade assets (0.1647ms)
+✔ planet selection preserves the global threat target and the previous selection on return (0.1486ms)
+✔ visual layers use individual facility levels, never invented development thresholds (0.2894ms)
+✔ offline and empty previews remain local, maintain assets and do not create results (0.2319ms)
+✔ each planet restores its own facility snapshot independently (0.1766ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9.1171

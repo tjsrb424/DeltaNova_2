@@ -1,0 +1,1183 @@
+{
+  "at": "2026-10-15T10:20:45.157Z",
+  "root": "D:\\kim_dev\\DeltaNova\\docs\\qa\\2026-10-15-refinement\\before\\site",
+  "checks": [
+    {
+      "name": "layout-idle-1920x1080",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-1920",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-1920x1080",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-1920",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-1920x1080",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-1920",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-1440x900",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-1440x900",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-1440x900",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-1024x768",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-1024x768",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-1024x768",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-320x568",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":232,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-idle-320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-320x568",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":232,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-threat-320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-320x568",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":232,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-complete-320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-360x640",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":272,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-idle-360",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-360x640",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":272,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-threat-360",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-360x640",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":272,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-complete-360",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-390x844",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":302,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-idle-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-390x844",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":302,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-threat-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-390x844",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: mobile targets below 44px: [{\"name\":\"기존 게임으로 돌아가기 ↗\",\"width\":127.1,\"height\":17},{\"name\":\"델타노바 데모 홈\",\"width\":302,\"height\":37.1}]\n\n2 !== 0\n"
+    },
+    {
+      "name": "contrast-complete-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-844x390",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: priority CTA is obscured or below the initial viewport"
+    },
+    {
+      "name": "contrast-idle-844",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-844x390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-844",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-844x390",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: priority CTA is obscured or below the initial viewport"
+    },
+    {
+      "name": "contrast-complete-844",
+      "status": "PASS"
+    },
+    {
+      "name": "resource-accessible-description",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: resource name hides quantity/rate without an accessible description"
+    },
+    {
+      "name": "contrast-empty-390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-offline-390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-loading-390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-empty-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-offline-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-loading-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "urgent-event-semantics-and-deduplication",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: urgent live region missing\n\n0 !== 1\n"
+    },
+    {
+      "name": "mobile-threat-remains-actionable-after-scroll",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: threat CTA is lost after scrolling"
+    },
+    {
+      "name": "dialog-resources-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-planet-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-construction-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-research-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-fleet-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-career-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: nested panel title must receive focus"
+    },
+    {
+      "name": "dialog-career-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-galaxy-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: nested panel title must receive focus"
+    },
+    {
+      "name": "dialog-galaxy-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-guild-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: nested panel title must receive focus"
+    },
+    {
+      "name": "dialog-guild-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-reports-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-practice-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: nested panel title must receive focus"
+    },
+    {
+      "name": "dialog-practice-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-threat-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-evasion-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-defense-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: nested panel title must receive focus"
+    },
+    {
+      "name": "dialog-defense-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-more-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-settings-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "motion-toggle-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-rankings-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: nested panel title must receive focus"
+    },
+    {
+      "name": "dialog-rankings-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-diplomacy-focus",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: nested panel title must receive focus"
+    },
+    {
+      "name": "dialog-diplomacy-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-percent-320",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: navigation text clips: {\"items\":[{\"name\":\"행성 관제01\",\"fits\":false,\"withinViewport\":true,\"height\":59,\"scrollHeight\":79,\"clientHeight\":59},{\"name\":\"건설\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"연구\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"함대\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"더보기\",\"fits\":false,\"withinViewport\":true,\"height\":59,\"scrollHeight\":79,\"clientHeight\":59}],\"barHeight\":72,\"barOverflow\":true,\"bottomClearance\":78}"
+    },
+    {
+      "name": "dialog-enlarged-text-settings-320",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 319,
+        "viewport": 320,
+        "contentHeight": 162,
+        "contentWidth": 287,
+        "contentScrollWidth": 287,
+        "footerBottom": 548,
+        "height": 568,
+        "titleSize": 48,
+        "valueSize": null
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-320",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 319,
+        "viewport": 320,
+        "contentHeight": 88,
+        "contentWidth": 287,
+        "contentScrollWidth": 287,
+        "footerBottom": 548,
+        "height": 568,
+        "titleSize": 48,
+        "valueSize": 28
+      }
+    },
+    {
+      "name": "text-200-percent-360",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: navigation text clips: {\"items\":[{\"name\":\"행성 관제01\",\"fits\":false,\"withinViewport\":true,\"height\":59,\"scrollHeight\":79,\"clientHeight\":59},{\"name\":\"건설\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"연구\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"함대\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"더보기\",\"fits\":false,\"withinViewport\":true,\"height\":59,\"scrollHeight\":79,\"clientHeight\":59}],\"barHeight\":72,\"barOverflow\":true,\"bottomClearance\":78}"
+    },
+    {
+      "name": "dialog-enlarged-text-settings-360",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 359,
+        "viewport": 360,
+        "contentHeight": 265,
+        "contentWidth": 327,
+        "contentScrollWidth": 327,
+        "footerBottom": 620,
+        "height": 640,
+        "titleSize": 48,
+        "valueSize": null
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-360",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 359,
+        "viewport": 360,
+        "contentHeight": 265,
+        "contentWidth": 327,
+        "contentScrollWidth": 327,
+        "footerBottom": 620,
+        "height": 640,
+        "titleSize": 48,
+        "valueSize": 28
+      }
+    },
+    {
+      "name": "text-200-percent-390",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: navigation text clips: {\"items\":[{\"name\":\"행성 관제01\",\"fits\":false,\"withinViewport\":true,\"height\":59,\"scrollHeight\":79,\"clientHeight\":59},{\"name\":\"건설\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"연구\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"함대\",\"fits\":true,\"withinViewport\":true,\"height\":59,\"scrollHeight\":60,\"clientHeight\":59},{\"name\":\"더보기\",\"fits\":false,\"withinViewport\":true,\"height\":59,\"scrollHeight\":79,\"clientHeight\":59}],\"barHeight\":72,\"barOverflow\":true,\"bottomClearance\":78}"
+    },
+    {
+      "name": "dialog-enlarged-text-settings-390",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 389,
+        "viewport": 390,
+        "contentHeight": 469,
+        "contentWidth": 357,
+        "contentScrollWidth": 357,
+        "footerBottom": 824,
+        "height": 844,
+        "titleSize": 48,
+        "valueSize": null
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-390",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 389,
+        "viewport": 390,
+        "contentHeight": 469,
+        "contentWidth": 357,
+        "contentScrollWidth": 357,
+        "footerBottom": 824,
+        "height": 844,
+        "titleSize": 48,
+        "valueSize": 28
+      }
+    },
+    {
+      "name": "text-200-percent-844",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: navigation text clips: {\"items\":[{\"name\":\"행성 관제01\",\"fits\":true,\"withinViewport\":false,\"height\":118.375,\"scrollHeight\":118,\"clientHeight\":118},{\"name\":\"건설\",\"fits\":true,\"withinViewport\":false,\"height\":81.1875,\"scrollHeight\":81,\"clientHeight\":81},{\"name\":\"연구\",\"fits\":true,\"withinViewport\":false,\"height\":81.1875,\"scrollHeight\":81,\"clientHeight\":81},{\"name\":\"함대\",\"fits\":true,\"withinViewport\":false,\"height\":81.1875,\"scrollHeight\":81,\"clientHeight\":81},{\"name\":\"개인 작전\",\"fits\":true,\"withinViewport\":false,\"height\":118.375,\"scrollHeight\":118,\"clientHeight\":118},{\"name\":\"은하미연결\",\"fits\":true,\"withinViewport\":true,\"height\":81.1875,\"scrollHeight\":81,\"clientHeight\":81},{\"name\":\"동맹\",\"fits\":true,\"withinViewport\":true,\"height\":81.1875,\"scrollHeight\":81,\"clientHeight\":81},{\"name\":\"보고서\",\"fits\":true,\"withinViewport\":false,\"height\":118.375,\"scrollHeight\":118,\"clientHeight\":118},{\"name\":\"편성 연습\",\"fits\":true,\"withinViewport\":false,\"height\":118.375,\"scrollHeight\":118,\"clientHeight\":118}],\"barHeight\":2436.796875,\"barOverflow\":false,\"bottomClearance\":0}"
+    },
+    {
+      "name": "dialog-enlarged-text-settings-844",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: drawer content collapses"
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-844",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: drawer content collapses"
+    },
+    {
+      "name": "drawer-scroll-lock-and-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "generated-planet-is-used",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'generated'\n"
+    },
+    {
+      "name": "no-state-or-storage-side-effects",
+      "status": "PASS"
+    },
+    {
+      "name": "cpu4x-pending-art-does-not-block-threat",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: main thread task exceeded 250ms at CPU4x"
+    },
+    {
+      "name": "landscape-touch-review-and-close",
+      "status": "PASS",
+      "data": {
+        "mobile": false,
+        "width": 844,
+        "height": 390,
+        "documentWidth": 844,
+        "ctaVisible": true,
+        "ctaBottom": 275.2,
+        "touchFailures": []
+      }
+    },
+    {
+      "name": "planet-art-failure-falls-back",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'procedural'\n"
+    }
+  ],
+  "layouts": [
+    {
+      "state": "idle",
+      "mobile": false,
+      "width": 1920,
+      "height": 1080,
+      "documentWidth": 1920,
+      "ctaVisible": true,
+      "ctaBottom": 658,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": false,
+      "width": 1920,
+      "height": 1080,
+      "documentWidth": 1920,
+      "ctaVisible": true,
+      "ctaBottom": 296.8,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": false,
+      "width": 1920,
+      "height": 1080,
+      "documentWidth": 1920,
+      "ctaVisible": true,
+      "ctaBottom": 594.2,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": false,
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1440,
+      "ctaVisible": true,
+      "ctaBottom": 654,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": false,
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1440,
+      "ctaVisible": true,
+      "ctaBottom": 292.8,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": false,
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1440,
+      "ctaVisible": true,
+      "ctaBottom": 615.3,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": false,
+      "width": 1024,
+      "height": 768,
+      "documentWidth": 1024,
+      "ctaVisible": true,
+      "ctaBottom": 671.6,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": false,
+      "width": 1024,
+      "height": 768,
+      "documentWidth": 1024,
+      "ctaVisible": true,
+      "ctaBottom": 289.2,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": false,
+      "width": 1024,
+      "height": 768,
+      "documentWidth": 1024,
+      "ctaVisible": true,
+      "ctaBottom": 632.9,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": true,
+      "width": 320,
+      "height": 568,
+      "documentWidth": 320,
+      "ctaVisible": true,
+      "ctaBottom": 402.6,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 232,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "threat",
+      "mobile": true,
+      "width": 320,
+      "height": 568,
+      "documentWidth": 320,
+      "ctaVisible": true,
+      "ctaBottom": 489.5,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 232,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "complete",
+      "mobile": true,
+      "width": 320,
+      "height": 568,
+      "documentWidth": 320,
+      "ctaVisible": true,
+      "ctaBottom": 402.6,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 232,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "idle",
+      "mobile": true,
+      "width": 360,
+      "height": 640,
+      "documentWidth": 360,
+      "ctaVisible": true,
+      "ctaBottom": 402.6,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 272,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "threat",
+      "mobile": true,
+      "width": 360,
+      "height": 640,
+      "documentWidth": 360,
+      "ctaVisible": true,
+      "ctaBottom": 470.9,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 272,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "complete",
+      "mobile": true,
+      "width": 360,
+      "height": 640,
+      "documentWidth": 360,
+      "ctaVisible": true,
+      "ctaBottom": 402.6,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 272,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "idle",
+      "mobile": true,
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "ctaVisible": true,
+      "ctaBottom": 402.6,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 302,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "threat",
+      "mobile": true,
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "ctaVisible": true,
+      "ctaBottom": 470.9,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 302,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "complete",
+      "mobile": true,
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "ctaVisible": true,
+      "ctaBottom": 402.6,
+      "touchFailures": [
+        {
+          "name": "기존 게임으로 돌아가기 ↗",
+          "width": 127.1,
+          "height": 17
+        },
+        {
+          "name": "델타노바 데모 홈",
+          "width": 302,
+          "height": 37.1
+        }
+      ]
+    },
+    {
+      "state": "idle",
+      "mobile": false,
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "ctaVisible": false,
+      "ctaBottom": 649.6,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": false,
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "ctaVisible": true,
+      "ctaBottom": 275.2,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": false,
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "ctaVisible": false,
+      "ctaBottom": 610.9,
+      "touchFailures": []
+    }
+  ],
+  "contrast": [
+    {
+      "state": "idle",
+      "width": 1920,
+      "checked": 89,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 1920,
+      "checked": 91,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 1920,
+      "checked": 84,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 1440,
+      "checked": 89,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 1440,
+      "checked": 91,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 1440,
+      "checked": 84,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 1024,
+      "checked": 75,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 1024,
+      "checked": 77,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 1024,
+      "checked": 70,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 320,
+      "checked": 66,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 320,
+      "checked": 66,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 320,
+      "checked": 64,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 360,
+      "checked": 66,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 360,
+      "checked": 66,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 360,
+      "checked": 64,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 390,
+      "checked": 66,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 390,
+      "checked": 66,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 390,
+      "checked": 64,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 844,
+      "checked": 75,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 844,
+      "checked": 77,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 844,
+      "checked": 70,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "empty",
+      "width": 390,
+      "checked": 62,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "offline",
+      "width": 390,
+      "checked": 69,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "loading",
+      "width": 390,
+      "checked": 63,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "empty",
+      "width": 1440,
+      "checked": 82,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "offline",
+      "width": 1440,
+      "checked": 89,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "loading",
+      "width": 1440,
+      "checked": 83,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "panel": "resources",
+      "checked": 17,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "planet",
+      "checked": 19,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "construction",
+      "checked": 19,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "research",
+      "checked": 17,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "fleet",
+      "checked": 15,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "career",
+      "checked": 9,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "galaxy",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "guild",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "reports",
+      "checked": 10,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "practice",
+      "checked": 6,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "threat",
+      "checked": 15,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "evasion",
+      "checked": 21,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "defense",
+      "checked": 16,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "more",
+      "checked": 22,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "settings",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "rankings",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "diplomacy",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    }
+  ],
+  "ax": [
+    {
+      "panel": "resources",
+      "unnamed": 0
+    },
+    {
+      "panel": "planet",
+      "unnamed": 0
+    },
+    {
+      "panel": "construction",
+      "unnamed": 0
+    },
+    {
+      "panel": "research",
+      "unnamed": 0
+    },
+    {
+      "panel": "fleet",
+      "unnamed": 0
+    },
+    {
+      "panel": "career",
+      "unnamed": 0
+    },
+    {
+      "panel": "galaxy",
+      "unnamed": 0
+    },
+    {
+      "panel": "guild",
+      "unnamed": 0
+    },
+    {
+      "panel": "reports",
+      "unnamed": 0
+    },
+    {
+      "panel": "practice",
+      "unnamed": 0
+    },
+    {
+      "panel": "threat",
+      "unnamed": 0
+    },
+    {
+      "panel": "evasion",
+      "unnamed": 0
+    },
+    {
+      "panel": "defense",
+      "unnamed": 0
+    },
+    {
+      "panel": "more",
+      "unnamed": 0
+    },
+    {
+      "panel": "settings",
+      "unnamed": 0
+    },
+    {
+      "panel": "rankings",
+      "unnamed": 0
+    },
+    {
+      "panel": "diplomacy",
+      "unnamed": 0
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "limitations": [
+    "Automated emulation is not physical mobile hardware or screen-reader speech.",
+    "Contrast uses visible DOM text and composited flat ancestor colors; it is not a full WCAG certification."
+  ],
+  "performance": {
+    "cpuSlowdown": 4,
+    "pendingArt": "controlled request gate",
+    "clickToNextPaintProxyMs": 63.2,
+    "automatedRoundTripMs": 289.5,
+    "longTasksMs": [
+      402,
+      60
+    ],
+    "planetRenderMs": [
+      2875,
+      2174.199999988079
+    ],
+    "assets": []
+  },
+  "status": "FAIL"
+}

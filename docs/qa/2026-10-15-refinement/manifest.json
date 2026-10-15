@@ -1,0 +1,55 @@
+{
+  "at": "2026-10-15T10:21:27.258Z",
+  "head": "6724252b4b1796d051c108255c2b76334784630f",
+  "branch": "codex/uiux-refoundation",
+  "files": [
+    {
+      "path": "public/uiux-demo/index.html",
+      "bytes": 8923,
+      "sha256": "b1528bf13dde52c2734f0c22525564bc00214d8eae6ed6b953623aad47fce1d9",
+      "distIdentical": true
+    },
+    {
+      "path": "public/uiux-demo/tokens.css",
+      "bytes": 749,
+      "sha256": "0350254aa2067d29a6e6ce1ed450eb11a26a079f77cba0f2e0beda37963f9976",
+      "distIdentical": true
+    },
+    {
+      "path": "public/uiux-demo/style.css",
+      "bytes": 31839,
+      "sha256": "5638a908b86ac87032a9415a2540cf53ea10ed1022574ed4a66201ac1a67ae4a",
+      "distIdentical": true
+    },
+    {
+      "path": "public/uiux-demo/model.js",
+      "bytes": 2519,
+      "sha256": "5b970531b6a28a17d277c9b79282e3cb581ebbbb04ba03bebe814379a8f659b4",
+      "distIdentical": true
+    },
+    {
+      "path": "public/uiux-demo/main.js",
+      "bytes": 24556,
+      "sha256": "d1e2b21334174e3dfe1918d002bac034799cbef058c43b1493ff7a14e9f6a973",
+      "distIdentical": true
+    },
+    {
+      "path": "public/uiux-demo/planet.js",
+      "bytes": 1723,
+      "sha256": "6511417786d3054705c45e32b227c9026b6440012750427a102f684f2f76891e",
+      "distIdentical": true
+    },
+    {
+      "path": "public/uiux-demo/planet-fallback.js",
+      "bytes": 2993,
+      "sha256": "893b3f8425049a5101ac428ce1828de345fa05c87544daccbd4624ab438fc057",
+      "distIdentical": true
+    },
+    {
+      "path": "public/uiux-demo/art/nova-natural-v2.webp",
+      "bytes": 190454,
+      "sha256": "11139b421799e4964a70c99914482a8f278c0e151af03d080c9d83cb1b0829b6",
+      "distIdentical": true
+    }
+  ]
+}

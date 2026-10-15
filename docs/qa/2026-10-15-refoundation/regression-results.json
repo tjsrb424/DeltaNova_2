@@ -1,0 +1,22 @@
+[
+  {
+    "name": "build",
+    "code": 0
+  },
+  {
+    "name": "verify-build",
+    "code": 0
+  },
+  {
+    "name": "verify-empire",
+    "code": 0
+  },
+  {
+    "name": "verify-guild",
+    "code": 0
+  },
+  {
+    "name": "baseline-ui",
+    "code": 0
+  }
+]

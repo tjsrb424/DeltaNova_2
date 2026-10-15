@@ -1,0 +1,4 @@
+PASS: 18 viewport/state cases
+PASS: task flows, retry focus restoration, Tab cycle, fixture states, reduced motion
+PASS: text contrast, 200% equivalent reflow and text enlargement
+UIUX headless PASS: 18 state/viewport cases, five task flows, touch, keyboard, zoom, reduced motion, contrast, zero API/storage activity.

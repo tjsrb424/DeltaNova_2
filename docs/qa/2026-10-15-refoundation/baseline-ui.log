@@ -1,0 +1,3 @@
+(node:110808) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Dashboard headless PASS: 16 action access checks, effect-row hit tests, real pointer build/cancel and resource deductions, all category transitions, isolated API, atlas decode. Captures: D:\kim_dev\DeltaNova\docs\qa\2026-10-15-refoundation\baseline-app

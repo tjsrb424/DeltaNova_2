@@ -1,0 +1,14 @@
+
+> delta-nova@0.1.0 build
+> tsc --noEmit && vite build
+
+[36mvite v8.3.4 [32mbuilding client environment for production...[36m[39m
+transforming...
+✓ 63 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.47 kB │ gzip:   0.33 kB
+dist/assets/index-DXwt7FYp.css  116.54 kB │ gzip:  23.43 kB
+dist/assets/index-BIDRbckK.js   354.59 kB │ gzip: 107.80 kB
+
+[32m✓ built in 306ms[39m

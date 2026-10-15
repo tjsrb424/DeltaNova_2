@@ -1,0 +1,37 @@
+/* Delta Nova / token candidates. Safe for reference, DO NOT paste over current app CSS without audit. */
+:root {
+  --dn-bg-canvas: #080e18;
+  --dn-bg-surface: #111b2b;
+  --dn-bg-elevated: #18263a;
+  --dn-text-primary: #e9f0fa;
+  --dn-text-secondary: #a8b9d0;
+  --dn-text-tertiary: #8699b3;
+  --dn-accent: #52c7df;
+  --dn-accent-foreground: #06141d;
+  --dn-warning: #f2b85c;
+  --dn-danger: #f16b72;
+  --dn-success: #74d4ae;
+  --dn-border-subtle: #29374c;
+  --dn-focus: #9ae7f5;
+  --dn-space-1: 4px;
+  --dn-space-2: 8px;
+  --dn-space-3: 12px;
+  --dn-space-4: 16px;
+  --dn-space-6: 24px;
+  --dn-space-8: 32px;
+  --dn-radius-button: 12px;
+  --dn-radius-panel: 16px;
+  --dn-motion-micro: 150ms;
+  --dn-motion-panel: 260ms;
+  --dn-motion-feedback: 420ms;
+  --dn-motion-event: 540ms;
+  --dn-font-sans: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dn-motion-micro: 0ms;
+    --dn-motion-panel: 0ms;
+    --dn-motion-feedback: 0ms;
+    --dn-motion-event: 0ms;
+  }
+}

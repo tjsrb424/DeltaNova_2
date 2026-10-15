@@ -1,0 +1,3 @@
+# Preserve the user-supplied archive and extracted files byte for byte on all OSes.
+* -text
+** -text

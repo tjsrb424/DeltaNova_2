@@ -1,0 +1,351 @@
+{
+  "at": "2026-10-15T10:21:34.939Z",
+  "browser": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "root": "D:\\kim_dev\\DeltaNova\\dist",
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "state": "idle",
+      "documentWidth": 1905,
+      "viewportWidth": 1920,
+      "cta": {
+        "top": 618.046875,
+        "bottom": 664.046875,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "state": "threat",
+      "documentWidth": 1905,
+      "viewportWidth": 1920,
+      "cta": {
+        "top": 256.78125,
+        "bottom": 302.78125,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "state": "complete",
+      "documentWidth": 1905,
+      "viewportWidth": 1920,
+      "cta": {
+        "top": 554.15625,
+        "bottom": 600.15625,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "idle",
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "cta": {
+        "top": 614.046875,
+        "bottom": 660.046875,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "threat",
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "cta": {
+        "top": 252.78125,
+        "bottom": 298.78125,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "complete",
+      "documentWidth": 1425,
+      "viewportWidth": 1440,
+      "cta": {
+        "top": 575.34375,
+        "bottom": 621.34375,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "state": "idle",
+      "documentWidth": 1265,
+      "viewportWidth": 1280,
+      "cta": {
+        "top": 592.046875,
+        "bottom": 638.046875,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "state": "threat",
+      "documentWidth": 1265,
+      "viewportWidth": 1280,
+      "cta": {
+        "top": 238.78125,
+        "bottom": 284.78125,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "state": "complete",
+      "documentWidth": 1265,
+      "viewportWidth": 1280,
+      "cta": {
+        "top": 553.34375,
+        "bottom": 599.34375,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "state": "idle",
+      "documentWidth": 1009,
+      "viewportWidth": 1024,
+      "cta": {
+        "top": 631.640625,
+        "bottom": 677.640625,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "state": "threat",
+      "documentWidth": 1009,
+      "viewportWidth": 1024,
+      "cta": {
+        "top": 249.1875,
+        "bottom": 295.1875,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "state": "complete",
+      "documentWidth": 1009,
+      "viewportWidth": 1024,
+      "cta": {
+        "top": 592.9375,
+        "bottom": 638.9375,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "idle",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "cta": {
+        "top": 357.59375,
+        "bottom": 403.59375,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "threat",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "cta": {
+        "top": 444.46875,
+        "bottom": 490.46875,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "complete",
+      "documentWidth": 390,
+      "viewportWidth": 390,
+      "cta": {
+        "top": 357.59375,
+        "bottom": 403.59375,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "state": "idle",
+      "documentWidth": 360,
+      "viewportWidth": 360,
+      "cta": {
+        "top": 357.59375,
+        "bottom": 403.59375,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "state": "threat",
+      "documentWidth": 360,
+      "viewportWidth": 360,
+      "cta": {
+        "top": 444.46875,
+        "bottom": 490.46875,
+        "visible": true
+      },
+      "globeInside": true
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "state": "complete",
+      "documentWidth": 360,
+      "viewportWidth": 360,
+      "cta": {
+        "top": 357.59375,
+        "bottom": 403.59375,
+        "visible": true
+      },
+      "globeInside": true
+    }
+  ],
+  "tasks": [
+    {
+      "task": "C. 함대 상세",
+      "actions": 1,
+      "result": "PASS"
+    },
+    {
+      "task": "E. 상세 종료·포커스 복귀",
+      "result": "PASS",
+      "panels": 8
+    },
+    {
+      "task": "A. 자원 보유량/생산량 구별",
+      "actions": 1,
+      "result": "PASS (자동 동작 검사; 사람 인지 시간 미측정)"
+    },
+    {
+      "task": "B. 진행 작업·건설 관리",
+      "actions": 1,
+      "result": "PASS (예시 타이머 고정)"
+    },
+    {
+      "task": "D. 위협 대상·회피 검토·종료",
+      "actions": 1,
+      "result": "PASS (실제 명령 불가)",
+      "duplicateBanner": false
+    }
+  ],
+  "consoleErrors": [],
+  "apiRequests": [],
+  "checks": {
+    "planetSelection": "PASS: rapid selection preserves the current planet after stale rendering finishes",
+    "reducedMotion": "PASS: no running animations; threat and modal still usable",
+    "contrast": {
+      "checked": 105,
+      "minimum": 5.47,
+      "failures": []
+    },
+    "zoom": "PASS: 720x450 CSS reflow equivalent to 1440x900 at 200%; separately enlarged visible text 200% at 1440px",
+    "storageAccess": [],
+    "performance": {
+      "navigation": [
+        {
+          "loadMs": 62,
+          "domContentLoadedMs": 36,
+          "transferBytes": 9223
+        }
+      ],
+      "resources": [
+        {
+          "name": "nova-natural-v2.webp",
+          "bytes": 190454
+        },
+        {
+          "name": "tokens.css",
+          "bytes": 749
+        },
+        {
+          "name": "style.css",
+          "bytes": 31839
+        },
+        {
+          "name": "main.js",
+          "bytes": 24556
+        },
+        {
+          "name": "model.js",
+          "bytes": 2519
+        },
+        {
+          "name": "planet.js",
+          "bytes": 1723
+        },
+        {
+          "name": "planet-fallback.js",
+          "bytes": 2993
+        }
+      ],
+      "planetRenderMs": [
+        26.4,
+        29.7,
+        0.4,
+        0.5,
+        3.5,
+        0.5,
+        0.5,
+        0.6,
+        0.4,
+        0.5,
+        0.4,
+        0.5,
+        0.4,
+        0.4,
+        0.4,
+        0.3,
+        2,
+        0.3,
+        0.4,
+        0.4,
+        0.5,
+        0.4,
+        0.4
+      ],
+      "longTasksMs": []
+    },
+    "touch": "PASS: tap threat/review/close/more; all secondary menus retained",
+    "network": "PASS: no API requests or non-GET commands",
+    "keyboard": "PASS: Escape, focus return and native Tab cycle"
+  },
+  "status": "PASS"
+}

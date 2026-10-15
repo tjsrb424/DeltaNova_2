@@ -1,0 +1,26 @@
+{
+  "$comment": "Delta Nova UI tokens proposal v1.0. This is NOT automatically merged into the live app. Validate contrast and framework conventions before adoption.",
+  "name": "Delta Nova / Minimal Galactic Command",
+  "version": "1.0-proposal",
+  "color": {
+    "background": {"canvas": "#080E18", "surface": "#111B2B", "elevated": "#18263A"},
+    "text": {"primary": "#E9F0FA", "secondary": "#A8B9D0", "tertiary": "#8699B3"},
+    "accent": {"primary": "#52C7DF", "foreground": "#06141D"},
+    "state": {"warning": "#F2B85C", "danger": "#F16B72", "success": "#74D4AE"},
+    "line": {"subtle": "#29374C"},
+    "focus": {"ring": "#9AE7F5"}
+  },
+  "spacePx": [4, 8, 12, 16, 24, 32],
+  "radiusPx": {"button": 12, "panel": 16, "pill": 999},
+  "fontSizePx": {"detail": 12, "caption": 13, "body": 15, "label": 16, "section": 18, "page": 28},
+  "motionMs": {"micro": 150, "panel": 260, "feedback": 420, "dangerEntrance": 540, "ambient": 52000},
+  "breakpointPx": {"mobileMax": 768, "compactMax": 1279},
+  "minimumTouchTargetPx": {"recommended": 44},
+  "componentHeightPx": {"control": 44},
+  "notes": [
+    "Never rely on color alone to communicate danger, success, or disabled status.",
+    "Animate transform/opacity preferentially. Disable decorative motion under prefers-reduced-motion.",
+    "These durations are prototype starting values, not final UX evidence.",
+    "Palette may be adjusted based on contrast checks and actual art direction."
+  ]
+}

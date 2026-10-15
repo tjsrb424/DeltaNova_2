@@ -1,0 +1,1383 @@
+{
+  "at": "2026-10-15T10:19:22.985Z",
+  "root": "D:\\kim_dev\\DeltaNova\\dist",
+  "checks": [
+    {
+      "name": "layout-idle-1920x1080",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-1920",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-1920x1080",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-1920",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-1920x1080",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-1920",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-1440x900",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-1440x900",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-1440x900",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-1024x768",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-1024x768",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-1024x768",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-1024",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-320x568",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-320x568",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-320x568",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-320",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-360x640",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-360",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-360x640",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-360",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-360x640",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-360",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-390x844",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-390x844",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-390x844",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-390",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-idle-844x390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-idle-844",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-threat-844x390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-threat-844",
+      "status": "PASS"
+    },
+    {
+      "name": "layout-complete-844x390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-complete-844",
+      "status": "PASS"
+    },
+    {
+      "name": "resource-accessible-description",
+      "status": "PASS",
+      "data": {
+        "name": "합금 자원 상세",
+        "description": "예시 보유 280, 생산 분당 13, 저장 한도 400"
+      }
+    },
+    {
+      "name": "contrast-empty-390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-offline-390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-loading-390",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-empty-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-offline-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "contrast-loading-1440",
+      "status": "PASS"
+    },
+    {
+      "name": "urgent-event-semantics-and-deduplication",
+      "status": "PASS",
+      "data": [
+        "적 함대 접근 예시. 대상 노바 프라임. 남은 시간 2분 40초는 고정 예시입니다. 회피 검토에서 실제 명령은 전송되지 않습니다."
+      ]
+    },
+    {
+      "name": "mobile-threat-remains-actionable-after-scroll",
+      "status": "PASS",
+      "data": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "documentWidth": 390,
+        "ctaVisible": true,
+        "ctaBottom": 140.9,
+        "touchFailures": []
+      }
+    },
+    {
+      "name": "dialog-resources-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-planet-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-construction-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-research-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-fleet-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-career-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-career-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-galaxy-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-galaxy-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-guild-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-guild-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-reports-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-practice-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-practice-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-threat-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-evasion-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-defense-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-defense-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-more-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-settings-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "motion-toggle-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-rankings-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-rankings-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "nested-panel-diplomacy-focus",
+      "status": "PASS"
+    },
+    {
+      "name": "dialog-diplomacy-contrast-and-name",
+      "status": "PASS"
+    },
+    {
+      "name": "text-200-percent-320",
+      "status": "PASS",
+      "data": {
+        "fontSizes": [
+          {
+            "selector": "body",
+            "before": 14,
+            "after": 28
+          },
+          {
+            "selector": "#dialog-title",
+            "before": 24,
+            "after": 48
+          },
+          {
+            "selector": ".sidebar .nav-item",
+            "before": 12,
+            "after": 24
+          }
+        ],
+        "nav": {
+          "items": [
+            {
+              "name": "행성 관제01",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "건설",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "연구",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "함대",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "더보기",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            }
+          ],
+          "barHeight": 123.375,
+          "barOverflow": false,
+          "bottomClearance": 130
+        }
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-settings-320",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 319,
+        "viewport": 320,
+        "contentHeight": 178,
+        "contentWidth": 280,
+        "contentScrollWidth": 280,
+        "footerBottom": 552,
+        "height": 568,
+        "titleSize": 48,
+        "valueSize": null
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-320",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 319,
+        "viewport": 320,
+        "contentHeight": 104,
+        "contentWidth": 280,
+        "contentScrollWidth": 280,
+        "footerBottom": 552,
+        "height": 568,
+        "titleSize": 48,
+        "valueSize": 28
+      }
+    },
+    {
+      "name": "text-200-percent-360",
+      "status": "PASS",
+      "data": {
+        "fontSizes": [
+          {
+            "selector": "body",
+            "before": 14,
+            "after": 28
+          },
+          {
+            "selector": "#dialog-title",
+            "before": 24,
+            "after": 48
+          },
+          {
+            "selector": ".sidebar .nav-item",
+            "before": 12,
+            "after": 24
+          }
+        ],
+        "nav": {
+          "items": [
+            {
+              "name": "행성 관제01",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "건설",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "연구",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "함대",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "더보기",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            }
+          ],
+          "barHeight": 123.375,
+          "barOverflow": false,
+          "bottomClearance": 130
+        }
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-settings-360",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 359,
+        "viewport": 360,
+        "contentHeight": 281,
+        "contentWidth": 320,
+        "contentScrollWidth": 320,
+        "footerBottom": 624,
+        "height": 640,
+        "titleSize": 48,
+        "valueSize": null
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-360",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 359,
+        "viewport": 360,
+        "contentHeight": 281,
+        "contentWidth": 320,
+        "contentScrollWidth": 320,
+        "footerBottom": 624,
+        "height": 640,
+        "titleSize": 48,
+        "valueSize": 28
+      }
+    },
+    {
+      "name": "text-200-percent-390",
+      "status": "PASS",
+      "data": {
+        "fontSizes": [
+          {
+            "selector": "body",
+            "before": 14,
+            "after": 28
+          },
+          {
+            "selector": "#dialog-title",
+            "before": 24,
+            "after": 48
+          },
+          {
+            "selector": ".sidebar .nav-item",
+            "before": 12,
+            "after": 24
+          }
+        ],
+        "nav": {
+          "items": [
+            {
+              "name": "행성 관제01",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "건설",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "연구",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "함대",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            },
+            {
+              "name": "더보기",
+              "fits": true,
+              "withinViewport": true,
+              "height": 110.375,
+              "scrollHeight": 110,
+              "clientHeight": 110
+            }
+          ],
+          "barHeight": 123.375,
+          "barOverflow": false,
+          "bottomClearance": 130
+        }
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-settings-390",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 389,
+        "viewport": 390,
+        "contentHeight": 485,
+        "contentWidth": 350,
+        "contentScrollWidth": 350,
+        "footerBottom": 828,
+        "height": 844,
+        "titleSize": 48,
+        "valueSize": null
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-390",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 389,
+        "viewport": 390,
+        "contentHeight": 485,
+        "contentWidth": 350,
+        "contentScrollWidth": 350,
+        "footerBottom": 828,
+        "height": 844,
+        "titleSize": 48,
+        "valueSize": 28
+      }
+    },
+    {
+      "name": "text-200-percent-844",
+      "status": "PASS",
+      "data": {
+        "fontSizes": [
+          {
+            "selector": "body",
+            "before": 14,
+            "after": 28
+          },
+          {
+            "selector": "#dialog-title",
+            "before": 22,
+            "after": 44
+          },
+          {
+            "selector": ".sidebar .nav-item",
+            "before": 12,
+            "after": 24
+          }
+        ],
+        "nav": {
+          "items": [
+            {
+              "name": "행성 관제01",
+              "fits": true,
+              "withinViewport": true,
+              "height": 73.1875,
+              "scrollHeight": 73,
+              "clientHeight": 73
+            },
+            {
+              "name": "건설",
+              "fits": true,
+              "withinViewport": true,
+              "height": 73.1875,
+              "scrollHeight": 73,
+              "clientHeight": 73
+            },
+            {
+              "name": "연구",
+              "fits": true,
+              "withinViewport": true,
+              "height": 73.1875,
+              "scrollHeight": 73,
+              "clientHeight": 73
+            },
+            {
+              "name": "함대",
+              "fits": true,
+              "withinViewport": true,
+              "height": 73.1875,
+              "scrollHeight": 73,
+              "clientHeight": 73
+            },
+            {
+              "name": "더보기",
+              "fits": true,
+              "withinViewport": true,
+              "height": 73.1875,
+              "scrollHeight": 73,
+              "clientHeight": 73
+            }
+          ],
+          "barHeight": 86.1875,
+          "barOverflow": false,
+          "bottomClearance": 93
+        }
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-settings-844",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 479,
+        "viewport": 844,
+        "contentHeight": 71,
+        "contentWidth": 432,
+        "contentScrollWidth": 432,
+        "footerBottom": 378,
+        "height": 390,
+        "titleSize": 44,
+        "valueSize": null
+      }
+    },
+    {
+      "name": "dialog-enlarged-text-evasion-844",
+      "status": "PASS",
+      "data": {
+        "dialogWidth": 479,
+        "viewport": 844,
+        "contentHeight": 71,
+        "contentWidth": 432,
+        "contentScrollWidth": 432,
+        "footerBottom": 378,
+        "height": 390,
+        "titleSize": 44,
+        "valueSize": 28
+      }
+    },
+    {
+      "name": "drawer-scroll-lock-and-keyboard",
+      "status": "PASS"
+    },
+    {
+      "name": "generated-planet-is-used",
+      "status": "PASS"
+    },
+    {
+      "name": "no-state-or-storage-side-effects",
+      "status": "PASS"
+    },
+    {
+      "name": "cpu4x-pending-art-does-not-block-threat",
+      "status": "PASS",
+      "data": {
+        "cpuSlowdown": 4,
+        "pendingArt": "controlled request gate",
+        "clickToNextPaintProxyMs": 58.4,
+        "automatedRoundTripMs": 138.2,
+        "longTasksMs": [
+          137,
+          57,
+          66
+        ],
+        "planetRenderMs": [
+          415,
+          166.20000000298023
+        ],
+        "assets": [
+          {
+            "bytes": 190454,
+            "transferBytes": 190754
+          }
+        ]
+      }
+    },
+    {
+      "name": "landscape-touch-review-and-close",
+      "status": "PASS",
+      "data": {
+        "mobile": true,
+        "width": 844,
+        "height": 390,
+        "documentWidth": 844,
+        "ctaVisible": true,
+        "ctaBottom": 291,
+        "touchFailures": []
+      }
+    },
+    {
+      "name": "planet-art-failure-falls-back",
+      "status": "PASS"
+    }
+  ],
+  "layouts": [
+    {
+      "state": "idle",
+      "mobile": false,
+      "width": 1920,
+      "height": 1080,
+      "documentWidth": 1905,
+      "ctaVisible": true,
+      "ctaBottom": 664,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": false,
+      "width": 1920,
+      "height": 1080,
+      "documentWidth": 1905,
+      "ctaVisible": true,
+      "ctaBottom": 302.8,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": false,
+      "width": 1920,
+      "height": 1080,
+      "documentWidth": 1905,
+      "ctaVisible": true,
+      "ctaBottom": 600.2,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": false,
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1425,
+      "ctaVisible": true,
+      "ctaBottom": 660,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": false,
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1425,
+      "ctaVisible": true,
+      "ctaBottom": 298.8,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": false,
+      "width": 1440,
+      "height": 900,
+      "documentWidth": 1425,
+      "ctaVisible": true,
+      "ctaBottom": 621.3,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": false,
+      "width": 1024,
+      "height": 768,
+      "documentWidth": 1009,
+      "ctaVisible": true,
+      "ctaBottom": 677.6,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": false,
+      "width": 1024,
+      "height": 768,
+      "documentWidth": 1009,
+      "ctaVisible": true,
+      "ctaBottom": 295.2,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": false,
+      "width": 1024,
+      "height": 768,
+      "documentWidth": 1009,
+      "ctaVisible": true,
+      "ctaBottom": 638.9,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": true,
+      "width": 320,
+      "height": 568,
+      "documentWidth": 320,
+      "ctaVisible": true,
+      "ctaBottom": 367,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": true,
+      "width": 320,
+      "height": 568,
+      "documentWidth": 320,
+      "ctaVisible": true,
+      "ctaBottom": 453.9,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": true,
+      "width": 320,
+      "height": 568,
+      "documentWidth": 320,
+      "ctaVisible": true,
+      "ctaBottom": 367,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": true,
+      "width": 360,
+      "height": 640,
+      "documentWidth": 360,
+      "ctaVisible": true,
+      "ctaBottom": 367,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": true,
+      "width": 360,
+      "height": 640,
+      "documentWidth": 360,
+      "ctaVisible": true,
+      "ctaBottom": 453.9,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": true,
+      "width": 360,
+      "height": 640,
+      "documentWidth": 360,
+      "ctaVisible": true,
+      "ctaBottom": 367,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": true,
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "ctaVisible": true,
+      "ctaBottom": 403.6,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": true,
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "ctaVisible": true,
+      "ctaBottom": 490.5,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": true,
+      "width": 390,
+      "height": 844,
+      "documentWidth": 390,
+      "ctaVisible": true,
+      "ctaBottom": 403.6,
+      "touchFailures": []
+    },
+    {
+      "state": "idle",
+      "mobile": true,
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "ctaVisible": true,
+      "ctaBottom": 280,
+      "touchFailures": []
+    },
+    {
+      "state": "threat",
+      "mobile": true,
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "ctaVisible": true,
+      "ctaBottom": 291,
+      "touchFailures": []
+    },
+    {
+      "state": "complete",
+      "mobile": true,
+      "width": 844,
+      "height": 390,
+      "documentWidth": 844,
+      "ctaVisible": true,
+      "ctaBottom": 280,
+      "touchFailures": []
+    }
+  ],
+  "contrast": [
+    {
+      "state": "idle",
+      "width": 1920,
+      "checked": 89,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 1920,
+      "checked": 92,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 1920,
+      "checked": 84,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 1440,
+      "checked": 89,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 1440,
+      "checked": 92,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 1440,
+      "checked": 84,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 1024,
+      "checked": 75,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 1024,
+      "checked": 78,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 1024,
+      "checked": 70,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 320,
+      "checked": 65,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 320,
+      "checked": 66,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 320,
+      "checked": 63,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 360,
+      "checked": 65,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 360,
+      "checked": 66,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 360,
+      "checked": 63,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 390,
+      "checked": 67,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 390,
+      "checked": 68,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 390,
+      "checked": 65,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "idle",
+      "width": 844,
+      "checked": 64,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "threat",
+      "width": 844,
+      "checked": 65,
+      "minimum": 5.15,
+      "failures": []
+    },
+    {
+      "state": "complete",
+      "width": 844,
+      "checked": 62,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "empty",
+      "width": 390,
+      "checked": 63,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "offline",
+      "width": 390,
+      "checked": 70,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "loading",
+      "width": 390,
+      "checked": 64,
+      "minimum": 7.17,
+      "failures": []
+    },
+    {
+      "state": "empty",
+      "width": 1440,
+      "checked": 82,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "offline",
+      "width": 1440,
+      "checked": 89,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "state": "loading",
+      "width": 1440,
+      "checked": 83,
+      "minimum": 5.47,
+      "failures": []
+    },
+    {
+      "panel": "resources",
+      "checked": 17,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "planet",
+      "checked": 19,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "construction",
+      "checked": 19,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "research",
+      "checked": 17,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "fleet",
+      "checked": 15,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "career",
+      "checked": 9,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "galaxy",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "guild",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "reports",
+      "checked": 10,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "practice",
+      "checked": 6,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "threat",
+      "checked": 15,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "evasion",
+      "checked": 21,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "defense",
+      "checked": 16,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "more",
+      "checked": 22,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "settings",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "rankings",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    },
+    {
+      "panel": "diplomacy",
+      "checked": 7,
+      "minimum": 6.4,
+      "failures": []
+    }
+  ],
+  "ax": [
+    {
+      "panel": "resources",
+      "unnamed": 0
+    },
+    {
+      "panel": "planet",
+      "unnamed": 0
+    },
+    {
+      "panel": "construction",
+      "unnamed": 0
+    },
+    {
+      "panel": "research",
+      "unnamed": 0
+    },
+    {
+      "panel": "fleet",
+      "unnamed": 0
+    },
+    {
+      "panel": "career",
+      "unnamed": 0
+    },
+    {
+      "panel": "galaxy",
+      "unnamed": 0
+    },
+    {
+      "panel": "guild",
+      "unnamed": 0
+    },
+    {
+      "panel": "reports",
+      "unnamed": 0
+    },
+    {
+      "panel": "practice",
+      "unnamed": 0
+    },
+    {
+      "panel": "threat",
+      "unnamed": 0
+    },
+    {
+      "panel": "evasion",
+      "unnamed": 0
+    },
+    {
+      "panel": "defense",
+      "unnamed": 0
+    },
+    {
+      "panel": "more",
+      "unnamed": 0
+    },
+    {
+      "panel": "settings",
+      "unnamed": 0
+    },
+    {
+      "panel": "rankings",
+      "unnamed": 0
+    },
+    {
+      "panel": "diplomacy",
+      "unnamed": 0
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "limitations": [
+    "Automated emulation is not physical mobile hardware or screen-reader speech.",
+    "Contrast uses visible DOM text and composited flat ancestor colors; it is not a full WCAG certification."
+  ],
+  "performance": {
+    "cpuSlowdown": 4,
+    "pendingArt": "controlled request gate",
+    "clickToNextPaintProxyMs": 58.4,
+    "automatedRoundTripMs": 138.2,
+    "longTasksMs": [
+      137,
+      57,
+      66
+    ],
+    "planetRenderMs": [
+      415,
+      166.20000000298023
+    ],
+    "assets": [
+      {
+        "bytes": 190454,
+        "transferBytes": 190754
+      }
+    ]
+  },
+  "status": "PASS"
+}

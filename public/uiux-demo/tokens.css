@@ -1,0 +1,30 @@
+:root {
+  color-scheme: dark;
+  --dn-canvas: #080e18;
+  --dn-surface: #111b2b;
+  --dn-elevated: #18263a;
+  --dn-text: #e9f0fa;
+  --dn-secondary: #a8b9d0;
+  --dn-tertiary: #8d9fb8;
+  --dn-accent: #52c7df;
+  --dn-warning: #f2b85c;
+  --dn-danger: #f16b72;
+  --dn-success: #74d4ae;
+  --dn-border: #29374c;
+  --dn-focus: #9ae7f5;
+  --dn-control-border: #698099;
+  --dn-space-1: 4px;
+  --dn-space-2: 8px;
+  --dn-space-3: 12px;
+  --dn-space-4: 16px;
+  --dn-space-6: 24px;
+  --dn-space-8: 32px;
+  --dn-radius: 12px;
+  --dn-micro: 150ms;
+  --dn-panel: 240ms;
+  --dn-feedback: 450ms;
+  --dn-event: 480ms;
+  font-family: 'Segoe UI', 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
+  font-synthesis: none;
+  font-variant-numeric: tabular-nums;
+}
