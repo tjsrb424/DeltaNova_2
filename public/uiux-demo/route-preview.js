@@ -13,6 +13,7 @@ export function createRoutePreview(getState) {
     return (pausedAt??t)-offset;
   }
   function measure() {
+    if(stage.closest('[hidden]'))return;
     const s=stage.getBoundingClientRect(),g=canvas.getBoundingClientRect();
     if(!s.width||!g.width)return;
     const view={width:s.width,height:s.height,cx:g.left-s.left+g.width/2,cy:g.top-s.top+g.height/2,radius:g.width/2};

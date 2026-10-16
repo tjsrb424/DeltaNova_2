@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-16T05:38:44.866Z",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\.delta-nova\\command-perf-baseline\\public",
+  "browser": "155.0.8059.80",
+  "checks": [
+    {
+      "name": "construction command precedes artwork, explanation and full costs and fits above mobile navigation",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await button.evaluate(el=>[...el.closest('.ws-facility-detail').querySelectorAll('.dn-facility-display,.ws-muted,.ws-effect,.ws-cost-table,.ws-prerequisite')].every(other=>el.compareDocumentPosition(other)&Node.DOCUMENT_POSITION_FOLLOWING)))\n"
+    },
+    {
+      "name": "research and fleet preparation lead with one clear main action before explanatory copy",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await action.evaluate(el=>!!(el.compareDocumentPosition(el.parentElement.querySelector('p'))&Node.DOCUMENT_POSITION_FOLLOWING)))\n"
+    },
+    {
+      "name": "home decision action precedes its extended explanation and progress",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await p.locator('#context .button').evaluate(el=>el.compareDocumentPosition(el.parentElement.querySelector('p'))&Node.DOCUMENT_POSITION_FOLLOWING))\n"
+    },
+    {
+      "name": "quantity changes preserve display nodes, focus, exact values, errors and the top review control",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(await p.evaluate(()=>Object.entries(window.__retained).every(([key,el])=>el===({title:document.getElementById('strategy-estimate-title'),picked:document.querySelector('.sc-picked-ship'),metric:document.querySelector('#strategy-metrics dd'),input:document.activeElement})[key])))\n"
+    },
+    {
+      "name": "action ordering reflows with doubled text and retains keyboard access",
+      "passed": true
+    },
+    {
+      "name": "no script errors or game API mutations occur",
+      "passed": true
+    }
+  ],
+  "positions": [],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "8173d4adc151291c6e2d654152954acd7adbf5957e70921edc7d283a9699595d"
+    },
+    {
+      "file": "main.js",
+      "sha256": "9573185ce13b0e81c9b25db45d6a7b1f1193f29521ef68ae1cec9a9952fb68eb"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "e03e1542c599d7070419d7c923974ac2ee531de590f0287f878863159599bda5"
+    },
+    {
+      "file": "strategy.css",
+      "sha256": "c1ae963ee7bf5f16e7d5fc367c49848b6e4e8f0767c8da777f2b0a573db606ee"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "d10dd932ab1c8a95c8d91cd66bde58f220ba551e669e1784d3a9b393d9b85f95"
+    },
+    {
+      "file": "workspace.css",
+      "sha256": "f585603bdeff562ec8f96476f0fe2cec516a77fce3b0b7f8cbf718589a8769ae"
+    },
+    {
+      "file": "route-preview.js",
+      "sha256": "885aad64a360633dfd70d59d34d1b1ae3eaa7564257e796630322d5088a2ef0c"
+    }
+  ],
+  "passed": false
+}

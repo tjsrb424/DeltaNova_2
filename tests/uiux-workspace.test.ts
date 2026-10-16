@@ -11,6 +11,26 @@ const mount = (html: string) => {
 };
 
 describe('central demo workspaces', () => {
+  it('puts selected facility actions before art and explanations while preserving all costs and conditions',()=>{
+    const detail=mount(renderFacilityDetail(initialDemo().planets[0],'fuelRefinery'));
+    const action=detail.querySelector('button:disabled')!;
+    for(const explanation of detail.querySelectorAll('.dn-facility-display,.ws-muted,.ws-effect,.ws-cost-table,.ws-prerequisite')){
+      expect(action.compareDocumentPosition(explanation)&Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    }
+    expect(detail.querySelectorAll('.ws-cost-table tbody tr')).toHaveLength(3);
+    expect(detail.textContent).toContain('미연결');
+    const view=mount(renderWorkspace('construction',initialDemo(),'fuelRefinery'));
+    expect(view.querySelector('#workspace-facility-detail')!.compareDocumentPosition(view.querySelector('.ws-queue')!)&Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(view.querySelector('.ws-queue')!.compareDocumentPosition(view.querySelector('#workspace-facility-detail .dn-facility-display')!)&Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+  it('puts research and fleet preparation actions ahead of explanatory copy',()=>{
+    for(const page of ['research','fleet']){
+      const view=mount(renderWorkspace(page,initialDemo(),'fuelRefinery'));
+      const lead=view.querySelector('.ws-lead')!,action=lead.querySelector('button')!,description=lead.querySelector('p')!;
+      expect(action).not.toBeNull();
+      expect(action.compareDocumentPosition(description)&Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    }
+  });
   it('compares a selected facility using the current planet snapshot', () => {
     const state = transition(initialDemo(), { type: 'select', id: 'vesper' });
     const view = mount(renderWorkspace('construction', state, 'laboratory'));

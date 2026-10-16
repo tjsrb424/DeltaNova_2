@@ -1,3 +1,48 @@
+# 최신 후속 · 2026-10-16 명령 성능·행동 우선 배치
+
+브랜치는 **`codex/demo-visual-unification`**, 이번 비교 기준은 `255fa766ee92e1c1794e440e9e35d02c5b1ea080`이다. 독립 데모만 변경하며 데이터/서비스 UI 이관과 main 병합은 보류한다. 아래 이전 후속의 측정/기준 SHA는 당시 이력이다.
+
+- [원인 분리·수정·성능/UX 검수](./COMMAND_PERFORMANCE_ACTIONS_REVIEW.md), [전후 원문·캡처·재현](../qa/2026-10-16-command-performance-actions/README.md).
+- 명령 직접 진입의 중복 화면 배치와 숨겨진 장면 측정을 줄이고, 입력 표시 노드를 유지한다. 같은 값의 change 재처리를 생략하며 즉시 편성/오류/안내 반영을 유지한다.
+- 건설은 선택/실행→현재 건설→아트/효과/전체 비용·조건 순이다. 연구/함대/홈의 주요 행동도 설명 위에 둔다. 미연결 명령은 비활성이다.
+- 이번 검수도 headless이며 물리 기기·음성 스크린리더·실제 INP/전력은 미검수다. 수치는 사용자 정의 slow-network/CPU 조건의 관측이며 서비스 성능 보장이 아니다.
+
+아래 기존 clone 명령으로 같은 브랜치를 받는다. 데모는 `npm run dev:solo -- --port 5181 --strictPort`로 실행한다. 직접 `http://127.0.0.1:5181/uiux-demo/index.html?review=command-actions-v3#view=construction` 또는 `#view=command&target=tarsis&intent=attack&context=solo&step=fleet`에 접속한다. 창을 자동으로 열지 않는다.
+
+추가 검수(빌드 후):
+
+```powershell
+$env:DELTA_NOVA_DEMO_ROOT='dist'
+node tools/verify-command-actions.mjs
+node tools/verify-demo-mobile-a11y.mjs
+```
+
+명령 성능 재현은 다른 작업/브라우저 검수와 동시에 실행하지 않는다:
+
+```powershell
+New-Item -ItemType Directory -Force .delta-nova | Out-Null
+git archive --format=zip --output=.delta-nova/command-perf-baseline.zip 255fa766ee92e1c1794e440e9e35d02c5b1ea080 public/uiux-demo
+Expand-Archive -LiteralPath .delta-nova/command-perf-baseline.zip -DestinationPath .delta-nova/command-perf-baseline -Force
+Remove-Item Env:DELTA_NOVA_DEMO_ROOT, Env:DELTA_NOVA_COMMAND_MODE, Env:DELTA_NOVA_COMMAND_LABEL, Env:DELTA_NOVA_COMMAND_NO_PRELOAD, Env:DELTA_NOVA_COMMAND_MEMORY -ErrorAction SilentlyContinue
+$env:DELTA_NOVA_COMMAND_REPEATS='8'
+$env:DELTA_NOVA_COMMAND_PROFILE_OUT='.delta-nova/command-disk-recheck.json'
+node tools/profile-command-isolation.mjs
+$env:DELTA_NOVA_COMMAND_MEMORY='1'
+$env:DELTA_NOVA_COMMAND_PROFILE_OUT='.delta-nova/command-ram-recheck.json'
+node tools/profile-command-isolation.mjs
+Remove-Item Env:DELTA_NOVA_COMMAND_MEMORY, Env:DELTA_NOVA_COMMAND_PROFILE_OUT, Env:DELTA_NOVA_COMMAND_REPEATS -ErrorAction SilentlyContinue
+```
+
+최종 비교는 원형 응답·파일 서버8쌍과 RAM 서버8쌍을 별도 기록한다. 양쪽 로드당6회 입력이며 RAM은 서버 읽기 대기만 제거하고 브라우저 cache off/동일 네트워크·CPU는 유지한다. LCP/load/입력 비용은 줄었고 DOM 초기화는 약0.2초 늘었다. [표본 범위·정의·원문](../qa/2026-10-16-command-performance-actions/README.md)을 함께 본다.
+
+원인 진단용 `DELTA_NOVA_COMMAND_MODE=cost`는 로드당30회 입력/함수 wrapper 계측이다. `DELTA_NOVA_COMMAND_NO_PRELOAD=1`과 `DELTA_NOVA_COMMAND_LABEL=after`는 검수 서버 응답에서만 modulepreload3개를 제거하는 별도 대조군이다. 해당 설정은 정상 비교 전에 제거한다. 기존4화면 프로파일은 `DELTA_NOVA_LOADING_BASE_REF=255fa766ee92e1c1794e440e9e35d02c5b1ea080`, `DELTA_NOVA_LOADING_BEFORE=.delta-nova/command-perf-baseline/public`를 지정하고 `node tools/profile-demo-loading.mjs`로 실행한다. 그 결과와 명령 전용 최종 실험은 섞지 않는다.
+
+결과는 ignored `.delta-nova/`에 저장된다. 현재 브라우저/runtime 경로 재정의는 아래 설명을 따른다.
+
+다음 검수는 실제 휴대폰 키보드·VoiceOver/TalkBack·명령 입력 지연 순으로 독립 데모에서 진행한다.
+
+---
+
 # 최신 후속 · 2026-10-16 모바일·접근성·로딩 검수
 
 현재 브랜치는 **`codex/demo-visual-unification`**이다. 이번 후속 기준은 `e0f9e279c3b66bcb62b4cb6690bf1e0aed050667`. main 병합, 서버 데이터 연결, 운영 UI 교체는 계속 보류한다. 기존 `D:/kim_dev/DeltaNova` 체크아웃/브랜치를 보존하고 별도 worktree에서 작업했다. 아래 이전 기록의 기준 SHA와 결과는 당시 이력이다.

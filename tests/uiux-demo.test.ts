@@ -24,6 +24,24 @@ describe('disconnected design demo', () => {
     disposeDemo = (await import('../public/uiux-demo/main.js')).disposeDemo;
   });
   afterEach(() => { disposeDemo?.(); vi.clearAllTimers(); vi.useRealTimers(); vi.unstubAllGlobals(); });
+  it('updates a selected fleet without replacing its summary, metrics or selected ship nodes',()=>{
+    click('.sidebar [data-view="career"]');click('#strategy-target-tarsis [data-strategy-open]');
+    const input=document.querySelector('#strategy-count-striker') as HTMLInputElement;
+    const set=(value:string)=>{input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));};
+    input.focus();set('1');
+    const heading=document.querySelector('#strategy-estimate-title'),picked=document.querySelector('.sc-picked-ship'),metric=document.querySelector('#strategy-metrics dd');
+    set('2');
+    expect(document.querySelector('#strategy-estimate-title')).toBe(heading);
+    expect(document.querySelector('.sc-picked-ship')).toBe(picked);
+    expect(document.querySelector('#strategy-metrics dd')).toBe(metric);
+    expect(picked?.textContent).toContain('×2');
+    expect(heading?.textContent).toContain('2척');
+    expect(document.activeElement).toBe(input);
+    expect(document.querySelector('#announcement')?.textContent).toContain('편성 2척');
+    const announcement=document.querySelector('#announcement')?.firstChild;
+    input.dispatchEvent(new Event('change',{bubbles:true}));
+    expect(document.querySelector('#announcement')?.firstChild).toBe(announcement);
+  });
   it('prepares a fleet command, preserves live inputs, and previews it without spending assets',()=>{
     click('.sidebar [data-view="career"]');
     click('#strategy-target-tarsis [data-strategy-open]');

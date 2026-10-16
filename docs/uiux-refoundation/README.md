@@ -2,7 +2,9 @@
 
 사용자 요청일: 2026-10-15. 방향: **Minimal Galactic Command**.
 
-**최신 후속 · 2026-10-16:** [모바일·접근성·로딩·기존 함선 평가](./MOBILE_A11Y_LOADING_REVIEW.md), [검증 원문·실제 화면](../qa/2026-10-16-mobile-a11y-loading/README.md). 같은 `codex/demo-visual-unification` 브랜치. [이어가기](./HANDOFF.md) 맨 위를 사용한다.
+**최신 후속 · 2026-10-16:** [명령 성능 원인 분리·실행 우선 배치](./COMMAND_PERFORMANCE_ACTIONS_REVIEW.md), [검증 원문·화면](../qa/2026-10-16-command-performance-actions/README.md). 같은 브랜치이며 최신 재개 명령은 HANDOFF 맨 위에 있다.
+
+**이전 모바일 후속 · 2026-10-16:** [모바일·접근성·로딩·기존 함선 평가](./MOBILE_A11Y_LOADING_REVIEW.md), [검증 원문·실제 화면](../qa/2026-10-16-mobile-a11y-loading/README.md). 같은 `codex/demo-visual-unification` 브랜치. [이어가기](./HANDOFF.md) 맨 위를 사용한다.
 
 **이전 전체 화면 후속 · 2026-10-16:** [전체 데모 그래픽·네온 출항 설계](./VISUAL_UNIFICATION_PLAN.md), [평가·검수](./VISUAL_UNIFICATION_REVIEW.md), [실제 화면](../qa/2026-10-16-visual-unification/README.md). 현재 브랜치는 `codex/demo-visual-unification`이며 데이터/운영 이관은 보류한다. [다른 PC에서 이어가기](./HANDOFF.md) 맨 위를 사용한다.
 

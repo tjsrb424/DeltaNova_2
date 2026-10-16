@@ -4,12 +4,12 @@ import { drawPlanet, syncPlanetMotion } from './planet.js';
 import { facilityCards, facilityPreview } from './presentation.js';
 import { createRoutePreview } from './route-preview.js';
 import { createDemoNavigation } from './navigation.js';
-import { workspaceTitles, renderWorkspace, renderFacilityDetail } from './workspace.js';
+import { workspaceTitles, renderWorkspace, renderFacilityDetail, renderConstructionQueue } from './workspace.js';
 import { galaxyTargets, initialGalaxy, transitionGalaxy, visibleGalaxyTargets, selectedGalaxyTarget, renderGalaxyContent, renderGalaxyReport } from './galaxy.js';
 import { missions, ships, initialOperations, operationDraft, operationInventory, transitionOperations, renderPracticeSummary, renderPracticeResult } from './operations.js';
 import { allianceRoles, initialAlliance, transitionAlliance } from './alliance.js';
 import { initialStrategy,strategyShips,strategyFleet,strategySummary,transitionStrategy } from './strategy-model.js';
-import { renderStrategyPicked,renderStrategyMetrics,renderStrategyEstimate } from './strategy.js';
+import { refreshStrategyDisplay } from './strategy.js';
 
 const stationArt = '<svg viewBox="0 0 160 76" fill="none" aria-hidden="true"><g stroke="#8fa8ba" stroke-width="1"><path d="m5 23 42-9 6 32-42 9zM108 12l43 9-6 32-43-9z" fill="#1d3648"/><path d="m16 21 6 32m5-34 6 32m5-34 6 32M10 34l40-9M12 44l40-9M119 15l-6 31m17-29-6 31m17-29-6 31m-25-26 40 9m-42 1 40 9" opacity=".7"/><path d="m46 29 68-3-1 9-66 3z" fill="#617789"/><path d="m65 20 20-7 17 9-3 26-22 8-14-10z" fill="#7f919c"/><path d="m65 20 12 10 25-8M77 30v26"/><path d="m72 25 11-4 9 5-11 4z" fill="#bad3dc"/><path d="m83 35 12-4-1 9-12 4z" fill="#163548"/><path d="M81 14V4m-6 0h12M69 49l-8 13m36-14 8 13"/><g class="station-extension"><path d="m73 56 13-5 4 12-14 5z" fill="#a0aeb6"/><path d="M77 68v6m5-7v6"/></g></g><circle cx="80" cy="9" r="1.2" fill="#e0b975"/><circle cx="112" cy="30" r="1.1" fill="#68b6ce"/></svg>';
 const icon = kind => kind === 'station' ? stationArt : uiIcon(kind);
@@ -89,7 +89,7 @@ function act(action) {
   if (action.type === 'select') announce(planet().name + ' 예시 스냅샷을 선택했습니다.');
   if (action.type === 'snapshot') announce('시설 예시 스냅샷을 변경했습니다. 생산 시설, 조선소 수준이 행성에 반영됩니다.');
 }
-function render() {
+function render({workspace=true}={}) {
   const focused = bookmark(document.activeElement);
   const p = planet(), v = visualFacilities(p), unavailable = state.connection === 'loading';
   document.body.classList.toggle('has-threat', !!state.threat);
@@ -132,20 +132,20 @@ function render() {
   if (state.connection !== 'ready') $('connection-state').innerHTML = state.connection === 'loading' ? '<strong>불러오는 상태 예시</strong><p>서버 요청 없이 로딩 표현만 검토합니다.</p>' : `<div><strong>연결 오류 예시 · 마지막 예시 스냅샷</strong><p>실제 서버에 연결하지 않았습니다. 명령을 실행할 수 없습니다.</p></div><button class="button secondary" id="retry-button">다시 표시 · 데모</button>`;
   $('empty-button').setAttribute('aria-pressed', String(state.empty));
   $('offline-button').setAttribute('aria-pressed', String(state.connection === 'offline'));
-  renderCurrentWorkspace();
+  if(workspace)renderCurrentWorkspace();
   if (dialog.open && panel) renderPanel();
   if (focused && !focused.element.isConnected && document.activeElement === document.body) {
     (resolveBookmark(focused) || (dialog.open ? $('dialog-close') : $('planet-select'))).focus({preventScroll:true});
   }
-  routePreview.render();
+  if(workspace)routePreview.render();
 }
 function contextContent() {
   const f=facilityPreview(planet(),'fuelRefinery');
-  if (state.threat) return `<article class="decision-card threat"><div class="card-icon">${icon('warning')}</div><span class="overline">위협 우선 · 예시</span><h3>노바 프라임에<br><span data-threat-phase>적 함대 접근</span></h3><p>선택 행성은 ${planet().name}입니다.<br>대응 전 위협 대상과 함대를 확인하세요.</p><div class="job-time"><span><span data-incoming-caption>외곽 도달까지</span> · 시연</span><strong><time data-route-eta="incoming">02:40</time></strong></div><button class="button secondary" data-panel="threat">위협 상세 보기 ${icon('compass')}</button>${state.notice ? `<div class="inline-feedback">${state.notice.text}<br>위협 예시는 계속 유지됩니다.</div>` : ''}</article>`;
-  if (state.notice) return `<article class="decision-card complete"><div class="card-icon">${icon('check')}</div><span class="overline">완료 피드백 · 시연 이벤트</span><h3>다음 성장을<br>준비할 시간.</h3><p>${state.notice.text}<br>실제 완료나 자산 변화를 뜻하지 않습니다.</p><button class="button" data-panel="reports">완료 예시 확인 ${icon('reports')}</button></article>`;
-  if (state.connection !== 'ready') return `<article class="decision-card"><div class="card-icon">${icon('info')}</div><span class="overline">${state.connection === 'offline' ? '연결 오류' : '로딩'} 예시</span><h3>명령은 실행되지<br>않습니다.</h3><p>네트워크 요청이 없는 독립 데모입니다. 상태 표현과 복귀 경로를 확인하세요.</p><button class="button secondary" data-panel="resources">예시 데이터 확인</button></article>`;
-  if (state.empty || planet().id === 'vesper') return `<article class="decision-card"><div class="card-icon">${icon('build')}</div><span class="overline">새로운 계획</span><h3>다음 개발을<br>선택하세요.</h3><p>진행 중인 작업이 없습니다. 시설 목록에서 다음 투자 대상을 검토할 수 있습니다.</p><button class="button" data-panel="construction">건설 관리 열기 ${icon('build')}</button></article>`;
-  return `<article class="decision-card"><div class="card-icon">${icon('fuel')}</div><span class="overline">현재 건설</span><h3>연료 합성소<br>Lv.${f.level} <span style="color:var(--dn-tertiary)">→</span> Lv.${f.next}</h3><p>시설 생산 기여 <strong>${f.before} → ${f.after} /분</strong><br><small>효과 비교 예시</small></p><div class="job-time"><span>남은 시간 · 고정 예시</span><strong>01:24</strong></div><div class="progress-track" role="progressbar" aria-label="주요 건설 진행 예시" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i style="width:62%"></i></div><button class="button" data-panel="construction">효과와 조건 확인 ${icon('build')}</button></article>`;
+  if (state.threat) return `<article class="decision-card threat"><div class="card-icon">${icon('warning')}</div><span class="overline">위협 우선 · 예시</span><h3>노바 프라임에<br><span data-threat-phase>적 함대 접근</span></h3><button class="button secondary" data-panel="threat">위협 상세 보기 ${icon('compass')}</button><p>선택 행성은 ${planet().name}입니다.<br>대응 전 위협 대상과 함대를 확인하세요.</p><div class="job-time"><span><span data-incoming-caption>외곽 도달까지</span> · 시연</span><strong><time data-route-eta="incoming">02:40</time></strong></div>${state.notice ? `<div class="inline-feedback">${state.notice.text}<br>위협 예시는 계속 유지됩니다.</div>` : ''}</article>`;
+  if (state.notice) return `<article class="decision-card complete"><div class="card-icon">${icon('check')}</div><span class="overline">완료 피드백 · 시연 이벤트</span><h3>다음 성장을<br>준비할 시간.</h3><button class="button" data-panel="reports">완료 예시 확인 ${icon('reports')}</button><p>${state.notice.text}<br>실제 완료나 자산 변화를 뜻하지 않습니다.</p></article>`;
+  if (state.connection !== 'ready') return `<article class="decision-card"><div class="card-icon">${icon('info')}</div><span class="overline">${state.connection === 'offline' ? '연결 오류' : '로딩'} 예시</span><h3>명령은 실행되지<br>않습니다.</h3><button class="button secondary" data-panel="resources">예시 데이터 확인</button><p>네트워크 요청이 없는 독립 데모입니다. 상태 표현과 복귀 경로를 확인하세요.</p></article>`;
+  if (state.empty || planet().id === 'vesper') return `<article class="decision-card"><div class="card-icon">${icon('build')}</div><span class="overline">새로운 계획</span><h3>다음 개발을<br>선택하세요.</h3><button class="button" data-panel="construction">건설 관리 열기 ${icon('build')}</button><p>진행 중인 작업이 없습니다. 시설 목록에서 다음 투자 대상을 검토할 수 있습니다.</p></article>`;
+  return `<article class="decision-card"><div class="card-icon">${icon('fuel')}</div><span class="overline">현재 건설</span><h3>연료 합성소<br>Lv.${f.level} <span style="color:var(--dn-tertiary)">→</span> Lv.${f.next}</h3><button class="button" data-panel="construction">효과와 조건 확인 ${icon('build')}</button><p>시설 생산 기여 <strong>${f.before} → ${f.after} /분</strong><br><small>효과 비교 예시</small></p><div class="job-time"><span>남은 시간 · 고정 예시</span><strong>01:24</strong></div><div class="progress-track" role="progressbar" aria-label="주요 건설 진행 예시" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i style="width:62%"></i></div></article>`;
 }
 function renderCurrentWorkspace() {
   const home = view === 'home';
@@ -184,10 +184,8 @@ function openStrategy(target,intent,context='solo'){
 }
 function refreshStrategy(){
   if(view!=='command'||!$('strategy-estimate')||state.connection!=='ready')return;
-  const s=strategySummary(strategyUI,state),focused=bookmark(document.activeElement),scroll=window.scrollY;
-  $('strategy-estimate').innerHTML=renderStrategyEstimate(state,strategyUI);
-  $('strategy-picked').innerHTML=renderStrategyPicked(state,strategyUI);
-  $('strategy-metrics').innerHTML=renderStrategyMetrics(state,strategyUI);
+  const s=strategySummary(strategyUI,state);
+  refreshStrategyDisplay(state,strategyUI,s);
   $('strategy-review').disabled=!s.valid;
   if($('strategy-mobile-count'))$('strategy-mobile-count').textContent=`${s.total}척 · 지휘 ${s.command}/12`;
   $('strategy-delay').value=String(strategyUI.delay);
@@ -203,7 +201,6 @@ function refreshStrategy(){
       if(button){button.disabled=!max;button.setAttribute('aria-disabled',String(unavailable||!max));}
     }
   }
-  resolveBookmark(focused)?.focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});
 }
 function changeStrategy(action){
   if(state.connection!=='ready')return;
@@ -230,7 +227,7 @@ function changeStrategy(action){
     refreshStrategy();
     if(action.type==='quantity'&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!document.body.matches('.motion-paused,.page-hidden')){
       const art=document.querySelector(`[data-strategy-ship="${action.id}"] .sc-ship-art`);
-      if(art){art.classList.remove('sc-edited');void art.offsetWidth;art.classList.add('sc-edited');}
+      if(art){art.style.animationName=art.style.animationName==='sc-quantity-lift'?'sc-quantity-lift-alt':'sc-quantity-lift';art.classList.add('sc-edited');}
     }
     if(['quantity','delay'].includes(action.type)&&strategyUI!==before){const summary=strategySummary(strategyUI,state);announce(`편성 ${summary.total}척, 지휘 ${summary.command} / 12. ${summary.errors.length?summary.errors.map(e=>e.text).join(' '):'명령 확인이 가능합니다. 실제 출항은 시연에서만 진행합니다.'}`);}
     if(action.type==='clear')announce('함대 편성을 비웠습니다. 함종과 수량을 다시 선택하세요.');
@@ -441,7 +438,7 @@ function selectWorkspaceFacility(key) {
   if (!facilityCards[key]) return;
   selectedFacility = key;
   syncFacilitySelection();
-  if (state.connection === 'ready') $('workspace-facility-detail').innerHTML = renderFacilityDetail(planet(),key);
+  if (state.connection === 'ready') $('workspace-facility-detail').innerHTML = renderFacilityDetail(planet(),key,{queue:renderConstructionQueue(state,planet())});
   document.querySelectorAll('[data-workspace-facility]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.workspaceFacility===key)));
   $('workspace-facility-select').value=key;
   hydrateIcons($('workspace-facility-detail'));
@@ -538,7 +535,7 @@ listen(dialog,'click',event=>{
 });
 listen(document,'change',event=>{
   if(event.target.id==='strategy-delay')changeStrategy({type:'delay',value:event.target.value});
-  if(event.target.dataset.strategyQuantity)changeStrategy({type:'quantity',id:event.target.dataset.strategyQuantity,value:event.target.value});
+  if(event.target.dataset.strategyQuantity&&event.target.value!==String(strategyFleet(strategyUI,state)[event.target.dataset.strategyQuantity]||0))changeStrategy({type:'quantity',id:event.target.dataset.strategyQuantity,value:event.target.value});
   if(event.target.id==='alliance-role-select')navigationController.go({role:event.target.value});
   if(event.target.id==='alliance-scenario')changeAlliance({type:'scenario',value:event.target.value});
   if(event.target.id==='alliance-formation')changeAlliance({type:'formation',value:event.target.value});
@@ -562,7 +559,7 @@ listen(document,'compositionend',event=>{
 });
 listen(document,'visibilitychange',()=>{document.body.classList.toggle('page-hidden',document.hidden);syncPlanetMotion($('planet-canvas'));});
 hydrateIcons();
-render();
+render({workspace:false});
 navigationController=createDemoNavigation(applyNavigation,{views:Object.keys(workspaceTitles),details:['resources','planet','fleet','research','reports','threat','recon','intel','settings'],targets:galaxyTargets.map(target=>target.id),missions:missions.map(mission=>mission.id),roles:allianceRoles.map(role=>role.id)});
 syncStrategyRoute();
 demoReady=true;renderVisiblePlanet();

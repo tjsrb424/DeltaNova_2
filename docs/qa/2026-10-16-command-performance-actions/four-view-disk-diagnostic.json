@@ -1,0 +1,1025 @@
+{
+  "views": [
+    "home",
+    "construction",
+    "research",
+    "command"
+  ],
+  "repeats": 3,
+  "date": "2026-10-16T05:47:21.295Z",
+  "baseline": "255fa766ee92e1c1794e440e9e35d02c5b1ea080",
+  "baselineFiles": 41,
+  "browser": "155.0.8059.80",
+  "method": "Alternating cold contexts at390x844 DPR3, cache disabled. Network1.6Mbps down/750kbps up, configured latency150ms, CPU4x slowdown. LCP last observation before explicit input; ready is a browser MutationObserver timestamp after resource controls and the requested workspace are initialized; doubleRAF is not INP. Shared host, no physical phone.",
+  "samples": [
+    {
+      "view": "home",
+      "repeat": 1,
+      "label": "before",
+      "ready": 5439.699999999255,
+      "layoutShifts": [],
+      "dcl": 5439.89999999851,
+      "load": 6223.29999999702,
+      "lcp": 3224,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "planet-name",
+        "className": "",
+        "url": "",
+        "size": 4158
+      },
+      "cls": 0,
+      "longTasks": [
+        89,
+        65,
+        67,
+        57,
+        53,
+        59,
+        68,
+        467,
+        84,
+        561,
+        65
+      ],
+      "resourceBodyBytes": 868986,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 3224,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 1,
+      "label": "after",
+      "ready": 6014.300000000745,
+      "layoutShifts": [],
+      "dcl": 6014.400000002235,
+      "load": 6393.20000000298,
+      "lcp": 3164,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "planet-name",
+        "className": "",
+        "url": "",
+        "size": 4158
+      },
+      "cls": 0,
+      "longTasks": [
+        355,
+        71,
+        67,
+        517,
+        208
+      ],
+      "resourceBodyBytes": 871329,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 3164,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 2,
+      "label": "after",
+      "ready": 4113.800000000745,
+      "layoutShifts": [],
+      "dcl": 4114.199999999255,
+      "load": 5093.89999999851,
+      "lcp": 1700,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "planet-name",
+        "className": "",
+        "url": "",
+        "size": 4158
+      },
+      "cls": 0,
+      "longTasks": [
+        193,
+        192
+      ],
+      "resourceBodyBytes": 871329,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 1700,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 2,
+      "label": "before",
+      "ready": 4135.5,
+      "layoutShifts": [],
+      "dcl": 4136,
+      "load": 5056.89999999851,
+      "lcp": 1892,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "planet-name",
+        "className": "",
+        "url": "",
+        "size": 4158
+      },
+      "cls": 0,
+      "longTasks": [
+        125,
+        193
+      ],
+      "resourceBodyBytes": 868986,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 1892,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 3,
+      "label": "before",
+      "ready": 4193.699999999255,
+      "layoutShifts": [],
+      "dcl": 4194.199999999255,
+      "load": 5102.800000000745,
+      "lcp": 1896,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "planet-name",
+        "className": "",
+        "url": "",
+        "size": 4158
+      },
+      "cls": 0,
+      "longTasks": [
+        193,
+        254
+      ],
+      "resourceBodyBytes": 868986,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 1896,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 3,
+      "label": "after",
+      "ready": 4050.199999999255,
+      "layoutShifts": [],
+      "dcl": 4050.699999999255,
+      "load": 5005.89999999851,
+      "lcp": 1712,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "planet-name",
+        "className": "",
+        "url": "",
+        "size": 4158
+      },
+      "cls": 0,
+      "longTasks": [
+        143,
+        133
+      ],
+      "resourceBodyBytes": 871329,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 1712,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 1,
+      "label": "before",
+      "ready": 3218.10000000149,
+      "layoutShifts": [],
+      "dcl": 3218.800000000745,
+      "load": 4240.900000002235,
+      "lcp": 3636,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-construction",
+        "url": "sector-space-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        291
+      ],
+      "resourceBodyBytes": 590764,
+      "art": [
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1728,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 1,
+      "label": "after",
+      "ready": 2947.5,
+      "layoutShifts": [],
+      "dcl": 2948.099999997765,
+      "load": 4090.800000000745,
+      "lcp": 3124,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "workspace-title",
+        "className": "",
+        "url": "",
+        "size": 4255
+      },
+      "cls": 0,
+      "longTasks": [
+        258
+      ],
+      "resourceBodyBytes": 593107,
+      "art": [
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        }
+      ],
+      "fcp": 1712,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 2,
+      "label": "after",
+      "ready": 2992.60000000149,
+      "layoutShifts": [],
+      "dcl": 2993.199999999255,
+      "load": 4144.699999999255,
+      "lcp": 3172,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "workspace-title",
+        "className": "",
+        "url": "",
+        "size": 4255
+      },
+      "cls": 0,
+      "longTasks": [
+        307
+      ],
+      "resourceBodyBytes": 593107,
+      "art": [
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        }
+      ],
+      "fcp": 1744,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 2,
+      "label": "before",
+      "ready": 3214.10000000149,
+      "layoutShifts": [],
+      "dcl": 3214.5,
+      "load": 4265.20000000298,
+      "lcp": 3544,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-construction",
+        "url": "sector-space-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        305
+      ],
+      "resourceBodyBytes": 590764,
+      "art": [
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1716,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 3,
+      "label": "before",
+      "ready": 3137,
+      "layoutShifts": [],
+      "dcl": 3137.5,
+      "load": 4180.199999999255,
+      "lcp": 3456,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-construction",
+        "url": "sector-space-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        280
+      ],
+      "resourceBodyBytes": 590764,
+      "art": [
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1680,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 3,
+      "label": "after",
+      "ready": 2968.5,
+      "layoutShifts": [],
+      "dcl": 2968.89999999851,
+      "load": 4118.599999997765,
+      "lcp": 3108,
+      "lcpDetail": {
+        "tag": "H1",
+        "id": "workspace-title",
+        "className": "",
+        "url": "",
+        "size": 4255
+      },
+      "cls": 0,
+      "longTasks": [
+        242
+      ],
+      "resourceBodyBytes": 593107,
+      "art": [
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        }
+      ],
+      "fcp": 1732,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 1,
+      "label": "before",
+      "ready": 3199.300000000745,
+      "layoutShifts": [],
+      "dcl": 3199.800000000745,
+      "load": 4537,
+      "lcp": 4100,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-research",
+        "url": "research-observatory-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        257
+      ],
+      "resourceBodyBytes": 649618,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1740,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 1,
+      "label": "after",
+      "ready": 2944.89999999851,
+      "layoutShifts": [],
+      "dcl": 2945.5,
+      "load": 4373.199999999255,
+      "lcp": 3964,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-research",
+        "url": "research-observatory-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        287
+      ],
+      "resourceBodyBytes": 651961,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1724,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 2,
+      "label": "after",
+      "ready": 2914.2999999970198,
+      "layoutShifts": [],
+      "dcl": 2914.599999997765,
+      "load": 4354.599999997765,
+      "lcp": 3944,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-research",
+        "url": "research-observatory-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        225
+      ],
+      "resourceBodyBytes": 651961,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1676,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 2,
+      "label": "before",
+      "ready": 3163.599999997765,
+      "layoutShifts": [],
+      "dcl": 3164.39999999851,
+      "load": 4500.699999999255,
+      "lcp": 4084,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-research",
+        "url": "research-observatory-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        266
+      ],
+      "resourceBodyBytes": 649618,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1724,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 3,
+      "label": "before",
+      "ready": 3187.099999997765,
+      "layoutShifts": [],
+      "dcl": 3187.800000000745,
+      "load": 4533,
+      "lcp": 4124,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-research",
+        "url": "research-observatory-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        266
+      ],
+      "resourceBodyBytes": 649618,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1748,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 3,
+      "label": "after",
+      "ready": 2928.39999999851,
+      "layoutShifts": [],
+      "dcl": 2928.5,
+      "load": 4367.800000000745,
+      "lcp": 3952,
+      "lcpDetail": {
+        "tag": "DIV",
+        "id": "",
+        "className": "dn-lead-art dn-lead-research",
+        "url": "research-observatory-v1.webp",
+        "size": 51264
+      },
+      "cls": 0,
+      "longTasks": [
+        227
+      ],
+      "resourceBodyBytes": 651961,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1724,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "command",
+      "repeat": 1,
+      "label": "before",
+      "ready": 3324.099999997765,
+      "layoutShifts": [],
+      "dcl": 3324.699999999255,
+      "load": 4791.89999999851,
+      "lcp": 4836,
+      "lcpDetail": {
+        "tag": "SECTION",
+        "id": "",
+        "className": "sc-hangar",
+        "url": "orbital-hangar-v1.webp",
+        "size": 44982
+      },
+      "cls": 0,
+      "longTasks": [
+        411,
+        53
+      ],
+      "resourceBodyBytes": 700058,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 1740,
+      "inputDoubleRAF": [
+        96.40000000223517,
+        81.70000000298023,
+        35.69999999925494,
+        48.19999999925494,
+        23.900000002235174,
+        24.799999997019768
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 1,
+      "label": "after",
+      "ready": 3303.5,
+      "layoutShifts": [],
+      "dcl": 3303.89999999851,
+      "load": 5000.300000000745,
+      "lcp": 5040,
+      "lcpDetail": {
+        "tag": "SECTION",
+        "id": "",
+        "className": "sc-hangar",
+        "url": "orbital-hangar-v1.webp",
+        "size": 44982
+      },
+      "cls": 0,
+      "longTasks": [
+        131
+      ],
+      "resourceBodyBytes": 702401,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 2252,
+      "inputDoubleRAF": [
+        26.600000001490116,
+        24.800000000745058,
+        67.69999999925494,
+        20.199999999254942,
+        15.800000000745058,
+        23.300000000745058
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 2,
+      "label": "after",
+      "ready": 4133.5,
+      "layoutShifts": [],
+      "dcl": 4133.70000000298,
+      "load": 5844.900000002235,
+      "lcp": 5920,
+      "lcpDetail": {
+        "tag": "SECTION",
+        "id": "",
+        "className": "sc-hangar",
+        "url": "orbital-hangar-v1.webp",
+        "size": 44982
+      },
+      "cls": 0,
+      "longTasks": [
+        50,
+        226
+      ],
+      "resourceBodyBytes": 702401,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 2812,
+      "inputDoubleRAF": [
+        23.899999998509884,
+        21.100000001490116,
+        22.5,
+        23.700000002980232,
+        13.5,
+        21.399999998509884
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 2,
+      "label": "before",
+      "ready": 2934.300000000745,
+      "layoutShifts": [],
+      "dcl": 2934.800000000745,
+      "load": 4544.900000002235,
+      "lcp": 4600,
+      "lcpDetail": {
+        "tag": "SPAN",
+        "id": "",
+        "className": "sc-ship-art sc-art-striker",
+        "url": "fleet-roster-v2.webp",
+        "size": 19666
+      },
+      "cls": 0,
+      "longTasks": [
+        135
+      ],
+      "resourceBodyBytes": 700058,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 1572,
+      "inputDoubleRAF": [
+        16.5,
+        15,
+        19.900000002235174,
+        25.599999997764826,
+        14.799999997019768,
+        24.100000001490116
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 3,
+      "label": "before",
+      "ready": 5875.60000000149,
+      "layoutShifts": [],
+      "dcl": 5875.800000000745,
+      "load": 7485.900000002235,
+      "lcp": 7544,
+      "lcpDetail": {
+        "tag": "SECTION",
+        "id": "",
+        "className": "sc-hangar",
+        "url": "orbital-hangar-v1.webp",
+        "size": 44982
+      },
+      "cls": 0,
+      "longTasks": [
+        196
+      ],
+      "resourceBodyBytes": 700058,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 1824,
+      "inputDoubleRAF": [
+        24.699999999254942,
+        29.099999997764826,
+        39,
+        17.099999997764826,
+        26.900000002235174,
+        14.5
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 3,
+      "label": "after",
+      "ready": 7543.29999999702,
+      "layoutShifts": [],
+      "dcl": 7543.599999997765,
+      "load": 9381.39999999851,
+      "lcp": 9500,
+      "lcpDetail": {
+        "tag": "SECTION",
+        "id": "",
+        "className": "sc-hangar",
+        "url": "orbital-hangar-v1.webp",
+        "size": 44982
+      },
+      "cls": 0,
+      "longTasks": [
+        151
+      ],
+      "resourceBodyBytes": 702401,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 6008,
+      "inputDoubleRAF": [
+        18.300000000745058,
+        19.800000000745058,
+        15.800000000745058,
+        20.699999999254942,
+        27.600000001490116,
+        33.5
+      ]
+    }
+  ],
+  "summary": {
+    "home": {
+      "before": {
+        "ready": 4193.699999999255,
+        "fcp": 1896,
+        "dcl": 4194.199999999255,
+        "load": 5102.800000000745,
+        "lcp": 1896,
+        "cls": 0,
+        "resourceBodyBytes": 868986
+      },
+      "after": {
+        "ready": 4113.800000000745,
+        "fcp": 1712,
+        "dcl": 4114.199999999255,
+        "load": 5093.89999999851,
+        "lcp": 1712,
+        "cls": 0,
+        "resourceBodyBytes": 871329
+      }
+    },
+    "construction": {
+      "before": {
+        "ready": 3214.10000000149,
+        "fcp": 1716,
+        "dcl": 3214.5,
+        "load": 4240.900000002235,
+        "lcp": 3544,
+        "cls": 0,
+        "resourceBodyBytes": 590764
+      },
+      "after": {
+        "ready": 2968.5,
+        "fcp": 1732,
+        "dcl": 2968.89999999851,
+        "load": 4118.599999997765,
+        "lcp": 3124,
+        "cls": 0,
+        "resourceBodyBytes": 593107
+      }
+    },
+    "research": {
+      "before": {
+        "ready": 3187.099999997765,
+        "fcp": 1740,
+        "dcl": 3187.800000000745,
+        "load": 4533,
+        "lcp": 4100,
+        "cls": 0,
+        "resourceBodyBytes": 649618
+      },
+      "after": {
+        "ready": 2928.39999999851,
+        "fcp": 1724,
+        "dcl": 2928.5,
+        "load": 4367.800000000745,
+        "lcp": 3952,
+        "cls": 0,
+        "resourceBodyBytes": 651961
+      }
+    },
+    "command": {
+      "before": {
+        "ready": 3324.099999997765,
+        "fcp": 1740,
+        "dcl": 3324.699999999255,
+        "load": 4791.89999999851,
+        "lcp": 4836,
+        "cls": 0,
+        "resourceBodyBytes": 700058,
+        "inputMedian": 24.749999998137355,
+        "inputP95": 96.40000000223517
+      },
+      "after": {
+        "ready": 4133.5,
+        "fcp": 2812,
+        "dcl": 4133.70000000298,
+        "load": 5844.900000002235,
+        "lcp": 5920,
+        "cls": 0,
+        "resourceBodyBytes": 702401,
+        "inputMedian": 21.949999999254942,
+        "inputP95": 67.69999999925494
+      }
+    }
+  },
+  "metricDefinitions": {
+    "cls": "Observed startup layout-shift sum without recent input; not session-window CLS or a Web Vitals verdict.",
+    "ready": "DOM initialization timestamp, not a measured response to user input.",
+    "resourceBodyBytes": "Decoded resource entry body sizes, not compressed wire transfer.",
+    "passed": "Baseline integrity and absence of script errors/API requests, not a timing or quality threshold."
+  },
+  "inspectedFiles": [
+    {
+      "file": "index.html",
+      "sha256": "bdc87c742b228cbcc688ee9aeaed60d01787c43bfbc1dae935af2c79b767558c"
+    },
+    {
+      "file": "main.js",
+      "sha256": "480b6d2c4647b93a4f8729afa25c05f5bae5031b7b023e02b933de883fd5456d"
+    },
+    {
+      "file": "route-preview.js",
+      "sha256": "6f2964d40d6fc54a8c15862c4284ee21e2c01f0fcffc83a6a25579a0c369fd1f"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "f4737deec3a9cd3455bc5b3158543dd34df850d5505a3dd99fca991b5a13a24d"
+    },
+    {
+      "file": "workspace.css",
+      "sha256": "7544047c735203f62639f21cab6a638acc6e8f5f05661d7b42c321c67be9e7c2"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "6465b8ed829f77717c21a4e7773d0cd94337573cb2bcefabf191b22619da8572"
+    },
+    {
+      "file": "strategy.css",
+      "sha256": "4cad2ea896a1d51f5b5b0120dc3c9a2f9b709497419b77b98066e506d8f25f6f"
+    },
+    {
+      "file": "refinement.css",
+      "sha256": "b739cb97a9b38e56b3dc7c1c83a7dc322ac2cef8eb5ddb7bad1a5f39e3535261"
+    },
+    {
+      "file": "visuals.css",
+      "sha256": "2c74904dc490825b0f55b46aa16439fad22e0a39bc41a1cbde8410c9b7358746"
+    }
+  ],
+  "passed": true
+}

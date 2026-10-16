@@ -21,3 +21,6 @@ docs/art-source/fleet-refinement-v2/*.json text eol=lf
 tools/verify-free-fleet.mjs text eol=lf
 tools/verify-demo-mobile-a11y.mjs text eol=lf
 tools/profile-demo-loading.mjs text eol=lf
+
+tools/profile-command-isolation.mjs text eol=lf
+tools/verify-command-actions.mjs text eol=lf

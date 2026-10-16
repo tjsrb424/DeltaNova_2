@@ -1,0 +1,136 @@
+{
+  "checks": [
+    "WebGL texture upload errors preserve a static visible fallback",
+    "facility selection exposes comparison, cost, conditions and a disabled command",
+    "central menu and native Back restore the workspace and initiating control",
+    "major menus replace the center at desktop, tablet, phone and landscape sizes",
+    "short details restore focus through Close, Escape and native Back/Forward",
+    "direct detail URLs close into their workspace with visible focus and selected facility"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 728.6875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 876.71875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 728.6875
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 706.765625
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 854.796875
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 706.765625
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 436.078125
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 458.671875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 231
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "operationFonts": [],
+  "failure": "Error: locator.innerText: Error: strict mode violation: locator('#workspace-facility-detail h3') resolved to 2 elements:\n    1) <h3>연구소</h3> aka getByRole('heading', { name: '연구소' })\n    2) <h3>진행 중인 건설 없음</h3> aka getByRole('heading', { name: '진행 중인 건설 없음' })\n\nCall log:\n\u001b[2m  - waiting for locator('#workspace-facility-detail h3')\u001b[22m\n"
+}

@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-16T05:59:30.866Z",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\public",
+  "browser": "155.0.8059.80",
+  "checks": [
+    {
+      "name": "direct command discovers its visible hangar before module initialization without loading it on construction",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"hint\":false,\"heroStart\":370.19999999925494,\"moduleEnd\":193.30000000074506,\"requests\":1}"
+    },
+    {
+      "name": "construction command precedes artwork, explanation and full costs and fits above mobile navigation",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"width\":320,\"r\":{\"x\":34,\"y\":443.4375,\"width\":252,\"height\":44},\"limit\":496}"
+    },
+    {
+      "name": "research and fleet preparation lead with one clear main action before explanatory copy",
+      "passed": true
+    },
+    {
+      "name": "home decision action precedes its extended explanation and progress",
+      "passed": true
+    },
+    {
+      "name": "quantity changes preserve display nodes, focus, exact values, errors and the top review control",
+      "passed": true
+    },
+    {
+      "name": "action ordering reflows with doubled text and retains keyboard access",
+      "passed": true
+    },
+    {
+      "name": "no script errors or game API mutations occur",
+      "passed": true
+    }
+  ],
+  "positions": [
+    {
+      "view": "construction",
+      "width": 1440,
+      "height": 900,
+      "button": {
+        "x": 637.3125,
+        "y": 384.828125,
+        "width": 722.671875,
+        "height": 44
+      },
+      "limit": 900
+    },
+    {
+      "view": "construction",
+      "width": 390,
+      "height": 844,
+      "button": {
+        "x": 34,
+        "y": 443.4375,
+        "width": 322,
+        "height": 44
+      },
+      "limit": 772
+    },
+    {
+      "view": "construction",
+      "width": 320,
+      "height": 568,
+      "button": {
+        "x": 34,
+        "y": 443.4375,
+        "width": 252,
+        "height": 44
+      },
+      "limit": 496
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "bdc87c742b228cbcc688ee9aeaed60d01787c43bfbc1dae935af2c79b767558c"
+    },
+    {
+      "file": "main.js",
+      "sha256": "480b6d2c4647b93a4f8729afa25c05f5bae5031b7b023e02b933de883fd5456d"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "6465b8ed829f77717c21a4e7773d0cd94337573cb2bcefabf191b22619da8572"
+    },
+    {
+      "file": "strategy.css",
+      "sha256": "4cad2ea896a1d51f5b5b0120dc3c9a2f9b709497419b77b98066e506d8f25f6f"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "f4737deec3a9cd3455bc5b3158543dd34df850d5505a3dd99fca991b5a13a24d"
+    },
+    {
+      "file": "workspace.css",
+      "sha256": "7544047c735203f62639f21cab6a638acc6e8f5f05661d7b42c321c67be9e7c2"
+    },
+    {
+      "file": "route-preview.js",
+      "sha256": "6f2964d40d6fc54a8c15862c4284ee21e2c01f0fcffc83a6a25579a0c369fd1f"
+    }
+  ],
+  "passed": false
+}

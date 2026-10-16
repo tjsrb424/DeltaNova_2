@@ -1,0 +1,453 @@
+{
+  "definitions": {
+    "ready": "MutationObserver after resource controls and requested workspace initialized; not first-input readiness.",
+    "lcp": "Last observed LCP before explicit input; exact candidate retained.",
+    "doubleRAF": "Synthetic edit to second rAF; not INP.48 inputs per side, clustered in8 loads.",
+    "server": "Disk and RAM-controlled modes are separate experiments, not interchangeable."
+  },
+  "disk": {
+    "method": {
+      "viewport": "390x844 DPR3 mobile/touch",
+      "downBps": 1600000,
+      "upBps": 750000,
+      "latencyMs": 150,
+      "cpuSlowdown": 4,
+      "cache": false,
+      "ready": "MutationObserver DOM initialization, not input response",
+      "input": "6 serial synthetic edits per page and doubleRAF; not INP. Cost mode wraps served main.js functions only.",
+      "server": "Original per-request filesystem reads; Server-Timing records read wait."
+    },
+    "samplesPerSide": 8,
+    "inputsPerSide": 48,
+    "baseline": "255fa766ee92e1c1794e440e9e35d02c5b1ea080",
+    "sides": {
+      "before": {
+        "ready": {
+          "median": 3271.300000000745,
+          "min": 3080.199999999255,
+          "max": 3416.400000002235
+        },
+        "load": {
+          "median": 4750.60000000149,
+          "min": 4621,
+          "max": 4861.199999999255
+        },
+        "lcp": {
+          "median": 4806,
+          "min": 4636,
+          "max": 4896
+        },
+        "fcp": {
+          "median": 1722,
+          "min": 1676,
+          "max": 1772
+        },
+        "resourceBodyBytes": {
+          "median": 700058,
+          "min": 700058,
+          "max": 700058
+        },
+        "handlerMedian": 14.150000000372529,
+        "handlerP95": 34.599999997764826,
+        "doubleRAFMedian": 28.749999998137355,
+        "doubleRAFP95": 77.70000000298023,
+        "layoutsPerSix": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "serverReadMax": 5.281,
+        "heroStartMedian": 3068.300000000745,
+        "lcpCandidates": [
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          }
+        ]
+      },
+      "after": {
+        "ready": {
+          "median": 3474.550000000745,
+          "min": 3446.800000000745,
+          "max": 3689.2999999970198
+        },
+        "load": {
+          "median": 4397.10000000149,
+          "min": 4368.60000000149,
+          "max": 4614.199999999255
+        },
+        "lcp": {
+          "median": 3788,
+          "min": 3720,
+          "max": 4000
+        },
+        "fcp": {
+          "median": 1760,
+          "min": 1736,
+          "max": 1820
+        },
+        "resourceBodyBytes": {
+          "median": 702465,
+          "min": 702465,
+          "max": 702465
+        },
+        "handlerMedian": 3.849999999627471,
+        "handlerP95": 8.5,
+        "doubleRAFMedian": 21.699999999254942,
+        "doubleRAFP95": 49.80000000074506,
+        "layoutsPerSix": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "serverReadMax": 17.422,
+        "heroStartMedian": 211.2000000011176,
+        "lcpCandidates": [
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          }
+        ]
+      }
+    }
+  },
+  "ram": {
+    "method": {
+      "viewport": "390x844 DPR3 mobile/touch",
+      "downBps": 1600000,
+      "upBps": 750000,
+      "latencyMs": 150,
+      "cpuSlowdown": 4,
+      "cache": false,
+      "ready": "MutationObserver DOM initialization, not input response",
+      "input": "6 serial synthetic edits per page and doubleRAF; not INP. Cost mode wraps served main.js functions only.",
+      "server": "Both static roots preloaded before measurement; RAM lookup removes repeated filesystem waits. Browser HTTP cache remains disabled."
+    },
+    "samplesPerSide": 8,
+    "inputsPerSide": 48,
+    "baseline": "255fa766ee92e1c1794e440e9e35d02c5b1ea080",
+    "sides": {
+      "before": {
+        "ready": {
+          "median": 3235.6500000003725,
+          "min": 2947.10000000149,
+          "max": 3577.300000000745
+        },
+        "load": {
+          "median": 4724.199999999255,
+          "min": 4604.10000000149,
+          "max": 5233
+        },
+        "lcp": {
+          "median": 4778,
+          "min": 4636,
+          "max": 5276
+        },
+        "fcp": {
+          "median": 1708,
+          "min": 1676,
+          "max": 1860
+        },
+        "resourceBodyBytes": {
+          "median": 700058,
+          "min": 700058,
+          "max": 700058
+        },
+        "handlerMedian": 12.299999998882413,
+        "handlerP95": 35.69999999925494,
+        "doubleRAFMedian": 26.84999999962747,
+        "doubleRAFP95": 100.69999999925494,
+        "layoutsPerSix": [
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18,
+          18
+        ],
+        "serverReadMax": 0.041,
+        "heroStartMedian": 3036.800000000745,
+        "lcpCandidates": [
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          }
+        ]
+      },
+      "after": {
+        "ready": {
+          "median": 3435.300000000745,
+          "min": 3318.099999997765,
+          "max": 3977.599999997765
+        },
+        "load": {
+          "median": 4375.35000000149,
+          "min": 4239.39999999851,
+          "max": 4918.300000000745
+        },
+        "lcp": {
+          "median": 3744,
+          "min": 3492,
+          "max": 4140
+        },
+        "fcp": {
+          "median": 1732,
+          "min": 1604,
+          "max": 1860
+        },
+        "resourceBodyBytes": {
+          "median": 702465,
+          "min": 702465,
+          "max": 702465
+        },
+        "handlerMedian": 3.750000001862645,
+        "handlerP95": 13.799999997019768,
+        "doubleRAFMedian": 24.250000001862645,
+        "doubleRAFP95": 56.80000000074506,
+        "layoutsPerSix": [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        "serverReadMax": 0.03,
+        "heroStartMedian": 212.34999999962747,
+        "lcpCandidates": [
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          },
+          {
+            "tag": "SECTION",
+            "id": "",
+            "className": "sc-hangar",
+            "url": "orbital-hangar-v1.webp",
+            "size": 44982
+          }
+        ]
+      }
+    }
+  },
+  "notes": [
+    "Keep negative diagnostic batches; no outlier deletion.",
+    "Early hangar preload trades about200ms of DOM initialization for about1s earlier LCP in both final modes.",
+    "Shared host remains variable; no physical device or statistical certainty claimed."
+  ]
+}

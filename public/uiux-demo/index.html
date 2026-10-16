@@ -10,8 +10,9 @@
   <script>
     // Preload only the initially visible planet; other workspaces stay lightweight.
     (()=>{const initialView=new URLSearchParams(location.hash.slice(1)).get('view');
-    if(!initialView||initialView==='home')for(const art of ['nova-albedo-v2.webp','nova-clouds-v1.webp']){
-      const link=document.createElement('link');link.rel='preload';link.as='image';link.href='./art/'+art;document.head.append(link);
+    const visibleArt=!initialView||initialView==='home'?['nova-albedo-v2.webp','nova-clouds-v1.webp']:initialView==='command'?['orbital-hangar-v1.webp']:[];
+    for(const art of visibleArt){
+      const link=document.createElement('link');link.rel='preload';link.as='image';link.href='./art/'+art;if(initialView==='command')link.fetchPriority='low';document.head.append(link);
     }})();
   </script>
   <link rel="stylesheet" href="./tokens.css">
@@ -24,6 +25,9 @@
   <link rel="stylesheet" href="./alliance.css">
   <link rel="stylesheet" href="./strategy.css">
   <link rel="stylesheet" href="./visuals.css">
+  <link rel="modulepreload" href="./visuals.js">
+  <link rel="modulepreload" href="./scene-motion.js">
+  <link rel="modulepreload" href="./planet-rotation.js">
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>

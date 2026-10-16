@@ -1,0 +1,80 @@
+{
+  "generatedAt": "2026-10-16T06:16:59.172Z",
+  "scope": "Independent demo only; no production UI, data/API, game-model, art-binary or dependency changes.",
+  "baseline": "255fa766ee92e1c1794e440e9e35d02c5b1ea080",
+  "branch": "codex/demo-visual-unification",
+  "unitTests": {
+    "exitCode": 0,
+    "files": 32,
+    "passed": 329,
+    "failed": 0,
+    "report": "tests-final.json"
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0
+  },
+  "buildVerification": {
+    "command": "npm run verify:build",
+    "exitCode": 0
+  },
+  "browser": [
+    {
+      "report": "actions-final.json",
+      "root": "dist",
+      "checks": 7
+    },
+    {
+      "report": "mobile-a11y-final.json",
+      "root": "dist",
+      "checks": 11
+    },
+    {
+      "report": "integration-final.json",
+      "root": "dist",
+      "checks": 35,
+      "layouts": 15
+    },
+    {
+      "report": "free-fleet-final.json",
+      "root": "public",
+      "checks": 14,
+      "layouts": 8
+    },
+    {
+      "report": "all-views-final.json",
+      "root": "dist",
+      "checks": 11,
+      "layouts": 120,
+      "textLayouts": 45
+    }
+  ],
+  "performance": {
+    "disk": "performance-disk.json",
+    "ram": "performance-ram.json",
+    "repeatsEach": 8,
+    "loadsEach": 16,
+    "syntheticInputsPerSideEach": 48,
+    "sourceParity": "performance-source-parity.json",
+    "tradeoff": "DOM initialization slower by203.25ms disk /199.65ms RAM; not physical INP."
+  },
+  "codeReview": {
+    "mode": "read-only source review",
+    "blockingFindings": 0,
+    "lastDelta": "command-only low-priority art preload, mobile clearance and facility-title verification selector"
+  },
+  "scopeProof": {
+    "protectedDiff": "",
+    "originalCheckout": {
+      "path": "D:/kim_dev/DeltaNova",
+      "branch": "codex/uiux-refoundation",
+      "head": "91cf86ec5be9c39f08a3e1748ece1770fb567aff",
+      "status": ""
+    }
+  },
+  "limitations": [
+    "Shared host and headless Chromium emulation.",
+    "Physical iOS/Android keyboard, VoiceOver/TalkBack speech and physical INP/power remain untested.",
+    "No guarantee that historical14-30s outliers are resolved."
+  ]
+}

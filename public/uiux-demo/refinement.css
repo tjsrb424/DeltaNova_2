@@ -108,3 +108,5 @@ dialog h2 { margin-bottom: 16px; }.drawer-footer { padding-top: 12px; }
   .threat-banner { margin-top: 0; margin-right: 0; padding: 8px 12px; }.threat-banner .button { min-width: 130px; }
   .scene-stage { max-width: 600px; align-self: center; width: 100%; }.globe-wrap { width: 210px; }
 }
+
+.decision-card h3+.button{margin-top:16px;margin-bottom:20px}

@@ -134,7 +134,7 @@ try{
     assert.match(await page.locator('.ws-research-foundation').innerText(),/베스퍼/);
     assert.match(await page.locator('.ws-investment-cost').innerText(),/60/);
     assert.equal(await page.locator('#workspace-page [data-panel="research"]').count(),0);
-    await page.locator('[data-view-facility="laboratory"]').click();assert.match(await page.locator('#workspace-facility-detail h3').innerText(),/연구소/);
+    await page.locator('[data-view-facility="laboratory"]').click();assert.match(await page.locator('#workspace-facility-detail .ws-name-level h3').innerText(),/연구소/);
     await page.goBack();await page.locator('.ws-research-progress').waitFor();
     await page.selectOption('#planet-select','nova');
     await page.locator('#reset-button').scrollIntoViewIfNeeded();

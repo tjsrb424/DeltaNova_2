@@ -1,0 +1,3096 @@
+{
+  "date": "2026-10-16T05:52:35.086Z",
+  "ref": "255fa766ee92e1c1794e440e9e35d02c5b1ea080",
+  "browser": "155.0.8059.80",
+  "repeats": 3,
+  "mode": "function-cost",
+  "method": {
+    "viewport": "390x844 DPR3 mobile/touch",
+    "downBps": 1600000,
+    "upBps": 750000,
+    "latencyMs": 150,
+    "cpuSlowdown": 4,
+    "cache": false,
+    "ready": "MutationObserver DOM initialization, not input response",
+    "input": "30 serial synthetic edits per page and doubleRAF; not INP. Cost mode wraps served main.js functions only."
+  },
+  "samples": [
+    {
+      "label": "after",
+      "repeat": 1,
+      "loading": {
+        "ready": 3259.300000000745,
+        "dcl": 3260,
+        "load": 4985.099999997765,
+        "fcp": 1660,
+        "shiftSum": 0,
+        "longTasks": [
+          {
+            "start": 3217.199999999255,
+            "ms": 123
+          }
+        ],
+        "resources": [
+          {
+            "file": "tokens.css",
+            "type": "link",
+            "start": 178.19999999925494,
+            "request": 182.59999999776483,
+            "response": 186,
+            "end": 366.0999999977648,
+            "queue": 4.399999998509884,
+            "ttfb": 3.400000002235174,
+            "download": 180.09999999776483,
+            "fileRead": 2.666,
+            "bytes": 749
+          },
+          {
+            "file": "refinement.css",
+            "type": "link",
+            "start": 178.30000000074506,
+            "request": 183.80000000074506,
+            "response": 186.5,
+            "end": 649.5999999977648,
+            "queue": 5.5,
+            "ttfb": 2.699999999254942,
+            "download": 463.0999999977648,
+            "fileRead": 2.426,
+            "bytes": 12107
+          },
+          {
+            "file": "style.css",
+            "type": "link",
+            "start": 178.30000000074506,
+            "request": 183.69999999925494,
+            "response": 186.19999999925494,
+            "end": 1118.199999999255,
+            "queue": 5.399999998509884,
+            "ttfb": 2.5,
+            "download": 932,
+            "fileRead": 2.282,
+            "bytes": 31839
+          },
+          {
+            "file": "workspace.css",
+            "type": "link",
+            "start": 178.39999999850988,
+            "request": 183.80000000074506,
+            "response": 186.69999999925494,
+            "end": 1008.3000000007451,
+            "queue": 5.400000002235174,
+            "ttfb": 2.899999998509884,
+            "download": 821.6000000014901,
+            "fileRead": 2.545,
+            "bytes": 27274
+          },
+          {
+            "file": "navigation.css",
+            "type": "link",
+            "start": 178.5,
+            "request": 184.59999999776483,
+            "response": 186.80000000074506,
+            "end": 421.80000000074506,
+            "queue": 6.099999997764826,
+            "ttfb": 2.2000000029802322,
+            "download": 235,
+            "fileRead": 1.74,
+            "bytes": 2352
+          },
+          {
+            "file": "galaxy.css",
+            "type": "link",
+            "start": 178.5,
+            "request": 221.09999999776483,
+            "response": 222.19999999925494,
+            "end": 747.5999999977648,
+            "queue": 42.599999997764826,
+            "ttfb": 1.1000000014901161,
+            "download": 525.3999999985099,
+            "fileRead": 0.532,
+            "bytes": 13418
+          },
+          {
+            "file": "operations.css",
+            "type": "link",
+            "start": 178.5,
+            "request": 366.19999999925494,
+            "response": 367.80000000074506,
+            "end": 1181.3999999985099,
+            "queue": 187.69999999925494,
+            "ttfb": 1.6000000014901161,
+            "download": 813.5999999977648,
+            "fileRead": 0.566,
+            "bytes": 27096
+          },
+          {
+            "file": "alliance.css",
+            "type": "link",
+            "start": 178.59999999776483,
+            "request": 422,
+            "response": 557.8000000007451,
+            "end": 994,
+            "queue": 243.40000000223517,
+            "ttfb": 135.80000000074506,
+            "download": 436.19999999925494,
+            "fileRead": 32.773,
+            "bytes": 13168
+          },
+          {
+            "file": "strategy.css",
+            "type": "link",
+            "start": 178.59999999776483,
+            "request": 649.6999999992549,
+            "response": 651.0999999977648,
+            "end": 1437.199999999255,
+            "queue": 471.1000000014901,
+            "ttfb": 1.3999999985098839,
+            "download": 786.1000000014901,
+            "fileRead": 0.796,
+            "bytes": 34325
+          },
+          {
+            "file": "visuals.css",
+            "type": "link",
+            "start": 178.69999999925494,
+            "request": 747.8000000007451,
+            "response": 937.8000000007451,
+            "end": 1275.3999999985099,
+            "queue": 569.1000000014901,
+            "ttfb": 190,
+            "download": 337.5999999977648,
+            "fileRead": 4.453,
+            "bytes": 18218
+          },
+          {
+            "file": "main.js",
+            "type": "script",
+            "start": 224,
+            "request": 994.3000000007451,
+            "response": 1008.3000000007451,
+            "end": 1608.3999999985099,
+            "queue": 770.3000000007451,
+            "ttfb": 14,
+            "download": 600.0999999977648,
+            "fileRead": 5.544,
+            "bytes": 55298
+          },
+          {
+            "file": "model.js",
+            "type": "script",
+            "start": 1611.699999999255,
+            "request": 1612.800000000745,
+            "response": 1822.300000000745,
+            "end": 1934.8999999985099,
+            "queue": 1.1000000014901161,
+            "ttfb": 209.5,
+            "download": 112.59999999776483,
+            "fileRead": 7.807,
+            "bytes": 3016
+          },
+          {
+            "file": "icons.js",
+            "type": "script",
+            "start": 1611.699999999255,
+            "request": 1612.199999999255,
+            "response": 1822.300000000745,
+            "end": 1938.199999999255,
+            "queue": 0.5,
+            "ttfb": 210.10000000149012,
+            "download": 115.89999999850988,
+            "fileRead": 2.656,
+            "bytes": 4144
+          },
+          {
+            "file": "planet.js",
+            "type": "script",
+            "start": 1611.800000000745,
+            "request": 1613.0999999977648,
+            "response": 1822.300000000745,
+            "end": 1896.5999999977648,
+            "queue": 1.2999999970197678,
+            "ttfb": 209.20000000298023,
+            "download": 74.29999999701977,
+            "fileRead": 4.733,
+            "bytes": 1938
+          },
+          {
+            "file": "presentation.js",
+            "type": "script",
+            "start": 1611.8999999985099,
+            "request": 1613.3999999985099,
+            "response": 1822.300000000745,
+            "end": 1887.5,
+            "queue": 1.5,
+            "ttfb": 208.90000000223517,
+            "download": 65.19999999925494,
+            "fileRead": 8.155,
+            "bytes": 2733
+          },
+          {
+            "file": "route-preview.js",
+            "type": "script",
+            "start": 1611.8999999985099,
+            "request": 1613.8999999985099,
+            "response": 1821.5999999977648,
+            "end": 1987.0999999977648,
+            "queue": 2,
+            "ttfb": 207.69999999925494,
+            "download": 165.5,
+            "fileRead": 5.472,
+            "bytes": 8197
+          },
+          {
+            "file": "navigation.js",
+            "type": "script",
+            "start": 1612,
+            "request": 1614,
+            "response": 1821.199999999255,
+            "end": 1950.0999999977648,
+            "queue": 2,
+            "ttfb": 207.19999999925494,
+            "download": 128.89999999850988,
+            "fileRead": 6.294,
+            "bytes": 5081
+          },
+          {
+            "file": "galaxy.js",
+            "type": "script",
+            "start": 1612.0999999977648,
+            "request": 1896.699999999255,
+            "response": 1917.5999999977648,
+            "end": 2880.599999997765,
+            "queue": 284.6000000014901,
+            "ttfb": 20.899999998509884,
+            "download": 963,
+            "fileRead": 20.405,
+            "bytes": 14970
+          },
+          {
+            "file": "alliance.js",
+            "type": "script",
+            "start": 1612.0999999977648,
+            "request": 1938.300000000745,
+            "response": 1953.0999999977648,
+            "end": 2915.300000000745,
+            "queue": 326.20000000298023,
+            "ttfb": 14.799999997019768,
+            "download": 962.2000000029802,
+            "fileRead": 9.292,
+            "bytes": 16393
+          },
+          {
+            "file": "workspace.js",
+            "type": "script",
+            "start": 1612.0999999977648,
+            "request": 1887.800000000745,
+            "response": 1917.3999999985099,
+            "end": 3022.099999997765,
+            "queue": 275.70000000298023,
+            "ttfb": 29.599999997764826,
+            "download": 1104.699999999255,
+            "fileRead": 28.884,
+            "bytes": 24298
+          },
+          {
+            "file": "operations.js",
+            "type": "script",
+            "start": 1612.0999999977648,
+            "request": 1935.199999999255,
+            "response": 1952.800000000745,
+            "end": 3149.39999999851,
+            "queue": 323.1000000014901,
+            "ttfb": 17.600000001490116,
+            "download": 1196.5999999977648,
+            "fileRead": 16.934,
+            "bytes": 32748
+          },
+          {
+            "file": "strategy-model.js",
+            "type": "script",
+            "start": 1612.199999999255,
+            "request": 1950.300000000745,
+            "response": 1953.0999999977648,
+            "end": 2846.5,
+            "queue": 338.1000000014901,
+            "ttfb": 2.7999999970197678,
+            "download": 893.4000000022352,
+            "fileRead": 1.906,
+            "bytes": 13424
+          },
+          {
+            "file": "strategy.js",
+            "type": "script",
+            "start": 1612.199999999255,
+            "request": 1987.300000000745,
+            "response": 1995.5999999977648,
+            "end": 3030.300000000745,
+            "queue": 375.1000000014901,
+            "ttfb": 8.299999997019768,
+            "download": 1034.7000000029802,
+            "fileRead": 1.394,
+            "bytes": 23074
+          },
+          {
+            "file": "planet-fallback.js",
+            "type": "script",
+            "start": 1936.8999999985099,
+            "request": 2846.699999999255,
+            "response": 2958.5,
+            "end": 3073,
+            "queue": 909.8000000007451,
+            "ttfb": 111.80000000074506,
+            "download": 114.5,
+            "fileRead": 4.507,
+            "bytes": 2993
+          },
+          {
+            "file": "planet-rotation.js",
+            "type": "script",
+            "start": 1937,
+            "request": 2880.800000000745,
+            "response": 2958.5,
+            "end": 3149.300000000745,
+            "queue": 943.8000000007451,
+            "ttfb": 77.69999999925494,
+            "download": 190.80000000074506,
+            "fileRead": 8.284,
+            "bytes": 7358
+          },
+          {
+            "file": "route-model.js",
+            "type": "script",
+            "start": 1990.8999999985099,
+            "request": 2915.5,
+            "response": 2958.39999999851,
+            "end": 3117.39999999851,
+            "queue": 924.6000000014901,
+            "ttfb": 42.899999998509884,
+            "download": 159,
+            "fileRead": 8.656,
+            "bytes": 1592
+          },
+          {
+            "file": "scene-motion.js",
+            "type": "script",
+            "start": 1991,
+            "request": 3022.39999999851,
+            "response": 3134,
+            "end": 3203.099999997765,
+            "queue": 1031.3999999985099,
+            "ttfb": 111.60000000149012,
+            "download": 69.09999999776483,
+            "fileRead": 5.643,
+            "bytes": 918
+          },
+          {
+            "file": "visuals.js",
+            "type": "script",
+            "start": 3029.300000000745,
+            "request": 3030.5,
+            "response": 3134,
+            "end": 3212.300000000745,
+            "queue": 1.199999999254942,
+            "ttfb": 103.5,
+            "download": 78.30000000074506,
+            "fileRead": 1.622,
+            "bytes": 3309
+          },
+          {
+            "file": "orbital-hangar-v1.webp",
+            "type": "css",
+            "start": 3262.300000000745,
+            "request": 3278.199999999255,
+            "response": 3295.300000000745,
+            "end": 4975.5,
+            "queue": 15.899999998509884,
+            "ttfb": 17.100000001490116,
+            "download": 1680.199999999255,
+            "fileRead": 16.449,
+            "bytes": 152984
+          },
+          {
+            "file": "fleet-roster-v2.webp",
+            "type": "css",
+            "start": 3263.300000000745,
+            "request": 3279.300000000745,
+            "response": 3296,
+            "end": 4958.800000000745,
+            "queue": 16,
+            "ttfb": 16.699999999254942,
+            "download": 1662.800000000745,
+            "fileRead": 16.246,
+            "bytes": 148454
+          }
+        ]
+      },
+      "inputs": [
+        {
+          "handler": 2.399999998509884,
+          "doubleRAF": 20.199999999254942
+        },
+        {
+          "handler": 6.300000000745058,
+          "doubleRAF": 10.800000000745058
+        },
+        {
+          "handler": 5.800000000745058,
+          "doubleRAF": 15.899999998509884
+        },
+        {
+          "handler": 0.8999999985098839,
+          "doubleRAF": 53.100000001490116
+        },
+        {
+          "handler": 1.5999999977648258,
+          "doubleRAF": 16.699999999254942
+        },
+        {
+          "handler": 1,
+          "doubleRAF": 100.30000000074506
+        },
+        {
+          "handler": 1.300000000745058,
+          "doubleRAF": 11.800000000745058
+        },
+        {
+          "handler": 0.7999999970197678,
+          "doubleRAF": 18.699999999254942
+        },
+        {
+          "handler": 1,
+          "doubleRAF": 20
+        },
+        {
+          "handler": 1.3999999985098839,
+          "doubleRAF": 30.5
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 41.5
+        },
+        {
+          "handler": 1.2000000029802322,
+          "doubleRAF": 19.700000002980232
+        },
+        {
+          "handler": 1.6000000014901161,
+          "doubleRAF": 26.600000001490116
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 25.600000001490116
+        },
+        {
+          "handler": 0.7999999970197678,
+          "doubleRAF": 29.699999999254942
+        },
+        {
+          "handler": 1.5,
+          "doubleRAF": 22.300000000745058
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 22.300000000745058
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 21
+        },
+        {
+          "handler": 2.100000001490116,
+          "doubleRAF": 15.699999999254942
+        },
+        {
+          "handler": 0.8999999985098839,
+          "doubleRAF": 31.599999997764826
+        },
+        {
+          "handler": 1.300000000745058,
+          "doubleRAF": 22
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 17.600000001490116
+        },
+        {
+          "handler": 2.099999997764826,
+          "doubleRAF": 27
+        },
+        {
+          "handler": 0.9000000022351742,
+          "doubleRAF": 18.400000002235174
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 24.800000000745058
+        },
+        {
+          "handler": 1.9000000022351742,
+          "doubleRAF": 20.5
+        },
+        {
+          "handler": 1.300000000745058,
+          "doubleRAF": 19
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 16.100000001490116
+        },
+        {
+          "handler": 0.8999999985098839,
+          "doubleRAF": 15.099999997764826
+        },
+        {
+          "handler": 5.900000002235174,
+          "doubleRAF": 24.699999999254942
+        }
+      ],
+      "costs": [
+        {
+          "name": "hydrateIcons",
+          "ms": 0.7000000029802322,
+          "input": false
+        },
+        {
+          "name": "render",
+          "ms": 12.399999998509884,
+          "input": false
+        },
+        {
+          "name": "hydrateIcons",
+          "ms": 0.19999999925494194,
+          "input": false
+        },
+        {
+          "name": "renderCurrentWorkspace",
+          "ms": 3.399999998509884,
+          "input": false
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 6,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 5.199999999254942,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 5.600000001490116,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.199999999254942,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.9000000022351742,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.1000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.1000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.5,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.0999999977648258,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.4000000022351742,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.199999999254942,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1.800000000745058,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 5.600000001490116,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 5.800000000745058,
+          "input": true
+        }
+      ],
+      "startupMetrics": [
+        {
+          "name": "Timestamp",
+          "value": 17651.103687
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 1
+        },
+        {
+          "name": "Frames",
+          "value": 1
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 29
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 713
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1469
+        },
+        {
+          "name": "Resources",
+          "value": 2
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 12
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 0
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 1
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 0
+        },
+        {
+          "name": "LayoutCount",
+          "value": 7
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 22
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.210234
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.043813
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 0.034405
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 0.020135
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0.000088
+        },
+        {
+          "name": "TaskDuration",
+          "value": 0.568235
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 0.25956
+        },
+        {
+          "name": "ThreadTime",
+          "value": 0.265932
+        },
+        {
+          "name": "ProcessTime",
+          "value": 2.0774
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 1923248
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 2940928
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 17648.346287
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 17648.119214
+        },
+        {
+          "name": "NavigationStart",
+          "value": 17644.859821
+        }
+      ],
+      "inputMetrics": {
+        "TaskDuration": 0.4246049999999999,
+        "ScriptDuration": 0.050459000000000004,
+        "LayoutDuration": 0.038324,
+        "RecalcStyleDuration": 0.039302,
+        "LayoutCount": 30,
+        "RecalcStyleCount": 124
+      }
+    },
+    {
+      "label": "after",
+      "repeat": 2,
+      "loading": {
+        "ready": 5334.199999999255,
+        "dcl": 5334.800000000745,
+        "load": 7547.900000002235,
+        "fcp": 2540,
+        "shiftSum": 0,
+        "longTasks": [
+          {
+            "start": 1093,
+            "ms": 57
+          },
+          {
+            "start": 3986.800000000745,
+            "ms": 164
+          },
+          {
+            "start": 4186.199999999255,
+            "ms": 2276
+          },
+          {
+            "start": 7179.800000000745,
+            "ms": 82
+          },
+          {
+            "start": 7547.60000000149,
+            "ms": 101
+          },
+          {
+            "start": 10887.699999999255,
+            "ms": 102
+          }
+        ],
+        "resources": [
+          {
+            "file": "tokens.css",
+            "type": "link",
+            "start": 260.6000000014901,
+            "request": 272.1000000014901,
+            "response": 275.19999999925494,
+            "end": 451.4000000022352,
+            "queue": 11.5,
+            "ttfb": 3.099999997764826,
+            "download": 176.20000000298023,
+            "fileRead": 2.257,
+            "bytes": 749
+          },
+          {
+            "file": "style.css",
+            "type": "link",
+            "start": 260.9000000022352,
+            "request": 272.19999999925494,
+            "response": 275.80000000074506,
+            "end": 1240,
+            "queue": 11.299999997019768,
+            "ttfb": 3.600000001490116,
+            "download": 964.1999999992549,
+            "fileRead": 2.97,
+            "bytes": 31839
+          },
+          {
+            "file": "navigation.css",
+            "type": "link",
+            "start": 261.1000000014901,
+            "request": 272.5,
+            "response": 277,
+            "end": 527.1000000014901,
+            "queue": 11.399999998509884,
+            "ttfb": 4.5,
+            "download": 250.10000000149012,
+            "fileRead": 4.051,
+            "bytes": 2352
+          },
+          {
+            "file": "refinement.css",
+            "type": "link",
+            "start": 261.1000000014901,
+            "request": 272.30000000074506,
+            "response": 275.9000000022352,
+            "end": 783.3000000007451,
+            "queue": 11.199999999254942,
+            "ttfb": 3.600000001490116,
+            "download": 507.3999999985099,
+            "fileRead": 3.091,
+            "bytes": 12107
+          },
+          {
+            "file": "workspace.css",
+            "type": "link",
+            "start": 261.1000000014901,
+            "request": 272.4000000022352,
+            "response": 275.5,
+            "end": 1130,
+            "queue": 11.300000000745058,
+            "ttfb": 3.099999997764826,
+            "download": 854.5,
+            "fileRead": 2.431,
+            "bytes": 27274
+          },
+          {
+            "file": "galaxy.css",
+            "type": "link",
+            "start": 261.19999999925494,
+            "request": 275.5,
+            "response": 276.80000000074506,
+            "end": 855.6999999992549,
+            "queue": 14.300000000745058,
+            "ttfb": 1.300000000745058,
+            "download": 578.8999999985099,
+            "fileRead": 1.169,
+            "bytes": 13418
+          },
+          {
+            "file": "alliance.css",
+            "type": "link",
+            "start": 261.30000000074506,
+            "request": 527.3000000007451,
+            "response": 531.3000000007451,
+            "end": 1093,
+            "queue": 266,
+            "ttfb": 4,
+            "download": 561.6999999992549,
+            "fileRead": 3.55,
+            "bytes": 13168
+          },
+          {
+            "file": "operations.css",
+            "type": "link",
+            "start": 261.30000000074506,
+            "request": 451.5,
+            "response": 454,
+            "end": 1265.199999999255,
+            "queue": 190.19999999925494,
+            "ttfb": 2.5,
+            "download": 811.1999999992549,
+            "fileRead": 0.538,
+            "bytes": 27096
+          },
+          {
+            "file": "visuals.css",
+            "type": "link",
+            "start": 261.4000000022352,
+            "request": 855.9000000022352,
+            "response": 919.1999999992549,
+            "end": 1400.300000000745,
+            "queue": 594.5,
+            "ttfb": 63.29999999701977,
+            "download": 481.1000000014901,
+            "fileRead": 10.349,
+            "bytes": 18218
+          },
+          {
+            "file": "strategy.css",
+            "type": "link",
+            "start": 261.4000000022352,
+            "request": 783.9000000022352,
+            "response": 807.8000000007451,
+            "end": 1557.300000000745,
+            "queue": 522.5,
+            "ttfb": 23.899999998509884,
+            "download": 749.5,
+            "fileRead": 3.014,
+            "bytes": 34325
+          },
+          {
+            "file": "main.js",
+            "type": "script",
+            "start": 276.19999999925494,
+            "request": 1106.9000000022352,
+            "response": 1128.9000000022352,
+            "end": 1732.4000000022352,
+            "queue": 830.7000000029802,
+            "ttfb": 22,
+            "download": 603.5,
+            "fileRead": 11.753,
+            "bytes": 55298
+          },
+          {
+            "file": "icons.js",
+            "type": "script",
+            "start": 2534,
+            "request": 2534.400000002235,
+            "response": 2535.300000000745,
+            "end": 2805.800000000745,
+            "queue": 0.4000000022351742,
+            "ttfb": 0.8999999985098839,
+            "download": 270.5,
+            "fileRead": 0.372,
+            "bytes": 4144
+          },
+          {
+            "file": "model.js",
+            "type": "script",
+            "start": 2535.900000002235,
+            "request": 2536.300000000745,
+            "response": 2536.800000000745,
+            "end": 2805.699999999255,
+            "queue": 0.3999999985098839,
+            "ttfb": 0.5,
+            "download": 268.8999999985099,
+            "fileRead": 0.236,
+            "bytes": 3016
+          },
+          {
+            "file": "planet.js",
+            "type": "script",
+            "start": 2536.10000000149,
+            "request": 2536.900000002235,
+            "response": 2537.5,
+            "end": 2765.60000000149,
+            "queue": 0.8000000007450581,
+            "ttfb": 0.5999999977648258,
+            "download": 228.10000000149012,
+            "fileRead": 0.505,
+            "bytes": 1938
+          },
+          {
+            "file": "presentation.js",
+            "type": "script",
+            "start": 2536.400000002235,
+            "request": 2537,
+            "response": 2537.800000000745,
+            "end": 2779.60000000149,
+            "queue": 0.5999999977648258,
+            "ttfb": 0.8000000007450581,
+            "download": 241.80000000074506,
+            "fileRead": 0.612,
+            "bytes": 2733
+          },
+          {
+            "file": "route-preview.js",
+            "type": "script",
+            "start": 2536.800000000745,
+            "request": 2537.199999999255,
+            "response": 2537.699999999255,
+            "end": 2854.699999999255,
+            "queue": 0.3999999985098839,
+            "ttfb": 0.5,
+            "download": 317,
+            "fileRead": 0.356,
+            "bytes": 8197
+          },
+          {
+            "file": "navigation.js",
+            "type": "script",
+            "start": 2537.699999999255,
+            "request": 2538.199999999255,
+            "response": 2538.5,
+            "end": 2838.900000002235,
+            "queue": 0.5,
+            "ttfb": 0.30000000074505806,
+            "download": 300.4000000022352,
+            "fileRead": 0.219,
+            "bytes": 5081
+          },
+          {
+            "file": "workspace.js",
+            "type": "script",
+            "start": 2538.10000000149,
+            "request": 2765.699999999255,
+            "response": 2779.5,
+            "end": 3519.60000000149,
+            "queue": 227.59999999776483,
+            "ttfb": 13.800000000745058,
+            "download": 740.1000000014901,
+            "fileRead": 13.079,
+            "bytes": 24298
+          },
+          {
+            "file": "galaxy.js",
+            "type": "script",
+            "start": 2538.800000000745,
+            "request": 2779.800000000745,
+            "response": 2784.199999999255,
+            "end": 3348.699999999255,
+            "queue": 241,
+            "ttfb": 4.399999998509884,
+            "download": 564.5,
+            "fileRead": 4.018,
+            "bytes": 14970
+          },
+          {
+            "file": "operations.js",
+            "type": "script",
+            "start": 2539,
+            "request": 2805.800000000745,
+            "response": 2814.900000002235,
+            "end": 3604.900000002235,
+            "queue": 266.80000000074506,
+            "ttfb": 9.100000001490116,
+            "download": 790,
+            "fileRead": 8.316,
+            "bytes": 32748
+          },
+          {
+            "file": "alliance.js",
+            "type": "script",
+            "start": 2539.800000000745,
+            "request": 2805.900000002235,
+            "response": 2815.5,
+            "end": 3445.10000000149,
+            "queue": 266.1000000014901,
+            "ttfb": 9.599999997764826,
+            "download": 629.6000000014901,
+            "fileRead": 8.812,
+            "bytes": 16393
+          },
+          {
+            "file": "strategy-model.js",
+            "type": "script",
+            "start": 2539.900000002235,
+            "request": 2839,
+            "response": 2841.699999999255,
+            "end": 3423.400000002235,
+            "queue": 299.0999999977648,
+            "ttfb": 2.699999999254942,
+            "download": 581.7000000029802,
+            "fileRead": 2.003,
+            "bytes": 13424
+          },
+          {
+            "file": "strategy.js",
+            "type": "script",
+            "start": 2540,
+            "request": 2854.900000002235,
+            "response": 2856.800000000745,
+            "end": 3575.5,
+            "queue": 314.9000000022352,
+            "ttfb": 1.8999999985098839,
+            "download": 718.6999999992549,
+            "fileRead": 1.228,
+            "bytes": 23074
+          },
+          {
+            "file": "planet-fallback.js",
+            "type": "script",
+            "start": 2788.400000002235,
+            "request": 3349,
+            "response": 3916,
+            "end": 3991.5,
+            "queue": 560.5999999977648,
+            "ttfb": 567,
+            "download": 75.5,
+            "fileRead": 155.94,
+            "bytes": 2993
+          },
+          {
+            "file": "planet-rotation.js",
+            "type": "script",
+            "start": 2798.400000002235,
+            "request": 3423.60000000149,
+            "response": 3916.199999999255,
+            "end": 4035.900000002235,
+            "queue": 625.1999999992549,
+            "ttfb": 492.5999999977648,
+            "download": 119.70000000298023,
+            "fileRead": 149.686,
+            "bytes": 7358
+          },
+          {
+            "file": "route-model.js",
+            "type": "script",
+            "start": 2866.10000000149,
+            "request": 3445.400000002235,
+            "response": 3916.199999999255,
+            "end": 3972.699999999255,
+            "queue": 579.3000000007451,
+            "ttfb": 470.79999999701977,
+            "download": 56.5,
+            "fileRead": 155.477,
+            "bytes": 1592
+          },
+          {
+            "file": "scene-motion.js",
+            "type": "script",
+            "start": 2866.900000002235,
+            "request": 3519.800000000745,
+            "response": 3916.199999999255,
+            "end": 3947.800000000745,
+            "queue": 652.8999999985099,
+            "ttfb": 396.3999999985099,
+            "download": 31.600000001490116,
+            "fileRead": 203.608,
+            "bytes": 918
+          },
+          {
+            "file": "visuals.js",
+            "type": "script",
+            "start": 3534.699999999255,
+            "request": 3575.699999999255,
+            "response": 3916.10000000149,
+            "end": 4004.800000000745,
+            "queue": 41,
+            "ttfb": 340.4000000022352,
+            "download": 88.69999999925494,
+            "fileRead": 199.089,
+            "bytes": 3309
+          },
+          {
+            "file": "orbital-hangar-v1.webp",
+            "type": "css",
+            "start": 5598.60000000149,
+            "request": 5673.300000000745,
+            "response": 5702.199999999255,
+            "end": 7353.5,
+            "queue": 74.69999999925494,
+            "ttfb": 28.899999998509884,
+            "download": 1651.300000000745,
+            "fileRead": 23.7,
+            "bytes": 152984
+          },
+          {
+            "file": "fleet-roster-v2.webp",
+            "type": "css",
+            "start": 5770.60000000149,
+            "request": 5935.699999999255,
+            "response": 5939.10000000149,
+            "end": 7476.699999999255,
+            "queue": 165.09999999776483,
+            "ttfb": 3.400000002235174,
+            "download": 1537.5999999977648,
+            "fileRead": 1.918,
+            "bytes": 148454
+          }
+        ]
+      },
+      "inputs": [
+        {
+          "handler": 59.400000002235174,
+          "doubleRAF": 572.4000000022352
+        },
+        {
+          "handler": 5.5,
+          "doubleRAF": 85.30000000074506
+        },
+        {
+          "handler": 20.100000001490116,
+          "doubleRAF": 71.80000000074506
+        },
+        {
+          "handler": 0.9000000022351742,
+          "doubleRAF": 17
+        },
+        {
+          "handler": 1,
+          "doubleRAF": 15.600000001490116
+        },
+        {
+          "handler": 8,
+          "doubleRAF": 80.10000000149012
+        },
+        {
+          "handler": 5.699999999254942,
+          "doubleRAF": 18.899999998509884
+        },
+        {
+          "handler": 256.80000000074506,
+          "doubleRAF": 325.19999999925494
+        },
+        {
+          "handler": 3.400000002235174,
+          "doubleRAF": 35.5
+        },
+        {
+          "handler": 0.9000000022351742,
+          "doubleRAF": 18.5
+        },
+        {
+          "handler": 0.7000000029802322,
+          "doubleRAF": 54.900000002235174
+        },
+        {
+          "handler": 0.7999999970197678,
+          "doubleRAF": 27.899999998509884
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 19.399999998509884
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 24
+        },
+        {
+          "handler": 0.7999999970197678,
+          "doubleRAF": 27
+        },
+        {
+          "handler": 0.8999999985098839,
+          "doubleRAF": 19.5
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 20.5
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 17.199999999254942
+        },
+        {
+          "handler": 0.8999999985098839,
+          "doubleRAF": 20.800000000745058
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 24.200000002980232
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 20.400000002235174
+        },
+        {
+          "handler": 1.199999999254942,
+          "doubleRAF": 18.600000001490116
+        },
+        {
+          "handler": 0.9000000022351742,
+          "doubleRAF": 16.100000001490116
+        },
+        {
+          "handler": 0.7999999970197678,
+          "doubleRAF": 22.399999998509884
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 20.199999999254942
+        },
+        {
+          "handler": 1,
+          "doubleRAF": 14.299999997019768
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 26.699999999254942
+        },
+        {
+          "handler": 0.9000000022351742,
+          "doubleRAF": 22.300000000745058
+        },
+        {
+          "handler": 0.7999999970197678,
+          "doubleRAF": 23.699999999254942
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 17.800000000745058
+        }
+      ],
+      "costs": [
+        {
+          "name": "hydrateIcons",
+          "ms": 2.099999997764826,
+          "input": false
+        },
+        {
+          "name": "render",
+          "ms": 560.7000000029802,
+          "input": false
+        },
+        {
+          "name": "hydrateIcons",
+          "ms": 0.09999999776482582,
+          "input": false
+        },
+        {
+          "name": "renderCurrentWorkspace",
+          "ms": 368.1000000014901,
+          "input": false
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 44.600000001490116,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 49.80000000074506,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 4.800000000745058,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 5.399999998509884,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 18.699999999254942,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 19.100000001490116,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.8999999985098839,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8999999985098839,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 254.89999999850988,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 255.60000000149012,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2.899999998509884,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.100000001490116,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.9000000022351742,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.9000000022351742,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7000000029802322,
+          "input": true
+        }
+      ],
+      "startupMetrics": [
+        {
+          "name": "Timestamp",
+          "value": 17666.293501
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 1
+        },
+        {
+          "name": "Frames",
+          "value": 1
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 29
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 713
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1469
+        },
+        {
+          "name": "Resources",
+          "value": 2
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 12
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 0
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 1
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 0
+        },
+        {
+          "name": "LayoutCount",
+          "value": 7
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 20
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.399719
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.649709
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 1.097055
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 0.961155
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0.000088
+        },
+        {
+          "name": "TaskDuration",
+          "value": 5.580017
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 1.472291
+        },
+        {
+          "name": "ThreadTime",
+          "value": 0.276946
+        },
+        {
+          "name": "ProcessTime",
+          "value": 3.706881
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 1939328
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 2940928
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 0
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 17660.371607
+        },
+        {
+          "name": "NavigationStart",
+          "value": 17655.037237
+        }
+      ],
+      "inputMetrics": {
+        "TaskDuration": 1.632644,
+        "ScriptDuration": 0.36494899999999997,
+        "LayoutDuration": 0.549731,
+        "RecalcStyleDuration": 0.050261,
+        "LayoutCount": 30,
+        "RecalcStyleCount": 93
+      }
+    },
+    {
+      "label": "after",
+      "repeat": 3,
+      "loading": {
+        "ready": 5043,
+        "dcl": 5043.400000002235,
+        "load": 6851.20000000298,
+        "fcp": 3464,
+        "shiftSum": 0,
+        "longTasks": [
+          {
+            "start": 2305.800000000745,
+            "ms": 180
+          },
+          {
+            "start": 4987.70000000298,
+            "ms": 128
+          }
+        ],
+        "resources": [
+          {
+            "file": "tokens.css",
+            "type": "link",
+            "start": 1184.6000000014901,
+            "request": 1217.800000000745,
+            "response": 1363,
+            "end": 1836.6000000014901,
+            "queue": 33.19999999925494,
+            "ttfb": 145.19999999925494,
+            "download": 473.6000000014901,
+            "fileRead": 106.92,
+            "bytes": 749
+          },
+          {
+            "file": "style.css",
+            "type": "link",
+            "start": 1185.1000000014901,
+            "request": 1222.7000000029802,
+            "response": 1363.1000000014901,
+            "end": 2142.900000002235,
+            "queue": 37.600000001490116,
+            "ttfb": 140.39999999850988,
+            "download": 779.8000000007451,
+            "fileRead": 100.389,
+            "bytes": 31839
+          },
+          {
+            "file": "refinement.css",
+            "type": "link",
+            "start": 1185.2000000029802,
+            "request": 1227.800000000745,
+            "response": 1363.1000000014901,
+            "end": 1914.4000000022352,
+            "queue": 42.599999997764826,
+            "ttfb": 135.30000000074506,
+            "download": 551.3000000007451,
+            "fileRead": 97.788,
+            "bytes": 12107
+          },
+          {
+            "file": "workspace.css",
+            "type": "link",
+            "start": 1185.2000000029802,
+            "request": 1228.5,
+            "response": 1363.1000000014901,
+            "end": 2134.800000000745,
+            "queue": 43.29999999701977,
+            "ttfb": 134.60000000149012,
+            "download": 771.6999999992549,
+            "fileRead": 104.061,
+            "bytes": 27274
+          },
+          {
+            "file": "navigation.css",
+            "type": "link",
+            "start": 1185.300000000745,
+            "request": 1228.7000000029802,
+            "response": 1363.2000000029802,
+            "end": 1853.800000000745,
+            "queue": 43.400000002235174,
+            "ttfb": 134.5,
+            "download": 490.5999999977648,
+            "fileRead": 116.42,
+            "bytes": 2352
+          },
+          {
+            "file": "galaxy.css",
+            "type": "link",
+            "start": 1185.300000000745,
+            "request": 1237.1000000014901,
+            "response": 1363.2000000029802,
+            "end": 1916.4000000022352,
+            "queue": 51.80000000074506,
+            "ttfb": 126.10000000149012,
+            "download": 553.1999999992549,
+            "fileRead": 110.212,
+            "bytes": 13418
+          },
+          {
+            "file": "operations.css",
+            "type": "link",
+            "start": 1185.4000000022352,
+            "request": 1836.9000000022352,
+            "response": 1853.7000000029802,
+            "end": 2676.5,
+            "queue": 651.5,
+            "ttfb": 16.800000000745058,
+            "download": 822.7999999970198,
+            "fileRead": 14.88,
+            "bytes": 27096
+          },
+          {
+            "file": "alliance.css",
+            "type": "link",
+            "start": 1185.5,
+            "request": 1854,
+            "response": 1914,
+            "end": 2415.7000000029802,
+            "queue": 668.5,
+            "ttfb": 60,
+            "download": 501.70000000298023,
+            "fileRead": 38.391,
+            "bytes": 13168
+          },
+          {
+            "file": "visuals.css",
+            "type": "link",
+            "start": 1185.5,
+            "request": 1928.9000000022352,
+            "response": 1966.6000000014901,
+            "end": 2558.7000000029802,
+            "queue": 743.4000000022352,
+            "ttfb": 37.69999999925494,
+            "download": 592.1000000014901,
+            "fileRead": 19.04,
+            "bytes": 18218
+          },
+          {
+            "file": "strategy.css",
+            "type": "link",
+            "start": 1185.5,
+            "request": 1914.7000000029802,
+            "response": 1928.800000000745,
+            "end": 2764.800000000745,
+            "queue": 729.2000000029802,
+            "ttfb": 14.099999997764826,
+            "download": 836,
+            "fileRead": 0.781,
+            "bytes": 34325
+          },
+          {
+            "file": "main.js",
+            "type": "script",
+            "start": 1185.6000000014901,
+            "request": 2135.60000000149,
+            "response": 2146.5,
+            "end": 2911,
+            "queue": 950,
+            "ttfb": 10.899999998509884,
+            "download": 764.5,
+            "fileRead": 0.398,
+            "bytes": 55298
+          },
+          {
+            "file": "icons.js",
+            "type": "script",
+            "start": 3463.5,
+            "request": 3464.2000000029802,
+            "response": 3465.300000000745,
+            "end": 3717.800000000745,
+            "queue": 0.7000000029802322,
+            "ttfb": 1.0999999977648258,
+            "download": 252.5,
+            "fileRead": 0.477,
+            "bytes": 4144
+          },
+          {
+            "file": "model.js",
+            "type": "script",
+            "start": 3465.300000000745,
+            "request": 3465.800000000745,
+            "response": 3468.800000000745,
+            "end": 3750.10000000149,
+            "queue": 0.5,
+            "ttfb": 3,
+            "download": 281.30000000074506,
+            "fileRead": 2.014,
+            "bytes": 3016
+          },
+          {
+            "file": "planet.js",
+            "type": "script",
+            "start": 3465.7000000029802,
+            "request": 3466.2000000029802,
+            "response": 3468.800000000745,
+            "end": 3703,
+            "queue": 0.5,
+            "ttfb": 2.599999997764826,
+            "download": 234.19999999925494,
+            "fileRead": 1.359,
+            "bytes": 1938
+          },
+          {
+            "file": "presentation.js",
+            "type": "script",
+            "start": 3466,
+            "request": 3466.400000002235,
+            "response": 3468.800000000745,
+            "end": 3696.400000002235,
+            "queue": 0.4000000022351742,
+            "ttfb": 2.399999998509884,
+            "download": 227.60000000149012,
+            "fileRead": 1.577,
+            "bytes": 2733
+          },
+          {
+            "file": "route-preview.js",
+            "type": "script",
+            "start": 3466.10000000149,
+            "request": 3466.7000000029802,
+            "response": 3468.800000000745,
+            "end": 3782,
+            "queue": 0.6000000014901161,
+            "ttfb": 2.099999997764826,
+            "download": 313.19999999925494,
+            "fileRead": 1.736,
+            "bytes": 8197
+          },
+          {
+            "file": "navigation.js",
+            "type": "script",
+            "start": 3466.2000000029802,
+            "request": 3466.7000000029802,
+            "response": 3468.800000000745,
+            "end": 3750,
+            "queue": 0.5,
+            "ttfb": 2.099999997764826,
+            "download": 281.19999999925494,
+            "fileRead": 1.281,
+            "bytes": 5081
+          },
+          {
+            "file": "workspace.js",
+            "type": "script",
+            "start": 3466.2000000029802,
+            "request": 3696.5,
+            "response": 3697.2000000029802,
+            "end": 4453.900000002235,
+            "queue": 230.29999999701977,
+            "ttfb": 0.7000000029802322,
+            "download": 756.6999999992549,
+            "fileRead": 0.358,
+            "bytes": 24298
+          },
+          {
+            "file": "galaxy.js",
+            "type": "script",
+            "start": 3466.300000000745,
+            "request": 3703.2000000029802,
+            "response": 3704.2000000029802,
+            "end": 4294.10000000149,
+            "queue": 236.90000000223517,
+            "ttfb": 1,
+            "download": 589.8999999985099,
+            "fileRead": 0.592,
+            "bytes": 14970
+          },
+          {
+            "file": "alliance.js",
+            "type": "script",
+            "start": 3466.400000002235,
+            "request": 3750.2000000029802,
+            "response": 3751.400000002235,
+            "end": 4371.20000000298,
+            "queue": 283.80000000074506,
+            "ttfb": 1.199999999254942,
+            "download": 619.8000000007451,
+            "fileRead": 0.717,
+            "bytes": 16393
+          },
+          {
+            "file": "operations.js",
+            "type": "script",
+            "start": 3466.400000002235,
+            "request": 3717.900000002235,
+            "response": 3719.800000000745,
+            "end": 4571.800000000745,
+            "queue": 251.5,
+            "ttfb": 1.8999999985098839,
+            "download": 852,
+            "fileRead": 1.456,
+            "bytes": 32748
+          },
+          {
+            "file": "strategy-model.js",
+            "type": "script",
+            "start": 3466.5,
+            "request": 3750.300000000745,
+            "response": 3751.7000000029802,
+            "end": 4325.20000000298,
+            "queue": 283.80000000074506,
+            "ttfb": 1.4000000022351742,
+            "download": 573.5,
+            "fileRead": 0.939,
+            "bytes": 13424
+          },
+          {
+            "file": "strategy.js",
+            "type": "script",
+            "start": 3466.5,
+            "request": 3782.10000000149,
+            "response": 3783.400000002235,
+            "end": 4516.20000000298,
+            "queue": 315.6000000014901,
+            "ttfb": 1.300000000745058,
+            "download": 732.8000000007451,
+            "fileRead": 0.92,
+            "bytes": 23074
+          },
+          {
+            "file": "planet-fallback.js",
+            "type": "script",
+            "start": 3707.5,
+            "request": 4294.300000000745,
+            "response": 4294.900000002235,
+            "end": 4524.70000000298,
+            "queue": 586.8000000007451,
+            "ttfb": 0.6000000014901161,
+            "download": 229.80000000074506,
+            "fileRead": 0.252,
+            "bytes": 2993
+          },
+          {
+            "file": "planet-rotation.js",
+            "type": "script",
+            "start": 3707.900000002235,
+            "request": 4325.300000000745,
+            "response": 4326,
+            "end": 4594.20000000298,
+            "queue": 617.3999999985099,
+            "ttfb": 0.6999999992549419,
+            "download": 268.20000000298023,
+            "fileRead": 0.328,
+            "bytes": 7358
+          },
+          {
+            "file": "route-model.js",
+            "type": "script",
+            "start": 3786.2000000029802,
+            "request": 4371.400000002235,
+            "response": 4578.10000000149,
+            "end": 4609.70000000298,
+            "queue": 585.1999999992549,
+            "ttfb": 206.69999999925494,
+            "download": 31.600000001490116,
+            "fileRead": 146.505,
+            "bytes": 1592
+          },
+          {
+            "file": "scene-motion.js",
+            "type": "script",
+            "start": 3786.900000002235,
+            "request": 4454,
+            "response": 4592.10000000149,
+            "end": 4625.900000002235,
+            "queue": 667.0999999977648,
+            "ttfb": 138.10000000149012,
+            "download": 33.80000000074506,
+            "fileRead": 77.167,
+            "bytes": 918
+          },
+          {
+            "file": "visuals.js",
+            "type": "script",
+            "start": 4705.10000000149,
+            "request": 4705.900000002235,
+            "response": 4706.60000000149,
+            "end": 4974.60000000149,
+            "queue": 0.8000000007450581,
+            "ttfb": 0.6999999992549419,
+            "download": 268,
+            "fileRead": 0.395,
+            "bytes": 3309
+          },
+          {
+            "file": "orbital-hangar-v1.webp",
+            "type": "css",
+            "start": 5044.60000000149,
+            "request": 5045.20000000298,
+            "response": 5071.5,
+            "end": 6734.400000002235,
+            "queue": 0.6000000014901161,
+            "ttfb": 26.299999997019768,
+            "download": 1662.9000000022352,
+            "fileRead": 25.263,
+            "bytes": 152984
+          },
+          {
+            "file": "fleet-roster-v2.webp",
+            "type": "css",
+            "start": 5045.70000000298,
+            "request": 5050.10000000149,
+            "response": 5071.5,
+            "end": 6716,
+            "queue": 4.399999998509884,
+            "ttfb": 21.399999998509884,
+            "download": 1644.5,
+            "fileRead": 20.837,
+            "bytes": 148454
+          }
+        ]
+      },
+      "inputs": [
+        {
+          "handler": 4.199999999254942,
+          "doubleRAF": 30.300000000745058
+        },
+        {
+          "handler": 2.899999998509884,
+          "doubleRAF": 24
+        },
+        {
+          "handler": 2.800000000745058,
+          "doubleRAF": 20.099999997764826
+        },
+        {
+          "handler": 4.100000001490116,
+          "doubleRAF": 23.400000002235174
+        },
+        {
+          "handler": 1.199999999254942,
+          "doubleRAF": 24.099999997764826
+        },
+        {
+          "handler": 5,
+          "doubleRAF": 30.800000000745058
+        },
+        {
+          "handler": 3.699999999254942,
+          "doubleRAF": 24.399999998509884
+        },
+        {
+          "handler": 3.600000001490116,
+          "doubleRAF": 26.800000000745058
+        },
+        {
+          "handler": 2.699999999254942,
+          "doubleRAF": 24.099999997764826
+        },
+        {
+          "handler": 4,
+          "doubleRAF": 25.900000002235174
+        },
+        {
+          "handler": 1.5,
+          "doubleRAF": 23
+        },
+        {
+          "handler": 4,
+          "doubleRAF": 24.399999998509884
+        },
+        {
+          "handler": 7.300000000745058,
+          "doubleRAF": 41.69999999925494
+        },
+        {
+          "handler": 3.800000000745058,
+          "doubleRAF": 21.300000000745058
+        },
+        {
+          "handler": 3.800000000745058,
+          "doubleRAF": 22.599999997764826
+        },
+        {
+          "handler": 1.8999999985098839,
+          "doubleRAF": 25.199999999254942
+        },
+        {
+          "handler": 4.300000000745058,
+          "doubleRAF": 24.700000002980232
+        },
+        {
+          "handler": 4.699999999254942,
+          "doubleRAF": 24.399999998509884
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 26
+        },
+        {
+          "handler": 1,
+          "doubleRAF": 16.5
+        },
+        {
+          "handler": 5.300000000745058,
+          "doubleRAF": 20.699999999254942
+        },
+        {
+          "handler": 0.9000000022351742,
+          "doubleRAF": 24.300000000745058
+        },
+        {
+          "handler": 1.6000000014901161,
+          "doubleRAF": 20.199999999254942
+        },
+        {
+          "handler": 1.699999999254942,
+          "doubleRAF": 23.899999998509884
+        },
+        {
+          "handler": 4.100000001490116,
+          "doubleRAF": 33.100000001490116
+        },
+        {
+          "handler": 5.699999999254942,
+          "doubleRAF": 39.399999998509884
+        },
+        {
+          "handler": 3.900000002235174,
+          "doubleRAF": 20.100000001490116
+        },
+        {
+          "handler": 2,
+          "doubleRAF": 24.199999999254942
+        },
+        {
+          "handler": 0.6999999992549419,
+          "doubleRAF": 20
+        },
+        {
+          "handler": 0.8000000007450581,
+          "doubleRAF": 17.600000001490116
+        }
+      ],
+      "costs": [
+        {
+          "name": "hydrateIcons",
+          "ms": 0.6999999992549419,
+          "input": false
+        },
+        {
+          "name": "render",
+          "ms": 13.600000001490116,
+          "input": false
+        },
+        {
+          "name": "hydrateIcons",
+          "ms": 0,
+          "input": false
+        },
+        {
+          "name": "renderCurrentWorkspace",
+          "ms": 4.600000001490116,
+          "input": false
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 3.300000000745058,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.800000000745058,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1.8999999985098839,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2.399999998509884,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2.300000000745058,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2.5,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 3.199999999254942,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.600000001490116,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.1000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 3.900000002235174,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 4.5,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2.300000000745058,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2.800000000745058,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 2.300000000745058,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 3.2999999970197678,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.2000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2.900000002235174,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.5,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 7.099999997764826,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 7.199999999254942,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2.699999999254942,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.199999999254942,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.7000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1.0999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 3.399999998509884,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.699999999254942,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 3.600000001490116,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 4.100000001490116,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6999999992549419,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.7999999970197678,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.300000000745058,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.8000000007450581,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.8999999985098839,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.2000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 1.300000000745058,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.3999999985098839,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 3.100000001490116,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.800000000745058,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 5.599999997764826,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 2.699999999254942,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 3.2000000029802322,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.8999999985098839,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 1.6000000014901161,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.5999999977648258,
+          "input": true
+        },
+        {
+          "name": "refreshStrategy",
+          "ms": 0.5,
+          "input": true
+        },
+        {
+          "name": "changeStrategy",
+          "ms": 0.6000000014901161,
+          "input": true
+        }
+      ],
+      "startupMetrics": [
+        {
+          "name": "Timestamp",
+          "value": 17678.345655
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 1
+        },
+        {
+          "name": "Frames",
+          "value": 1
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 29
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 714
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1469
+        },
+        {
+          "name": "Resources",
+          "value": 2
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 12
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 0
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 1
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 0
+        },
+        {
+          "name": "LayoutCount",
+          "value": 8
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 30
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.732727
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.104813
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 0.043182
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 0.027747
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0.000091
+        },
+        {
+          "name": "TaskDuration",
+          "value": 1.224301
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 0.315741
+        },
+        {
+          "name": "ThreadTime",
+          "value": 0.2964
+        },
+        {
+          "name": "ProcessTime",
+          "value": 3.502397
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 1925080
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 2940928
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 17674.822901
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 17676.403433
+        },
+        {
+          "name": "NavigationStart",
+          "value": 17671.360407
+        }
+      ],
+      "inputMetrics": {
+        "TaskDuration": 0.5747469999999999,
+        "ScriptDuration": 0.09014,
+        "LayoutDuration": 0.12482099999999996,
+        "RecalcStyleDuration": 0.04187500000000001,
+        "LayoutCount": 30,
+        "RecalcStyleCount": 92
+      }
+    }
+  ],
+  "modulePreloadAblation": true,
+  "currentFiles": [
+    {
+      "file": "index.html",
+      "sha256": "bdc87c742b228cbcc688ee9aeaed60d01787c43bfbc1dae935af2c79b767558c"
+    },
+    {
+      "file": "main.js",
+      "sha256": "480b6d2c4647b93a4f8729afa25c05f5bae5031b7b023e02b933de883fd5456d"
+    },
+    {
+      "file": "route-preview.js",
+      "sha256": "6f2964d40d6fc54a8c15862c4284ee21e2c01f0fcffc83a6a25579a0c369fd1f"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "6465b8ed829f77717c21a4e7773d0cd94337573cb2bcefabf191b22619da8572"
+    },
+    {
+      "file": "strategy.css",
+      "sha256": "4cad2ea896a1d51f5b5b0120dc3c9a2f9b709497419b77b98066e506d8f25f6f"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "f4737deec3a9cd3455bc5b3158543dd34df850d5505a3dd99fca991b5a13a24d"
+    },
+    {
+      "file": "workspace.css",
+      "sha256": "7544047c735203f62639f21cab6a638acc6e8f5f05661d7b42c321c67be9e7c2"
+    }
+  ],
+  "passed": true
+}
