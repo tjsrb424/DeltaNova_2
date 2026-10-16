@@ -59,7 +59,7 @@ try{
     await page.locator('.mobile-more').click();await page.locator('#workspace-page [data-view="defense"]').click();
     assert.match(await page.locator('#workspace-title').innerText(),/방어/);
     assert.match(await page.locator('[data-defense-count]').innerText(),/0/);
-    assert.equal(await page.locator('dialog').evaluate(el=>el.open),false);
+    assert.equal(await page.locator('#detail-dialog').evaluate(el=>el.open),false);
     await page.goBack();await page.locator('#workspace-page [data-view="defense"]').waitFor();
     assert.equal(await page.locator('#workspace-page [data-view="defense"]').evaluate(el=>el===document.activeElement),true);
     assert.equal(await page.locator('#workspace-page a[href="/"]').isVisible(),true);
@@ -72,7 +72,7 @@ try{
       for(const view of ['construction','research','fleet','more']){
         await page.locator('.sidebar [data-view="'+view+'"]:visible').click();
         await page.waitForFunction(()=>document.getAnimations().filter(a=>Number.isFinite(a.effect?.getComputedTiming().endTime)).every(a=>a.playState!=='running'));
-        assert.equal(await page.locator('dialog').evaluate(el=>el.open),false);
+        assert.equal(await page.locator('#detail-dialog').evaluate(el=>el.open),false);
         assert.equal(await page.locator('#workspace-page').isVisible(),true);
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,view+' overflow '+width);
         const contrast=await page.evaluate(auditVisibleText);assert.deepEqual(contrast.failures,[],view+' contrast '+width);
@@ -93,7 +93,7 @@ try{
         }
         if(view==='more')for(const sub of ['career','galaxy','defense','guild','diplomacy','rankings','reports','practice']){
           await page.locator('#workspace-page [data-view="'+sub+'"]').click();
-          assert.equal(await page.locator('dialog').evaluate(el=>el.open),false);
+          assert.equal(await page.locator('#detail-dialog').evaluate(el=>el.open),false);
           assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,sub+' overflow '+width);
           await page.locator('.sidebar [data-view="more"]:visible').click();
         }
@@ -113,7 +113,7 @@ try{
     await page.locator('.sidebar [data-view="home"]').click();
     await page.locator('.quick-section [data-panel="fleet"]').click();
     await page.locator('#dialog-content [data-view="fleet"]').click();
-    assert.equal(await page.locator('dialog').evaluate(el=>el.open),false);
+    assert.equal(await page.locator('#detail-dialog').evaluate(el=>el.open),false);
     assert.match(await page.locator('#workspace-title').innerText(),/함대/);
     await page.goBack();await page.locator('dialog[open]').waitFor();
     await page.keyboard.press('Escape');await page.waitForFunction(()=>!document.querySelector('dialog').open);
@@ -365,7 +365,7 @@ try{
     await galaxyPage.locator('#galaxy-target-select').focus();await galaxyPage.locator('#galaxy-target-select').selectOption('vesper');
     assert.match(await galaxyPage.locator('.gx-scan-status').innerText(),/타르시스/);
     await galaxyPage.clock.fastForward(1500);
-    assert.equal(await galaxyPage.locator('dialog').evaluate(el=>el.open),false);
+    assert.equal(await galaxyPage.locator('#detail-dialog').evaluate(el=>el.open),false);
     assert.equal(await galaxyPage.locator('#galaxy-target-title').innerText(),'베스퍼');
     assert.equal(await galaxyPage.locator('#galaxy-target-select').evaluate(el=>el===document.activeElement),true);
     await galaxyPage.locator('#galaxy-target-select').focus();await galaxyPage.locator('#galaxy-target-select').selectOption('tarsis');

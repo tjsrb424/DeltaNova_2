@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-16T07:07:53.695Z",
+  "browser": "155.0.8059.80",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "scope": "Independent plan/refund previews. No real commands or state changes.",
+  "checks": [
+    {
+      "name": "all four technologies expose effects, exact costs, unlocks and honest future effects",
+      "passed": true
+    },
+    {
+      "name": "ship choices and exact numeric edits preserve input/focus and reject invalid quantities",
+      "passed": true
+    },
+    {
+      "name": "each queue reviews original payment and80percent refund without changing jobs or assets",
+      "passed": false,
+      "error": "TimeoutError: locator.innerText: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#development-announcement')\u001b[22m\n"
+    }
+  ],
+  "layouts": [],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7a56fcc499feedad97bc73f81c17aa6a02eeae9af75d829034e1c119783f2930"
+    },
+    {
+      "file": "main.js",
+      "sha256": "de0cb121ea75505343d627140e4f34ac531e2b09b3d5b86cae9828c5377f57ae"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "e8134ce698f5e5629418651050722e0b8f4a960dfca28dc3fa40d46a9a459f4b"
+    },
+    {
+      "file": "development-model.js",
+      "sha256": "f0e8831f4c3c6ca597c32a7284e783d1a0e66cff8ca9b9cbfe4a6f8be995f49f"
+    },
+    {
+      "file": "development.js",
+      "sha256": "c787f149e48579d047be214c3cbe5bbd73449df8ecdbeb3695e12c5f57d24276"
+    },
+    {
+      "file": "development-controller.js",
+      "sha256": "51105880fcfbda219ad2f95c838b17a89725df2ac577cac64084c7cd214ac958"
+    },
+    {
+      "file": "development.css",
+      "sha256": "ee501911c25a93cc45d3aff10dedafae20c39bcd007cffb8687fe51d3ec69953"
+    }
+  ],
+  "passed": false,
+  "failure": "TimeoutError: locator.innerText: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#development-announcement')\u001b[22m\n"
+}

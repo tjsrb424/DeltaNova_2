@@ -1,0 +1,37 @@
+[
+  {
+    "file": "index.html",
+    "sha256": "98b2360271246e8538a713ad21175f1c8406b60813f66f35b7de041fd0239b13",
+    "publicEqualsDist": true
+  },
+  {
+    "file": "main.js",
+    "sha256": "de0cb121ea75505343d627140e4f34ac531e2b09b3d5b86cae9828c5377f57ae",
+    "publicEqualsDist": true
+  },
+  {
+    "file": "workspace.js",
+    "sha256": "e8134ce698f5e5629418651050722e0b8f4a960dfca28dc3fa40d46a9a459f4b",
+    "publicEqualsDist": true
+  },
+  {
+    "file": "development-model.js",
+    "sha256": "f0e8831f4c3c6ca597c32a7284e783d1a0e66cff8ca9b9cbfe4a6f8be995f49f",
+    "publicEqualsDist": true
+  },
+  {
+    "file": "development.js",
+    "sha256": "5c93bb5f83fcd5046e6a5490ce13d285f28802cb2dcb54761eb0507dd865efae",
+    "publicEqualsDist": true
+  },
+  {
+    "file": "development-controller.js",
+    "sha256": "eaf1e66d298022a80937d38ede88a24ea667fa4c7f220e7799a3e30d1e452739",
+    "publicEqualsDist": true
+  },
+  {
+    "file": "development.css",
+    "sha256": "ee501911c25a93cc45d3aff10dedafae20c39bcd007cffb8687fe51d3ec69953",
+    "publicEqualsDist": true
+  }
+]

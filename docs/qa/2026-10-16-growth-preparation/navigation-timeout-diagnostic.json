@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-16T06:59:31.179Z",
+  "browser": "155.0.8059.80",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "scope": "Independent plan/refund previews. No real commands or state changes.",
+  "checks": [
+    {
+      "name": "all four technologies expose effects, exact costs, unlocks and honest future effects",
+      "passed": true
+    },
+    {
+      "name": "ship choices and exact numeric edits preserve input/focus and reject invalid quantities",
+      "passed": true
+    },
+    {
+      "name": "each queue reviews original payment and80percent refund without changing jobs or assets",
+      "passed": true
+    },
+    {
+      "name": "research refunds use Nova even when Vesper is selected and stale dialogs close on navigation",
+      "passed": true
+    },
+    {
+      "name": "keyboard and Chromium accessibility expose the named review and trap focus under forced colors",
+      "passed": false,
+      "error": "TimeoutError: page.goto: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:1969/uiux-demo/index.html?growth=7#view=fleet\", waiting until \"load\"\u001b[22m\n"
+    }
+  ],
+  "layouts": [],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7a56fcc499feedad97bc73f81c17aa6a02eeae9af75d829034e1c119783f2930"
+    },
+    {
+      "file": "main.js",
+      "sha256": "de0cb121ea75505343d627140e4f34ac531e2b09b3d5b86cae9828c5377f57ae"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "465cedac5bd83ca6bfeeb65c4044597e802481a84b4ff61e88df05ac23ad74d7"
+    },
+    {
+      "file": "development-model.js",
+      "sha256": "f0e8831f4c3c6ca597c32a7284e783d1a0e66cff8ca9b9cbfe4a6f8be995f49f"
+    },
+    {
+      "file": "development.js",
+      "sha256": "c787f149e48579d047be214c3cbe5bbd73449df8ecdbeb3695e12c5f57d24276"
+    },
+    {
+      "file": "development-controller.js",
+      "sha256": "a09fa26a41632ce77d9bbbe26057aa62af3eede98c5761f687d95d9801e631e6"
+    },
+    {
+      "file": "development.css",
+      "sha256": "ee501911c25a93cc45d3aff10dedafae20c39bcd007cffb8687fe51d3ec69953"
+    }
+  ],
+  "passed": false,
+  "failure": "TimeoutError: page.goto: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:1969/uiux-demo/index.html?growth=7#view=fleet\", waiting until \"load\"\u001b[22m\n"
+}

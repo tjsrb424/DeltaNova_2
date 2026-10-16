@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-10-16T07:25:50.049Z",
+  "baseline": "45abb204aa7f038f20d1671dd9fe78a1836d9685",
+  "branch": "codex/demo-visual-unification",
+  "scope": "Independent demo only. No production UI, API/data, game-model, asset-binary or dependency changes.",
+  "tests": {
+    "files": 33,
+    "passed": 340,
+    "failed": 0,
+    "success": true,
+    "report": "tests-final.json"
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0
+  },
+  "buildVerification": {
+    "command": "npm run verify:build",
+    "exitCode": 0
+  },
+  "browser": [
+    {
+      "report": "growth-browser.json",
+      "root": "dist",
+      "checks": 11,
+      "layoutAudits": 24,
+      "touchEmulation": true,
+      "exactModalAXElements": 3
+    },
+    {
+      "report": "actions.json",
+      "root": "dist",
+      "checks": 7
+    },
+    {
+      "report": "mobile.json",
+      "root": "dist",
+      "checks": 11
+    },
+    {
+      "report": "integration.json",
+      "root": "dist",
+      "checks": 35,
+      "layouts": 15
+    },
+    {
+      "report": "free-fleet.json",
+      "root": "public",
+      "checks": 14,
+      "layouts": 8
+    },
+    {
+      "report": "all-views.json",
+      "root": "dist",
+      "checks": 11,
+      "layouts": 120,
+      "textLayouts": 45
+    }
+  ],
+  "codeReview": {
+    "readOnly": true,
+    "critical": 0,
+    "important": 1,
+    "minor": 0,
+    "fixed": "Persistent modal-internal live region outside replaced body; missing-region RED -> exact DOM/AX inclusion and text GREEN; whole suite340 passed."
+  },
+  "sourceParity": {
+    "report": "source-parity.json",
+    "files": 7,
+    "publicEqualsDist": true
+  },
+  "protectedDiff": "",
+  "originalCheckout": {
+    "path": "D:/kim_dev/DeltaNova",
+    "branch": "codex/uiux-refoundation",
+    "sha": "91cf86ec5be9c39f08a3e1748ece1770fb567aff",
+    "status": ""
+  },
+  "additionalDiagnostic": {
+    "report": "archival-quality-diagnostic.json",
+    "result": "FAIL before the first test: archived checker does not open the scenario disclosure already closed at baseline45abb20; not part of required current checks, not counted passed. Checker source preserved."
+  },
+  "limitations": [
+    "Physical iOS/Android keyboard and VoiceOver/TalkBack speech not tested.",
+    "Chromium AX, emulated touch, text/contrast/geometry checks are not a full accessibility certification.",
+    "Internal design score9.5/10 is subjective and limited to this UI scope."
+  ]
+}

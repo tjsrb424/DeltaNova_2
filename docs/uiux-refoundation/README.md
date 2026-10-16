@@ -1,8 +1,10 @@
 # DELTA NOVA UI/UX REFOUNDATION — 독립 검토 화면
 
+**최신 후속 · 2026-10-16:** [연구·조선·취소/환급 UI](./GROWTH_PREPARATION_REVIEW.md), [검증 원문](../qa/2026-10-16-growth-preparation/README.md).
+
 사용자 요청일: 2026-10-15. 방향: **Minimal Galactic Command**.
 
-**최신 후속 · 2026-10-16:** [명령 성능 원인 분리·실행 우선 배치](./COMMAND_PERFORMANCE_ACTIONS_REVIEW.md), [검증 원문·화면](../qa/2026-10-16-command-performance-actions/README.md). 같은 브랜치이며 최신 재개 명령은 HANDOFF 맨 위에 있다.
+**이전 명령 성능 후속 · 2026-10-16:** [명령 성능 원인 분리·실행 우선 배치](./COMMAND_PERFORMANCE_ACTIONS_REVIEW.md), [검증 원문·화면](../qa/2026-10-16-command-performance-actions/README.md). 같은 브랜치이며 최신 재개 명령은 HANDOFF 맨 위에 있다.
 
 **이전 모바일 후속 · 2026-10-16:** [모바일·접근성·로딩·기존 함선 평가](./MOBILE_A11Y_LOADING_REVIEW.md), [검증 원문·실제 화면](../qa/2026-10-16-mobile-a11y-loading/README.md). 같은 `codex/demo-visual-unification` 브랜치. [이어가기](./HANDOFF.md) 맨 위를 사용한다.
 

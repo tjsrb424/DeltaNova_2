@@ -1,3 +1,45 @@
+# 최신 후속 · 2026-10-16 연구·조선·취소/환급
+
+현재 브랜치는 **`codex/demo-visual-unification`**, 이번 출발 기준은 `45abb204aa7f038f20d1671dd9fe78a1836d9685`이다. 아래 성능/그래픽 작업의 수치와 SHA는 이력으로 유지한다.
+
+- [화면·규칙·평가·검수](./GROWTH_PREPARATION_REVIEW.md), [원문·캡처·재현](../qa/2026-10-16-growth-preparation/README.md).
+- 연구4종의 효과/해금/자원·시간, 함선8종의1~20척 견적, 건설/연구/건조의 취소·환급 검토를 추가했다.
+- 원 지불 행성,80% 내림 반환, 저장 상한·완료 후 취소 불가를 기존 규칙과 맞춘다. 실제 시작·취소는 비활성/미연결이며 자산/대기열/함대를 바꾸지 않는다.
+- `development-model.js`는 명시한 표시 예시·카탈로그, `development.js`는 렌더러, `development-controller.js`는 선택·수량·검토창 수명/키보드 제어다. 운영 TS를 브라우저에서 import하지 않고 카탈로그 동등성을 테스트한다.
+- 새 비트맵/패키지/타이머/API/저장소를 추가하지 않았다. 운영 게임·산식·src/server/아트 원본과 기존 체크아웃은 보존한다.
+- 별도 읽기 리뷰의 Important1건(모달 밖 live 영역이 inert)을 모달 내부의 영속 live 영역으로 수정하고 열린 AX 트리로 검증했다.
+- 실제 휴대폰 키보드/VoiceOver/TalkBack 음성과 기기 성능은 후속이다. 데이터 연결·서비스 UI 이관·main 병합은 계속 보류한다.
+
+다른 PC에서는 아래 기존 clone 명령으로 같은 브랜치를 받고 `npm ci` 후 실행한다:
+
+```powershell
+npm run dev:solo -- --port 5181 --strictPort
+```
+
+직접 `http://127.0.0.1:5181/uiux-demo/index.html?review=growth-preparation#view=research`에 접속한다. 함대 화면 상단의 조선 계획 바로가기로 건조를 검토하고, 각 대기열의 취소·환급 검토를 연다. 상단 시설 스냅샷과 빈 작업 상태는 검토용 조건이며 실제 게임 성공을 만들지 않는다.
+
+검수는 기존 설치된 headless Chrome/Playwright로 순서대로 진행한다. 다른 환경의 경로는 아래 `DELTA_NOVA_BROWSER`/`DELTA_NOVA_PLAYWRIGHT` 설명을 따른다.
+
+```powershell
+npx vitest run --maxWorkers=1 --testTimeout=30000 --hookTimeout=30000
+npm run build
+npm run verify:build
+$env:DELTA_NOVA_DEMO_ROOT='dist'
+node tools/verify-development-demo.mjs
+node tools/verify-command-actions.mjs
+node tools/verify-demo-mobile-a11y.mjs
+node tools/verify-uiux-polish.mjs
+node tools/verify-visual-unification.mjs
+node tools/verify-free-fleet.mjs
+Remove-Item Env:DELTA_NOVA_DEMO_ROOT -ErrorAction SilentlyContinue
+```
+
+새 검수 출력은 `DELTA_NOVA_GROWTH_REVIEW_OUT`로 바꾸며 기본은 ignored `.delta-nova/growth-preparation/browser`다. 자유 함대 도구는 기존처럼 public을 검수하고 다른 위 도구는 지정한 dist를 검수한다.
+
+다음은 보고서·정비·재투자 UI → 홈/지도/함대의 동일 대상·상태 → 실기기/음성 검수 순으로 이어간다.
+
+---
+
 # 최신 후속 · 2026-10-16 명령 성능·행동 우선 배치
 
 브랜치는 **`codex/demo-visual-unification`**, 이번 비교 기준은 `255fa766ee92e1c1794e440e9e35d02c5b1ea080`이다. 독립 데모만 변경하며 데이터/서비스 UI 이관과 main 병합은 보류한다. 아래 이전 후속의 측정/기준 SHA는 당시 이력이다.

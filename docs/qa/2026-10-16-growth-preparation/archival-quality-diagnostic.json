@@ -1,0 +1,16 @@
+{
+  "at": "2026-10-16T07:22:33.850Z",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "checks": [],
+  "layouts": [],
+  "contrast": [],
+  "ax": [],
+  "errors": [],
+  "requests": [],
+  "limitations": [
+    "Automated emulation is not physical mobile hardware or screen-reader speech.",
+    "Contrast uses visible DOM text and composited flat ancestor colors; it is not a full WCAG certification."
+  ],
+  "status": "FAIL",
+  "failure": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '평시', exact: true })\u001b[22m\n"
+}

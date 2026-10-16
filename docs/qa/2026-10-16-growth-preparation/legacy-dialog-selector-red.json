@@ -1,0 +1,132 @@
+{
+  "checks": [
+    "WebGL texture upload errors preserve a static visible fallback",
+    "facility selection exposes comparison, cost, conditions and a disabled command"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 728.6875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 876.71875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 728.6875
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 706.765625
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 854.796875
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 706.765625
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 436.078125
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 458.671875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 231
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "operationFonts": [],
+  "failure": "Error: locator.evaluate: Error: strict mode violation: locator('dialog') resolved to 2 elements:\n    1) <dialog id=\"detail-dialog\" aria-labelledby=\"dialog-title\" aria-describedby=\"dialog-demo\">…</dialog> aka getByLabel('합금 광산', { exact: true })\n    2) <dialog id=\"development-dialog\" aria-labelledby=\"development-dialog-title\" aria-describedby=\"development-dialog-note\">…</dialog> aka getByLabel('계획 확인')\n\nCall log:\n\u001b[2m  - waiting for locator('dialog')\u001b[22m\n"
+}

@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="./alliance.css">
   <link rel="stylesheet" href="./strategy.css">
   <link rel="stylesheet" href="./visuals.css">
+  <link rel="stylesheet" href="./development.css">
   <link rel="modulepreload" href="./visuals.js">
   <link rel="modulepreload" href="./scene-motion.js">
   <link rel="modulepreload" href="./planet-rotation.js">
@@ -86,6 +87,7 @@
     </main>
   </div>
   <dialog id="detail-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-demo"><div class="drawer-head"><button id="dialog-back" class="text-button" hidden>← 이전 메뉴</button><span id="drawer-location" class="overline">행성 관제 / 상세</span><button class="icon-button" id="dialog-close" aria-label="상세 닫기"><span data-icon="close"></span></button></div><p id="dialog-demo" class="drawer-demo">예시 데이터 · 명령 실행 없이 검토합니다.</p><h2 id="dialog-title" tabindex="-1"></h2><div id="dialog-content"></div><footer class="drawer-footer"><button class="button secondary" id="dialog-return">관제로 돌아가기</button></footer></dialog>
+  <dialog id="development-dialog" aria-labelledby="development-dialog-title" aria-describedby="development-dialog-note"><header class="dev-dialog-head"><div><span id="development-dialog-note" class="ws-eyebrow">계획·환급 검토 · 실제 명령 미전송</span><h2 id="development-dialog-title">계획 확인</h2></div><button class="icon-button" id="development-dialog-close" aria-label="계획 검토 닫기" autofocus><span data-icon="close"></span></button></header><div id="development-dialog-body"></div><div id="development-announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div></dialog>
   <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
   <div id="urgent-announcement" class="sr-only" role="alert" aria-atomic="true"></div>
   <script type="module" src="./main.js"></script>

@@ -1,3 +1,5 @@
+import {initialDevelopment} from './development-model.js';
+import {createDevelopmentController} from './development-controller.js';
 import {icon as uiIcon} from './icons.js';
 import { initialDemo, transition, visualFacilities } from './model.js';
 import { drawPlanet, syncPlanetMotion } from './planet.js';
@@ -23,6 +25,7 @@ let galaxyUI = initialGalaxy(), pendingGalaxyUI = null, scanTimer, scanSerial = 
 let operationsUI = initialOperations();
 let allianceUI = initialAlliance();
 let strategyUI = initialStrategy();
+let developmentUI=initialDevelopment();
 let panel = null, opener = null, retryTimer, selectedFacility = 'fuelRefinery', view = 'home', navigationController;
 let demoReady=false,planetRenderKey;
 const screenMemory = new Map();
@@ -30,6 +33,7 @@ const dialog = $('detail-dialog');
 const demoEvents = new window.AbortController();
 const listen = (target,type,listener) => target.addEventListener(type,listener,{signal:demoEvents.signal});
 const routePreview = createRoutePreview(()=>state);
+const developmentController=createDevelopmentController({getState:()=>state,getUI:()=>developmentUI,setUI:next=>{developmentUI=next;},render:()=>renderCurrentWorkspace(),navigate:next=>navigationController.go({view:next}),announce,signal:demoEvents.signal});
 const planet = () => state.planets.find(p => p.id === state.selected);
 const format = n => n.toLocaleString('ko-KR');
 const stat = (label, value) => `<div class="detail-stat"><span>${label}</span><strong>${value}</strong></div>`;
@@ -64,6 +68,7 @@ function renderVisiblePlanet(){
   });
 }
 function act(action) {
+  if(['select','snapshot','empty','connection','reset'].includes(action.type))developmentController.invalidate(action.type==='reset');
   if(action.type==='reset')strategyUI=initialStrategy();
   else if(action.type==='select'||action.type==='connection'&&action.value!=='ready')strategyUI=transitionStrategy(strategyUI,{type:'cancel-review'},state);
   if (action.type === 'reset') allianceUI = initialAlliance();
@@ -167,7 +172,7 @@ function renderCurrentWorkspace() {
   const strategyPlan=view==='command'?strategySummary(strategyUI,state):null;
   $('workspace-title').textContent = strategyPlan?.target ? strategyPlan.target.name+' '+({attack:'공격',scout:'정찰',move:'이동',reinforce:'증원'}[strategyUI.intent]) : workspaceTitles[view];
   $('workspace-planet').textContent = planet().name + ' · 예시 스냅샷';
-  $('workspace-body').innerHTML = renderWorkspace(view,state,selectedFacility,galaxyUI,operationsUI,allianceUI,strategyUI);
+  $('workspace-body').innerHTML = renderWorkspace(view,state,selectedFacility,galaxyUI,operationsUI,allianceUI,strategyUI,developmentUI);
   hydrateIcons($('workspace-body'));
   routePreview.render();
 }
@@ -345,6 +350,7 @@ function syncStrategyRoute(){
   navigationController.go(patch,{replace:true});return true;
 }
 function applyNavigation(route, previous, info) {
+  developmentController.invalidate();
   const before = captureScreen();
   if (info.previousKey) screenMemory.set(info.previousKey,before);
   const changedTarget = route.view === 'galaxy' && previous?.target !== route.target;
