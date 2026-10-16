@@ -1,3 +1,42 @@
+# 최신 후속 · 2026-10-16 게임 용어·별도 데모 안내
+
+이번 작업은 `17864b2`에서 시작했다. 사용자 요청에 따라 독립 데모 변경을 **main**에 반영한다. 이전 연구·조선 작업까지의5개 커밋은 이미 origin/main에 반영되어 있다. 아래 과거 절의 ‘main 병합 보류’는 당시 기록이며 현재 배포 기준은 main이다. 데이터 연결·실제 서비스 UI 교체는 계속 보류한다.
+
+- [용어 기준·수정 내용·직접 확인](./GAME_LANGUAGE_REVIEW.md), [검증 원문·화면](../qa/2026-10-16-game-language/README.md).
+- 건설·연구·함대·출격·명령·동맹·은하·대피·보고서·편성 연습·메뉴·빈 상태의 용어를 정리했다. ‘함선 건조 / 연구하기 / 건조 취소’로 행동을 표시한다.
+- 상단 ‘데모 안내’가 안내·설정을 열고 summary로 포커스를 이동한다. 모바일 확대에서 열린 안내를 고정 메뉴 위에 표시한다.
+- 최종 시작/취소는 비활성이다. 출항·귀환·정찰은 ‘미리보기’로 표시한다. 원래 산식·자원·게임 명령·패키지·아트는 변경하지 않는다.
+
+새 PC에서는 기존 작업 폴더와 겹치지 않는 위치에서 다음처럼 받는다:
+
+```powershell
+git clone --branch main https://github.com/tjsrb424/DeltaNova_2.git DeltaNova-uiux
+cd DeltaNova-uiux
+npm ci
+npm run dev:solo -- --port 5181 --strictPort
+```
+
+직접 `http://127.0.0.1:5181/uiux-demo/index.html?review=game-language#view=fleet`에 접속한다. 기존 체크아웃에 미커밋 작업이 있으면 덮어쓰지 않는다. 검수는 기존처럼 headless로 실행한다:
+
+```powershell
+npm test -- --maxWorkers=1 --testTimeout=30000 --hookTimeout=30000
+npm run build
+npm run verify:build
+node tools/verify-demo-copy.mjs
+node tools/verify-development-demo.mjs
+$env:DELTA_NOVA_DEMO_ROOT='dist'
+node tools/verify-demo-mobile-a11y.mjs
+node tools/verify-command-actions.mjs
+node tools/verify-uiux-polish.mjs
+Remove-Item Env:DELTA_NOVA_DEMO_ROOT -ErrorAction SilentlyContinue
+```
+
+새 검수 출력은 `DELTA_NOVA_COPY_REVIEW_OUT`로 변경하며 기본은 ignored `.delta-nova/copy-review/browser`다. 브라우저/Playwright 경로는 기존 `DELTA_NOVA_BROWSER`/`DELTA_NOVA_PLAYWRIGHT`를 사용한다. 전용 검수는15화면·3폭,200% 글자,키보드,모달 접근성 트리,미리보기,터치,강제 색상 모드를 확인한다. 현재 테스트 결과는 위 QA 기록을 기준으로 한다.
+
+우선 다음은 실제 모바일/음성 검수 → 보고서·정비·재투자 화면 설계다.
+
+---
+
 # 최신 후속 · 2026-10-16 연구·조선·취소/환급
 
 현재 브랜치는 **`codex/demo-visual-unification`**, 이번 출발 기준은 `45abb204aa7f038f20d1671dd9fe78a1836d9685`이다. 아래 성능/그래픽 작업의 수치와 SHA는 이력으로 유지한다.

@@ -1,6 +1,8 @@
 # DELTA NOVA UI/UX REFOUNDATION — 독립 검토 화면
 
-**최신 후속 · 2026-10-16:** [연구·조선·취소/환급 UI](./GROWTH_PREPARATION_REVIEW.md), [검증 원문](../qa/2026-10-16-growth-preparation/README.md).
+**최신 후속 · 2026-10-16:** [게임 용어·별도 데모 안내](./GAME_LANGUAGE_REVIEW.md), [검증 원문](../qa/2026-10-16-game-language/README.md). 사용자 승인으로 main에 반영한다.
+
+**이전 연구·조선 후속 · 2026-10-16:** [연구·조선·취소/환급 UI](./GROWTH_PREPARATION_REVIEW.md), [검증 원문](../qa/2026-10-16-growth-preparation/README.md).
 
 사용자 요청일: 2026-10-15. 방향: **Minimal Galactic Command**.
 

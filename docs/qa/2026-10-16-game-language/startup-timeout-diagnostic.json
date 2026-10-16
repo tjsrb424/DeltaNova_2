@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-16T09:54:11.970Z",
+  "browser": "155.0.8059.80",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "scope": "Independent plan/refund previews. No real commands or state changes.",
+  "checks": [
+    {
+      "name": "all four technologies expose effects, exact costs, unlocks and honest future effects",
+      "passed": false,
+      "error": "TimeoutError: locator.waitFor: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#workspace-title') to be visible\u001b[22m\n"
+    }
+  ],
+  "layouts": [],
+  "accessibility": [],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7df36d4f6f34ae1657e1e3e484c7c47405508824a51512b3f157eafac5a95451"
+    },
+    {
+      "file": "main.js",
+      "sha256": "4a285f957d84a21f1736000f9f351052dac0089abf4ebdab98e988f638c12bf0"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "949b20f9fb26aa1178105ae0bd4246209d63466e9a4cd5ef852f53041317bc3e"
+    },
+    {
+      "file": "development-model.js",
+      "sha256": "e35f86945070862362ecc8042f2a101ad3809ae134ee8db1ca0eace509502023"
+    },
+    {
+      "file": "development.js",
+      "sha256": "2205019f22137e5563fdc01cda6f043fa8226599d4b1643cccafbf460c8208a9"
+    },
+    {
+      "file": "development-controller.js",
+      "sha256": "d9cb233208ce5d1bc3a43b4e3937576551d3b14801bff3239dbc0d554fe7db1a"
+    },
+    {
+      "file": "development.css",
+      "sha256": "9d5851b6214d8ce31fcb6ec3f4007de8b436eecc3d28f03f243cabef2ecddfdf"
+    }
+  ],
+  "passed": false,
+  "failure": "TimeoutError: page.screenshot: Timeout 8000ms exceeded.\nCall log:\n\u001b[2m  - taking page screenshot\u001b[22m\n\u001b[2m  - waiting for fonts to load...\u001b[22m\n"
+}

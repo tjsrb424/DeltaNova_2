@@ -77,9 +77,9 @@ describe('galaxy presentation', () => {
       expect(view.querySelector(`#galaxy-node-${target.id}`)?.getAttribute('aria-label')).toContain(target.name);
       expect(view.querySelector(`#galaxy-row-${target.id}`)?.textContent).toContain(target.name);
     }
-    expect(view.textContent).toContain('고정 예시');
-    expect(view.textContent).toContain('정찰 시연');
-    expect(view.querySelector('button:disabled')?.textContent).toContain('정찰 명령');
+    expect(view.textContent).toContain('행성 위치');
+    expect(view.textContent).toContain('정찰 정보 미리보기');
+    expect(view.querySelector('button:disabled')?.textContent).toContain('정찰 시작');
     expect(view.textContent).toContain('미확인');
     expect(view.textContent).not.toContain('0척');
   });
@@ -119,12 +119,12 @@ describe('galaxy presentation', () => {
     const scanning = transitionGalaxy(ui, { type: 'scan-start', token: 1, target: 'tarsis' });
     const done = transitionGalaxy(scanning, { type: 'scan-complete', token: 1 });
     const report = mount(renderGalaxyReport(initialDemo(), done, 'tarsis'));
-    expect(report.textContent).toContain('정찰 시연 결과');
+    expect(report.textContent).toContain('정찰 보고서');
     expect(report.textContent).toContain('타르시스');
     expect(report.textContent).toContain('미확인');
     expect(mount(renderGalaxyContent(initialDemo(), done)).querySelector('#galaxy-report-open')?.getAttribute('data-panel')).toBe('intel');
     const passive = galaxyTargets.find((t: any) => t.observed);
-    expect(renderGalaxyReport(initialDemo(), ui, passive.id)).toContain('12분 전 고정 예시');
+    expect(renderGalaxyReport(initialDemo(), ui, passive.id)).toContain('12분 전');
     expect(renderGalaxyReport({ ...initialDemo(), empty: true }, ui, passive.id)).toContain('아직 확인한 정보가 없습니다');
     const empty = mount(renderGalaxyContent({ ...initialDemo(), empty: true }, ui));
     expect(empty.querySelector('#galaxy-node-mira')?.getAttribute('aria-label')).toContain('동맹 행성');

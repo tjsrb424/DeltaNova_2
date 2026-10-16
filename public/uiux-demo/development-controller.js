@@ -15,7 +15,7 @@ export function createDevelopmentController({getState,getUI,setUI,render,navigat
    if(kind==='ships'&&!q.validQuantity||kind.startsWith('cancel-')&&!q.job)return;
    opener=element;review={kind,scenario:'snapshot'};
    document.getElementById('development-announcement').textContent='';
-   document.getElementById('development-dialog-title').textContent=kind.startsWith('cancel-')?'취소 전 환급 확인':'시작 전 계획 확인';
+   document.getElementById('development-dialog-title').textContent=kind.startsWith('cancel-')?'취소 시 환급액':kind==='ships'?'건조 시작 전 확인':'연구 시작 전 확인';
    document.getElementById('development-dialog-body').innerHTML=kind.startsWith('cancel-')?renderCancellation(q):renderPlanReview(q);
    dialog.showModal();document.getElementById('development-dialog-close').focus({preventScroll:true});
  };
@@ -29,7 +29,7 @@ export function createDevelopmentController({getState,getUI,setUI,render,navigat
    document.getElementById('development-ship-review').disabled=!q.validQuantity;
    document.getElementById('development-minus').setAttribute('aria-disabled',String(!q.validQuantity||q.quantity<=1));
    document.getElementById('development-plus').setAttribute('aria-disabled',String(!q.validQuantity||q.quantity>=20));
-   announce(q.validQuantity?q.name+' '+q.quantity+'척, 합금 '+q.cost.alloy+', 결정 '+q.cost.crystal+', 연료 '+q.cost.fuel+'. 계획 검토입니다.':'건조 수량은 1~20 사이의 정수여야 합니다.');
+   announce(q.validQuantity?q.name+' '+q.quantity+'척, 합금 '+q.cost.alloy+', 결정 '+q.cost.crystal+', 연료 '+q.cost.fuel+'의 건조 비용입니다.':'건조 수량은 1~20 사이의 정수여야 합니다.');
  };
  const select=(patch,focusId)=>{
    const expanded=[...document.querySelectorAll('.dev-scenarios[open]')].map(el=>el.id);
@@ -61,7 +61,7 @@ export function createDevelopmentController({getState,getUI,setUI,render,navigat
      document.getElementById('development-dialog-body').innerHTML=renderCancellation(cancellationPlan(getState(),review.kind.slice(7),el.value),el.value);
      document.getElementById(el.id)?.focus({preventScroll:true});
      const q=cancellationPlan(getState(),review.kind.slice(7),el.value);
-     document.getElementById('development-announcement').textContent=q.issues.length?'취소 불가. '+q.issues.join(' '):'예시 환급 조건을 충족합니다. 실제 취소는 미연결입니다.';
+     document.getElementById('development-announcement').textContent=q.issues.length?'취소 불가. '+q.issues.join(' '):'취소 시 표시된 자원을 돌려받습니다. 데모에서는 작업이 취소되지 않습니다.';
    }
  });
  on(document.getElementById('development-dialog-close'),'click',()=>close());

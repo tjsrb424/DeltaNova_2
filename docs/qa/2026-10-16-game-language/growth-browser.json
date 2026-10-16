@@ -1,0 +1,326 @@
+{
+  "date": "2026-10-16T09:59:02.002Z",
+  "browser": "155.0.8059.80",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "scope": "Independent plan/refund previews. No real commands or state changes.",
+  "checks": [
+    {
+      "name": "all four technologies expose effects, exact costs, unlocks and honest future effects",
+      "passed": true
+    },
+    {
+      "name": "ship choices and exact numeric edits preserve input/focus and reject invalid quantities",
+      "passed": true
+    },
+    {
+      "name": "each queue reviews original payment and80percent refund without changing jobs or assets",
+      "passed": true
+    },
+    {
+      "name": "research refunds use Nova even when Vesper is selected and stale dialogs close on navigation",
+      "passed": true
+    },
+    {
+      "name": "keyboard and Chromium accessibility expose the named review and trap focus under forced colors",
+      "passed": true
+    },
+    {
+      "name": "desktop phone short landscape and200percent text preserve usable controls and dialogs",
+      "passed": true
+    },
+    {
+      "name": "the preparation flow reaches facility comparison research shipbuilding recon and the original free fleet editor",
+      "passed": true
+    },
+    {
+      "name": "missing approved art leaves ship selection quantity quote and review usable",
+      "passed": true
+    },
+    {
+      "name": "empty queues and disconnected state do not manufacture work or successful commands",
+      "passed": true
+    },
+    {
+      "name": "touch-emulated mobile can jump into shipbuilding edit quantities and review refunds",
+      "passed": true
+    },
+    {
+      "name": "no script errors API requests or mutations occur",
+      "passed": true
+    }
+  ],
+  "layouts": [
+    {
+      "label": "research-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "fleet-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "refund-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "research-1440-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "fleet-1440-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "refund-1440-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "research-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "refund-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "research-390-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-390-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "refund-390-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "research-320-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-320-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "refund-320-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "research-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "refund-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "research-844-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-844-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "refund-844-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "research-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "refund-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    }
+  ],
+  "accessibility": [
+    {
+      "kind": "construction",
+      "element": "#development-announcement",
+      "insideOpenModal": true,
+      "role": "status",
+      "ignored": false,
+      "properties": [
+        {
+          "name": "live",
+          "value": {
+            "type": "token",
+            "value": "polite"
+          }
+        },
+        {
+          "name": "atomic",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "name": "relevant",
+          "value": {
+            "type": "tokenList",
+            "value": "additions text"
+          }
+        }
+      ],
+      "text": "취소 불가. 합금 저장 공간 31 부족 결정 저장 공간 7 부족 연료 저장 공간 7 부족"
+    },
+    {
+      "kind": "research",
+      "element": "#development-announcement",
+      "insideOpenModal": true,
+      "role": "status",
+      "ignored": false,
+      "properties": [
+        {
+          "name": "live",
+          "value": {
+            "type": "token",
+            "value": "polite"
+          }
+        },
+        {
+          "name": "atomic",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "name": "relevant",
+          "value": {
+            "type": "tokenList",
+            "value": "additions text"
+          }
+        }
+      ],
+      "text": "취소 불가. 합금 저장 공간 31 부족 결정 저장 공간 23 부족 연료 저장 공간 7 부족"
+    },
+    {
+      "kind": "ships",
+      "element": "#development-announcement",
+      "insideOpenModal": true,
+      "role": "status",
+      "ignored": false,
+      "properties": [
+        {
+          "name": "live",
+          "value": {
+            "type": "token",
+            "value": "polite"
+          }
+        },
+        {
+          "name": "atomic",
+          "value": {
+            "type": "boolean",
+            "value": true
+          }
+        },
+        {
+          "name": "relevant",
+          "value": {
+            "type": "tokenList",
+            "value": "additions text"
+          }
+        }
+      ],
+      "text": "취소 불가. 합금 저장 공간 95 부족 결정 저장 공간 47 부족 연료 저장 공간 23 부족"
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7df36d4f6f34ae1657e1e3e484c7c47405508824a51512b3f157eafac5a95451"
+    },
+    {
+      "file": "main.js",
+      "sha256": "4a285f957d84a21f1736000f9f351052dac0089abf4ebdab98e988f638c12bf0"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "949b20f9fb26aa1178105ae0bd4246209d63466e9a4cd5ef852f53041317bc3e"
+    },
+    {
+      "file": "development-model.js",
+      "sha256": "e35f86945070862362ecc8042f2a101ad3809ae134ee8db1ca0eace509502023"
+    },
+    {
+      "file": "development.js",
+      "sha256": "2205019f22137e5563fdc01cda6f043fa8226599d4b1643cccafbf460c8208a9"
+    },
+    {
+      "file": "development-controller.js",
+      "sha256": "d9cb233208ce5d1bc3a43b4e3937576551d3b14801bff3239dbc0d554fe7db1a"
+    },
+    {
+      "file": "development.css",
+      "sha256": "9d5851b6214d8ce31fcb6ec3f4007de8b436eecc3d28f03f243cabef2ecddfdf"
+    }
+  ],
+  "passed": true
+}

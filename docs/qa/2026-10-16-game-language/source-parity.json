@@ -1,0 +1,100 @@
+{
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7df36d4f6f34ae1657e1e3e484c7c47405508824a51512b3f157eafac5a95451",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "main.js",
+      "sha256": "4a285f957d84a21f1736000f9f351052dac0089abf4ebdab98e988f638c12bf0",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "949b20f9fb26aa1178105ae0bd4246209d63466e9a4cd5ef852f53041317bc3e",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "development-model.js",
+      "sha256": "e35f86945070862362ecc8042f2a101ad3809ae134ee8db1ca0eace509502023",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "development.js",
+      "sha256": "2205019f22137e5563fdc01cda6f043fa8226599d4b1643cccafbf460c8208a9",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "development-controller.js",
+      "sha256": "d9cb233208ce5d1bc3a43b4e3937576551d3b14801bff3239dbc0d554fe7db1a",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "development.css",
+      "sha256": "9d5851b6214d8ce31fcb6ec3f4007de8b436eecc3d28f03f243cabef2ecddfdf",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "refinement.css",
+      "sha256": "9754b53ba04191b245ad83bc568462aea42d5e3b43ba381590e232af23d399c2",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "216eac7a4b5c139998d6208cebc301930b209231212f70760968af814ef32ac0",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "strategy-model.js",
+      "sha256": "dd6074fc1db033b50fe51768e2243451e1eba80b62e250749c95587e2ab9c7a3",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "galaxy.js",
+      "sha256": "42b39ee24dc9b719fb06c897def7aa57527db246bef2c613af85cee7bb6bc2b4",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "operations.js",
+      "sha256": "81e5f03abe58cf9096d3bb5fce6f21df8e5e79f033cf4694934ec61bb6e26c33",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "alliance.js",
+      "sha256": "9484b3afd5efb8523d5d14e299803f74476fc2ac759957f10bd2a41c61e76590",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "model.js",
+      "sha256": "82ff4c4c5b9c57fde597e75c4306f964a3b37f0d5c987e4e230faa551e719169",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "visuals.js",
+      "sha256": "8bfed9ebfc63bcc56b37abcbaabcfee10ef578e9814648e4f30c728c912b0148",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    },
+    {
+      "file": "route-preview.js",
+      "sha256": "f970596956bda3f5bdf577669d32cf4b6c232d44817fd7e8278cc48562be1774",
+      "publicDistEqual": true,
+      "browserMatchesSource": true
+    }
+  ]
+}

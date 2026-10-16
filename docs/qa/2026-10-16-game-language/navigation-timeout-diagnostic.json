@@ -1,0 +1,291 @@
+{
+  "date": "2026-10-16T09:40:41.681Z",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "checks": [
+    {
+      "name": "reviewed source bundle hashes and displayed fleet atlas match the adopted art",
+      "passed": true
+    },
+    {
+      "name": "each view exposes one main, one named navigation, one h1 and named controls in Chromium AX",
+      "passed": false,
+      "error": "TimeoutError: page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://127.0.0.1:9944/uiux-demo/index.html?mobile=2#view=construction\", waiting until \"load\"\u001b[22m\n"
+    }
+  ],
+  "errors": [],
+  "mutations": [],
+  "axViews": [
+    {
+      "view": "home",
+      "controls": 31,
+      "unnamed": []
+    }
+  ],
+  "focusChecks": [],
+  "limitations": [
+    "Chromium emulation, not a physical phone or spoken screen reader."
+  ],
+  "inspectedFiles": [
+    {
+      "file": "index.html",
+      "sha256": "7df36d4f6f34ae1657e1e3e484c7c47405508824a51512b3f157eafac5a95451"
+    },
+    {
+      "file": "main.js",
+      "sha256": "fcc9aed15a526230f51dfd846d40147b5f7e3161a886826872eb92dda5f2e1e7"
+    },
+    {
+      "file": "refinement.css",
+      "sha256": "e15da87cc75f88b16dcb93604b91b18f5751bbe75caf5e338fa3e5d664641658"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "216eac7a4b5c139998d6208cebc301930b209231212f70760968af814ef32ac0"
+    },
+    {
+      "file": "strategy.css",
+      "sha256": "4cad2ea896a1d51f5b5b0120dc3c9a2f9b709497419b77b98066e506d8f25f6f"
+    },
+    {
+      "file": "visuals.css",
+      "sha256": "2c74904dc490825b0f55b46aa16439fad22e0a39bc41a1cbde8410c9b7358746"
+    },
+    {
+      "file": "art/fleet-roster-v2.webp",
+      "sha256": "43a2e7b330652f7522cb3989eb62a2553145ecd5b1c10d5fbef22603d4ae04af"
+    }
+  ],
+  "browser": "155.0.8059.80",
+  "artGate": {
+    "date": "2026-10-16",
+    "basis": "Subjective internal native,120/160px and real-card review; not AI detection or user approval.",
+    "thresholdStrictlyAbove": 9.5,
+    "weights": {
+      "structure": 3,
+      "cleanliness": 2,
+      "consistency": 2,
+      "targetSize": 2,
+      "alphaAndCost": 1
+    },
+    "baseline": "e0f9e279c3b66bcb62b4cb6690bf1e0aed050667",
+    "oldRoster": [
+      {
+        "id": "striker",
+        "parts": [
+          2.8,
+          1.8,
+          1.95,
+          1.8,
+          0.95
+        ],
+        "score": 9.3,
+        "status": "requires-revision"
+      },
+      {
+        "id": "guardian",
+        "parts": [
+          2.75,
+          1.75,
+          1.95,
+          1.8,
+          0.95
+        ],
+        "score": 9.2,
+        "status": "requires-revision"
+      },
+      {
+        "id": "siege",
+        "parts": [
+          2.7,
+          1.65,
+          1.95,
+          1.75,
+          0.95
+        ],
+        "score": 9,
+        "status": "requires-revision"
+      },
+      {
+        "id": "support",
+        "parts": [
+          2.6,
+          1.6,
+          1.95,
+          1.8,
+          0.95
+        ],
+        "score": 8.9,
+        "status": "requires-revision"
+      },
+      {
+        "id": "salvage",
+        "parts": [
+          2.7,
+          1.7,
+          1.95,
+          1.85,
+          0.75
+        ],
+        "score": 8.95,
+        "status": "requires-revision"
+      },
+      {
+        "id": "scout",
+        "parts": [
+          2.9,
+          1.9,
+          1.95,
+          1.9,
+          0.95
+        ],
+        "score": 9.6,
+        "status": "retainable"
+      },
+      {
+        "id": "jammer",
+        "parts": [
+          2.6,
+          1.6,
+          1.95,
+          1.7,
+          0.95
+        ],
+        "score": 8.8,
+        "status": "requires-revision"
+      },
+      {
+        "id": "carrier",
+        "parts": [
+          2.85,
+          1.8,
+          1.95,
+          1.95,
+          0.65
+        ],
+        "score": 9.2,
+        "status": "requires-revision"
+      }
+    ],
+    "candidates": [
+      {
+        "file": "roster-clean-candidate.png",
+        "status": "rejected-layout",
+        "notes": "Geometry cleaned but insufficient safe padding."
+      },
+      {
+        "file": "roster-padded-candidate.png",
+        "status": "approved-for-160px-cards",
+        "runtime": "public/uiux-demo/art/fleet-roster-v2.webp",
+        "parts": [
+          {
+            "id": "striker",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "guardian",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "siege",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "support",
+            "parts": [
+              2.85,
+              1.95,
+              1.95,
+              1.9,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "salvage",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.9,
+              0.95
+            ],
+            "score": 9.65
+          },
+          {
+            "id": "scout",
+            "parts": [
+              2.95,
+              1.95,
+              1.95,
+              1.9,
+              0.95
+            ],
+            "score": 9.7
+          },
+          {
+            "id": "jammer",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "carrier",
+            "parts": [
+              2.95,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.65
+          }
+        ],
+        "conditions": "160px image frames; opaque hull stays inside its panel across11 viewport widths."
+      }
+    ],
+    "retainedHangar": {
+      "source": "../free-fleet-v1/orbital-hangar-v1.png",
+      "runtime": "public/uiux-demo/art/orbital-hangar-v1.webp",
+      "parts": [
+        2.9,
+        1.85,
+        1.95,
+        1.95,
+        0.95
+      ],
+      "score": 9.6,
+      "status": "retained"
+    },
+    "runtimeBytes": {
+      "before": 239316,
+      "after": 148454,
+      "saved": 90862
+    }
+  }
+}

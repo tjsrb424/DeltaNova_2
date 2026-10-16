@@ -1,0 +1,140 @@
+
+> delta-nova@0.1.0 test
+> vitest run --maxWorkers=2 --testTimeout=30000 --hookTimeout=30000 --reporter=default --reporter=json --outputFile=.delta-nova/copy-review/tests-final.json
+
+
+ RUN  v5.0.4 C:/Users/delic/.codex/worktrees/free-fleet-visuals/DeltaNova
+
+ ✓ tests/uiux-workspace.test.ts (11 tests) 1087ms
+   ✓ central demo workspaces (11)
+     ✓ puts selected facility actions before art and explanations while preserving all costs and conditions 378ms
+ ✓ tests/uiux-operations.test.ts (16 tests) 888ms
+   ✓ operation workspaces (7)
+     ✓ offers eight labeled ship editors and all stable controls without duplicated ids 530ms
+ ✓ tests/empire-guild-ui.test.tsx (1 test) 13780ms
+   ✓ displays constructed inventory in the shared operation fleet selector 13779ms
+ ✓ tests/uiux-demo.test.ts (40 tests) 65701ms
+   ✓ disconnected design demo (40)
+     ✓ opens the separate demo guide by its header control and focuses the disclosure 25869ms
+     ✓ updates a selected fleet without replacing its summary, metrics or selected ship nodes 27424ms
+     ✓ prepares a fleet command, preserves live inputs, and previews it without spending assets 3384ms
+     ✓ aligns alliance arrival only when requested and uses the common fleet command 465ms
+     ✓ keeps a relocated preview stationed and offers explicit recall 377ms
+     ✓ keeps per-planet practice drafts and removes stale local reviews after edits 380ms
+     ✓ preserves stepper keyboard focus when the quantity reaches available inventory 321ms
+     ✓ updates practice totals as a valid quantity is typed without replacing the input 3343ms
+ ✓ tests/PlanetManagement.test.tsx (10 tests) 8252ms
+   ✓ shows the selected upgrade's real production, storage, power and space before spending 2507ms
+   ✓ previews all production recovered by a power upgrade using the current reduced output 1037ms
+   ✓ keeps connection recovery available when participant settings are folded 2381ms
+   ✓ keeps the facility selection after starting work and opens its details from the queue 470ms
+   ✓ opens the current research job from the queue without stealing focus on later dropdown edits 803ms
+   ✓ focuses the new sortie result and follows the report's research action 462ms
+ ✓ tests/empire-network.test.tsx (14 tests) 33315ms
+   ✓ disables target-screen commands and names the unresolved empire screen after navigation 1273ms
+   ✓ disables target-screen commands and names the unresolved guild screen after navigation 10373ms
+   ✓ blocks other-screen asset commands until the original empire request resolves 666ms
+   ✓ blocks other-screen asset commands until the original guild request resolves 999ms
+   ✓ refreshes the live shared inventory after confirming an older duplicate receipt 8191ms
+   ✓ sends a token on authenticated GET reads 850ms
+   ✓ connects and sends server commands with a personal revision and explicit source 5997ms
+   ✓ does not let a slow old read overwrite a confirmed command 3452ms
+   ✓ retry refreshes after an older receipt and retains the original command across navigation 435ms
+   ✓ reconnects an expired session with the same actor before retrying the same command 433ms
+ ✓ tests/GuildPanel.test.tsx (14 tests) 8055ms
+   ✓ shared guild screen (14)
+     ✓ keeps an existing report from overriding the role briefing selected by the user 492ms
+     ✓ preserves an ambiguous command through a restarted session and checks its receipt 389ms
+     ✓ restores the exact pending command after leaving the panel (storage denied: false) 517ms
+     ✓ restores the exact pending command after leaving the panel (storage denied: true) 442ms
+     ✓ connects, reserves, performs a role and displays earned contribution 499ms
+     ✓ ignores a delayed snapshot older than an accepted command 374ms
+     ✓ clears an offline warning when the shared server reconnects 1144ms
+     ✓ keeps an uncertain command available until its result is resolved 494ms
+     ✓ retries an ambiguous command with the exact same ID and payload 1648ms
+     ✓ does not apply an old session response after a participant changes 1272ms
+ ✓ tests/BaseOperationsPanel.test.tsx (6 tests) 7720ms
+   ✓ server base operations (6)
+     ✓ shows production, collects it and upgrades a facility with server owned costs 1899ms
+     ✓ runs a solo sortie, returns cargo, repairs ships and researches a module 2127ms
+     ✓ shows insufficient supply and disables a departure before sending a command 709ms
+     ✓ keeps bases distinct when the participant changes 1140ms
+     ✓ allows the same pilot to reserve another role after a completed preparation 843ms
+     ✓ restores an uncertain base investment after menu reentry and retries the same payload 1001ms
+ ✓ tests/empire-migration.test.ts (4 tests) 45ms
+(node:67868) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ tests/empire-server.test.ts (9 tests) 717ms
+(node:69204) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ tests/base-server.test.ts (5 tests) 581ms
+ ✓ tests/App.test.tsx (18 tests) 16944ms
+   ✓ command center (18)
+     ✓ opens the real alliance screen when an unfinished local practice report is saved 11718ms
+     ✓ keeps the dashboard categories available from practice and opens the chosen category 833ms
+     ✓ brings support and launch controls into keyboard reach from the practice header 456ms
+     ✓ only offers the support shortcut on a practice screen containing support controls 481ms
+     ✓ preserves both states when storage changes between action and persistence 337ms
+     ✓ locks navigation while resolving an operation and allows base access after settlement 332ms
+     ✓ resets an unsupported flank when recon is deselected 469ms
+     ✓ plays, settles once, persists and permits retry 512ms
+(node:69432) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ tests/uiux-galaxy.test.ts (10 tests) 118ms
+ ✓ tests/guild-server.test.ts (7 tests) 781ms
+ ✓ tests/uiux-development.test.ts (11 tests) 218ms
+ ✓ tests/uiux-alliance.test.ts (6 tests) 51ms
+ ✓ tests/completion-notice.test.tsx (3 tests) 85ms
+ ✓ tests/guild.test.ts (9 tests) 119ms
+ ✓ tests/uiux-neon-fleet.test.ts (6 tests) 198ms
+ ✓ tests/uiux-free-fleet.test.ts (5 tests) 131ms
+ ✓ tests/uiux-strategy-view.test.ts (2 tests) 63ms
+ ✓ tests/storage.test.ts (16 tests) 55ms
+ ✓ tests/uiux-navigation.test.ts (8 tests) 49ms
+ ✓ tests/uiux-strategy.test.ts (24 tests) 28ms
+ ✓ tests/empire-guild.test.ts (2 tests) 32ms
+ ✓ tests/base.test.ts (11 tests) 63ms
+ ✓ tests/empire-career.test.ts (8 tests) 39ms
+ ✓ tests/empire.test.ts (14 tests) 32ms
+ ✓ tests/uiux-routes.test.ts (8 tests) 39ms
+ ✓ tests/game.test.ts (16 tests) 25ms
+ ✓ tests/uiux-scene-motion.test.ts (3 tests) 5ms
+⎯⎯⎯⎯⎯⎯ Unhandled Errors ⎯⎯⎯⎯⎯⎯
+
+Vitest caught 2 unhandled errors during the test run.
+This might cause false positive tests. Resolve unhandled errors to make sure your tests are not affected.
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-pool]: Failed to start forks worker for test files C:/Users/delic/.codex/worktrees/free-fleet-visuals/DeltaNova/tests/PlanetDashboard.test.tsx.
+ ❯ D:/kim_dev/DeltaNova/node_modules/vitest/dist/chunks/index.B8VfM7Mf.js:5899:94
+ ❯ Pool.schedule D:/kim_dev/DeltaNova/node_modules/vitest/dist/chunks/index.B8VfM7Mf.js:5899:5
+
+Caused by: Error: [vitest-pool-runner]: Timeout waiting for worker to respond
+ ❯ Timeout.<anonymous> D:/kim_dev/DeltaNova/node_modules/vitest/dist/chunks/index.B8VfM7Mf.js:5396:58
+ ❯ listOnTimeout node:internal/timers:605:17
+ ❯ process.processTimers node:internal/timers:541:7
+
+
+⎯⎯⎯⎯⎯⎯ Unhandled Error ⎯⎯⎯⎯⎯⎯⎯
+Error: [vitest-pool]: Failed to start forks worker for test files C:/Users/delic/.codex/worktrees/free-fleet-visuals/DeltaNova/tests/PlanetOverview.test.tsx.
+ ❯ D:/kim_dev/DeltaNova/node_modules/vitest/dist/chunks/index.B8VfM7Mf.js:5899:94
+ ❯ Pool.schedule D:/kim_dev/DeltaNova/node_modules/vitest/dist/chunks/index.B8VfM7Mf.js:5899:5
+
+Caused by: Error: [vitest-pool-runner]: Timeout waiting for worker to respond
+ ❯ Timeout.<anonymous> D:/kim_dev/DeltaNova/node_modules/vitest/dist/chunks/index.B8VfM7Mf.js:5396:58
+ ❯ listOnTimeout node:internal/timers:605:17
+ ❯ process.processTimers node:internal/timers:541:7
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+
+
+ Test Files  31 passed (31)
+      Tests  317 passed (317)
+     Errors  2 errors
+   Start at  18:50:47
+   Duration  323.61s (environment 38%, tests 36%, import 21%, transform 4%)
+
+    Isolate  31 workers spawned · ~8.21s startup each (spawn + environment, per file)
+             at least ~119.01s faster with isolate: false — reuses workers across files instead of one per file
+
+JSON report written to C:/Users/delic/.codex/worktrees/free-fleet-visuals/DeltaNova/.delta-nova/copy-review/tests-final.json

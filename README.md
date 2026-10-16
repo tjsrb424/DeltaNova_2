@@ -18,7 +18,7 @@
 
 ## 실행
 
-UI/UX 재정비는 별도 브랜치 `codex/demo-visual-unification`의 **독립 데모**에서 검증 중이다. [다른 PC에서 이어가기](docs/uiux-refoundation/HANDOFF.md)에 완료 범위·원본 킷/아트·실행/검사·남은 검증을 정리했다. [최신 연구·조선·취소/환급 검수](docs/uiux-refoundation/GROWTH_PREPARATION_REVIEW.md)와 [검증 원문](docs/qa/2026-10-16-growth-preparation/README.md)을 함께 확인한다. 전체 서비스 UI 이관은 아직 승인되지 않았다. 데모만 실행하려면 `npm run dev:solo -- --port 5181 --strictPort` 후 `http://127.0.0.1:5181/uiux-demo/index.html?review=growth-preparation#view=research`에 직접 접속한다.
+UI/UX 재정비는 **main에 포함된 독립 데모**에서 검증 중이다. 기존 서비스 UI와 데이터는 연결하지 않는다. [게임 용어·별도 데모 안내](docs/uiux-refoundation/GAME_LANGUAGE_REVIEW.md)와 [최신 검증 근거](docs/qa/2026-10-16-game-language/README.md)를 확인한다. [다른 PC에서 이어가기](docs/uiux-refoundation/HANDOFF.md)에 완료 범위·원본 킷/아트·실행/검사·남은 검증을 정리했다. [최신 연구·조선·취소/환급 검수](docs/uiux-refoundation/GROWTH_PREPARATION_REVIEW.md)와 [검증 원문](docs/qa/2026-10-16-growth-preparation/README.md)을 함께 확인한다. 전체 서비스 UI 이관은 아직 승인되지 않았다. 데모만 실행하려면 `npm run dev:solo -- --port 5181 --strictPort` 후 `http://127.0.0.1:5181/uiux-demo/index.html?review=game-language#view=fleet`에 직접 접속한다.
 
 개발 확인 환경은 Node24.13.0, npm11.6.2이며 의존성은 lockfile로 고정한다.
 

@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-16T09:39:19.265Z",
+  "browser": "155.0.8059.80",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "scope": "Independent plan/refund previews. No real commands or state changes.",
+  "checks": [
+    {
+      "name": "all four technologies expose effects, exact costs, unlocks and honest future effects",
+      "passed": true
+    },
+    {
+      "name": "ship choices and exact numeric edits preserve input/focus and reject invalid quantities",
+      "passed": true
+    },
+    {
+      "name": "each queue reviews original payment and80percent refund without changing jobs or assets",
+      "passed": false,
+      "error": "Error: locator.isDisabled: Error: strict mode violation: getByRole('button', { name: '건설 취소', exact: true }) resolved to 2 elements:\n    1) <button class=\"ws-button\" id=\"development-cancel-construction\" data-development-cancel=\"construction\">건설 취소</button> aka getByLabel('선택한 시설').getByRole('button', { name: '건설 취소' })\n    2) <button disabled class=\"ws-button dev-real\" aria-describedby=\"development-dialog-note\">건설 취소</button> aka getByRole('button', { name: '건설 취소', description: '데모 · 작업을 시작하거나 취소하지 않습니다.' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '건설 취소', exact: true })\u001b[22m\n"
+    }
+  ],
+  "layouts": [],
+  "accessibility": [],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7df36d4f6f34ae1657e1e3e484c7c47405508824a51512b3f157eafac5a95451"
+    },
+    {
+      "file": "main.js",
+      "sha256": "fcc9aed15a526230f51dfd846d40147b5f7e3161a886826872eb92dda5f2e1e7"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "949b20f9fb26aa1178105ae0bd4246209d63466e9a4cd5ef852f53041317bc3e"
+    },
+    {
+      "file": "development-model.js",
+      "sha256": "e35f86945070862362ecc8042f2a101ad3809ae134ee8db1ca0eace509502023"
+    },
+    {
+      "file": "development.js",
+      "sha256": "2205019f22137e5563fdc01cda6f043fa8226599d4b1643cccafbf460c8208a9"
+    },
+    {
+      "file": "development-controller.js",
+      "sha256": "d9cb233208ce5d1bc3a43b4e3937576551d3b14801bff3239dbc0d554fe7db1a"
+    },
+    {
+      "file": "development.css",
+      "sha256": "9d5851b6214d8ce31fcb6ec3f4007de8b436eecc3d28f03f243cabef2ecddfdf"
+    }
+  ],
+  "passed": false,
+  "failure": "Error: locator.isDisabled: Error: strict mode violation: getByRole('button', { name: '건설 취소', exact: true }) resolved to 2 elements:\n    1) <button class=\"ws-button\" id=\"development-cancel-construction\" data-development-cancel=\"construction\">건설 취소</button> aka getByLabel('선택한 시설').getByRole('button', { name: '건설 취소' })\n    2) <button disabled class=\"ws-button dev-real\" aria-describedby=\"development-dialog-note\">건설 취소</button> aka getByRole('button', { name: '건설 취소', description: '데모 · 작업을 시작하거나 취소하지 않습니다.' })\n\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: '건설 취소', exact: true })\u001b[22m\n"
+}

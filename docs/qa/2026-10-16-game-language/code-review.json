@@ -1,0 +1,30 @@
+{
+  "scope": "Read-only source/diff review; no browser or tests by reviewer.",
+  "first": [
+    {
+      "severity": "P2",
+      "finding": "귀환을 기다리라는 설명이 수동 이동 미리보기와 맞지 않음",
+      "resolution": "귀환 미리보기 완료 또는 출발 행성 변경으로 안내"
+    },
+    {
+      "severity": "P2",
+      "finding": "정찰 버튼 새 이름과 테스트 기대값 불일치",
+      "resolution": "정찰 시작으로 기대값 갱신; 비활성 검사 유지"
+    },
+    {
+      "severity": "P3",
+      "finding": "시설 상세의 비활성 건설 버튼 설명 참조 없음",
+      "resolution": "모달 안 dialog-demo를 aria-describedby로 연결"
+    }
+  ],
+  "followup": {
+    "newFindings": 0,
+    "checked": [
+      "기존3건 수정",
+      "초기 닫힌 details는 toggle을 발생시키지 않음",
+      "모바일 안내 닫기 포커스 복귀",
+      "Tab 제한 없음",
+      "열린 안내 z11 > 메뉴 z10"
+    ]
+  }
+}

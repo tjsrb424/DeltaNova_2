@@ -15,7 +15,7 @@ const server=createServer(async(req,res)=>{try{const p=resolve(root,'.'+new URL(
 const browser=await pw.chromium.launch({headless:true,executablePath:process.env.DELTA_NOVA_BROWSER||'C:/Program Files/Google/Chrome/Application/chrome.exe'});report.browser=browser.version();
 const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,deviceScaleFactor:3});
 context.on('request',r=>{if(r.method()!=='GET'||/\/api\//.test(r.url()))report.mutations.push(r.url());});
-const page=await context.newPage(),cdp=await context.newCDPSession(page);page.setDefaultTimeout(10000);page.on('pageerror',e=>report.errors.push(String(e)));
+const page=await context.newPage(),cdp=await context.newCDPSession(page);page.setDefaultTimeout(10000);page.setDefaultNavigationTimeout(60000);page.on('pageerror',e=>report.errors.push(String(e)));
 const command='&target=tarsis&intent=attack&context=solo&step=fleet';let serial=0;
 const go=async(view)=>{await page.goto(url+'?mobile='+ ++serial+'#view='+view+(view==='command'?command:''));await page.locator(view==='home'?'#planet-name':'#workspace-title').waitFor();};
 const check=async(name,fn)=>{try{await fn();report.checks.push({name,passed:true});console.log('PASS '+name);}catch(e){report.checks.push({name,passed:false,error:String(e)});console.log('FAIL '+name+' '+String(e));await page.screenshot({path:join(out,'failure-'+report.checks.length+'.png')});}};
@@ -40,7 +40,7 @@ try{
     for(const [id,n] of Object.entries({striker:3,guardian:1,siege:1,support:1}))await page.locator('#strategy-count-'+id).fill(String(n));assert.match(await page.locator('#announcement').innerText(),/지휘.*줄여/);assert.equal(await page.locator('#strategy-review').isEnabled(),false);
   });
   await check('explicit departure phases are announced as local previews',async()=>{
-    await go('command');await page.locator('#strategy-count-striker').fill('1');await page.locator('.sc-mobile-plan button').tap();await page.locator('#strategy-review').tap();await page.locator('#strategy-preview-launch').tap();await page.locator('#strategy-advance-preview-1').tap();const text=await page.locator('#announcement').innerText();assert.match(text,/타르시스.*도착/);assert.match(text,/시연/);
+    await go('command');await page.locator('#strategy-count-striker').fill('1');await page.locator('.sc-mobile-plan button').tap();await page.locator('#strategy-review').tap();await page.locator('#strategy-preview-launch').tap();await page.locator('#strategy-advance-preview-1').tap();const text=await page.locator('#announcement').innerText();assert.match(text,/타르시스.*도착/);assert.match(text,/미리보기/);
   });
   await check('focused numeric fields remain unobscured at reduced mobile heights and doubled text',async()=>{
     const failures=[];for(const [width,height] of [[390,844],[320,568],[390,430],[320,390]])for(const doubled of [false,true]){

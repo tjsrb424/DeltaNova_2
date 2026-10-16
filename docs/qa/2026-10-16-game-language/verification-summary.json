@@ -1,0 +1,62 @@
+{
+  "base": "17864b2cf0ba31ef8c5a72a5ac8daa20a0b19fac",
+  "date": "2026-10-16T10:01:20.779Z",
+  "scope": "Independent design demo only. No game/API/data/art/dependency changes.",
+  "tests": {
+    "exitCode": 0,
+    "files": 33,
+    "passed": 341,
+    "failed": 0
+  },
+  "build": {
+    "exitCode": 0,
+    "verifyBuildExitCode": 0
+  },
+  "browser": {
+    "copy": {
+      "exitCode": 0,
+      "checks": 6,
+      "layouts": 69,
+      "axDialogs": 20,
+      "runtimeErrors": 0,
+      "apiMutations": 0
+    },
+    "growth": {
+      "exitCode": 0,
+      "checks": 11,
+      "layouts": 24,
+      "axDialogs": 3,
+      "runtimeErrors": 0,
+      "apiMutations": 0
+    },
+    "mobile": {
+      "exitCode": 0,
+      "checks": 11,
+      "axViews": 15,
+      "runtimeErrors": 0,
+      "apiMutations": 0
+    },
+    "actions": {
+      "exitCode": 0,
+      "checks": 7,
+      "runtimeErrors": 0,
+      "apiMutations": 0
+    },
+    "integration": {
+      "exitCode": 0,
+      "checks": 35,
+      "layouts": 15,
+      "runtimeErrors": 0,
+      "apiMutations": 0
+    }
+  },
+  "codeReview": {
+    "initialFindings": 3,
+    "fixed": 3,
+    "followupFindings": 0
+  },
+  "limitations": [
+    "Chromium emulation and AX tree, not physical mobile or spoken VoiceOver/TalkBack.",
+    "Copy clarity is internal review, not a measured user-comprehension score."
+  ]
+}

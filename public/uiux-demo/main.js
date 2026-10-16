@@ -19,7 +19,7 @@ function hydrateIcons(scope = document) { scope.querySelectorAll('[data-icon]').
 const $ = id => document.getElementById(id);
 const names = { alloy: '합금', crystal: '결정', fuel: '연료' };
 const facilityNames = { alloyMine: '합금 광산', crystalMine: '결정 채굴소', fuelRefinery: '연료 합성소', powerPlant: '발전소', shipyard: '궤도 조선소', laboratory: '연구소' };
-const titles = { recon:'정찰 위성 · 예시', planet: '행성 시설 개요', resources: '자원과 현지 생산', construction: '건설 관리', research: '연구 관리', fleet: '함대 현황', career: '개인 작전', galaxy: '은하 · 정찰', guild: '동맹 · 공동 작전', reports: '활동 보고서', practice: '편성 연습', threat: '적 함대 접근 · 예시', evasion: '함대 회피 검토', defense: '방어 현황', more: '제국 메뉴', settings: '화면 설정', rankings: '랭킹', diplomacy: '외교 · 메시지' };
+const titles = { recon:'정찰 위성', planet: '행성 시설 개요', resources: '자원과 현지 생산', construction: '건설 관리', research: '연구 관리', fleet: '함대 현황', career: '개인 작전', galaxy: '은하 · 정찰', guild: '동맹 · 공동 작전', reports: '활동 보고서', practice: '편성 연습', threat: '적 함대 접근', evasion: '함대 대피', defense: '방어 현황', more: '제국 메뉴', settings: '화면 설정', rankings: '랭킹', diplomacy: '외교 · 메시지' };
 let state = initialDemo();
 let galaxyUI = initialGalaxy(), pendingGalaxyUI = null, scanTimer, scanSerial = 0;
 let operationsUI = initialOperations();
@@ -87,12 +87,12 @@ function act(action) {
   if (action.type === 'reset' && view === 'galaxy') navigationController.go({target:galaxyUI.target},{replace:true});
   if (action.type === 'reset' && ['career','practice'].includes(view)) navigationController.go({mission:operationsUI.mission,intent:strategyUI.intent},{replace:true});
   if (action.type === 'reset' && view === 'guild') navigationController.go({role:allianceUI.role},{replace:true});
-  if (action.type === 'arrival') $('urgent-announcement').textContent = '5초 뒤 외곽 도달 효과를 표시하는 시연입니다. 실제 공격은 실행되지 않습니다.';
-  if (action.type === 'threat' && !previousThreat) $('urgent-announcement').textContent = '적 함대 접근 예시. 대상 노바 프라임. 남은 시간 2분 40초부터 항로 위치와 함께 진행하는 시연입니다. 회피 검토에서 실제 명령은 전송되지 않습니다.';
+  if (action.type === 'arrival') $('urgent-announcement').textContent = '데모 미리보기: 적 함대가 5초 뒤 외곽 대기점에 도달합니다. 실제 공격은 없습니다.';
+  if (action.type === 'threat' && !previousThreat) $('urgent-announcement').textContent = '데모 미리보기: 노바 프라임에 적 함대가 접근합니다. 외곽 도달까지 2분 40초입니다. 함대 대피에서 대응을 확인하세요.';
   if (action.type === 'idle' || action.type === 'reset') $('urgent-announcement').textContent = '';
-  if (action.type === 'complete') announce(state.notice.text + '. 실제 건설은 변경되지 않았습니다.');
-  if (action.type === 'select') announce(planet().name + ' 예시 스냅샷을 선택했습니다.');
-  if (action.type === 'snapshot') announce('시설 예시 스냅샷을 변경했습니다. 생산 시설, 조선소 수준이 행성에 반영됩니다.');
+  if (action.type === 'complete') announce(state.notice.text + '. 데모 완료 알림입니다. 실제 건설은 바뀌지 않습니다.');
+  if (action.type === 'select') announce(planet().name + ' 행성을 선택했습니다.');
+  if (action.type === 'snapshot') announce('데모 시설 수준을 변경했습니다. 생산 시설, 조선소 수준이 행성에 반영됩니다.');
 }
 function render({workspace=true}={}) {
   const focused = bookmark(document.activeElement);
@@ -100,8 +100,8 @@ function render({workspace=true}={}) {
   document.body.classList.toggle('has-threat', !!state.threat);
   $('planet-select').value = p.id;
   $('planet-name').textContent = p.name;
-  $('planet-kind').textContent = p.kind + ' · 예시 스냅샷';
-  $('resources').innerHTML = Object.keys(names).map(key => `<button class="resource" data-panel="resources" aria-label="${names[key]} 자원 상세" aria-describedby="resource-info-${key}"><span class="resource-icon">${icon(key)}</span><span class="resource-label">${names[key]}<em>${unavailable?'—':'+'+p.rates[key]+'/분'}</em></span><strong>${unavailable ? '—' : format(p.resources[key])}<small> / ${unavailable?'—':p.capacities[key]}</small></strong><span class="storage-meter" aria-hidden="true"><i style="width:${unavailable?0:p.resources[key]/p.capacities[key]*100}%"></i></span><span class="sr-only" id="resource-info-${key}">${unavailable ? '불러오는 상태 예시' : `예시 보유 ${p.resources[key]}, 생산 분당 ${p.rates[key]}, 저장 한도 ${p.capacities[key]}`}</span></button>`).join('');
+  $('planet-kind').textContent = p.kind;
+  $('resources').innerHTML = Object.keys(names).map(key => `<button class="resource" data-panel="resources" aria-label="${names[key]} 자원 상세" aria-describedby="resource-info-${key}"><span class="resource-icon">${icon(key)}</span><span class="resource-label">${names[key]}<em>${unavailable?'—':'+'+p.rates[key]+'/분'}</em></span><strong>${unavailable ? '—' : format(p.resources[key])}<small> / ${unavailable?'—':p.capacities[key]}</small></strong><span class="storage-meter" aria-hidden="true"><i style="width:${unavailable?0:p.resources[key]/p.capacities[key]*100}%"></i></span><span class="sr-only" id="resource-info-${key}">${unavailable ? '정보를 불러오는 중입니다' : `보유 ${p.resources[key]}, 생산 분당 ${p.rates[key]}, 저장 한도 ${p.capacities[key]}`}</span></button>`).join('');
   $('production-value').innerHTML = Object.keys(names).map(key=>`<span class="rate-value" title="${names[key]}">${icon(key)}${unavailable?'—':'+'+p.rates[key]}</span>`).join('');
   $('fleet-value').innerHTML = (unavailable ? '—' : p.ships) + ' <small>/ ' + (unavailable?'—':p.ships) + '척</small>';
   $('facility-value').innerHTML = (unavailable ? '—' : Object.values(p.facilities).filter(n => n > 0).length) + ' <small>종</small>';
@@ -111,7 +111,7 @@ function render({workspace=true}={}) {
   const outbound = state.departure?.planetId === p.id, incoming = state.threat?.planetId === p.id;
   $('departure-route').toggleAttribute('hidden', !outbound);
   $('incoming-route').toggleAttribute('hidden', !incoming);
-  $('route-status').innerHTML = (incoming?'<span class="incoming-status">↘ 접근 <time data-route-eta="incoming">02:40</time> · <span data-route-phase="incoming">현재 위치</span></span>':'') + (outbound?'<span class="outgoing-status">↗ 출항 <time data-route-eta="outgoing">04:20</time> · <span data-route-phase="outgoing">현재 위치</span></span>':'') + (incoming||outbound?'<small class="route-disclosure">예시 항로 · 위치·남은 시간 동기화</small>':'');
+  $('route-status').innerHTML = (incoming?'<span class="incoming-status">↘ 접근 <time data-route-eta="incoming">02:40</time> · <span data-route-phase="incoming">현재 위치</span></span>':'') + (outbound?'<span class="outgoing-status">↗ 출항 <time data-route-eta="outgoing">04:20</time> · <span data-route-phase="outgoing">현재 위치</span></span>':'') + (incoming||outbound?'':'');
   $('departure-button').setAttribute('aria-pressed', String(outbound));
   const hasSatellite=state.satellite.planetId===p.id;
   $('recon-button').hidden=!hasSatellite;document.querySelector('.recon-summary').hidden=!hasSatellite;
@@ -120,21 +120,21 @@ function render({workspace=true}={}) {
   const districts = [[68,49],[64,57],[59,65],[56,73],[62,38],[70,60],[49,36],[46,78],[53,58],[63,70]];
   $('surface-markers').innerHTML = Array.from({length: v.industry + v.power + v.research}, (_,i) => { const [x,y]=districts[i%districts.length]; return `<i class="surface-marker" style="left:${x}%;top:${y}%;rotate:${i*19}deg"></i>`; }).join('');
   $('planet-scene').setAttribute('aria-label', p.name + ' 시설 개요 열기');
-  $('planet-visual-description').textContent = '예시 시설. ' + Object.entries(p.facilities).map(([key,level]) => facilityNames[key] + ' 수준 ' + level).join(', ') + '. 시설 표식을 선택하면 증설 전후를 비교할 수 있습니다.';
+  $('planet-visual-description').textContent = '행성 시설. ' + Object.entries(p.facilities).map(([key,level]) => facilityNames[key] + ' 수준 ' + level).join(', ') + '. 시설 표식을 선택하면 증설 전후를 비교할 수 있습니다.';
 
   $('planet-status').className = 'status-pill' + (state.threat?.planetId === p.id ? ' danger' : '');
-  $('planet-status').textContent = state.threat?.planetId === p.id ? '△ 적 접근 · 예시' : '● 평시 · 예시';
+  $('planet-status').textContent = state.threat?.planetId === p.id ? '△ 적 접근' : '● 평시';
   document.querySelectorAll('[data-state]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.state === (state.threat ? 'threat' : state.notice ? 'complete' : 'idle'))));
   $('threat-banner').hidden = !state.threat;
-  if (state.threat) $('threat-banner').innerHTML = `${icon('warning')}<div><strong><span data-threat-phase>적 함대 접근</span> · 노바 프라임 · 예시</strong><p><span><span data-incoming-caption>외곽 도달까지</span> <time data-route-eta="incoming">02:40</time> · 시연</span><span class="threat-demo-note">실제 공격 아님</span></p></div><button class="button danger" data-panel="evasion">회피 계획 검토 ${icon('fleet')}</button>`;
+  if (state.threat) $('threat-banner').innerHTML = `${icon('warning')}<div><strong><span data-threat-phase>적 함대 접근</span> · 노바 프라임</strong><p><span><span data-incoming-caption>외곽 도달까지</span> <time data-route-eta="incoming">02:40</time></span></p></div><button class="button danger" data-panel="evasion">함대 대피하기 ${icon('fleet')}</button>`;
   $('context').innerHTML = contextContent();
   $('mobile-priority').hidden = !!state.threat || view !== 'home';
   $('mobile-priority').className = 'mobile-priority' + (state.notice ? ' complete' : '');
-  $('mobile-priority').innerHTML = state.notice ? '<div><span>✓ 완료 피드백 · 예시</span><strong>실제 자산 변화 없음</strong></div><button class="button secondary" data-panel="reports">결과 예시 확인</button>' : `<div><span>${state.empty || p.id === 'vesper' ? '다음 계획' : '건설 진행 · 고정 예시'}</span><strong>${state.connection !== 'ready' ? '연결 상태 예시' : state.empty || p.id === 'vesper' ? '진행 중인 작업 없음' : '연료 합성소 Lv.' + facilityPreview(p,'fuelRefinery').next + ' · 01:24'}</strong></div><button class="button secondary" data-panel="construction">건설 관리</button>`;
-  $('queue').innerHTML = unavailable ? '<p class="empty-state">불러오는 상태 예시 · 서버 요청 없음</p>' : state.empty || p.id === 'vesper' ? '<p class="empty-state"><strong>진행 중인 작업 없음</strong>건설이나 연구에서 다음 계획을 확인하세요.</p>' : `<div class="queue-row">${icon('build')}<div><strong>연료 합성소 Lv.${facilityPreview(p,"fuelRefinery").next}</strong><small>건설 · 고정 예시</small></div><div class="progress-track" role="progressbar" aria-label="건설 진행 예시" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i style="width:62%"></i></div><time>01:24 예시</time></div><div class="queue-row">${icon('research')}<div><strong>산업 기술 Lv.1</strong><small>공통 연구 · 노바 프라임 · 예시</small></div><div class="progress-track" role="progressbar" aria-label="연구 진행 예시" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"><i style="width:28%"></i></div><time>03:10 예시</time></div>`;
-  $('event-feed').innerHTML = state.notice ? `<div class="event-row">${icon('check')}<div>${state.notice.text}<small>시연 이벤트 · 실제 건설 변화 없음</small></div></div>` : `<div class="event-row">${icon('planet')}<div>${p.name} 스냅샷<small>기록 예시 · 서버 기록 아님</small></div></div><div class="event-row">${icon('info')}<div>행성 시설이 표면에 반영됩니다.<small>시설 수준 기반의 시각화 실험</small></div></div>`;
+  $('mobile-priority').innerHTML = state.notice ? '<div><span>✓ 작업 완료</span><strong>다음 성장을 준비하세요</strong></div><button class="button secondary" data-panel="reports">활동 기록 보기</button>' : `<div><span>${state.empty || p.id === 'vesper' ? '다음 계획' : '건설 진행'}</span><strong>${state.connection !== 'ready' ? '연결 확인 중' : state.empty || p.id === 'vesper' ? '진행 중인 작업 없음' : '연료 합성소 Lv.' + facilityPreview(p,'fuelRefinery').next + ' · 01:24'}</strong></div><button class="button secondary" data-panel="construction">건설 관리</button>`;
+  $('queue').innerHTML = unavailable ? '<p class="empty-state">정보를 불러오는 중입니다</p>' : state.empty || p.id === 'vesper' ? '<p class="empty-state"><strong>진행 중인 작업 없음</strong>건설이나 연구에서 다음 계획을 확인하세요.</p>' : `<div class="queue-row">${icon('build')}<div><strong>연료 합성소 Lv.${facilityPreview(p,"fuelRefinery").next}</strong><small>건설</small></div><div class="progress-track" role="progressbar" aria-label="건설 진행" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i style="width:62%"></i></div><time>01:24</time></div><div class="queue-row">${icon('research')}<div><strong>산업 기술 Lv.1</strong><small>공통 연구 · 노바 프라임</small></div><div class="progress-track" role="progressbar" aria-label="연구 진행" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100"><i style="width:28%"></i></div><time>03:10</time></div>`;
+  $('event-feed').innerHTML = state.notice ? `<div class="event-row">${icon('check')}<div>${state.notice.text}<small>작업 완료</small></div></div>` : `<div class="event-row">${icon('planet')}<div>${p.name} 관제 시작<small>행성 현황</small></div></div><div class="event-row">${icon('info')}<div>행성 시설이 표면에 반영됩니다.<small>시설 수준에 따라 행성 모습이 달라집니다</small></div></div>`;
   $('connection-state').hidden = state.connection === 'ready';
-  if (state.connection !== 'ready') $('connection-state').innerHTML = state.connection === 'loading' ? '<strong>불러오는 상태 예시</strong><p>서버 요청 없이 로딩 표현만 검토합니다.</p>' : `<div><strong>연결 오류 예시 · 마지막 예시 스냅샷</strong><p>실제 서버에 연결하지 않았습니다. 명령을 실행할 수 없습니다.</p></div><button class="button secondary" id="retry-button">다시 표시 · 데모</button>`;
+  if (state.connection !== 'ready') $('connection-state').innerHTML = state.connection === 'loading' ? '<strong>정보를 불러오는 중입니다</strong><p>잠시만 기다려 주세요.</p>' : `<div><strong>연결이 끊겼습니다</strong><p>마지막으로 확인한 정보를 표시합니다. 연결 후 다시 시도하세요.</p></div><button class="button secondary" id="retry-button">다시 시도</button>`;
   $('empty-button').setAttribute('aria-pressed', String(state.empty));
   $('offline-button').setAttribute('aria-pressed', String(state.connection === 'offline'));
   if(workspace)renderCurrentWorkspace();
@@ -146,11 +146,11 @@ function render({workspace=true}={}) {
 }
 function contextContent() {
   const f=facilityPreview(planet(),'fuelRefinery');
-  if (state.threat) return `<article class="decision-card threat"><div class="card-icon">${icon('warning')}</div><span class="overline">위협 우선 · 예시</span><h3>노바 프라임에<br><span data-threat-phase>적 함대 접근</span></h3><button class="button secondary" data-panel="threat">위협 상세 보기 ${icon('compass')}</button><p>선택 행성은 ${planet().name}입니다.<br>대응 전 위협 대상과 함대를 확인하세요.</p><div class="job-time"><span><span data-incoming-caption>외곽 도달까지</span> · 시연</span><strong><time data-route-eta="incoming">02:40</time></strong></div>${state.notice ? `<div class="inline-feedback">${state.notice.text}<br>위협 예시는 계속 유지됩니다.</div>` : ''}</article>`;
-  if (state.notice) return `<article class="decision-card complete"><div class="card-icon">${icon('check')}</div><span class="overline">완료 피드백 · 시연 이벤트</span><h3>다음 성장을<br>준비할 시간.</h3><button class="button" data-panel="reports">완료 예시 확인 ${icon('reports')}</button><p>${state.notice.text}<br>실제 완료나 자산 변화를 뜻하지 않습니다.</p></article>`;
-  if (state.connection !== 'ready') return `<article class="decision-card"><div class="card-icon">${icon('info')}</div><span class="overline">${state.connection === 'offline' ? '연결 오류' : '로딩'} 예시</span><h3>명령은 실행되지<br>않습니다.</h3><button class="button secondary" data-panel="resources">예시 데이터 확인</button><p>네트워크 요청이 없는 독립 데모입니다. 상태 표현과 복귀 경로를 확인하세요.</p></article>`;
-  if (state.empty || planet().id === 'vesper') return `<article class="decision-card"><div class="card-icon">${icon('build')}</div><span class="overline">새로운 계획</span><h3>다음 개발을<br>선택하세요.</h3><button class="button" data-panel="construction">건설 관리 열기 ${icon('build')}</button><p>진행 중인 작업이 없습니다. 시설 목록에서 다음 투자 대상을 검토할 수 있습니다.</p></article>`;
-  return `<article class="decision-card"><div class="card-icon">${icon('fuel')}</div><span class="overline">현재 건설</span><h3>연료 합성소<br>Lv.${f.level} <span style="color:var(--dn-tertiary)">→</span> Lv.${f.next}</h3><button class="button" data-panel="construction">효과와 조건 확인 ${icon('build')}</button><p>시설 생산 기여 <strong>${f.before} → ${f.after} /분</strong><br><small>효과 비교 예시</small></p><div class="job-time"><span>남은 시간 · 고정 예시</span><strong>01:24</strong></div><div class="progress-track" role="progressbar" aria-label="주요 건설 진행 예시" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i style="width:62%"></i></div></article>`;
+  if (state.threat) return `<article class="decision-card threat"><div class="card-icon">${icon('warning')}</div><span class="overline">위협 우선</span><h3>노바 프라임에<br><span data-threat-phase>적 함대 접근</span></h3><button class="button secondary" data-panel="threat">위협 상세 보기 ${icon('compass')}</button><p>선택 행성은 ${planet().name}입니다.<br>대응 전 위협 대상과 함대를 확인하세요.</p><div class="job-time"><span><span data-incoming-caption>외곽 도달까지</span></span><strong><time data-route-eta="incoming">02:40</time></strong></div>${state.notice ? `<div class="inline-feedback">${state.notice.text}<br>접근 중인 적 함대도 함께 확인하세요.</div>` : ''}</article>`;
+  if (state.notice) return `<article class="decision-card complete"><div class="card-icon">${icon('check')}</div><span class="overline">작업 완료</span><h3>다음 성장을<br>준비할 시간.</h3><button class="button" data-panel="reports">완료 기록 보기 ${icon('reports')}</button><p>${state.notice.text}</p></article>`;
+  if (state.connection !== 'ready') return `<article class="decision-card"><div class="card-icon">${icon('info')}</div><span class="overline">${state.connection === 'offline' ? '연결 오류' : '불러오는 중'}</span><h3>연결 상태를<br>확인하세요.</h3><button class="button secondary" data-panel="resources">자원 현황 확인</button><p>연결을 다시 시도한 뒤 작업을 이어가세요.</p></article>`;
+  if (state.empty || planet().id === 'vesper') return `<article class="decision-card"><div class="card-icon">${icon('build')}</div><span class="overline">새로운 계획</span><h3>다음 개발을<br>선택하세요.</h3><button class="button" data-panel="construction">건설 관리 열기 ${icon('build')}</button><p>진행 중인 작업이 없습니다. 시설 목록에서 다음 투자 대상을 확인할 수 있습니다.</p></article>`;
+  return `<article class="decision-card"><div class="card-icon">${icon('fuel')}</div><span class="overline">현재 건설</span><h3>연료 합성소<br>Lv.${f.level} <span style="color:var(--dn-tertiary)">→</span> Lv.${f.next}</h3><button class="button" data-panel="construction">효과와 조건 확인 ${icon('build')}</button><p>시설 생산 기여 <strong>${f.before} → ${f.after} /분</strong><br><small>증설 효과</small></p><div class="job-time"><span>남은 시간</span><strong>01:24</strong></div><div class="progress-track" role="progressbar" aria-label="주요 건설 진행" aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"><i style="width:62%"></i></div></article>`;
 }
 function renderCurrentWorkspace() {
   const home = view === 'home';
@@ -171,7 +171,7 @@ function renderCurrentWorkspace() {
   if (home){renderVisiblePlanet();return;}
   const strategyPlan=view==='command'?strategySummary(strategyUI,state):null;
   $('workspace-title').textContent = strategyPlan?.target ? strategyPlan.target.name+' '+({attack:'공격',scout:'정찰',move:'이동',reinforce:'증원'}[strategyUI.intent]) : workspaceTitles[view];
-  $('workspace-planet').textContent = planet().name + ' · 예시 스냅샷';
+  $('workspace-planet').textContent = planet().name;
   $('workspace-body').innerHTML = renderWorkspace(view,state,selectedFacility,galaxyUI,operationsUI,allianceUI,strategyUI,developmentUI);
   hydrateIcons($('workspace-body'));
   routePreview.render();
@@ -216,7 +216,7 @@ function changeStrategy(action){
     else renderCurrentWorkspace();
     $('strategy-confirm-title')?.scrollIntoView?.({block:'start'});$('strategy-confirm-title')?.focus({preventScroll:true});
   }else if(action.type==='preview'&&strategyUI.orders.length>before.orders.length){
-    navigationController.go({view:'fleet'});announce('출항 흐름 시연을 추가했습니다. 실제 함선과 연료는 변경하지 않았습니다.');
+    navigationController.go({view:'fleet'});announce('출항 미리보기를 시작합니다. 함선과 연료는 소모되지 않습니다.');
   }else if(['advance','recall'].includes(action.type)){
     const focus=bookmark(document.activeElement),scroll=window.scrollY;renderCurrentWorkspace();
     const orderElement=$('strategy-order-'+action.id);
@@ -224,7 +224,7 @@ function changeStrategy(action){
     if(oldOrder?.phase!==order?.phase){
       orderElement?.classList.add('dn-phase-changed');
       const phase={waiting:'출발 대기',outbound:'목표로 이동 중',arrived:'목표 도착',deployed:'현지 주둔 중',returning:'귀환 중',complete:'귀환 완료'}[order.phase];
-      announce(`${order.targetName} ${order.total}척, ${phase} 시연입니다. 실제 자산은 변경되지 않았습니다.`);
+      announce(`${order.targetName} ${order.total}척, ${phase}. 데모 미리보기이며 실제 게임은 바뀌지 않습니다.`);
     }
     const fallback=orderElement?.querySelector('h3');fallback?.setAttribute('tabindex','-1');
     (resolveBookmark(focus)||fallback)?.focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});
@@ -234,7 +234,7 @@ function changeStrategy(action){
       const art=document.querySelector(`[data-strategy-ship="${action.id}"] .sc-ship-art`);
       if(art){art.style.animationName=art.style.animationName==='sc-quantity-lift'?'sc-quantity-lift-alt':'sc-quantity-lift';art.classList.add('sc-edited');}
     }
-    if(['quantity','delay'].includes(action.type)&&strategyUI!==before){const summary=strategySummary(strategyUI,state);announce(`편성 ${summary.total}척, 지휘 ${summary.command} / 12. ${summary.errors.length?summary.errors.map(e=>e.text).join(' '):'명령 확인이 가능합니다. 실제 출항은 시연에서만 진행합니다.'}`);}
+    if(['quantity','delay'].includes(action.type)&&strategyUI!==before){const summary=strategySummary(strategyUI,state);announce(`편성 ${summary.total}척, 지휘 ${summary.command} / 12. ${summary.errors.length?summary.errors.map(e=>e.text).join(' '):'명령 확인이 가능합니다.'}`);}
     if(action.type==='clear')announce('함대 편성을 비웠습니다. 함종과 수량을 다시 선택하세요.');
   }
 }
@@ -252,7 +252,7 @@ function changeAlliance(action) {
   if (action.type === 'review' && allianceUI.review) {
     $('alliance-result-title')?.closest('section')?.scrollIntoView?.({block:'start'});
     $('alliance-result-title')?.focus({preventScroll:true});
-    announce('공동 작전 준비안을 검토했습니다. 역할 예약이나 기여는 전송되지 않았습니다.');
+    announce('공동 작전 편성을 확인했습니다.');
   }
 }
 function refreshPractice() {
@@ -287,7 +287,7 @@ function changeOperation(action) {
     const heading = $('practice-result-title');
     heading?.closest('section')?.scrollIntoView?.({block:'start'});
     heading?.focus({preventScroll:true});
-    announce('현재 편성의 준비 조건을 검토했습니다. 실제 출격이나 전투 결과는 생성하지 않습니다.');
+    announce('현재 편성의 준비 조건을 확인했습니다. 실제 출격이나 전투 결과는 생성하지 않습니다.');
   }
 }
 function refreshGalaxyContent() {
@@ -326,7 +326,7 @@ function previewGalaxyScan() {
       renderPanel(); $('dialog-content').scrollTop = scroll;
       resolveBookmark(focused)?.focus({preventScroll:true});
     }
-    announce(target.name + ' 정찰 시연 결과가 준비되었습니다. 결과 보기에서 확인하세요.');
+    announce(target.name + ' 관측 정보 미리보기가 준비되었습니다. 관측 보고서에서 확인하세요.');
   },1400);
 }
 function syncFacilitySelection() {
@@ -418,24 +418,24 @@ function renderPanel() {
   const p = planet();
   $('dialog-back').hidden = true;
   $('drawer-location').textContent = (workspaceTitles[view] || '행성 관제') + ' / 빠른 확인';
-  $('dialog-title').textContent = panel === 'planet' ? facilityNames[selectedFacility] : panel === 'intel' ? '정찰 결과 · 예시' : titles[panel] || '상세';
+  $('dialog-title').textContent = panel === 'planet' ? facilityNames[selectedFacility] : panel === 'intel' ? '정찰 보고서' : titles[panel] || '상세';
   $('dialog-return').textContent = (workspaceTitles[view] || '행성 관제') + '로 돌아가기';
-  const disabled = label => `<button class="button secondary" disabled aria-describedby="command-reason">${label}</button><p id="command-reason" class="drawer-demo">데모에서는 실행할 수 없습니다.</p>`;
+  const disabled = label => `<button class="button secondary" disabled aria-describedby="dialog-demo">${label}</button>`;
   const manage = (key,label='전체 관리 열기') => `<button class="button secondary detail-manage" data-view="${key}">${label} <span aria-hidden="true">↗</span></button>`;
   let html = '';
-  if (state.connection === 'loading' && panel!=='settings') html = '<div class="empty-state" role="status">예시 스냅샷을 불러오는 중입니다.</div>';
-  else if (panel === 'resources') html = `<p>${p.name} · 보유량과 현지 생산</p>` + Object.keys(names).map(key => `<section class="resource-detail"><h3>${icon(key)}${names[key]}</h3>${stat('보유 / 저장 한도', format(p.resources[key]) + ' / ' + format(p.capacities[key]))}${stat('생산', '+' + p.rates[key] + ' /분')}</section>`).join('') + manage('construction','시설 투자 비교');
+  if (state.connection === 'loading' && panel!=='settings') html = '<div class="empty-state" role="status">정보를 불러오는 중입니다.</div>';
+  else if (panel === 'resources') html = `<p>${p.name} · 보유량과 현지 생산</p>` + Object.keys(names).map(key => `<section class="resource-detail"><h3>${icon(key)}${names[key]}</h3>${stat('보유 / 저장 한도', format(p.resources[key]) + ' / ' + format(p.capacities[key]))}${stat('생산', '+' + p.rates[key] + ' /분')}</section>`).join('') + manage('construction','시설 증설하기');
   else if (panel === 'planet') {
     const f=facilityPreview(p,selectedFacility);
-    html = `<label class="detail-facility-select" for="detail-facility-select">시설 선택<select id="detail-facility-select">${Object.entries(p.facilities).map(([key,level])=>`<option value="${key}" ${key===selectedFacility?'selected':''}>${facilityNames[key]} · Lv.${level}</option>`).join('')}</select></label><section id="facility-detail" aria-label="선택 시설"><div class="facility-effect"><span>${f.effect}</span><strong>${f.before} <span>→</span> ${f.after} <small>${f.unit}</small></strong></div><p>${f.name} · Lv.${f.level} → Lv.${f.next}</p><h3>증설 비용 · 예시</h3><div class="cost-grid">${Object.keys(names).map(k=>`<span>${icon(k)}${names[k]} <strong>${f.cost[k]}</strong></span>`).join('')}</div>${stat('소요 시간',f.cost.time)}<p class="detail-condition">${f.affordable?'예시 보유 자원으로 비용 충족':'예시 보유 자원 부족'}</p><button class="button secondary" disabled>건설 실행 · 미연결</button></section>${manage('construction','전체 시설·조건 비교')}`;
+    html = `<label class="detail-facility-select" for="detail-facility-select">시설 선택<select id="detail-facility-select">${Object.entries(p.facilities).map(([key,level])=>`<option value="${key}" ${key===selectedFacility?'selected':''}>${facilityNames[key]} · Lv.${level}</option>`).join('')}</select></label><section id="facility-detail" aria-label="선택 시설"><div class="facility-effect"><span>${f.effect}</span><strong>${f.before} <span>→</span> ${f.after} <small>${f.unit}</small></strong></div><p>${f.name} · Lv.${f.level} → Lv.${f.next}</p><h3>증설 비용</h3><div class="cost-grid">${Object.keys(names).map(k=>`<span>${icon(k)}${names[k]} <strong>${f.cost[k]}</strong></span>`).join('')}</div>${stat('소요 시간',f.cost.time)}<p class="detail-condition">${f.affordable?'자원 충분':'자원 부족'}</p><button class="button secondary" disabled aria-describedby="dialog-demo">건설 시작</button></section>${manage('construction','전체 시설·조건 비교')}`;
   }
-  else if (panel === 'fleet') html = `<p>${p.name}의 함대</p>${stat('보유 함선',p.ships+'척')}${stat('출격 가능',p.ships+'척 · 예시')}${stat('출격 중','0척 · 예시')}${manage('fleet')}`;
-  else if (panel === 'research') html = `${stat('현지 연구소','Lv.'+p.facilities.laboratory)}${stat('공통 연구',state.empty?'진행 중인 연구 없음':'산업 기술 Lv.1')}${stat('연구 행성','노바 프라임')}${stat('남은 시간',state.empty?'—':'03:10 · 고정 예시')}${manage('research')}`;
-  else if (panel === 'threat') html = state.threat ? `${stat('위협 대상','노바 프라임')}${stat('선택 행성',p.name)}${stat('<span data-incoming-caption>외곽 도달까지</span>','<time data-route-eta="incoming">02:40</time> · 시연')}${stat('접근 종점','대기권 밖 대기점')}${manage('defense','방어 현황 확인')}${manage('evasion','회피 계획 검토')}` : '<p>현재 접근 중인 위협 예시가 없습니다.</p>' + manage('defense','방어 현황 확인');
+  else if (panel === 'fleet') html = `<p>${p.name}의 함대</p>${stat('보유 함선',p.ships+'척')}${stat('출격 가능',p.ships+'척')}${stat('출격 중','0척')}${manage('fleet')}`;
+  else if (panel === 'research') html = `${stat('현지 연구소','Lv.'+p.facilities.laboratory)}${stat('공통 연구',state.empty?'진행 중인 연구 없음':'산업 기술 Lv.1')}${stat('연구 행성','노바 프라임')}${stat('남은 시간',state.empty?'—':'03:10')}${manage('research')}`;
+  else if (panel === 'threat') html = state.threat ? `${stat('위협 대상','노바 프라임')}${stat('선택 행성',p.name)}${stat('<span data-incoming-caption>외곽 도달까지</span>','<time data-route-eta="incoming">02:40</time>')}${stat('접근 종점','대기권 밖 대기점')}${manage('defense','방어 현황 확인')}${manage('evasion','함대 대피하기')}` : '<p>접근 중인 적 함대가 없습니다.</p>' + manage('defense','방어 현황 확인');
   else if (panel === 'reports') html = (state.notice ? `<div class="detail-callout">${state.notice.text}</div>` : '<div class="empty-state"><strong>새 완료 기록 없음</strong>진행 중인 작업은 건설·연구에서 확인할 수 있습니다.</div>') + manage('reports','활동 전체 보기');
-  else if (panel === 'recon') html = `<p>노바 프라임의 정찰 위성 S-01</p>${stat('시연 상태','기울어진 궤도 순찰')}${stat('궤도 표현','앞에서 표시 · 뒤에서 가림')}${stat('정보 수신','미연결')}${disabled('정찰 명령 · 미연결')}${manage('galaxy','은하·정찰 보기')}`;
+  else if (panel === 'recon') html = `<p>노바 프라임의 정찰 위성 S-01</p>${stat('상태','행성 궤도 순찰 중')}${stat('관측 대상','노바 프라임 주변 항로')}${stat('새 관측 정보','없음')}${disabled('정찰 시작')}${manage('galaxy','은하·정찰 보기')}`;
   else if (panel === 'intel') html = renderGalaxyReport(state,galaxyUI,navigationController?.current.target || galaxyUI.target);
-  else if (panel === 'settings') html = '<p>시스템의 모션 감소 설정을 자동 반영합니다.</p><label class="setting-row"><input type="checkbox" id="pause-motion">모든 화면 모션 일시정지</label><div class="detail-callout">시연 위치와 남은 시간을 함께 멈춥니다. 경고와 항로는 계속 표시됩니다.</div>';
+  else if (panel === 'settings') html = '<p>시스템의 모션 감소 설정을 자동 반영합니다.</p><label class="setting-row"><input type="checkbox" id="pause-motion">모든 화면 모션 일시정지</label><div class="detail-callout">함대 위치와 남은 시간을 함께 멈춥니다. 경고와 항로는 계속 표시됩니다.</div>';
   $('dialog-content').innerHTML = html;
   if (panel === 'settings') $('pause-motion').checked = document.body.classList.contains('motion-paused');
   routePreview.render();
@@ -448,13 +448,14 @@ function selectWorkspaceFacility(key) {
   document.querySelectorAll('[data-workspace-facility]').forEach(el=>el.setAttribute('aria-pressed',String(el.dataset.workspaceFacility===key)));
   $('workspace-facility-select').value=key;
   hydrateIcons($('workspace-facility-detail'));
-  announce(facilityNames[key]+' 증설 비교를 표시했습니다.');
+  announce(facilityNames[key]+' 증설 정보를 표시했습니다.');
 }
 listen(document,'click', event => {
   if (event.target.closest('.skip-link')) { event.preventDefault(); $('main').focus(); return; }
   if (event.target.closest('.brand')) { event.preventDefault(); navigationController.go({view:'home'}); return; }
   const button = event.target.closest('button');
   if (!button) return;
+  if(button.id==='demo-help'){const tools=$('preview-tools');tools.open=true;tools.scrollIntoView({block:'start'});tools.querySelector('summary').focus({preventScroll:true});return;}
   if(button.dataset.strategyOpen)openStrategy(button.dataset.strategyOpen,button.dataset.strategyIntent,button.dataset.strategyContext||'solo');
   else if(button.dataset.strategyIntentTab)navigationController.go({view:'career',intent:button.dataset.strategyIntentTab,context:'solo'});
   else if(button.dataset.strategyMap)navigationController.go({view:'galaxy',target:button.dataset.strategyMap});
@@ -520,8 +521,9 @@ listen(document,'click', event => {
   else if (button.id === 'empty-button') act({type:'empty'});
   else if (button.id === 'offline-button') { clearTimeout(retryTimer); act({type:'connection',value:state.connection==='offline'?'ready':'offline'}); }
   else if (button.id === 'reset-button') { clearTimeout(retryTimer); act({type:'reset'}); announce('데모를 초기화했습니다.'); }
-  else if (button.id === 'retry-button') { act({type:'connection',value:'loading'}); retryTimer=setTimeout(()=>{act({type:'connection',value:'ready'});announce('예시 스냅샷을 다시 표시했습니다.');},700); }
+  else if (button.id === 'retry-button') { act({type:'connection',value:'loading'}); retryTimer=setTimeout(()=>{act({type:'connection',value:'ready'});announce('데모 연결 상태를 복구했습니다.');},700); }
 });
+listen($('preview-tools'),'toggle',()=>{const tools=$('preview-tools');if(!tools.open&&matchMedia('(max-width:768px)').matches&&(document.activeElement===document.body||document.activeElement===tools.querySelector('summary')))$('demo-help').focus({preventScroll:true});});
 listen($('planet-select'),'change',event=>act({type:'select',id:event.target.value}));
 function closePanel() { navigationController.closeDetail(); }
 listen($('dialog-close'),'click',closePanel);

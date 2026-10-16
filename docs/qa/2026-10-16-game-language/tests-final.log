@@ -1,0 +1,101 @@
+
+> delta-nova@0.1.0 test
+> vitest run --maxWorkers=1 --testTimeout=30000 --hookTimeout=30000 --reporter=default --reporter=json --outputFile=.delta-nova/copy-review/tests-final.json
+
+
+ RUN  v5.0.4 C:/Users/delic/.codex/worktrees/free-fleet-visuals/DeltaNova
+
+ ✓ tests/uiux-demo.test.ts (40 tests) 8446ms
+   ✓ disconnected design demo (40)
+     ✓ opens the separate demo guide by its header control and focuses the disclosure 400ms
+     ✓ aligns alliance arrival only when requested and uses the common fleet command 323ms
+     ✓ resets the command destination and its route together 337ms
+     ✓ does not recreate a confirmation from browser history after launch 316ms
+     ✓ keeps a relocated preview stationed and offers explicit recall 663ms
+     ✓ keeps keyboard focus on the busy recon control and after completion 670ms
+     ✓ preserves owned-planet and explicit-detail controls through delayed recon completion 327ms
+ ✓ tests/empire-network.test.tsx (14 tests) 2176ms
+   ✓ disables target-screen commands and names the unresolved empire screen after navigation 354ms
+   ✓ disables target-screen commands and names the unresolved guild screen after navigation 435ms
+ ✓ tests/App.test.tsx (18 tests) 4427ms
+   ✓ command center (18)
+     ✓ opens the real alliance screen when an unfinished local practice report is saved 354ms
+     ✓ only offers the support shortcut on a practice screen containing support controls 546ms
+     ✓ does not blindly save after an unread initial snapshot becomes available 309ms
+     ✓ locks navigation while resolving an operation and allows base access after settlement 315ms
+     ✓ resets an unsupported flank when recon is deselected 387ms
+     ✓ plays, settles once, persists and permits retry 427ms
+ ✓ tests/empire-guild-ui.test.tsx (1 test) 581ms
+   ✓ displays constructed inventory in the shared operation fleet selector 579ms
+ ✓ tests/PlanetManagement.test.tsx (10 tests) 2469ms
+   ✓ keeps connection recovery available when participant settings are folded 429ms
+   ✓ keeps the facility selection after starting work and opens its details from the queue 394ms
+   ✓ focuses the new sortie result and follows the report's research action 517ms
+ ✓ tests/GuildPanel.test.tsx (14 tests) 3598ms
+   ✓ shared guild screen (14)
+     ✓ keeps an existing report from overriding the role briefing selected by the user 447ms
+     ✓ preserves an ambiguous command through a restarted session and checks its receipt 377ms
+     ✓ keeps confirmed progress visible on refresh failure 317ms
+ ✓ tests/BaseOperationsPanel.test.tsx (6 tests) 4350ms
+   ✓ server base operations (6)
+     ✓ shows production, collects it and upgrades a facility with server owned costs 1262ms
+     ✓ runs a solo sortie, returns cargo, repairs ships and researches a module 1554ms
+     ✓ keeps bases distinct when the participant changes 482ms
+     ✓ allows the same pilot to reserve another role after a completed preparation 419ms
+     ✓ restores an uncertain base investment after menu reentry and retries the same payload 405ms
+ ✓ tests/PlanetDashboard.test.tsx (14 tests) 7218ms
+   ✓ starts a polite completion region without announcing historical jobs 430ms
+   ✓ announces a newly completed ship once and preserves the active input 574ms
+   ✓ groups newly completed jobs by their real source planets and ignores cancellation 653ms
+   ✓ announces consecutive identical job titles separately and suppresses replay after remount 1342ms
+   ✓ announces a job completed while away when returning to the same dashboard 364ms
+   ✓ clears the previous participant announcement and baselines the next participant history 810ms
+   ✓ builds real ships, displays their work and refreshes completed inventory 393ms
+   ✓ uses the selected planet as the cost source and returns cancellation refunds there 367ms
+   ✓ preserves a pending original planet when the display switches before retry 782ms
+   ✓ starts common research with an explicit local cost and exposes personal fleet choices 757ms
+ ✓ tests/PlanetOverview.test.tsx (10 tests) 3847ms
+   ✓ includes required power recovery in the carrier path and exposes the blocker 512ms
+   ✓ keeps the selected facility card and action form synchronized 654ms
+   ✓ replaces the overview with each category's full detail body and returns home 830ms
+   ✓ shows actual current production and completion effects without mutating the server state 496ms
+ ✓ tests/uiux-workspace.test.ts (11 tests) 329ms
+ ✓ tests/uiux-operations.test.ts (16 tests) 278ms
+(node:66676) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ tests/guild-server.test.ts (7 tests) 668ms
+(node:66972) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ tests/empire-server.test.ts (9 tests) 929ms
+(node:59220) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ tests/base-server.test.ts (5 tests) 710ms
+ ✓ tests/uiux-development.test.ts (11 tests) 220ms
+ ✓ tests/uiux-neon-fleet.test.ts (6 tests) 189ms
+ ✓ tests/uiux-free-fleet.test.ts (5 tests) 149ms
+ ✓ tests/guild.test.ts (9 tests) 55ms
+ ✓ tests/uiux-galaxy.test.ts (10 tests) 136ms
+ ✓ tests/completion-notice.test.tsx (3 tests) 116ms
+ ✓ tests/base.test.ts (11 tests) 48ms
+ ✓ tests/uiux-strategy-view.test.ts (2 tests) 87ms
+ ✓ tests/storage.test.ts (16 tests) 50ms
+ ✓ tests/uiux-alliance.test.ts (6 tests) 53ms
+ ✓ tests/uiux-navigation.test.ts (8 tests) 55ms
+ ✓ tests/empire-migration.test.ts (4 tests) 69ms
+ ✓ tests/empire-career.test.ts (8 tests) 48ms
+ ✓ tests/uiux-routes.test.ts (8 tests) 35ms
+ ✓ tests/empire-guild.test.ts (2 tests) 64ms
+ ✓ tests/empire.test.ts (14 tests) 58ms
+ ✓ tests/uiux-strategy.test.ts (24 tests) 35ms
+ ✓ tests/game.test.ts (16 tests) 28ms
+ ✓ tests/uiux-scene-motion.test.ts (3 tests) 5ms
+
+ Test Files  33 passed (33)
+      Tests  341 passed (341)
+   Start at  18:57:26
+   Duration  93.95s (tests 49%, environment 42%, import 8%, transform 1%)
+
+    Isolate  33 workers spawned · ~1.34s startup each (spawn + environment, per file)
+             at least ~43.02s faster with isolate: false — reuses workers across files instead of one per file
+
+JSON report written to C:/Users/delic/.codex/worktrees/free-fleet-visuals/DeltaNova/.delta-nova/copy-review/tests-final.json

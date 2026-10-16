@@ -319,7 +319,7 @@ describe('memory-only fleet strategy', () => {
     reserved = act(reserved, { type: 'quantity', id: 'carrier', value: 1 });
     reserved = act(act(reserved, { type: 'review' }), { type: 'preview' });
     expect(summary(reserved).available).toEqual(zero);
-    expect(summary(reserved).errors).toContainEqual({ code: 'empty', text: '시연 함대가 모두 배치 중입니다. 함대에서 귀환 시연을 완료하거나 출발 행성을 변경하세요.' });
+    expect(summary(reserved).errors).toContainEqual({ code: 'empty', text: '보유 함대가 모두 이동·주둔 중입니다. 함대에서 귀환 미리보기를 완료하거나 출발 행성을 바꾸세요.' });
     expect(summary(emptyFleet()).errors).toContainEqual({ code: 'empty', text: '출발지에서 사용할 함선을 1척 이상 선택하세요.' });
   });
 });

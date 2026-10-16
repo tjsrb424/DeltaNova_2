@@ -3,10 +3,10 @@
 import {ships} from './operations.js';
 const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;};
 export const technologies=freeze([
- {id:'industry',name:'산업 기술',icon:'build',effect:'수준당 모든 자원 기본 생산 +1/분 · 정비함/항모 건조 해금'},
- {id:'propulsion',name:'추진 기술',icon:'fleet',effect:'후속 성계 이동의 선행 기술 · 현재 이동 속도 효과는 미연결'},
- {id:'intelligence',name:'정보 기술',icon:'recon',effect:'교란함 건조 해금 · 정찰 해상도는 성계 단계에서 연결'},
- {id:'defense',name:'방어 기술',icon:'defense',effect:'호위함/공성함 건조 해금'}
+ {id:'industry',name:'산업 기술',icon:'build',effect:'수준당 모든 자원 기본 생산 +1/분 · 정비함·항모 건조 가능'},
+ {id:'propulsion',name:'추진 기술',icon:'fleet',effect:'성계 이동을 위한 선행 기술 · 현재 이동 속도 보너스 없음'},
+ {id:'intelligence',name:'정보 기술',icon:'recon',effect:'교란함 건조 가능'},
+ {id:'defense',name:'방어 기술',icon:'defense',effect:'호위함·공성함 건조 가능'}
 ]);
 export const shipBuild=freeze({
  scout:{cost:{alloy:20,crystal:10,fuel:5},seconds:20,shipyard:1},
@@ -35,7 +35,7 @@ export function researchPlan(state,ui=initialDevelopment()){
  const level=ui.scenario==='max'?3:0,next=Math.min(3,level+1);
  const cost=level>=3?null:{alloy:40*next,crystal:30*next,fuel:10*next};
  const issues=common(state,p,cost);
- if(level>=3)issues.push('현재 최대 연구 수준3입니다.');
+ if(level>=3)issues.push('최대 연구 수준인 Lv.3에 도달했습니다.');
  if(p.facilities.laboratory<next)issues.push('연구소 Lv.'+next+' 필요 · 현재 Lv.'+p.facilities.laboratory);
  if(!state.empty)issues.push('제국 연구가 진행 중입니다. 현재 작업을 먼저 확인하세요.');
  const unlocks=ships.filter(s=>shipBuild[s.id].technology===tech.id&&shipBuild[s.id].level===next).map(s=>s.name);
@@ -47,14 +47,14 @@ export function shipPlan(state,ui=initialDevelopment()){
  const cost=validQuantity?scale(build.cost,n):null,issues=common(state,p,cost);
  if(!validQuantity)issues.unshift('건조 수량은 1~20 사이의 정수여야 합니다.');
  if(p.facilities.shipyard<build.shipyard)issues.push('조선소 Lv.'+build.shipyard+' 필요 · 현재 Lv.'+p.facilities.shipyard);
- if(build.technology)issues.push(technologies.find(t=>t.id===build.technology).name+' Lv.'+build.level+' 필요 · 검토 예시 현재 Lv.0');
+ if(build.technology)issues.push(technologies.find(t=>t.id===build.technology).name+' Lv.'+build.level+' 필요 · 현재 Lv.0');
  if(!state.empty&&p.id==='nova')issues.push('현지 함선 건조가 진행 중입니다. 건조 대기열을 확인하세요.');
  return {kind:'ships',source:p,target:ship.id,name:ship.name,ship,build,quantity:validQuantity?n:null,validQuantity,cost,seconds:validQuantity?build.seconds*n:null,issues};
 }
 export function cancellationPlan(state,kind,scenario='snapshot',paidOverride){
  const p=kind==='research'?state.planets.find(p=>p.id==='nova'):source(state);
  const exists=p&&!state.empty&&(kind==='research'||p.id==='nova')&&['research','ships','construction'].includes(kind);
- if(!exists)return {job:null,allowed:false,issues:['검토할 진행 작업이 없습니다.']};
+ if(!exists)return {job:null,allowed:false,issues:['취소할 작업이 없습니다.']};
  const f=p.facilities.fuelRefinery;
  const paid=paidOverride|| (kind==='research'?{alloy:40,crystal:30,fuel:10}:kind==='ships'?scale(shipBuild.striker.cost,3):{alloy:40*f,crystal:10*f,fuel:10*f});
  const job={kind,name:kind==='research'?'산업 기술 Lv.1':kind==='ships'?'케스트럴 3척':'연료 합성소 Lv.'+(f+1)};

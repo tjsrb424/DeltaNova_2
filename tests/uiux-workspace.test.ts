@@ -18,7 +18,7 @@ describe('central demo workspaces', () => {
       expect(action.compareDocumentPosition(explanation)&Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     }
     expect(detail.querySelectorAll('.ws-cost-table tbody tr')).toHaveLength(3);
-    expect(detail.textContent).toContain('미연결');
+    expect(detail.querySelector('button:disabled')?.getAttribute('aria-describedby')).toBe('demo-boundary');
     const view=mount(renderWorkspace('construction',initialDemo(),'fuelRefinery'));
     expect(view.querySelector('#workspace-facility-detail')!.compareDocumentPosition(view.querySelector('.ws-queue')!)&Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
     expect(view.querySelector('.ws-queue')!.compareDocumentPosition(view.querySelector('#workspace-facility-detail .dn-facility-display')!)&Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
@@ -42,7 +42,7 @@ describe('central demo workspaces', () => {
     expect(detail.textContent).toContain('Lv.0');
     expect(detail.textContent).toContain('Lv.1');
     expect(detail.textContent).toContain('증설 후');
-    expect(detail.textContent).toContain('조건 미리보기');
+    expect(detail.textContent).toContain('건설 조건');
     expect(detail.querySelector('button:disabled')).not.toBeNull();
     expect(view.querySelector('#facility-detail')).toBeNull();
   });
@@ -124,7 +124,7 @@ describe('central demo workspaces', () => {
     const view=mount(renderWorkspace('fleet',state));
     expect(view.querySelector('[data-route-eta="incoming"]')).not.toBeNull();
     expect(view.querySelector('[data-route-eta="outgoing"]')).not.toBeNull();
-    expect(view.querySelector('#fleet-departure-preview')!.textContent).toContain('지우기');
+    expect(view.querySelector('#fleet-departure-preview')!.textContent).toContain('미리보기 닫기');
     expect(view.querySelector('[data-outgoing-phase]')).not.toBeNull();
     expect(view.querySelector('[data-view="evasion"]')).not.toBeNull();
     const colony=mount(renderWorkspace('fleet',{...state,selected:'vesper'}));

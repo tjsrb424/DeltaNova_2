@@ -1,0 +1,659 @@
+{
+  "date": "2026-10-16T09:52:53.520Z",
+  "browser": "155.0.8059.80",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "scope": "Game language and separate demo notices. Static independent demo only.",
+  "checks": [
+    {
+      "name": "all15views use game language with a persistent separate demo notice",
+      "passed": true
+    },
+    {
+      "name": "demo guide opens by keyboard with focus and remains scrollable on a small phone",
+      "passed": true
+    },
+    {
+      "name": "research shipbuilding and cancellation use named actions while final commands stay disabled",
+      "passed": true
+    },
+    {
+      "name": "preview launches and recon stay explicitly previews and never send data",
+      "passed": true
+    },
+    {
+      "name": "touch can open guide and build confirmation and forced colors preserve named close",
+      "passed": true
+    },
+    {
+      "name": "no script errors API requests or mutations occur",
+      "passed": true
+    }
+  ],
+  "layouts": [
+    {
+      "label": "home-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "construction-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "research-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "fleet-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "career-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "command-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "guild-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "galaxy-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "defense-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "evasion-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "reports-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "practice-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "more-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "rankings-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "diplomacy-1440",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "home-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "construction-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "research-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "career-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "command-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "guild-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "galaxy-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "defense-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "evasion-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "reports-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "practice-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "more-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "rankings-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "diplomacy-390",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "home-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "construction-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "research-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "fleet-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "career-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "command-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "guild-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "galaxy-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "defense-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "evasion-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "reports-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "practice-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "more-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "rankings-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "diplomacy-320",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "guide-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "guide-320-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "guide-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "guide-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "연구 시작-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "건조 시작-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "건설 취소-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "연구 취소-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "건조 취소-1440-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 24,
+      "overflow": false
+    },
+    {
+      "label": "연구 시작-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건조 시작-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건설 취소-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "연구 취소-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건조 취소-390-text100",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "연구 시작-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건조 시작-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건설 취소-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "연구 취소-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건조 취소-320-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "연구 시작-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건조 시작-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건설 취소-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "연구 취소-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    },
+    {
+      "label": "건조 취소-844-text200",
+      "contrastSamples": null,
+      "minimumControlPx": 44,
+      "overflow": false
+    }
+  ],
+  "accessibility": [
+    {
+      "width": 1440,
+      "name": "연구 시작 전 확인",
+      "command": "연구 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 1440,
+      "name": "건조 시작 전 확인",
+      "command": "건조 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 1440,
+      "name": "취소 시 환급액",
+      "command": "건설 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 1440,
+      "name": "취소 시 환급액",
+      "command": "연구 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 1440,
+      "name": "취소 시 환급액",
+      "command": "건조 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 390,
+      "name": "연구 시작 전 확인",
+      "command": "연구 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 390,
+      "name": "건조 시작 전 확인",
+      "command": "건조 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 390,
+      "name": "취소 시 환급액",
+      "command": "건설 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 390,
+      "name": "취소 시 환급액",
+      "command": "연구 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 390,
+      "name": "취소 시 환급액",
+      "command": "건조 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 320,
+      "name": "연구 시작 전 확인",
+      "command": "연구 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 320,
+      "name": "건조 시작 전 확인",
+      "command": "건조 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 320,
+      "name": "취소 시 환급액",
+      "command": "건설 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 320,
+      "name": "취소 시 환급액",
+      "command": "연구 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 320,
+      "name": "취소 시 환급액",
+      "command": "건조 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 844,
+      "name": "연구 시작 전 확인",
+      "command": "연구 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 844,
+      "name": "건조 시작 전 확인",
+      "command": "건조 시작",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 844,
+      "name": "취소 시 환급액",
+      "command": "건설 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 844,
+      "name": "취소 시 환급액",
+      "command": "연구 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    },
+    {
+      "width": 844,
+      "name": "취소 시 환급액",
+      "command": "건조 취소",
+      "disabled": true,
+      "dialogDescription": "demo notice exposed"
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7df36d4f6f34ae1657e1e3e484c7c47405508824a51512b3f157eafac5a95451"
+    },
+    {
+      "file": "main.js",
+      "sha256": "4a285f957d84a21f1736000f9f351052dac0089abf4ebdab98e988f638c12bf0"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "949b20f9fb26aa1178105ae0bd4246209d63466e9a4cd5ef852f53041317bc3e"
+    },
+    {
+      "file": "development-model.js",
+      "sha256": "e35f86945070862362ecc8042f2a101ad3809ae134ee8db1ca0eace509502023"
+    },
+    {
+      "file": "development.js",
+      "sha256": "2205019f22137e5563fdc01cda6f043fa8226599d4b1643cccafbf460c8208a9"
+    },
+    {
+      "file": "development-controller.js",
+      "sha256": "d9cb233208ce5d1bc3a43b4e3937576551d3b14801bff3239dbc0d554fe7db1a"
+    },
+    {
+      "file": "development.css",
+      "sha256": "9d5851b6214d8ce31fcb6ec3f4007de8b436eecc3d28f03f243cabef2ecddfdf"
+    },
+    {
+      "file": "refinement.css",
+      "sha256": "9754b53ba04191b245ad83bc568462aea42d5e3b43ba381590e232af23d399c2"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "216eac7a4b5c139998d6208cebc301930b209231212f70760968af814ef32ac0"
+    },
+    {
+      "file": "strategy-model.js",
+      "sha256": "dd6074fc1db033b50fe51768e2243451e1eba80b62e250749c95587e2ab9c7a3"
+    },
+    {
+      "file": "galaxy.js",
+      "sha256": "42b39ee24dc9b719fb06c897def7aa57527db246bef2c613af85cee7bb6bc2b4"
+    },
+    {
+      "file": "operations.js",
+      "sha256": "81e5f03abe58cf9096d3bb5fce6f21df8e5e79f033cf4694934ec61bb6e26c33"
+    },
+    {
+      "file": "alliance.js",
+      "sha256": "9484b3afd5efb8523d5d14e299803f74476fc2ac759957f10bd2a41c61e76590"
+    },
+    {
+      "file": "model.js",
+      "sha256": "82ff4c4c5b9c57fde597e75c4306f964a3b37f0d5c987e4e230faa551e719169"
+    },
+    {
+      "file": "visuals.js",
+      "sha256": "8bfed9ebfc63bcc56b37abcbaabcfee10ef578e9814648e4f30c728c912b0148"
+    },
+    {
+      "file": "route-preview.js",
+      "sha256": "f970596956bda3f5bdf577669d32cf4b6c232d44817fd7e8278cc48562be1774"
+    }
+  ],
+  "passed": true
+}

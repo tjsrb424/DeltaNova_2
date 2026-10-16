@@ -28,3 +28,6 @@ tools/verify-command-actions.mjs text eol=lf
 # Growth preparation review: stable browser and test sources.
 tools/verify-development-demo.mjs text eol=lf
 tests/uiux-development.test.ts text eol=lf
+
+# Game-language review tool.
+tools/verify-demo-copy.mjs text eol=lf

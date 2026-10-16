@@ -110,3 +110,15 @@ dialog h2 { margin-bottom: 16px; }.drawer-footer { padding-top: 12px; }
 }
 
 .decision-card h3+.button{margin-top:16px;margin-bottom:20px}
+
+/* Keep prototype explanations separate from game actions, also at narrow widths. */
+.demo-bar #demo-help{min-height:44px;flex-shrink:0;margin-left:auto;padding:8px 12px;border:1px solid var(--dn-control-border);border-radius:8px;font-size:12px}
+.preview-content{width:min(480px,calc(100vw - 32px));max-height:min(650px,calc(100dvh - 110px));overflow-y:auto;overscroll-behavior:contain}
+.demo-guide h2{font-size:15px;margin:0 0 12px}.demo-guide ul{font-size:12px;line-height:1.8;color:var(--dn-secondary);padding-left:20px;margin:0 0 16px}.demo-guide li+li{margin-top:8px}.demo-guide-heading{font-weight:600}
+@media(max-width:760px){.demo-bar{gap:4px 8px}.demo-bar>span{flex:1;min-width:0}.demo-bar #demo-help{font-size:11px;padding-inline:10px}.preview-tools{scroll-margin-top:8px}.preview-content{max-height:calc(100dvh - 150px)}}
+
+/* An open guide must remain above the fixed mobile navigation. */
+.preview-tools[open]{z-index:11}
+
+/* Mobile uses the header entry point; reserve a separate row only for the open guide. */
+@media(max-width:768px){.workspace-heading:has(#preview-tools:not([open])){display:none}}

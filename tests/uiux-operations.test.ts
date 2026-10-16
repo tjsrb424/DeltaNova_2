@@ -134,7 +134,7 @@ describe('operation workspaces', () => {
     expect(view.querySelectorAll('.op-stage')).toHaveLength(3);
     expect(view.querySelector('[data-view="practice"]')).not.toBeNull();
     expect(view.querySelector('#career-launch')?.hasAttribute('disabled')).toBe(true);
-    expect(view.textContent).toContain('예시 기준');
+    expect(view.textContent).toContain('편성 한도');
   });
 
   it('offers eight labeled ship editors and all stable controls without duplicated ids', () => {
@@ -201,7 +201,7 @@ describe('operation workspaces', () => {
     expect(result.textContent).toContain('노바 프라임');
     expect(result.textContent).toContain('고요한 잔해지대');
     expect(result.textContent).toContain('아크 1척');
-    expect(result.querySelector('button:disabled')?.textContent).toContain('실제 출격');
+    expect(result.querySelector('button:disabled')?.textContent).toContain('출격 시작');
     expect(renderPracticeResult({ ...initialDemo(), selected: 'vesper' }, reviewed)).toBe('');
     expect(renderPracticeResult(initialDemo(), act(reviewed, { type: 'quantity', id: 'scout', value: 1 }))).toBe('');
   });

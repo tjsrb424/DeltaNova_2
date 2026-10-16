@@ -24,6 +24,19 @@ describe('disconnected design demo', () => {
     disposeDemo = (await import('../public/uiux-demo/main.js')).disposeDemo;
   });
   afterEach(() => { disposeDemo?.(); vi.clearAllTimers(); vi.useRealTimers(); vi.unstubAllGlobals(); });
+  it('opens the separate demo guide by its header control and focuses the disclosure',()=>{
+    const guide=document.querySelector('#preview-tools') as HTMLDetailsElement;
+    guide.scrollIntoView=vi.fn();
+    click('#demo-help');
+    expect(guide.open).toBe(true);
+    expect(document.activeElement).toBe(guide.querySelector('summary'));
+    expect(document.querySelector('#demo-help')?.getAttribute('aria-controls')).toBe(guide.id);
+    expect(document.querySelector('#demo-boundary')?.textContent).toContain('실제 게임에 반영되지 않습니다');
+    expect(guide.textContent).toContain('최종 실행 버튼은 비활성');
+    vi.stubGlobal('matchMedia', (query:string) => ({matches:query==='(max-width:768px)',addEventListener(){},removeEventListener(){}}));
+    guide.open=false;guide.dispatchEvent(new Event('toggle'));
+    expect(document.activeElement?.id).toBe('demo-help');
+  });
   it('updates a selected fleet without replacing its summary, metrics or selected ship nodes',()=>{
     click('.sidebar [data-view="career"]');click('#strategy-target-tarsis [data-strategy-open]');
     const input=document.querySelector('#strategy-count-striker') as HTMLInputElement;
@@ -114,9 +127,9 @@ describe('disconnected design demo', () => {
     click('#strategy-review');click('#strategy-preview-launch');click('#strategy-advance-preview-1');click('#strategy-advance-preview-1');
     expect(document.querySelector('#strategy-order-preview-1')?.textContent).toContain('현지 주둔 중');
     expect(document.querySelector('#strategy-advance-preview-1')).toBeNull();
-    expect(document.querySelector('.ws-fleet-summary')?.textContent).toContain('시연 가용 함선5');
+    expect(document.querySelector('.ws-fleet-summary')?.textContent).toContain('출격 가능한 함선5');
     click('[data-strategy-recall="preview-1"]');click('#strategy-advance-preview-1');
-    expect(document.querySelector('.ws-fleet-summary')?.textContent).toContain('시연 가용 함선10');
+    expect(document.querySelector('.ws-fleet-summary')?.textContent).toContain('출격 가능한 함선10');
   });
   it('lets the player select a facility and see its next investment without issuing a command', () => {
     click('.sidebar [data-view="construction"]');
@@ -158,7 +171,7 @@ describe('disconnected design demo', () => {
     select.value = 'nova'; select.dispatchEvent(new Event('change', {bubbles:true}));
     expect(document.querySelector('#fleet-value')!.textContent).toContain('10');
     expect(document.querySelector('#route-status')!.textContent).toContain('출항');
-    expect(document.querySelector('#route-status')!.textContent).toContain('예시');
+    expect(document.querySelector('#demo-boundary')!.textContent).toContain('실제 게임에 반영되지 않습니다');
   });
   it('hides stale resource and fleet amounts in drawers while the snapshot is loading', async () => {
     click('#offline-button'); click('#retry-button');
@@ -269,7 +282,7 @@ describe('disconnected design demo', () => {
     expect(document.querySelector('#galaxy-target-title')!.textContent).toContain('베스퍼');
     click('#galaxy-row-tarsis');click('#galaxy-report-open');
     expect(document.querySelector('#dialog-content')!.textContent).toContain('타르시스');
-    expect(document.querySelector('#dialog-content')!.textContent).toContain('시연');
+    expect(document.querySelector('#dialog-demo')!.textContent).toContain('실제 게임에 반영되지 않습니다');
     expect(document.querySelector('#resources')!.textContent).toBe(assets);
   });
   it('switches an owned planet only through an explicit command-center action',()=>{

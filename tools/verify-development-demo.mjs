@@ -20,8 +20,8 @@ context.on('request',r=>{if(r.method()!=='GET'||/\/api\//.test(r.url()))report.r
 await context.addInitScript(()=>{window.__growthStorage=[];for(const name of ['getItem','setItem','removeItem','clear']){const original=Storage.prototype[name];Storage.prototype[name]=function(...args){window.__growthStorage.push(name);return original.apply(this,args);};}});
 const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));page.setDefaultTimeout(8000);page.setDefaultNavigationTimeout(60000);
 const base='http://127.0.0.1:'+server.address().port+'/uiux-demo/index.html';let serial=0;
-const go=async(view)=>{await page.goto(base+'?growth='+ ++serial+'#view='+view);await page.locator('#workspace-title').waitFor();await page.evaluate(()=>document.fonts.ready);};
-const check=async(name,fn)=>{console.log('CHECK '+name);try{await fn();report.checks.push({name,passed:true});}catch(error){report.checks.push({name,passed:false,error:String(error)});await page.screenshot({path:join(out,'failure.png')});throw error;}};
+const go=async(view)=>{await page.goto(base+'?growth='+ ++serial+'#view='+view);await page.locator('#workspace-title').waitFor({timeout:60000});await page.evaluate(()=>document.fonts.ready);};
+const check=async(name,fn)=>{console.log('CHECK '+name);try{await fn();report.checks.push({name,passed:true});}catch(error){report.checks.push({name,passed:false,error:String(error)});await page.screenshot({path:join(out,'failure.png'),timeout:60000}).catch(e=>{report.captureError=String(e);});throw error;}};
 const shot=async(name)=>page.screenshot({path:join(out,name+'.png')});
 const audit=async(label)=>{
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,label+' page overflow');
@@ -34,7 +34,7 @@ const audit=async(label)=>{
 try{
  await check('all four technologies expose effects, exact costs, unlocks and honest future effects',async()=>{
   await go('research');
-  for(const [id,name] of [['industry','멘더'],['intelligence','베일'],['defense','바스티온'],['propulsion','후속']]){
+  for(const [id,name] of [['industry','멘더'],['intelligence','베일'],['defense','바스티온'],['propulsion','속도 보너스 없음']]){
    await page.locator('#development-tech-'+id).click();
    assert.equal(await page.locator('#development-tech-'+id).getAttribute('aria-pressed'),'true');
    assert((await page.locator('.dev-selection').innerText()).includes(name));
@@ -56,7 +56,7 @@ try{
   for(const quantity of ['','1.5','0','21']){await page.locator('#development-quantity').fill(quantity);assert.equal(await page.locator('#development-quantity').getAttribute('aria-invalid'),'true');assert(await page.locator('#development-ship-review').isDisabled());}
   await page.locator('#development-quantity').fill('3');await page.locator('#development-ship-review').click();
   assert((await page.locator('#development-dialog').innerText()).includes('케스트럴 3척'));
-  assert(await page.getByRole('button',{name:'실제 건조 시작 · 미연결',exact:true}).isDisabled());
+  assert(await page.getByRole('button',{name:'건조 시작',exact:true}).isDisabled());
   await page.keyboard.press('Escape');assert.equal(await page.evaluate(()=>document.activeElement.id),'development-ship-review');
   await page.locator('.dev-shipyard').scrollIntoViewIfNeeded();await shot('shipyard-1440');
  });
@@ -64,9 +64,9 @@ try{
   for(const [view,kind,refund] of [['construction','construction','32'],['research','research','32'],['fleet','ships','96']]){
    await go(view);const resources=await page.locator('#resources').innerText();
    await page.locator('#development-cancel-'+kind).click();
-   assert(await page.getByRole('dialog',{name:'취소 전 환급 확인',exact:true}).isVisible());
+   assert(await page.getByRole('dialog',{name:'취소 시 환급액',exact:true}).isVisible());
    assert((await page.locator('.dev-refund-grid .dev-resource').first().innerText()).includes(refund));
-   assert(await page.getByRole('button',{name:'실제 취소 확정 · 미연결',exact:true}).isDisabled());
+   assert(await page.locator('#development-dialog').getByRole('button',{name:kind==='research'?'연구 취소':kind==='ships'?'건조 취소':'건설 취소',exact:true}).isDisabled());
    await page.selectOption('#development-refund-scenario','capacity');
    assert((await page.locator('.dev-refund-status').innerText()).includes('저장'));
    assert((await page.locator('#development-announcement').innerText()).includes('저장'));

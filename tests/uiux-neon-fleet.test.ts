@@ -21,7 +21,7 @@ describe('neon departure presentation',()=>{
     const {state,ui}=fixture(),host=render(state,ui);
     const ships=[...host.querySelectorAll<HTMLElement>('[data-neon-ship]')];
     expect(ships.map(el=>[el.dataset.neonShip,el.dataset.neonCount])).toEqual([['striker','2'],['guardian','1'],['support','1']]);
-    expect(host.querySelector('.dn-neon-manifest')?.textContent).toContain('시연 편성');
+    expect(host.querySelector('.dn-neon-manifest')?.textContent).toContain('보낸 함대');
     expect(host.querySelector('[data-neon-ship=carrier]')).toBeNull();
   });
   it('draws one neon unit for every selected ship in the actual departure scene',()=>{

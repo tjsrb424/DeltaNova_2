@@ -22,7 +22,7 @@ context.on('request',r=>{if(r.method()!=='GET'||/\/api\//.test(r.url()))report.r
 await context.addInitScript(()=>{window.__storageCalls=[];for(const name of ['getItem','setItem','removeItem','clear']){const original=Storage.prototype[name];Storage.prototype[name]=function(...args){window.__storageCalls.push(name);return original.apply(this,args);};}});
 const page=await context.newPage();page.setDefaultTimeout(5000);page.on('pageerror',e=>report.errors.push(String(e)));
 const settle=async()=>{await page.locator('#planet-scene[aria-busy="false"]').waitFor();await page.evaluate(()=>document.fonts.ready.then(()=>true));await page.waitForFunction(()=>document.getAnimations().filter(a=>Number.isFinite(a.effect?.getComputedTiming().endTime)).every(a=>a.playState!=='running'),null,{timeout:3000});};
-const scenario=async name=>{if(!await page.locator('#preview-tools').getAttribute('open')){if(!await page.locator('[data-state="'+name+'"]').isVisible())await page.locator('#preview-tools summary').click();}await page.locator('[data-state="'+name+'"]').click();if(await page.locator('[data-state="idle"]').isVisible())await page.locator('#preview-tools summary').click();await page.evaluate(()=>scrollTo(0,0));await settle();};
+const scenario=async name=>{if(!await page.locator('#preview-tools').getAttribute('open')){if(!await page.locator('[data-state="'+name+'"]').isVisible())await page.locator('#demo-help').click();}await page.locator('[data-state="'+name+'"]').click();if(await page.locator('[data-state="idle"]').isVisible())await page.locator('#preview-tools summary').click();await page.evaluate(()=>scrollTo(0,0));await settle();};
 try{
   await page.goto(url);await settle();
   const uploadFailure=await browser.newContext();await uploadFailure.addInitScript(()=>{
@@ -154,9 +154,9 @@ try{
   });
   await page.setViewportSize({width:1440,height:900});await scenario('threat');
   await check('outbound/incoming previews stay local and keep their original planet',async()=>{
-    await page.locator('#preview-tools summary').click();await page.locator('#departure-button').click();await page.locator('#preview-tools summary').click();
+    await page.locator('#demo-help').click();await page.locator('#departure-button').click();await page.locator('#preview-tools summary').click();
     assert.equal(await page.locator('#departure-route').isVisible(),true);assert.equal(await page.locator('#incoming-route').isVisible(),true);
-    assert.match(await page.locator('#fleet-value').innerText(),/10/);assert.match(await page.locator('#route-status').innerText(),/위치·남은 시간 동기화/);
+    assert.match(await page.locator('#fleet-value').innerText(),/10/);assert.equal(await page.locator('#route-status [data-route-eta]').count(),2);assert.match(await page.locator('#demo-boundary').innerText(),/실제 게임에 반영되지 않습니다/);
     await page.screenshot({path:join(out,'routes-desktop.png')});
     await page.selectOption('#planet-select','vesper');assert.match(await page.locator('#threat-banner').innerText(),/노바 프라임/);assert.equal(await page.locator('#incoming-route').isVisible(),false);assert.equal(await page.locator('#departure-route').isVisible(),false);
     await page.selectOption('#planet-select','nova');await settle();
@@ -251,7 +251,7 @@ try{
   });
   await check('arrival gives one brief exterior pulse, settles, and never mutates ships or replays on return',async()=>{
     const assets=await motionPage.locator('#resources,#fleet-value').allTextContents();
-    await motionPage.locator('#preview-tools summary').click();await motionPage.locator('#arrival-button').click();await motionPage.locator('#preview-tools summary').click();
+    await motionPage.locator('#demo-help').click();await motionPage.locator('#arrival-button').click();await motionPage.locator('#preview-tools summary').click();
     await motionPage.clock.fastForward(5350);
     assert.equal(await motionPage.locator('#incoming-route').getAttribute('data-arrived'),'true');assert.equal(await motionPage.locator('#incoming-route').getAttribute('data-arrival-effect'),'active');
     assert(Number(await motionPage.locator('.arrival-ring').getAttribute('opacity'))>0);assert.match(await motionPage.locator('#threat-banner').innerText(),/외곽 대기/);
@@ -262,7 +262,7 @@ try{
     assert.equal(await motionPage.locator('#incoming-route .route-dot').getAttribute('cx'),end);assert.equal(await motionPage.locator('.arrival-ring').getAttribute('opacity'),'0');assert.deepEqual(await motionPage.locator('#resources,#fleet-value').allTextContents(),assets);
   });
   await check('reduced motion freezes clouds, satellite, flight time and pulse together',async()=>{
-    await motionPage.locator('#preview-tools summary').click();await motionPage.locator('#arrival-button').click();await motionPage.locator('#preview-tools summary').click();await motionPage.clock.fastForward(1000);
+    await motionPage.locator('#demo-help').click();await motionPage.locator('#arrival-button').click();await motionPage.locator('#preview-tools summary').click();await motionPage.clock.fastForward(1000);
     await motionPage.emulateMedia({reducedMotion:'reduce'});
     await motionPage.locator('canvas[data-rotation="paused"]').waitFor();
     await motionPage.clock.runFor(100);
@@ -284,7 +284,7 @@ try{
     await fleetPage.clock.fastForward(260500);
     assert.equal(await fleetPage.locator('#workspace-page [data-route-eta="outgoing"]').innerText(),'00:00');
     assert.equal(await fleetPage.locator('[data-outgoing-phase]').innerText(),'외부 항로 이탈');
-    await fleetPage.locator('#preview-tools summary').click();await fleetPage.locator('#arrival-button').click();await fleetPage.locator('#preview-tools summary').click();
+    await fleetPage.locator('#demo-help').click();await fleetPage.locator('#arrival-button').click();await fleetPage.locator('#preview-tools summary').click();
     await fleetPage.clock.fastForward(5500);
     assert.equal(await fleetPage.locator('#workspace-page [data-route-eta="incoming"]').innerText(),'00:00');
     assert.match(await fleetPage.locator('#workspace-page [data-threat-phase]').innerText(),/외곽 대기/);
@@ -370,7 +370,7 @@ try{
     assert.equal(await galaxyPage.locator('#galaxy-target-select').evaluate(el=>el===document.activeElement),true);
     await galaxyPage.locator('#galaxy-target-select').focus();await galaxyPage.locator('#galaxy-target-select').selectOption('tarsis');
     await galaxyPage.locator('#galaxy-report-open').click();
-    assert.match(await galaxyPage.locator('#dialog-content').innerText(),/정찰 시연 결과/);
+    assert.match(await galaxyPage.locator('#dialog-content').innerText(),/정찰 보고서/);
     assert.match(await galaxyPage.locator('#dialog-content').innerText(),/타르시스/);
     assert.deepEqual(await galaxyPage.locator('#resources,#fleet-value').allTextContents(),assets);
     await galaxyPage.screenshot({path:join(out,'galaxy-report-mobile.png')});

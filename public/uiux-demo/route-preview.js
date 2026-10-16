@@ -56,8 +56,8 @@ export function createRoutePreview(getState) {
         const title=flight.arrived?'적 함대 외곽 대기':'적 함대 접근',caption=flight.arrived?'외곽 대기점 도달':'외곽 도달까지';
         for(const el of document.querySelectorAll('[data-threat-phase]'))if(el.textContent!==title)el.textContent=title;
         for(const el of document.querySelectorAll('[data-incoming-caption]'))if(el.textContent!==caption)el.textContent=caption;
-        if(route.planetId===state.selected){const pill=document.getElementById('planet-status'),text=flight.arrived?'△ 외곽 대기 · 예시':'△ 적 접근 · 예시';if(pill.textContent!==text)pill.textContent=text;}
-        if(flight.arrived&&!announcedArrivals.has(route)){announcedArrivals.add(route);document.getElementById('announcement').textContent='외곽 대기점 도달 시연. 실제 공격이나 자산 변화는 없습니다.';}
+        if(route.planetId===state.selected){const pill=document.getElementById('planet-status'),text=flight.arrived?'△ 외곽 대기':'△ 적 접근';if(pill.textContent!==text)pill.textContent=text;}
+        if(flight.arrived&&!announcedArrivals.has(route)){announcedArrivals.add(route);document.getElementById('announcement').textContent='적 함대 외곽 도달 미리보기입니다. 실제 공격은 없습니다.';}
       }
       const effect=kind==='incoming'?arrivalEffect(route,t):null;running ||= !!effect;
       const status=document.querySelector(`[data-route-phase="${kind}"]`),phaseText=flight.arrived?(kind==='incoming'?'외곽 대기점 도달':'외부 항로 이탈'):'현재 위치';if(status&&status.textContent!==phaseText)status.textContent=phaseText;

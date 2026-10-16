@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-16T09:51:01.833Z",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "browser": "155.0.8059.80",
+  "checks": [
+    {
+      "name": "direct command discovers its visible hangar before module initialization without loading it on construction",
+      "passed": true
+    },
+    {
+      "name": "construction command precedes artwork, explanation and full costs and fits above mobile navigation",
+      "passed": true
+    },
+    {
+      "name": "research and fleet preparation lead with one clear main action before explanatory copy",
+      "passed": true
+    },
+    {
+      "name": "home decision action precedes its extended explanation and progress",
+      "passed": true
+    },
+    {
+      "name": "quantity changes preserve display nodes, focus, exact values, errors and the top review control",
+      "passed": true
+    },
+    {
+      "name": "action ordering reflows with doubled text and retains keyboard access",
+      "passed": true
+    },
+    {
+      "name": "no script errors or game API mutations occur",
+      "passed": true
+    }
+  ],
+  "positions": [
+    {
+      "view": "construction",
+      "width": 1440,
+      "height": 900,
+      "button": {
+        "x": 637.3125,
+        "y": 407.828125,
+        "width": 722.671875,
+        "height": 44
+      },
+      "limit": 900
+    },
+    {
+      "view": "construction",
+      "width": 390,
+      "height": 844,
+      "button": {
+        "x": 34,
+        "y": 410.4375,
+        "width": 322,
+        "height": 44
+      },
+      "limit": 772
+    },
+    {
+      "view": "construction",
+      "width": 320,
+      "height": 568,
+      "button": {
+        "x": 34,
+        "y": 406.4375,
+        "width": 252,
+        "height": 44
+      },
+      "limit": 496
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "7df36d4f6f34ae1657e1e3e484c7c47405508824a51512b3f157eafac5a95451"
+    },
+    {
+      "file": "main.js",
+      "sha256": "4a285f957d84a21f1736000f9f351052dac0089abf4ebdab98e988f638c12bf0"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "216eac7a4b5c139998d6208cebc301930b209231212f70760968af814ef32ac0"
+    },
+    {
+      "file": "strategy.css",
+      "sha256": "4cad2ea896a1d51f5b5b0120dc3c9a2f9b709497419b77b98066e506d8f25f6f"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "949b20f9fb26aa1178105ae0bd4246209d63466e9a4cd5ef852f53041317bc3e"
+    },
+    {
+      "file": "workspace.css",
+      "sha256": "7cc138f19c7a3fe855b843d7ba082c96bcec22a8e1f95a12ed23a829ed9ff986"
+    },
+    {
+      "file": "route-preview.js",
+      "sha256": "f970596956bda3f5bdf577669d32cf4b6c232d44817fd7e8278cc48562be1774"
+    }
+  ],
+  "heroDiscovery": {
+    "hint": true,
+    "heroStart": 1146.2000000029802,
+    "moduleEnd": 1335.300000000745,
+    "requests": 1
+  },
+  "passed": true
+}

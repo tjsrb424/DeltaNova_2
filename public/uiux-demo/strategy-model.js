@@ -24,14 +24,14 @@ export const strategyShips = freeze(ships.map(ship => ({ ...ship, ...shipExample
 
 const targetExamples = {
   nova: { kind: 'own', travelUnits: 180, threat: '내 행성', hint: '현재 출발지의 잔류 전력을 확인하세요.' },
-  vesper: { kind: 'own', travelUnits: 180, threat: '배치 함선 없음 · 예시', hint: '함대를 옮겨 다른 내 행성의 방어를 준비하세요.' },
+  vesper: { kind: 'own', travelUnits: 180, threat: '배치 함선 없음', hint: '함대를 옮겨 다른 내 행성의 방어를 준비하세요.' },
   tarsis: { kind: 'hostile', travelUnits: 360, threat: '전력 미확인', hint: '공격과 정찰을 비교하세요. 적 전력과 전투 결과는 알 수 없습니다.' },
-  mira: { kind: 'ally', travelUnits: 300, threat: '동맹 거점 · 예시', hint: '지원 병력과 도착 시각을 동맹과 맞춰 보세요.' },
+  mira: { kind: 'ally', travelUnits: 300, threat: '동맹 거점', hint: '지원 병력과 도착 시각을 동맹과 맞춰 보세요.' },
   naos: { kind: 'neutral', travelUnits: 240, threat: '중립 · 전력 미확인', hint: '중립 거점은 정찰 목적으로만 접근할 수 있습니다.' },
   eos: { kind: 'hostile', travelUnits: 420, threat: '전력 미확인', hint: '먼 항로의 이동 시간과 출발지의 잔류 전력을 비교하세요.' },
-  rigel: { kind: 'hostile', travelUnits: 600, threat: '전력 미확인', hint: '다른 성역까지의 이동 시간과 편성을 검토하세요.' },
-  saiph: { kind: 'hostile', travelUnits: 540, threat: '전력 미확인', hint: '관측 정보는 고정 예시입니다. 전투 결과를 예측하지 않습니다.' },
-  bellatrix: { kind: 'neutral', travelUnits: 660, threat: '중립 · 전력 미확인', hint: '먼 중립 거점을 정찰할 편성과 시간을 검토하세요.' },
+  rigel: { kind: 'hostile', travelUnits: 600, threat: '전력 미확인', hint: '다른 성역까지의 이동 시간과 편성을 확인하세요.' },
+  saiph: { kind: 'hostile', travelUnits: 540, threat: '전력 미확인', hint: '관측 정보로 위치를 확인하고, 정찰로 세부 정보를 살펴보세요.' },
+  bellatrix: { kind: 'neutral', travelUnits: 660, threat: '중립 · 전력 미확인', hint: '먼 중립 거점을 정찰할 편성과 시간을 확인하세요.' },
 };
 export const strategyTargets = freeze(galaxyTargets.map(({ id, name, coords }) => ({ id, name, coords, ...targetExamples[id] })));
 
@@ -97,18 +97,18 @@ export function strategySummary(ui, state) {
   const returnSeconds = stationsAtTarget(ui?.intent) ? null : arrivalSeconds + travelSeconds;
   const errors = [];
   const error = (code, text) => errors.push({ code, text });
-  if (state?.connection !== 'ready') error('connection', '연결이 준비되면 명령 시연을 검토할 수 있습니다.');
+  if (state?.connection !== 'ready') error('connection', '연결 후 출항 정보를 확인하세요.');
   if (!ownedSource(source)) error('source', '출발할 내 행성을 선택하세요.');
   if (!target) error('target', '이동할 대상을 선택하세요.');
   if (!total) {
     if (!sumCounts(operationInventory(source))) error('empty', '이 행성에는 보낼 함선이 없습니다. 상단 출발 행성을 변경하세요.');
-    else if (!sumCounts(available)) error('empty', '시연 함대가 모두 배치 중입니다. 함대에서 귀환 시연을 완료하거나 출발 행성을 변경하세요.');
+    else if (!sumCounts(available)) error('empty', '보유 함대가 모두 이동·주둔 중입니다. 함대에서 귀환 미리보기를 완료하거나 출발 행성을 바꾸세요.');
     else error('empty', '출발지에서 사용할 함선을 1척 이상 선택하세요.');
   }
   if (total > 6) error('ship-limit', `함선 ${total - 6}척을 줄여 6척 이하로 맞추세요.`);
   if (command > 12) error('command-limit', `지휘 비용을 ${command - 12} 줄여 12 이하로 맞추세요.`);
   const sourceFuel = Number(source?.resources?.fuel);
-  if (fuel > 0 && (!Number.isFinite(sourceFuel) || fuel > sourceFuel)) error('fuel', `예시 필요 연료 ${fuel}이 출발지의 보유 연료를 넘습니다.`);
+  if (fuel > 0 && (!Number.isFinite(sourceFuel) || fuel > sourceFuel)) error('fuel', `필요 연료 ${fuel}이 출발지의 보유 연료를 넘습니다.`);
   if (target && !purposes[target.kind].includes(ui?.intent)) error('intent', '선택한 대상에 사용할 수 없는 명령입니다.');
   if (target?.id === source?.id) error('same-source', '현재 출발지와 다른 행성을 선택하세요.');
   if (!contexts.includes(ui?.context)) error('context', '명령 상황을 다시 선택하세요.');

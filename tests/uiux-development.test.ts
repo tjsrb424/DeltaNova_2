@@ -31,7 +31,7 @@ describe('independent development review contracts',()=>{
    const max=researchPlan(s,{...initialDevelopment(),technology:'industry',scenario:'max'});
    expect(max.issues.join(' ')).toContain('최대');expect(max.next).toBe(3);
    const future=researchPlan(s,{...initialDevelopment(),technology:'propulsion'});
-   expect(future.effect).toContain('후속');expect(future.effect).not.toContain('%');
+   expect(future.effect).toContain('속도 보너스 없음');expect(future.effect).not.toContain('%');
  });
  it('retains missing shipyard, technology, resources and power as separate actionable conditions',()=>{
    const s=initialDemo();s.planets[0].facilities.powerPlant=0;
@@ -76,7 +76,8 @@ describe('development review interface',()=>{
    const html=renderCancellation(cancellationPlan(s,'research'),'snapshot');
    expect(html).toContain('노바 프라임');expect(html).toContain('80%');
    const host=document.createElement('div');host.innerHTML=html;
-   expect(host.querySelector('button:disabled')?.textContent).toContain('미연결');
+   expect(host.querySelector('button:disabled')?.textContent).toBe('연구 취소');
+   expect(host.querySelector('button:disabled')?.getAttribute('aria-describedby')).toBe('development-dialog-note');
    expect(html).not.toContain('취소되었습니다');
  });
  it('keeps the quantity input and focus while recalculating exact totals and invalid states',()=>{
