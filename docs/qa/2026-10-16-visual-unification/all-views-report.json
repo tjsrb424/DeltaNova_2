@@ -1,0 +1,1360 @@
+{
+  "generatedAt": "2026-10-16T03:48:15.817Z",
+  "node": "v24.13.0",
+  "demoRoot": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "scope": "Static independent demo; no game API",
+  "checks": [
+    "only reviewed graphics scoring strictly above9.5 are admitted",
+    "neon fleet shows the exact player composition and explicit phases with one action-triggered arrival effect",
+    "all six literal neon units stay separate and inside the scene through mobile and desktop phases",
+    "facility graphics follow all six selected comparisons without issuing a command",
+    "all15 demo views preserve readable layouts and controls across8 viewport sizes",
+    "every view reflows with200percent text at320,390 andlandscape widths",
+    "new effects stop for system reduced motion, manual pause and controlled page invisibility",
+    "missing new raster assets leave facility costs, navigation and exact fleet review usable",
+    "empty and offline screens do not manufacture reports or a successful connection",
+    "touch-emulated mobile can compose, review, launch and advance the neon fleet",
+    "no API mutations, storage calls or script errors occur"
+  ],
+  "layouts": [
+    {
+      "view": "home",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "construction",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "research",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "fleet",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "defense",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "evasion",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "career",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "galaxy",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "guild",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "reports",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "practice",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "more",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "diplomacy",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "rankings",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "command",
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "view": "home",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "construction",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "research",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "fleet",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "defense",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "evasion",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "career",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "galaxy",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "guild",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "reports",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "practice",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "more",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "diplomacy",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "rankings",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "command",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "view": "home",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "construction",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "research",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "fleet",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "defense",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "evasion",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "career",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "galaxy",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "guild",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "reports",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "practice",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "more",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "diplomacy",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "rankings",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "command",
+      "width": 839,
+      "height": 1065
+    },
+    {
+      "view": "home",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "construction",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "research",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "fleet",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "defense",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "evasion",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "career",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "galaxy",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "guild",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "reports",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "practice",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "more",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "diplomacy",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "rankings",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "command",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "home",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "construction",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "research",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "fleet",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "defense",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "evasion",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "career",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "galaxy",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "guild",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "reports",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "practice",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "more",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "diplomacy",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "rankings",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "command",
+      "width": 360,
+      "height": 800
+    },
+    {
+      "view": "home",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "construction",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "research",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "fleet",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "defense",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "evasion",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "career",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "galaxy",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "guild",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "reports",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "practice",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "more",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "diplomacy",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "rankings",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "command",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "home",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "construction",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "research",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "fleet",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "defense",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "evasion",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "career",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "galaxy",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "guild",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "reports",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "practice",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "more",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "diplomacy",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "rankings",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "command",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "home",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "construction",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "research",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "fleet",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "defense",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "evasion",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "career",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "galaxy",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "guild",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "reports",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "practice",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "more",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "diplomacy",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "rankings",
+      "width": 390,
+      "height": 390
+    },
+    {
+      "view": "command",
+      "width": 390,
+      "height": 390
+    }
+  ],
+  "textLayouts": [
+    {
+      "view": "home",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "construction",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "research",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "fleet",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "defense",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "evasion",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "career",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "galaxy",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "guild",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "reports",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "practice",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "more",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "diplomacy",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "rankings",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "command",
+      "width": 320,
+      "height": 568
+    },
+    {
+      "view": "home",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "construction",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "research",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "fleet",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "defense",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "evasion",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "career",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "galaxy",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "guild",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "reports",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "practice",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "more",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "diplomacy",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "rankings",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "command",
+      "width": 390,
+      "height": 844
+    },
+    {
+      "view": "home",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "construction",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "research",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "fleet",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "defense",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "evasion",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "career",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "galaxy",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "guild",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "reports",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "practice",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "more",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "diplomacy",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "rankings",
+      "width": 844,
+      "height": 390
+    },
+    {
+      "view": "command",
+      "width": 844,
+      "height": 390
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "touchTargets": [
+    {
+      "label": "home 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "construction 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "research 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "fleet 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "defense 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "evasion 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "career 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "galaxy 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "guild 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "reports 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "practice 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "more 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "diplomacy 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "rankings 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "command 390x844",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "home 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "construction 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "research 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "fleet 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "defense 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "evasion 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "career 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "galaxy 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "guild 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "reports 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "practice 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "more 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "diplomacy 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "rankings 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "command 360x800",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "home 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "construction 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "research 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "fleet 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "defense 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "evasion 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "career 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "galaxy 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "guild 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "reports 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "practice 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "more 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "diplomacy 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "rankings 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "command 320x568",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "home 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "construction 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "research 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "fleet 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "defense 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "evasion 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "career 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "galaxy 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "guild 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "reports 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "practice 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "more 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "diplomacy 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "rankings 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "command 390x390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "home text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "construction text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "research text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "fleet text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "defense text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "evasion text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "career text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "galaxy text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "guild text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "reports text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "practice text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "more text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "diplomacy text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "rankings text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "command text200 320",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "home text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "construction text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "research text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "fleet text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "defense text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "evasion text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "career text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "galaxy text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "guild text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "reports text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "practice text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "more text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "diplomacy text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "rankings text200 390",
+      "minimumPx": 44,
+      "failures": []
+    },
+    {
+      "label": "command text200 390",
+      "minimumPx": 44,
+      "failures": []
+    }
+  ],
+  "graphics": [
+    {
+      "id": "neon-ui-v3",
+      "score": 9.7
+    },
+    {
+      "id": "neon-ships-v3",
+      "score": 9.65
+    },
+    {
+      "id": "research-v1",
+      "score": 9.6
+    },
+    {
+      "id": "space-v1",
+      "score": 9.75
+    },
+    {
+      "id": "facilities-v2",
+      "score": 9.6
+    }
+  ],
+  "browser": "155.0.8059.80",
+  "inspectedFiles": [
+    {
+      "file": "index.html",
+      "sha256": "4f440c795ea1a7bcd01217c5bc989e0fa1aa5bc5516e7352f2a4e0b6677392e1"
+    },
+    {
+      "file": "main.js",
+      "sha256": "b6339d6e02e3e97ed7b9c44286f9acb018638aec230c8c9a32afa3f66f4ab596"
+    },
+    {
+      "file": "workspace.js",
+      "sha256": "d10dd932ab1c8a95c8d91cd66bde58f220ba551e669e1784d3a9b393d9b85f95"
+    },
+    {
+      "file": "operations.js",
+      "sha256": "f4722b0432be0072e605708f305c300120ffa9b67d759d8e5209d5a3d85c2c68"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "1a709ca06a232766da36c9a3d920358560fc901161ea39dbfd91dc64044f1d51"
+    },
+    {
+      "file": "icons.js",
+      "sha256": "17b4b3849d12c39d81ee1662478038f2641420d8cbb0aad25635b7d61bd2d6d5"
+    },
+    {
+      "file": "visuals.js",
+      "sha256": "7f475ddd92f76554022280def8699bb1630d2d036188fdc2a4568479f33531e3"
+    },
+    {
+      "file": "visuals.css",
+      "sha256": "efea53a79f180fd587418930b36429d9ae5b95d7a6f4be090e6df3b828bddc7b"
+    }
+  ],
+  "passed": true
+}

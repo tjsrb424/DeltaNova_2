@@ -1,0 +1,99 @@
+{
+  "date": "2026-10-16",
+  "baseline": "766b248119495122d38dbe7e0cd67c0187a1edc7",
+  "sources": [
+    {
+      "path": "docs/art-source/visual-unification-v1/facilities-v1.png",
+      "bytes": 2525393,
+      "sha256": "56576e33dcf0654f8cb7bb596b01ae5629073d7142c1e40899e5fffb0014cb39"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/facilities-v2.png",
+      "bytes": 2063764,
+      "sha256": "def2bcda403bd1350ba4b2c33938341b75e75d57c8fdf24e704d8d9b894838a8"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/facility-cell-bounds.json",
+      "bytes": 743,
+      "sha256": "90d9bcbf307fec4ff2b635284bcaf6e8420267039a2dc03de6bf90d50836c226"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/facility-edit-prompt.txt",
+      "bytes": 1345,
+      "sha256": "3772bd582edf09b1dddcb1e3313f4b6387742befc065c2e65fa23054243b161b"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/neon-candidate-v1.js",
+      "bytes": 4202,
+      "sha256": "e0ad50af02e68d5df8f6d57725af35e789c3c4e8dc2b3c29a700969a5d74cf79"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/neon-candidate-v2.js",
+      "bytes": 4150,
+      "sha256": "a39836abb1384c609eed93e23894a9f0fb35b0484089d274f0cf274b430285aa"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/neon-candidate.js",
+      "bytes": 4144,
+      "sha256": "17b4b3849d12c39d81ee1662478038f2641420d8cbb0aad25635b7d61bd2d6d5"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/neon-review.html",
+      "bytes": 1489,
+      "sha256": "7388fe20938da1ca1fc626fc2dba27c68cc958fa13d9467a118444f27e3e556e"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/prompts.json",
+      "bytes": 3889,
+      "sha256": "46989112c37bc27da6795f0e02064460db391e2778f8fa6e717a47287887af89"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/README.md",
+      "bytes": 4199,
+      "sha256": "a08981caef4569bcde7e13940fd6f1144865ed380666b862688038d2f26fabe9"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/research-v1.png",
+      "bytes": 1987973,
+      "sha256": "aa70ed376b3aafb1502fce51bd6a2caca4075463915b27ddc8c02b39dcecffb0"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/review-gate.json",
+      "bytes": 1578,
+      "sha256": "360fb35648dbc0f564ef966e15c05c603348869ec6d0626aca6f907ed4286cd4"
+    },
+    {
+      "path": "docs/art-source/visual-unification-v1/space-v1.png",
+      "bytes": 1578966,
+      "sha256": "10955d8c1364bac9b9426fa4ee59dd0fa26ccf6914c1488c3724f2aa37007a98"
+    }
+  ],
+  "runtime": [
+    {
+      "path": "public/uiux-demo/icons.js",
+      "bytes": 4144,
+      "sha256": "17b4b3849d12c39d81ee1662478038f2641420d8cbb0aad25635b7d61bd2d6d5"
+    },
+    {
+      "path": "public/uiux-demo/art/facilities-v2.webp",
+      "bytes": 169448,
+      "sha256": "3ddcb5c72b89d8176c8494c9162d177a42ba0aee69752cdef7b21a263c77c1bc"
+    },
+    {
+      "path": "public/uiux-demo/art/research-observatory-v1.webp",
+      "bytes": 81550,
+      "sha256": "8ee113bd52b971a56f4a32694309d986c0c5e3d5be1ef58dd9f6fa9c0cce74c0"
+    },
+    {
+      "path": "public/uiux-demo/art/sector-space-v1.webp",
+      "bytes": 22696,
+      "sha256": "215d500a3cf1db0c976a56b0f2a13803b9a00727ccdd2c355dc1f0133d6f2f03"
+    }
+  ],
+  "mapping": {
+    "facilities-v2.png": "public/uiux-demo/art/facilities-v2.webp",
+    "research-v1.png": "public/uiux-demo/art/research-observatory-v1.webp",
+    "space-v1.png": "public/uiux-demo/art/sector-space-v1.webp",
+    "neon-candidate.js": "public/uiux-demo/icons.js"
+  }
+}

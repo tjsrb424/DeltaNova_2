@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-16T03:51:16.533Z",
+  "baseline": "766b248119495122d38dbe7e0cd67c0187a1edc7",
+  "branch": "codex/demo-visual-unification",
+  "commands": [
+    {
+      "command": "npx vitest run --maxWorkers=1 --testTimeout=30000 --hookTimeout=30000 --reporter=default --reporter=json --outputFile.json=.delta-nova/visual-unification-final-tests.json",
+      "exitCode": 0,
+      "files": 32,
+      "tests": 326,
+      "failed": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "productionCss": "index-DXwt7FYp.css",
+      "productionJs": "index-BIDRbckK.js"
+    },
+    {
+      "command": "npm run verify:build",
+      "exitCode": 0
+    },
+    {
+      "command": "node tools/verify-uiux-polish.mjs",
+      "exitCode": 0,
+      "checks": 35,
+      "layouts": 15
+    },
+    {
+      "command": "node tools/verify-free-fleet.mjs",
+      "exitCode": 0,
+      "checks": 14,
+      "layouts": 8
+    },
+    {
+      "command": "DELTA_NOVA_DEMO_ROOT=dist node tools/verify-visual-unification.mjs",
+      "exitCode": 0,
+      "checks": 11,
+      "layouts": 120,
+      "text200": 45
+    },
+    {
+      "command": "node tools/profile-visual-unification.mjs",
+      "exitCode": 0,
+      "baselineFilesVerified": 34,
+      "coldLoads": 24
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "scope": {
+    "productionSourceChanges": 0,
+    "serverChanges": 0,
+    "manifestOrLockChanges": 0,
+    "rulesChanges": 0,
+    "dataIntegration": false,
+    "productionUIReplacement": false
+  },
+  "runtimeHashesVerified": true,
+  "artManifestVerified": true,
+  "notes": [
+    "No dependencies added.",
+    "Default5s deadline instability and focused reruns preserved in deadline-reruns.json.",
+    "Physical mobile, spoken screen-reader and final user visual approval remain pending."
+  ]
+}

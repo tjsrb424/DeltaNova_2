@@ -1,0 +1,8 @@
+<!doctype html><meta charset="utf-8"><title>DELTA NOVA Neon review candidate</title>
+<style>body{margin:0;background:#080e18;color:#cceaf4;font:14px 'Segoe UI',sans-serif;padding:32px}main{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:16px}article{padding:16px;background:#101d2c;border:1px solid #2e4259;border-radius:12px;display:flex;align-items:center;gap:16px;color:#a8e2ed}span{display:inline-block;flex-shrink:0}svg{width:100%;height:100%}small{font-size:12px;overflow-wrap:anywhere}#ships{grid-template-columns:repeat(8,minmax(0,1fr));margin-top:32px}#ships article{display:block}i{display:inline-block;width:64px;height:64px;filter:drop-shadow(0 0 5px #5ed9ee55)}</style>
+<h1>DELTA NOVA · Neon pictogram candidate v2</h1><p>UI 24px / 48px · ship roles 32px / 64px. Inspect edges, balance, silhouette distinction and glow.</p><main id="icons"></main><main id="ships"></main>
+<script type="module">
+import {symbols,shipSymbols,icon,shipIcon} from './neon-candidate.js';
+document.querySelector('#icons').innerHTML=Object.keys(symbols).map(name=>`<article><span style="width:24px;height:24px">${icon(name)}</span><span style="width:48px;height:48px;filter:drop-shadow(0 0 4px #5ed9ee44)">${icon(name)}</span><small>${name}</small></article>`).join('');
+document.querySelector('#ships').innerHTML=Object.keys(shipSymbols).map(id=>`<article><span style="width:32px;height:32px">${shipIcon(id)}</span><i>${shipIcon(id)}</i><p>${id}</p></article>`).join('');
+</script>

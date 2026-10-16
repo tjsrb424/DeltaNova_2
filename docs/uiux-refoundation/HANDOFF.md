@@ -1,8 +1,56 @@
 # DELTA NOVA UI/UX — 다른 환경에서 이어가기
 
-## 2026-10-16 최신 후속 작업 · 자유 함대 편성
+## 2026-10-16 최신 후속 작업 · 전체 데모 그래픽·네온 출항
 
-최신 후속 브랜치는 **`codex/free-fleet-visuals`**다. 기준은 `c251b0005f877a6c04a622299343e0064161e0ec`이며, 이번 변경은 main에 병합하지 않는다. 아래 main 통합 설명은 이 변경 전의 이력이다.
+현재 이어갈 브랜치는 **`codex/demo-visual-unification`**다. 기준은 `766b248119495122d38dbe7e0cd67c0187a1edc7`(자유 편성)이며 **main 병합·데이터 연결·운영 UI 교체는 수행하지 않는다.** 아래 자유 함대/기존 main 안내는 이력으로 보존한다.
+
+- [전체 데모 설계](./VISUAL_UNIFICATION_PLAN.md), [구현·평가·직접 확인](./VISUAL_UNIFICATION_REVIEW.md), [실제 QA 원문/캡처](../qa/2026-10-16-visual-unification/README.md).
+- 시설6종/연구/우주 원본과 수정·반려 후보, 공통UI26종/함종8종 네온 픽토그램은 [아트 원본·게이트·해시](../art-source/visual-unification-v1/README.md)에 있다. 새 그래픽은 원본/실제 크기로 검토하고 **9.5점 초과** 후보만 사용한다. 점수는 내부 판단이다.
+- 출항 장면은 실제 로컬 편성의 한 척마다 네온 glyph를 그린다. 도착/주둔은 목적지, 귀환은 역방향. 수치/명령 단계는 기존 model을 사용하며 새 성공/타이머/저장/API를 만들지 않는다.
+- 새 코드는 `public/uiux-demo/icons.js`, `visuals.js`, `visuals.css`이고 기존 renderers가 이를 사용한다. `src/`, `server/`, package/lock과 모델 산식은 변경하지 않았다.
+
+기존 작업을 건드리지 않는 별도 폴더에서:
+
+```powershell
+git clone --branch codex/demo-visual-unification --single-branch https://github.com/tjsrb424/DeltaNova_2.git DeltaNova-demo-visuals
+cd DeltaNova-demo-visuals
+npm ci
+npm run dev:solo -- --port 5181 --strictPort
+```
+
+직접 `http://127.0.0.1:5181/uiux-demo/index.html?review=unified-v1#view=construction`에 접속한다. `npm run dev`는 게임 API도 실행하므로 데모만 확인할 때는 위 `dev:solo`를 사용한다. 창은 자동으로 열지 않는다. 포트가 사용 중이면 포트를 바꾸고 주소도 맞춘다.
+
+검증은 무거운 작업을 동시에 실행하지 않고 순서대로 수행한다:
+
+```powershell
+npx vitest run --maxWorkers=1 --testTimeout=30000 --hookTimeout=30000
+npm run build
+npm run verify:build
+node tools/verify-uiux-polish.mjs
+node tools/verify-free-fleet.mjs
+$env:DELTA_NOVA_DEMO_ROOT='dist'
+node tools/verify-visual-unification.mjs
+```
+
+브라우저 검사는 기존 headless Chrome/Playwright runtime을 사용한다. 기본 경로가 없는 환경에서는 `DELTA_NOVA_BROWSER`에 Chrome/Edge 실행 파일, `DELTA_NOVA_PLAYWRIGHT`에 기존 Playwright 모듈 디렉터리를 지정한다. 데모 실행에는 이 외부 검수 runtime이 필요 없다. QA를 이유로 프로젝트 패키지를 무조건 추가하지 않는다.
+
+성능 비교를 다시 하려면:
+
+```powershell
+New-Item -ItemType Directory -Force .delta-nova | Out-Null
+git archive --format=zip --output=.delta-nova/visual-unification-baseline.zip 766b248119495122d38dbe7e0cd67c0187a1edc7 public/uiux-demo
+Expand-Archive -LiteralPath .delta-nova/visual-unification-baseline.zip -DestinationPath .delta-nova/visual-unification-baseline -Force
+node tools/profile-visual-unification.mjs
+```
+
+baseline 모든 파일은 Git blob SHA로 검증한 뒤 비교한다. 새 출력은 ignored `.delta-nova/` 아래 저장한다. 기존 검수 원본은 덮지 말고 새 날짜 폴더로 복사한다. 현재 작업 체크아웃에서 `git status -sb`, `git rev-parse HEAD`, `git rev-list --left-right --count 'HEAD...@{u}'`, `git ls-remote origin refs/heads/codex/demo-visual-unification`으로 동기화를 확인한다.
+
+다음 우선순위: ① 데모 아트·네온 편대 직접 검토 ② 실기기 터치·음성 접근성·GPU/배터리 검수 ③ 승인 이후에만 실제 snapshot adapter 설계. 전체 서비스 교체는 계속 보류한다.
+
+
+## 이전 후속 작업 · 자유 함대 편성
+
+당시 후속 브랜치는 **`codex/free-fleet-visuals`**였다. 기준은 `c251b0005f877a6c04a622299343e0064161e0ec`이며, 이번 변경은 main에 병합하지 않는다. 아래 main 통합 설명은 이 변경 전의 이력이다.
 
 - [현재 설계](./FREE_FLEET_DESIGN.md): 빈 편성 → 8함종 직접 수량 → 정확한 조합 검토. 명령 화면에서 자동 균형 편성과 프리셋 UI를 제거했다.
 - [최신 검수·평가](./FREE_FLEET_REVIEW.md), [검증 근거](../qa/2026-10-16-free-fleet/README.md).

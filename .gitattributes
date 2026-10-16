@@ -4,3 +4,13 @@ public/uiux-demo/*.js text eol=lf
 public/uiux-demo/*.css text eol=lf
 tools/verify-uiux-*.mjs text eol=lf
 tools/uiux-a11y.mjs text eol=lf
+
+# Reviewed source assets and new QA tools must retain their recorded bytes.
+docs/art-source/visual-unification-v1/*.md text eol=lf
+docs/art-source/visual-unification-v1/*.json text eol=lf
+docs/art-source/visual-unification-v1/*.js text eol=lf
+docs/art-source/visual-unification-v1/*.html text eol=lf
+docs/art-source/visual-unification-v1/*.txt text eol=lf
+tools/verify-visual-unification.mjs text eol=lf
+tools/profile-visual-unification.mjs text eol=lf
+tests/uiux-neon-fleet.test.ts text eol=lf

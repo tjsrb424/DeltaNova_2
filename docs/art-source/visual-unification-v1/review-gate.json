@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-16",
+  "basis": "Subjective internal visual review at native and target sizes; not automated AI detection or final user approval.",
+  "strictThreshold": 9.5,
+  "assets": [
+    {
+      "id": "neon-ui-v3",
+      "status": "approved",
+      "score": 9.7,
+      "source": "neon-candidate.js",
+      "notes": "V1 planet/galaxy overly dense; simplified before approval. Review at24/48px."
+    },
+    {
+      "id": "neon-ships-v3",
+      "status": "approved",
+      "score": 9.65,
+      "source": "neon-candidate.js",
+      "notes": "V2 jammer read as prohibited and carrier as book; v3 dish/mast and prow/hangar corrected. Review32/64px."
+    },
+    {
+      "id": "research-v1",
+      "status": "approved",
+      "score": 9.6,
+      "source": "research-v1.png",
+      "notes": "Native geometry clean;1200x180 crop keeps core onright and left45% quiet."
+    },
+    {
+      "id": "space-v1",
+      "status": "approved",
+      "score": 9.75,
+      "source": "space-v1.png",
+      "notes": "Clean decorative stars/nebula; no semantic planet dependency under cropping."
+    },
+    {
+      "id": "facilities-v1",
+      "status": "rejected",
+      "score": null,
+      "source": "facilities-v1.png",
+      "notes": "5/6 cells touch4px boundary; sprites would clip or leak. Must revise before use."
+    },
+    {
+      "id": "facilities-v2",
+      "status": "approved",
+      "score": 9.6,
+      "source": "facilities-v2.png",
+      "notes": "All6 cell borders alpha>32 count0; native/80/160px reviewed. Bottom-row optical anchoring offset compensated in CSS."
+    }
+  ]
+}

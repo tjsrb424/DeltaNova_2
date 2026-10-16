@@ -1,0 +1,749 @@
+{
+  "baseline": "766b248119495122d38dbe7e0cd67c0187a1edc7",
+  "baselineFilesVerified": 34,
+  "date": "2026-10-16T03:46:07.290Z",
+  "method": "Alternating before/after; 3 cold contexts per view; 1440x900; shared Windows host; unthrottled headless Chrome. Resource decodedBodySize is body bytes, not compressed network transfer. doubleRAF after DOM input dispatch is not INP.",
+  "samples": [
+    {
+      "view": "construction",
+      "repeat": 1,
+      "label": "before",
+      "dcl": 192,
+      "load": 408.2999999988824,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "construction",
+      "repeat": 1,
+      "label": "after",
+      "dcl": 169.90000000037253,
+      "load": 513.6000000014901,
+      "artBodyBytes": 662510,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "construction",
+      "repeat": 2,
+      "label": "after",
+      "dcl": 207.59999999962747,
+      "load": 274.7000000011176,
+      "artBodyBytes": 662510,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "construction",
+      "repeat": 2,
+      "label": "before",
+      "dcl": 157.5,
+      "load": 215.80000000074506,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "construction",
+      "repeat": 3,
+      "label": "before",
+      "dcl": 166.59999999962747,
+      "load": 227.30000000074506,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "construction",
+      "repeat": 3,
+      "label": "after",
+      "dcl": 163.7999999988824,
+      "load": 224.19999999925494,
+      "artBodyBytes": 662510,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "research",
+      "repeat": 1,
+      "label": "before",
+      "dcl": 155.40000000037253,
+      "load": 213.5,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "research",
+      "repeat": 1,
+      "label": "after",
+      "dcl": 164.89999999850988,
+      "load": 231.59999999962747,
+      "artBodyBytes": 721364,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "research",
+      "repeat": 2,
+      "label": "after",
+      "dcl": 164.09999999962747,
+      "load": 226,
+      "artBodyBytes": 721364,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "research",
+      "repeat": 2,
+      "label": "before",
+      "dcl": 155.7999999988824,
+      "load": 212.39999999850988,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "research",
+      "repeat": 3,
+      "label": "before",
+      "dcl": 157.90000000037253,
+      "load": 215.7000000011176,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "research",
+      "repeat": 3,
+      "label": "after",
+      "dcl": 165.09999999962747,
+      "load": 225.19999999925494,
+      "artBodyBytes": 721364,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "galaxy",
+      "repeat": 1,
+      "label": "before",
+      "dcl": 157.39999999850988,
+      "load": 272.7999999988824,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "galaxy",
+      "repeat": 1,
+      "label": "after",
+      "dcl": 169.5,
+      "load": 246.90000000037253,
+      "artBodyBytes": 683516,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "nova-natural-v2.webp",
+          "bodyBytes": 190454
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "galaxy",
+      "repeat": 2,
+      "label": "after",
+      "dcl": 166.80000000074506,
+      "load": 229.2000000011176,
+      "artBodyBytes": 683516,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "nova-natural-v2.webp",
+          "bodyBytes": 190454
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "galaxy",
+      "repeat": 2,
+      "label": "before",
+      "dcl": 159.19999999925494,
+      "load": 223.2999999988824,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "galaxy",
+      "repeat": 3,
+      "label": "before",
+      "dcl": 180.09999999962747,
+      "load": 246.19999999925494,
+      "artBodyBytes": 470366,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "galaxy",
+      "repeat": 3,
+      "label": "after",
+      "dcl": 190.2999999988824,
+      "load": 257.19999999925494,
+      "artBodyBytes": 683516,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "nova-natural-v2.webp",
+          "bodyBytes": 190454
+        }
+      ],
+      "inputDoubleRafMs": []
+    },
+    {
+      "view": "command",
+      "repeat": 1,
+      "label": "before",
+      "dcl": 196.69999999925494,
+      "load": 278.59999999962747,
+      "artBodyBytes": 862666,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "inputDoubleRafMs": [
+        22.40000000037253,
+        25,
+        23.399999998509884,
+        25.200000001117587,
+        25,
+        25.100000001490116,
+        25,
+        24.200000001117587,
+        25,
+        25.40000000037253,
+        24.799999998882413,
+        25.200000001117587
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 1,
+      "label": "after",
+      "dcl": 203.30000000074506,
+      "load": 274.6000000014901,
+      "artBodyBytes": 862666,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "inputDoubleRafMs": [
+        18.09999999962747,
+        25.299999998882413,
+        23.299999998882413,
+        25.09999999962747,
+        24,
+        24.59999999962747,
+        24.40000000037253,
+        24.5,
+        24.59999999962747,
+        25.09999999962747,
+        25.700000001117587,
+        25.09999999962747
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 2,
+      "label": "after",
+      "dcl": 190.7000000011176,
+      "load": 259.30000000074506,
+      "artBodyBytes": 862666,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "inputDoubleRafMs": [
+        20.199999999254942,
+        24.59999999962747,
+        24.5,
+        24.800000000745058,
+        24.699999999254942,
+        24.699999999254942,
+        24.299999998882413,
+        24.90000000037253,
+        25,
+        25.59999999962747,
+        25.700000001117587,
+        25.09999999962747
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 2,
+      "label": "before",
+      "dcl": 179.09999999962747,
+      "load": 248.19999999925494,
+      "artBodyBytes": 862666,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "inputDoubleRafMs": [
+        16.300000000745058,
+        24.09999999962747,
+        24.199999999254942,
+        23.700000001117587,
+        24.200000001117587,
+        23.59999999962747,
+        24.40000000037253,
+        24.799999998882413,
+        24.199999999254942,
+        25.5,
+        23.700000001117587,
+        25
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 3,
+      "label": "before",
+      "dcl": 197.40000000037253,
+      "load": 299.2000000011176,
+      "artBodyBytes": 862666,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "inputDoubleRafMs": [
+        24.300000000745058,
+        23.800000000745058,
+        25.300000000745058,
+        23.09999999962747,
+        24.699999999254942,
+        24.200000001117587,
+        24.199999999254942,
+        24.299999998882413,
+        25,
+        23.799999998882413,
+        23.5,
+        24.90000000037253
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 3,
+      "label": "after",
+      "dcl": 191.2999999988824,
+      "load": 260.2999999988824,
+      "artBodyBytes": 862666,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "inputDoubleRafMs": [
+        16.700000001117587,
+        24.799999998882413,
+        24.90000000037253,
+        24.300000000745058,
+        24,
+        25,
+        25,
+        24.90000000037253,
+        24.5,
+        24.5,
+        25,
+        24.40000000037253
+      ]
+    }
+  ],
+  "summary": {
+    "construction": {
+      "before": {
+        "dclMedianMs": 166.59999999962747,
+        "loadMedianMs": 227.30000000074506,
+        "artBodyBytes": [
+          470366,
+          470366,
+          470366
+        ]
+      },
+      "after": {
+        "dclMedianMs": 169.90000000037253,
+        "loadMedianMs": 274.7000000011176,
+        "artBodyBytes": [
+          662510,
+          662510,
+          662510
+        ]
+      }
+    },
+    "research": {
+      "before": {
+        "dclMedianMs": 155.7999999988824,
+        "loadMedianMs": 213.5,
+        "artBodyBytes": [
+          470366,
+          470366,
+          470366
+        ]
+      },
+      "after": {
+        "dclMedianMs": 164.89999999850988,
+        "loadMedianMs": 226,
+        "artBodyBytes": [
+          721364,
+          721364,
+          721364
+        ]
+      }
+    },
+    "galaxy": {
+      "before": {
+        "dclMedianMs": 159.19999999925494,
+        "loadMedianMs": 246.19999999925494,
+        "artBodyBytes": [
+          470366,
+          470366,
+          470366
+        ]
+      },
+      "after": {
+        "dclMedianMs": 169.5,
+        "loadMedianMs": 246.90000000037253,
+        "artBodyBytes": [
+          683516,
+          683516,
+          683516
+        ]
+      }
+    },
+    "command": {
+      "before": {
+        "dclMedianMs": 196.69999999925494,
+        "loadMedianMs": 278.59999999962747,
+        "artBodyBytes": [
+          862666,
+          862666,
+          862666
+        ],
+        "inputDoubleRafMedianMs": 24.299999999813735,
+        "inputDoubleRafP95Ms": 25.40000000037253
+      },
+      "after": {
+        "dclMedianMs": 191.2999999988824,
+        "loadMedianMs": 260.2999999988824,
+        "artBodyBytes": [
+          862666,
+          862666,
+          862666
+        ],
+        "inputDoubleRafMedianMs": 24.699999999254942,
+        "inputDoubleRafP95Ms": 25.700000001117587
+      }
+    }
+  },
+  "passed": true
+}

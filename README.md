@@ -18,7 +18,7 @@
 
 ## 실행
 
-UI/UX 재정비는 별도 브랜치 `codex/uiux-refoundation`의 **독립 데모**에서 검증 중이다. [다른 PC에서 이어가기](docs/uiux-refoundation/HANDOFF.md)에 완료 범위·원본 킷/아트·실행/검사·남은 검증을 정리했다. 전체 서비스 UI 이관은 아직 승인되지 않았다. 데모만 실행하려면 `npm run dev:solo -- --port 5180 --strictPort` 후 `http://127.0.0.1:5180/uiux-demo/index.html`에 직접 접속한다.
+UI/UX 재정비는 별도 브랜치 `codex/demo-visual-unification`의 **독립 데모**에서 검증 중이다. [다른 PC에서 이어가기](docs/uiux-refoundation/HANDOFF.md)에 완료 범위·원본 킷/아트·실행/검사·남은 검증을 정리했다. 전체 서비스 UI 이관은 아직 승인되지 않았다. 데모만 실행하려면 `npm run dev:solo -- --port 5181 --strictPort` 후 `http://127.0.0.1:5181/uiux-demo/index.html?review=unified-v1#view=construction`에 직접 접속한다.
 
 개발 확인 환경은 Node24.13.0, npm11.6.2이며 의존성은 lockfile로 고정한다.
 

@@ -2,7 +2,9 @@
 
 사용자 요청일: 2026-10-15. 방향: **Minimal Galactic Command**.
 
-**2026-10-16 후속:** [자유 함대 편성·함선 아트·모션 설계](./FREE_FLEET_DESIGN.md), [최신 검수/평가](./FREE_FLEET_REVIEW.md). 최신 후속 브랜치는 `codex/free-fleet-visuals`이며 명령 화면은 빈 편성에서 시작한다. [다른 PC에서 이어가기](./HANDOFF.md)의 맨 위 안내를 사용한다.
+**최신 후속 · 2026-10-16:** [전체 데모 그래픽·네온 출항 설계](./VISUAL_UNIFICATION_PLAN.md), [평가·검수](./VISUAL_UNIFICATION_REVIEW.md), [실제 화면](../qa/2026-10-16-visual-unification/README.md). 현재 브랜치는 `codex/demo-visual-unification`이며 데이터/운영 이관은 보류한다. [다른 PC에서 이어가기](./HANDOFF.md) 맨 위를 사용한다.
+
+**이전 자유 함대 작업:** [자유 함대 편성·함선 아트·모션 설계](./FREE_FLEET_DESIGN.md), [최신 검수/평가](./FREE_FLEET_REVIEW.md). 해당 이력 브랜치는 `codex/free-fleet-visuals`이며 명령 화면은 빈 편성에서 시작한다. [다른 PC에서 이어가기](./HANDOFF.md)의 맨 위 안내를 사용한다.
 
 **다른 PC/새 세션에서 재개:** [HANDOFF — 브랜치·설치·검사·승인 범위·다음 작업](./HANDOFF.md). 사용자 원본 킷과 원본 행성 PNG도 저장소에 포함했다.
 

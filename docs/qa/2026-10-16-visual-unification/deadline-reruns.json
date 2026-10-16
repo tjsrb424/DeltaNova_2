@@ -1,0 +1,63 @@
+{
+  "note": "Default5s deadlines were unstable on the shared host. No product/test assertions changed. Single-file default-timeout reruns passed; final full suite uses CLI30s only.",
+  "attempts": [
+    {
+      "command": "npx vitest run --maxWorkers=2",
+      "passed": 321,
+      "failed": 3,
+      "failures": [
+        "empire-network retry/session (2 timeouts)",
+        "GuildPanel focus (1 timeout)"
+      ],
+      "focusedRerun": "28/28 passed at default deadline"
+    },
+    {
+      "command": "npx vitest run --maxWorkers=1",
+      "passed": 316,
+      "failed": 8,
+      "failures": [
+        {
+          "file": "PlanetDashboard.test.tsx",
+          "name": "starts a polite completion region without announcing historical jobs",
+          "reason": "Error: Test timed out in 5000ms."
+        },
+        {
+          "file": "PlanetDashboard.test.tsx",
+          "name": "announces a newly completed ship once and preserves the active input",
+          "reason": "Error: Test timed out in 5000ms."
+        },
+        {
+          "file": "PlanetDashboard.test.tsx",
+          "name": "groups newly completed jobs by their real source planets and ignores cancellation",
+          "reason": "Error: Test timed out in 5000ms."
+        },
+        {
+          "file": "PlanetDashboard.test.tsx",
+          "name": "announces consecutive identical job titles separately and suppresses replay after remount",
+          "reason": "Error: Test timed out in 5000ms."
+        },
+        {
+          "file": "PlanetDashboard.test.tsx",
+          "name": "announces a job completed while away when returning to the same dashboard",
+          "reason": "Error: Test timed out in 5000ms."
+        },
+        {
+          "file": "PlanetDashboard.test.tsx",
+          "name": "clears the previous participant announcement and baselines the next participant history",
+          "reason": "TestingLibraryElementError: Found multiple elements with the role \"button\" and name \"함대\""
+        },
+        {
+          "file": "uiux-demo.test.ts",
+          "name": "disconnected design demo prepares a fleet command, preserves live inputs, and previews it without spending assets",
+          "reason": "Error: Test timed out in 5000ms."
+        },
+        {
+          "file": "uiux-demo.test.ts",
+          "name": "disconnected design demo aligns alliance arrival only when requested and uses the common fleet command",
+          "reason": "Error: Test timed out in 5000ms."
+        }
+      ],
+      "focusedRerun": "PlanetDashboard/uiux-demo/new neon suite57/57 passed at default5s deadline"
+    }
+  ]
+}

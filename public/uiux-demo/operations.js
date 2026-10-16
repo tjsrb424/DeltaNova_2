@@ -1,3 +1,4 @@
+import {shipIcon,icon as uiIcon} from './icons.js';
 // Isolated, in-memory preparation study. No game engine, network, timers or storage.
 // Summary contract: issues = {code,label,action}; roles = {id,label,count};
 // checks = {id,label,pass,detail}; recommendations are non-blocking briefing advice.
@@ -175,8 +176,8 @@ const rolePaths = {
   jammer: '<path d="M12 8v13M8 21h8M8 8a5 5 0 0 1 8 0M4 5a11 11 0 0 1 16 0"/><circle cx="12" cy="9" r="1"/>',
   carrier: '<path d="M6 3h12l3 18H3zM9 7v10M15 7v10M9 12h6"/>',
 };
-const roleIcon = id => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${rolePaths[id] || rolePaths.striker}</svg>`;
-const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg>';
+const roleIcon = shipIcon;
+const arrow = uiIcon('arrow');
 const blueprintPaths = {
   striker: '<path d="m48 5 9 22 24 17-21-2-5 11H41l-5-11-21 2 24-17z"/><path d="M48 13v30M39 27h18M41 48h14M29 38l10-5M67 38l-10-5"/>',
   guardian: '<path d="m48 5 12 14 6 8 16 7v16H62l-6 5H40l-6-5H14V34l16-7 6-8z"/><path d="M39 20h18v23H39zM21 34v10h10V30M75 34v10H65V30M43 49h10"/>',

@@ -1,3 +1,4 @@
+import {icon as uiIcon} from './icons.js';
 import { initialDemo, transition, visualFacilities } from './model.js';
 import { drawPlanet, syncPlanetMotion } from './planet.js';
 import { facilityCards, facilityPreview } from './presentation.js';
@@ -10,30 +11,8 @@ import { allianceRoles, initialAlliance, transitionAlliance } from './alliance.j
 import { initialStrategy,strategyShips,strategyFleet,strategySummary,transitionStrategy } from './strategy-model.js';
 import { renderStrategyPicked,renderStrategyMetrics,renderStrategyEstimate } from './strategy.js';
 
-const paths = {
-  planet: '<circle cx="12" cy="12" r="7"/><ellipse cx="12" cy="12" rx="11" ry="3" transform="rotate(-30 12 12)"/>',
-  build: '<path d="m14 3 7 7-4 4-3-3-8 10-3-3 10-8-3-3z"/>',
-  research: '<path d="M9 3h6M10 3v7L4 20h16l-6-10V3M8 14h8"/>',
-  fleet: '<path d="m12 2 9 18-9-5-9 5zM12 8v7"/>',
-  compass: '<circle cx="12" cy="12" r="9"/><path d="m16 8-2 6-6 2 2-6z"/>',
-  galaxy: '<path d="M12 3c6-2 12 6 7 10-4 4-10-3-5-5 6-1 8 8 2 12-6 4-15-3-12-9 2-5 8-5 9 0 0 3-3 4-5 2"/>',
-  guild: '<circle cx="9" cy="8" r="3"/><path d="M3 21v-4a6 6 0 0 1 12 0v4M17 5a3 3 0 0 1 0 6M19 14a5 5 0 0 1 2 4v3"/>',
-  reports: '<path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/>',
-  practice: '<path d="m3 7 9-5 9 5-9 5zM3 12l9 5 9-5M3 17l9 5 9-5"/>',
-  more: '<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>',
-  settings: '<path d="m10 2-1 3-3 1-3-1-2 4 2 3-1 3 3 3 3-1 3 2 4-2v-3l3-2-1-4-3-1-1-3z"/><circle cx="11" cy="11" r="3"/>',
-  close: '<path d="m6 6 12 12M18 6 6 18"/>',
-  info: '<circle cx="12" cy="12" r="9"/><path d="M12 10v7M12 7v.1"/>',
-  warning: '<path d="m12 3 10 18H2zM12 9v5M12 17v.1"/>',
-  check: '<circle cx="12" cy="12" r="9"/><path d="m7 12 3 3 7-7"/>',
-  expand: '<path d="M8 3H3v5M16 3h5v5M21 16v5h-5M8 21H3v-5"/>',
-  station: '<path d="M10 7h4v10h-4zM2 5h5v14H2zM17 5h5v14h-5zM7 12h3M14 12h3M12 3v4M12 17v4"/>',
-  alloy: '<path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10"/>',
-  crystal: '<path d="m12 2 8 8-8 12L4 10zM4 10h16M12 2 9 10l3 12 3-12z"/>',
-  fuel: '<path d="M12 2C9 8 5 11 5 15a7 7 0 0 0 14 0c0-4-4-7-7-13zM9 15a3 3 0 0 0 3 3"/>',
-};
 const stationArt = '<svg viewBox="0 0 160 76" fill="none" aria-hidden="true"><g stroke="#8fa8ba" stroke-width="1"><path d="m5 23 42-9 6 32-42 9zM108 12l43 9-6 32-43-9z" fill="#1d3648"/><path d="m16 21 6 32m5-34 6 32m5-34 6 32M10 34l40-9M12 44l40-9M119 15l-6 31m17-29-6 31m17-29-6 31m-25-26 40 9m-42 1 40 9" opacity=".7"/><path d="m46 29 68-3-1 9-66 3z" fill="#617789"/><path d="m65 20 20-7 17 9-3 26-22 8-14-10z" fill="#7f919c"/><path d="m65 20 12 10 25-8M77 30v26"/><path d="m72 25 11-4 9 5-11 4z" fill="#bad3dc"/><path d="m83 35 12-4-1 9-12 4z" fill="#163548"/><path d="M81 14V4m-6 0h12M69 49l-8 13m36-14 8 13"/><g class="station-extension"><path d="m73 56 13-5 4 12-14 5z" fill="#a0aeb6"/><path d="M77 68v6m5-7v6"/></g></g><circle cx="80" cy="9" r="1.2" fill="#e0b975"/><circle cx="112" cy="30" r="1.1" fill="#68b6ce"/></svg>';
-const icon = kind => kind === 'station' ? stationArt : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[kind] || paths.info}</svg>`;
+const icon = kind => kind === 'station' ? stationArt : uiIcon(kind);
 function hydrateIcons(scope = document) { scope.querySelectorAll('[data-icon]').forEach(el => { el.innerHTML = icon(el.dataset.icon); }); }
 const $ = id => document.getElementById(id);
 const names = { alloy: '합금', crystal: '결정', fuel: '연료' };
@@ -230,7 +209,9 @@ function changeStrategy(action){
     navigationController.go({view:'fleet'});announce('출항 흐름 시연을 추가했습니다. 실제 함선과 연료는 변경하지 않았습니다.');
   }else if(['advance','recall'].includes(action.type)){
     const focus=bookmark(document.activeElement),scroll=window.scrollY;renderCurrentWorkspace();
-    const fallback=$('strategy-order-'+action.id)?.querySelector('h3');fallback?.setAttribute('tabindex','-1');
+    const orderElement=$('strategy-order-'+action.id);
+    if(before.orders.find(o=>o.id===action.id)?.phase!==strategyUI.orders.find(o=>o.id===action.id)?.phase)orderElement?.classList.add('dn-phase-changed');
+    const fallback=orderElement?.querySelector('h3');fallback?.setAttribute('tabindex','-1');
     (resolveBookmark(focus)||fallback)?.focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});
   }else {
     refreshStrategy();
@@ -402,9 +383,9 @@ function applyNavigation(route, previous, info) {
     $('dialog-title').focus({preventScroll:true});
   } else if (changedView) {
     focusWorkspaceStart();
-    const surface=view==='home' ? $('home-workspace') : $('workspace-page');
-    surface.getAnimations?.().forEach(animation=>animation.cancel());
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) surface.animate?.([{opacity:.65},{opacity:1}],{duration:140,easing:'ease-out'});
+    const surface=view==='home' ? $('home-workspace') : $('workspace-body');
+    surface.classList.remove('dn-view-enter');
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches&&!document.body.matches('.motion-paused,.page-hidden')){void surface.offsetWidth;surface.classList.add('dn-view-enter');}
   } else if (wasOpen) {
     (resolveBookmark(opener) || $('workspace-title')).focus({preventScroll:true});
   }
@@ -437,7 +418,7 @@ function renderPanel() {
   else if (panel === 'reports') html = (state.notice ? `<div class="detail-callout">${state.notice.text}</div>` : '<div class="empty-state"><strong>새 완료 기록 없음</strong>진행 중인 작업은 건설·연구에서 확인할 수 있습니다.</div>') + manage('reports','활동 전체 보기');
   else if (panel === 'recon') html = `<p>노바 프라임의 정찰 위성 S-01</p>${stat('시연 상태','기울어진 궤도 순찰')}${stat('궤도 표현','앞에서 표시 · 뒤에서 가림')}${stat('정보 수신','미연결')}${disabled('정찰 명령 · 미연결')}${manage('galaxy','은하·정찰 보기')}`;
   else if (panel === 'intel') html = renderGalaxyReport(state,galaxyUI,navigationController?.current.target || galaxyUI.target);
-  else if (panel === 'settings') html = '<p>시스템의 모션 감소 설정을 자동 반영합니다.</p><label class="setting-row"><input type="checkbox" id="pause-motion">자전 · 구름 · 위성 · 항로 일시정지</label><div class="detail-callout">시연 위치와 남은 시간을 함께 멈춥니다. 경고와 항로는 계속 표시됩니다.</div>';
+  else if (panel === 'settings') html = '<p>시스템의 모션 감소 설정을 자동 반영합니다.</p><label class="setting-row"><input type="checkbox" id="pause-motion">모든 화면 모션 일시정지</label><div class="detail-callout">시연 위치와 남은 시간을 함께 멈춥니다. 경고와 항로는 계속 표시됩니다.</div>';
   $('dialog-content').innerHTML = html;
   if (panel === 'settings') $('pause-motion').checked = document.body.classList.contains('motion-paused');
   routePreview.render();
