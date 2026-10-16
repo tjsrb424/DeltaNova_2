@@ -202,10 +202,13 @@ function refreshStrategy(){
   $('strategy-picked').innerHTML=renderStrategyPicked(state,strategyUI);
   $('strategy-metrics').innerHTML=renderStrategyMetrics(state,strategyUI);
   $('strategy-review').disabled=!s.valid;
+  if($('strategy-mobile-count'))$('strategy-mobile-count').textContent=`${s.total}척 · 지휘 ${s.command}/12`;
   $('strategy-delay').value=String(strategyUI.delay);
   if($('strategy-align-note'))$('strategy-align-note').textContent=!s.total?'먼저 함대를 편성하세요.':s.travelSeconds>480?'예정 시각에 도착하려면 더 빠른 편성이 필요합니다.':'1분 단위로 조정하며 예정 시각과의 차이를 30초 이내로 맞춥니다.';
   for(const ship of strategyShips){
     const input=$('strategy-count-'+ship.id),value=s.counts[ship.id]||0,max=s.available[ship.id]||0;
+    const card=input?.closest('[data-strategy-ship]');
+    if(card)card.dataset.selected=String(value>0);
     if(input&&input.value!==String(value))input.value=String(value);
     if(input){input.max=String(max);input.disabled=!max;}
     for(const [direction,unavailable] of [['minus',value<=0],['plus',value>=max]]){
@@ -229,7 +232,14 @@ function changeStrategy(action){
     const focus=bookmark(document.activeElement),scroll=window.scrollY;renderCurrentWorkspace();
     const fallback=$('strategy-order-'+action.id)?.querySelector('h3');fallback?.setAttribute('tabindex','-1');
     (resolveBookmark(focus)||fallback)?.focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});
-  }else refreshStrategy();
+  }else {
+    refreshStrategy();
+    if(action.type==='quantity'&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!document.body.matches('.motion-paused,.page-hidden')){
+      const art=document.querySelector(`[data-strategy-ship="${action.id}"] .sc-ship-art`);
+      if(art){art.classList.remove('sc-edited');void art.offsetWidth;art.classList.add('sc-edited');}
+    }
+    if(action.type==='clear')announce('함대 편성을 비웠습니다. 함종과 수량을 다시 선택하세요.');
+  }
 }
 function refreshAlliance() {
   if (view !== 'guild') return;
@@ -455,6 +465,7 @@ listen(document,'click', event => {
   else if(button.dataset.strategyAdvance)changeStrategy({type:'advance',id:button.dataset.strategyAdvance});
   else if(button.dataset.strategyRecall)changeStrategy({type:'recall',id:button.dataset.strategyRecall});
   else if(button.dataset.strategyAction==='review')changeStrategy({type:'review'});
+  else if(button.dataset.strategyAction==='clear')changeStrategy({type:'clear'});
   else if(button.dataset.strategyAction==='preview')changeStrategy({type:'preview'});
   else if(button.dataset.strategyAction==='align'){changeStrategy({type:'align'});const s=strategySummary(strategyUI,state);announce(!s.total?'먼저 함대를 편성하세요.':Math.abs(s.allyDelta)<=30?'도착 계획을 동맹 예정 시각과 30초 이내로 맞췄습니다. 자동으로 출발하지 않습니다.':'예정 시각에 도착하려면 더 빠른 편성이 필요합니다. 현재 출발 계획은 유지했습니다.');}
   else if(button.dataset.strategyAction==='estimate'){$('strategy-estimate-title')?.closest('aside')?.scrollIntoView?.({block:'start'});$('strategy-estimate-title')?.setAttribute('tabindex','-1');$('strategy-estimate-title')?.focus({preventScroll:true});}
@@ -562,6 +573,10 @@ syncStrategyRoute();
 const sidebar=document.querySelector('.sidebar');
 const navigationSize=new ResizeObserver(()=>{
   document.documentElement.style.setProperty('--dn-nav-clearance',Math.ceil(sidebar.getBoundingClientRect().height+6)+'px');
+  const fleetBar=document.querySelector('.sc-mobile-plan');
+  const fleetClearance=fleetBar&&getComputedStyle(fleetBar).position==='fixed'?Math.ceil(fleetBar.getBoundingClientRect().height+12):0;
+  document.documentElement.style.setProperty('--dn-fleet-clearance',fleetClearance+'px');
 });
 navigationSize.observe(sidebar);
+navigationSize.observe(document.body);
 export function disposeDemo(){demoEvents.abort();navigationController.dispose();navigationSize.disconnect();routePreview.dispose();clearTimeout(retryTimer);clearTimeout(scanTimer);}

@@ -1,5 +1,29 @@
 # DELTA NOVA UI/UX — 다른 환경에서 이어가기
 
+## 2026-10-16 최신 후속 작업 · 자유 함대 편성
+
+최신 후속 브랜치는 **`codex/free-fleet-visuals`**다. 기준은 `c251b0005f877a6c04a622299343e0064161e0ec`이며, 이번 변경은 main에 병합하지 않는다. 아래 main 통합 설명은 이 변경 전의 이력이다.
+
+- [현재 설계](./FREE_FLEET_DESIGN.md): 빈 편성 → 8함종 직접 수량 → 정확한 조합 검토. 명령 화면에서 자동 균형 편성과 프리셋 UI를 제거했다.
+- [최신 검수·평가](./FREE_FLEET_REVIEW.md), [검증 근거](../qa/2026-10-16-free-fleet/README.md).
+- [새 함선/격납고 원본·프롬프트·해시](../art-source/free-fleet-v1/README.md). 원본도 저장소에 포함한다.
+- 실제 출항·게임 서버·저장·운영 화면 이관은 수행하지 않았다. 선택적 실험실의 기존 예시 비교는 보존했다.
+
+새 PC에서 이 작업을 받으려면 별도 폴더에서 다음 명령을 사용한다. 기존 작업 폴더를 reset/clean/switch로 덮지 않는다.
+
+```powershell
+git clone --branch codex/free-fleet-visuals --single-branch https://github.com/tjsrb424/DeltaNova_2.git DeltaNova-free-fleet
+cd DeltaNova-free-fleet
+npm ci
+npm run dev:solo -- --port 5181 --strictPort
+```
+
+직접 `http://127.0.0.1:5181/uiux-demo/index.html#view=command&target=tarsis&intent=attack&context=solo&step=fleet`에 접속한다. 0척에서 시작하며, 함종별 수량을 선택해야 명령 확인이 열린다. 동맹도 같은 편성 화면을 사용한다. 변경 내용은 이 브랜치로 커밋·푸시한다. 게시 SHA와 원격 동기화는 `git log -1`, `git status -sb`, `git ls-remote origin refs/heads/codex/free-fleet-visuals`로 확인한다.
+
+다음 우선순위: ① 사용자 아트/직접 편성 검토 ② 실제 모바일 터치·스크린리더와 긴 편성 목록 검수 ③ 데모 승인 후에만 실제 snapshot adapter 설계. 운영 서비스 일괄 교체는 여전히 승인되지 않았다.
+
+## 이전 이력
+
 2026-10-16 메인 통합: 사용자 요청에 따라 이전 UI/UX 데모 커밋과 이후의 행성 모션·메뉴 전환·연구/함대·은하/정찰·작전/동맹·함대 운용 개편, 아트 원본, 검수 화면과 테스트를 모두 `main`에 모았다. 최신 인수인계 기준은 `origin/main`이다. 게시된 커밋은 `git log -1 origin/main`으로 확인한다. 게임 서버 연결이나 운영 화면 교체는 포함하지 않는다. 아래 개발 브랜치/미커밋 표기는 당시 작업 이력이다.
 
 최신 함대 운용 개편: [함대 중심 설계·검수](./STRATEGY_REVIEW.md). 출격 목표 → 함대 편성 → 명령 확인으로 개인·동맹·은하·방어의 진입을 통일했다. 동맹은 공동 목표와 도착 시각을 조율하며 역할 예약/선행 임무는 사용하지 않는다. 이동·증원은 주둔 후 직접 귀환한다. 315개 테스트·35개 브라우저 검사 통과. 게임 서버 미연결, `src/` 변경 없이 로컬 미커밋 상태다. 아래 이전 작전/동맹 설명은 당시 구현의 이력이다.

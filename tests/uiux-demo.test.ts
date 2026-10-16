@@ -7,6 +7,7 @@ import { beforeEach, afterEach, describe, expect, it, vi } from 'vitest';
 vi.mock('../public/uiux-demo/planet.js', () => ({ drawPlanet: async () => {}, syncPlanetMotion: () => {} }));
 const html = readFileSync(resolve('public/uiux-demo/index.html'), 'utf8');
 const click = (selector: string) => (document.querySelector(selector) as HTMLElement).click();
+const composeFleet = () => { for(const [id,value] of Object.entries({striker:2,guardian:1,salvage:1,scout:1})){const input=document.querySelector('#strategy-count-'+id) as HTMLInputElement;input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));} };
 let disposeDemo: (() => void) | undefined;
 const closeDetail = async () => { click('#dialog-close'); await vi.advanceTimersByTimeAsync(40); };
 describe('disconnected design demo', () => {
@@ -29,13 +30,13 @@ describe('disconnected design demo', () => {
     expect(document.querySelector('#workspace-title')?.textContent).toContain('타르시스 공격');
     const assets=document.querySelector('#resources')!.textContent;
     const input=document.querySelector('#strategy-count-striker') as HTMLInputElement;
-    const custom=document.querySelector('#strategy-custom') as HTMLDetailsElement;custom.open=true;
+    expect((document.querySelector('#strategy-review') as HTMLButtonElement).disabled).toBe(true);
     input.focus();input.value='1';input.dispatchEvent(new Event('input',{bubbles:true}));
     expect(document.querySelector('#strategy-count-striker')).toBe(input);
     expect(document.activeElement).toBe(input);
     expect(document.querySelector('#strategy-picked')?.textContent).toContain('×1');
     click('#strategy-review');
-    expect(document.querySelector('#strategy-confirm-title')?.textContent).toContain('4척');
+    expect(document.querySelector('#strategy-confirm-title')?.textContent).toContain('1척');
     expect(document.activeElement?.id).toBe('strategy-confirm-title');
     click('#strategy-preview-launch');
     expect(document.querySelector('#strategy-order-preview-1')?.textContent).toContain('타르시스');
@@ -46,6 +47,7 @@ describe('disconnected design demo', () => {
   it('aligns alliance arrival only when requested and uses the common fleet command',()=>{
     click('.sidebar [data-view="guild"]');click('#strategy-alliance-join');
     expect(location.hash).toContain('context=alliance');
+    composeFleet();
     const delay=document.querySelector('#strategy-delay') as HTMLSelectElement;
     expect(delay.value).toBe('0');
     click('[data-strategy-action="align"]');
@@ -62,11 +64,11 @@ describe('disconnected design demo', () => {
     click('[data-strategy-open="vesper"]');click('#reset-button');
     expect(location.hash).toContain('target=tarsis');expect(location.hash).toContain('intent=attack');
     expect(document.querySelector('#workspace-title')?.textContent).toContain('타르시스 공격');
-    click('#strategy-review');expect(document.querySelector('#strategy-confirm-title')?.textContent).toContain('타르시스');
+    composeFleet();click('#strategy-review');expect(document.querySelector('#strategy-confirm-title')?.textContent).toContain('타르시스');
   });
   it('does not recreate a confirmation from browser history after launch',async()=>{
     click('.sidebar [data-view="career"]');click('#strategy-target-tarsis [data-strategy-open]');
-    click('#strategy-review');click('#strategy-preview-launch');
+    composeFleet();click('#strategy-review');click('#strategy-preview-launch');
     history.back();await vi.advanceTimersByTimeAsync(40);
     expect(document.querySelector('#strategy-confirm-title')).toBeNull();
     expect(document.querySelector('#strategy-preview-launch')).toBeNull();
@@ -90,6 +92,7 @@ describe('disconnected design demo', () => {
   });
   it('keeps a relocated preview stationed and offers explicit recall',()=>{
     click('.sidebar [data-view="career"]');click('[data-strategy-intent-tab="move"]');click('#strategy-target-vesper [data-strategy-open]');
+    composeFleet();
     click('#strategy-review');click('#strategy-preview-launch');click('#strategy-advance-preview-1');click('#strategy-advance-preview-1');
     expect(document.querySelector('#strategy-order-preview-1')?.textContent).toContain('현지 주둔 중');
     expect(document.querySelector('#strategy-advance-preview-1')).toBeNull();

@@ -91,7 +91,7 @@ dialog h2 { margin-bottom: 16px; }.drawer-footer { padding-top: 12px; }
   .planet-metrics { grid-template-columns: minmax(0,1.25fr) minmax(0,1fr) minmax(0,.9fr); }
   .preview-tools[open] .preview-content { z-index: 12; }
 }
-@media (max-width: 1024px) and (max-height: 500px) {
+@media (min-width: 600px) and (max-width: 1024px) and (max-height: 500px) {
   .topbar { grid-template-columns: 28px minmax(140px,.8fr) minmax(260px,1.4fr) 44px; grid-template-rows: auto; padding: 4px 16px; }
   .resources { grid-column: 3; grid-row: 1; padding-top: 0; }.settings-button { grid-column: 4; grid-row: 1; }
   .workspace-heading { margin-bottom: 4px; }.workspace-heading > div:first-child { display: none; }.preview-tools { margin-left: auto; }

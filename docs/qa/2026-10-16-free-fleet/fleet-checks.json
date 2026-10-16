@@ -1,0 +1,225 @@
+{
+  "checks": [
+    "empty first visit exposes all eight quantities with no preset and no fabricated ETA",
+    "three manually chosen ship types retain exact counts and input identity through review and Back",
+    "clear removes the current draft and leaves the clear button focused",
+    "ownership, six-ship and command limits remain explicit with all ship types selectable",
+    "eight distinct raster silhouettes and the orbital scene load from local optimized assets",
+    "desktop, tablet and mobile layouts keep touch targets and a usable summary shortcut",
+    "mobile summary never blocks the footer reset control, including doubled text",
+    "optional practice shares raster ships without card overlap at desktop and phone widths",
+    "200 percent text reflows at 320, 390 and landscape widths",
+    "selection feedback, confirmation entrance and departure scene run with regular motion",
+    "system reduced motion and manual pause stop fleet animations",
+    "missing art preserves names, quantity controls, exact review and working commands",
+    "alliance uses the same free composition without default ships or automatic departure",
+    "no API, storage or runtime errors occur during the full verification"
+  ],
+  "layouts": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "minControl": 44
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "minControl": 44
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "minControl": 44
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "minControl": 44
+    },
+    {
+      "width": 360,
+      "height": 800,
+      "minControl": 44
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "minControl": 44
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "minControl": 44
+    },
+    {
+      "width": 390,
+      "height": 390,
+      "minControl": 44
+    }
+  ],
+  "errors": [],
+  "mutations": [],
+  "images": [
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "fleet-roster-v1.webp",
+      "status": 200
+    },
+    {
+      "url": "orbital-hangar-v1.webp",
+      "status": 200
+    }
+  ],
+  "passed": true
+}

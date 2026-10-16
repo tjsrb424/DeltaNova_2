@@ -2,6 +2,8 @@
 
 사용자 요청일: 2026-10-15. 방향: **Minimal Galactic Command**.
 
+**2026-10-16 후속:** [자유 함대 편성·함선 아트·모션 설계](./FREE_FLEET_DESIGN.md), [최신 검수/평가](./FREE_FLEET_REVIEW.md). 최신 후속 브랜치는 `codex/free-fleet-visuals`이며 명령 화면은 빈 편성에서 시작한다. [다른 PC에서 이어가기](./HANDOFF.md)의 맨 위 안내를 사용한다.
+
 **다른 PC/새 세션에서 재개:** [HANDOFF — 브랜치·설치·검사·승인 범위·다음 작업](./HANDOFF.md). 사용자 원본 킷과 원본 행성 PNG도 저장소에 포함했다.
 
 현재 실행 중인 개발 서버에서 [독립 화면 열기](http://127.0.0.1:5173/uiux-demo/index.html). Vite는 `/uiux-demo/`를 기존 앱으로 처리할 수 있으므로 반드시 **index.html까지** 입력한다.

@@ -3,7 +3,9 @@ import { initialDemo } from '../public/uiux-demo/model.js';
 // @ts-expect-error The isolated demo exposes plain browser JavaScript modules.
 import * as model from '../public/uiux-demo/strategy-model.js';
 
-const { initialStrategy, strategyFleet, strategySummary, transitionStrategy } = model;
+const { strategyFleet, strategySummary, transitionStrategy } = model;
+// Existing formula/storyboard cases explicitly prepare this user-selected fixture.
+const initialStrategy = () => transitionStrategy(model.initialStrategy(), {type: 'preset', id: 'balanced'}, initialDemo());
 const act = (ui: any, action: any, state = initialDemo()) => transitionStrategy(ui, action, state);
 const summary = (ui: any, state = initialDemo()) => strategySummary(ui, state);
 const zero = { striker: 0, guardian: 0, siege: 0, support: 0, salvage: 0, scout: 0, jammer: 0, carrier: 0 };
@@ -21,7 +23,7 @@ describe('memory-only fleet strategy', () => {
     });
   });
 
-  it('derives a balanced local fleet without changing planet resources or inventory', () => {
+  it('calculates an explicitly composed balanced local fleet without changing planet resources or inventory', () => {
     const state = initialDemo();
     const before = JSON.stringify(state);
     const ui = initialStrategy();
@@ -158,7 +160,7 @@ describe('memory-only fleet strategy', () => {
       { type: 'edit' }, { type: 'cancel-review' },
     ]) expect(act(reviewed, action).review).toBeNull();
     expect(act(reviewed, { type: 'edit' }).stage).toBe('fleet');
-    expect(act(reviewed, { type: 'reset' })).toEqual(initialStrategy());
+    expect(act(reviewed, { type: 'reset' })).toEqual(model.initialStrategy());
   });
 
   it('rejects offline, changed-source, modified-configuration and depleted-fuel review previews', () => {

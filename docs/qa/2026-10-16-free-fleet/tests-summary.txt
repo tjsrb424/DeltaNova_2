@@ -1,0 +1,11 @@
+Executed: node node_modules/vitest/vitest.mjs run --maxWorkers=2
+Workspace: codex/free-fleet-visuals at base c251b0005f877a6c04a622299343e0064161e0ec plus this change
+Exit code: 0
+
+ Test Files  31 passed (31)
+      Tests  320 passed (320)
+   Start at  11:22:02
+   Duration  39.69s (tests 53%, environment 37%, import 9%, transform 1%)
+
+Summary transcribed from the executed command output, not a Vitest JSON export.
+Node emitted the existing SQLite ExperimentalWarning; no test failed.

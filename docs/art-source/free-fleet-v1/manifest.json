@@ -1,0 +1,22 @@
+[
+  {
+    "path": "docs/art-source/free-fleet-v1/fleet-roster-v1.png",
+    "bytes": 1779684,
+    "sha256": "e5b067bbb893dcec955e9c7821e67d4e990a5073694944cdc953ca45be18b454"
+  },
+  {
+    "path": "docs/art-source/free-fleet-v1/orbital-hangar-v1.png",
+    "bytes": 2261145,
+    "sha256": "fd75538345dc411317bf55bdde23d8e109300f669c0f3e18c5232fee11d5fbc7"
+  },
+  {
+    "path": "public/uiux-demo/art/fleet-roster-v1.webp",
+    "bytes": 239316,
+    "sha256": "6528b4655fb54445d9d60e9193bf9796edd227697bd9bc7da13d4c86fdb54e57"
+  },
+  {
+    "path": "public/uiux-demo/art/orbital-hangar-v1.webp",
+    "bytes": 152984,
+    "sha256": "05ad684fe73c21472d510ecf387fd720c74a30e95c3f609b89f87486d0947e41"
+  }
+]

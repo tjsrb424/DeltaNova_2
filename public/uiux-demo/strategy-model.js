@@ -74,7 +74,7 @@ export function strategyFleet(ui, state) {
   const source = sourceFor(state);
   const available = availableInventory(ui, source);
   const saved = Object.hasOwn(ui?.drafts || {}, source?.id) ? ui.drafts[source.id] : null;
-  const counts = saved || presets.balanced;
+  const counts = saved || {};
   return Object.fromEntries(strategyShips.map(ship => [ship.id, Math.max(0, Math.min(available[ship.id], finiteInteger(counts[ship.id]) ?? 0))]));
 }
 
@@ -180,6 +180,8 @@ export function transitionStrategy(ui, action, state) {
   const source = sourceFor(state);
   if (!ownedSource(source) || state?.connection !== 'ready') return ui;
   switch (action.type) {
+    case 'clear':
+      return changedDraft(ui, source, Object.fromEntries(strategyShips.map(ship => [ship.id, 0])));
     case 'quantity': {
       const ship = strategyShips.find(candidate => candidate.id === action.id);
       const number = finiteInteger(action.value);

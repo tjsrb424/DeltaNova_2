@@ -19,3 +19,70 @@
 .sc-steps li>span{flex-shrink:0}
 .sc-estimates{grid-template-columns:repeat(auto-fit,minmax(min(100%,max(7.5em,calc((100% - 16px)/2))),1fr))}
 .sc-estimates>div,.sc-composition-metrics>div,.sc-confirm-facts>div{min-width:0}
+
+/* Fleet art is a shared transparent 4 × 2 atlas; controls remain live HTML. */
+.sc-ship-art{display:block;width:100%;height:100%;background-image:url('./art/fleet-roster-v1.webp');background-size:400% 200%;background-repeat:no-repeat;flex-shrink:0}
+.sc-art-striker{background-position:0 0}.sc-art-guardian{background-position:33.333333% 0}.sc-art-siege{background-position:66.666667% 0}.sc-art-support{background-position:100% 0}
+.sc-art-salvage{background-position:0 100%}.sc-art-scout{background-position:33.333333% 100%}.sc-art-jammer{background-position:66.666667% 100%}.sc-art-carrier{background-position:100% 100%}
+.sc-hangar{position:relative;isolation:isolate;overflow:hidden;min-height:210px;border:1px solid #344a61;border-radius:12px;background:#091726 url('./art/orbital-hangar-v1.webp') 70% 48%/cover no-repeat;display:flex;align-items:center;padding:28px}
+.sc-hangar:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#071322f5,#071322c9 35%,#07132205 80%);z-index:-1}
+.sc-hangar-copy{max-width:65%;position:relative;z-index:1}.sc-hangar h2{font-size:1.6rem;margin:12px 0}.sc-hangar p{font-size:.8125rem;color:#c2d4e2;line-height:1.8;margin:0 0 24px}
+.sc-hangar .ws-eyebrow{color:#b4d5e5}.sc-hangar-status{display:flex;align-items:center;gap:8px;color:#b0d9c9;font-size:.6875rem}.sc-hangar-status i{width:5px;height:5px;border-radius:50%;background:#a8dfcc;box-shadow:0 0 10px #8de6c9}
+.sc-hangar-light{position:absolute;pointer-events:none;inset:0;background:linear-gradient(105deg,transparent 45%,#aadfff0d 50%,transparent 55%);animation:sc-dock-light 9s ease-in-out infinite}
+.sc-command-grid{grid-template-columns:minmax(0,1.65fr) minmax(270px,1fr);align-items:start}.sc-composer{grid-column:1;grid-row:1}.sc-estimate{grid-column:2;grid-row:1}
+.sc-section-head>div h2{margin:8px 0 0}.sc-clear{font-size:.75rem;min-height:44px;padding:8px 0 8px 12px;color:#bdd6e5}.sc-composer>.sc-footnote{margin:0}
+.sc-custom{border:0;padding:0;margin:0 0 24px}.sc-custom>.sc-footnote{margin:12px 0 20px}
+.sc-ship-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sc-ship{position:relative;overflow:hidden;border:1px solid #34485e;border-radius:10px;padding:0;background:linear-gradient(160deg,#122236,#0c1727);transition:border-color 160ms,box-shadow 160ms}
+.sc-ship[data-selected=true]{border-color:#8dcdd7;box-shadow:inset 0 0 0 1px #8dcdd744,0 0 20px #6ebdcd0a}
+.sc-ship:focus-within{border-color:#c4e5f0}.sc-ship-visual{position:relative;display:flex;justify-content:center;align-items:center;height:136px;background:radial-gradient(ellipse at 50% 70%,#7ba8c01f,transparent 68%);overflow:hidden}
+.sc-ship-visual>.sc-ship-art{width:142px;height:142px;filter:drop-shadow(0 9px 9px #0009);transition:filter 160ms}
+.sc-ship[data-selected=true] .sc-ship-visual>.sc-ship-art{filter:drop-shadow(0 7px 10px #79b6d033)}
+.sc-ship-class{position:absolute;left:12px;top:12px;font:.5rem ui-monospace,monospace;letter-spacing:.08em;color:#b1c6d7;max-width:calc(100% - 44px)}
+.sc-selected-mark{position:absolute;right:10px;top:10px;display:none;color:#b6e4d5}.sc-ship[data-selected=true] .sc-selected-mark{display:flex}.sc-selected-mark svg{width:17px;height:17px}
+.sc-ship-body{padding:0 14px 14px}.sc-ship-name strong{font-size:.9375rem;font-weight:550}.sc-ship-name small{font-size:.6875rem;margin:2px 0 0;color:#bad0e0}
+.sc-ship-description{font-size:.6875rem;line-height:1.7;color:#afc4d6;margin:7px 0 12px}
+.sc-ship-specs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:0 0 14px;padding-top:12px;border-top:1px solid #2b3f55}
+.sc-ship-specs dt{font-size:.625rem;color:#a8bfd2}.sc-ship-specs dd{font-size:.8125rem;color:#d6e4ed;margin:5px 0 0;font-variant-numeric:tabular-nums}
+.sc-quantity input{background:#081525;font-weight:550}.sc-quantity button{transition:background 140ms,border-color 140ms}.sc-quantity button:hover:not([aria-disabled=true]){background:#23465a;border-color:#8bbed1}.sc-quantity button:active:not([aria-disabled=true]){background:#355c6d}
+.sc-quantity :focus-visible{outline:2px solid #c4edf6;outline-offset:2px}
+.sc-selected-head{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:space-between;margin-bottom:12px}.sc-selected-head h3{font-size:.875rem;font-weight:500;margin:0}.sc-selected-head>span{font-size:.625rem;color:#adc3d5}
+.sc-picked{margin-bottom:22px}.sc-picked-ship{padding:5px 10px 5px 5px}.sc-picked-ship>.sc-ship-art{width:36px;height:36px}.sc-composition-metrics{margin-top:20px}
+.sc-capacity{display:flex;justify-content:space-between;flex-wrap:wrap;gap:9px;font-size:.6875rem;color:#afc5d6;margin:0 0 23px}.sc-capacity b{font-weight:500;color:#cee2ec;margin-left:5px}.sc-capacity>div{display:flex;gap:4px;width:100%}.sc-capacity i{height:3px;flex:1;background:#30475c;border-radius:3px}.sc-capacity i.filled{background:#94d1d5}
+.sc-confirm{position:relative;isolation:isolate;overflow:hidden;animation:sc-confirm-enter 400ms ease-out both}.sc-confirm-art{height:140px;margin:-32px -32px 25px;background:linear-gradient(0deg,#101e30,transparent 70%),url('./art/orbital-hangar-v1.webp') 70% 45%/cover}
+.sc-confirm-emblem{margin-top:-53px;background:#142d3a;position:relative;box-shadow:0 0 25px #86ccdc22}.sc-confirm-route{position:relative}.sc-confirm-route:after{content:'';pointer-events:none;position:absolute;left:35%;right:35%;top:50%;height:1px;background:#96dbe155;animation:sc-link-reveal 500ms ease-out both}
+.sc-flight-scene{height:130px;position:relative;overflow:hidden;border-radius:8px;border:1px solid #334b61;background:radial-gradient(ellipse at 85% 100%,#264f64,transparent 65%),#081322;margin-top:20px}
+.sc-flight-stars{position:absolute;inset:-100% -30%;background-image:radial-gradient(circle,#d2e9ffb0 0 .6px,transparent 1px),radial-gradient(circle,#7fa6c070 0 .5px,transparent 1px);background-size:67px 47px,109px 83px;transform:rotate(-12deg)}
+.sc-flight-scene[data-phase=outbound] .sc-flight-stars,.sc-flight-scene[data-phase=returning] .sc-flight-stars{animation:sc-star-drift 12s linear infinite}
+.sc-flight-vessel{position:absolute;width:140px;height:140px;left:38%;top:-5px;z-index:1;animation:sc-vessel-arrive 500ms ease-out both}
+.sc-flight-vessel>.sc-ship-art{transform:scaleX(-1) rotate(35deg)}.sc-flight-vessel>i{position:absolute;left:-40px;top:70px;width:60px;height:8px;filter:blur(3px);border-radius:50%;transform:rotate(-5deg);background:linear-gradient(90deg,transparent,#bcefffbb);z-index:-1;transform-origin:right center}
+.sc-flight-scene[data-phase=outbound] .sc-flight-vessel>i,.sc-flight-scene[data-phase=returning] .sc-flight-vessel>i{animation:sc-thruster 1.8s ease-in-out infinite}
+.sc-flight-scene[data-phase=returning] .sc-flight-vessel{transform:scaleX(-1)}.sc-flight-scene[data-phase=complete] .sc-flight-vessel>i,.sc-flight-scene[data-phase=waiting] .sc-flight-vessel>i,.sc-flight-scene[data-phase=deployed] .sc-flight-vessel>i{display:none}
+.sc-flight-destination{position:absolute;right:-30px;bottom:-92px;width:210px;height:210px;border-radius:50%;background:#17364c url('./art/nova-natural-v2.webp') center/cover;box-shadow:inset -35px -20px 45px #030b17dd,-4px -6px 18px #71cfe82b}
+.sc-route-track[data-phase=outbound] i{animation:sc-route-pulse 2s ease-in-out infinite}
+@keyframes sc-dock-light{0%,25%,100%{transform:translateX(-40%);opacity:0}45%,65%{opacity:1}85%{transform:translateX(45%);opacity:0}}
+@keyframes sc-confirm-enter{from{opacity:.4;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes sc-link-reveal{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+@keyframes sc-star-drift{from{translate:0 0}to{translate:-67px 47px}}
+@keyframes sc-vessel-arrive{from{margin-left:-24px;opacity:0}to{margin-left:0;opacity:1}}
+@keyframes sc-thruster{0%,100%{opacity:.6;scale:1 1}50%{opacity:1;scale:1.2 .75}}
+@keyframes sc-route-pulse{0%,100%{box-shadow:0 0 8px #6dc6df44}50%{box-shadow:0 0 16px #6dc6df99}}
+body.page-hidden .sc-shell *,body.page-hidden .sc-orders *,body.page-hidden .sc-shell *:before,body.page-hidden .sc-shell *:after{animation-play-state:paused!important}
+@media(hover:hover){.sc-ship:hover{border-color:#6d95ad}.sc-ship:hover .sc-ship-visual>.sc-ship-art{filter:drop-shadow(0 7px 12px #9bd6ec33)}}
+@media(max-width:1150px) and (min-width:851px){.sc-command-grid{grid-template-columns:minmax(0,1fr) minmax(260px,.8fr)}.sc-ship-grid{grid-template-columns:1fr}.sc-ship{display:grid;grid-template-columns:minmax(90px,.6fr) minmax(0,1fr)}.sc-ship-visual{height:100%;min-height:155px}.sc-ship-body{padding:15px 12px 12px}.sc-ship-visual>.sc-ship-art{width:115px;height:115px}.sc-ship-class{display:none}}
+@media(max-width:850px){.sc-command-grid{display:flex;flex-direction:column}.sc-composer{order:0}.sc-estimate{order:1}.sc-hangar{min-height:170px;padding:22px}.sc-hangar-copy{max-width:75%}.sc-hangar h2{font-size:1.375rem}.sc-ship-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.sc-hangar{min-height:175px;padding:20px;background-position:66% 50%}.sc-hangar:before{background:linear-gradient(90deg,#071322ee,#071322a6 65%,#07132222)}.sc-hangar-copy{max-width:100%}.sc-hangar h2{font-size:1.25rem}.sc-hangar p{font-size:.75rem;max-width:220px;margin-bottom:18px}.sc-hangar-status{font-size:.625rem}.sc-ship-grid{grid-template-columns:1fr;gap:12px}.sc-ship{display:grid;grid-template-columns:minmax(84px,.65fr) minmax(0,1fr)}.sc-ship-visual{height:100%;min-height:170px}.sc-ship-visual>.sc-ship-art{width:120px;height:120px}.sc-ship-class{display:none}.sc-ship-body{padding:14px 12px 12px 0}.sc-ship-name strong{font-size:.875rem}.sc-ship-description{font-size:.625rem}.sc-ship-specs{gap:4px}.sc-ship-specs dt{font-size:.5625rem}.sc-ship-specs dd{font-size:.75rem}.sc-quantity{grid-template-columns:44px minmax(44px,1fr) 44px}.sc-confirm-art{margin:-22px -22px 25px;height:115px}.sc-estimate{scroll-margin-top:20px}.sc-flight-vessel{left:23%}.sc-selected-mark{right:5px;top:8px}.sc-selected-mark svg{width:15px;height:15px}}
+@media(max-width:360px){.sc-ship{grid-template-columns:1fr}.sc-ship-visual{height:125px;min-height:0}.sc-ship-visual>.sc-ship-art{width:135px;height:135px}.sc-ship-body{padding:0 14px 14px}.sc-ship-class{display:block}.sc-ship-specs dt{font-size:.625rem}}
+@media(prefers-reduced-motion:reduce){.sc-shell *,.sc-shell *:before,.sc-shell *:after,.sc-orders *{animation:none!important;transition:none!important}}
+.sc-mobile-plan{display:none}
+.sc-ship-art.sc-edited{animation:sc-quantity-lift 260ms ease-out}
+@keyframes sc-quantity-lift{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.sc-composer>#strategy-clear-note{margin-bottom:18px}
+@media(min-width:1151px){.sc-ship{display:grid;grid-template-columns:minmax(84px,.65fr) minmax(0,1fr)}.sc-ship-visual{height:100%;min-height:180px}.sc-ship-visual>.sc-ship-art{width:120px;height:120px}.sc-ship-class{display:none}.sc-ship-body{padding:14px 12px 12px 0}}
+.op-ship-drawing>.sc-ship-art{width:100%;height:auto;aspect-ratio:1;max-width:140px;margin:auto}
+.sc-world{background-image:url('./art/nova-natural-v2.webp');background-size:cover;background-position:center;box-shadow:inset -10px -6px 16px #020914bb,0 0 14px #7fb8db15}
+.sc-world-hostile{filter:hue-rotate(320deg) saturate(.7)}.sc-world-ally{filter:hue-rotate(45deg) saturate(.7)}
+@media(max-width:768px){.sc-shell:has(.sc-mobile-plan){padding-bottom:70px}.sc-mobile-plan{display:flex;position:fixed;z-index:9;left:12px;right:12px;bottom:max(78px,var(--dn-nav-clearance,78px));align-items:center;justify-content:space-between;gap:8px;padding:8px 12px;border:1px solid #65889e;border-radius:10px;background:#0d1c2af7;box-shadow:0 0 20px #0005;flex-wrap:wrap}.sc-mobile-plan>span{font-size:.75rem;color:#c6e2e9}.sc-mobile-plan>.ws-button{font-size:.6875rem;min-height:44px;justify-content:center;flex:1}.sc-mobile-plan>span{flex:1}}
+@media(max-width:520px){.sc-hangar{min-height:128px;padding:16px}.sc-hangar h2{font-size:1.125rem;margin:9px 0 14px}.sc-hangar p{display:none}.sc-hangar .ws-eyebrow{font-size:.5625rem}.sc-ship-grid{margin-top:0}.sc-ship-class{overflow-wrap:anywhere}.sc-mobile-plan .ws-button{white-space:normal}}
+@media(max-width:768px){body:has(.sc-mobile-plan){padding-bottom:calc(max(78px,var(--dn-nav-clearance,78px)) + var(--dn-fleet-clearance,90px))}html:has(.sc-mobile-plan){scroll-padding-bottom:calc(max(78px,var(--dn-nav-clearance,78px)) + var(--dn-fleet-clearance,90px))}.sc-quantity input,.sc-quantity button{scroll-margin-block:160px}}
+@media(max-height:480px){.sc-mobile-plan{position:static;margin:0;box-shadow:none}.sc-shell:has(.sc-mobile-plan){padding-bottom:0}}
