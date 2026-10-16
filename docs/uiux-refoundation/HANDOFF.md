@@ -1,3 +1,33 @@
+# 최신 후속 · 2026-10-16 모바일·접근성·로딩 검수
+
+현재 브랜치는 **`codex/demo-visual-unification`**이다. 이번 후속 기준은 `e0f9e279c3b66bcb62b4cb6690bf1e0aed050667`. main 병합, 서버 데이터 연결, 운영 UI 교체는 계속 보류한다. 기존 `D:/kim_dev/DeltaNova` 체크아웃/브랜치를 보존하고 별도 worktree에서 작업했다. 아래 이전 기록의 기준 SHA와 결과는 당시 이력이다.
+
+- [최신 문제·개선·평가](./MOBILE_A11Y_LOADING_REVIEW.md), [실행 결과·원문·캡처](../qa/2026-10-16-mobile-a11y-loading/README.md).
+- [함선8종·격납고 점수/원본/반려/해시](../art-source/fleet-refinement-v2/README.md). V1을 보존하고 실제160px 카드에서 검토한 V2를 적용했다. 점수는 주관적 내부 검토다.
+- 편성 가용량/제한의 접근성 설명과 편성·단계의 live announcement, 메뉴 경유 모바일 요약바 고정, 숨겨진 행성 텍스처 지연 로딩, 초기 레이아웃 이동 보완. 게임 산식/명령 모델은 그대로다.
+
+다른 PC에서는 아래 기존 clone/설치 명령으로 **같은 브랜치**를 받는다. `npm ci`는 프로젝트의 기존 의존성만 설치한다. 독립 데모는 `npm run dev:solo -- --port 5181 --strictPort`로 실행하고 직접 `http://127.0.0.1:5181/uiux-demo/index.html?review=mobile-a11y-v2#view=command&target=tarsis&intent=attack&context=solo&step=fleet`에 접속한다. 창을 자동으로 열지 않는다.
+
+추가 검수 명령(기존 전체 검수 명령도 아래 유지):
+
+```powershell
+$env:DELTA_NOVA_DEMO_ROOT='dist'
+node tools/verify-demo-mobile-a11y.mjs
+```
+
+저속 조건 전/후 비교를 재현할 때는 별도 `.delta-nova/` 경로에 다음 기준 파일을 준비한다. 이 도구는 baseline 모든 파일의 Git blob SHA를 검증한다. 공유 PC 시간 변동이 크므로 원문 범위와 중앙값을 함께 본다.
+
+```powershell
+New-Item -ItemType Directory -Force .delta-nova | Out-Null
+git archive --format=zip --output=.delta-nova/mobile-loading-baseline.zip e0f9e279c3b66bcb62b4cb6690bf1e0aed050667 public/uiux-demo
+Expand-Archive -LiteralPath .delta-nova/mobile-loading-baseline.zip -DestinationPath .delta-nova/mobile-loading-baseline -Force
+node tools/profile-demo-loading.mjs
+```
+
+실제 iOS/Android 키보드·노치·VoiceOver/TalkBack 발화·물리 기기 INP/전력은 미검수다. 이 실행의 모바일은 Chromium emulation/AX tree/키보드/headless 캡처다. 첫 실기기 검수에서도 데모만 사용한다. 운영 연결은 별도 사용자 승인 후 논의한다.
+
+---
+
 # DELTA NOVA UI/UX — 다른 환경에서 이어가기
 
 ## 2026-10-16 최신 후속 작업 · 전체 데모 그래픽·네온 출항

@@ -1,4 +1,12 @@
 /* Scoped to the independent design demo. */
+/* Reserve the hydrated controls' space without displaying invented balances. */
+.resources:empty::before { content: ''; min-height: 52px; }
+.mobile-priority:empty::before { content: ''; height: 46px; }
+.nav-item > [data-icon] { width: 20px; height: 20px; flex-shrink: 0; }
+.scene-hint > [data-icon] { width: 15px; height: 15px; }
+/* The decorative orbit becomes visible at its first measured satellite pose. */
+.orbit:not([style]) { visibility: hidden; }
+.planet-scene[aria-busy=true] .scene-hint::after { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
 .preview-tools { position: relative; z-index: 9; margin-left: auto; }
 .preview-tools summary { min-height: 44px; padding: 10px 14px; display: flex; align-items: center; gap: 16px; cursor: pointer; border: 1px solid var(--dn-control-border); border-radius: 8px; color: var(--dn-secondary); list-style: none; }
 .preview-tools summary::-webkit-details-marker { display: none; }

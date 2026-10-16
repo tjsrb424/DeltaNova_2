@@ -1,0 +1,34 @@
+{
+  "baseline": {
+    "ref": "e0f9e279c3b66bcb62b4cb6690bf1e0aed050667",
+    "behavioralChecks": 9,
+    "failed": 5,
+    "report": "before.json"
+  },
+  "findings": [
+    {
+      "issue": "Initial focus diagnostic treated a static landscape summary as fixed occlusion.",
+      "resolution": "Harness counts only fixed/sticky overlays. Corrected baseline report retained; no unnecessary product change."
+    },
+    {
+      "issue": "361px opaque siege/carrier bounds protruded by about2px after candidate integration.",
+      "resolution": "Minimum120px art column at361..520px; final8x11-width assertions pass."
+    },
+    {
+      "issue": "Startup ready timestamp included Node/tool IPC delay in exploratory version.",
+      "resolution": "Final24-load batch uses browser MutationObserver timestamp. Earlier ready figures excluded from comparison."
+    },
+    {
+      "issue": "Initial52px resource row shift, orbit/icon/busy label repositioning.",
+      "resolution": "Intermediate and final shift-source captures retained; final12 after startup sums0."
+    },
+    {
+      "issue": "Potential command timing regression under throttling.",
+      "resolution": "All raw samples retained. Not marked resolved by timing claim; physical controlled follow-up remains."
+    }
+  ],
+  "reviews": {
+    "code": "Existing reviewer read lazy renderer/cache and AX/motion changes, then startup CSS and harness; no blocking code issue found. Reviewer did not run browser/performance tests.",
+    "art": "Original8 and retained hangar independently scored. First geometry candidate rejected for padding; padded candidate and actual160px cards reviewed before final use."
+  }
+}

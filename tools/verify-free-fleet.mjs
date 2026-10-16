@@ -16,7 +16,7 @@ const url=`http://127.0.0.1:${server.address().port}/uiux-demo/index.html`;
 const browser=await pw.chromium.launch({headless:true,executablePath:process.env.DELTA_NOVA_BROWSER||'C:/Program Files/Google/Chrome/Application/chrome.exe'});
 const context=await browser.newContext();
 context.on('request',r=>{if(r.method()!=='GET'||/\/api\//.test(r.url()))report.mutations.push(r.url());});
-context.on('response',r=>{if(/fleet-roster-v1|orbital-hangar-v1/.test(r.url()))report.images.push({url:r.url().split('/').at(-1),status:r.status()});});
+context.on('response',r=>{if(/fleet-roster-v[12]|orbital-hangar-v1/.test(r.url()))report.images.push({url:r.url().split('/').at(-1),status:r.status()});});
 await context.addInitScript(()=>{window.__storageCalls=[];for(const name of ['getItem','setItem','removeItem','clear']){const original=Storage.prototype[name];Storage.prototype[name]=function(...args){window.__storageCalls.push(name);return original.apply(this,args);};}});
 const page=await context.newPage();page.setDefaultTimeout(5000);page.on('pageerror',e=>report.errors.push(String(e)));
 const check=async(name,fn)=>{console.log('CHECK '+name);await fn();report.checks.push(name);};
@@ -50,7 +50,7 @@ try{
   });
   await check('eight distinct raster silhouettes and the orbital scene load from local optimized assets',async()=>{
     const positions=await page.locator('.sc-ship-visual>.sc-ship-art').evaluateAll(nodes=>nodes.map(n=>getComputedStyle(n).backgroundPosition));assert.equal(new Set(positions).size,8);
-    for(const file of ['fleet-roster-v1.webp','orbital-hangar-v1.webp'])assert(report.images.some(i=>i.url===file&&i.status===200),file+' missing');
+    for(const file of ['fleet-roster-v2.webp','orbital-hangar-v1.webp'])assert(report.images.some(i=>i.url===file&&i.status===200),file+' missing');
   });
   await check('desktop, tablet and mobile layouts keep touch targets and a usable summary shortcut',async()=>{
     for(const [width,height] of [[1920,1080],[1440,900],[839,1065],[390,844],[360,800],[320,568],[844,390],[390,390]]){

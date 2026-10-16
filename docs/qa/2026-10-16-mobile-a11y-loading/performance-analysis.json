@@ -1,0 +1,286 @@
+{
+  "definitions": {
+    "cls": "Observed startup layout-shift sum without recent input; not session-window CLS or a Web Vitals verdict.",
+    "ready": "Browser MutationObserver DOM initialization timestamp, not a measured input response.",
+    "resourceBodyBytes": "Decoded resource entry body sizes; not compressed transfer.",
+    "inputDoubleRAF": "Six synthetic numeric edits/sample followed by two rAFs. Not INP or human touch latency."
+  },
+  "views": {
+    "home": {
+      "before": {
+        "ready": {
+          "median": 5591.0999999996275,
+          "min": 4775.4000000003725,
+          "max": 5928.800000000745
+        },
+        "fcp": {
+          "median": 2360,
+          "min": 2336,
+          "max": 3608
+        },
+        "load": {
+          "median": 6079.4000000003725,
+          "min": 5087.5999999996275,
+          "max": 6522.9000000003725
+        },
+        "lcp": {
+          "median": 2360,
+          "min": 2336,
+          "max": 3608
+        },
+        "cls": {
+          "median": 0.2401149682982361,
+          "min": 0.2401149682982361,
+          "max": 0.2401149682982361
+        },
+        "resourceBodyBytes": {
+          "median": 866810,
+          "min": 866810,
+          "max": 866810
+        }
+      },
+      "after": {
+        "ready": {
+          "median": 4921,
+          "min": 4160.300000000745,
+          "max": 22199.199999999255
+        },
+        "fcp": {
+          "median": 1936,
+          "min": 1560,
+          "max": 4168
+        },
+        "load": {
+          "median": 5319.5,
+          "min": 5070.199999999255,
+          "max": 22815.299999998882
+        },
+        "lcp": {
+          "median": 1936,
+          "min": 1560,
+          "max": 4168
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "resourceBodyBytes": {
+          "median": 868986,
+          "min": 868986,
+          "max": 868986
+        }
+      }
+    },
+    "construction": {
+      "before": {
+        "ready": {
+          "median": 4889.700000001118,
+          "min": 4478.0999999996275,
+          "max": 4929.700000001118
+        },
+        "fcp": {
+          "median": 2444,
+          "min": 2064,
+          "max": 2472
+        },
+        "load": {
+          "median": 5906,
+          "min": 5846.300000000745,
+          "max": 5950
+        },
+        "lcp": {
+          "median": 5216,
+          "min": 5012,
+          "max": 5552
+        },
+        "cls": {
+          "median": 0.05416545001235372,
+          "min": 0.05416545001235372,
+          "max": 0.05416545001235372
+        },
+        "resourceBodyBytes": {
+          "median": 1058954,
+          "min": 1058954,
+          "max": 1058954
+        }
+      },
+      "after": {
+        "ready": {
+          "median": 3172.300000000745,
+          "min": 3156.0999999996275,
+          "max": 3282
+        },
+        "fcp": {
+          "median": 1720,
+          "min": 1700,
+          "max": 1760
+        },
+        "load": {
+          "median": 4217.10000000149,
+          "min": 4188.9000000003725,
+          "max": 4310.299999998882
+        },
+        "lcp": {
+          "median": 3492,
+          "min": 3476,
+          "max": 3588
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "resourceBodyBytes": {
+          "median": 590764,
+          "min": 590764,
+          "max": 590764
+        }
+      }
+    },
+    "research": {
+      "before": {
+        "ready": {
+          "median": 5262.0999999996275,
+          "min": 4757.9000000003725,
+          "max": 30581.5
+        },
+        "fcp": {
+          "median": 2428,
+          "min": 2204,
+          "max": 19276
+        },
+        "load": {
+          "median": 7722.5,
+          "min": 6108.699999999255,
+          "max": 32088.800000000745
+        },
+        "lcp": {
+          "median": 8156,
+          "min": 5696,
+          "max": 31576
+        },
+        "cls": {
+          "median": 0.05416545001235372,
+          "min": 0.05416545001235372,
+          "max": 0.05416545001235372
+        },
+        "resourceBodyBytes": {
+          "median": 1117808,
+          "min": 1117808,
+          "max": 1117808
+        }
+      },
+      "after": {
+        "ready": {
+          "median": 3062,
+          "min": 3021,
+          "max": 3498.7999999988824
+        },
+        "fcp": {
+          "median": 1644,
+          "min": 1644,
+          "max": 3012
+        },
+        "load": {
+          "median": 4456.300000000745,
+          "min": 4392.60000000149,
+          "max": 5193.0999999996275
+        },
+        "lcp": {
+          "median": 4340,
+          "min": 3964,
+          "max": 4944
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "resourceBodyBytes": {
+          "median": 649618,
+          "min": 649618,
+          "max": 649618
+        }
+      }
+    },
+    "command": {
+      "before": {
+        "ready": {
+          "median": 5201.0999999996275,
+          "min": 5133.200000001118,
+          "max": 5618
+        },
+        "fcp": {
+          "median": 2696,
+          "min": 2436,
+          "max": 2960
+        },
+        "load": {
+          "median": 7178.200000001118,
+          "min": 7088.4000000003725,
+          "max": 7362.5999999996275
+        },
+        "lcp": {
+          "median": 6892,
+          "min": 6668,
+          "max": 6948
+        },
+        "cls": {
+          "median": 0.05416545001235372,
+          "min": 0.05416545001235372,
+          "max": 0.05416545001235372
+        },
+        "resourceBodyBytes": {
+          "median": 1259110,
+          "min": 1259110,
+          "max": 1259110
+        },
+        "inputMedian": 29.550000000745058,
+        "inputP95": 59.5,
+        "inputCount": 18
+      },
+      "after": {
+        "ready": {
+          "median": 6355.800000000745,
+          "min": 2921.7000000011176,
+          "max": 14249.099999999627
+        },
+        "fcp": {
+          "median": 1808,
+          "min": 1536,
+          "max": 1988
+        },
+        "load": {
+          "median": 6358.699999999255,
+          "min": 4555.4000000003725,
+          "max": 16049.800000000745
+        },
+        "lcp": {
+          "median": 6744,
+          "min": 4588,
+          "max": 17584
+        },
+        "cls": {
+          "median": 0,
+          "min": 0,
+          "max": 0
+        },
+        "resourceBodyBytes": {
+          "median": 700058,
+          "min": 700058,
+          "max": 700058
+        },
+        "inputMedian": 21.450000000186265,
+        "inputP95": 157.69999999925494,
+        "inputCount": 18
+      }
+    }
+  },
+  "notes": [
+    "All24 samples retained, no outlier removal.",
+    "Command ready median and input p95 worsened; timing improvement is not established for every screen.",
+    "Shared host variance is visible but its contribution is not isolated from code/rendering cost.",
+    "Final artifact bytes and startup shift reduction are directly observed."
+  ]
+}

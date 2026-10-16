@@ -1,0 +1,396 @@
+{
+  "views": [
+    "home"
+  ],
+  "repeats": 1,
+  "date": "2026-10-16T04:50:17.434Z",
+  "baseline": "e0f9e279c3b66bcb62b4cb6690bf1e0aed050667",
+  "baselineFiles": 40,
+  "browser": "155.0.8059.80",
+  "method": "Alternating cold contexts at390x844 DPR3, cache disabled. Network1.6Mbps down/750kbps up, configured latency150ms, CPU4x slowdown. LCP last observation before explicit input; ready is a browser MutationObserver timestamp after resource controls and the requested workspace are initialized; doubleRAF is not INP. Shared host, no physical phone.",
+  "samples": [
+    {
+      "view": "home",
+      "repeat": 1,
+      "label": "before",
+      "ready": 5422.9000000003725,
+      "layoutShifts": [
+        {
+          "value": 0.23957795197771836,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "context-sector",
+              "from": {
+                "x": 16,
+                "y": 762.234375,
+                "width": 358,
+                "height": 81.765625,
+                "top": 762.234375,
+                "right": 374,
+                "bottom": 844,
+                "left": 16
+              },
+              "to": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.0005370163205177159,
+          "sources": [
+            {
+              "node": "scene-hint",
+              "from": {
+                "x": 91.96875,
+                "y": 705.640625,
+                "width": 206.046875,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 298.015625,
+                "bottom": 724.234375,
+                "left": 91.96875
+              },
+              "to": {
+                "x": 132.203125,
+                "y": 705.640625,
+                "width": 125.578125,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 257.78125,
+                "bottom": 724.234375,
+                "left": 132.203125
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 5423,
+      "load": 5764.799999998882,
+      "lcp": 2512,
+      "cls": 0.2401149682982361,
+      "longTasks": [
+        230,
+        330
+      ],
+      "resourceBodyBytes": 866810,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 2512,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 1,
+      "label": "after",
+      "ready": 20188.099999999627,
+      "layoutShifts": [
+        {
+          "value": 0.23957795197771836,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "context-sector",
+              "from": {
+                "x": 16,
+                "y": 762.234375,
+                "width": 358,
+                "height": 81.765625,
+                "top": 762.234375,
+                "right": 374,
+                "bottom": 844,
+                "left": 16
+              },
+              "to": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.0005370163205177159,
+          "sources": [
+            {
+              "node": "scene-hint",
+              "from": {
+                "x": 91.96875,
+                "y": 705.640625,
+                "width": 206.046875,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 298.015625,
+                "bottom": 724.234375,
+                "left": 91.96875
+              },
+              "to": {
+                "x": 132.203125,
+                "y": 705.640625,
+                "width": 125.578125,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 257.78125,
+                "bottom": 724.234375,
+                "left": 132.203125
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 20188.799999998882,
+      "load": 20282.400000000373,
+      "lcp": 9056,
+      "cls": 0.2401149682982361,
+      "longTasks": [
+        90,
+        182,
+        952,
+        76,
+        56,
+        79,
+        130,
+        440
+      ],
+      "resourceBodyBytes": 868382,
+      "art": [
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        }
+      ],
+      "fcp": 9056,
+      "inputDoubleRAF": []
+    }
+  ],
+  "summary": {
+    "home": {
+      "before": {
+        "ready": 5422.9000000003725,
+        "fcp": 2512,
+        "dcl": 5423,
+        "load": 5764.799999998882,
+        "lcp": 2512,
+        "cls": 0.2401149682982361,
+        "resourceBodyBytes": 866810
+      },
+      "after": {
+        "ready": 20188.099999999627,
+        "fcp": 9056,
+        "dcl": 20188.799999998882,
+        "load": 20282.400000000373,
+        "lcp": 9056,
+        "cls": 0.2401149682982361,
+        "resourceBodyBytes": 868382
+      }
+    }
+  },
+  "passed": true
+}

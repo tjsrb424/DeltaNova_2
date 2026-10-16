@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "generatedAt": "2026-10-16T04:58:55.677Z",
+  "runtime": "public/uiux-demo/art/fleet-roster-v2.webp",
+  "files": [
+    {
+      "path": "docs/art-source/fleet-refinement-v2/README.md",
+      "bytes": 3782,
+      "sha256": "f2c4108a08bd867f7b7730b745413c32f27c52fadb99de5463799c2b464fa171"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/candidate-cell-bounds.json",
+      "bytes": 1130,
+      "sha256": "228dafe9a51f60bea2a6b8902e6d5a56c224aa5afbf3e7468b366c714cd56e10"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/comparison-sheet.png",
+      "bytes": 361041,
+      "sha256": "c4e41f796352e011285d7d036e8fdf178a6f6f228f89d374981bcaa5e2381ac5"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/prompts.json",
+      "bytes": 4406,
+      "sha256": "5b7ace6287c0da0d6a84e485c9f00a9af8adbd66793be6baad21e9265ff266e2"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/review-gate.json",
+      "bytes": 4209,
+      "sha256": "9ad01b118e8d232f24ef110d0fb62cff145d0a0f5c97dcb7f877a4b8ee2109aa"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/roster-clean-candidate.png",
+      "bytes": 1677403,
+      "sha256": "0ab000e0ac16492d5066676669473b7838d4e7b5fa4752c660dd50cea5019999"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/roster-padded-candidate.png",
+      "bytes": 855755,
+      "sha256": "a18785f4a17b0c0eb7590fc3693d142b127b02482eefd4199e00fe996ffd1d22"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/roster-padded-candidate.webp",
+      "bytes": 102394,
+      "sha256": "e3ce5a6288227620cd99b0eda4c985eca4d0a927098f73777ac64313c876e55d"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/roster-runtime-candidate.webp",
+      "bytes": 148454,
+      "sha256": "43a2e7b330652f7522cb3989eb62a2553145ecd5b1c10d5fbef22603d4ae04af"
+    },
+    {
+      "path": "docs/art-source/fleet-refinement-v2/runtime-cell-bounds.json",
+      "bytes": 1333,
+      "sha256": "5ba19696b92605fd69917951af1d43ca03f67f8684a40928248ab2f1ba55fdf6"
+    },
+    {
+      "path": "public/uiux-demo/art/fleet-roster-v2.webp",
+      "bytes": 148454,
+      "sha256": "43a2e7b330652f7522cb3989eb62a2553145ecd5b1c10d5fbef22603d4ae04af"
+    }
+  ]
+}

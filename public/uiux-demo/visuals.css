@@ -81,7 +81,7 @@
 .dn-neon-flight[data-neon-phase=complete] .dn-path-signal{stroke:#93cdb6;opacity:.55}
 .dn-phase-changed .sc-flight-scene{animation:dn-phase-feedback 650ms ease-out}.dn-phase-changed [data-neon-phase=arrived] .dn-arrival-reticle>i{animation:dn-arrival-pulse 750ms ease-out 2}
 .dn-view-enter{animation:dn-view-enter 180ms ease-out both}
-@keyframes dn-view-enter{from{opacity:.65;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@keyframes dn-view-enter{from{opacity:.65}to{opacity:1}}
 @keyframes dn-lead-scan{0%,30%,100%{transform:translateY(0);opacity:0}45%,60%{opacity:1}80%{transform:translateY(80px);opacity:0}}
 @keyframes dn-progress-light{0%,35%{transform:translateX(-100%)}70%,100%{transform:translateX(100%)}}
 @keyframes dn-target-lock{from{transform:scale(1.2);opacity:.3}to{transform:scale(1);opacity:1}}

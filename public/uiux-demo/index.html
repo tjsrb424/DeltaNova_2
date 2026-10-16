@@ -7,8 +7,13 @@
   <meta name="description" content="DELTA NOVA Minimal Galactic Command 독립 UI/UX 검토 화면. 모든 데이터와 이벤트는 예시입니다.">
   <title>DELTA NOVA — 행성 관제 · UI/UX Demo</title>
   <link rel="icon" href="data:,">
-  <link rel="preload" as="image" href="./art/nova-albedo-v2.webp">
-  <link rel="preload" as="image" href="./art/nova-clouds-v1.webp">
+  <script>
+    // Preload only the initially visible planet; other workspaces stay lightweight.
+    (()=>{const initialView=new URLSearchParams(location.hash.slice(1)).get('view');
+    if(!initialView||initialView==='home')for(const art of ['nova-albedo-v2.webp','nova-clouds-v1.webp']){
+      const link=document.createElement('link');link.rel='preload';link.as='image';link.href='./art/'+art;document.head.append(link);
+    }})();
+  </script>
   <link rel="stylesheet" href="./tokens.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./refinement.css">

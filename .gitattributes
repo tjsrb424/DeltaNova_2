@@ -14,3 +14,10 @@ docs/art-source/visual-unification-v1/*.txt text eol=lf
 tools/verify-visual-unification.mjs text eol=lf
 tools/profile-visual-unification.mjs text eol=lf
 tests/uiux-neon-fleet.test.ts text eol=lf
+
+# Fleet refinement source and reproducible mobile review tools.
+docs/art-source/fleet-refinement-v2/*.md text eol=lf
+docs/art-source/fleet-refinement-v2/*.json text eol=lf
+tools/verify-free-fleet.mjs text eol=lf
+tools/verify-demo-mobile-a11y.mjs text eol=lf
+tools/profile-demo-loading.mjs text eol=lf

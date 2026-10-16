@@ -1,0 +1,397 @@
+{
+  "date": "2026-10-16T04:32:23.667Z",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\public",
+  "checks": [
+    {
+      "name": "each view exposes one main, one named navigation, one h1 and named controls in Chromium AX",
+      "passed": true
+    },
+    {
+      "name": "quantity fields expose available inventory and global limits as AX descriptions",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   {\n+     description: '',\n+     name: '케스트럴 편성 수량'\n+   },\n+   {\n+     description: '',\n+     name: '바스티온 편성 수량'\n+   },\n+   {\n+     description: '',\n+     name: '랜서 편성 수량'\n+   },\n+   {\n+     description: '',\n+     name: '멘더 편성 수량'\n+   },\n+   {\n+     description: '',\n+     name: '아틀라스 편성 수량'\n+   },\n+   {\n+     description: '',\n+     name: '위스프 편성 수량'\n+   },\n+   {\n+     description: '',\n+     name: '베일 편성 수량'\n+   },\n+   {\n+     description: '',\n+     name: '아크 편성 수량'\n+   }\n+ ]\n- []\n"
+    },
+    {
+      "name": "editing announces exact composition and actionable invalid limits without moving focus",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /1척.*지휘 2/. Input:\n\n''\n"
+    },
+    {
+      "name": "explicit departure phases are announced as local previews",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: The input did not match the regular expression /타르시스.*도착/. Input:\n\n'출항 흐름 시연을 추가했습니다. 실제 함선과 연료는 변경하지 않았습니다.'\n"
+    },
+    {
+      "name": "focused numeric fields remain unobscured at reduced mobile heights and doubled text",
+      "passed": true
+    },
+    {
+      "name": "mobile summary remains anchored to the viewport after target navigation and scrolling",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: {\"top\":2273.125,\"bottom\":2335.125,\"navTop\":772,\"height\":844}"
+    },
+    {
+      "name": "skip link and native dialog keyboard trap preserve focus under forced colors",
+      "passed": true
+    },
+    {
+      "name": "direct non-planet screens do not fetch hidden WebGL albedo or cloud textures",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: construction hidden textures\n+ actual - expected\n\n+ [\n+   'nova-albedo-v2.webp',\n+   'nova-clouds-v1.webp'\n+ ]\n- []\n"
+    },
+    {
+      "name": "script errors and game API mutations remain absent",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "mutations": [],
+  "axViews": [
+    {
+      "view": "home",
+      "controls": 30,
+      "unnamed": []
+    },
+    {
+      "view": "construction",
+      "controls": 20,
+      "unnamed": []
+    },
+    {
+      "view": "research",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "fleet",
+      "controls": 25,
+      "unnamed": []
+    },
+    {
+      "view": "defense",
+      "controls": 24,
+      "unnamed": []
+    },
+    {
+      "view": "evasion",
+      "controls": 22,
+      "unnamed": []
+    },
+    {
+      "view": "career",
+      "controls": 27,
+      "unnamed": []
+    },
+    {
+      "view": "galaxy",
+      "controls": 42,
+      "unnamed": []
+    },
+    {
+      "view": "guild",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "reports",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "practice",
+      "controls": 52,
+      "unnamed": []
+    },
+    {
+      "view": "more",
+      "controls": 28,
+      "unnamed": []
+    },
+    {
+      "view": "diplomacy",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "rankings",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "command",
+      "controls": 49,
+      "unnamed": []
+    }
+  ],
+  "focusChecks": [
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 487.5625,
+      "bottom": 531.5625,
+      "limit": 704,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 488.109375,
+      "bottom": 532.109375,
+      "limit": 704,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 488.171875,
+      "bottom": 532.171875,
+      "limit": 704,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 382.125,
+      "bottom": 435.71875,
+      "limit": 608,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 382.09375,
+      "bottom": 435.6875,
+      "limit": 608,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 382.71875,
+      "bottom": 436.3125,
+      "limit": 608,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 211.765625,
+      "bottom": 255.765625,
+      "limit": 428,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 212,
+      "bottom": 256,
+      "limit": 428,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 212.3125,
+      "bottom": 256.3125,
+      "limit": 428,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 105.90625,
+      "bottom": 159.5,
+      "limit": 332,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 106.203125,
+      "bottom": 159.796875,
+      "limit": 332,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 106.265625,
+      "bottom": 159.859375,
+      "limit": 332,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 147.5625,
+      "bottom": 191.5625,
+      "limit": 358,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 148.109375,
+      "bottom": 192.109375,
+      "limit": 358,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 148.171875,
+      "bottom": 192.171875,
+      "limit": 358,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 86.125,
+      "bottom": 139.71875,
+      "limit": 306.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 86.09375,
+      "bottom": 139.6875,
+      "limit": 306.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 86.71875,
+      "bottom": 140.3125,
+      "limit": 306.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 107.765625,
+      "bottom": 151.765625,
+      "limit": 318,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 108,
+      "bottom": 152,
+      "limit": 318,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 108.3125,
+      "bottom": 152.3125,
+      "limit": 318,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 45.90625,
+      "bottom": 99.5,
+      "limit": 266.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 46.203125,
+      "bottom": 99.796875,
+      "limit": 266.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 46.265625,
+      "bottom": 99.859375,
+      "limit": 266.625,
+      "topLimit": 0,
+      "overflow": false
+    }
+  ],
+  "limitations": [
+    "Chromium emulation, not a physical phone or spoken screen reader."
+  ],
+  "browser": "155.0.8059.80",
+  "passed": false
+}

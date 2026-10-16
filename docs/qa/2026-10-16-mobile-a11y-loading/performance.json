@@ -1,0 +1,2431 @@
+{
+  "views": [
+    "home",
+    "construction",
+    "research",
+    "command"
+  ],
+  "repeats": 3,
+  "date": "2026-10-16T04:57:02.110Z",
+  "baseline": "e0f9e279c3b66bcb62b4cb6690bf1e0aed050667",
+  "baselineFiles": 40,
+  "browser": "155.0.8059.80",
+  "method": "Alternating cold contexts at390x844 DPR3, cache disabled. Network1.6Mbps down/750kbps up, configured latency150ms, CPU4x slowdown. LCP last observation before explicit input; ready is a browser MutationObserver timestamp after resource controls and the requested workspace are initialized; doubleRAF is not INP. Shared host, no physical phone.",
+  "samples": [
+    {
+      "view": "home",
+      "repeat": 1,
+      "label": "before",
+      "ready": 5591.0999999996275,
+      "layoutShifts": [
+        {
+          "value": 0.23957795197771836,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "context-sector",
+              "from": {
+                "x": 16,
+                "y": 762.234375,
+                "width": 358,
+                "height": 81.765625,
+                "top": 762.234375,
+                "right": 374,
+                "bottom": 844,
+                "left": 16
+              },
+              "to": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.0005370163205177159,
+          "sources": [
+            {
+              "node": "scene-hint",
+              "from": {
+                "x": 91.96875,
+                "y": 705.640625,
+                "width": 206.046875,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 298.015625,
+                "bottom": 724.234375,
+                "left": 91.96875
+              },
+              "to": {
+                "x": 132.203125,
+                "y": 705.640625,
+                "width": 125.578125,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 257.78125,
+                "bottom": 724.234375,
+                "left": 132.203125
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 5591.200000001118,
+      "load": 6079.4000000003725,
+      "lcp": 2336,
+      "cls": 0.2401149682982361,
+      "longTasks": [
+        163,
+        54,
+        202,
+        458,
+        68,
+        64
+      ],
+      "resourceBodyBytes": 866810,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 2336,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 1,
+      "label": "after",
+      "ready": 4921,
+      "layoutShifts": [],
+      "dcl": 4921.39999999851,
+      "load": 5319.5,
+      "lcp": 1560,
+      "cls": 0,
+      "longTasks": [
+        260,
+        630,
+        260
+      ],
+      "resourceBodyBytes": 868986,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 1560,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 2,
+      "label": "after",
+      "ready": 22199.199999999255,
+      "layoutShifts": [],
+      "dcl": 22203.900000000373,
+      "load": 22815.299999998882,
+      "lcp": 4168,
+      "cls": 0,
+      "longTasks": [
+        160,
+        378,
+        590,
+        62
+      ],
+      "resourceBodyBytes": 868986,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 4168,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 2,
+      "label": "before",
+      "ready": 5928.800000000745,
+      "layoutShifts": [
+        {
+          "value": 0.23957795197771836,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "context-sector",
+              "from": {
+                "x": 16,
+                "y": 762.234375,
+                "width": 358,
+                "height": 81.765625,
+                "top": 762.234375,
+                "right": 374,
+                "bottom": 844,
+                "left": 16
+              },
+              "to": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.0005370163205177159,
+          "sources": [
+            {
+              "node": "scene-hint",
+              "from": {
+                "x": 91.96875,
+                "y": 705.640625,
+                "width": 206.046875,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 298.015625,
+                "bottom": 724.234375,
+                "left": 91.96875
+              },
+              "to": {
+                "x": 132.203125,
+                "y": 705.640625,
+                "width": 125.578125,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 257.78125,
+                "bottom": 724.234375,
+                "left": 132.203125
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 5929.199999999255,
+      "load": 6522.9000000003725,
+      "lcp": 3608,
+      "cls": 0.2401149682982361,
+      "longTasks": [
+        187,
+        154
+      ],
+      "resourceBodyBytes": 866810,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 3608,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 3,
+      "label": "before",
+      "ready": 4775.4000000003725,
+      "layoutShifts": [
+        {
+          "value": 0.23957795197771836,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "context-sector",
+              "from": {
+                "x": 16,
+                "y": 762.234375,
+                "width": 358,
+                "height": 81.765625,
+                "top": 762.234375,
+                "right": 374,
+                "bottom": 844,
+                "left": 16
+              },
+              "to": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0,
+                "top": 0,
+                "right": 0,
+                "bottom": 0,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        },
+        {
+          "value": 0.0005370163205177159,
+          "sources": [
+            {
+              "node": "scene-hint",
+              "from": {
+                "x": 91.96875,
+                "y": 705.640625,
+                "width": 206.046875,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 298.015625,
+                "bottom": 724.234375,
+                "left": 91.96875
+              },
+              "to": {
+                "x": 132.203125,
+                "y": 705.640625,
+                "width": 125.578125,
+                "height": 18.59375,
+                "top": 705.640625,
+                "right": 257.78125,
+                "bottom": 724.234375,
+                "left": 132.203125
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 4775.800000000745,
+      "load": 5087.5999999996275,
+      "lcp": 2360,
+      "cls": 0.2401149682982361,
+      "longTasks": [
+        168,
+        203
+      ],
+      "resourceBodyBytes": 866810,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 2360,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "home",
+      "repeat": 3,
+      "label": "after",
+      "ready": 4160.300000000745,
+      "layoutShifts": [],
+      "dcl": 4160.5999999996275,
+      "load": 5070.199999999255,
+      "lcp": 1936,
+      "cls": 0,
+      "longTasks": [
+        166,
+        197
+      ],
+      "resourceBodyBytes": 868986,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        }
+      ],
+      "fcp": 1936,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 1,
+      "label": "before",
+      "ready": 4929.700000001118,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 4930.4000000003725,
+      "load": 5950,
+      "lcp": 5552,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        314,
+        365
+      ],
+      "resourceBodyBytes": 1058954,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 2472,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 1,
+      "label": "after",
+      "ready": 3172.300000000745,
+      "layoutShifts": [],
+      "dcl": 3172.9000000003725,
+      "load": 4217.10000000149,
+      "lcp": 3492,
+      "cls": 0,
+      "longTasks": [
+        275
+      ],
+      "resourceBodyBytes": 590764,
+      "art": [
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1720,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 2,
+      "label": "after",
+      "ready": 3156.0999999996275,
+      "layoutShifts": [],
+      "dcl": 3156.199999999255,
+      "load": 4188.9000000003725,
+      "lcp": 3476,
+      "cls": 0,
+      "longTasks": [
+        284
+      ],
+      "resourceBodyBytes": 590764,
+      "art": [
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1700,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 2,
+      "label": "before",
+      "ready": 4478.0999999996275,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 4478.5999999996275,
+      "load": 5846.300000000745,
+      "lcp": 5012,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        293,
+        121
+      ],
+      "resourceBodyBytes": 1058954,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 2064,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 3,
+      "label": "before",
+      "ready": 4889.700000001118,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 4890.300000000745,
+      "load": 5906,
+      "lcp": 5216,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        310,
+        190
+      ],
+      "resourceBodyBytes": 1058954,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 2444,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "construction",
+      "repeat": 3,
+      "label": "after",
+      "ready": 3282,
+      "layoutShifts": [],
+      "dcl": 3283,
+      "load": 4310.299999998882,
+      "lcp": 3588,
+      "cls": 0,
+      "longTasks": [
+        320
+      ],
+      "resourceBodyBytes": 590764,
+      "art": [
+        {
+          "file": "sector-space-v1.webp",
+          "bodyBytes": 22696
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1760,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 1,
+      "label": "before",
+      "ready": 4757.9000000003725,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 4758.299999998882,
+      "load": 6108.699999999255,
+      "lcp": 5696,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        206,
+        170
+      ],
+      "resourceBodyBytes": 1117808,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 2428,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 1,
+      "label": "after",
+      "ready": 3021,
+      "layoutShifts": [],
+      "dcl": 3021.10000000149,
+      "load": 4392.60000000149,
+      "lcp": 3964,
+      "cls": 0,
+      "longTasks": [
+        196
+      ],
+      "resourceBodyBytes": 649618,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1644,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 2,
+      "label": "after",
+      "ready": 3062,
+      "layoutShifts": [],
+      "dcl": 3062.4000000003725,
+      "load": 4456.300000000745,
+      "lcp": 4340,
+      "cls": 0,
+      "longTasks": [
+        240,
+        80
+      ],
+      "resourceBodyBytes": 649618,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 1644,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 2,
+      "label": "before",
+      "ready": 30581.5,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 30581.800000000745,
+      "load": 32088.800000000745,
+      "lcp": 31576,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        87,
+        110
+      ],
+      "resourceBodyBytes": 1117808,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 19276,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 3,
+      "label": "before",
+      "ready": 5262.0999999996275,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 5262.199999999255,
+      "load": 7722.5,
+      "lcp": 8156,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        151,
+        95
+      ],
+      "resourceBodyBytes": 1117808,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 2204,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "research",
+      "repeat": 3,
+      "label": "after",
+      "ready": 3498.7999999988824,
+      "layoutShifts": [],
+      "dcl": 3498.9000000003725,
+      "load": 5193.0999999996275,
+      "lcp": 4944,
+      "cls": 0,
+      "longTasks": [
+        78
+      ],
+      "resourceBodyBytes": 649618,
+      "art": [
+        {
+          "file": "research-observatory-v1.webp",
+          "bodyBytes": 81550
+        },
+        {
+          "file": "facilities-v2.webp",
+          "bodyBytes": 169448
+        }
+      ],
+      "fcp": 3012,
+      "inputDoubleRAF": []
+    },
+    {
+      "view": "command",
+      "repeat": 1,
+      "label": "before",
+      "ready": 5201.0999999996275,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 5201.300000000745,
+      "load": 7088.4000000003725,
+      "lcp": 6668,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        50,
+        578,
+        262
+      ],
+      "resourceBodyBytes": 1259110,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "fcp": 2696,
+      "inputDoubleRAF": [
+        48.899999998509884,
+        59.5,
+        38.40000000037253,
+        28.100000001490116,
+        21.699999999254942,
+        40.20000000111759
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 1,
+      "label": "after",
+      "ready": 2921.7000000011176,
+      "layoutShifts": [],
+      "dcl": 2922.10000000149,
+      "load": 4555.4000000003725,
+      "lcp": 4588,
+      "cls": 0,
+      "longTasks": [
+        107
+      ],
+      "resourceBodyBytes": 700058,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 1536,
+      "inputDoubleRAF": [
+        20,
+        24.59999999962747,
+        21.40000000037253,
+        24.5,
+        21.799999998882413,
+        18.199999999254942
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 2,
+      "label": "after",
+      "ready": 6355.800000000745,
+      "layoutShifts": [],
+      "dcl": 6356,
+      "load": 6358.699999999255,
+      "lcp": 6744,
+      "cls": 0,
+      "longTasks": [
+        3344
+      ],
+      "resourceBodyBytes": 700058,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 1808,
+      "inputDoubleRAF": [
+        66.59999999962747,
+        157.69999999925494,
+        7.400000000372529,
+        108.20000000111759,
+        23.5,
+        19.200000001117587
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 2,
+      "label": "before",
+      "ready": 5618,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 5618.0999999996275,
+      "load": 7362.5999999996275,
+      "lcp": 6948,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        92,
+        51,
+        484,
+        64,
+        115,
+        680,
+        199,
+        299
+      ],
+      "resourceBodyBytes": 1259110,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "fcp": 2960,
+      "inputDoubleRAF": [
+        32.69999999925494,
+        37.59999999962747,
+        31,
+        34,
+        34.5,
+        26.299999998882413
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 3,
+      "label": "before",
+      "ready": 5133.200000001118,
+      "layoutShifts": [
+        {
+          "value": 0.05416545001235372,
+          "sources": [
+            {
+              "node": "main",
+              "from": {
+                "x": 0,
+                "y": 102,
+                "width": 390,
+                "height": 742,
+                "top": 102,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              },
+              "to": {
+                "x": 0,
+                "y": 154,
+                "width": 390,
+                "height": 690,
+                "top": 154,
+                "right": 390,
+                "bottom": 844,
+                "left": 0
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 327.390625,
+                "y": 801.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 363.390625,
+                "bottom": 819.796875,
+                "left": 327.390625
+              },
+              "to": {
+                "x": 327.390625,
+                "y": 811.203125,
+                "width": 36,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 363.390625,
+                "bottom": 829.796875,
+                "left": 327.390625
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 107.78125,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 131.78125,
+                "bottom": 819.796875,
+                "left": 107.78125
+              },
+              "to": {
+                "x": 107.78125,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 131.78125,
+                "bottom": 829.796875,
+                "left": 107.78125
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 182.984375,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 206.984375,
+                "bottom": 819.796875,
+                "left": 182.984375
+              },
+              "to": {
+                "x": 182.984375,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 206.984375,
+                "bottom": 829.796875,
+                "left": 182.984375
+              }
+            },
+            {
+              "node": "",
+              "from": {
+                "x": 258.1875,
+                "y": 801.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 801.203125,
+                "right": 282.1875,
+                "bottom": 819.796875,
+                "left": 258.1875
+              },
+              "to": {
+                "x": 258.1875,
+                "y": 811.203125,
+                "width": 24,
+                "height": 18.59375,
+                "top": 811.203125,
+                "right": 282.1875,
+                "bottom": 829.796875,
+                "left": 258.1875
+              }
+            }
+          ]
+        }
+      ],
+      "dcl": 5133.300000000745,
+      "load": 7178.200000001118,
+      "lcp": 6892,
+      "cls": 0.05416545001235372,
+      "longTasks": [
+        549,
+        317
+      ],
+      "resourceBodyBytes": 1259110,
+      "art": [
+        {
+          "file": "nova-albedo-v2.webp",
+          "bodyBytes": 248906
+        },
+        {
+          "file": "nova-clouds-v1.webp",
+          "bodyBytes": 221460
+        },
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v1.webp",
+          "bodyBytes": 239316
+        }
+      ],
+      "fcp": 2436,
+      "inputDoubleRAF": [
+        19.300000000745058,
+        6.5,
+        19.199999999254942,
+        23.699999999254942,
+        19.299999998882413,
+        25.09999999962747
+      ]
+    },
+    {
+      "view": "command",
+      "repeat": 3,
+      "label": "after",
+      "ready": 14249.099999999627,
+      "layoutShifts": [],
+      "dcl": 14249.200000001118,
+      "load": 16049.800000000745,
+      "lcp": 17584,
+      "cls": 0,
+      "longTasks": [
+        158
+      ],
+      "resourceBodyBytes": 700058,
+      "art": [
+        {
+          "file": "orbital-hangar-v1.webp",
+          "bodyBytes": 152984
+        },
+        {
+          "file": "fleet-roster-v2.webp",
+          "bodyBytes": 148454
+        }
+      ],
+      "fcp": 1988,
+      "inputDoubleRAF": [
+        16.199999999254942,
+        21.5,
+        16.699999999254942,
+        15.800000000745058,
+        22.199999999254942,
+        17.59999999962747
+      ]
+    }
+  ],
+  "summary": {
+    "home": {
+      "before": {
+        "ready": 5591.0999999996275,
+        "fcp": 2360,
+        "dcl": 5591.200000001118,
+        "load": 6079.4000000003725,
+        "lcp": 2360,
+        "cls": 0.2401149682982361,
+        "resourceBodyBytes": 866810
+      },
+      "after": {
+        "ready": 4921,
+        "fcp": 1936,
+        "dcl": 4921.39999999851,
+        "load": 5319.5,
+        "lcp": 1936,
+        "cls": 0,
+        "resourceBodyBytes": 868986
+      }
+    },
+    "construction": {
+      "before": {
+        "ready": 4889.700000001118,
+        "fcp": 2444,
+        "dcl": 4890.300000000745,
+        "load": 5906,
+        "lcp": 5216,
+        "cls": 0.05416545001235372,
+        "resourceBodyBytes": 1058954
+      },
+      "after": {
+        "ready": 3172.300000000745,
+        "fcp": 1720,
+        "dcl": 3172.9000000003725,
+        "load": 4217.10000000149,
+        "lcp": 3492,
+        "cls": 0,
+        "resourceBodyBytes": 590764
+      }
+    },
+    "research": {
+      "before": {
+        "ready": 5262.0999999996275,
+        "fcp": 2428,
+        "dcl": 5262.199999999255,
+        "load": 7722.5,
+        "lcp": 8156,
+        "cls": 0.05416545001235372,
+        "resourceBodyBytes": 1117808
+      },
+      "after": {
+        "ready": 3062,
+        "fcp": 1644,
+        "dcl": 3062.4000000003725,
+        "load": 4456.300000000745,
+        "lcp": 4340,
+        "cls": 0,
+        "resourceBodyBytes": 649618
+      }
+    },
+    "command": {
+      "before": {
+        "ready": 5201.0999999996275,
+        "fcp": 2696,
+        "dcl": 5201.300000000745,
+        "load": 7178.200000001118,
+        "lcp": 6892,
+        "cls": 0.05416545001235372,
+        "resourceBodyBytes": 1259110,
+        "inputMedian": 29.550000000745058,
+        "inputP95": 59.5
+      },
+      "after": {
+        "ready": 6355.800000000745,
+        "fcp": 1808,
+        "dcl": 6356,
+        "load": 6358.699999999255,
+        "lcp": 6744,
+        "cls": 0,
+        "resourceBodyBytes": 700058,
+        "inputMedian": 21.450000000186265,
+        "inputP95": 157.69999999925494
+      }
+    }
+  },
+  "passed": true
+}

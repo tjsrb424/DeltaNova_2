@@ -24,6 +24,7 @@ let operationsUI = initialOperations();
 let allianceUI = initialAlliance();
 let strategyUI = initialStrategy();
 let panel = null, opener = null, retryTimer, selectedFacility = 'fuelRefinery', view = 'home', navigationController;
+let demoReady=false,planetRenderKey;
 const screenMemory = new Map();
 const dialog = $('detail-dialog');
 const demoEvents = new window.AbortController();
@@ -50,6 +51,18 @@ function resolveBookmark(saved) {
   return [...scope.querySelectorAll('button,input,select,a')].filter(available).find(el => saved.label ? el.getAttribute('aria-label') === saved.label : saved.workspaceFacility ? el.dataset.workspaceFacility === saved.workspaceFacility : saved.facility ? el.dataset.facility === saved.facility : saved.view ? el.dataset.view === saved.view : saved.panel && el.dataset.panel === saved.panel) || null;
 }
 function announce(text) { $('announcement').textContent = text; }
+// Hidden workspaces do not allocate a WebGL scene or fetch its textures.
+function renderVisiblePlanet(){
+  if(!demoReady||view!=='home')return;
+  const p=planet(),key=JSON.stringify([p.id,p.facilities]);
+  if(key===planetRenderKey){syncPlanetMotion($('planet-canvas'));return;}
+  planetRenderKey=key;const started=performance.now();
+  $('planet-scene').setAttribute('aria-busy','true');
+  drawPlanet($('planet-canvas'),p).then(()=>{
+    performance.measure('planet-render',{start:started,end:performance.now()});
+    if(planetRenderKey===key)$('planet-scene').setAttribute('aria-busy','false');
+  });
+}
 function act(action) {
   if(action.type==='reset')strategyUI=initialStrategy();
   else if(action.type==='select'||action.type==='connection'&&action.value!=='ready')strategyUI=transitionStrategy(strategyUI,{type:'cancel-review'},state);
@@ -103,12 +116,7 @@ function render() {
   $('surface-markers').innerHTML = Array.from({length: v.industry + v.power + v.research}, (_,i) => { const [x,y]=districts[i%districts.length]; return `<i class="surface-marker" style="left:${x}%;top:${y}%;rotate:${i*19}deg"></i>`; }).join('');
   $('planet-scene').setAttribute('aria-label', p.name + ' 시설 개요 열기');
   $('planet-visual-description').textContent = '예시 시설. ' + Object.entries(p.facilities).map(([key,level]) => facilityNames[key] + ' 수준 ' + level).join(', ') + '. 시설 표식을 선택하면 증설 전후를 비교할 수 있습니다.';
-  const renderingStarted = performance.now();
-  $('planet-scene').setAttribute('aria-busy', 'true');
-  drawPlanet($('planet-canvas'), p).then(() => {
-    performance.measure('planet-render', { start: renderingStarted, end: performance.now() });
-    if (planet().id === p.id) $('planet-scene').setAttribute('aria-busy', 'false');
-  });
+
   $('planet-status').className = 'status-pill' + (state.threat?.planetId === p.id ? ' danger' : '');
   $('planet-status').textContent = state.threat?.planetId === p.id ? '△ 적 접근 · 예시' : '● 평시 · 예시';
   document.querySelectorAll('[data-state]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.state === (state.threat ? 'threat' : state.notice ? 'complete' : 'idle'))));
@@ -155,7 +163,7 @@ function renderCurrentWorkspace() {
     if (active) button.setAttribute('aria-current','page'); else button.removeAttribute('aria-current');
   });
   document.title = 'DELTA NOVA — ' + (workspaceTitles[view] || '행성 관제') + ' · UI/UX Demo';
-  if (home) return;
+  if (home){renderVisiblePlanet();return;}
   const strategyPlan=view==='command'?strategySummary(strategyUI,state):null;
   $('workspace-title').textContent = strategyPlan?.target ? strategyPlan.target.name+' '+({attack:'공격',scout:'정찰',move:'이동',reinforce:'증원'}[strategyUI.intent]) : workspaceTitles[view];
   $('workspace-planet').textContent = planet().name + ' · 예시 스냅샷';
@@ -210,7 +218,12 @@ function changeStrategy(action){
   }else if(['advance','recall'].includes(action.type)){
     const focus=bookmark(document.activeElement),scroll=window.scrollY;renderCurrentWorkspace();
     const orderElement=$('strategy-order-'+action.id);
-    if(before.orders.find(o=>o.id===action.id)?.phase!==strategyUI.orders.find(o=>o.id===action.id)?.phase)orderElement?.classList.add('dn-phase-changed');
+    const oldOrder=before.orders.find(o=>o.id===action.id),order=strategyUI.orders.find(o=>o.id===action.id);
+    if(oldOrder?.phase!==order?.phase){
+      orderElement?.classList.add('dn-phase-changed');
+      const phase={waiting:'출발 대기',outbound:'목표로 이동 중',arrived:'목표 도착',deployed:'현지 주둔 중',returning:'귀환 중',complete:'귀환 완료'}[order.phase];
+      announce(`${order.targetName} ${order.total}척, ${phase} 시연입니다. 실제 자산은 변경되지 않았습니다.`);
+    }
     const fallback=orderElement?.querySelector('h3');fallback?.setAttribute('tabindex','-1');
     (resolveBookmark(focus)||fallback)?.focus({preventScroll:true});window.scrollTo({top:scroll,behavior:'instant'});
   }else {
@@ -219,6 +232,7 @@ function changeStrategy(action){
       const art=document.querySelector(`[data-strategy-ship="${action.id}"] .sc-ship-art`);
       if(art){art.classList.remove('sc-edited');void art.offsetWidth;art.classList.add('sc-edited');}
     }
+    if(['quantity','delay'].includes(action.type)&&strategyUI!==before){const summary=strategySummary(strategyUI,state);announce(`편성 ${summary.total}척, 지휘 ${summary.command} / 12. ${summary.errors.length?summary.errors.map(e=>e.text).join(' '):'명령 확인이 가능합니다. 실제 출항은 시연에서만 진행합니다.'}`);}
     if(action.type==='clear')announce('함대 편성을 비웠습니다. 함종과 수량을 다시 선택하세요.');
   }
 }
@@ -551,6 +565,7 @@ hydrateIcons();
 render();
 navigationController=createDemoNavigation(applyNavigation,{views:Object.keys(workspaceTitles),details:['resources','planet','fleet','research','reports','threat','recon','intel','settings'],targets:galaxyTargets.map(target=>target.id),missions:missions.map(mission=>mission.id),roles:allianceRoles.map(role=>role.id)});
 syncStrategyRoute();
+demoReady=true;renderVisiblePlanet();
 const sidebar=document.querySelector('.sidebar');
 const navigationSize=new ResizeObserver(()=>{
   document.documentElement.style.setProperty('--dn-nav-clearance',Math.ceil(sidebar.getBoundingClientRect().height+6)+'px');

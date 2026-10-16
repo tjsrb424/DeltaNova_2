@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-16T05:10:17.718Z",
+  "branch": "codex/demo-visual-unification",
+  "baseline": "e0f9e279c3b66bcb62b4cb6690bf1e0aed050667",
+  "commands": [
+    {
+      "command": "npx vitest run --maxWorkers=1 --testTimeout=30000 --hookTimeout=30000 --reporter=default --reporter=json --outputFile.json=.delta-nova/mobile-final-tests.json",
+      "exitCode": 0,
+      "testFiles": 32,
+      "passed": 326,
+      "failed": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0,
+      "output": "TypeScript noEmit and Vite build passed;63 modules."
+    },
+    {
+      "command": "npm run verify:build",
+      "exitCode": 0,
+      "output": "Built HTML/JS/CSS/orbital art/planet scene/facility atlas served over loopback HTTP."
+    },
+    {
+      "command": "node tools/verify-demo-mobile-a11y.mjs",
+      "root": "dist",
+      "exitCode": 0,
+      "checks": 11,
+      "axViews": 15,
+      "focusConditions": 24,
+      "fleetWidths": 11
+    },
+    {
+      "command": "node tools/verify-uiux-polish.mjs",
+      "root": "dist",
+      "exitCode": 0,
+      "checks": 35,
+      "layouts": 15
+    },
+    {
+      "command": "node tools/verify-free-fleet.mjs",
+      "root": "public",
+      "exitCode": 0,
+      "checks": 14,
+      "layouts": 8
+    },
+    {
+      "command": "node tools/verify-visual-unification.mjs",
+      "root": "dist",
+      "exitCode": 0,
+      "checks": 11,
+      "layouts": 120,
+      "textLayouts": 45
+    },
+    {
+      "command": "node tools/profile-demo-loading.mjs",
+      "root": "public",
+      "exitCode": 0,
+      "views": 4,
+      "coldLoads": 24,
+      "note": "Runtime/integrity assertions passed. Timing has large variance and command regressions; see analysis, not a performance threshold pass."
+    }
+  ],
+  "scope": {
+    "productionCodeChanged": false,
+    "gameModelChanged": false,
+    "dependenciesChanged": false,
+    "apiIntegration": false,
+    "productionUiReplacement": false,
+    "mainMerged": false,
+    "originalCheckout": {
+      "path": "D:/kim_dev/DeltaNova",
+      "branch": "codex/uiux-refoundation",
+      "sha": "91cf86ec5be9c39f08a3e1748ece1770fb567aff",
+      "clean": true
+    }
+  },
+  "liveDemo": {
+    "url": "http://127.0.0.1:5181/uiux-demo/index.html",
+    "asset": "fleet-roster-v2.webp",
+    "httpStatus": 200,
+    "bytes": 148454,
+    "sha256": "43a2e7b330652f7522cb3989eb62a2553145ecd5b1c10d5fbef22603d4ae04af"
+  },
+  "limitations": [
+    "No physical device, spoken screen reader, real INP or power test.",
+    "Art scores subjective and for160px cards.",
+    "Startup shift sum is not session-window CLS.",
+    "Command ready median/input p95 worsened in final throttled batch; source of variance not isolated."
+  ]
+}

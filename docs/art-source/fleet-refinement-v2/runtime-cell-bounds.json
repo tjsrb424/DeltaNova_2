@@ -1,0 +1,78 @@
+{
+  "cell": 400,
+  "alphaThreshold": 32,
+  "bounds": [
+    {
+      "name": "striker",
+      "left": 80,
+      "top": 127,
+      "right": 331,
+      "bottom": 331,
+      "edgePixels": 0,
+      "minMargin": 68
+    },
+    {
+      "name": "guardian",
+      "left": 63,
+      "top": 127,
+      "right": 337,
+      "bottom": 334,
+      "edgePixels": 0,
+      "minMargin": 62
+    },
+    {
+      "name": "siege",
+      "left": 54,
+      "top": 124,
+      "right": 321,
+      "bottom": 330,
+      "edgePixels": 0,
+      "minMargin": 54
+    },
+    {
+      "name": "support",
+      "left": 65,
+      "top": 138,
+      "right": 302,
+      "bottom": 329,
+      "edgePixels": 0,
+      "minMargin": 65
+    },
+    {
+      "name": "salvage",
+      "left": 63,
+      "top": 103,
+      "right": 314,
+      "bottom": 307,
+      "edgePixels": 0,
+      "minMargin": 63
+    },
+    {
+      "name": "scout",
+      "left": 95,
+      "top": 112,
+      "right": 334,
+      "bottom": 289,
+      "edgePixels": 0,
+      "minMargin": 65
+    },
+    {
+      "name": "jammer",
+      "left": 89,
+      "top": 97,
+      "right": 319,
+      "bottom": 284,
+      "edgePixels": 0,
+      "minMargin": 80
+    },
+    {
+      "name": "carrier",
+      "left": 53,
+      "top": 94,
+      "right": 316,
+      "bottom": 311,
+      "edgePixels": 0,
+      "minMargin": 53
+    }
+  ]
+}

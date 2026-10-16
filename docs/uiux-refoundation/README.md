@@ -2,13 +2,15 @@
 
 사용자 요청일: 2026-10-15. 방향: **Minimal Galactic Command**.
 
-**최신 후속 · 2026-10-16:** [전체 데모 그래픽·네온 출항 설계](./VISUAL_UNIFICATION_PLAN.md), [평가·검수](./VISUAL_UNIFICATION_REVIEW.md), [실제 화면](../qa/2026-10-16-visual-unification/README.md). 현재 브랜치는 `codex/demo-visual-unification`이며 데이터/운영 이관은 보류한다. [다른 PC에서 이어가기](./HANDOFF.md) 맨 위를 사용한다.
+**최신 후속 · 2026-10-16:** [모바일·접근성·로딩·기존 함선 평가](./MOBILE_A11Y_LOADING_REVIEW.md), [검증 원문·실제 화면](../qa/2026-10-16-mobile-a11y-loading/README.md). 같은 `codex/demo-visual-unification` 브랜치. [이어가기](./HANDOFF.md) 맨 위를 사용한다.
+
+**이전 전체 화면 후속 · 2026-10-16:** [전체 데모 그래픽·네온 출항 설계](./VISUAL_UNIFICATION_PLAN.md), [평가·검수](./VISUAL_UNIFICATION_REVIEW.md), [실제 화면](../qa/2026-10-16-visual-unification/README.md). 현재 브랜치는 `codex/demo-visual-unification`이며 데이터/운영 이관은 보류한다. [다른 PC에서 이어가기](./HANDOFF.md) 맨 위를 사용한다.
 
 **이전 자유 함대 작업:** [자유 함대 편성·함선 아트·모션 설계](./FREE_FLEET_DESIGN.md), [최신 검수/평가](./FREE_FLEET_REVIEW.md). 해당 이력 브랜치는 `codex/free-fleet-visuals`이며 명령 화면은 빈 편성에서 시작한다. [다른 PC에서 이어가기](./HANDOFF.md)의 맨 위 안내를 사용한다.
 
 **다른 PC/새 세션에서 재개:** [HANDOFF — 브랜치·설치·검사·승인 범위·다음 작업](./HANDOFF.md). 사용자 원본 킷과 원본 행성 PNG도 저장소에 포함했다.
 
-현재 실행 중인 개발 서버에서 [독립 화면 열기](http://127.0.0.1:5173/uiux-demo/index.html). Vite는 `/uiux-demo/`를 기존 앱으로 처리할 수 있으므로 반드시 **index.html까지** 입력한다.
+현재 실행 중인 개발 서버에서 [독립 화면 열기](http://127.0.0.1:5181/uiux-demo/index.html). Vite는 `/uiux-demo/`를 기존 앱으로 처리할 수 있으므로 반드시 **index.html까지** 입력한다.
 
 - [기존 UI 진단](./UI_AUDIT.md)
 - [프로젝트에 맞춘 디자인 바이블](./DESIGN_BIBLE_REVISED.md)

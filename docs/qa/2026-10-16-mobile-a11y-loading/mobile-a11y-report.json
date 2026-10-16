@@ -1,0 +1,1454 @@
+{
+  "date": "2026-10-16T05:04:09.849Z",
+  "root": "C:\\Users\\delic\\.codex\\worktrees\\free-fleet-visuals\\DeltaNova\\dist",
+  "checks": [
+    {
+      "name": "reviewed source bundle hashes and displayed fleet atlas match the adopted art",
+      "passed": true
+    },
+    {
+      "name": "each view exposes one main, one named navigation, one h1 and named controls in Chromium AX",
+      "passed": true
+    },
+    {
+      "name": "quantity fields expose available inventory and global limits as AX descriptions",
+      "passed": true
+    },
+    {
+      "name": "editing announces exact composition and actionable invalid limits without moving focus",
+      "passed": true
+    },
+    {
+      "name": "explicit departure phases are announced as local previews",
+      "passed": true
+    },
+    {
+      "name": "focused numeric fields remain unobscured at reduced mobile heights and doubled text",
+      "passed": true
+    },
+    {
+      "name": "mobile summary remains anchored to the viewport after target navigation and scrolling",
+      "passed": true
+    },
+    {
+      "name": "skip link and native dialog keyboard trap preserve focus under forced colors",
+      "passed": true
+    },
+    {
+      "name": "direct non-planet screens do not fetch hidden WebGL albedo or cloud textures",
+      "passed": true
+    },
+    {
+      "name": "reviewed fleet silhouettes fit their art panels and remain160px across desktop and mobile cards",
+      "passed": true
+    },
+    {
+      "name": "script errors and game API mutations remain absent",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "mutations": [],
+  "axViews": [
+    {
+      "view": "home",
+      "controls": 30,
+      "unnamed": []
+    },
+    {
+      "view": "construction",
+      "controls": 20,
+      "unnamed": []
+    },
+    {
+      "view": "research",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "fleet",
+      "controls": 25,
+      "unnamed": []
+    },
+    {
+      "view": "defense",
+      "controls": 24,
+      "unnamed": []
+    },
+    {
+      "view": "evasion",
+      "controls": 22,
+      "unnamed": []
+    },
+    {
+      "view": "career",
+      "controls": 27,
+      "unnamed": []
+    },
+    {
+      "view": "galaxy",
+      "controls": 42,
+      "unnamed": []
+    },
+    {
+      "view": "guild",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "reports",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "practice",
+      "controls": 52,
+      "unnamed": []
+    },
+    {
+      "view": "more",
+      "controls": 28,
+      "unnamed": []
+    },
+    {
+      "view": "diplomacy",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "rankings",
+      "controls": 21,
+      "unnamed": []
+    },
+    {
+      "view": "command",
+      "controls": 49,
+      "unnamed": []
+    }
+  ],
+  "focusChecks": [
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 487.5625,
+      "bottom": 531.5625,
+      "limit": 704,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 488.109375,
+      "bottom": 532.109375,
+      "limit": 704,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 488.171875,
+      "bottom": 532.171875,
+      "limit": 704,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 382.125,
+      "bottom": 435.71875,
+      "limit": 608,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 382.09375,
+      "bottom": 435.6875,
+      "limit": 608,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 382.71875,
+      "bottom": 436.3125,
+      "limit": 608,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 211.765625,
+      "bottom": 255.765625,
+      "limit": 428,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 212,
+      "bottom": 256,
+      "limit": 428,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 212.3125,
+      "bottom": 256.3125,
+      "limit": 428,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 105.90625,
+      "bottom": 159.5,
+      "limit": 332,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 106.203125,
+      "bottom": 159.796875,
+      "limit": 332,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 106.265625,
+      "bottom": 159.859375,
+      "limit": 332,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 147.5625,
+      "bottom": 191.5625,
+      "limit": 358,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 148.109375,
+      "bottom": 192.109375,
+      "limit": 358,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 148.171875,
+      "bottom": 192.171875,
+      "limit": 358,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 86.125,
+      "bottom": 139.71875,
+      "limit": 306.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 86.09375,
+      "bottom": 139.6875,
+      "limit": 306.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "height": 430,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 86.71875,
+      "bottom": 140.3125,
+      "limit": 306.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": false,
+      "id": "strategy-count-striker",
+      "top": 107.765625,
+      "bottom": 151.765625,
+      "limit": 318,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": false,
+      "id": "strategy-count-support",
+      "top": 108,
+      "bottom": 152,
+      "limit": 318,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": false,
+      "id": "strategy-count-carrier",
+      "top": 108.3125,
+      "bottom": 152.3125,
+      "limit": 318,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": true,
+      "id": "strategy-count-striker",
+      "top": 45.90625,
+      "bottom": 99.5,
+      "limit": 266.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": true,
+      "id": "strategy-count-support",
+      "top": 46.203125,
+      "bottom": 99.796875,
+      "limit": 266.625,
+      "topLimit": 0,
+      "overflow": false
+    },
+    {
+      "width": 320,
+      "height": 390,
+      "doubled": true,
+      "id": "strategy-count-carrier",
+      "top": 46.265625,
+      "bottom": 99.859375,
+      "limit": 266.625,
+      "topLimit": 0,
+      "overflow": false
+    }
+  ],
+  "limitations": [
+    "Chromium emulation, not a physical phone or spoken screen reader."
+  ],
+  "inspectedFiles": [
+    {
+      "file": "index.html",
+      "sha256": "8173d4adc151291c6e2d654152954acd7adbf5957e70921edc7d283a9699595d"
+    },
+    {
+      "file": "main.js",
+      "sha256": "9573185ce13b0e81c9b25db45d6a7b1f1193f29521ef68ae1cec9a9952fb68eb"
+    },
+    {
+      "file": "refinement.css",
+      "sha256": "2d525bf3b5ccd324be523374fd4aef946f3965eebd8c0cfc44401b3e1d2cc8f0"
+    },
+    {
+      "file": "strategy.js",
+      "sha256": "e03e1542c599d7070419d7c923974ac2ee531de590f0287f878863159599bda5"
+    },
+    {
+      "file": "strategy.css",
+      "sha256": "c1ae963ee7bf5f16e7d5fc367c49848b6e4e8f0767c8da777f2b0a573db606ee"
+    },
+    {
+      "file": "visuals.css",
+      "sha256": "2c74904dc490825b0f55b46aa16439fad22e0a39bc41a1cbde8410c9b7358746"
+    },
+    {
+      "file": "art/fleet-roster-v2.webp",
+      "sha256": "43a2e7b330652f7522cb3989eb62a2553145ecd5b1c10d5fbef22603d4ae04af"
+    }
+  ],
+  "browser": "155.0.8059.80",
+  "artGate": {
+    "date": "2026-10-16",
+    "basis": "Subjective internal native,120/160px and real-card review; not AI detection or user approval.",
+    "thresholdStrictlyAbove": 9.5,
+    "weights": {
+      "structure": 3,
+      "cleanliness": 2,
+      "consistency": 2,
+      "targetSize": 2,
+      "alphaAndCost": 1
+    },
+    "baseline": "e0f9e279c3b66bcb62b4cb6690bf1e0aed050667",
+    "oldRoster": [
+      {
+        "id": "striker",
+        "parts": [
+          2.8,
+          1.8,
+          1.95,
+          1.8,
+          0.95
+        ],
+        "score": 9.3,
+        "status": "requires-revision"
+      },
+      {
+        "id": "guardian",
+        "parts": [
+          2.75,
+          1.75,
+          1.95,
+          1.8,
+          0.95
+        ],
+        "score": 9.2,
+        "status": "requires-revision"
+      },
+      {
+        "id": "siege",
+        "parts": [
+          2.7,
+          1.65,
+          1.95,
+          1.75,
+          0.95
+        ],
+        "score": 9,
+        "status": "requires-revision"
+      },
+      {
+        "id": "support",
+        "parts": [
+          2.6,
+          1.6,
+          1.95,
+          1.8,
+          0.95
+        ],
+        "score": 8.9,
+        "status": "requires-revision"
+      },
+      {
+        "id": "salvage",
+        "parts": [
+          2.7,
+          1.7,
+          1.95,
+          1.85,
+          0.75
+        ],
+        "score": 8.95,
+        "status": "requires-revision"
+      },
+      {
+        "id": "scout",
+        "parts": [
+          2.9,
+          1.9,
+          1.95,
+          1.9,
+          0.95
+        ],
+        "score": 9.6,
+        "status": "retainable"
+      },
+      {
+        "id": "jammer",
+        "parts": [
+          2.6,
+          1.6,
+          1.95,
+          1.7,
+          0.95
+        ],
+        "score": 8.8,
+        "status": "requires-revision"
+      },
+      {
+        "id": "carrier",
+        "parts": [
+          2.85,
+          1.8,
+          1.95,
+          1.95,
+          0.65
+        ],
+        "score": 9.2,
+        "status": "requires-revision"
+      }
+    ],
+    "candidates": [
+      {
+        "file": "roster-clean-candidate.png",
+        "status": "rejected-layout",
+        "notes": "Geometry cleaned but insufficient safe padding."
+      },
+      {
+        "file": "roster-padded-candidate.png",
+        "status": "approved-for-160px-cards",
+        "runtime": "public/uiux-demo/art/fleet-roster-v2.webp",
+        "parts": [
+          {
+            "id": "striker",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "guardian",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "siege",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "support",
+            "parts": [
+              2.85,
+              1.95,
+              1.95,
+              1.9,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "salvage",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.9,
+              0.95
+            ],
+            "score": 9.65
+          },
+          {
+            "id": "scout",
+            "parts": [
+              2.95,
+              1.95,
+              1.95,
+              1.9,
+              0.95
+            ],
+            "score": 9.7
+          },
+          {
+            "id": "jammer",
+            "parts": [
+              2.9,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.6
+          },
+          {
+            "id": "carrier",
+            "parts": [
+              2.95,
+              1.95,
+              1.95,
+              1.85,
+              0.95
+            ],
+            "score": 9.65
+          }
+        ],
+        "conditions": "160px image frames; opaque hull stays inside its panel across11 viewport widths."
+      }
+    ],
+    "retainedHangar": {
+      "source": "../free-fleet-v1/orbital-hangar-v1.png",
+      "runtime": "public/uiux-demo/art/orbital-hangar-v1.webp",
+      "parts": [
+        2.9,
+        1.85,
+        1.95,
+        1.95,
+        0.95
+      ],
+      "score": 9.6,
+      "status": "retained"
+    },
+    "runtimeBytes": {
+      "before": 239316,
+      "after": 148454,
+      "saved": 90862
+    }
+  },
+  "axInputs": [
+    {
+      "role": "spinbutton",
+      "name": "케스트럴 편성 수량",
+      "description": "타격 · 가용 3척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 3
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-striker strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12408,
+                "idref": "strategy-available-striker"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12423,
+                "text": "케스트럴 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "spinbutton",
+      "name": "바스티온 편성 수량",
+      "description": "호위 · 가용 1척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-guardian strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12440,
+                "idref": "strategy-available-guardian"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12455,
+                "text": "바스티온 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "spinbutton",
+      "name": "랜서 편성 수량",
+      "description": "공성 · 가용 1척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-siege strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12472,
+                "idref": "strategy-available-siege"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12487,
+                "text": "랜서 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "spinbutton",
+      "name": "멘더 편성 수량",
+      "description": "수리 · 가용 1척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-support strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12504,
+                "idref": "strategy-available-support"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12519,
+                "text": "멘더 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "spinbutton",
+      "name": "아틀라스 편성 수량",
+      "description": "회수 · 가용 1척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-salvage strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12536,
+                "idref": "strategy-available-salvage"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12551,
+                "text": "아틀라스 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "spinbutton",
+      "name": "위스프 편성 수량",
+      "description": "정찰 · 가용 1척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-scout strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12568,
+                "idref": "strategy-available-scout"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12583,
+                "text": "위스프 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "spinbutton",
+      "name": "베일 편성 수량",
+      "description": "교란 · 가용 1척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-jammer strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12600,
+                "idref": "strategy-available-jammer"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12615,
+                "text": "베일 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "role": "spinbutton",
+      "name": "아크 편성 수량",
+      "description": "항모 · 가용 1척 함선 6척 · 지휘 12 이내 · 보유 함선에서 선택",
+      "value": 0,
+      "properties": [
+        {
+          "name": "invalid",
+          "value": {
+            "type": "token",
+            "value": "false"
+          }
+        },
+        {
+          "name": "focusable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "editable",
+          "value": {
+            "type": "token",
+            "value": "plaintext"
+          }
+        },
+        {
+          "name": "settable",
+          "value": {
+            "type": "booleanOrUndefined",
+            "value": true
+          }
+        },
+        {
+          "name": "required",
+          "value": {
+            "type": "boolean",
+            "value": false
+          }
+        },
+        {
+          "name": "valuemin",
+          "value": {
+            "type": "number",
+            "value": 0
+          }
+        },
+        {
+          "name": "valuemax",
+          "value": {
+            "type": "number",
+            "value": 1
+          }
+        },
+        {
+          "name": "valuetext",
+          "value": {
+            "type": "string",
+            "value": "0"
+          }
+        },
+        {
+          "name": "describedby",
+          "value": {
+            "type": "idrefList",
+            "value": "strategy-available-carrier strategy-clear-note",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12632,
+                "idref": "strategy-available-carrier"
+              },
+              {
+                "backendDOMNodeId": 12393,
+                "idref": "strategy-clear-note"
+              }
+            ]
+          }
+        },
+        {
+          "name": "labelledby",
+          "value": {
+            "type": "nodeList",
+            "relatedNodes": [
+              {
+                "backendDOMNodeId": 12647,
+                "text": "아크 편성 수량"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "fleetBounds": [
+    {
+      "width": 1920,
+      "failures": []
+    },
+    {
+      "width": 1440,
+      "failures": []
+    },
+    {
+      "width": 1152,
+      "failures": []
+    },
+    {
+      "width": 1024,
+      "failures": []
+    },
+    {
+      "width": 839,
+      "failures": []
+    },
+    {
+      "width": 768,
+      "failures": []
+    },
+    {
+      "width": 760,
+      "failures": []
+    },
+    {
+      "width": 390,
+      "failures": []
+    },
+    {
+      "width": 361,
+      "failures": []
+    },
+    {
+      "width": 360,
+      "failures": []
+    },
+    {
+      "width": 320,
+      "failures": []
+    }
+  ],
+  "passed": true
+}

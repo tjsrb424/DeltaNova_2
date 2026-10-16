@@ -1,0 +1,232 @@
+{
+  "date": "2026-10-16",
+  "basis": "Subjective internal native,120/160px and real-card review; not AI detection or user approval.",
+  "thresholdStrictlyAbove": 9.5,
+  "weights": {
+    "structure": 3,
+    "cleanliness": 2,
+    "consistency": 2,
+    "targetSize": 2,
+    "alphaAndCost": 1
+  },
+  "baseline": "e0f9e279c3b66bcb62b4cb6690bf1e0aed050667",
+  "oldRoster": [
+    {
+      "id": "striker",
+      "parts": [
+        2.8,
+        1.8,
+        1.95,
+        1.8,
+        0.95
+      ],
+      "score": 9.3,
+      "status": "requires-revision"
+    },
+    {
+      "id": "guardian",
+      "parts": [
+        2.75,
+        1.75,
+        1.95,
+        1.8,
+        0.95
+      ],
+      "score": 9.2,
+      "status": "requires-revision"
+    },
+    {
+      "id": "siege",
+      "parts": [
+        2.7,
+        1.65,
+        1.95,
+        1.75,
+        0.95
+      ],
+      "score": 9,
+      "status": "requires-revision"
+    },
+    {
+      "id": "support",
+      "parts": [
+        2.6,
+        1.6,
+        1.95,
+        1.8,
+        0.95
+      ],
+      "score": 8.9,
+      "status": "requires-revision"
+    },
+    {
+      "id": "salvage",
+      "parts": [
+        2.7,
+        1.7,
+        1.95,
+        1.85,
+        0.75
+      ],
+      "score": 8.95,
+      "status": "requires-revision"
+    },
+    {
+      "id": "scout",
+      "parts": [
+        2.9,
+        1.9,
+        1.95,
+        1.9,
+        0.95
+      ],
+      "score": 9.6,
+      "status": "retainable"
+    },
+    {
+      "id": "jammer",
+      "parts": [
+        2.6,
+        1.6,
+        1.95,
+        1.7,
+        0.95
+      ],
+      "score": 8.8,
+      "status": "requires-revision"
+    },
+    {
+      "id": "carrier",
+      "parts": [
+        2.85,
+        1.8,
+        1.95,
+        1.95,
+        0.65
+      ],
+      "score": 9.2,
+      "status": "requires-revision"
+    }
+  ],
+  "candidates": [
+    {
+      "file": "roster-clean-candidate.png",
+      "status": "rejected-layout",
+      "notes": "Geometry cleaned but insufficient safe padding."
+    },
+    {
+      "file": "roster-padded-candidate.png",
+      "status": "approved-for-160px-cards",
+      "runtime": "public/uiux-demo/art/fleet-roster-v2.webp",
+      "parts": [
+        {
+          "id": "striker",
+          "parts": [
+            2.9,
+            1.95,
+            1.95,
+            1.85,
+            0.95
+          ],
+          "score": 9.6
+        },
+        {
+          "id": "guardian",
+          "parts": [
+            2.9,
+            1.95,
+            1.95,
+            1.85,
+            0.95
+          ],
+          "score": 9.6
+        },
+        {
+          "id": "siege",
+          "parts": [
+            2.9,
+            1.95,
+            1.95,
+            1.85,
+            0.95
+          ],
+          "score": 9.6
+        },
+        {
+          "id": "support",
+          "parts": [
+            2.85,
+            1.95,
+            1.95,
+            1.9,
+            0.95
+          ],
+          "score": 9.6
+        },
+        {
+          "id": "salvage",
+          "parts": [
+            2.9,
+            1.95,
+            1.95,
+            1.9,
+            0.95
+          ],
+          "score": 9.65
+        },
+        {
+          "id": "scout",
+          "parts": [
+            2.95,
+            1.95,
+            1.95,
+            1.9,
+            0.95
+          ],
+          "score": 9.7
+        },
+        {
+          "id": "jammer",
+          "parts": [
+            2.9,
+            1.95,
+            1.95,
+            1.85,
+            0.95
+          ],
+          "score": 9.6
+        },
+        {
+          "id": "carrier",
+          "parts": [
+            2.95,
+            1.95,
+            1.95,
+            1.85,
+            0.95
+          ],
+          "score": 9.65
+        }
+      ],
+      "conditions": "160px image frames; opaque hull stays inside its panel across11 viewport widths."
+    }
+  ],
+  "retainedHangar": {
+    "source": "../free-fleet-v1/orbital-hangar-v1.png",
+    "runtime": "public/uiux-demo/art/orbital-hangar-v1.webp",
+    "parts": [
+      2.9,
+      1.85,
+      1.95,
+      1.95,
+      0.95
+    ],
+    "score": 9.6,
+    "status": "retained"
+  },
+  "runtimeBytes": {
+    "before": 239316,
+    "after": 148454,
+    "saved": 90862
+  }
+}
