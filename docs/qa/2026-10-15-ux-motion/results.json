@@ -1,0 +1,139 @@
+{
+  "checks": [
+    "facility selection exposes comparison, cost, conditions and a disabled command",
+    "nested menu Back and Close preserve context and focus",
+    "outbound/incoming previews stay local and keep their original planet",
+    "sphere rotates while visible and reduced motion pauses it",
+    "manual pause survives closing settings and offscreen rendering stops",
+    "no API requests, mutations, storage accesses or runtime errors",
+    "WebGL unavailability preserves the natural static fallback",
+    "image failure preserves procedural terrain and working detail controls",
+    "200% text reflow and readable navigation 320x568",
+    "200% text reflow and readable navigation 390x844",
+    "200% text reflow and readable navigation 844x390"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 684.6875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 809.671875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 684.6875
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 662.765625
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 787.75
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 662.765625
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 454.671875
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 454.671875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 231
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    }
+  ],
+  "errors": [],
+  "requests": []
+}

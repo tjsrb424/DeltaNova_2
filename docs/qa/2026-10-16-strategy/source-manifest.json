@@ -1,0 +1,151 @@
+{
+  "generatedAt": "2026-10-15T17:22:52.008Z",
+  "branch": "codex/uiux-refoundation",
+  "verification": {
+    "testFiles": 30,
+    "tests": 315,
+    "browserChecks": 35,
+    "homeLayouts": 15,
+    "gameApiStarted": false,
+    "gameDatabaseCreated": false,
+    "productionSourceChanged": false
+  },
+  "files": [
+    {
+      "path": "public/uiux-demo/alliance.css",
+      "sha256": "1a7bb6a4b139626a43d09e015f00b455983b921763898e601f5ffc1b1d3a06b4"
+    },
+    {
+      "path": "public/uiux-demo/alliance.js",
+      "sha256": "a0613dabd219e8cbc1a3ecf261d5efb024544ce81db284c9f24257c0df962f9e"
+    },
+    {
+      "path": "public/uiux-demo/galaxy.css",
+      "sha256": "6a3353bbf80ef33d14f25054761b298bc7197ceb32acde663ede3ddc9b987600"
+    },
+    {
+      "path": "public/uiux-demo/galaxy.js",
+      "sha256": "8526375b768acf214e242e7a75cabeb0fe154392adf578d4ec5c8eb373b1f15c"
+    },
+    {
+      "path": "public/uiux-demo/index.html",
+      "sha256": "e6907df82f6647720ba1e445312a46490e9ecb06014015927c8af007c94f3345"
+    },
+    {
+      "path": "public/uiux-demo/main.js",
+      "sha256": "518857003492bf88b33c121e42e59855d9e21b02a34d9a823201be5e49efc2d2"
+    },
+    {
+      "path": "public/uiux-demo/model.js",
+      "sha256": "488f12def29ba10d89078d2deffea597de58fc78fa70fb79c5e2ed460fc9dbaf"
+    },
+    {
+      "path": "public/uiux-demo/navigation.css",
+      "sha256": "2c69371d5eebbd153eeaa0b9970c6510ee1cad5983bbd458e628a5754a4aecb0"
+    },
+    {
+      "path": "public/uiux-demo/navigation.js",
+      "sha256": "d87ea0e7e4dedf916647f7353dad90d2ea2954d4e2b78a7f80a7fbb309f0bfa1"
+    },
+    {
+      "path": "public/uiux-demo/operations.css",
+      "sha256": "6dea9e442c5e44851e05af102768caaededc22db98271a7a4e87a2a1f64f2e77"
+    },
+    {
+      "path": "public/uiux-demo/operations.js",
+      "sha256": "24ac7973fa465d604890191edfefb395f6cbf72b7d62641cede0418ee56cb10d"
+    },
+    {
+      "path": "public/uiux-demo/planet-fallback.js",
+      "sha256": "893b3f8425049a5101ac428ce1828de345fa05c87544daccbd4624ab438fc057"
+    },
+    {
+      "path": "public/uiux-demo/planet-rotation.js",
+      "sha256": "3f4beb30ab44dd19aa835aed3783daad762bde5d043f0f8f025b73c7039e59b8"
+    },
+    {
+      "path": "public/uiux-demo/planet.js",
+      "sha256": "3501425f033e3a8e89b1b1b1c012890d770b8928415253018bdce54d1f5e7a1a"
+    },
+    {
+      "path": "public/uiux-demo/presentation.js",
+      "sha256": "b049e8a7ddae4d3a706e959247883a4b693c44879c9b7a4ec01ede7dbfc8cf52"
+    },
+    {
+      "path": "public/uiux-demo/refinement.css",
+      "sha256": "9ba0a536b67d70d3bed51fec2fe91eb28bbab5e1728d7a2a1e1d6ffd5159be62"
+    },
+    {
+      "path": "public/uiux-demo/route-model.js",
+      "sha256": "836f4972e27ec4f18022ebe501b35d948f156e62e6e485f7617f126a02074db6"
+    },
+    {
+      "path": "public/uiux-demo/route-preview.js",
+      "sha256": "885aad64a360633dfd70d59d34d1b1ae3eaa7564257e796630322d5088a2ef0c"
+    },
+    {
+      "path": "public/uiux-demo/scene-motion.js",
+      "sha256": "a0c9a4b5b865f3aa4b97106db388aba0ebd9ffa73bc8075734cf821c0e50a71e"
+    },
+    {
+      "path": "public/uiux-demo/strategy-model.js",
+      "sha256": "cd7bc081d8652085142d4e37e14bea3b4c4b439edd70e7ec292bd7f6c3a555f9"
+    },
+    {
+      "path": "public/uiux-demo/strategy.css",
+      "sha256": "7274d1f54098845a97252c1e23b3273c7efad7dde8134205b4e5d6b9688da609"
+    },
+    {
+      "path": "public/uiux-demo/strategy.js",
+      "sha256": "882f1d0f6b3d22d43b41ae43748315f1f56cf6ce5ab1e727e319d561312d7568"
+    },
+    {
+      "path": "public/uiux-demo/style.css",
+      "sha256": "5638a908b86ac87032a9415a2540cf53ea10ed1022574ed4a66201ac1a67ae4a"
+    },
+    {
+      "path": "public/uiux-demo/tokens.css",
+      "sha256": "0350254aa2067d29a6e6ce1ed450eb11a26a079f77cba0f2e0beda37963f9976"
+    },
+    {
+      "path": "public/uiux-demo/workspace.css",
+      "sha256": "f585603bdeff562ec8f96476f0fe2cec516a77fce3b0b7f8cbf718589a8769ae"
+    },
+    {
+      "path": "public/uiux-demo/workspace.js",
+      "sha256": "2d0361629b278d5d73c0421add108f7e2b5684dca7dfc055dbb40be5d4ef4d5e"
+    },
+    {
+      "path": "tests/uiux-strategy.test.ts",
+      "sha256": "80095151891a0d12bf01c119e5817667705cb00fa685bf2d07ab9fff1d893012"
+    },
+    {
+      "path": "tests/uiux-strategy-view.test.ts",
+      "sha256": "49c385f9183ba66f34b2b08c0b1b364936a9f9793429a6ec7d8947c12663faef"
+    },
+    {
+      "path": "tests/uiux-demo.test.ts",
+      "sha256": "ae8b6e2425bda66b3ba65cc7ebf469a0090939bce2303c24a9b5320c68888987"
+    },
+    {
+      "path": "tests/uiux-alliance.test.ts",
+      "sha256": "6b9ed31da4f752f9a7fbbe47d093755dcd46b2868b16a466086fea8b8c9d8788"
+    },
+    {
+      "path": "tests/uiux-galaxy.test.ts",
+      "sha256": "243a72a142405ff6e0c51e74fe02b488481d955664bbd6a6a4cb6b40c63de3c5"
+    },
+    {
+      "path": "tools/verify-uiux-polish.mjs",
+      "sha256": "a0ab97a836c5f1f5f5100f60636d90a2923ee2dec2d2ce095723cf32e9074216"
+    },
+    {
+      "path": "tools/verify-strategy-ui.mjs",
+      "sha256": "72d27ca526dfd47b6f14a27517e34c7b04cfd3ec2dfe0a3bad8d6e4d4dd12359"
+    },
+    {
+      "path": "tools/uiux-a11y.mjs",
+      "sha256": "1bc036f037c71897b17f76627c5a2cc992356a62ea67cebc22c4de3997be421a"
+    }
+  ]
+}

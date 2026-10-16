@@ -1,0 +1,52 @@
+{
+  "checkedAt": "2026-10-15T17:23:20.941Z",
+  "origin": "https://blink-third-editorial-escape.trycloudflare.com",
+  "checks": [
+    {
+      "name": "index.html",
+      "status": 200,
+      "localMatch": true,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "strategy.js",
+      "status": 200,
+      "localMatch": true,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "strategy-model.js",
+      "status": 200,
+      "localMatch": true,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "strategy.css",
+      "status": 200,
+      "localMatch": true,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "main.js",
+      "status": 200,
+      "localMatch": true,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "galaxy.js",
+      "status": 200,
+      "localMatch": true,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "workspace.js",
+      "status": 200,
+      "localMatch": true,
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    },
+    {
+      "name": "/api/guild",
+      "status": 404
+    }
+  ]
+}

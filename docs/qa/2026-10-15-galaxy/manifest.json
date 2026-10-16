@@ -1,0 +1,133 @@
+{
+  "branch": "codex/uiux-refoundation",
+  "tests": 250,
+  "browserChecks": 28,
+  "homeLayouts": 15,
+  "files": [
+    {
+      "file": "public/uiux-demo/galaxy.js",
+      "bytes": 14389,
+      "sha256": "894ea5293cb07742ab2dcd780fd38e1e8cd5f62462c8cd816869985e051fb57c"
+    },
+    {
+      "file": "public/uiux-demo/galaxy.css",
+      "bytes": 13418,
+      "sha256": "6a3353bbf80ef33d14f25054761b298bc7197ceb32acde663ede3ddc9b987600"
+    },
+    {
+      "file": "public/uiux-demo/main.js",
+      "bytes": 37740,
+      "sha256": "881efc37866296f97ffa1762f325486677e9d4e9ec857fae92196f3091e58ba5"
+    },
+    {
+      "file": "public/uiux-demo/navigation.js",
+      "bytes": 3642,
+      "sha256": "ecd68ae00a7d1389e391247a24f71f8ed98ebb3d3ad7e8e18f1e5ad7cb8fa238"
+    },
+    {
+      "file": "public/uiux-demo/navigation.css",
+      "bytes": 2352,
+      "sha256": "2c69371d5eebbd153eeaa0b9970c6510ee1cad5983bbd458e628a5754a4aecb0"
+    },
+    {
+      "file": "public/uiux-demo/workspace.js",
+      "bytes": 23958,
+      "sha256": "98eb465b39befb44e1f8f4e854446ea2d5b2047471215616c295fd952f173e6b"
+    },
+    {
+      "file": "public/uiux-demo/index.html",
+      "bytes": 11380,
+      "sha256": "2c1d3ca9d99d17d48ba9d2d39fd7ff703f5c7de0625683ad2d5b95a77923b586"
+    },
+    {
+      "file": "tests/uiux-galaxy.test.ts",
+      "bytes": 8776,
+      "sha256": "424e6e33a22ed227f207996b5ebd87e66877af0d32dd0c544dac0e9039e97b7d"
+    },
+    {
+      "file": "tests/uiux-demo.test.ts",
+      "bytes": 16289,
+      "sha256": "470cc84c09b41116214d64759631e0d0dacf2e8a203f92c15b52394efd7f3557"
+    },
+    {
+      "file": "tests/uiux-navigation.test.ts",
+      "bytes": 3600,
+      "sha256": "4842d244db133d83d3b0195a4f0a0ee1042475578ad24a18a127f6c097a25535"
+    },
+    {
+      "file": "tools/verify-uiux-polish.mjs",
+      "bytes": 41516,
+      "sha256": "0cf35ab4c536dcc12249d15ef92be84b9ed54a0552046e450105e2415bfa37ea"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-1440x900.png",
+      "bytes": 276712,
+      "sha256": "594499f9220ceed2ebc8b0d37d25739296881529a0ded022d1c0a1d5b06af6b1"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-320x568.png",
+      "bytes": 47292,
+      "sha256": "a6f002b2d86560e45f81795932b13e28e3b5f43ff997e308777f18dfda77d958"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-390x844.png",
+      "bytes": 91998,
+      "sha256": "e3ca4cfc385afa63eeb939906dc625f599588883631fd4836bffd94731952a93"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-839x1065.png",
+      "bytes": 227602,
+      "sha256": "a69686be6f792d71c50a3e15cc83ebe6546ad490cdf14ec2e24552daf1b6beea"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-844x390.png",
+      "bytes": 34230,
+      "sha256": "0fa18a1bd64fb470cf07319b81091de23211035092be584b73d7401da22343e1"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-report-mobile.png",
+      "bytes": 64330,
+      "sha256": "3413a8dcb2f44700c195e6a8d8ae61a55a47aded5fdff7ef9b03f4ee2284982f"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-text-200-320.png",
+      "bytes": 70669,
+      "sha256": "457b955e1b960c0344ac939e1b2b505224a7a5371280a358c1396465e704f870"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-text-200-390.png",
+      "bytes": 120711,
+      "sha256": "7830dfda21aa3db8eceb9eae84471f9958c1c021ba069a8c8bc5dbd1fdab16ad"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\galaxy-text-200-844.png",
+      "bytes": 144276,
+      "sha256": "e474f5dba960d993972382179f0364fc5be0f6235ca1938164ceb6819ad3a4ff"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\manual-desktop-final.png",
+      "bytes": 91495,
+      "sha256": "d5aa4b2c33fcc061171ad19cca053d911b6f4eb95294dca3b1454d885c81b001"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\manual-mobile-320.png",
+      "bytes": 19929,
+      "sha256": "199e4887a187ec9f8310f38cdb010e18b83a61838b21b77d41caa5b0b96e1517"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\manual-mobile-landscape.png",
+      "bytes": 25911,
+      "sha256": "4b92bba3aa9096c9cd444a409d7f7096923017322fca3d7ea7abaeb5a69e4d58"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\manual-mobile-report.png",
+      "bytes": 22976,
+      "sha256": "7517f4413ed774a9ffc06d2074648fb718ec064ccec10ebb66f4dae157b5a2bb"
+    },
+    {
+      "file": "docs\\qa\\2026-10-15-galaxy\\results.json",
+      "bytes": 4756,
+      "sha256": "34e838d82d1c81a9c7f573eee7deebc31d052cece90f610e472bfeee6289668b"
+    }
+  ]
+}

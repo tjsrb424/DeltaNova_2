@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-15",
+  "scope": "Read-only product UI/UX review of the standalone demo. No product source changes or game server connection.",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 844,
+      "height": 390
+    }
+  ],
+  "measured": {
+    "desktopConstruction": {
+      "dialogWidth": 480,
+      "contentHeight": 641,
+      "scrollHeight": 867,
+      "commandInitiallyVisible": false
+    },
+    "mobileFacilitySelection": {
+      "scrollTop": 197.6,
+      "focusedTop": 1.4,
+      "contentTop": 153.8,
+      "focusedButtonVisible": false
+    },
+    "landscapeConstruction": {
+      "dialogWidth": 480,
+      "contentHeight": 175,
+      "scrollHeight": 867
+    }
+  },
+  "interactionChecks": {
+    "shiftTabWrapsToFooter": true,
+    "tabWrapsToClose": true,
+    "escapeRestoresOpener": true,
+    "nestedBackRestoresMoreMenuAndTrigger": true,
+    "browserBackProbe": {
+      "beforeUrl": "index.html#main",
+      "afterUrl": "index.html",
+      "panelRemainedOpen": true
+    }
+  },
+  "findings": [
+    {
+      "priority": "P1",
+      "topic": "Primary categories and quick contextual detail all open the same blocking dialog.",
+      "recommendation": "Primary navigation switches the central workspace; quick views retain a short drawer with a link to the full workspace."
+    },
+    {
+      "priority": "P1",
+      "topic": "Construction management uses the same facility-comparison view as planet details; no current queue in the panel.",
+      "recommendation": "Construction workspace should show queue, facility list, comparison, resources and prerequisites together."
+    },
+    {
+      "priority": "P1",
+      "topic": "Defense overview in idle state only shows no threat and omits the existing defense snapshot.",
+      "recommendation": "Defense overview should remain available independently of a threat."
+    },
+    {
+      "priority": "P2",
+      "topic": "Mobile facility selection scrolls its picker and focused control outside the viewport.",
+      "recommendation": "Keep facility selection visible or provide a stable return-to-list mechanism and visible focus."
+    },
+    {
+      "priority": "P2",
+      "topic": "Browser Back changes navigation history without closing or traversing the detail panel.",
+      "recommendation": "Define history semantics for major views and nested details."
+    },
+    {
+      "priority": "P2",
+      "topic": "Landscape construction gets only175px of scrollable content within a480px-wide dialog.",
+      "recommendation": "Use a full workspace for long workflows and adapt short details to available height."
+    },
+    {
+      "priority": "P2",
+      "topic": "Prepared/empty screens lack direct next actions and use repeated demo notices.",
+      "recommendation": "Keep availability clear at entry and add a useful next action where appropriate."
+    }
+  ],
+  "preserve": [
+    "Quiet visual style and resource units",
+    "Short resource/recon/settings detail drawers",
+    "Fixed close/return controls",
+    "Escape, focus containment and restore",
+    "Nested Back versus Close"
+  ],
+  "serviceIntegrationNote": "Current local demo intentionally pauses preview time inside a dialog. Real server ETA must not pause when a player opens management UI.",
+  "limits": [
+    "Several categories are summary/unconnected placeholders; real management, message, map and filter workflows cannot be judged yet.",
+    "No visit to the existing game root, no live scouting or commands, no real-device/screen-reader certification."
+  ],
+  "source": "https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/"
+}

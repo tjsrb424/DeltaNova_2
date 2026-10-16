@@ -46,7 +46,7 @@ export function enlargeText() {
   const collect = rules => [...rules].map(rule => {
     if (rule instanceof CSSStyleRule) {
       const size = rule.style.fontSize;
-      return /px|vw|vh/.test(size) ? `${rule.selectorText}{font-size:calc((${size}) * 2)!important}` : '';
+      return /px|vw|vh|rem/.test(size) ? `${rule.selectorText}{font-size:calc((${size}) * 2)!important}` : '';
     }
     if (rule instanceof CSSMediaRule) return `@media ${rule.conditionText}{${collect(rule.cssRules)}}`;
     if (rule instanceof CSSSupportsRule) return `@supports ${rule.conditionText}{${collect(rule.cssRules)}}`;

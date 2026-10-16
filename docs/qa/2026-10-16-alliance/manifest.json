@@ -1,0 +1,183 @@
+{
+  "date": "2026-10-16",
+  "testResult": "28 files, 284 tests",
+  "browserChecks": 35,
+  "homeLayouts": 15,
+  "files": [
+    {
+      "path": "public/uiux-demo/alliance.js",
+      "bytes": 16393,
+      "sha256": "a0613dabd219e8cbc1a3ecf261d5efb024544ce81db284c9f24257c0df962f9e"
+    },
+    {
+      "path": "public/uiux-demo/alliance.css",
+      "bytes": 13168,
+      "sha256": "1a7bb6a4b139626a43d09e015f00b455983b921763898e601f5ffc1b1d3a06b4"
+    },
+    {
+      "path": "public/uiux-demo/main.js",
+      "bytes": 45390,
+      "sha256": "d9e585ceec92db797f8ccbfcf5e97972f8e575672882e7975e0b25791dfa7220"
+    },
+    {
+      "path": "public/uiux-demo/navigation.js",
+      "bytes": 4338,
+      "sha256": "f2ad9ee0cc3f6a4cc6fc05dafdcfd3d00aa88204a2c453954d67197b9e65ce5c"
+    },
+    {
+      "path": "public/uiux-demo/workspace.js",
+      "bytes": 24342,
+      "sha256": "d1726ee944db526c313778bb294fdeb128e9082bcad76224082f934de790167d"
+    },
+    {
+      "path": "public/uiux-demo/index.html",
+      "bytes": 11478,
+      "sha256": "fc68d9837d4a84cbf8c75b30cdc780be5427462a325729189a28508bda68480a"
+    },
+    {
+      "path": "public/uiux-demo/art/alliance-gate-v1.webp",
+      "bytes": 164082,
+      "sha256": "a799f746c29df4bca282ccac7ee3f1b5cf6d0c7b2f0ed06ac09dedc210d2f942"
+    },
+    {
+      "path": "docs/uiux-refoundation/art-source/alliance-gate-v1.png",
+      "bytes": 2373255,
+      "sha256": "0a86847ecfb8eae4ab5e7969bf6254a05855515a8852b0091052d6d4ac5035c8"
+    },
+    {
+      "path": "docs/uiux-refoundation/ALLIANCE_ART.md",
+      "bytes": 1810,
+      "sha256": "35e993bfdc1d1332baf9d32ef0c30f1b0806297d7896fefe3a641f3b9e1cbfd2"
+    },
+    {
+      "path": "docs/uiux-refoundation/ALLIANCE_REVIEW.md",
+      "bytes": 5691,
+      "sha256": "cbe8ae52ba9ff34a144a2ee23fcc0d03deb9a93c254761c0863fa703d50369ea"
+    },
+    {
+      "path": "tests/uiux-alliance.test.ts",
+      "bytes": 4418,
+      "sha256": "1a35a3ce19553fae107c80f6e28bd606d4854beed4389adc26bae44b11efec5b"
+    },
+    {
+      "path": "tests/uiux-demo.test.ts",
+      "bytes": 22908,
+      "sha256": "eaceafa0e57a94f576833931f81fca3b771e09e41800687ff192a96e8a0d77c5"
+    },
+    {
+      "path": "tests/uiux-navigation.test.ts",
+      "bytes": 5315,
+      "sha256": "94fdd77f422db547b7642ffcce64834d28d7da4ab169004dee644f33cfef6f46"
+    },
+    {
+      "path": "tools/verify-uiux-polish.mjs",
+      "bytes": 57729,
+      "sha256": "9509bb1b6ed33ef071f430b6234230fd7cb0526da214ff91e061e89e61bcb8c2"
+    },
+    {
+      "path": "tools/uiux-a11y.mjs",
+      "bytes": 5424,
+      "sha256": "1bc036f037c71897b17f76627c5a2cc992356a62ea67cebc22c4de3997be421a"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-complete-mobile.png",
+      "bytes": 151785,
+      "sha256": "11938bf4bb95baab772fe2f53c4c95b84cf88e601993edee94354316a5f276f4"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-overview-1440x900.png",
+      "bytes": 500500,
+      "sha256": "1035c4f9a531a075b47a49b3fef9373163d1a6ce66816173698cfaaf150ecdbb"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-overview-320x568.png",
+      "bytes": 46818,
+      "sha256": "6f89f6f054c1f2f3d4cdfdd228c9c8613e01a138b877112e15db67ad60d4c268"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-overview-390x844.png",
+      "bytes": 163401,
+      "sha256": "923784ce5b51aa2134bbb98262d015d4e0e14a46a35f0218ee206cdee5fb7b75"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-overview-839x1065.png",
+      "bytes": 388323,
+      "sha256": "e92c749654fae589159b5e4e33401d14365bdec351e9d0c3db00cdc1601c55e6"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-overview-844x390.png",
+      "bytes": 41108,
+      "sha256": "19a51d089e35e7cac5562eb1f203b9bc5425f8660d47d2efef388623fd346b87"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-preparation-1440x900.png",
+      "bytes": 364624,
+      "sha256": "47ea96a55467921bd637902e5dd73348cf3242dbbbd8bdcb7d11349c7f734591"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-preparation-320x568.png",
+      "bytes": 55306,
+      "sha256": "9d400ed57d94c701ef1571e1c8ae484c5ffc3859f01c97f186cbe5dc12680932"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-preparation-390x844.png",
+      "bytes": 101389,
+      "sha256": "af24d15521374ae73b94006edd32ec557fa9b2b8b1bc6f62fe8badfc395cc829"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-preparation-839x1065.png",
+      "bytes": 233775,
+      "sha256": "097e80db202e0b61a721e10bf5c902a6308670f6f4414aaf2964f6b635f141f0"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-preparation-844x390.png",
+      "bytes": 66703,
+      "sha256": "ee0956c6227f59deae2284a285e6f5ab4393a21027eedfcfbbdb72ee2e1af311"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-reviewed-mobile.png",
+      "bytes": 98188,
+      "sha256": "6d1983c639ad550fe537262b48af33db6b5ac6f45faaf2014e46ec1cd4b91dea"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-text-200-320.png",
+      "bytes": 48100,
+      "sha256": "4758e5a224e1d1b96da573a8205dda3583b99b8f08115a24798bd890f8c7c737"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-text-200-390.png",
+      "bytes": 96132,
+      "sha256": "e318b71cdc2183780de55ffa7f9696450c4804fa21c43ceeed72ae6ee10eda74"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/alliance-text-200-844.png",
+      "bytes": 71559,
+      "sha256": "3c76d78177a46ce9f087c53c1af55d9295610f54ad2feb3df73c1def38ae7058"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/manual-desktop-final.png",
+      "bytes": 116336,
+      "sha256": "b9c69dae4e9d40d27efcaf10c7c1f8b074a8a96df0e0825d2ae29f78fa72996d"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/manual-landscape-preparation-844.png",
+      "bytes": 18695,
+      "sha256": "514f0ce356a79afa8325c85b2a0941b7754bf2318f8ea1feadae368c73af9f14"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/manual-mobile-overview-390.png",
+      "bytes": 45513,
+      "sha256": "e810887b76700c7ddc1e1fae94abfe43d4a6886937d7560bb77067f43168b0a9"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/manual-mobile-review-390.png",
+      "bytes": 31262,
+      "sha256": "e070f990f75999de19826596322e2996ba8d771f5d149ee7dae10119ca3bdb43"
+    },
+    {
+      "path": "docs/qa/2026-10-16-alliance/results.json",
+      "bytes": 6469,
+      "sha256": "381bd35d4b41056148cd15efdd83bf6e81e302aba76c250c1c4a2f62548e6668"
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 import { drawPlanet as drawProcedural } from './planet-fallback.js';
+import { drawRotatingPlanet } from './planet-rotation.js';
+export { syncPlanetMotion } from './planet-rotation.js';
 // Natural art and gameplay overlays remain separate. No economy or network commands.
 const textures = new Map(), requests = new WeakMap();
 let naturalImage;
@@ -22,7 +24,7 @@ async function buildTexture(id) {
   ctx.drawImage(image,0,0,512,512);
   return ctx.getImageData(0,0,512,512);
 }
-export async function drawPlanet(canvas, planet) {
+async function drawStill(canvas, planet) {
   const token = {};
   requests.set(canvas, token);
   try {
@@ -37,3 +39,4 @@ export async function drawPlanet(canvas, planet) {
     if (requests.get(canvas) === token) canvas.dataset.artSource = 'procedural';
   }
 }
+export async function drawPlanet(canvas, planet) { return drawRotatingPlanet(canvas, planet, drawStill); }

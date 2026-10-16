@@ -1,0 +1,38 @@
+/* Stationary navigation, central workspaces, and brief contextual details. */
+.workspace-page-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:20px; padding:0 0 14px; }
+.workspace-page-heading h1 { margin:0; font-size:32px; font-weight:550; letter-spacing:-1px; }
+#workspace-planet { display:none; }
+.workspace-page-heading p:not(.overline) { color:var(--dn-secondary); line-height:1.7; max-width:52em; }
+.workspace-home { flex-shrink:0; min-height:44px; }
+.workspace-page[data-view=research] .ws-lead > .ws-tag,
+.workspace-page[data-view=fleet] .ws-lead > .ws-tag { display:none; }
+#workspace-title:focus-visible { outline:2px solid var(--dn-focus); outline-offset:6px; }
+.resource-detail { margin-bottom:20px; }
+.resource-detail h3 { display:flex; align-items:center; gap:8px; font-size:14px; font-weight:550; }
+.resource-detail h3 svg { width:18px; height:18px; color:var(--dn-accent); }
+.resource-detail .detail-stat { padding:10px 0; }
+.detail-manage { margin-top:16px; width:100%; }
+@media (min-width:769px) and (min-height:501px) {
+  .sidebar { position:sticky; top:0; align-self:start; max-height:100dvh; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:thin; }
+  .sidebar > .nav-item, .sidebar > .desktop-nav { flex-shrink:0; }
+}
+.detail-facility-select { display:grid; gap:8px; font-size:12px; color:var(--dn-secondary); margin-bottom:16px; }
+.detail-facility-select select { width:100%; min-height:44px; padding:10px; color:var(--dn-text); background:var(--dn-canvas); border:1px solid var(--dn-control-border); border-radius:8px; font:inherit; font-size:14px; }
+#facility-detail h3 { font-size:14px; font-weight:550; margin:16px 0 12px; }
+#facility-detail .button { width:100%; }
+#dialog-content .detail-condition { margin:12px 0; font-size:12px; }
+@media (max-width:768px), (max-width:1024px) and (max-height:500px) {
+  .workspace-page-heading { padding:0 0 14px; gap:12px; }
+  .workspace-page-heading h1 { font-size:28px; }
+  .workspace-page-heading p:not(.overline) { font-size:13px; }
+  .workspace-home { font-size:12px; }
+}
+@media (max-width:380px) {
+  .workspace-page-heading { flex-wrap:wrap; }
+  .workspace-home { padding:0; }
+}
+@media (max-height:500px) {
+  dialog h2 { font-size:22px; margin-bottom:10px; }
+  .drawer-footer { padding-top:8px; }
+  #dialog-demo { margin-top:4px; }
+}

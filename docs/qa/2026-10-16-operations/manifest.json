@@ -1,0 +1,198 @@
+{
+  "branch": "codex/uiux-refoundation",
+  "tests": 275,
+  "browserChecks": 32,
+  "homeLayouts": 15,
+  "files": [
+    {
+      "file": "public/uiux-demo/operations.js",
+      "bytes": 32972,
+      "sha256": "24ac7973fa465d604890191edfefb395f6cbf72b7d62641cede0418ee56cb10d"
+    },
+    {
+      "file": "public/uiux-demo/operations.css",
+      "bytes": 27096,
+      "sha256": "6dea9e442c5e44851e05af102768caaededc22db98271a7a4e87a2a1f64f2e77"
+    },
+    {
+      "file": "public/uiux-demo/art/operation-stage-v1.webp",
+      "bytes": 62360,
+      "sha256": "fd9b34def548bebd928f5c942448c5a02308f2407ec0997368e5eee3e4361674"
+    },
+    {
+      "file": "docs/uiux-refoundation/art-source/operation-stage-v1.png",
+      "bytes": 1850159,
+      "sha256": "808a26a6cad6abf4220b16cbc12017e54765364d18250bfaf1b2081223ce798f"
+    },
+    {
+      "file": "public/uiux-demo/main.js",
+      "bytes": 42744,
+      "sha256": "2a46cd55dd839574735a282f490e65e979d29f10af23d95c0d5ed37932d55cf9"
+    },
+    {
+      "file": "public/uiux-demo/navigation.js",
+      "bytes": 4025,
+      "sha256": "43c0fd87f0fcd7f219cb455701ad8ab4250886f1e4d2b0a013da91f7e10b88e6"
+    },
+    {
+      "file": "public/uiux-demo/workspace.js",
+      "bytes": 24191,
+      "sha256": "6d15e7587b9390776a954183ab241b8e56d214a24034cf89f069496eb7b4b72b"
+    },
+    {
+      "file": "public/uiux-demo/index.html",
+      "bytes": 11430,
+      "sha256": "35455bbd01d08cbb48464a0c12aebbb701e44e5ef24ca114211467b24dfa4865"
+    },
+    {
+      "file": "tests/uiux-operations.test.ts",
+      "bytes": 14932,
+      "sha256": "69624b23ea5ac957f5d115bd22e019a6c2185da31115778322f1a1dfd38f8240"
+    },
+    {
+      "file": "tests/uiux-demo.test.ts",
+      "bytes": 20636,
+      "sha256": "1dea58c59a678d7089f0fbf5be5ee1723632076fbf49ad02e62c1627f6dd0f5c"
+    },
+    {
+      "file": "tests/uiux-navigation.test.ts",
+      "bytes": 4688,
+      "sha256": "d88fb71fd2219d17c288eea0f79a0af3121ed91ec5dbcacbe76b2ee0a7cdcc25"
+    },
+    {
+      "file": "tools/verify-uiux-polish.mjs",
+      "bytes": 50206,
+      "sha256": "8e27dda44cb46ef129f7adb36b7c59496e5438f07697a2785f69a6302ae55111"
+    },
+    {
+      "file": "tools/uiux-a11y.mjs",
+      "bytes": 5424,
+      "sha256": "1bc036f037c71897b17f76627c5a2cc992356a62ea67cebc22c4de3997be421a"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-1440x900.png",
+      "bytes": 437064,
+      "sha256": "00e5016f1bb41dd23a698740ba50a44cbe7cb37c761a6fc4df223fdf0fbd52c0"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-320x568.png",
+      "bytes": 75911,
+      "sha256": "2b3c8cf53d6e369929860dce13117d7dbdad200849279ac887e23b593cd22907"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-390x844.png",
+      "bytes": 138858,
+      "sha256": "5de2459bfd2d14a2a937f64d463750f05ddb3383157c0506e671201b84eb9f0d"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-839x1065.png",
+      "bytes": 351328,
+      "sha256": "9fc917930cdec667eeef50ab85bbf2e30f79842666b0fdbd03b087771a3e500e"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-844x390.png",
+      "bytes": 114580,
+      "sha256": "fef30f42585f813f40ecac58965336593a252adab1314404a337dba07e22ae34"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-text-200-320.png",
+      "bytes": 23877,
+      "sha256": "a94d121f56c7cb6e2cf32b37126c66687252dc4ab34bcc846c29d9a64d951749"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-text-200-390.png",
+      "bytes": 97605,
+      "sha256": "7224d31aeba493cab01e2c5de7144621e0ca3056c4d5527cfe932aa0f2ae4025"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\career-text-200-844.png",
+      "bytes": 35717,
+      "sha256": "aeb829300a9ef6d54cba69e9b988c0720963ef6b9e33eb9b66268c667700ea04"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\manual-desktop-career-final.png",
+      "bytes": 113616,
+      "sha256": "52b61e6aa055ecb329d31c3bde2dc88f777623bfc25e13df2a8f93217b7c961a"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\manual-desktop-practice-final.png",
+      "bytes": 105257,
+      "sha256": "de49aef053322e071c03cba9a3bca5d1e5189bbf4c7d80b81df6719e5a37a355"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\manual-mobile-career.png",
+      "bytes": 36310,
+      "sha256": "7eb3562fdf6d5de8c996c7c59982883d135865c438948e9f2185efc0ea63c16a"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\manual-mobile-practice-320.png",
+      "bytes": 18577,
+      "sha256": "d20b5bc57b8651c27869501a2a75bc2776d3499478b3bc269a3e69f768d2654b"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\manual-mobile-practice-landscape.png",
+      "bytes": 27450,
+      "sha256": "b131a2d0765f2c216886319bf808c13adc33d99a9292918a84ab2cc62ee0ff07"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\manual-mobile-practice-result.png",
+      "bytes": 33298,
+      "sha256": "3e1a083e26ef137e439c1c085f6d0894472e418d375c431705bd15054bcb64fc"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\manual-mobile-practice-summary.png",
+      "bytes": 31177,
+      "sha256": "8713ecac020b76168a633f857b332927217d181314d50d2697d05e295b5b1976"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-1440x900.png",
+      "bytes": 274891,
+      "sha256": "2540b84fdd8c9821c8019f619133d2a0d8395c3ab58ba0ba8a1f28303cf4b590"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-320x568.png",
+      "bytes": 18801,
+      "sha256": "82c06fa72b965dcd08e9ef21944068eec9ec0ea2dc4ae25830e375c785c369c3"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-390x844.png",
+      "bytes": 55823,
+      "sha256": "91a2ea1d1b65afd7a1b7286df0c4198b71b533bdeb7091730e1ca2a003f70f13"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-839x1065.png",
+      "bytes": 230469,
+      "sha256": "0054140f9ced235a55cb3f0dfcac5fc28c51888f381a12a944173847e955a2ff"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-844x390.png",
+      "bytes": 21696,
+      "sha256": "098a0a79402aeb7790c7c77882cfad3f67cd471311c4783e72d82d8fe8cd2ede"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-review-mobile.png",
+      "bytes": 104393,
+      "sha256": "2ea14420d3a4e030c4caf8941376bf7f71e1f763cbe1dc69c17b56d8ae65530a"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-text-200-320.png",
+      "bytes": 52315,
+      "sha256": "37a7c10d6a370d2006cc484487d2335253f860c7c90327fcfd6f7fe7cd589ce9"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-text-200-390.png",
+      "bytes": 105947,
+      "sha256": "5922d2dcb0bbfe9ca615d3bd45cee6d373471a31936c58803983e76c3c3f29c8"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\practice-text-200-844.png",
+      "bytes": 101740,
+      "sha256": "a46aadc72c054d79e0fc7749ec9e27bb0bb34642f85b5c03e22434a9c6f38e32"
+    },
+    {
+      "file": "docs\\qa\\2026-10-16-operations\\results.json",
+      "bytes": 5925,
+      "sha256": "ea9360abf617180877029573ae3df659b6645a9424f62673f34f767ac2c12328"
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "checks": [
+    "WebGL texture upload errors preserve a static visible fallback",
+    "facility selection exposes comparison, cost, conditions and a disabled command",
+    "central menu and native Back restore the workspace and initiating control",
+    "major menus replace the center at desktop, tablet, phone and landscape sizes",
+    "short details restore focus through Close, Escape and native Back/Forward",
+    "direct detail URLs close into their workspace with visible focus and selected facility",
+    "research keeps empire-wide progress while showing the selected local investment",
+    "outbound/incoming previews stay local and keep their original planet",
+    "both complete routes stay outside the atmosphere and within the scene at seven viewport sizes",
+    "one local clock advances the position and every ETA, and pauses inside details",
+    "sphere rotates while visible and reduced motion pauses it",
+    "manual pause survives closing settings and offscreen rendering stops",
+    "no API requests, mutations, storage accesses or runtime errors",
+    "WebGL unavailability preserves the natural static fallback",
+    "image failure preserves procedural terrain and working workspace controls",
+    "separate cloud and surface uniforms advance at different slow rates",
+    "recon satellite orbits in front and is occluded behind the globe; details issue no command",
+    "arrival gives one brief exterior pulse, settles, and never mutates ships or replays on return",
+    "reduced motion freezes clouds, satellite, flight time and pulse together",
+    "missing cloud mask preserves the rotating surface",
+    "fleet preview retains inventory and follows both flight endings while the planet is hidden",
+    "galaxy map, list and observation target stay in sync at five viewport sizes",
+    "galaxy search preserves typing focus and clears empty results; sector changes reveal their own targets",
+    "galaxy mobile selector and explicit details keep context; native Back restores target and initiating focus",
+    "local recon belongs to the original target, never opens automatically, and changes no assets",
+    "career briefing and practice reflow at desktop, tablet, phone and landscape sizes",
+    "editable practice keeps number fields mounted and reviews the latest value on the first click",
+    "mission navigation preserves drafts and native Back restores the initiating mission picker",
+    "practice scopes drafts to their planet, clears stale reviews and conceals unavailable snapshots",
+    "200% text reflow and readable navigation 320x568",
+    "200% text reflow and readable navigation 390x844",
+    "200% text reflow and readable navigation 844x390"
+  ],
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 728.6875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 876.71875
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 728.6875
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 706.765625
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 854.796875
+    },
+    {
+      "width": 839,
+      "height": 1065,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 706.765625
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 436.078125
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 458.671875
+    },
+    {
+      "width": 320,
+      "height": 568,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 357.796875
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "idle",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "threat",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 231
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "state": "complete",
+      "overflow": false,
+      "ctaVisible": true,
+      "metricsTop": 162
+    }
+  ],
+  "errors": [],
+  "requests": [],
+  "operationFonts": [
+    {
+      "width": 1440,
+      "view": "career",
+      "size": 12
+    },
+    {
+      "width": 1440,
+      "view": "practice",
+      "size": 10
+    },
+    {
+      "width": 839,
+      "view": "career",
+      "size": 12
+    },
+    {
+      "width": 839,
+      "view": "practice",
+      "size": 10
+    },
+    {
+      "width": 390,
+      "view": "career",
+      "size": 12
+    },
+    {
+      "width": 390,
+      "view": "practice",
+      "size": 10
+    },
+    {
+      "width": 320,
+      "view": "career",
+      "size": 12
+    },
+    {
+      "width": 320,
+      "view": "practice",
+      "size": 10
+    },
+    {
+      "width": 844,
+      "view": "career",
+      "size": 12
+    },
+    {
+      "width": 844,
+      "view": "practice",
+      "size": 10
+    }
+  ]
+}
